@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-19T00:00:00Z",
+  "data": [
+    { "id": "france-samba",           "name": "Brice Samba",          "shirt": 1,  "position": "GK", "dob": "1994-04-25", "age": 32, "caps": 4,  "goals": 0,  "clubId": "rennes",              "captain": false, "bio": "" },
+    { "id": "france-gusto",           "name": "Malo Gusto",           "shirt": 2,  "position": "DF", "dob": "2003-05-19", "age": 23, "caps": 11, "goals": 0,  "clubId": "chelsea",             "captain": false, "bio": "" },
+    { "id": "france-digne",           "name": "Lucas Digne",          "shirt": 3,  "position": "DF", "dob": "1993-07-20", "age": 32, "caps": 58, "goals": 0,  "clubId": "aston-villa",         "captain": false, "bio": "" },
+    { "id": "france-upamecano",       "name": "Dayot Upamecano",      "shirt": 4,  "position": "DF", "dob": "1998-10-27", "age": 27, "caps": 38, "goals": 2,  "clubId": "bayern-munich",       "captain": false, "bio": "" },
+    { "id": "france-kounde",          "name": "Jules Koundé",         "shirt": 5,  "position": "DF", "dob": "1998-11-12", "age": 27, "caps": 48, "goals": 0,  "clubId": "barcelona",           "captain": false, "bio": "" },
+    { "id": "france-kone",            "name": "Manu Koné",            "shirt": 6,  "position": "MF", "dob": "2001-05-17", "age": 25, "caps": 14, "goals": 0,  "clubId": "roma",                "captain": false, "bio": "" },
+    { "id": "france-dembele",         "name": "Ousmane Dembélé",      "shirt": 7,  "position": "FW", "dob": "1997-05-15", "age": 29, "caps": 59, "goals": 7,  "clubId": "paris-saint-germain", "captain": false, "bio": "" },
+    { "id": "france-tchouameni",      "name": "Aurélien Tchouaméni",  "shirt": 8,  "position": "MF", "dob": "2000-01-27", "age": 26, "caps": 46, "goals": 3,  "clubId": "real-madrid",         "captain": false, "bio": "" },
+    { "id": "france-thuram",          "name": "Marcus Thuram",        "shirt": 9,  "position": "FW", "dob": "1997-08-06", "age": 28, "caps": 34, "goals": 3,  "clubId": "inter-milan",         "captain": false, "bio": "" },
+    { "id": "france-mbappe",          "name": "Kylian Mbappé",        "shirt": 10, "position": "FW", "dob": "1998-12-20", "age": 27, "caps": 98, "goals": 56, "clubId": "real-madrid",         "captain": true,  "bio": "" },
+    { "id": "france-olise",           "name": "Michael Olise",        "shirt": 11, "position": "FW", "dob": "2001-12-12", "age": 24, "caps": 17, "goals": 7,  "clubId": "bayern-munich",       "captain": false, "bio": "" },
+    { "id": "france-barcola",         "name": "Bradley Barcola",      "shirt": 12, "position": "FW", "dob": "2002-09-02", "age": 23, "caps": 20, "goals": 3,  "clubId": "paris-saint-germain", "captain": false, "bio": "" },
+    { "id": "france-kante",           "name": "N'Golo Kanté",         "shirt": 13, "position": "MF", "dob": "1991-03-29", "age": 35, "caps": 69, "goals": 2,  "clubId": "fenerbahce",          "captain": false, "bio": "" },
+    { "id": "france-rabiot",          "name": "Adrien Rabiot",        "shirt": 14, "position": "MF", "dob": "1995-04-03", "age": 31, "caps": 59, "goals": 7,  "clubId": "ac-milan",            "captain": false, "bio": "" },
+    { "id": "france-konate",          "name": "Ibrahima Konaté",      "shirt": 15, "position": "DF", "dob": "1999-05-25", "age": 27, "caps": 28, "goals": 0,  "clubId": "liverpool",           "captain": false, "bio": "" },
+    { "id": "france-maignan",         "name": "Mike Maignan",         "shirt": 16, "position": "GK", "dob": "1995-07-03", "age": 30, "caps": 40, "goals": 0,  "clubId": "ac-milan",            "captain": false, "bio": "" },
+    { "id": "france-saliba",          "name": "William Saliba",       "shirt": 17, "position": "DF", "dob": "2001-03-24", "age": 25, "caps": 32, "goals": 0,  "clubId": "arsenal",             "captain": false, "bio": "" },
+    { "id": "france-zaire-emery",     "name": "Warren Zaïre-Emery",   "shirt": 18, "position": "MF", "dob": "2006-03-08", "age": 20, "caps": 11, "goals": 1,  "clubId": "paris-saint-germain", "captain": false, "bio": "" },
+    { "id": "france-theo-hernandez",  "name": "Théo Hernández",       "shirt": 19, "position": "DF", "dob": "1997-10-06", "age": 28, "caps": 44, "goals": 2,  "clubId": "al-hilal",            "captain": false, "bio": "" },
+    { "id": "france-doue",            "name": "Désiré Doué",          "shirt": 20, "position": "FW", "dob": "2005-06-03", "age": 21, "caps": 7,  "goals": 2,  "clubId": "paris-saint-germain", "captain": false, "bio": "" },
+    { "id": "france-lucas-hernandez", "name": "Lucas Hernández",      "shirt": 21, "position": "DF", "dob": "1996-02-14", "age": 30, "caps": 42, "goals": 0,  "clubId": "paris-saint-germain", "captain": false, "bio": "" },
+    { "id": "france-mateta",          "name": "Jean-Philippe Mateta", "shirt": 22, "position": "FW", "dob": "1997-06-28", "age": 28, "caps": 4,  "goals": 2,  "clubId": "crystal-palace",      "captain": false, "bio": "" },
+    { "id": "france-risser",          "name": "Robin Risser",         "shirt": 23, "position": "GK", "dob": "2004-12-02", "age": 21, "caps": 0,  "goals": 0,  "clubId": "lens",                "captain": false, "bio": "" },
+    { "id": "france-cherki",          "name": "Rayan Cherki",         "shirt": 24, "position": "MF", "dob": "2003-08-17", "age": 22, "caps": 7,  "goals": 2,  "clubId": "manchester-city",     "captain": false, "bio": "" },
+    { "id": "france-akliouche",       "name": "Maghnes Akliouche",    "shirt": 25, "position": "MF", "dob": "2002-02-25", "age": 24, "caps": 9,  "goals": 1,  "clubId": "monaco",              "captain": false, "bio": "" },
+    { "id": "france-lacroix",         "name": "Maxence Lacroix",      "shirt": 26, "position": "DF", "dob": "2000-04-06", "age": 26, "caps": 4,  "goals": 0,  "clubId": "crystal-palace",      "captain": false, "bio": "" }
+  ]
+}

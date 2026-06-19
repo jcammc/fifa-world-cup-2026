@@ -1,1 +1,15 @@
-{ "version": "1.0", "lastUpdated": "2026-06-19T00:00:00Z", "data": [] }
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-19T00:00:00Z",
+  "data": [
+    { "id": "premier-league",        "name": "Premier League",        "country": "England",      "confederation": "UEFA"     },
+    { "id": "la-liga",               "name": "La Liga",               "country": "Spain",        "confederation": "UEFA"     },
+    { "id": "serie-a",               "name": "Serie A",               "country": "Italy",        "confederation": "UEFA"     },
+    { "id": "ligue-1",               "name": "Ligue 1",               "country": "France",       "confederation": "UEFA"     },
+    { "id": "bundesliga",            "name": "Bundesliga",            "country": "Germany",      "confederation": "UEFA"     },
+    { "id": "super-lig",             "name": "Süper Lig",             "country": "Turkey",       "confederation": "UEFA"     },
+    { "id": "saudi-pro-league",      "name": "Saudi Pro League",      "country": "Saudi Arabia", "confederation": "AFC"      },
+    { "id": "brasileirao",           "name": "Brasileirão Série A",   "country": "Brazil",       "confederation": "CONMEBOL" },
+    { "id": "russian-premier-league","name": "Russian Premier League","country": "Russia",       "confederation": "UEFA"     }
+  ]
+}

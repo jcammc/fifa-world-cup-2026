@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-19T00:00:00Z",
+  "data": [
+    { "id": "england-pickford",         "name": "Jordan Pickford",   "shirt": 1,  "position": "GK", "dob": "1994-03-07", "age": 32, "caps": 84,  "goals": 0,  "clubId": "everton",          "captain": false, "bio": "" },
+    { "id": "england-konsa",            "name": "Ezri Konsa",        "shirt": 2,  "position": "DF", "dob": "1997-10-23", "age": 28, "caps": 20,  "goals": 1,  "clubId": "aston-villa",      "captain": false, "bio": "" },
+    { "id": "england-oreilly",          "name": "Nico O'Reilly",     "shirt": 3,  "position": "DF", "dob": "2005-03-21", "age": 21, "caps": 5,   "goals": 0,  "clubId": "manchester-city",  "captain": false, "bio": "" },
+    { "id": "england-rice",             "name": "Declan Rice",       "shirt": 4,  "position": "MF", "dob": "1999-01-14", "age": 27, "caps": 73,  "goals": 7,  "clubId": "arsenal",          "captain": false, "bio": "" },
+    { "id": "england-stones",           "name": "John Stones",       "shirt": 5,  "position": "DF", "dob": "1994-05-28", "age": 32, "caps": 89,  "goals": 3,  "clubId": "manchester-city",  "captain": false, "bio": "" },
+    { "id": "england-guehi",            "name": "Marc Guéhi",        "shirt": 6,  "position": "DF", "dob": "2000-07-13", "age": 25, "caps": 29,  "goals": 1,  "clubId": "manchester-city",  "captain": false, "bio": "" },
+    { "id": "england-saka",             "name": "Bukayo Saka",       "shirt": 7,  "position": "FW", "dob": "2001-09-05", "age": 24, "caps": 49,  "goals": 14, "clubId": "arsenal",          "captain": false, "bio": "" },
+    { "id": "england-anderson",         "name": "Elliot Anderson",   "shirt": 8,  "position": "MF", "dob": "2002-11-06", "age": 23, "caps": 9,   "goals": 0,  "clubId": "nottingham-forest","captain": false, "bio": "" },
+    { "id": "england-kane",             "name": "Harry Kane",        "shirt": 9,  "position": "FW", "dob": "1993-07-28", "age": 32, "caps": 114, "goals": 79, "clubId": "bayern-munich",    "captain": true,  "bio": "" },
+    { "id": "england-bellingham",       "name": "Jude Bellingham",   "shirt": 10, "position": "MF", "dob": "2003-06-29", "age": 22, "caps": 48,  "goals": 6,  "clubId": "real-madrid",      "captain": false, "bio": "" },
+    { "id": "england-rashford",         "name": "Marcus Rashford",   "shirt": 11, "position": "FW", "dob": "1997-10-31", "age": 28, "caps": 72,  "goals": 18, "clubId": "barcelona",        "captain": false, "bio": "" },
+    { "id": "england-chalobah",         "name": "Trevoh Chalobah",   "shirt": 12, "position": "DF", "dob": "1999-07-05", "age": 26, "caps": 1,   "goals": 0,  "clubId": "chelsea",          "captain": false, "bio": "" },
+    { "id": "england-dean-henderson",   "name": "Dean Henderson",    "shirt": 13, "position": "GK", "dob": "1997-03-12", "age": 29, "caps": 5,   "goals": 0,  "clubId": "crystal-palace",   "captain": false, "bio": "" },
+    { "id": "england-jordan-henderson", "name": "Jordan Henderson",  "shirt": 14, "position": "MF", "dob": "1990-06-17", "age": 36, "caps": 90,  "goals": 3,  "clubId": "brentford",        "captain": false, "bio": "" },
+    { "id": "england-burn",             "name": "Dan Burn",          "shirt": 15, "position": "DF", "dob": "1992-05-09", "age": 34, "caps": 8,   "goals": 0,  "clubId": "newcastle-united", "captain": false, "bio": "" },
+    { "id": "england-mainoo",           "name": "Kobbie Mainoo",     "shirt": 16, "position": "MF", "dob": "2005-04-19", "age": 21, "caps": 14,  "goals": 0,  "clubId": "manchester-united","captain": false, "bio": "" },
+    { "id": "england-rogers",           "name": "Morgan Rogers",     "shirt": 17, "position": "MF", "dob": "2002-07-26", "age": 23, "caps": 15,  "goals": 1,  "clubId": "aston-villa",      "captain": false, "bio": "" },
+    { "id": "england-gordon",           "name": "Anthony Gordon",    "shirt": 18, "position": "FW", "dob": "2001-02-24", "age": 25, "caps": 19,  "goals": 3,  "clubId": "newcastle-united", "captain": false, "bio": "" },
+    { "id": "england-watkins",          "name": "Ollie Watkins",     "shirt": 19, "position": "FW", "dob": "1995-12-30", "age": 30, "caps": 22,  "goals": 7,  "clubId": "aston-villa",      "captain": false, "bio": "" },
+    { "id": "england-madueke",          "name": "Noni Madueke",      "shirt": 20, "position": "FW", "dob": "2002-03-10", "age": 24, "caps": 11,  "goals": 1,  "clubId": "arsenal",          "captain": false, "bio": "" },
+    { "id": "england-eze",              "name": "Eberechi Eze",      "shirt": 21, "position": "MF", "dob": "1998-06-29", "age": 27, "caps": 17,  "goals": 3,  "clubId": "arsenal",          "captain": false, "bio": "" },
+    { "id": "england-toney",            "name": "Ivan Toney",        "shirt": 22, "position": "FW", "dob": "1996-03-16", "age": 30, "caps": 8,   "goals": 1,  "clubId": "al-ahli",          "captain": false, "bio": "" },
+    { "id": "england-trafford",         "name": "James Trafford",    "shirt": 23, "position": "GK", "dob": "2002-10-10", "age": 23, "caps": 2,   "goals": 0,  "clubId": "manchester-city",  "captain": false, "bio": "" },
+    { "id": "england-reece-james",      "name": "Reece James",       "shirt": 24, "position": "DF", "dob": "1999-12-08", "age": 26, "caps": 24,  "goals": 1,  "clubId": "chelsea",          "captain": false, "bio": "" },
+    { "id": "england-spence",           "name": "Djed Spence",       "shirt": 25, "position": "DF", "dob": "2000-08-09", "age": 25, "caps": 6,   "goals": 0,  "clubId": "tottenham-hotspur","captain": false, "bio": "" },
+    { "id": "england-quansah",          "name": "Jarell Quansah",    "shirt": 26, "position": "DF", "dob": "2003-01-29", "age": 23, "caps": 3,   "goals": 0,  "clubId": "bayer-leverkusen", "captain": false, "bio": "" }
+  ]
+}

@@ -2,17 +2,17 @@
   "version": "1.0",
   "lastUpdated": "2026-06-19T00:00:00Z",
   "data": [
-    { "id": "A", "name": "Group A", "teamIds": ["usa", "canada", "mexico", "panama"] },
-    { "id": "B", "name": "Group B", "teamIds": ["england", "netherlands", "senegal", "ecuador"] },
-    { "id": "C", "name": "Group C", "teamIds": ["brazil", "argentina", "colombia", "venezuela"] },
-    { "id": "D", "name": "Group D", "teamIds": ["spain", "germany", "morocco", "cameroon"] },
-    { "id": "E", "name": "Group E", "teamIds": ["france", "portugal", "ivory-coast", "georgia"] },
-    { "id": "F", "name": "Group F", "teamIds": ["italy", "croatia", "japan", "iran"] },
-    { "id": "G", "name": "Group G", "teamIds": ["belgium", "switzerland", "ghana", "egypt"] },
-    { "id": "H", "name": "Group H", "teamIds": ["turkey", "austria", "uruguay", "peru"] },
-    { "id": "I", "name": "Group I", "teamIds": ["poland", "denmark", "south-africa", "nigeria"] },
-    { "id": "J", "name": "Group J", "teamIds": ["scotland", "czech-republic", "saudi-arabia", "australia"] },
-    { "id": "K", "name": "Group K", "teamIds": ["serbia", "ukraine", "south-korea", "new-zealand"] },
-    { "id": "L", "name": "Group L", "teamIds": ["romania", "hungary", "algeria", "honduras"] }
+    { "id": "A", "name": "Group A", "teamIds": ["mexico",    "south-korea",       "south-africa", "czech-republic"    ] },
+    { "id": "B", "name": "Group B", "teamIds": ["canada",    "bosnia-herzegovina","qatar",        "switzerland"       ] },
+    { "id": "C", "name": "Group C", "teamIds": ["brazil",    "morocco",           "haiti",        "scotland"          ] },
+    { "id": "D", "name": "Group D", "teamIds": ["usa",       "paraguay",          "australia",    "turkey"            ] },
+    { "id": "E", "name": "Group E", "teamIds": ["germany",   "curacao",           "ivory-coast",  "ecuador"           ] },
+    { "id": "F", "name": "Group F", "teamIds": ["netherlands","japan",             "sweden",       "tunisia"           ] },
+    { "id": "G", "name": "Group G", "teamIds": ["belgium",   "egypt",             "iran",         "new-zealand"       ] },
+    { "id": "H", "name": "Group H", "teamIds": ["spain",     "cape-verde",        "saudi-arabia", "uruguay"           ] },
+    { "id": "I", "name": "Group I", "teamIds": ["france",    "senegal",           "iraq",         "norway"            ] },
+    { "id": "J", "name": "Group J", "teamIds": ["argentina", "algeria",           "austria",      "jordan"            ] },
+    { "id": "K", "name": "Group K", "teamIds": ["portugal",  "dr-congo",          "uzbekistan",   "colombia"          ] },
+    { "id": "L", "name": "Group L", "teamIds": ["england",   "croatia",           "ghana",        "panama"            ] }
   ]
 }

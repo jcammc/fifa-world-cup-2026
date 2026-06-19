@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-19T00:00:00Z",
+  "data": [
+    { "id": "brazil-alisson",          "name": "Alisson",            "shirt": 1,  "position": "GK", "dob": "1992-10-02", "age": 33, "caps": 78,  "goals": 0,  "clubId": "liverpool",           "captain": false, "bio": "" },
+    { "id": "brazil-ederson-silva",    "name": "Éderson Silva",      "shirt": 2,  "position": "MF", "dob": "1999-07-07", "age": 26, "caps": 3,   "goals": 0,  "clubId": "atalanta",            "captain": false, "bio": "" },
+    { "id": "brazil-gabriel-magalhaes","name": "Gabriel Magalhães",  "shirt": 3,  "position": "DF", "dob": "1997-12-19", "age": 28, "caps": 17,  "goals": 1,  "clubId": "arsenal",             "captain": false, "bio": "" },
+    { "id": "brazil-marquinhos",       "name": "Marquinhos",         "shirt": 4,  "position": "DF", "dob": "1994-05-14", "age": 32, "caps": 105, "goals": 7,  "clubId": "paris-saint-germain", "captain": true,  "bio": "" },
+    { "id": "brazil-casemiro",         "name": "Casemiro",           "shirt": 5,  "position": "MF", "dob": "1992-02-23", "age": 34, "caps": 86,  "goals": 9,  "clubId": "manchester-united",   "captain": false, "bio": "" },
+    { "id": "brazil-alex-sandro",      "name": "Alex Sandro",        "shirt": 6,  "position": "DF", "dob": "1991-01-26", "age": 35, "caps": 45,  "goals": 2,  "clubId": "flamengo",            "captain": false, "bio": "" },
+    { "id": "brazil-vinicius-junior",  "name": "Vinícius Júnior",    "shirt": 7,  "position": "FW", "dob": "2000-07-12", "age": 25, "caps": 49,  "goals": 9,  "clubId": "real-madrid",         "captain": false, "bio": "" },
+    { "id": "brazil-bruno-guimaraes", "name": "Bruno Guimarães",    "shirt": 8,  "position": "MF", "dob": "1997-11-16", "age": 28, "caps": 43,  "goals": 3,  "clubId": "newcastle-united",    "captain": false, "bio": "" },
+    { "id": "brazil-matheus-cunha",    "name": "Matheus Cunha",      "shirt": 9,  "position": "FW", "dob": "1999-05-27", "age": 27, "caps": 23,  "goals": 1,  "clubId": "manchester-united",   "captain": false, "bio": "" },
+    { "id": "brazil-neymar",           "name": "Neymar",             "shirt": 10, "position": "FW", "dob": "1992-02-05", "age": 34, "caps": 128, "goals": 79, "clubId": "santos",              "captain": false, "bio": "" },
+    { "id": "brazil-raphinha",         "name": "Raphinha",           "shirt": 11, "position": "FW", "dob": "1996-12-14", "age": 29, "caps": 39,  "goals": 11, "clubId": "barcelona",           "captain": false, "bio": "" },
+    { "id": "brazil-weverton",         "name": "Weverton",           "shirt": 12, "position": "GK", "dob": "1987-12-13", "age": 38, "caps": 11,  "goals": 0,  "clubId": "gremio",              "captain": false, "bio": "" },
+    { "id": "brazil-danilo-luiz",      "name": "Danilo",             "shirt": 13, "position": "DF", "dob": "1991-07-15", "age": 34, "caps": 70,  "goals": 1,  "clubId": "flamengo",            "captain": false, "bio": "" },
+    { "id": "brazil-bremer",           "name": "Bremer",             "shirt": 14, "position": "DF", "dob": "1997-03-18", "age": 29, "caps": 8,   "goals": 1,  "clubId": "juventus",            "captain": false, "bio": "" },
+    { "id": "brazil-leo-pereira",      "name": "Léo Pereira",        "shirt": 15, "position": "DF", "dob": "1996-01-31", "age": 30, "caps": 4,   "goals": 0,  "clubId": "flamengo",            "captain": false, "bio": "" },
+    { "id": "brazil-douglas-santos",   "name": "Douglas Santos",     "shirt": 16, "position": "DF", "dob": "1994-03-22", "age": 32, "caps": 7,   "goals": 0,  "clubId": "zenit",               "captain": false, "bio": "" },
+    { "id": "brazil-fabinho",          "name": "Fabinho",            "shirt": 17, "position": "MF", "dob": "1993-10-23", "age": 32, "caps": 33,  "goals": 0,  "clubId": "al-ittihad",          "captain": false, "bio": "" },
+    { "id": "brazil-danilo-santos",    "name": "Danilo Santos",      "shirt": 18, "position": "MF", "dob": "2001-04-29", "age": 25, "caps": 4,   "goals": 2,  "clubId": "botafogo",            "captain": false, "bio": "" },
+    { "id": "brazil-endrick",          "name": "Endrick",            "shirt": 19, "position": "FW", "dob": "2006-07-21", "age": 19, "caps": 17,  "goals": 4,  "clubId": "lyon",                "captain": false, "bio": "" },
+    { "id": "brazil-paqueta",          "name": "Lucas Paquetá",      "shirt": 20, "position": "MF", "dob": "1997-08-27", "age": 28, "caps": 63,  "goals": 13, "clubId": "flamengo",            "captain": false, "bio": "" },
+    { "id": "brazil-luiz-henrique",    "name": "Luiz Henrique",      "shirt": 21, "position": "FW", "dob": "2001-01-02", "age": 25, "caps": 15,  "goals": 2,  "clubId": "zenit",               "captain": false, "bio": "" },
+    { "id": "brazil-martinelli",       "name": "Gabriel Martinelli",  "shirt": 22, "position": "FW", "dob": "2001-06-18", "age": 25, "caps": 23,  "goals": 4,  "clubId": "arsenal",             "captain": false, "bio": "" },
+    { "id": "brazil-ederson-moraes",   "name": "Ederson",            "shirt": 23, "position": "GK", "dob": "1993-08-17", "age": 32, "caps": 32,  "goals": 0,  "clubId": "fenerbahce",          "captain": false, "bio": "" },
+    { "id": "brazil-roger-ibanez",     "name": "Roger Ibáñez",       "shirt": 24, "position": "DF", "dob": "1998-11-23", "age": 27, "caps": 7,   "goals": 0,  "clubId": "al-ahli",             "captain": false, "bio": "" },
+    { "id": "brazil-igor-thiago",      "name": "Igor Thiago",        "shirt": 25, "position": "FW", "dob": "2001-06-26", "age": 24, "caps": 4,   "goals": 2,  "clubId": "brentford",           "captain": false, "bio": "" },
+    { "id": "brazil-rayan",            "name": "Rayan",              "shirt": 26, "position": "FW", "dob": "2006-08-03", "age": 19, "caps": 2,   "goals": 1,  "clubId": "bournemouth",         "captain": false, "bio": "" }
+  ]
+}
