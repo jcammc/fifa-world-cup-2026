@@ -1,1 +1,177 @@
-{ "version": "1.0", "lastUpdated": "2026-06-19T00:00:00Z", "data": [] }
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-19T12:00:00Z",
+  "data": [
+    {
+      "groupId": "C",
+      "teams": [
+        {
+          "teamId": "scotland",
+          "position": 1,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "goalDifference": 1,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "morocco",
+          "position": 2,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "brazil",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "haiti",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 0,
+          "goalsAgainst": 1,
+          "goalDifference": -1,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "I",
+      "teams": [
+        {
+          "teamId": "norway",
+          "position": 1,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 4,
+          "goalsAgainst": 1,
+          "goalDifference": 3,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "france",
+          "position": 2,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 3,
+          "goalsAgainst": 1,
+          "goalDifference": 2,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "senegal",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "goalDifference": -2,
+          "points": 0,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "iraq",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 4,
+          "goalDifference": -3,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "L",
+      "teams": [
+        {
+          "teamId": "england",
+          "position": 1,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 4,
+          "goalsAgainst": 2,
+          "goalDifference": 2,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "ghana",
+          "position": 2,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "goalDifference": 1,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "panama",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 0,
+          "goalsAgainst": 1,
+          "goalDifference": -1,
+          "points": 0,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "croatia",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    }
+  ]
+}

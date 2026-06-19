@@ -112,7 +112,7 @@ Why:
 
 ---
 
-## REC-ARCH-006 [CONSIDER]
+## REC-ARCH-006 [CONSIDER → REJECTED]
 **Implement a lightweight event bus for cross-module communication.**
 
 Currently, Hero Navigation requires `OverviewTab` to directly call a method on
@@ -135,6 +135,12 @@ Why:
 
 Caveat: adds complexity. Only adopt if cross-module communication grows beyond
 the single Hero Navigation case.
+
+**Sprint 3 decision: REJECTED.** Hero Navigation implemented via a direct callback
+chain: `OverviewTab` receives an `onHeroSelect` callback from `TeamPage`; clicking
+a hero card calls `TeamPage.#navigateToPlayer(playerId)`, which awaits
+`#loadTab('squad')` then calls `SquadTab.scrollToPlayer(playerId)`. Three modules,
+zero coupling infrastructure. No event bus needed for a single communication path.
 
 ---
 
@@ -191,7 +197,7 @@ Why:
 
 ---
 
-## REC-PERF-004 [ADOPT]
+## REC-PERF-004 [ADOPT → COMPLETE]
 **Use `content-visibility: auto` on off-screen squad rows.**
 
 For teams with large squads, most player rows are below the fold.
@@ -208,6 +214,10 @@ Why:
 - Reduces initial paint time on Squad tab
 - Browser skips rendering off-screen rows until user scrolls near them
 - Combined with IntersectionObserver, this is entirely compatible
+
+**Sprint 3 status: COMPLETE.** Applied to `.squad-card` (individual cards, not rows):
+`content-visibility: auto; contain-intrinsic-size: 0 220px`. Works correctly
+alongside the IntersectionObserver on position group sections.
 
 ---
 

@@ -759,137 +759,142 @@ Search query handler debounced to 50ms. Prevents index queries on every keystrok
 
 # 11. AUTO-FOCUS SQUAD SYSTEM — DETAILED IMPLEMENTATION
 
-This is the most complex feature. Full specification:
+**Architecture update (Sprint 3):** The original spec observed visual grid rows
+(`data-row`, dynamic count based on viewport). The implemented approach uses
+**position groups** (Goalkeepers / Defenders / Midfielders / Forwards sections)
+as observable units. Position groups are semantically stable regardless of screen
+width, always exactly 4 per squad, and map directly to `#rowSelections` keys.
+This is now the official architecture. Do not revert to visual rows.
 
 ## DOM structure
 
 ```html
-<div class="squad-grid" id="squad-grid">
-  <div class="player-row" data-row="0">
-    <div class="player-card" data-player-id="france-maignan" tabindex="0">...</div>
-    <div class="player-card" data-player-id="france-saliba"  tabindex="0">...</div>
-    <div class="player-card" data-player-id="france-upamecano" tabindex="0">...</div>
-    <div class="player-card" data-player-id="france-hernandez" tabindex="0">...</div>
+<div class="squad-layout">
+  <div class="squad-scroll">
+    <section class="squad-group" data-position="GK">
+      <h3 class="squad-group__title">
+        Goalkeepers <span class="squad-group__count">3</span>
+      </h3>
+      <div class="squad-grid">
+        <button class="squad-card" data-player-id="france-maignan" tabindex="0">...</button>
+        <!-- ... -->
+      </div>
+    </section>
+    <section class="squad-group" data-position="DF">...</section>
+    <section class="squad-group" data-position="MF">...</section>
+    <section class="squad-group" data-position="FW">...</section>
   </div>
-  <div class="player-row" data-row="1">...</div>
-  <!-- n rows total -->
+  <div class="squad-panel-container">
+    <!-- ProfilePanel singleton renders into this container -->
+  </div>
 </div>
-
-<!-- Singleton: exists once in DOM for this squad tab instance -->
-<aside class="profile-panel" id="profile-panel" aria-live="polite" aria-label="Player Profile">
-  <!-- Rendered by ProfilePanel class -->
-</aside>
 ```
 
 ## IntersectionObserver setup
 
 ```javascript
-// squad-tab.js (pseudocode)
-const observer = new IntersectionObserver(
-  (entries) => {
-    // Find the entry with highest intersection ratio
-    const mostVisible = entries
-      .filter(e => e.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-    if (mostVisible) {
-      const row = mostVisible.target;
-      const rowIndex = parseInt(row.dataset.row);
-      if (rowIndex !== this.#activeRowIndex) {
-        this.#deactivateRow(this.#activeRowIndex);
-        this.#activateRow(rowIndex);
-      }
-    }
-  },
-  {
-    root: null,               // viewport
-    rootMargin: '-30% 0px',   // trigger when row enters middle 40% of viewport
-    threshold: [0, 0.25, 0.5, 0.75, 1.0]
+// squad-tab.js
+this.#observer = new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    const posKey = entry.target.dataset.position;
+    const savedId = this.#rowSelections.get(posKey);
+    const firstCard = entry.target.querySelector('.squad-card');
+    const playerId = savedId || firstCard?.dataset.playerId;
+    if (!playerId) continue;
+    const player = this.#players.find(p => p.id === playerId);
+    const club   = this.#clubMap.get(player?.clubId);
+    this.#panel.show(player, club);
   }
-);
+}, {
+  root: document.getElementById('app-content'), // NOT null — must be the scroll container
+  rootMargin: '-30% 0px',
+  threshold: 0
+});
 
-// Observe each row
-this.#rows.forEach(row => observer.observe(row));
+this.#groups.forEach(g => {
+  const el = this.#container.querySelector(`[data-position="${g.key}"]`);
+  if (el) this.#observer.observe(el);
+});
 ```
 
-## Row activation
+**Critical:** `root` must be `document.getElementById('app-content')` because
+`#app-content` (not the viewport) is the `overflow-y: auto` scroll container.
+Without this, the observer watches viewport intersection, which is always true
+and never fires transition events correctly.
+
+## Player card selection and #rowSelections
 
 ```javascript
-#activateRow(rowIndex) {
-  this.#activeRowIndex = rowIndex;
-  const row = this.#rows[rowIndex];
-  row.classList.add('row--active');
+// #rowSelections Map: positionKey → playerId
+// "GK" | "DF" | "MF" | "FW" → last selected player id in that group
 
-  // Restore last selected player in this row, or default to first
-  const savedPlayerId = this.#rowSelections.get(rowIndex);
-  const playerId = savedPlayerId || row.querySelector('.player-card').dataset.playerId;
-
-  this.#showProfile(playerId);
-}
-
-#deactivateRow(rowIndex) {
-  if (rowIndex < 0 || rowIndex >= this.#rows.length) return;
-  const row = this.#rows[rowIndex];
-  row.classList.remove('row--active');
-}
-```
-
-## Player card selection
-
-```javascript
-// Player card click handler
-row.addEventListener('click', (e) => {
-  const card = e.target.closest('.player-card');
+// Event delegation on the whole layout:
+this.#container.addEventListener('click', e => {
+  const card = e.target.closest('.squad-card');
   if (!card) return;
+  const group = card.closest('.squad-group');
+  const posKey = group?.dataset.position;
   const playerId = card.dataset.playerId;
-  this.#rowSelections.set(rowIndex, playerId);
-  this.#showProfile(playerId);
+
+  // Persist selection for this position group
+  if (posKey) this.#rowSelections.set(posKey, playerId);
+
+  // Update selected card styling
+  this.#container.querySelectorAll('.squad-card--selected')
+    .forEach(el => el.classList.remove('squad-card--selected'));
+  card.classList.add('squad-card--selected');
+
+  // Show player in ProfilePanel
+  const player = this.#players.find(p => p.id === playerId);
+  this.#panel.show(player, this.#clubMap.get(player?.clubId));
 });
 ```
 
 ## Profile panel update
 
-```javascript
-async #showProfile(playerId) {
-  const player = await DataManager.getPlayer(playerId);
-  const ranking = await DataManager.getRanking(playerId);
-  const bio = BioEngine.getBio(player); // uses stored bio or generates
-  const similarPlayers = await DataManager.getPlayers(player.similarPlayerIds);
+ProfilePanel is a singleton class instantiated once per SquadTab lifecycle.
+It renders directly into `.squad-panel-container` via `innerHTML`.
+Updates use CSS `@keyframes pp-in` animation on the incoming `.pp-card` — more
+robust than `transitionend` (fires reliably on DOM insertion, not DOM removal).
 
-  this.#profilePanel.render({
-    player,
-    ranking,
-    bio,
-    similarPlayers
-  });
+```javascript
+// ProfilePanel.show(player, club)
+show(player, club = null) {
+  if (player.id === this.#currentPlayerId) return; // no-op if same player
+  this.#currentPlayerId = player.id;
+  this.#container.innerHTML = this.#buildCard(player, club);
+  // pp-in keyframe on .pp-card handles the fade-in automatically
 }
 ```
 
 ## Hero Player Navigation implementation
 
 ```javascript
-// Called by TeamPageModule when hero card is clicked
-async focusPlayer(playerId) {
-  // 1. Find which row contains this player
-  const rowIndex = this.#findRowForPlayer(playerId);
+// Called by TeamPage when a hero card is clicked
+scrollToPlayer(playerId) {
+  const card = this.#container.querySelector(`[data-player-id="${playerId}"]`);
+  if (!card) return;
 
-  // 2. Scroll row into view
-  const row = this.#rows[rowIndex];
-  row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  // Activate card visually
+  this.#container.querySelectorAll('.squad-card--selected')
+    .forEach(el => el.classList.remove('squad-card--selected'));
+  card.classList.add('squad-card--selected');
 
-  // 3. Wait for scroll to complete, then activate
-  await this.#waitForScrollEnd();
+  // Persist selection in the group map
+  const group = card.closest('.squad-group');
+  if (group) this.#rowSelections.set(group.dataset.position, playerId);
 
-  // 4. Activate row and show player profile
-  this.#deactivateRow(this.#activeRowIndex);
-  this.#rowSelections.set(rowIndex, playerId);
-  this.#activateRow(rowIndex);
-
-  // 5. Focus the player card for keyboard users
-  const card = row.querySelector(`[data-player-id="${playerId}"]`);
-  card?.focus();
+  // Scroll into view (80ms delay allows DOM to settle after tab switch)
+  setTimeout(() => {
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, 80);
 }
 ```
+
+TeamPage flow: `OverviewTab(onHeroSelect)` → `TeamPage.#navigateToPlayer(playerId)`
+→ `await #loadTab('squad')` → `SquadTab.scrollToPlayer(playerId)`.
+No event bus required. The callback chain is the official pattern.
 
 ---
 

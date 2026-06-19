@@ -1,45 +1,99 @@
 import { DataManager } from '../data.js';
-import { formatKickoff } from '../time.js';
-import { escapeHtml, formatCurrency } from '../utils.js';
+import { formatKickoff, isToday } from '../time.js';
+import { escapeHtml } from '../utils.js';
+import { GroupCarousel } from './group-carousel.js';
 
 export class TournamentCentre {
   #container;
+  #activeTab  = 'today';
+  #tabEl      = null;
+  #tabModule  = null;
+  #countries  = [];
+  #fixtures   = [];
+  #standings  = [];
+  #groups     = [];
+  #countryMap = new Map();
 
   constructor(container, params = {}) {
     this.#container = container;
   }
 
   async render() {
-    const [fixtures, standings, countries, groups] = await Promise.all([
+    [this.#fixtures, this.#standings, this.#countries, this.#groups] = await Promise.all([
       DataManager.loadFixtures(),
       DataManager.loadStandings(),
       DataManager.loadCountries(),
       DataManager.loadGroups(),
     ]);
-
-    const todaysFixtures = await DataManager.getTodaysFixtures();
-    const isNextMatches  = todaysFixtures.length === 0;
-    const displayFixtures = isNextMatches
-      ? fixtures.filter(f => f.status === 'scheduled').slice(0, 4)
-      : todaysFixtures;
-
-    const countryMap = new Map(countries.map(c => [c.id, c]));
+    this.#countryMap = new Map(this.#countries.map(c => [c.id, c]));
 
     this.#container.innerHTML = `
       <div class="page-content tournament-centre">
-        ${this.#renderSnapshot(countries, fixtures)}
-        ${this.#renderMatches(displayFixtures, isNextMatches, countryMap)}
-        ${this.#renderGroupLeaders(standings, countryMap)}
-        ${this.#renderGroupStage(groups)}
-        ${this.#renderKnockout()}
+        ${this.#renderSnapshot()}
+        <div class="tc-tabs" role="tablist">
+          <button class="tc-tab tc-tab--active" data-tab="today"
+                  role="tab" aria-selected="true" type="button">Today's Matches</button>
+          <button class="tc-tab" data-tab="groups"
+                  role="tab" aria-selected="false" type="button">Group Stage</button>
+          <button class="tc-tab" data-tab="knockout"
+                  role="tab" aria-selected="false" type="button">Knockout Stage</button>
+        </div>
+        <div class="tc-tab-content"></div>
       </div>`;
+
+    this.#tabEl = this.#container.querySelector('.tc-tab-content');
+    await this.#loadTab('today');
+
+    // Attach to inner element (re-created each render) to avoid listener accumulation
+    this.#container.querySelector('.tournament-centre').addEventListener('click', async e => {
+      const btn = e.target.closest('[data-tab]');
+      if (!btn || btn.dataset.tab === this.#activeTab) return;
+      await this.#loadTab(btn.dataset.tab);
+    });
   }
 
-  // ─── Snapshot ───────────────────────────────────────────
+  // ─── Tab loading ──────────────────────────────────────────
 
-  #renderSnapshot(countries, fixtures) {
-    const played    = fixtures.filter(f => f.status === 'finished').length;
-    const remaining = fixtures.length > 0 ? fixtures.length - played : '—';
+  async #loadTab(tab) {
+    this.#tabModule?.teardown?.();
+    this.#tabModule = null;
+    this.#tabEl.innerHTML = '';
+    this.#activeTab = tab;
+
+    this.#container.querySelectorAll('.tc-tab').forEach(btn => {
+      const active = btn.dataset.tab === tab;
+      btn.classList.toggle('tc-tab--active', active);
+      btn.setAttribute('aria-selected', String(active));
+    });
+
+    if (tab === 'today') {
+      this.#tabEl.innerHTML = this.#renderTodayTab();
+    } else if (tab === 'groups') {
+      this.#tabModule = new GroupCarousel(
+        this.#tabEl,
+        this.#groups,
+        this.#standings,
+        this.#fixtures,
+        this.#countryMap,
+      );
+      this.#tabModule.render();
+      this.#tabModule.init();
+    } else {
+      this.#tabEl.innerHTML = `
+        <div class="empty-state empty-state--compact tc-knockout-stub">
+          <div class="empty-state__icon">&#127942;</div>
+          <p class="empty-state__title">Knockout Stage</p>
+          <p class="empty-state__message">Full bracket will appear once all group matches are complete.</p>
+        </div>`;
+    }
+  }
+
+  // ─── Snapshot (always visible above tabs) ─────────────────
+
+  #renderSnapshot() {
+    const played    = this.#fixtures.filter(f => f.status === 'FT').length;
+    const remaining = this.#fixtures.length ? this.#fixtures.length - played : '—';
+    const teams     = this.#countries.length || 48;
 
     return `
       <section class="tc-snapshot">
@@ -47,7 +101,7 @@ export class TournamentCentre {
         <p class="tc-subtitle">48 teams &middot; 12 groups &middot; 104 matches</p>
         <div class="tc-snapshot__stats">
           <div class="tc-stat">
-            <span class="tc-stat__value">${countries.length || 48}</span>
+            <span class="tc-stat__value">${teams}</span>
             <span class="tc-stat__label">Teams</span>
           </div>
           <div class="tc-stat">
@@ -62,12 +116,28 @@ export class TournamentCentre {
       </section>`;
   }
 
-  // ─── Today's / Next matches ──────────────────────────────
+  // ─── Today tab ────────────────────────────────────────────
 
-  #renderMatches(displayFixtures, isNextMatches, countryMap) {
-    const heading = isNextMatches ? "Next Matches" : "Today's Matches";
-    const note    = isNextMatches
-      ? `<span class="tc-section__note">(no matches scheduled today)</span>`
+  #renderTodayTab() {
+    const todayFixtures    = this.#fixtures.filter(f => isToday(f.kickoff));
+    const isNext           = todayFixtures.length === 0;
+    const displayFixtures  = isNext
+      ? this.#fixtures.filter(f => f.status === 'scheduled').slice(0, 6)
+      : todayFixtures;
+
+    return `
+      <div class="tc-today-tab">
+        ${this.#renderMatchSection(displayFixtures, isNext)}
+        ${this.#renderGroupLeaders()}
+      </div>`;
+  }
+
+  // ─── Match section ────────────────────────────────────────
+
+  #renderMatchSection(displayFixtures, isNext) {
+    const heading = isNext ? 'Next Matches' : "Today's Matches";
+    const note    = isNext
+      ? `<span class="tc-section__note">(no matches today)</span>`
       : '';
 
     if (!displayFixtures.length) {
@@ -80,8 +150,7 @@ export class TournamentCentre {
         </section>`;
     }
 
-    const cards = displayFixtures.map(f => this.#matchCard(f, countryMap)).join('');
-
+    const cards = displayFixtures.map(f => this.#matchCard(f)).join('');
     return `
       <section class="tc-section">
         <h2 class="tc-section__title">${heading}${note}</h2>
@@ -89,22 +158,26 @@ export class TournamentCentre {
       </section>`;
   }
 
-  #matchCard(f, countryMap) {
-    const home    = countryMap.get(f.homeTeamId);
-    const away    = countryMap.get(f.awayTeamId);
+  #matchCard(f) {
+    const home     = this.#countryMap.get(f.homeTeamId);
+    const away     = this.#countryMap.get(f.awayTeamId);
     const homeName = escapeHtml(home?.name ?? f.homeTeamId ?? 'TBD');
     const awayName = escapeHtml(away?.name ?? f.awayTeamId ?? 'TBD');
     const kickoff  = escapeHtml(formatKickoff(f.kickoff));
     const venue    = f.venue ? escapeHtml(f.venue) : '';
 
-    const middle = f.score
-      ? `<span class="match-card__score">${f.score.home}&nbsp;&ndash;&nbsp;${f.score.away}</span>`
+    const middle = f.status === 'FT' || f.status === 'live'
+      ? `<span class="match-card__score">${f.homeScore}&nbsp;&ndash;&nbsp;${f.awayScore}</span>`
       : `<span class="match-card__time">${kickoff}</span>`;
 
     const statusBadge = f.status === 'live'
-      ? `<span class="badge badge--live" aria-label="Live match">🔴 LIVE</span>`
-      : f.status === 'finished'
+      ? `<span class="badge badge--live" aria-label="Live match">&#128308; LIVE</span>`
+      : f.status === 'FT'
       ? `<span class="badge badge--ft">FT</span>`
+      : '';
+
+    const broadcaster = f.broadcaster
+      ? `<span class="badge badge--broadcaster badge--${escapeHtml(f.broadcaster.toLowerCase())}">${escapeHtml(f.broadcaster)}</span>`
       : '';
 
     return `
@@ -116,15 +189,16 @@ export class TournamentCentre {
         </div>
         <div class="match-card__meta">
           ${statusBadge}
+          ${broadcaster}
           ${venue ? `<span class="match-card__venue">${venue}</span>` : ''}
         </div>
       </div>`;
   }
 
-  // ─── Group leaders ───────────────────────────────────────
+  // ─── Group leaders (quick-glance, Today tab) ─────────────
 
-  #renderGroupLeaders(standings, countryMap) {
-    if (!standings.length) {
+  #renderGroupLeaders() {
+    if (!this.#standings.length) {
       return `
         <section class="tc-section">
           <h2 class="tc-section__title">Group Leaders</h2>
@@ -134,63 +208,37 @@ export class TournamentCentre {
         </section>`;
     }
 
-    const groupMap = new Map();
-    for (const s of standings) {
-      const prev = groupMap.get(s.groupId);
-      if (!prev || s.points > prev.points) groupMap.set(s.groupId, s);
-    }
-
-    const cards = [...groupMap.entries()]
-      .sort(([a], [b]) => a.localeCompare(b))
-      .map(([groupId, s]) => {
-        const name = escapeHtml(countryMap.get(s.countryId)?.name ?? s.countryId);
-        const id   = escapeHtml(s.countryId);
+    const cards = [...this.#standings]
+      .sort((a, b) => a.groupId.localeCompare(b.groupId))
+      .map(group => {
+        const leader = group.teams?.[0];
+        if (!leader) return '';
+        const country = this.#countryMap.get(leader.teamId);
+        const name    = escapeHtml(country?.name ?? leader.teamId);
+        const id      = escapeHtml(leader.teamId);
         return `
           <div class="leader-card">
-            <span class="leader-card__group">Group ${escapeHtml(groupId)}</span>
+            <span class="leader-card__group">Group ${escapeHtml(group.groupId)}</span>
             <a href="#${id}" class="leader-card__team">${name}</a>
-            <span class="leader-card__pts">${s.points} pts</span>
+            <span class="leader-card__pts">${leader.points} pts</span>
           </div>`;
-      }).join('');
+      }).filter(Boolean).join('');
 
     return `
       <section class="tc-section">
-        <h2 class="tc-section__title">Group Leaders</h2>
+        <div class="tc-section__header">
+          <h2 class="tc-section__title">Group Leaders</h2>
+          <button class="btn-link tc-section__link" type="button"
+                  data-tab="groups">View all groups &rarr;</button>
+        </div>
         <div class="leader-cards">${cards}</div>
-      </section>`;
-  }
-
-  // ─── Group stage link ────────────────────────────────────
-
-  #renderGroupStage(groups) {
-    const count = groups.length || 12;
-    return `
-      <section class="tc-section">
-        <div class="tc-section__header">
-          <h2 class="tc-section__title">Group Stage</h2>
-          <a href="#groups" class="tc-section__link">View all →</a>
-        </div>
-        <div class="empty-state empty-state--compact">
-          <p class="empty-state__message">${count} groups &middot; Full carousel arrives in Sprint 4</p>
-        </div>
-      </section>`;
-  }
-
-  // ─── Knockout stage link ─────────────────────────────────
-
-  #renderKnockout() {
-    return `
-      <section class="tc-section">
-        <div class="tc-section__header">
-          <h2 class="tc-section__title">Knockout Stage</h2>
-        </div>
-        <div class="empty-state empty-state--compact">
-          <p class="empty-state__message">Full bracket arrives in Sprint 4</p>
-        </div>
       </section>`;
   }
 
   init() {}
 
-  teardown() {}
+  teardown() {
+    this.#tabModule?.teardown?.();
+    this.#tabModule = null;
+  }
 }
