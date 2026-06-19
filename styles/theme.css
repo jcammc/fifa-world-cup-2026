@@ -1,0 +1,68 @@
+/* Light theme (default) */
+:root,
+[data-theme="light"] {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f5f5;
+  --color-bg-card: #ffffff;
+  --color-bg-elevated: #fafafa;
+  --color-text-primary: #0a0a0a;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
+  --color-border: #e0e0e0;
+  --color-border-subtle: #eeeeee;
+  --color-accent: #c8a84b;
+  --color-accent-hover: #e0c06a;
+  --color-accent-muted: rgba(200, 168, 75, 0.15);
+  --color-success: #2d7a3c;
+  --color-warning: #b45309;
+  --color-danger: #b91c1c;
+  --color-info: #1d4ed8;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-nav-bg: #ffffff;
+  --color-nav-border: #e0e0e0;
+  --color-tab-active: #0a0a0a;
+  --color-tab-inactive: #888888;
+  --color-badge-bg: #f0f0f0;
+  --color-badge-text: #333333;
+  --color-input-bg: #ffffff;
+  --color-input-border: #cccccc;
+  --color-input-focus: #c8a84b;
+  --color-skeleton: #e8e8e8;
+  --color-skeleton-shimmer: #f0f0f0;
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #141414;
+  --color-bg-card: #1a1a1a;
+  --color-bg-elevated: #222222;
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #aaaaaa;
+  --color-text-muted: #666666;
+  --color-border: #2a2a2a;
+  --color-border-subtle: #222222;
+  --color-accent: #c8a84b;
+  --color-accent-hover: #e0c06a;
+  --color-accent-muted: rgba(200, 168, 75, 0.12);
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+  --color-info: #60a5fa;
+  --color-overlay: rgba(0, 0, 0, 0.7);
+  --color-nav-bg: #111111;
+  --color-nav-border: #2a2a2a;
+  --color-tab-active: #f5f5f5;
+  --color-tab-inactive: #666666;
+  --color-badge-bg: #2a2a2a;
+  --color-badge-text: #cccccc;
+  --color-input-bg: #1a1a1a;
+  --color-input-border: #3a3a3a;
+  --color-input-focus: #c8a84b;
+  --color-skeleton: #1e1e1e;
+  --color-skeleton-shimmer: #2a2a2a;
+  --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.6);
+}

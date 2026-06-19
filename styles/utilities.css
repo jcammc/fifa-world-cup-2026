@@ -1,0 +1,17 @@
+/* Utility classes — stub */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden { display: none !important; }
+.invisible { visibility: hidden; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

@@ -1,0 +1,18 @@
+{
+  "name": "world-cup-2026",
+  "version": "1.0.0",
+  "description": "FIFA World Cup 2026 Squad Explorer and Tournament Companion",
+  "type": "module",
+  "scripts": {
+    "generate-bios": "node scripts/generate-player-bios.js",
+    "generate-rankings": "node scripts/generate-rankings.js",
+    "update-standings": "node scripts/update-standings.js",
+    "update-knockout": "node scripts/update-knockout.js",
+    "validate": "node scripts/validate-data.js",
+    "build-search-index": "node scripts/build-search-index.js",
+    "gather-photos": "node scripts/gather-photos.js",
+    "pre-deploy": "npm run validate && npm run generate-bios && npm run generate-rankings && npm run build-search-index"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
