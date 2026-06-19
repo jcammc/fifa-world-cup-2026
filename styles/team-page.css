@@ -1,1 +1,45 @@
-/* Team page — stub */
+/* ─── Sprint 1 team stub ─────────────────────────────────── */
+.team-stub {
+  max-width: 560px;
+}
+
+.team-stub__flag {
+  margin-bottom: var(--space-4);
+}
+
+.team-stub__flag img {
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.team-stub__name {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-2);
+}
+
+.team-stub__meta {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-1);
+}
+
+.team-stub__manager {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-6);
+}
+
+.team-stub__notice {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.team-stub__notice p {
+  margin: 0;
+}

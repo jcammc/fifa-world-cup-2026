@@ -4,9 +4,9 @@ import { Nav } from './modules/nav.js';
 
 async function init() {
   ThemeManager.init();
-  await Nav.render(document.getElementById('app-nav'));
+  Nav.render();
   Nav.init();
-  Router.init();
+  await Router.init();
 }
 
 init();

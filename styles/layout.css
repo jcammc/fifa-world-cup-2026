@@ -1,25 +1,109 @@
-/* Layout stubs — grid/flex foundations */
-
-.app-shell {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+:root {
+  --sidebar-width: 240px;
 }
 
-#app-root {
-  flex: 1;
-  margin-top: var(--nav-height);
-  width: 100%;
-  max-width: var(--max-content-width);
-  margin-left: auto;
-  margin-right: auto;
+/* ─── App shell: CSS Grid ────────────────────────────────── */
+#app {
+  display: grid;
+  grid-template-areas:
+    "header  header"
+    "sidebar content";
+  grid-template-columns: var(--sidebar-width) 1fr;
+  grid-template-rows: var(--nav-height) calc(100vh - var(--nav-height));
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app-header {
+  grid-area: header;
+  background: var(--color-nav-bg);
+  border-bottom: 1px solid var(--color-nav-border);
+  z-index: 100;
+  display: flex;
+  align-items: center;
   padding: 0 var(--space-4);
 }
 
-.page {
-  padding: var(--space-6) 0;
+#app-sidebar {
+  grid-area: sidebar;
+  background: var(--color-nav-bg);
+  border-right: 1px solid var(--color-nav-border);
+  overflow-y: auto;
+  height: 100%;
 }
 
+#app-content {
+  grid-area: content;
+  overflow-y: auto;
+  height: 100%;
+}
+
+/* ─── Tablet: icon-only sidebar ──────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root { --sidebar-width: 68px; }
+}
+
+/* ─── Mobile: no sidebar, use drawer ────────────────────── */
+@media (max-width: 768px) {
+  #app {
+    grid-template-areas:
+      "header"
+      "content";
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--nav-height) 1fr;
+  }
+
+  #app-sidebar {
+    display: none;
+  }
+}
+
+/* ─── Off-canvas drawer (mobile) ────────────────────────── */
+#app-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: var(--color-nav-bg);
+  border-right: 1px solid var(--color-nav-border);
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform var(--transition-base);
+  overflow-y: auto;
+}
+
+#app-drawer.drawer--open {
+  transform: translateX(0);
+}
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--color-overlay);
+  z-index: 199;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.drawer-backdrop.backdrop--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ─── Page content wrapper used by all modules ───────────── */
+.page-content {
+  padding: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: var(--space-4);
+  }
+}
+
+/* ─── Shared grid helpers ────────────────────────────────── */
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -38,22 +122,9 @@
   gap: var(--space-4);
 }
 
-.flex-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+.flex-row { display: flex; flex-direction: row; align-items: center; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-center { display: flex; align-items: center; justify-content: center; }
 
 .gap-2 { gap: var(--space-2); }
 .gap-4 { gap: var(--space-4); }
@@ -61,13 +132,7 @@
 .gap-8 { gap: var(--space-8); }
 
 @media (max-width: 768px) {
-  .grid-2,
-  .grid-3,
-  .grid-4 {
+  .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
-  }
-
-  #app-root {
-    padding: 0 var(--space-3);
   }
 }
