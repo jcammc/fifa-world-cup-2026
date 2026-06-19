@@ -324,18 +324,25 @@ from reaching the live application.
 
 ---
 
-## REC-MAINT-006 [CONSIDER]
+## REC-MAINT-006 [ADOPT]
 **Create a data entry guide document.**
+
+STATUS: COMPLETE — see DATA_ENTRY_GUIDE.md (created Sprint 2).
 
 For the person populating the 48 squads:
 - Schema reference with all required vs optional fields
 - Example of a complete player record
-- List of valid position values (GK, DEF, MID, FWD)
-- Naming conventions for IDs
-- Where to find club IDs, league IDs
+- Valid position values: GK, DF, MF, FW (not DEF/MID/FWD)
+- Player ID naming conventions and disambiguation rules
+- Brazilian single-name conventions
+- Wikipedia API workflow (section-fetch technique)
+- Club ID conventions
+- Captain field conventions
 
-This is a 1–2 page reference. Without it, inconsistent IDs across 1,250 players
-are almost guaranteed (e.g. "manchester_city" vs "manchester-city" vs "man-city").
+Promoted from [CONSIDER] to [ADOPT] after Sprint 2 data entry confirmed real
+disambiguation cases across just 78 players (two Hendersons, two Hernándezes,
+two Danilos, two Edersons). At 1,250 players across 48 teams, inconsistency
+without this guide is near-certain.
 
 ---
 

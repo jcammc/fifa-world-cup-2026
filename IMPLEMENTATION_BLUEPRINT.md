@@ -1022,17 +1022,17 @@ const POSITION_TEMPLATES = {
     p.caps > 0 ? `He has earned ${p.caps} international caps${p.goals > 0 ? ` and scored ${p.goals} goal${p.goals > 1 ? 's' : ''} for his country` : ''}.` : null,
     `One of the most dependable shot-stoppers at the tournament.`
   ],
-  DEF: (p) => [
+  DF: (p) => [
     `${p.name} is a defender for ${resolveClub(p.clubId)}, representing ${resolveCountry(p.countryId)} at their ${ordinal(p.worldCupCount || 1)} World Cup.`,
     p.caps > 0 ? `A reliable presence with ${p.caps} caps to his name.` : null,
     null
   ],
-  MID: (p) => [
+  MF: (p) => [
     `${p.name} is a midfielder for ${resolveClub(p.clubId)} and a key figure in ${resolveCountry(p.countryId)}'s setup.`,
     p.caps > 0 ? `He brings ${p.caps} caps of international experience to the squad.` : null,
     null
   ],
-  FWD: (p) => [
+  FW: (p) => [
     `${p.name} is a forward for ${resolveClub(p.clubId)}, representing ${resolveCountry(p.countryId)}.`,
     p.goals > 0 && p.caps > 0 ? `He has scored ${p.goals} goals in ${p.caps} international appearances.` : null,
     null
@@ -1042,7 +1042,7 @@ const POSITION_TEMPLATES = {
 export function getBio(player, clubs, countries) {
   if (player.bio) return player.bio; // curated override wins
 
-  const posKey = player.position; // 'GK' | 'DEF' | 'MID' | 'FWD'
+  const posKey = player.position; // 'GK' | 'DF' | 'MF' | 'FW'
   const template = POSITION_TEMPLATES[posKey] || POSITION_TEMPLATES['MID'];
   const sentences = template(player).filter(Boolean);
   return sentences.join(' ');

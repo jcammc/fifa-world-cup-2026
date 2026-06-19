@@ -15,7 +15,7 @@ Purpose: Defines how every piece of tournament data is obtained, maintained,
 |---------|--------|-----------|------------------|
 | Countries (48) | Manual | One-time | Emergency only |
 | Groups (A–L) | Manual | One-time | Never |
-| Official Squads | Manual | One-time | Squad changes only |
+| Official Squads | Wikipedia API (section fetch) | One-time | Squad changes only |
 | Managers | Manual | One-time | Emergency only |
 | Coaching Staff | Manual | One-time | Never |
 | Player Photos | Script-assisted | One-time | New players only |
@@ -33,6 +33,45 @@ Purpose: Defines how every piece of tournament data is obtained, maintained,
 | Similar Players | Script (offline) | One-time | Never |
 | Team Strength | Manual/Script | Pre-tournament | Optional |
 | Search Index | Script (automated) | Pre-deploy | After any data change |
+
+---
+
+## SECTION 1b — SQUAD DATA SOURCE (confirmed Sprint 2)
+
+### Primary source: Wikipedia
+
+URL: https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads
+
+Wikipedia provides: shirt number, name, position (GK/DF/MF/FW), date of birth, caps,
+goals, and current club for all 48 squads in a single page. This is the authoritative
+source for squad composition and must be fetched before any other source.
+
+### FIFA.com is NOT usable for automated collection
+
+FIFA.com is JavaScript-rendered. Web fetchers (WebFetch, curl, etc.) receive an empty
+page — no squad data is returned. Despite being the official source, it cannot be used
+for any scripted data acquisition. Use Wikipedia instead.
+
+### Wikipedia API — required technique
+
+The full page is too large for a direct WebFetch call — content is always truncated
+before reaching later groups (C, I, L etc.). Use the JSON API with section numbers:
+
+Step 1 — Get section list:
+  GET https://en.wikipedia.org/w/api.php?action=parse&page=2026_FIFA_World_Cup_squads&prop=sections&format=json
+
+Step 2 — Fetch one squad:
+  GET https://en.wikipedia.org/w/api.php?action=parse&page=2026_FIFA_World_Cup_squads&prop=wikitext&section={N}&format=json
+
+Section numbers confirmed at Sprint 2: Brazil=12, France=42, England=58.
+Re-fetch the sections list at the start of each new data session — indices can shift.
+
+### Supplementary sources (for fields not on Wikipedia)
+
+  Market values:    transfermarkt.com
+  EA player ratings: ea.com/fc/ratings or FUTBIN
+  Player bios:      Wikipedia individual player pages
+  Photos (future):  Club press packs / Wikimedia Commons
 
 ---
 

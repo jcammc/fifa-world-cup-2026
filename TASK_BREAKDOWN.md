@@ -198,6 +198,7 @@ Blocks Epics 3–7.
 ## Feature 2.1 — JSON Schema Finalisation
 
 ### T-016 — Finalise and document all JSON schemas
+Status: COMPLETE (Sprint 2)
 Complexity: M
 Produce schema documentation (as JS comments or a schemas.md file) for:
 - countries.json (with recentForm, teamStrength)
@@ -213,6 +214,7 @@ All foreign key relationships documented.
 Dependency: T-001.
 
 ### T-017 — Create sample data for 3 teams
+Status: COMPLETE (Sprint 2)
 Complexity: L
 Produce real, accurate sample data for France, England, Brazil:
 - countries.json entries
