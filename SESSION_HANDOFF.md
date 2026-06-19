@@ -30,11 +30,31 @@ You are continuing the build of **"World Cup 2026 Squad Explorer and Tournament 
 
 ---
 
+## REPOSITORY
+
+- **GitHub:** https://github.com/jcammc/fifa-world-cup-2026
+- **Branch:** `master`
+- **Local path:** `C:\Users\jcame\OneDrive\Desktop\FIFA World Cup 2026`
+- **Git identity (local):** `jcame` / `jcameronmcd@gmail.com`
+- **Remote:** `origin` → `https://github.com/jcammc/fifa-world-cup-2026.git`
+- **Netlify:** Connect manually — see instructions at bottom of this section
+
+**Netlify setup (user to complete before or during Sprint 0):**
+1. Go to https://app.netlify.com → Add new site → Import an existing project → Deploy with GitHub
+2. Select repo: `jcammc/fifa-world-cup-2026`
+3. Branch: `master` | Build command: *(leave empty)* | Publish directory: `.`
+4. Click Deploy — every `git push` auto-deploys within ~30 seconds
+
+---
+
 ## CURRENT STATUS
 
 | Phase | Status |
 |-------|--------|
 | Planning (7 documents) | COMPLETE — approved |
+| Git repository | CREATED — https://github.com/jcammc/fifa-world-cup-2026 |
+| Planning docs pushed to GitHub | DONE — initial commit `f30f211` |
+| Netlify connection | PENDING — user to complete (instructions above) |
 | DATA_ACQUISITION_STRATEGY.md | NOT YET CREATED (content ready — see Section 9 below) |
 | Sprint 0 | NOT STARTED |
 | Sprint 1–7 | NOT STARTED |
@@ -50,6 +70,8 @@ Create `C:\Users\jcame\OneDrive\Desktop\FIFA World Cup 2026\DATA_ACQUISITION_STR
 ### Step 2: Execute Sprint 0
 
 Create the complete project structure below. Stop after Sprint 0 and ask the user to review before beginning Sprint 1.
+
+**Note on Netlify:** If the user has not yet connected Netlify, Sprint 0 can still be completed locally. The completion gate item for Netlify deploy verification should be skipped and flagged for the user to complete separately.
 
 ---
 
