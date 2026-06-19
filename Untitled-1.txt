@@ -1,0 +1,993 @@
+# 01_PRODUCT_SPEC.md
+
+# World Cup 2026 Squad Explorer
+
+Version: 1.0
+Status: Master Product Specification
+Purpose: Authoritative product vision and feature specification
+
+---
+
+# DOCUMENT PRIORITY ORDER
+
+IMPORTANT
+
+Claude Code must treat this project as a fully specified application.
+
+If two documents appear to conflict, use the following priority order:
+
+1. 07_ACCEPTANCE_CRITERIA.md
+2. 06_UI_MOCKUPS.md
+3. 01_PRODUCT_SPEC.md
+4. 02_UX_AND_UI_SPEC.md
+5. 03_TECHNICAL_ARCHITECTURE.md
+6. 04_DATA_MODEL.md
+7. 05_IMPLEMENTATION_PLAN.md
+
+Higher-priority documents always override lower-priority documents.
+
+---
+
+# DO NOT GUESS
+
+If implementation requires information not explicitly contained within these specifications:
+
+1. Use the most conservative interpretation.
+2. Preserve all existing functionality.
+3. Avoid simplifying requirements.
+4. Preserve feature completeness.
+5. Leave extension points for future enhancement.
+6. Do not remove specified functionality because implementation appears difficult.
+7. Do not substitute simpler patterns for specified patterns.
+8. If uncertain between two options, choose the one that preserves more of the specified user experience.
+
+---
+
+# IMPLEMENTATION PRINCIPLES
+
+1. Do not simplify features because they appear complex.
+2. Do not replace specified behaviour with easier alternatives.
+3. Do not remove features on mobile.
+4. Preserve all functionality across desktop, tablet and mobile layouts.
+5. Auto-Focus Squad System is a core defining feature and must be implemented exactly as specified.
+6. Group Stage Scroll-Snap Navigation is a core defining feature and must be implemented exactly as specified.
+7. Hero Player Navigation behaviour must be implemented exactly as specified.
+8. Tournament Centre functionality must be implemented exactly as specified.
+9. If data is unavailable, use graceful fallbacks rather than removing UI elements.
+10. Maintain a premium sports-dashboard experience.
+11. Prioritize usability over visual gimmicks.
+12. Prioritize performance without reducing functionality.
+
+---
+
+# PROJECT OBJECTIVE
+
+Build the definitive World Cup 2026 Squad Explorer and Tournament Companion application.
+
+The application should combine:
+
+* FIFA World Cup presentation
+* Football Manager depth
+* Transfermarkt-style exploration
+* Modern sports dashboard usability
+
+The application should become a comprehensive reference tool for:
+
+* Players
+* Teams
+* Squads
+* Groups
+* Fixtures
+* Standings
+* Knockout rounds
+* Clubs
+* Leagues
+* Statistics
+
+The application should be useful both for:
+
+* Casual fans
+* Serious football followers
+
+---
+
+# PRIMARY GOALS
+
+The application should optimize for:
+
+1. Fast player discovery
+2. Team exploration
+3. Squad analysis
+4. Tournament tracking
+5. Club and league exploration
+6. Statistical analysis
+7. Mobile usability
+8. Long-term maintainability
+9. Visual clarity
+10. Performance
+
+---
+
+# DESIGN PHILOSOPHY
+
+The application should NOT feel like:
+
+* Wikipedia
+* A spreadsheet
+* A news website
+* A betting website
+* A fantasy football application
+
+The application SHOULD feel like:
+
+* A premium football intelligence platform
+* A football database
+* A World Cup exploration tool
+* A modern sports dashboard
+
+---
+
+# VISUAL STYLE
+
+## General
+
+Design should be:
+
+* Professional
+* Clean
+* Modern
+* Premium
+* Football-focused
+
+Avoid:
+
+* Visual clutter
+* Excessive motion
+* Gimmicks
+* Overly corporate styling
+
+---
+
+# DARK THEME
+
+Primary Background:
+Deep Navy
+
+Cards:
+Charcoal
+
+Accent:
+Gold
+
+Text:
+Off-white
+
+Mood:
+
+Premium FIFA-style presentation.
+
+---
+
+# LIGHT THEME
+
+Primary Background:
+White
+
+Cards:
+Light Grey
+
+Accent:
+French Blue
+
+Highlights:
+Gold
+
+Text:
+Dark Slate
+
+Mood:
+
+Professional football analytics platform.
+
+---
+
+# THEME SYSTEM
+
+Requirements:
+
+* Dark mode
+* Light mode
+* User selectable
+* Persisted between sessions
+
+Theme switching should affect:
+
+* Backgrounds
+* Cards
+* Charts
+* Tables
+* Navigation
+* Icons
+
+---
+
+# CORE APPLICATION STRUCTURE
+
+The application consists of four major areas:
+
+1. Team Explorer
+2. Tournament Centre
+3. Analysis Tools
+4. Football Database Tools
+
+---
+
+# GLOBAL NAVIGATION
+
+## Browse
+
+Contains:
+
+* Countries
+* Groups
+* Continents
+
+---
+
+## Tournament
+
+Contains:
+
+* Tournament Centre
+
+---
+
+## Analysis
+
+Contains:
+
+* Compare Teams
+* Statistics
+
+---
+
+## Football
+
+Contains:
+
+* Club Explorer
+* League Explorer
+
+---
+
+# TEAM EXPLORER
+
+The Team Explorer is the primary area of the application.
+
+Every World Cup team must be accessible.
+
+Each team has its own dedicated page.
+
+---
+
+# TEAM PAGE STRUCTURE
+
+Every team page contains four tabs:
+
+1. Overview
+2. Squad
+3. Fixtures
+4. Statistics
+
+All four tabs are mandatory.
+
+---
+
+# OVERVIEW TAB
+
+Purpose:
+
+Provide a high-level summary of the team.
+
+Contains:
+
+* Team Header
+* Top 5 Hero Players
+* Tournament Snapshot
+* Team Strength Radar
+* Recent Form
+* Club Distribution
+* League Distribution
+* Squad Makeup
+
+---
+
+# TEAM HEADER
+
+Must display:
+
+* Country Flag
+* Country Name
+* FIFA Ranking
+* Manager
+* Average Age
+* Squad Value
+* World Cups Won
+
+May additionally display:
+
+* Clubs Represented
+* Leagues Represented
+* Youngest Player
+* Oldest Player
+* Most Valuable Player
+
+---
+
+# TOP 5 HERO PLAYERS
+
+Purpose:
+
+Highlight the strongest players within the squad.
+
+Display:
+
+* Large Photo
+* Player Name
+* Club
+* Position
+* Consensus Score
+
+Exactly five hero cards must be shown.
+
+---
+
+# HERO PLAYER BEHAVIOUR
+
+Clicking a Hero Card must:
+
+1. Open Squad Tab
+2. Locate Player
+3. Scroll To Player
+4. Focus Player
+5. Open Active Profile Panel
+
+The user must never manually search for the selected player after clicking.
+
+---
+
+# TOURNAMENT SNAPSHOT
+
+Must display:
+
+* Current Group
+* Current Position
+* Record
+* Goal Difference
+* Next Match
+* Kickoff Time
+* Broadcaster
+
+Purpose:
+
+Provide immediate tournament context.
+
+---
+
+# TEAM STRENGTH RADAR
+
+Visual comparison chart.
+
+Suggested dimensions:
+
+* Attack
+* Midfield
+* Defence
+* Goalkeeping
+* Depth
+
+Purpose:
+
+Quick understanding of team strengths.
+
+---
+
+# RECENT FORM
+
+Display:
+
+Recent match outcomes.
+
+Examples:
+
+W W D W W
+
+Purpose:
+
+Quick team form reference.
+
+---
+
+# CLUB DISTRIBUTION
+
+Display:
+
+Number of players from each club.
+
+Example:
+
+Real Madrid (3)
+
+PSG (4)
+
+Arsenal (2)
+
+Purpose:
+
+Understand squad makeup.
+
+---
+
+# LEAGUE DISTRIBUTION
+
+Display:
+
+Number of players from each league.
+
+Purpose:
+
+Understand league representation.
+
+---
+
+# SQUAD MAKEUP
+
+Display:
+
+* Goalkeepers
+* Defenders
+* Midfielders
+* Forwards
+
+Also display:
+
+* Average Age
+* Average Height
+* Average Caps
+
+Purpose:
+
+Provide structural squad overview.
+
+---
+
+# SQUAD TAB
+
+This is the most important section of the application.
+
+It contains:
+
+* Official Squad
+* Auto-Focus Squad System
+* Active Profile Panel
+* Reserves
+* Coaching Staff
+
+---
+
+# AUTO-FOCUS SQUAD SYSTEM
+
+This is a core project-defining feature.
+
+The system must:
+
+* Display player cards in rows
+* Detect active row
+* Automatically open profile information
+* Automatically close previous profile information
+
+This feature must not be replaced with:
+
+* Accordions
+* Modals
+* Static profiles
+* Always-open profiles
+
+---
+
+# PLAYER CARDS
+
+Each player card displays:
+
+* Photo
+* Name
+* Position
+* Club Badge
+* Club Name
+
+Desktop:
+
+4 cards per row
+
+Mobile:
+
+2 cards per row
+
+---
+
+# ACTIVE PROFILE PANEL
+
+Only one profile panel may exist.
+
+Only one profile panel may be visible.
+
+Displays:
+
+* Large Photo
+* Name
+* Position
+* Club
+* Age
+* Height
+* Caps
+* Goals
+* Biography
+* Ranking Breakdown
+* Similar Players
+
+---
+
+# PLAYER BIOGRAPHIES
+
+Short format.
+
+Target:
+
+2–3 concise sentences.
+
+Purpose:
+
+Quick player understanding.
+
+---
+
+# RANKING BREAKDOWN
+
+Displays:
+
+* Transfermarkt Component
+* EA Component
+* Awards Component
+* Media Component
+* Form Component
+
+Used to explain consensus ranking.
+
+---
+
+# SIMILAR PLAYERS
+
+Display comparable tournament players.
+
+Purpose:
+
+Exploration and discovery.
+
+---
+
+# RESERVES
+
+Display reserve and alternate players.
+
+Requirements:
+
+* Collapsed by default
+* Expandable
+* Same visual structure as main squad
+
+---
+
+# FIXTURES TAB
+
+Purpose:
+
+Provide team-specific tournament information.
+
+Contains:
+
+* Group Table
+* Upcoming Fixtures
+* Completed Fixtures
+* Qualification Status
+
+---
+
+# GROUP TABLE
+
+Display:
+
+* Played
+* Won
+* Drawn
+* Lost
+* Goals For
+* Goals Against
+* Goal Difference
+* Points
+
+---
+
+# UPCOMING FIXTURES
+
+Display:
+
+* Opponent
+* Date
+* UK Kickoff Time
+* Broadcaster
+
+---
+
+# COMPLETED FIXTURES
+
+Display:
+
+* Opponent
+* Result
+* Status
+
+---
+
+# QUALIFICATION STATUS
+
+Display:
+
+* Qualified
+* Qualification Possible
+* Eliminated
+
+Where applicable.
+
+---
+
+# TEAM STATISTICS TAB
+
+Contains:
+
+* Value Breakdown
+* Position Breakdown
+* Club Representation
+* League Representation
+* Age Distribution
+* Experience Distribution
+
+Purpose:
+
+Deep team analysis.
+
+---
+
+# TOURNAMENT CENTRE
+
+Dedicated tournament hub.
+
+Contains:
+
+1. Today's Matches
+2. Group Stage
+3. Knockout Stage
+
+---
+
+# TODAY'S MATCHES
+
+Purpose:
+
+Provide quick daily overview.
+
+Each match displays:
+
+* Teams
+* Kickoff Time
+* Broadcaster
+* Match Status
+
+---
+
+# GROUP STAGE
+
+Core feature.
+
+Must support:
+
+* Horizontal scrolling
+* Drag scrolling
+* Mouse-wheel scrolling
+* Large arrow buttons
+* Scroll snapping
+
+The user may navigate using either arrows or scrolling.
+
+Both methods are required.
+
+---
+
+# GROUP STAGE CARD CONTENT
+
+Each group card contains:
+
+1. Standings
+2. Upcoming Fixtures
+3. Qualification Status
+
+In that order.
+
+All information visible without leaving the card.
+
+---
+
+# SCROLL SNAP REQUIREMENT
+
+Groups must snap cleanly.
+
+Examples:
+
+Group A
+→ Group B
+→ Group C
+
+No partial resting positions allowed.
+
+---
+
+# KNOCKOUT STAGE
+
+Desktop:
+
+Full bracket visible.
+
+Mobile:
+
+Horizontal bracket navigation.
+
+---
+
+# KNOCKOUT MATCH CARDS
+
+Display:
+
+* Teams
+* Date
+* UK Kickoff Time
+* Broadcaster
+* Match Status
+
+Support:
+
+* Scheduled
+* Live
+* Finished
+
+states.
+
+---
+
+# ANALYSIS TOOLS
+
+Contains:
+
+1. Compare Teams
+2. Statistics Dashboard
+
+---
+
+# COMPARE TEAMS
+
+Allows side-by-side comparison.
+
+Display:
+
+* FIFA Ranking
+* Squad Value
+* Average Age
+* World Cups Won
+* Top Players
+* Team Strength Radar
+
+Purpose:
+
+Quick team comparison.
+
+---
+
+# STATISTICS DASHBOARD
+
+Contains:
+
+Squad Statistics
+
+Player Statistics
+
+Club Statistics
+
+League Statistics
+
+Must include:
+
+* Most Valuable XI
+* Most Experienced XI
+* Youngest XI
+* Most Represented Clubs
+* Most Represented Leagues
+* Highest Squad Values
+* Lowest Squad Values
+
+---
+
+# FOOTBALL DATABASE TOOLS
+
+Contains:
+
+1. Club Explorer
+2. League Explorer
+
+---
+
+# CLUB EXPLORER
+
+Purpose:
+
+Explore tournament players by club.
+
+Displays:
+
+* Players At Tournament
+* Countries Represented
+* Most Valuable Player
+* Country Groupings
+
+Players grouped by country.
+
+---
+
+# LEAGUE EXPLORER
+
+Purpose:
+
+Explore tournament players by league.
+
+Displays:
+
+* Player Count
+* Countries Represented
+* Teams Represented
+* Player Listings
+
+---
+
+# SEARCH
+
+Global search required.
+
+Searches:
+
+* Players
+* Countries
+* Clubs
+* Leagues
+* Managers
+
+---
+
+# SEARCH FEATURES
+
+Support:
+
+player:
+country:
+club:
+league:
+
+filters.
+
+Support fuzzy matching.
+
+Example:
+
+mbape
+
+returns:
+
+Mbappe
+
+---
+
+# DEEP LINKING
+
+Application must support:
+
+Teams:
+
+#france
+
+#england
+
+#argentina
+
+Players:
+
+#france-mbappe
+
+#england-bellingham
+
+Clubs:
+
+#club-real-madrid
+
+Leagues:
+
+#league-premier-league
+
+---
+
+# MOBILE REQUIREMENTS
+
+Mobile must support:
+
+* Full functionality
+* Team Pages
+* Tournament Centre
+* Search
+* Club Explorer
+* League Explorer
+* Statistics
+
+No feature removal allowed.
+
+---
+
+# DATA PHILOSOPHY
+
+Prioritize:
+
+1. Accuracy
+2. Reliability
+3. Maintainability
+
+Official tournament data takes precedence.
+
+---
+
+# EXPLICITLY EXCLUDED FEATURES
+
+The following are intentionally out of scope:
+
+* User accounts
+* Comments
+* Social features
+* Forums
+* Betting integration
+* Odds
+* Fantasy football
+* News feeds
+* Chat systems
+* Favourites systems
+
+These features must not be added unless explicitly approved.
+
+---
+
+# SUCCESS CRITERIA
+
+The application succeeds if users can:
+
+1. Explore every World Cup squad.
+2. Discover players quickly.
+3. Understand tournament standings instantly.
+4. Navigate groups and knockout rounds effortlessly.
+5. Compare teams easily.
+6. Explore clubs and leagues represented at the tournament.
+7. Use the application comfortably on desktop and mobile.
+8. Use the application as a long-term World Cup reference resource.
+
+End of Document.
