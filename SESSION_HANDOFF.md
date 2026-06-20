@@ -40,7 +40,8 @@
 | Sprint 3 | Overview tab (hero cards, fixture strip, group leaders), Stats tab stub, Fixtures tab stub | **COMPLETE** |
 | Sprint 4A | TournamentCentre 3-tab layout, GroupCarousel (12 groups, drag/wheel/arrow nav), real fixture + standings data for Groups C/I/L | **COMPLETE** |
 | Sprint 4B | Group deep-linking (#today / #group-a through #group-l / #knockout), KnockoutBracket module, knockout.json data populated | **COMPLETE** |
-| Sprint 5 | Not started — see next steps section |
+| Sprint 5A | Nav active-state fix for all TC deep-link routes; fixtures.json + standings.json populated for all 12 groups; qualificationStatus set where mathematically certain | **COMPLETE** |
+| Sprint 5B | Not started — see next steps section |
 
 ---
 
@@ -96,8 +97,8 @@ All files exist and are fully implemented unless noted:
 | `groups.json` | Complete — all 12 groups A–L |
 | `clubs.json` | Complete — clubs referenced by France/England/Brazil |
 | `leagues.json` | Complete — leagues referenced by above clubs |
-| `fixtures.json` | **Partial** — Groups C, I, L only (18 fixtures). 9 groups still empty. |
-| `standings.json` | **Partial** — Groups C, I, L only. 9 groups still empty (carousel shows placeholder). |
+| `fixtures.json` | **Complete structure** — all 12 groups, 72 fixtures. Round 1 FT for all groups. Round 2 FT for A/B/D; others scheduled. Round 3 all scheduled. Groups C/D/E/F R2 results may be stale (matches passed since last fetch). |
+| `standings.json` | **Complete structure** — all 12 groups. qualificationStatus: Mexico/Canada/Switzerland/USA = qualified; Bosnia-Herzegovina/Qatar = eliminated; all others null. |
 | `knockout.json` | Complete structure — 5 rounds, 16+8+4+2+2 matches. All slots null (no teams qualified yet). R32 has seed labels. |
 | `rankings.json` | Empty stub |
 | `search-index.json` | Empty stub |
@@ -349,33 +350,48 @@ IntersectionObserver on `.squad-group[data-position]` sections:
 
 ---
 
-## WHAT'S NEXT — SPRINT 5 CANDIDATES
+## WHAT'S NEXT — SPRINT 5B CANDIDATES
 
-**Priority 1 — Real fixture/standings data for all 12 groups**
-Groups A/B/D/E/F/G/H/J/K still show "available soon" placeholder in the carousel. Populating `fixtures.json` and `standings.json` is the highest-impact content task. Use Wikipedia API workflow (Section 9 of DATA_ENTRY_GUIDE.md) — the API section-fetch trick is mandatory for groups beyond the first few. No code changes required.
+**Priority 1 — Update stale Round 2 results**
+Several Round 2 matches have passed their kickoff times but are still marked `"scheduled"` in the data. Fetch the relevant group pages and update scores + standings:
+- Group C R2: Scotland vs Morocco, Brazil vs Haiti (June 19–20)
+- Group D R2: Turkey vs Paraguay (June 20)
+- Group E R2: Germany vs Ivory Coast, Ecuador vs Curaçao (June 20)
+- Group F R2: Netherlands vs Sweden, Tunisia vs Japan (June 20–21)
 
-**Priority 2 — Nav active state for deep-link routes**
-`#updateActiveLink` in `router.js` only highlights exact hash matches. `#today`, `#group-a` etc. don't highlight any nav link. Fix: pass a `highlightHash` alongside params so the router knows which nav item to activate regardless of the actual URL hash. Or pass `'tournament'` as the canonical highlight for all TC routes.
+Use the individual group Wikipedia pages (see DATA_ENTRY_GUIDE.md Section 14). No code changes.
 
-**Priority 3 — qualificationStatus indicators**
-`qualificationStatus` is null for all teams. Once data is populated, add visual indicators (coloured dots / row highlights) to carousel standings tables. CSS class `.standings-row--qualified` / `--eliminated` hooks are natural; just needs data and styling.
+**Priority 2 — qualificationStatus visual indicators**
+`qualificationStatus` values are now populated in standings.json for 6 teams (4 qualified, 2 eliminated). Adding visual indicators to the carousel standings tables is now unblocked. Approach: add CSS classes `.standings-row--qualified` / `.standings-row--eliminated` to the `<tr>` in GroupCarousel's standings render, driven by `team.qualificationStatus`. Needs a coloured left-border or row-tint in `carousel.css`.
 
-**Priority 4 — Player data (45 remaining squads)**
+**Priority 3 — Player data (45 remaining squads)**
 France, England, Brazil are complete. 45 squads need `data/players/{id}.json`. Each file: 26 players, all required fields. Wikipedia API is the source of truth for names, positions, DOBs, caps, goals, clubs. See DATA_ENTRY_GUIDE.md Sections 2–12 for all conventions and disambiguation rules.
 
-**Priority 5 — Winner propagation in knockout bracket**
+**Priority 4 — Winner propagation in knockout bracket**
 When R32 results are available: set `homeTeamId`/`awayTeamId` in knockout.json and the bracket renders flags + real names automatically. A script (`scripts/update-knockout.js`) should handle this — reads match results, advances winners to the next round's slots.
 
-**Priority 6 — Today's Matches broadcaster data**
-`broadcaster` is null on all fixtures. Setting `"broadcaster": "BBC"` or `"ITV"` activates the existing badge styles (`.badge--bbc`, `.badge--itv`) in carousel.css.
+**Priority 5 — Broadcaster data**
+`broadcaster` is null on all 72 fixtures. Setting `"broadcaster": "BBC"` or `"ITV"` activates the existing badge styles (`.badge--bbc`, `.badge--itv`) in carousel.css. Only populate from confirmed BBC/ITV schedule — do not guess.
 
 ---
 
 ## WIKIPEDIA DATA WORKFLOW (for next data session)
 
-Wikipedia is the sole source of truth for squad player names, positions, DOBs, caps, goals, clubs.
+Wikipedia is the sole source of truth for all tournament data. The approach differs by data type.
 
-**Do NOT use anchor URLs** (`/wiki/2026_FIFA_World_Cup_squads#Group_A`) — the page is too large and WebFetch truncates before most groups are reached.
+### Fixtures and standings (DATA_ENTRY_GUIDE.md Section 14)
+
+Fetch individual group pages directly — they are small enough for WebFetch:
+```
+https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A
+https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B
+... (up to Group_L)
+```
+Fetch all needed groups in parallel. Convert local times to UTC using the venue offset table in DATA_ENTRY_GUIDE.md Section 15.
+
+### Squad player data (DATA_ENTRY_GUIDE.md Section 9)
+
+The squads page is too large for WebFetch. **Do NOT use anchor URLs** (`/wiki/2026_FIFA_World_Cup_squads#Group_A`).
 
 **Always use the API:**
 ```
@@ -401,7 +417,7 @@ Known section indices (verify with a fresh fetch before each session):
 
 ## KNOWN ISSUES / DEFERRED
 
-- `#today` and `#tournament` both resolve to TournamentCentre today-tab, but only `#tournament` activates a nav link (no nav link exists for `#today`)
+- ~~Nav active state: `#today`, `#group-a` etc. didn't highlight any nav link~~ — **Fixed Sprint 5A** (both router.js and nav.js #updateActiveLink canonicalise all TC routes to `#tournament`)
 - Stats tab and Fixtures tab on TeamPage are placeholder stubs
 - Search overlay not implemented
 - Compare view not implemented

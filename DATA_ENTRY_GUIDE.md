@@ -382,6 +382,41 @@ Use `homeScore` / `awayScore` (integer or null). NOT `score.home` / `score.away`
 }
 ```
 
+#### Fixture ID convention
+
+Pattern: `{group-lowercase}-r{round}-{home-3letter}-{away-3letter}`
+
+The 3-letter code is a short, recognisable slug derived from the team ID — not the official FIFA code.
+
+| Team ID             | 3-letter code | Team ID          | 3-letter code |
+|---------------------|---------------|------------------|---------------|
+| mexico              | mex           | germany          | ger           |
+| south-korea         | kor           | curacao          | cur           |
+| south-africa        | rsa           | ivory-coast      | civ           |
+| czech-republic      | cze           | ecuador          | ecu           |
+| canada              | can           | netherlands      | ned           |
+| bosnia-herzegovina  | bih           | japan            | jpn           |
+| qatar               | qat           | sweden           | swe           |
+| switzerland         | sui           | tunisia          | tun           |
+| usa                 | usa           | belgium          | bel           |
+| paraguay            | par           | egypt            | egy           |
+| australia           | aus           | iran             | irn           |
+| turkey              | tur           | new-zealand      | nzl           |
+| france              | fra           | spain            | esp           |
+| senegal             | sen           | cape-verde       | cpv           |
+| iraq                | irq           | saudi-arabia     | ksa           |
+| norway              | nor           | uruguay          | uru           |
+| brazil              | bra           | argentina        | arg           |
+| morocco             | mor           | algeria          | alg           |
+| haiti               | hai           | austria          | aut           |
+| scotland            | sco           | jordan           | jor           |
+| england             | eng           | portugal         | por           |
+| croatia             | cro           | dr-congo         | cod           |
+| ghana               | gha           | uzbekistan       | uzb           |
+| panama              | pan           | colombia         | col           |
+
+Examples: `a-r1-mex-rsa`, `b-r2-sui-bih`, `j-r3-jor-arg`
+
 ---
 
 ### Standings record (data/standings.json)
@@ -421,6 +456,91 @@ Key rules:
 - `goalDifference` = goalsFor − goalsAgainst (can be negative).
 
 When reading standings in code: `group.teams[0]` is the group leader.
+
+#### qualificationStatus rules
+
+Only set `"qualified"` or `"eliminated"` when mathematically certain — not just likely.
+
+**`"qualified"`** — the team cannot finish outside the top 2 regardless of all remaining results.
+Typical trigger: a team reaches a points total that no third-place team can match even with maximum points.
+
+**`"eliminated"`** — the team cannot finish in the top 2 regardless of all remaining results.
+Requires checking both points ceiling AND goal difference when multiple teams share a points ceiling.
+Example: Group B after Round 2 — Bosnia-Herzegovina and Qatar both had a points ceiling of 4 (one game left against each other), but Canada (+6 GD) and Switzerland (+3 GD) were already at 4 pts and unreachable on GD even in the best case.
+
+**`null`** — anything that is not yet mathematically settled. Prefer null when in doubt.
+
+**`"playoff"`** — reserved for best third-place playoff scenarios. Do not set until the group stage is complete.
+
+#### Tied-team ordering in standings
+
+When multiple teams are tied on all tiebreakers (points, GD, GF, head-to-head), use Wikipedia's displayed standings order for that group. Do not invent an ordering. Note this as approximate in the sprint report.
+
+---
+
+## SECTION 14 — FIXTURE DATA SOURCING WORKFLOW
+
+Fixtures and standings come from individual group pages on Wikipedia, **not** the squads mega-page. These pages are small enough that direct WebFetch works without the API section-fetch trick.
+
+### Step 1: Fetch the group page directly
+
+```
+GET https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A
+```
+
+Replace `Group_A` with `Group_B` through `Group_L` as needed. All 12 group pages exist as separate articles and can be fetched in parallel.
+
+**Do not use** `https://en.wikipedia.org/wiki/2026_FIFA_World_Cup#Group_stage` — the main tournament page truncates before most group data is reached.
+
+### Step 2: Extract match data
+
+Prompt the fetcher to extract:
+- Every match: home team, away team, score (or "scheduled"), date, local time with UTC offset, venue
+- Current standings table: team, played, won, drawn, lost, GF, GA, GD, points
+
+### Step 3: Convert local times to UTC
+
+Wikipedia gives local times with a UTC offset (e.g. "3:00 PM UTC-4"). Add the absolute offset value to the local time to get UTC.
+
+Formula: `UTC = local_time + |offset|`
+
+Example: 3:00 PM UTC-4 → 15:00 + 4 = 19:00 → `T19:00:00Z`
+Example: 8:00 PM UTC-7 → 20:00 + 7 = 27:00 → rolls to next day T03:00:00Z
+
+See Section 15 for a venue-to-offset reference.
+
+### Step 4: Verify arithmetic
+
+After entering standings, verify: `goalDifference = goalsFor - goalsAgainst` and `points = (won × 3) + drawn` for every team.
+
+---
+
+## SECTION 15 — VENUE TIMEZONE REFERENCE
+
+All 2026 World Cup venues and their UTC offsets during the tournament (June–July, all in daylight saving time):
+
+| Venue | City | UTC offset |
+|-------|------|------------|
+| MetLife Stadium | East Rutherford NJ | UTC-4 (EDT) |
+| Gillette Stadium | Foxborough MA | UTC-4 (EDT) |
+| Lincoln Financial Field | Philadelphia PA | UTC-4 (EDT) |
+| Hard Rock Stadium | Miami Gardens FL | UTC-4 (EDT) |
+| Mercedes-Benz Stadium | Atlanta GA | UTC-4 (EDT) |
+| BMO Field | Toronto ON | UTC-4 (EDT) |
+| AT&T Stadium | Arlington TX | UTC-5 (CDT) |
+| NRG Stadium | Houston TX | UTC-5 (CDT) |
+| Arrowhead Stadium | Kansas City MO | UTC-5 (CDT) |
+| SoFi Stadium | Inglewood CA | UTC-7 (PDT) |
+| Lumen Field | Seattle WA | UTC-7 (PDT) |
+| BC Place | Vancouver BC | UTC-7 (PDT) |
+| Levi's Stadium | Santa Clara CA | UTC-7 (PDT) |
+| Estadio Azteca | Mexico City | UTC-6 (CDT MX) |
+| Estadio Akron | Zapopan | UTC-6 (CDT MX) |
+| Estadio BBVA | Guadalupe NL | UTC-6 (CDT MX) |
+
+Note: Mexico uses "Central Daylight Time" (CDT) like US Central, but Wikipedia sometimes labels these venues as UTC-6 explicitly. Always use the offset stated by Wikipedia for that specific match — do not infer from city alone.
+
+Venue name format in JSON: `"{Stadium Name}, {City} {State/Province}"` — e.g. `"NRG Stadium, Houston TX"`, `"BMO Field, Toronto ON"`, `"Estadio Azteca, Mexico City"` (Mexican venues omit state).
 
 ---
 
