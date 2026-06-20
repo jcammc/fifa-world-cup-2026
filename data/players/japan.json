@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "japan-gonda",       "name": "Shuichi Gonda",       "shirt": 1,  "position": "GK", "dob": "1989-03-18", "age": 37, "caps": 72,  "goals": 0,  "clubId": "vissel-kobe",       "captain": false, "bio": "" },
+    { "id": "japan-suzuki-z",    "name": "Zion Suzuki",         "shirt": 12, "position": "GK", "dob": "2001-08-18", "age": 24, "caps": 18,  "goals": 0,  "clubId": "sint-truiden",      "captain": false, "bio": "" },
+    { "id": "japan-schmidt",     "name": "Daniel Schmidt",      "shirt": 23, "position": "GK", "dob": "1992-03-18", "age": 34, "caps": 14,  "goals": 0,  "clubId": "sint-truiden",      "captain": false, "bio": "" },
+    { "id": "japan-tomiyasu",    "name": "Takehiro Tomiyasu",   "shirt": 2,  "position": "DF", "dob": "1998-11-05", "age": 27, "caps": 52,  "goals": 2,  "clubId": "arsenal",           "captain": false, "bio": "" },
+    { "id": "japan-itakura",     "name": "Ko Itakura",          "shirt": 3,  "position": "DF", "dob": "1997-01-27", "age": 29, "caps": 42,  "goals": 3,  "clubId": "gladbach",          "captain": false, "bio": "" },
+    { "id": "japan-machida",     "name": "Koki Machida",        "shirt": 5,  "position": "DF", "dob": "1997-05-07", "age": 29, "caps": 32,  "goals": 1,  "clubId": "lens",              "captain": false, "bio": "" },
+    { "id": "japan-ito-h",       "name": "Hiroki Ito",          "shirt": 4,  "position": "DF", "dob": "1999-05-12", "age": 27, "caps": 26,  "goals": 2,  "clubId": "vfb-stuttgart",     "captain": false, "bio": "" },
+    { "id": "japan-nakayama",    "name": "Yuta Nakayama",       "shirt": 6,  "position": "DF", "dob": "1997-02-16", "age": 29, "caps": 24,  "goals": 0,  "clubId": "sunderland",        "captain": false, "bio": "" },
+    { "id": "japan-yoshida",     "name": "Maya Yoshida",        "shirt": 7,  "position": "DF", "dob": "1988-08-24", "age": 37, "caps": 128, "goals": 9,  "clubId": "urawa-red-diamonds","captain": false, "bio": "" },
+    { "id": "japan-taniguchi",   "name": "Shogo Taniguchi",     "shirt": 8,  "position": "DF", "dob": "1992-07-10", "age": 33, "caps": 22,  "goals": 1,  "clubId": "kawasaki-frontale", "captain": false, "bio": "" },
+    { "id": "japan-yamane",      "name": "Miki Yamane",         "shirt": 9,  "position": "DF", "dob": "1995-12-12", "age": 30, "caps": 18,  "goals": 1,  "clubId": "kawasaki-frontale", "captain": false, "bio": "" },
+    { "id": "japan-endo",        "name": "Wataru Endo",         "shirt": 10, "position": "MF", "dob": "1993-02-09", "age": 33, "caps": 72,  "goals": 5,  "clubId": "liverpool",         "captain": true,  "bio": "" },
+    { "id": "japan-morita",      "name": "Hidemasa Morita",     "shirt": 11, "position": "MF", "dob": "1994-07-10", "age": 31, "caps": 42,  "goals": 4,  "clubId": "sporting-cp",       "captain": false, "bio": "" },
+    { "id": "japan-doan",        "name": "Ritsu Doan",          "shirt": 13, "position": "MF", "dob": "1998-06-16", "age": 27, "caps": 48,  "goals": 12, "clubId": "freiburg",          "captain": false, "bio": "" },
+    { "id": "japan-tanaka-ao",   "name": "Ao Tanaka",           "shirt": 14, "position": "MF", "dob": "1998-09-10", "age": 27, "caps": 38,  "goals": 4,  "clubId": "club-brugge",       "captain": false, "bio": "" },
+    { "id": "japan-kamada",      "name": "Daichi Kamada",       "shirt": 15, "position": "MF", "dob": "1996-08-05", "age": 29, "caps": 48,  "goals": 14, "clubId": "crystal-palace",    "captain": false, "bio": "" },
+    { "id": "japan-hatate",      "name": "Reo Hatate",          "shirt": 16, "position": "MF", "dob": "1997-11-21", "age": 28, "caps": 22,  "goals": 4,  "clubId": "celtic",            "captain": false, "bio": "" },
+    { "id": "japan-ito-j",       "name": "Junya Ito",           "shirt": 17, "position": "MF", "dob": "1993-03-09", "age": 33, "caps": 58,  "goals": 12, "clubId": "reims",             "captain": false, "bio": "" },
+    { "id": "japan-nakamura-k",  "name": "Keito Nakamura",      "shirt": 18, "position": "MF", "dob": "1999-03-31", "age": 27, "caps": 28,  "goals": 8,  "clubId": "reims",             "captain": false, "bio": "" },
+    { "id": "japan-mitoma",      "name": "Kaoru Mitoma",        "shirt": 19, "position": "FW", "dob": "1997-05-20", "age": 29, "caps": 42,  "goals": 14, "clubId": "brighton",          "captain": false, "bio": "" },
+    { "id": "japan-kyogo",       "name": "Kyogo Furuhashi",     "shirt": 20, "position": "FW", "dob": "1995-01-20", "age": 31, "caps": 30,  "goals": 14, "clubId": "celtic",            "captain": false, "bio": "" },
+    { "id": "japan-asano",       "name": "Takuma Asano",        "shirt": 21, "position": "FW", "dob": "1994-11-10", "age": 31, "caps": 52,  "goals": 14, "clubId": "bochum",            "captain": false, "bio": "" },
+    { "id": "japan-ueda",        "name": "Ayase Ueda",          "shirt": 22, "position": "FW", "dob": "1998-08-27", "age": 27, "caps": 22,  "goals": 10, "clubId": "feyenoord",         "captain": false, "bio": "" },
+    { "id": "japan-machino",     "name": "Shuto Machino",       "shirt": 24, "position": "FW", "dob": "2000-07-04", "age": 25, "caps": 12,  "goals": 4,  "clubId": "urawa-red-diamonds","captain": false, "bio": "" },
+    { "id": "japan-kubo",        "name": "Takefusa Kubo",       "shirt": 25, "position": "FW", "dob": "2001-06-04", "age": 25, "caps": 28,  "goals": 8,  "clubId": "real-sociedad",     "captain": false, "bio": "" },
+    { "id": "japan-osako",       "name": "Yuya Osako",          "shirt": 26, "position": "FW", "dob": "1990-05-18", "age": 36, "caps": 60,  "goals": 18, "clubId": "vissel-kobe",       "captain": false, "bio": "" }
+  ]
+}

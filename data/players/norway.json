@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "norway-nyland",      "name": "Ørjan Nyland",           "shirt": 1,  "position": "GK", "dob": "1990-09-10", "age": 35, "caps": 52,  "goals": 0,  "clubId": "brentford",        "captain": false, "bio": "" },
+    { "id": "norway-sels",        "name": "Matz Sels",              "shirt": 12, "position": "GK", "dob": "1992-02-26", "age": 34, "caps": 22,  "goals": 0,  "clubId": "nottingham-forest", "captain": false, "bio": "" },
+    { "id": "norway-klaesson",    "name": "Kristoffer Klaesson",    "shirt": 23, "position": "GK", "dob": "2000-11-27", "age": 25, "caps": 10,  "goals": 0,  "clubId": "bodo-glimt",       "captain": false, "bio": "" },
+    { "id": "norway-ajer",        "name": "Kristoffer Ajer",        "shirt": 2,  "position": "DF", "dob": "1998-04-17", "age": 28, "caps": 62,  "goals": 2,  "clubId": "brentford",        "captain": false, "bio": "" },
+    { "id": "norway-ostigard",    "name": "Leo Østigård",           "shirt": 5,  "position": "DF", "dob": "1999-11-28", "age": 26, "caps": 32,  "goals": 2,  "clubId": "napoli",           "captain": false, "bio": "" },
+    { "id": "norway-ryerson",     "name": "Julian Ryerson",         "shirt": 22, "position": "DF", "dob": "1997-11-17", "age": 28, "caps": 26,  "goals": 2,  "clubId": "borussia-dortmund","captain": false, "bio": "" },
+    { "id": "norway-pedersen-m",  "name": "Marcus Holmgren Pedersen","shirt": 15,"position": "DF", "dob": "1999-06-08", "age": 27, "caps": 28,  "goals": 3,  "clubId": "feyenoord",        "captain": false, "bio": "" },
+    { "id": "norway-hanche-olsen","name": "Andreas Hanche-Olsen",  "shirt": 4,  "position": "DF", "dob": "1997-02-12", "age": 29, "caps": 29,  "goals": 2,  "clubId": "genk",             "captain": false, "bio": "" },
+    { "id": "norway-meling",      "name": "Birger Meling",          "shirt": 3,  "position": "DF", "dob": "1994-05-21", "age": 32, "caps": 34,  "goals": 2,  "clubId": "nice",             "captain": false, "bio": "" },
+    { "id": "norway-strandberg",  "name": "Stefan Strandberg",      "shirt": 13, "position": "DF", "dob": "1990-07-25", "age": 35, "caps": 58,  "goals": 3,  "clubId": "valerenga",        "captain": false, "bio": "" },
+    { "id": "norway-gregersen",   "name": "Stian Gregersen",        "shirt": 14, "position": "DF", "dob": "1995-08-31", "age": 30, "caps": 18,  "goals": 1,  "clubId": "brann",            "captain": false, "bio": "" },
+    { "id": "norway-odegaard",    "name": "Martin Ødegaard",        "shirt": 8,  "position": "MF", "dob": "1998-12-17", "age": 27, "caps": 76,  "goals": 22, "clubId": "arsenal",          "captain": true,  "bio": "" },
+    { "id": "norway-berge",       "name": "Sander Berge",           "shirt": 6,  "position": "MF", "dob": "1998-02-14", "age": 28, "caps": 62,  "goals": 8,  "clubId": "fulham",           "captain": false, "bio": "" },
+    { "id": "norway-aursnes",     "name": "Fredrik Aursnes",        "shirt": 16, "position": "MF", "dob": "1995-08-10", "age": 30, "caps": 42,  "goals": 3,  "clubId": "benfica",          "captain": false, "bio": "" },
+    { "id": "norway-berg",        "name": "Patrick Berg",           "shirt": 18, "position": "MF", "dob": "1997-05-10", "age": 29, "caps": 28,  "goals": 0,  "clubId": "bodo-glimt",       "captain": false, "bio": "" },
+    { "id": "norway-normann",     "name": "Mathias Normann",        "shirt": 7,  "position": "MF", "dob": "1996-05-28", "age": 30, "caps": 34,  "goals": 3,  "clubId": "bodo-glimt",       "captain": false, "bio": "" },
+    { "id": "norway-hauge",       "name": "Jens Petter Hauge",      "shirt": 24, "position": "MF", "dob": "1999-05-08", "age": 27, "caps": 26,  "goals": 4,  "clubId": "genk",             "captain": false, "bio": "" },
+    { "id": "norway-holm",        "name": "Odin Thiago Holm",       "shirt": 19, "position": "MF", "dob": "2003-11-19", "age": 22, "caps": 12,  "goals": 1,  "clubId": "valerenga",        "captain": false, "bio": "" },
+    { "id": "norway-vetlesen",    "name": "Hugo Vetlesen",          "shirt": 26, "position": "MF", "dob": "2001-08-25", "age": 24, "caps": 14,  "goals": 2,  "clubId": "bodo-glimt",       "captain": false, "bio": "" },
+    { "id": "norway-haaland",     "name": "Erling Haaland",         "shirt": 9,  "position": "FW", "dob": "2000-07-21", "age": 25, "caps": 38,  "goals": 30, "clubId": "manchester-city",  "captain": false, "bio": "" },
+    { "id": "norway-sorloth",     "name": "Alexander Sørloth",      "shirt": 10, "position": "FW", "dob": "1995-12-05", "age": 30, "caps": 62,  "goals": 29, "clubId": "atletico-madrid",  "captain": false, "bio": "" },
+    { "id": "norway-elyounoussi", "name": "Mohamed Elyounoussi",    "shirt": 17, "position": "FW", "dob": "1994-08-04", "age": 31, "caps": 60,  "goals": 19, "clubId": "viking",           "captain": false, "bio": "" },
+    { "id": "norway-nusa",        "name": "Antonio Nusa",           "shirt": 21, "position": "FW", "dob": "2005-01-11", "age": 21, "caps": 16,  "goals": 2,  "clubId": "rb-leipzig",       "captain": false, "bio": "" },
+    { "id": "norway-bobb",        "name": "Oscar Bobb",             "shirt": 20, "position": "FW", "dob": "2004-01-12", "age": 22, "caps": 14,  "goals": 3,  "clubId": "manchester-city",  "captain": false, "bio": "" },
+    { "id": "norway-botheim",     "name": "Erik Botheim",           "shirt": 25, "position": "FW", "dob": "2000-10-14", "age": 25, "caps": 16,  "goals": 5,  "clubId": "bodo-glimt",       "captain": false, "bio": "" },
+    { "id": "norway-solbakken",   "name": "Ola Solbakken",          "shirt": 11, "position": "FW", "dob": "1999-05-13", "age": 27, "caps": 22,  "goals": 7,  "clubId": "roma",             "captain": false, "bio": "" }
+  ]
+}
