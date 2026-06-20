@@ -1,7 +1,121 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-19T12:00:00Z",
+  "lastUpdated": "2026-06-20T12:00:00Z",
   "data": [
+    {
+      "groupId": "A",
+      "teams": [
+        {
+          "teamId": "mexico",
+          "position": 1,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "goalDifference": 3,
+          "points": 6,
+          "qualificationStatus": "qualified"
+        },
+        {
+          "teamId": "south-korea",
+          "position": 2,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "czech-republic",
+          "position": 3,
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 3,
+          "goalDifference": -1,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "south-africa",
+          "position": 4,
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "goalDifference": -2,
+          "points": 1,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "B",
+      "teams": [
+        {
+          "teamId": "canada",
+          "position": 1,
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 7,
+          "goalsAgainst": 1,
+          "goalDifference": 6,
+          "points": 4,
+          "qualificationStatus": "qualified"
+        },
+        {
+          "teamId": "switzerland",
+          "position": 2,
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 5,
+          "goalsAgainst": 2,
+          "goalDifference": 3,
+          "points": 4,
+          "qualificationStatus": "qualified"
+        },
+        {
+          "teamId": "bosnia-herzegovina",
+          "position": 3,
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 5,
+          "goalDifference": -3,
+          "points": 1,
+          "qualificationStatus": "eliminated"
+        },
+        {
+          "teamId": "qatar",
+          "position": 4,
+          "played": 2,
+          "won": 0,
+          "drawn": 1,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 7,
+          "goalDifference": -6,
+          "points": 1,
+          "qualificationStatus": "eliminated"
+        }
+      ]
+    },
     {
       "groupId": "C",
       "teams": [
@@ -60,6 +174,291 @@
       ]
     },
     {
+      "groupId": "D",
+      "teams": [
+        {
+          "teamId": "usa",
+          "position": 1,
+          "played": 2,
+          "won": 2,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 6,
+          "goalsAgainst": 1,
+          "goalDifference": 5,
+          "points": 6,
+          "qualificationStatus": "qualified"
+        },
+        {
+          "teamId": "australia",
+          "position": 2,
+          "played": 2,
+          "won": 1,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "turkey",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 0,
+          "goalsAgainst": 2,
+          "goalDifference": -2,
+          "points": 0,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "paraguay",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 4,
+          "goalDifference": -3,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "E",
+      "teams": [
+        {
+          "teamId": "germany",
+          "position": 1,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 7,
+          "goalsAgainst": 1,
+          "goalDifference": 6,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "ivory-coast",
+          "position": 2,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 0,
+          "goalDifference": 1,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "ecuador",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 0,
+          "goalsAgainst": 1,
+          "goalDifference": -1,
+          "points": 0,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "curacao",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 7,
+          "goalDifference": -6,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "F",
+      "teams": [
+        {
+          "teamId": "sweden",
+          "position": 1,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 5,
+          "goalsAgainst": 1,
+          "goalDifference": 4,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "japan",
+          "position": 2,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "netherlands",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "tunisia",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 5,
+          "goalDifference": -4,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "G",
+      "teams": [
+        {
+          "teamId": "new-zealand",
+          "position": 1,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "iran",
+          "position": 2,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "belgium",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "egypt",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "H",
+      "teams": [
+        {
+          "teamId": "uruguay",
+          "position": 1,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "saudi-arabia",
+          "position": 2,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "spain",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "cape-verde",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
       "groupId": "I",
       "teams": [
         {
@@ -111,6 +510,120 @@
           "goalsFor": 1,
           "goalsAgainst": 4,
           "goalDifference": -3,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "J",
+      "teams": [
+        {
+          "teamId": "argentina",
+          "position": 1,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 3,
+          "goalsAgainst": 0,
+          "goalDifference": 3,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "austria",
+          "position": 2,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 3,
+          "goalsAgainst": 1,
+          "goalDifference": 2,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "jordan",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "goalDifference": -2,
+          "points": 0,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "algeria",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 0,
+          "goalsAgainst": 3,
+          "goalDifference": -3,
+          "points": 0,
+          "qualificationStatus": null
+        }
+      ]
+    },
+    {
+      "groupId": "K",
+      "teams": [
+        {
+          "teamId": "colombia",
+          "position": 1,
+          "played": 1,
+          "won": 1,
+          "drawn": 0,
+          "lost": 0,
+          "goalsFor": 3,
+          "goalsAgainst": 1,
+          "goalDifference": 2,
+          "points": 3,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "dr-congo",
+          "position": 2,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "portugal",
+          "position": 3,
+          "played": 1,
+          "won": 0,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "uzbekistan",
+          "position": 4,
+          "played": 1,
+          "won": 0,
+          "drawn": 0,
+          "lost": 1,
+          "goalsFor": 1,
+          "goalsAgainst": 3,
+          "goalDifference": -2,
           "points": 0,
           "qualificationStatus": null
         }
