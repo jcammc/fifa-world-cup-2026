@@ -596,4 +596,53 @@ Managers can change between qualification and the tournament. Wikipedia's group 
 
 ---
 
+## SECTION 17 — SEARCH INDEX MAINTENANCE
+
+`data/search-index.json` is the source of truth for the search overlay. It is maintained manually — there is no build step.
+
+### When to update
+
+Update the search index whenever any of the following changes:
+
+| Event | Action |
+|-------|--------|
+| New squad file created (e.g. `data/players/japan.json`) | Add all 26 player entries |
+| Player transferred to a new club mid-tournament | Update `meta` field for that player |
+| Country data changes (group reassignment, name change) | Update the relevant team entry |
+
+### Entry format
+
+**Team entry:**
+```json
+{ "type": "team", "id": "france", "label": "France", "meta": "Group I · UEFA", "href": "#france" }
+```
+
+**Player entry:**
+```json
+{ "type": "player", "id": "france-mbappe", "label": "Kylian Mbappé", "meta": "France · FW · Real Madrid", "href": "#france-mbappe" }
+```
+
+- `label` — display name (exact spelling with accents, e.g. `"Kylian Mbappé"`)
+- `meta` — `"{Country} · {Position} · {Club display name}"` using club name from `data/clubs.json`
+- `href` — always `"#${player.id}"` — must exactly match the player's `id` field in the squad JSON
+
+### Adding a new squad
+
+After creating `data/players/{countryId}.json`:
+
+1. Open `data/search-index.json`
+2. After the last existing player block, add 26 new player entries
+3. `meta` format: `"CountryName · POSITION · Club Name"` — use the `name` field from `data/clubs.json` for the club, NOT the clubId
+4. Update `lastUpdated` timestamp
+
+### Diacritics
+
+Write diacritics in `label` and `meta` exactly as they appear in the squad file and clubs.json. The search overlay normalises both query and index at search time, so `"mbappe"` will find `"Kylian Mbappé"` without any extra work on the data side.
+
+### Clubs not yet in clubs.json
+
+If a player's club is not in `data/clubs.json`, add the club there first (see Section 6), then use the club's `name` value in the search index `meta`.
+
+---
+
 End of DATA_ENTRY_GUIDE.md

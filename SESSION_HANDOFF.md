@@ -43,6 +43,7 @@
 | Sprint 5A | Nav active-state fix for all TC deep-link routes; fixtures.json + standings.json populated for all 12 groups; qualificationStatus set where mathematically certain | **COMPLETE** |
 | Sprint 5B | Fix leagueId bug in getPlayerResolved(); qualification badges in carousel; Team Fixtures Tab; knockout bracket connector lines; all 48 manager fields; Group C + D R2 results + standings | **COMPLETE** |
 | Sprint 5C | Data model decisions (recentForm → country level; teamStrength deferred); squad files for Germany/Spain/Argentina/Portugal/Netherlands; leagues.json + clubs.json expanded; recentForm field added to countries.json schema | **COMPLETE** |
+| Sprint 6 | Tournament data maintenance — full 72-fixture audit (all kickoff times/scores/venues verified accurate); pending R2 updates for Groups E–L as matches complete June 20–24 | **IN PROGRESS** |
 
 ---
 
@@ -362,37 +363,38 @@ IntersectionObserver on `.squad-group[data-position]` sections:
 
 ---
 
-## WHAT'S NEXT — SPRINT 5D CANDIDATES
+## WHAT'S NEXT — SPRINT 6 UPDATE SCHEDULE (IN PROGRESS)
 
-**Priority 1 — Update Round 2 results (Groups E–L)**
-Groups E–L Round 2 matches are now past their kickoff times and still marked `"scheduled"`. Fetch the relevant Wikipedia group pages and update scores + standings for all completed R2 fixtures. Also update qualificationStatus where mathematically certain after R2. No code changes needed — data only.
+Sprint 6 is a rolling tournament-data maintenance sprint. No code changes — data only. Fetch Wikipedia group pages in parallel when a group's R2 window is past.
 
-Groups to update once R2 is complete (fetch Wikipedia group pages in parallel):
-- Group E (Germany, Curaçao, Ivory Coast, Ecuador) — R2 June 20
-- Group F (Netherlands, Japan, Sweden, Tunisia) — R2 June 20–21
-- Group G (Belgium, Egypt, Iran, New Zealand) — R2 June 21
-- Group H (Spain, Uruguay, Saudi Arabia, Cape Verde) — R2 June 22
-- Group I (France, Senegal, Iraq, Norway) — R2 June 22
-- Group J (Argentina, Algeria, Austria, Jordan) — R2 June 23
-- Group K (Portugal, Colombia, DR Congo, Uzbekistan) — R2 June 23
-- Group L (England, Croatia, Ghana, Panama) — R2 June 24
+### R2 Update Windows
 
-Also update qualificationStatus where mathematically certain after R2. No code changes.
+| Date (UTC) | Groups | Fixture IDs to mark FT |
+|-----------|--------|------------------------|
+| June 20 | E, F | `e-r2-ger-civ`, `f-r2-ned-swe` |
+| June 21 | E, F, G, H | `e-r2-ecu-cur`, `f-r2-tun-jpn`, `g-r2-bel-irn`, `h-r2-esp-ksa` |
+| June 22 | G, H, I, J | `g-r2-nzl-egy`, `h-r2-uru-cpv`, `i-r2-fra-irq`, `j-r2-arg-aut` |
+| June 23–24 | I, J, K, L | `i-r2-nor-sen`, `j-r2-jor-alg`, `k-r2-por-uzb`, `l-r2-eng-gha`, `l-r2-pan-cro`, `k-r2-col-cod` |
 
-**Priority 2 — Squad data for next 5 teams**
-8 squads now complete (France, England, Brazil, Germany, Spain, Argentina, Portugal, Netherlands). Suggested next 5:
-- Japan, Morocco, Colombia, Belgium, USA
+### Per-fixture update pattern
 
-Each: 26 players in `data/players/{id}.json`. Use Wikipedia API section-fetch (DATA_ENTRY_GUIDE.md Section 9). Add any new clubs/leagues to clubs.json and leagues.json first.
+**fixtures.json:** For each completed match, set `"status": "FT"`, `homeScore`, `awayScore`.
 
-**Priority 3 — recentForm at country level**
-`recentForm` field now exists on all 48 countries (null). Populate last 5 international results for completed-squad teams. Source: Wikipedia group pages for World Cup matches + Wikipedia team pages for pre-tournament friendlies. Format: `["W","D","W","W","L"]` oldest→newest.
+**standings.json:** For the group containing the match, update all 4 teams' `played/won/drawn/lost/goalsFor/goalsAgainst/goalDifference/points/position`. Re-sort by: 1) points desc, 2) GD desc, 3) GF desc.
 
-**Priority 4 — Winner propagation in knockout bracket**
-Group stage ends ~June 27. After all R3 results: update knockout.json with R32 team IDs. Do not populate until group stage is complete.
+**qualificationStatus rules (apply after R2 per group):**
+- `"qualified"` — team has 6 pts AND only 1 other team has ≥ 4 pts (single threat can't dislodge top 2)
+- `"eliminated"` — team has 0 pts AND two other teams each have ≥ 4 pts (3 pts from R3 cannot reach top 2)
+- `null` — everything else; revisit after R3 if still ambiguous
+- **NEVER copy Wikipedia's provisional "qualified/eliminated" notes** — they appear after R1 and are not mathematically certain
 
-**Priority 5 — teamStrength sourcing decision**
-Deferred from Sprint 5C. Agree on sourcing methodology before adding values for any new teams. Existing values (France, England, Brazil) remain as editorial placeholders.
+### After R2 is complete for all groups → Sprint 6 transition
+
+After all R2 results are captured, candidates for next sprint:
+1. **Search** — build search-overlay.js, search-index.json indexing 8 current squads
+2. **Squad expansion** — next 5 squads (Japan, Morocco, Colombia, Belgium, USA)
+3. **recentForm** — populate last 5 results for 8 completed squads
+4. **Winner propagation** — after R3 complete (~June 27), populate knockout.json R32 seeds
 
 ---
 

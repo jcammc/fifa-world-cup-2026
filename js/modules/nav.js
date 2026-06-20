@@ -62,7 +62,7 @@ class _Nav {
           </a>
           <div class="header-actions">
             <button class="btn-icon" id="search-trigger"
-                    aria-label="Search (coming soon)" title="Search">🔍</button>
+                    aria-label="Search (Ctrl+K)" title="Search (Ctrl+K)">🔍</button>
             <button class="btn-icon" id="theme-toggle"
                     aria-label="Toggle theme">🌙</button>
           </div>

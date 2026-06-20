@@ -1,15 +1,16 @@
 import { isToday } from './time.js';
 
 const URLS = {
-  countries:  'data/countries.json',
-  groups:     'data/groups.json',
-  fixtures:   'data/fixtures.json',
-  standings:  'data/standings.json',
-  clubs:      'data/clubs.json',
-  leagues:    'data/leagues.json',
-  rankings:   'data/rankings.json',
-  knockout:   'data/knockout.json',
-  players:    (id) => `data/players/${id}.json`,
+  countries:   'data/countries.json',
+  groups:      'data/groups.json',
+  fixtures:    'data/fixtures.json',
+  standings:   'data/standings.json',
+  clubs:       'data/clubs.json',
+  leagues:     'data/leagues.json',
+  rankings:    'data/rankings.json',
+  knockout:    'data/knockout.json',
+  searchIndex: 'data/search-index.json',
+  players:     (id) => `data/players/${id}.json`,
 };
 
 class _DataManager {
@@ -40,7 +41,8 @@ class _DataManager {
   async loadKnockout()             { return this.#load('knockout',  URLS.knockout); }
   async loadClubs()                { return this.#load('clubs',     URLS.clubs); }
   async loadLeagues()              { return this.#load('leagues',   URLS.leagues); }
-  async loadRankings()             { return this.#load('rankings',  URLS.rankings); }
+  async loadRankings()             { return this.#load('rankings',     URLS.rankings); }
+  async loadSearchIndex()          { return this.#load('search-index', URLS.searchIndex); }
 
   async loadPlayersForTeam(countryId) {
     return this.#load(`players-${countryId}`, URLS.players(countryId));
