@@ -66,12 +66,20 @@ export class GroupCarousel {
       </article>`;
   }
 
+  #qualBadge(status) {
+    if (status === 'qualified')  return `<span class="badge badge--qualified badge--compact" title="Qualified">Q</span>`;
+    if (status === 'eliminated') return `<span class="badge badge--eliminated badge--compact" title="Eliminated">E</span>`;
+    if (status === 'playoff')    return `<span class="badge badge--possible badge--compact" title="Playoff">PO</span>`;
+    return '';
+  }
+
   #buildStandingsTable(teams) {
     const rows = teams.map(t => {
       const country = this.#countryMap.get(t.teamId);
       const name    = escapeHtml(country?.name ?? t.teamId);
       const id      = escapeHtml(t.teamId);
       const gd      = t.goalDifference >= 0 ? `+${t.goalDifference}` : String(t.goalDifference);
+      const badge   = this.#qualBadge(t.qualificationStatus);
       return `
         <tr>
           <td class="standings-col--pos">${t.position}</td>
@@ -80,6 +88,7 @@ export class GroupCarousel {
                  class="standings-flag" aria-hidden="true"
                  onerror="this.style.display='none'">
             <a href="#${id}" class="standings-team-name">${name}</a>
+            ${badge}
           </td>
           <td>${t.played}</td>
           <td>${t.won}</td>

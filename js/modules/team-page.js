@@ -2,6 +2,7 @@ import { DataManager } from '../data.js';
 import { escapeHtml } from '../utils.js';
 import { OverviewTab } from './overview-tab.js';
 import { SquadTab } from './squad-tab.js';
+import { FixturesTab } from './fixtures-tab.js';
 
 const TABS = ['overview', 'squad', 'fixtures', 'statistics'];
 
@@ -139,6 +140,8 @@ export class TeamPage {
         this.#players,
         this.#clubs,
       );
+    } else if (tab === 'fixtures') {
+      this.#tabModule = new FixturesTab(this.#tabEl, this.#country);
     } else {
       const label = tab.charAt(0).toUpperCase() + tab.slice(1);
       this.#tabEl.innerHTML = `

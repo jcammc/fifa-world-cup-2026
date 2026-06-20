@@ -71,7 +71,7 @@ class _DataManager {
       return {
         ...player,
         club:   clubs.find(c => c.id === player.clubId)   ?? null,
-        league: leagues.find(l => l.id === player.leagueId) ?? null,
+        league: leagues.find(l => l.id === (clubs.find(c => c.id === player.clubId)?.leagueId)) ?? null,
       };
     }
     return null;

@@ -41,11 +41,29 @@ export class KnockoutBracket {
   // ─── Round column ─────────────────────────────────────────
 
   #buildRound(round) {
-    const matches = round.matches.map(m => this.#buildMatch(m)).join('');
+    // Wrap pairs of matches so CSS connector lines can link them visually.
+    // Single-match rounds (Final) skip pairing.
+    const isSingle = round.matches.length === 1;
+    let matchesHtml;
+
+    if (isSingle) {
+      matchesHtml = round.matches.map(m => this.#buildMatch(m)).join('');
+    } else {
+      const pairs = [];
+      for (let i = 0; i < round.matches.length; i += 2) {
+        const a = round.matches[i];
+        const b = round.matches[i + 1];
+        pairs.push(b
+          ? `<div class="bracket-pair">${this.#buildMatch(a)}${this.#buildMatch(b)}</div>`
+          : this.#buildMatch(a));
+      }
+      matchesHtml = pairs.join('');
+    }
+
     return `
       <div class="bracket-round" data-round="${escapeHtml(round.id)}">
         <div class="bracket-round__header">${escapeHtml(round.label)}</div>
-        <div class="bracket-round__matches">${matches}</div>
+        <div class="bracket-round__matches">${matchesHtml}</div>
       </div>`;
   }
 
