@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "turkey-gunok",       "name": "Mert Günok",             "shirt": 1,  "position": "GK", "dob": "1989-03-01", "age": 37, "caps": 37,  "goals": 0,  "clubId": "fenerbahce",        "captain": false, "bio": "" },
+    { "id": "turkey-celik",       "name": "Zeki Çelik",             "shirt": 2,  "position": "DF", "dob": "1997-02-17", "age": 29, "caps": 61,  "goals": 3,  "clubId": "roma",              "captain": false, "bio": "" },
+    { "id": "turkey-demiral",     "name": "Merih Demiral",          "shirt": 3,  "position": "DF", "dob": "1998-03-05", "age": 28, "caps": 62,  "goals": 6,  "clubId": "al-ahli",           "captain": false, "bio": "" },
+    { "id": "turkey-soyuncu",     "name": "Çağlar Söyüncü",         "shirt": 4,  "position": "DF", "dob": "1996-05-23", "age": 30, "caps": 60,  "goals": 2,  "clubId": "fenerbahce",        "captain": false, "bio": "" },
+    { "id": "turkey-ozcan",       "name": "Salih Özcan",            "shirt": 5,  "position": "MF", "dob": "1998-01-11", "age": 28, "caps": 30,  "goals": 1,  "clubId": "borussia-dortmund", "captain": false, "bio": "" },
+    { "id": "turkey-kokcu",       "name": "Orkun Kökçü",            "shirt": 6,  "position": "MF", "dob": "2000-12-29", "age": 25, "caps": 50,  "goals": 4,  "clubId": "besiktas",          "captain": false, "bio": "" },
+    { "id": "turkey-akturkoglu",  "name": "Kerem Aktürkoğlu",       "shirt": 7,  "position": "FW", "dob": "1998-10-21", "age": 27, "caps": 52,  "goals": 15, "clubId": "fenerbahce",        "captain": false, "bio": "" },
+    { "id": "turkey-guler",       "name": "Arda Güler",             "shirt": 8,  "position": "FW", "dob": "2005-02-25", "age": 21, "caps": 29,  "goals": 6,  "clubId": "real-madrid",       "captain": false, "bio": "" },
+    { "id": "turkey-gul",         "name": "Deniz Gül",              "shirt": 9,  "position": "FW", "dob": "2004-07-02", "age": 21, "caps": 8,   "goals": 2,  "clubId": "fc-porto",          "captain": false, "bio": "" },
+    { "id": "turkey-calhanoglu",  "name": "Hakan Çalhanoğlu",       "shirt": 10, "position": "MF", "dob": "1994-02-08", "age": 32, "caps": 105, "goals": 22, "clubId": "inter-milan",       "captain": true,  "bio": "" },
+    { "id": "turkey-yildiz",      "name": "Kenan Yıldız",           "shirt": 11, "position": "FW", "dob": "2005-05-04", "age": 21, "caps": 28,  "goals": 5,  "clubId": "juventus",          "captain": false, "bio": "" },
+    { "id": "turkey-bayindir",    "name": "Altay Bayındır",         "shirt": 12, "position": "GK", "dob": "1998-04-14", "age": 28, "caps": 12,  "goals": 0,  "clubId": "manchester-united", "captain": false, "bio": "" },
+    { "id": "turkey-elmali",      "name": "Eren Elmali",            "shirt": 13, "position": "DF", "dob": "2000-07-07", "age": 25, "caps": 23,  "goals": 0,  "clubId": "galatasaray",       "captain": false, "bio": "" },
+    { "id": "turkey-bardakci",    "name": "Abdülkerim Bardakçı",    "shirt": 14, "position": "DF", "dob": "1994-09-07", "age": 31, "caps": 27,  "goals": 2,  "clubId": "galatasaray",       "captain": false, "bio": "" },
+    { "id": "turkey-kabak",       "name": "Ozan Kabak",             "shirt": 15, "position": "DF", "dob": "2000-03-25", "age": 26, "caps": 30,  "goals": 2,  "clubId": "tsg-hoffenheim",    "captain": false, "bio": "" },
+    { "id": "turkey-yuksek",      "name": "İsmail Yüksek",          "shirt": 16, "position": "MF", "dob": "1999-01-26", "age": 27, "caps": 32,  "goals": 1,  "clubId": "fenerbahce",        "captain": false, "bio": "" },
+    { "id": "turkey-kahveci",     "name": "İrfan Can Kahveci",      "shirt": 17, "position": "FW", "dob": "1995-07-15", "age": 30, "caps": 47,  "goals": 6,  "clubId": "kasimpasa",         "captain": false, "bio": "" },
+    { "id": "turkey-muldur",      "name": "Mert Müldür",            "shirt": 18, "position": "DF", "dob": "1999-04-03", "age": 27, "caps": 45,  "goals": 3,  "clubId": "fenerbahce",        "captain": false, "bio": "" },
+    { "id": "turkey-akgun",       "name": "Yunus Akgün",            "shirt": 19, "position": "FW", "dob": "2000-07-07", "age": 25, "caps": 19,  "goals": 4,  "clubId": "galatasaray",       "captain": false, "bio": "" },
+    { "id": "turkey-kadioglu",    "name": "Ferdi Kadıoğlu",         "shirt": 20, "position": "DF", "dob": "1999-10-07", "age": 26, "caps": 30,  "goals": 2,  "clubId": "brighton",          "captain": false, "bio": "" },
+    { "id": "turkey-yilmaz",      "name": "Barış Alper Yılmaz",    "shirt": 21, "position": "FW", "dob": "2000-05-23", "age": 26, "caps": 35,  "goals": 4,  "clubId": "galatasaray",       "captain": false, "bio": "" },
+    { "id": "turkey-ayhan",       "name": "Kaan Ayhan",             "shirt": 22, "position": "MF", "dob": "1994-11-10", "age": 31, "caps": 73,  "goals": 5,  "clubId": "galatasaray",       "captain": false, "bio": "" },
+    { "id": "turkey-cakir",       "name": "Uğurcan Çakır",          "shirt": 23, "position": "GK", "dob": "1996-04-05", "age": 30, "caps": 39,  "goals": 0,  "clubId": "galatasaray",       "captain": false, "bio": "" },
+    { "id": "turkey-aydin",       "name": "Oğuz Aydın",             "shirt": 24, "position": "FW", "dob": "2000-10-27", "age": 25, "caps": 11,  "goals": 0,  "clubId": "fenerbahce",        "captain": false, "bio": "" },
+    { "id": "turkey-akaydin",     "name": "Samet Akaydin",          "shirt": 25, "position": "DF", "dob": "1994-03-13", "age": 32, "caps": 19,  "goals": 1,  "clubId": "caykur-rizespor",   "captain": false, "bio": "" },
+    { "id": "turkey-uzun",        "name": "Can Uzun",               "shirt": 26, "position": "FW", "dob": "2005-11-11", "age": 20, "caps": 6,   "goals": 1,  "clubId": "eintracht-frankfurt","captain": false, "bio": "" }
+  ]
+}

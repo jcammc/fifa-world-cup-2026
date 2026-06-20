@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "qatar-abunada",     "name": "Mahmud Abunada",          "shirt": 1,  "position": "GK", "dob": "2000-02-05", "age": 26, "caps": 5,   "goals": 0,  "clubId": "al-rayyan",        "captain": false, "bio": "" },
+    { "id": "qatar-pedro-miguel","name": "Pedro Miguel",            "shirt": 2,  "position": "DF", "dob": "1990-08-06", "age": 35, "caps": 105, "goals": 3,  "clubId": "al-sadd",          "captain": false, "bio": "" },
+    { "id": "qatar-lucas-mendes","name": "Lucas Mendes",            "shirt": 3,  "position": "DF", "dob": "1990-07-03", "age": 35, "caps": 25,  "goals": 1,  "clubId": "al-wakrah",        "captain": false, "bio": "" },
+    { "id": "qatar-laye",        "name": "Issa Laye",               "shirt": 4,  "position": "DF", "dob": "1997-12-22", "age": 28, "caps": 4,   "goals": 0,  "clubId": "al-arabi",         "captain": false, "bio": "" },
+    { "id": "qatar-gaber",       "name": "Jassem Gaber",            "shirt": 5,  "position": "DF", "dob": "2002-02-20", "age": 24, "caps": 32,  "goals": 1,  "clubId": "al-rayyan",        "captain": false, "bio": "" },
+    { "id": "qatar-hatem",       "name": "Abdulaziz Hatem",         "shirt": 6,  "position": "MF", "dob": "1990-01-01", "age": 36, "caps": 117, "goals": 11, "clubId": "al-rayyan",        "captain": false, "bio": "" },
+    { "id": "qatar-alaaeldin",   "name": "Ahmed Alaaeldin",         "shirt": 7,  "position": "FW", "dob": "1993-01-31", "age": 33, "caps": 68,  "goals": 9,  "clubId": "al-rayyan",        "captain": false, "bio": "" },
+    { "id": "qatar-edmilson",    "name": "Edmilson Junior",         "shirt": 8,  "position": "FW", "dob": "1994-08-19", "age": 31, "caps": 16,  "goals": 0,  "clubId": "al-duhail",        "captain": false, "bio": "" },
+    { "id": "qatar-muntari",     "name": "Mohammed Muntari",        "shirt": 9,  "position": "FW", "dob": "1993-12-20", "age": 32, "caps": 67,  "goals": 16, "clubId": "al-gharafa",       "captain": false, "bio": "" },
+    { "id": "qatar-al-haydos",   "name": "Hassan Al-Haydos",        "shirt": 10, "position": "FW", "dob": "1990-12-11", "age": 35, "caps": 186, "goals": 41, "clubId": "al-sadd",          "captain": true,  "bio": "" },
+    { "id": "qatar-afif",        "name": "Akram Afif",              "shirt": 11, "position": "FW", "dob": "1996-11-18", "age": 29, "caps": 125, "goals": 39, "clubId": "al-sadd",          "captain": false, "bio": "" },
+    { "id": "qatar-boudiaf",     "name": "Karim Boudiaf",           "shirt": 12, "position": "MF", "dob": "1990-09-16", "age": 35, "caps": 118, "goals": 5,  "clubId": "al-duhail",        "captain": false, "bio": "" },
+    { "id": "qatar-al-oui",      "name": "Ayoub Al-Oui",           "shirt": 13, "position": "DF", "dob": "2005-03-11", "age": 21, "caps": 6,   "goals": 0,  "clubId": "al-gharafa",       "captain": false, "bio": "" },
+    { "id": "qatar-ahmed",       "name": "Homam Ahmed",             "shirt": 14, "position": "DF", "dob": "1999-08-25", "age": 26, "caps": 68,  "goals": 3,  "clubId": "cultural-leonesa", "captain": false, "bio": "" },
+    { "id": "qatar-abdurisag",   "name": "Yusuf Abdurisag",         "shirt": 15, "position": "FW", "dob": "1999-08-06", "age": 26, "caps": 39,  "goals": 3,  "clubId": "al-wakrah",        "captain": false, "bio": "" },
+    { "id": "qatar-khoukhi",     "name": "Boualem Khoukhi",         "shirt": 16, "position": "DF", "dob": "1990-07-09", "age": 35, "caps": 116, "goals": 20, "clubId": "al-sadd",          "captain": false, "bio": "" },
+    { "id": "qatar-al-ganehi",   "name": "Ahmed Al-Ganehi",         "shirt": 17, "position": "MF", "dob": "2000-09-22", "age": 25, "caps": 13,  "goals": 1,  "clubId": "al-gharafa",       "captain": false, "bio": "" },
+    { "id": "qatar-al-brake",    "name": "Sultan Al-Brake",         "shirt": 18, "position": "DF", "dob": "1996-04-07", "age": 30, "caps": 17,  "goals": 0,  "clubId": "al-duhail",        "captain": false, "bio": "" },
+    { "id": "qatar-ali",         "name": "Almoez Ali",              "shirt": 19, "position": "FW", "dob": "1996-08-19", "age": 29, "caps": 115, "goals": 55, "clubId": "al-duhail",        "captain": false, "bio": "" },
+    { "id": "qatar-fathy",       "name": "Ahmed Fathy",             "shirt": 20, "position": "MF", "dob": "1993-01-25", "age": 33, "caps": 48,  "goals": 0,  "clubId": "al-arabi",         "captain": false, "bio": "" },
+    { "id": "qatar-zakaria",     "name": "Salah Zakaria",           "shirt": 21, "position": "GK", "dob": "1999-04-24", "age": 27, "caps": 8,   "goals": 0,  "clubId": "al-duhail",        "captain": false, "bio": "" },
+    { "id": "qatar-barsham",     "name": "Meshaal Barsham",         "shirt": 22, "position": "GK", "dob": "1998-02-14", "age": 28, "caps": 52,  "goals": 0,  "clubId": "al-sadd",          "captain": false, "bio": "" },
+    { "id": "qatar-madibo",      "name": "Assim Madibo",            "shirt": 23, "position": "MF", "dob": "1996-10-22", "age": 29, "caps": 51,  "goals": 0,  "clubId": "al-wakrah",        "captain": false, "bio": "" },
+    { "id": "qatar-jamshid",     "name": "Tahsin Jamshid",          "shirt": 24, "position": "FW", "dob": "2006-06-16", "age": 19, "caps": 3,   "goals": 0,  "clubId": "al-duhail",        "captain": false, "bio": "" },
+    { "id": "qatar-al-hussain",  "name": "Al-Hashmi Al-Hussain",    "shirt": 25, "position": "DF", "dob": "2003-08-15", "age": 22, "caps": 8,   "goals": 0,  "clubId": "al-arabi",         "captain": false, "bio": "" },
+    { "id": "qatar-manai",       "name": "Mohamed Manai",           "shirt": 26, "position": "FW", "dob": "2002-10-25", "age": 23, "caps": 10,  "goals": 0,  "clubId": "al-shamal",        "captain": false, "bio": "" }
+  ]
+}

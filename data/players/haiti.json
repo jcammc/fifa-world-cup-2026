@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "haiti-placide",      "name": "Johny Placide",           "shirt": 1,  "position": "GK", "dob": "1988-01-29", "age": 38, "caps": 82,  "goals": 0,  "clubId": "sc-bastia",                 "captain": false, "bio": "" },
+    { "id": "haiti-arcus",        "name": "Carlens Arcus",           "shirt": 2,  "position": "DF", "dob": "1996-06-28", "age": 29, "caps": 56,  "goals": 1,  "clubId": "angers",                    "captain": false, "bio": "" },
+    { "id": "haiti-thermoncy",    "name": "Keeto Thermoncy",         "shirt": 3,  "position": "DF", "dob": "2006-03-29", "age": 20, "caps": 1,   "goals": 0,  "clubId": "young-boys",                "captain": false, "bio": "" },
+    { "id": "haiti-ade",          "name": "Ricardo Adé",             "shirt": 4,  "position": "DF", "dob": "1990-05-21", "age": 36, "caps": 59,  "goals": 2,  "clubId": "ldu-quito",                 "captain": false, "bio": "" },
+    { "id": "haiti-delcroix",     "name": "Hannes Delcroix",         "shirt": 5,  "position": "DF", "dob": "1999-02-28", "age": 27, "caps": 7,   "goals": 0,  "clubId": "fc-lugano",                 "captain": false, "bio": "" },
+    { "id": "haiti-sainte",       "name": "Carl Sainté",             "shirt": 6,  "position": "MF", "dob": "2002-08-09", "age": 23, "caps": 26,  "goals": 0,  "clubId": "el-paso-locomotive",        "captain": false, "bio": "" },
+    { "id": "haiti-etienne",      "name": "Derrick Etienne Jr.",     "shirt": 7,  "position": "FW", "dob": "1996-11-25", "age": 29, "caps": 51,  "goals": 8,  "clubId": "toronto-fc",                "captain": false, "bio": "" },
+    { "id": "haiti-experience",   "name": "Martin Expérience",       "shirt": 8,  "position": "DF", "dob": "1999-03-09", "age": 27, "caps": 21,  "goals": 0,  "clubId": "as-nancy-lorraine",         "captain": false, "bio": "" },
+    { "id": "haiti-nazon",        "name": "Duckens Nazon",           "shirt": 9,  "position": "FW", "dob": "1994-04-07", "age": 32, "caps": 82,  "goals": 44, "clubId": "esteghlal",                 "captain": true,  "bio": "" },
+    { "id": "haiti-bellegarde",   "name": "Jean-Ricner Bellegarde",  "shirt": 10, "position": "MF", "dob": "1998-06-27", "age": 27, "caps": 10,  "goals": 0,  "clubId": "wolverhampton",             "captain": false, "bio": "" },
+    { "id": "haiti-deedson",      "name": "Louicius Deedson",        "shirt": 11, "position": "FW", "dob": "2001-02-11", "age": 25, "caps": 32,  "goals": 10, "clubId": "fc-dallas",                 "captain": false, "bio": "" },
+    { "id": "haiti-pierre-a",     "name": "Alexandre Pierre",        "shirt": 12, "position": "GK", "dob": "2001-02-25", "age": 25, "caps": 16,  "goals": 0,  "clubId": "fc-sochaux",                "captain": false, "bio": "" },
+    { "id": "haiti-lacroix",      "name": "Duke Lacroix",            "shirt": 13, "position": "DF", "dob": "1993-10-14", "age": 32, "caps": 16,  "goals": 3,  "clubId": "colorado-springs-switchbacks","captain": false, "bio": "" },
+    { "id": "haiti-metusala",     "name": "Garven Metusala",         "shirt": 14, "position": "DF", "dob": "1999-12-31", "age": 26, "caps": 16,  "goals": 0,  "clubId": "colorado-springs-switchbacks","captain": false, "bio": "" },
+    { "id": "haiti-providence",   "name": "Ruben Providence",        "shirt": 15, "position": "FW", "dob": "2001-07-07", "age": 24, "caps": 15,  "goals": 3,  "clubId": "almere-city",               "captain": false, "bio": "" },
+    { "id": "haiti-joseph",       "name": "Lenny Joseph",            "shirt": 16, "position": "FW", "dob": "2000-10-12", "age": 25, "caps": 2,   "goals": 1,  "clubId": "ferencvaros",               "captain": false, "bio": "" },
+    { "id": "haiti-jean-jacques", "name": "Danley Jean Jacques",     "shirt": 17, "position": "MF", "dob": "2000-05-20", "age": 26, "caps": 31,  "goals": 6,  "clubId": "philadelphia-union",        "captain": false, "bio": "" },
+    { "id": "haiti-isidor",       "name": "Wilson Isidor",           "shirt": 18, "position": "FW", "dob": "2000-08-27", "age": 25, "caps": 4,   "goals": 2,  "clubId": "sunderland",                "captain": false, "bio": "" },
+    { "id": "haiti-fortune",      "name": "Yassin Fortuné",          "shirt": 19, "position": "FW", "dob": "1999-01-30", "age": 27, "caps": 4,   "goals": 0,  "clubId": "fc-vizela",                 "captain": false, "bio": "" },
+    { "id": "haiti-pierrot",      "name": "Frantzdy Pierrot",        "shirt": 20, "position": "FW", "dob": "1995-03-29", "age": 31, "caps": 51,  "goals": 34, "clubId": "caykur-rizespor",           "captain": false, "bio": "" },
+    { "id": "haiti-casimir",      "name": "Josué Casimir",           "shirt": 21, "position": "FW", "dob": "2001-09-24", "age": 24, "caps": 7,   "goals": 0,  "clubId": "aj-auxerre",                "captain": false, "bio": "" },
+    { "id": "haiti-duverne",      "name": "Jean-Kévin Duverne",      "shirt": 22, "position": "DF", "dob": "1997-07-12", "age": 28, "caps": 17,  "goals": 1,  "clubId": "kaa-gent",                  "captain": false, "bio": "" },
+    { "id": "haiti-duverger",     "name": "Josué Duverger",          "shirt": 23, "position": "GK", "dob": "2000-04-27", "age": 26, "caps": 7,   "goals": 0,  "clubId": "fc-cosmos-koblenz",         "captain": false, "bio": "" },
+    { "id": "haiti-paugain",      "name": "Wilguens Paugain",        "shirt": 24, "position": "DF", "dob": "2001-08-24", "age": 24, "caps": 8,   "goals": 0,  "clubId": "sv-zulte-waregem",          "captain": false, "bio": "" },
+    { "id": "haiti-simon",        "name": "Dominique Simon",         "shirt": 25, "position": "MF", "dob": "2000-07-29", "age": 25, "caps": 2,   "goals": 0,  "clubId": "tatran-presov",             "captain": false, "bio": "" },
+    { "id": "haiti-pierre-w",     "name": "Woodensky Pierre",        "shirt": 26, "position": "MF", "dob": "2004-12-30", "age": 21, "caps": 1,   "goals": 0,  "clubId": "violette-ac",               "captain": false, "bio": "" }
+  ]
+}

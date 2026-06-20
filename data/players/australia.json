@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "australia-ryan",           "name": "Mathew Ryan",          "shirt": 1,  "position": "GK", "dob": "1992-04-08", "age": 34, "caps": 104, "goals": 0,  "clubId": "levante",           "captain": true,  "bio": "" },
+    { "id": "australia-degenek",        "name": "Miloš Degenek",        "shirt": 2,  "position": "DF", "dob": "1994-04-28", "age": 32, "caps": 57,  "goals": 1,  "clubId": "apoel",             "captain": false, "bio": "" },
+    { "id": "australia-circati",        "name": "Alessandro Circati",   "shirt": 3,  "position": "DF", "dob": "2003-10-10", "age": 22, "caps": 13,  "goals": 1,  "clubId": "parma",             "captain": false, "bio": "" },
+    { "id": "australia-italiano",       "name": "Jacob Italiano",       "shirt": 4,  "position": "DF", "dob": "2001-07-30", "age": 24, "caps": 5,   "goals": 0,  "clubId": "grazer-ak",         "captain": false, "bio": "" },
+    { "id": "australia-bos",            "name": "Jordan Bos",           "shirt": 5,  "position": "DF", "dob": "2002-10-29", "age": 23, "caps": 27,  "goals": 4,  "clubId": "feyenoord",         "captain": false, "bio": "" },
+    { "id": "australia-geria",          "name": "Jason Geria",          "shirt": 6,  "position": "DF", "dob": "1993-05-10", "age": 33, "caps": 14,  "goals": 0,  "clubId": "albirex-niigata",   "captain": false, "bio": "" },
+    { "id": "australia-leckie",         "name": "Mathew Leckie",        "shirt": 7,  "position": "FW", "dob": "1991-02-04", "age": 35, "caps": 80,  "goals": 14, "clubId": "melbourne-city",    "captain": false, "bio": "" },
+    { "id": "australia-metcalfe",       "name": "Connor Metcalfe",      "shirt": 8,  "position": "MF", "dob": "1999-11-05", "age": 26, "caps": 36,  "goals": 1,  "clubId": "fc-st-pauli",       "captain": false, "bio": "" },
+    { "id": "australia-toure",          "name": "Mohamed Touré",        "shirt": 9,  "position": "FW", "dob": "2004-03-26", "age": 22, "caps": 10,  "goals": 2,  "clubId": "norwich-city",      "captain": false, "bio": "" },
+    { "id": "australia-hrustic",        "name": "Ajdin Hrustic",        "shirt": 10, "position": "FW", "dob": "1996-07-05", "age": 29, "caps": 37,  "goals": 4,  "clubId": "heracles-almelo",   "captain": false, "bio": "" },
+    { "id": "australia-mabil",          "name": "Awer Mabil",           "shirt": 11, "position": "FW", "dob": "1995-09-15", "age": 30, "caps": 38,  "goals": 10, "clubId": "castellon",         "captain": false, "bio": "" },
+    { "id": "australia-izzo",           "name": "Paul Izzo",            "shirt": 12, "position": "GK", "dob": "1995-01-06", "age": 31, "caps": 4,   "goals": 0,  "clubId": "randers",           "captain": false, "bio": "" },
+    { "id": "australia-oneill",         "name": "Aiden O'Neill",        "shirt": 13, "position": "MF", "dob": "1998-07-04", "age": 27, "caps": 31,  "goals": 0,  "clubId": "nyc-fc",            "captain": false, "bio": "" },
+    { "id": "australia-devlin",         "name": "Cammy Devlin",         "shirt": 14, "position": "MF", "dob": "1998-06-07", "age": 28, "caps": 5,   "goals": 0,  "clubId": "hearts",            "captain": false, "bio": "" },
+    { "id": "australia-trewin",         "name": "Kai Trewin",           "shirt": 15, "position": "DF", "dob": "2001-05-18", "age": 25, "caps": 6,   "goals": 0,  "clubId": "nyc-fc",            "captain": false, "bio": "" },
+    { "id": "australia-behich",         "name": "Aziz Behich",          "shirt": 16, "position": "DF", "dob": "1990-12-16", "age": 35, "caps": 84,  "goals": 3,  "clubId": "melbourne-city",    "captain": false, "bio": "" },
+    { "id": "australia-irankunda",      "name": "Nestory Irankunda",    "shirt": 17, "position": "FW", "dob": "2006-02-09", "age": 20, "caps": 15,  "goals": 5,  "clubId": "watford",           "captain": false, "bio": "" },
+    { "id": "australia-beach",          "name": "Patrick Beach",        "shirt": 18, "position": "GK", "dob": "2003-08-06", "age": 22, "caps": 2,   "goals": 0,  "clubId": "melbourne-city",    "captain": false, "bio": "" },
+    { "id": "australia-souttar",        "name": "Harry Souttar",        "shirt": 19, "position": "DF", "dob": "1998-10-22", "age": 27, "caps": 38,  "goals": 11, "clubId": "leicester-city",    "captain": false, "bio": "" },
+    { "id": "australia-volpato",        "name": "Cristian Volpato",     "shirt": 20, "position": "FW", "dob": "2003-11-15", "age": 22, "caps": 1,   "goals": 0,  "clubId": "sassuolo",          "captain": false, "bio": "" },
+    { "id": "australia-burgess",        "name": "Cameron Burgess",      "shirt": 21, "position": "DF", "dob": "1995-10-21", "age": 30, "caps": 27,  "goals": 0,  "clubId": "swansea-city",      "captain": false, "bio": "" },
+    { "id": "australia-irvine",         "name": "Jackson Irvine",       "shirt": 22, "position": "MF", "dob": "1993-03-07", "age": 33, "caps": 82,  "goals": 14, "clubId": "fc-st-pauli",       "captain": false, "bio": "" },
+    { "id": "australia-velupillay",     "name": "Nishan Velupillay",    "shirt": 23, "position": "FW", "dob": "2001-05-07", "age": 25, "caps": 7,   "goals": 3,  "clubId": "melbourne-victory", "captain": false, "bio": "" },
+    { "id": "australia-okon-engstler",  "name": "Paul Okon-Engstler",   "shirt": 24, "position": "MF", "dob": "2005-01-24", "age": 21, "caps": 6,   "goals": 0,  "clubId": "sydney-fc",         "captain": false, "bio": "" },
+    { "id": "australia-herrington",     "name": "Lucas Herrington",     "shirt": 25, "position": "DF", "dob": "2007-09-05", "age": 18, "caps": 4,   "goals": 0,  "clubId": "colorado-rapids",   "captain": false, "bio": "" },
+    { "id": "australia-yengi",          "name": "Tete Yengi",           "shirt": 26, "position": "FW", "dob": "2000-11-28", "age": 25, "caps": 1,   "goals": 1,  "clubId": "machida-zelvia",    "captain": false, "bio": "" }
+  ]
+}

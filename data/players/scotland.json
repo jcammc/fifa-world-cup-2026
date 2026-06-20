@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "scotland-gunn",        "name": "Angus Gunn",            "shirt": 1,  "position": "GK", "dob": "1996-01-22", "age": 30, "caps": 22,  "goals": 0,  "clubId": "nottingham-forest", "captain": false, "bio": "" },
+    { "id": "scotland-hickey",      "name": "Aaron Hickey",          "shirt": 2,  "position": "DF", "dob": "2002-06-10", "age": 24, "caps": 21,  "goals": 0,  "clubId": "brentford",         "captain": false, "bio": "" },
+    { "id": "scotland-robertson",   "name": "Andy Robertson",        "shirt": 3,  "position": "DF", "dob": "1994-03-11", "age": 32, "caps": 94,  "goals": 4,  "clubId": "liverpool",         "captain": false, "bio": "" },
+    { "id": "scotland-mctominay",   "name": "Scott McTominay",       "shirt": 4,  "position": "MF", "dob": "1996-12-08", "age": 29, "caps": 70,  "goals": 15, "clubId": "napoli",            "captain": false, "bio": "" },
+    { "id": "scotland-hanley",      "name": "Grant Hanley",          "shirt": 5,  "position": "DF", "dob": "1991-11-20", "age": 34, "caps": 68,  "goals": 2,  "clubId": "hibernian",         "captain": false, "bio": "" },
+    { "id": "scotland-tierney",     "name": "Kieran Tierney",        "shirt": 6,  "position": "DF", "dob": "1997-06-05", "age": 29, "caps": 56,  "goals": 2,  "clubId": "celtic",            "captain": false, "bio": "" },
+    { "id": "scotland-mcginn",      "name": "John McGinn",           "shirt": 7,  "position": "MF", "dob": "1994-10-18", "age": 31, "caps": 86,  "goals": 20, "clubId": "aston-villa",       "captain": true,  "bio": "" },
+    { "id": "scotland-fletcher",    "name": "Tyler Fletcher",        "shirt": 8,  "position": "MF", "dob": "2007-03-19", "age": 19, "caps": 2,   "goals": 0,  "clubId": "manchester-united", "captain": false, "bio": "" },
+    { "id": "scotland-dykes",       "name": "Lyndon Dykes",          "shirt": 9,  "position": "FW", "dob": "1995-10-07", "age": 30, "caps": 51,  "goals": 10, "clubId": "charlton-athletic", "captain": false, "bio": "" },
+    { "id": "scotland-adams",       "name": "Ché Adams",             "shirt": 10, "position": "FW", "dob": "1996-07-13", "age": 29, "caps": 47,  "goals": 13, "clubId": "torino",            "captain": false, "bio": "" },
+    { "id": "scotland-christie",    "name": "Ryan Christie",         "shirt": 11, "position": "MF", "dob": "1995-02-22", "age": 31, "caps": 68,  "goals": 10, "clubId": "bournemouth",       "captain": false, "bio": "" },
+    { "id": "scotland-kelly",       "name": "Liam Kelly",            "shirt": 12, "position": "GK", "dob": "1996-01-23", "age": 30, "caps": 3,   "goals": 0,  "clubId": "rangers",           "captain": false, "bio": "" },
+    { "id": "scotland-hendry",      "name": "Jack Hendry",           "shirt": 13, "position": "DF", "dob": "1995-05-07", "age": 31, "caps": 38,  "goals": 3,  "clubId": "al-ettifaq",        "captain": false, "bio": "" },
+    { "id": "scotland-stewart",     "name": "Ross Stewart",          "shirt": 14, "position": "FW", "dob": "1996-07-11", "age": 29, "caps": 3,   "goals": 0,  "clubId": "southampton",       "captain": false, "bio": "" },
+    { "id": "scotland-souttar",     "name": "John Souttar",          "shirt": 15, "position": "DF", "dob": "1996-09-25", "age": 29, "caps": 24,  "goals": 2,  "clubId": "rangers",           "captain": false, "bio": "" },
+    { "id": "scotland-hyam",        "name": "Dominic Hyam",          "shirt": 16, "position": "DF", "dob": "1995-12-20", "age": 30, "caps": 4,   "goals": 0,  "clubId": "wrexham",           "captain": false, "bio": "" },
+    { "id": "scotland-gannon-doak", "name": "Ben Gannon-Doak",       "shirt": 17, "position": "FW", "dob": "2005-11-11", "age": 20, "caps": 14,  "goals": 1,  "clubId": "bournemouth",       "captain": false, "bio": "" },
+    { "id": "scotland-hirst",       "name": "George Hirst",          "shirt": 18, "position": "FW", "dob": "1999-02-15", "age": 27, "caps": 10,  "goals": 1,  "clubId": "ipswich-town",      "captain": false, "bio": "" },
+    { "id": "scotland-ferguson",    "name": "Lewis Ferguson",        "shirt": 19, "position": "MF", "dob": "1999-08-24", "age": 26, "caps": 24,  "goals": 1,  "clubId": "bologna",           "captain": false, "bio": "" },
+    { "id": "scotland-shankland",   "name": "Lawrence Shankland",    "shirt": 20, "position": "FW", "dob": "1995-08-10", "age": 30, "caps": 20,  "goals": 7,  "clubId": "hearts",            "captain": false, "bio": "" },
+    { "id": "scotland-gordon",      "name": "Craig Gordon",          "shirt": 21, "position": "GK", "dob": "1982-12-31", "age": 43, "caps": 84,  "goals": 0,  "clubId": "hearts",            "captain": false, "bio": "" },
+    { "id": "scotland-patterson",   "name": "Nathan Patterson",      "shirt": 22, "position": "DF", "dob": "2001-10-16", "age": 24, "caps": 26,  "goals": 1,  "clubId": "everton",           "captain": false, "bio": "" },
+    { "id": "scotland-mclean",      "name": "Kenny McLean",          "shirt": 23, "position": "MF", "dob": "1992-01-08", "age": 34, "caps": 58,  "goals": 3,  "clubId": "norwich-city",      "captain": false, "bio": "" },
+    { "id": "scotland-ralston",     "name": "Anthony Ralston",       "shirt": 24, "position": "DF", "dob": "1998-11-16", "age": 27, "caps": 27,  "goals": 1,  "clubId": "celtic",            "captain": false, "bio": "" },
+    { "id": "scotland-curtis",      "name": "Findlay Curtis",        "shirt": 25, "position": "FW", "dob": "2006-06-09", "age": 20, "caps": 3,   "goals": 1,  "clubId": "kilmarnock",        "captain": false, "bio": "" },
+    { "id": "scotland-mckenna",     "name": "Scott McKenna",         "shirt": 26, "position": "DF", "dob": "1996-11-12", "age": 29, "caps": 50,  "goals": 1,  "clubId": "dinamo-zagreb",     "captain": false, "bio": "" }
+  ]
+}
