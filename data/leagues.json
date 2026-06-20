@@ -10,6 +10,11 @@
     { "id": "super-lig",             "name": "Süper Lig",             "country": "Turkey",       "confederation": "UEFA"     },
     { "id": "saudi-pro-league",      "name": "Saudi Pro League",      "country": "Saudi Arabia", "confederation": "AFC"      },
     { "id": "brasileirao",           "name": "Brasileirão Série A",   "country": "Brazil",       "confederation": "CONMEBOL" },
-    { "id": "russian-premier-league","name": "Russian Premier League","country": "Russia",       "confederation": "UEFA"     }
+    { "id": "russian-premier-league","name": "Russian Premier League","country": "Russia",       "confederation": "UEFA"     },
+    { "id": "primeira-liga",         "name": "Primeira Liga",         "country": "Portugal",     "confederation": "UEFA"     },
+    { "id": "eredivisie",            "name": "Eredivisie",            "country": "Netherlands",  "confederation": "UEFA"     },
+    { "id": "mls",                   "name": "Major League Soccer",   "country": "USA",          "confederation": "CONCACAF" },
+    { "id": "primera-division",      "name": "Primera División",      "country": "Argentina",    "confederation": "CONMEBOL" },
+    { "id": "championship",          "name": "EFL Championship",      "country": "England",      "confederation": "UEFA"     }
   ]
 }

@@ -251,13 +251,16 @@ Known indices as of June 2026:
 
 | Group   | Country       | Section index |
 |---------|---------------|---------------|
-| Group C | Brazil        | 12            |
-| Group I | France        | 42            |
-| Group L | England       | 58            |
 | Group A | Mexico        | 2             |
-| Group J | Argentina     | 46            |
-| Group K | Portugal      | 50            |
-(Always verify against a fresh sections fetch)
+| Group C | Brazil        | 12            |
+| Group E | Germany       | 24            |
+| Group F | Netherlands   | 28            |
+| Group H | Spain         | 39            |
+| Group I | France        | 42            |
+| Group J | Argentina     | 48            |
+| Group K | Portugal      | 54            |
+| Group L | England       | 58            |
+(Always verify against a fresh sections fetch — indices shift when Wikipedia editors add/remove content)
 
 ### Step 2: Fetch the specific squad section
 
@@ -541,6 +544,55 @@ All 2026 World Cup venues and their UTC offsets during the tournament (June–Ju
 Note: Mexico uses "Central Daylight Time" (CDT) like US Central, but Wikipedia sometimes labels these venues as UTC-6 explicitly. Always use the offset stated by Wikipedia for that specific match — do not infer from city alone.
 
 Venue name format in JSON: `"{Stadium Name}, {City} {State/Province}"` — e.g. `"NRG Stadium, Houston TX"`, `"BMO Field, Toronto ON"`, `"Estadio Azteca, Mexico City"` (Mexican venues omit state).
+
+---
+
+## SECTION 16 — MANAGER FIELD SOURCING WORKFLOW
+
+The `manager` field in `data/countries.json` holds the full name of the head coach for each of the 48 teams. This section documents the correct source and method.
+
+### Source: individual group Wikipedia pages
+
+**Do NOT use** `https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_squads` for manager data. That page is too large and WebFetch truncates it before reaching most groups.
+
+**Use the individual group pages** instead — these are small, fetch completely, and include coach names in match report infoboxes:
+
+```
+https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_A
+https://en.wikipedia.org/wiki/2026_FIFA_World_Cup_Group_B
+... (Group_C through Group_L)
+```
+
+Fetch all 12 group pages in parallel. Each page lists all match infoboxes for that group, and each infobox shows `Managers: [Name] · [Name]`.
+
+### Extracting the coach name
+
+Look for a line in each match infobox such as:
+
+```
+Managers:  Javier Aguirre · Hugo Broos
+```
+
+Take the full name exactly as Wikipedia shows it. Do not abbreviate, translate, or anglicise.
+
+### Format rules
+
+- Full name as shown on Wikipedia: `"Julian Nagelsmann"`, `"Didier Deschamps"`, `"Julen Lopetegui"`
+- Include accents if Wikipedia uses them: `"Ståle Solbakken"`, `"Sébastien Migné"`, `"Néstor Lorenzo"`
+- Single-name coaches: use exactly what Wikipedia shows — e.g. `"Bubista"` for Cape Verde
+- Do not add titles (Coach, Manager, etc.)
+
+### Field location in countries.json
+
+```json
+{ "id": "germany", "name": "Germany", ..., "manager": "Julian Nagelsmann", ... }
+```
+
+Update `lastUpdated` on `data/countries.json` when any manager field changes.
+
+### Verification tip
+
+Managers can change between qualification and the tournament. Wikipedia's group pages reflect the coach actually in charge at match time, making them the most reliable source for tournament-specific data. Cross-check against a secondary source (BBC Sport, ESPN) if any name is unfamiliar or surprising.
 
 ---
 

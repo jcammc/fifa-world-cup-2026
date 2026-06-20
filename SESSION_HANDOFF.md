@@ -41,7 +41,8 @@
 | Sprint 4A | TournamentCentre 3-tab layout, GroupCarousel (12 groups, drag/wheel/arrow nav), real fixture + standings data for Groups C/I/L | **COMPLETE** |
 | Sprint 4B | Group deep-linking (#today / #group-a through #group-l / #knockout), KnockoutBracket module, knockout.json data populated | **COMPLETE** |
 | Sprint 5A | Nav active-state fix for all TC deep-link routes; fixtures.json + standings.json populated for all 12 groups; qualificationStatus set where mathematically certain | **COMPLETE** |
-| Sprint 5B | Not started — see next steps section |
+| Sprint 5B | Fix leagueId bug in getPlayerResolved(); qualification badges in carousel; Team Fixtures Tab; knockout bracket connector lines; all 48 manager fields; Group C + D R2 results + standings | **COMPLETE** |
+| Sprint 5C | Data model decisions (recentForm → country level; teamStrength deferred); squad files for Germany/Spain/Argentina/Portugal/Netherlands; leagues.json + clubs.json expanded; recentForm field added to countries.json schema | **COMPLETE** |
 
 ---
 
@@ -66,7 +67,7 @@
 | `modules/profile-panel.js` | Complete | Singleton panel — player stats, club badge, bio, similar players |
 | `modules/overview-tab.js` | Complete | Hero cards, captain highlight, fixture strip, group standing |
 | `modules/stats-tab.js` | Stub | Placeholder |
-| `modules/fixtures-tab.js` | Stub | Placeholder |
+| `modules/fixtures-tab.js` | Complete | Group-stage results + W/D/L indicators, TC deep-links (#group-x, #knockout), knockout pending state |
 | `modules/tournament-centre.js` | Complete | 3-tab shell — Today / Group Stage / Knockout Stage |
 | `modules/group-carousel.js` | Complete | 12 group cards, standings tables, fixture strips, drag/wheel/arrow nav, `scrollToGroup()` |
 | `modules/knockout-bracket.js` | Complete | Horizontal bracket, 5 rounds, seed labels, wheel redirect |
@@ -93,19 +94,24 @@ All files exist and are fully implemented unless noted:
 
 | File | Status |
 |------|--------|
-| `countries.json` | Complete — all 48 teams |
+| `countries.json` | Complete — all 48 teams, manager field for all 48, `recentForm: null` field added to schema (Sprint 5C; to be populated with verified match data) |
 | `groups.json` | Complete — all 12 groups A–L |
 | `clubs.json` | Complete — clubs referenced by France/England/Brazil |
 | `leagues.json` | Complete — leagues referenced by above clubs |
-| `fixtures.json` | **Complete structure** — all 12 groups, 72 fixtures. Round 1 FT for all groups. Round 2 FT for A/B/D; others scheduled. Round 3 all scheduled. Groups C/D/E/F R2 results may be stale (matches passed since last fetch). |
-| `standings.json` | **Complete structure** — all 12 groups. qualificationStatus: Mexico/Canada/Switzerland/USA = qualified; Bosnia-Herzegovina/Qatar = eliminated; all others null. |
+| `fixtures.json` | **Complete structure** — all 12 groups, 72 fixtures. R1 + R2 FT for groups A/B/C/D. R1 FT only for E–L (R2 not yet played as of June 20). R3 all scheduled. Groups E/F R2 play June 20–21. |
+| `standings.json` | **Complete structure** — all 12 groups current through Round 2 for A/B/C/D; Round 1 only for E–L (correct as of June 20). qualificationStatus: Mexico/Canada/Switzerland/USA = qualified; Bosnia-Herzegovina/Qatar/Haiti/Turkey = eliminated; all others null. |
 | `knockout.json` | Complete structure — 5 rounds, 16+8+4+2+2 matches. All slots null (no teams qualified yet). R32 has seed labels. |
 | `rankings.json` | Empty stub |
 | `search-index.json` | Empty stub |
 | `players/france.json` | Complete — 26 players |
 | `players/england.json` | Complete — 26 players |
 | `players/brazil.json` | Complete — 26 players |
-| `players/*.json` (45 teams) | Not yet created |
+| `players/germany.json` | Complete — 26 players (Sprint 5C) |
+| `players/spain.json` | Complete — 26 players (Sprint 5C) |
+| `players/argentina.json` | Complete — 26 players (Sprint 5C) |
+| `players/portugal.json` | Complete — 26 players (Sprint 5C) |
+| `players/netherlands.json` | Complete — 26 players (Sprint 5C) |
+| `players/*.json` (40 teams) | Not yet created |
 
 ---
 
@@ -156,9 +162,15 @@ Key differences from spec: `shirt` (not `shirtNumber`), `position` values are `G
   "confederation": "UEFA",
   "fifaRanking": 2,
   "groupId": "I",
-  "manager": "Didier Deschamps"
+  "manager": "Didier Deschamps",
+  "recentForm": null,
+  "teamStrength": { "attack": 95, "midfield": 88, "defence": 82, "goalkeeping": 90, "depth": 91 }
 }
 ```
+
+`recentForm`: `null | string[]` — last 5 international results oldest→newest, e.g. `["W","D","W","W","L"]`. Set on countries, not players (see Data Model Decisions, Sprint 5C). Populate only from verified match data.
+
+`teamStrength`: deferred — only 3 teams have values (France, England, Brazil). Do not add more until sourcing methodology is agreed (Rankings Sprint).
 
 ### Fixture (`data/fixtures.json`)
 
@@ -350,28 +362,37 @@ IntersectionObserver on `.squad-group[data-position]` sections:
 
 ---
 
-## WHAT'S NEXT — SPRINT 5B CANDIDATES
+## WHAT'S NEXT — SPRINT 5D CANDIDATES
 
-**Priority 1 — Update stale Round 2 results**
-Several Round 2 matches have passed their kickoff times but are still marked `"scheduled"` in the data. Fetch the relevant group pages and update scores + standings:
-- Group C R2: Scotland vs Morocco, Brazil vs Haiti (June 19–20)
-- Group D R2: Turkey vs Paraguay (June 20)
-- Group E R2: Germany vs Ivory Coast, Ecuador vs Curaçao (June 20)
-- Group F R2: Netherlands vs Sweden, Tunisia vs Japan (June 20–21)
+**Priority 1 — Update Round 2 results (Groups E–L)**
+Groups E–L Round 2 matches are now past their kickoff times and still marked `"scheduled"`. Fetch the relevant Wikipedia group pages and update scores + standings for all completed R2 fixtures. Also update qualificationStatus where mathematically certain after R2. No code changes needed — data only.
 
-Use the individual group Wikipedia pages (see DATA_ENTRY_GUIDE.md Section 14). No code changes.
+Groups to update once R2 is complete (fetch Wikipedia group pages in parallel):
+- Group E (Germany, Curaçao, Ivory Coast, Ecuador) — R2 June 20
+- Group F (Netherlands, Japan, Sweden, Tunisia) — R2 June 20–21
+- Group G (Belgium, Egypt, Iran, New Zealand) — R2 June 21
+- Group H (Spain, Uruguay, Saudi Arabia, Cape Verde) — R2 June 22
+- Group I (France, Senegal, Iraq, Norway) — R2 June 22
+- Group J (Argentina, Algeria, Austria, Jordan) — R2 June 23
+- Group K (Portugal, Colombia, DR Congo, Uzbekistan) — R2 June 23
+- Group L (England, Croatia, Ghana, Panama) — R2 June 24
 
-**Priority 2 — qualificationStatus visual indicators**
-`qualificationStatus` values are now populated in standings.json for 6 teams (4 qualified, 2 eliminated). Adding visual indicators to the carousel standings tables is now unblocked. Approach: add CSS classes `.standings-row--qualified` / `.standings-row--eliminated` to the `<tr>` in GroupCarousel's standings render, driven by `team.qualificationStatus`. Needs a coloured left-border or row-tint in `carousel.css`.
+Also update qualificationStatus where mathematically certain after R2. No code changes.
 
-**Priority 3 — Player data (45 remaining squads)**
-France, England, Brazil are complete. 45 squads need `data/players/{id}.json`. Each file: 26 players, all required fields. Wikipedia API is the source of truth for names, positions, DOBs, caps, goals, clubs. See DATA_ENTRY_GUIDE.md Sections 2–12 for all conventions and disambiguation rules.
+**Priority 2 — Squad data for next 5 teams**
+8 squads now complete (France, England, Brazil, Germany, Spain, Argentina, Portugal, Netherlands). Suggested next 5:
+- Japan, Morocco, Colombia, Belgium, USA
+
+Each: 26 players in `data/players/{id}.json`. Use Wikipedia API section-fetch (DATA_ENTRY_GUIDE.md Section 9). Add any new clubs/leagues to clubs.json and leagues.json first.
+
+**Priority 3 — recentForm at country level**
+`recentForm` field now exists on all 48 countries (null). Populate last 5 international results for completed-squad teams. Source: Wikipedia group pages for World Cup matches + Wikipedia team pages for pre-tournament friendlies. Format: `["W","D","W","W","L"]` oldest→newest.
 
 **Priority 4 — Winner propagation in knockout bracket**
-When R32 results are available: set `homeTeamId`/`awayTeamId` in knockout.json and the bracket renders flags + real names automatically. A script (`scripts/update-knockout.js`) should handle this — reads match results, advances winners to the next round's slots.
+Group stage ends ~June 27. After all R3 results: update knockout.json with R32 team IDs. Do not populate until group stage is complete.
 
-**Priority 5 — Broadcaster data**
-`broadcaster` is null on all 72 fixtures. Setting `"broadcaster": "BBC"` or `"ITV"` activates the existing badge styles (`.badge--bbc`, `.badge--itv`) in carousel.css. Only populate from confirmed BBC/ITV schedule — do not guess.
+**Priority 5 — teamStrength sourcing decision**
+Deferred from Sprint 5C. Agree on sourcing methodology before adding values for any new teams. Existing values (France, England, Brazil) remain as editorial placeholders.
 
 ---
 
@@ -418,7 +439,9 @@ Known section indices (verify with a fresh fetch before each session):
 ## KNOWN ISSUES / DEFERRED
 
 - ~~Nav active state: `#today`, `#group-a` etc. didn't highlight any nav link~~ — **Fixed Sprint 5A** (both router.js and nav.js #updateActiveLink canonicalise all TC routes to `#tournament`)
-- Stats tab and Fixtures tab on TeamPage are placeholder stubs
+- ~~`getPlayerResolved()` in data.js used `player.leagueId` which doesn't exist~~ — **Fixed Sprint 5B** (now resolves via `clubs.find(c => c.id === player.clubId)?.leagueId`)
+- ~~Fixtures tab on TeamPage was a placeholder stub~~ — **Implemented Sprint 5B**
+- Stats tab on TeamPage is a placeholder stub
 - Search overlay not implemented
 - Compare view not implemented
 - No player photos (all showing `player-avatar.svg` placeholder)
