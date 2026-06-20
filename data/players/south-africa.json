@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "south-africa-williams",   "name": "Ronwen Williams",      "shirt": 1,  "position": "GK", "dob": "1992-01-21", "age": 34, "caps": 62,  "goals": 0,  "clubId": "mamelodi-sundowns", "captain": false, "bio": "" },
+    { "id": "south-africa-matuludi",   "name": "Thabang Matuludi",     "shirt": 2,  "position": "DF", "dob": "1999-01-14", "age": 27, "caps": 3,   "goals": 0,  "clubId": "polokwane-city",    "captain": false, "bio": "" },
+    { "id": "south-africa-ndamane",    "name": "Khulumani Ndamane",    "shirt": 3,  "position": "DF", "dob": "2004-02-05", "age": 22, "caps": 5,   "goals": 0,  "clubId": "mamelodi-sundowns", "captain": false, "bio": "" },
+    { "id": "south-africa-mokoena",    "name": "Teboho Mokoena",       "shirt": 4,  "position": "MF", "dob": "1997-01-24", "age": 29, "caps": 51,  "goals": 9,  "clubId": "mamelodi-sundowns", "captain": false, "bio": "" },
+    { "id": "south-africa-mbatha",     "name": "Thalente Mbatha",      "shirt": 5,  "position": "MF", "dob": "2000-03-06", "age": 26, "caps": 15,  "goals": 3,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-modiba",     "name": "Aubrey Modiba",        "shirt": 6,  "position": "DF", "dob": "1995-07-22", "age": 30, "caps": 44,  "goals": 3,  "clubId": "mamelodi-sundowns", "captain": false, "bio": "" },
+    { "id": "south-africa-appollis",   "name": "Oswin Appollis",       "shirt": 7,  "position": "FW", "dob": "2001-08-25", "age": 24, "caps": 26,  "goals": 8,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-moremi",     "name": "Tshepang Moremi",      "shirt": 8,  "position": "FW", "dob": "2000-10-02", "age": 25, "caps": 10,  "goals": 1,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-foster",     "name": "Lyle Foster",          "shirt": 9,  "position": "FW", "dob": "2000-09-03", "age": 25, "caps": 27,  "goals": 10, "clubId": "burnley",           "captain": false, "bio": "" },
+    { "id": "south-africa-mofokeng",   "name": "Relebohile Mofokeng",  "shirt": 10, "position": "FW", "dob": "2004-10-23", "age": 21, "caps": 13,  "goals": 0,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-zwane",      "name": "Themba Zwane",         "shirt": 11, "position": "MF", "dob": "1989-08-03", "age": 36, "caps": 54,  "goals": 12, "clubId": "mamelodi-sundowns", "captain": true,  "bio": "" },
+    { "id": "south-africa-maseko",     "name": "Thapelo Maseko",       "shirt": 12, "position": "FW", "dob": "2003-11-11", "age": 22, "caps": 10,  "goals": 1,  "clubId": "ael-limassol",      "captain": false, "bio": "" },
+    { "id": "south-africa-sithole",    "name": "Sphephelo Sithole",    "shirt": 13, "position": "MF", "dob": "1999-03-03", "age": 27, "caps": 28,  "goals": 1,  "clubId": "tondela",           "captain": false, "bio": "" },
+    { "id": "south-africa-mbokazi",    "name": "Mbekezeli Mbokazi",    "shirt": 14, "position": "DF", "dob": "2005-09-19", "age": 20, "caps": 10,  "goals": 1,  "clubId": "chicago-fire",      "captain": false, "bio": "" },
+    { "id": "south-africa-rayners",    "name": "Iqraam Rayners",       "shirt": 15, "position": "FW", "dob": "1995-12-19", "age": 30, "caps": 14,  "goals": 4,  "clubId": "mamelodi-sundowns", "captain": false, "bio": "" },
+    { "id": "south-africa-chaine",     "name": "Sipho Chaine",         "shirt": 16, "position": "GK", "dob": "1996-12-14", "age": 29, "caps": 4,   "goals": 0,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-makgopa",    "name": "Evidence Makgopa",     "shirt": 17, "position": "FW", "dob": "2000-06-05", "age": 26, "caps": 26,  "goals": 6,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-kabini",     "name": "Samukele Kabini",      "shirt": 18, "position": "DF", "dob": "2004-03-15", "age": 22, "caps": 6,   "goals": 0,  "clubId": "molde",             "captain": false, "bio": "" },
+    { "id": "south-africa-sibisi",     "name": "Nkosinathi Sibisi",    "shirt": 19, "position": "DF", "dob": "1995-09-22", "age": 30, "caps": 20,  "goals": 0,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-mudau",      "name": "Khuliso Mudau",        "shirt": 20, "position": "DF", "dob": "1995-04-26", "age": 31, "caps": 32,  "goals": 1,  "clubId": "mamelodi-sundowns", "captain": false, "bio": "" },
+    { "id": "south-africa-okon",       "name": "Ime Okon",             "shirt": 21, "position": "DF", "dob": "2004-02-20", "age": 22, "caps": 8,   "goals": 1,  "clubId": "hannover-96",       "captain": false, "bio": "" },
+    { "id": "south-africa-goss",       "name": "Ricardo Goss",         "shirt": 22, "position": "GK", "dob": "1994-04-02", "age": 32, "caps": 5,   "goals": 0,  "clubId": "siwelele",          "captain": false, "bio": "" },
+    { "id": "south-africa-adams",      "name": "Jayden Adams",         "shirt": 23, "position": "MF", "dob": "2001-05-05", "age": 25, "caps": 5,   "goals": 0,  "clubId": "mamelodi-sundowns", "captain": false, "bio": "" },
+    { "id": "south-africa-makhanya",   "name": "Olwethu Makhanya",     "shirt": 24, "position": "DF", "dob": "2004-04-30", "age": 22, "caps": 1,   "goals": 0,  "clubId": "philadelphia-union", "captain": false, "bio": "" },
+    { "id": "south-africa-sebelebele", "name": "Kamogelo Sebelebele",  "shirt": 25, "position": "FW", "dob": "2002-07-21", "age": 23, "caps": 3,   "goals": 0,  "clubId": "orlando-pirates",   "captain": false, "bio": "" },
+    { "id": "south-africa-cross",      "name": "Bradley Cross",        "shirt": 26, "position": "DF", "dob": "2001-01-30", "age": 25, "caps": 1,   "goals": 0,  "clubId": "kaizer-chiefs",     "captain": false, "bio": "" }
+  ]
+}

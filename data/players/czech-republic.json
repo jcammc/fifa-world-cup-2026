@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "czech-republic-kovar",      "name": "Matěj Kovář",         "shirt": 1,  "position": "GK", "dob": "2000-05-17", "age": 26, "caps": 20,  "goals": 0,  "clubId": "psv-eindhoven",   "captain": false, "bio": "" },
+    { "id": "czech-republic-zima",       "name": "David Zima",          "shirt": 2,  "position": "DF", "dob": "2000-11-08", "age": 25, "caps": 25,  "goals": 1,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-holes",      "name": "Tomáš Holeš",         "shirt": 3,  "position": "DF", "dob": "1993-03-31", "age": 33, "caps": 41,  "goals": 2,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-hranac",     "name": "Robin Hranáč",        "shirt": 4,  "position": "DF", "dob": "2000-01-29", "age": 26, "caps": 14,  "goals": 1,  "clubId": "tsg-hoffenheim",  "captain": false, "bio": "" },
+    { "id": "czech-republic-coufal",     "name": "Vladimír Coufal",     "shirt": 5,  "position": "DF", "dob": "1992-08-22", "age": 33, "caps": 62,  "goals": 2,  "clubId": "tsg-hoffenheim",  "captain": false, "bio": "" },
+    { "id": "czech-republic-chaloupek",  "name": "Štěpán Chaloupek",    "shirt": 6,  "position": "DF", "dob": "2003-03-08", "age": 23, "caps": 5,   "goals": 0,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-krejci",     "name": "Ladislav Krejčí",     "shirt": 7,  "position": "DF", "dob": "1999-04-20", "age": 27, "caps": 27,  "goals": 5,  "clubId": "wolverhampton",   "captain": false, "bio": "" },
+    { "id": "czech-republic-darida",     "name": "Vladimír Darida",     "shirt": 8,  "position": "MF", "dob": "1990-08-08", "age": 35, "caps": 79,  "goals": 8,  "clubId": "hradec-kralove",  "captain": false, "bio": "" },
+    { "id": "czech-republic-hlozek",     "name": "Adam Hložek",         "shirt": 9,  "position": "FW", "dob": "2002-07-25", "age": 23, "caps": 43,  "goals": 5,  "clubId": "tsg-hoffenheim",  "captain": false, "bio": "" },
+    { "id": "czech-republic-schick",     "name": "Patrik Schick",       "shirt": 10, "position": "FW", "dob": "1996-01-24", "age": 30, "caps": 53,  "goals": 26, "clubId": "bayer-leverkusen","captain": true,  "bio": "" },
+    { "id": "czech-republic-kuchta",     "name": "Jan Kuchta",          "shirt": 11, "position": "FW", "dob": "1997-01-08", "age": 29, "caps": 31,  "goals": 3,  "clubId": "sparta-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-cerv",       "name": "Lukáš Červ",          "shirt": 12, "position": "MF", "dob": "2001-04-10", "age": 25, "caps": 17,  "goals": 2,  "clubId": "viktoria-plzen",  "captain": false, "bio": "" },
+    { "id": "czech-republic-chytil",     "name": "Mojmír Chytil",       "shirt": 13, "position": "FW", "dob": "1999-04-29", "age": 27, "caps": 22,  "goals": 6,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-jurasek",    "name": "David Jurásek",       "shirt": 14, "position": "DF", "dob": "2000-08-07", "age": 25, "caps": 18,  "goals": 1,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-sulc",       "name": "Pavel Šulc",          "shirt": 15, "position": "FW", "dob": "2000-12-29", "age": 25, "caps": 21,  "goals": 5,  "clubId": "lyon",            "captain": false, "bio": "" },
+    { "id": "czech-republic-stanek",     "name": "Jindřich Staněk",     "shirt": 16, "position": "GK", "dob": "1996-04-27", "age": 30, "caps": 14,  "goals": 0,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-provod",     "name": "Lukáš Provod",        "shirt": 17, "position": "MF", "dob": "1996-10-23", "age": 29, "caps": 38,  "goals": 3,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-sadilek",    "name": "Michal Sadílek",      "shirt": 18, "position": "MF", "dob": "1999-05-31", "age": 26, "caps": 35,  "goals": 1,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-chory",      "name": "Tomáš Chorý",         "shirt": 19, "position": "FW", "dob": "1995-01-26", "age": 31, "caps": 22,  "goals": 7,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-zeleny",     "name": "Jaroslav Zelený",     "shirt": 20, "position": "DF", "dob": "1992-08-20", "age": 33, "caps": 23,  "goals": 0,  "clubId": "sparta-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-doudera",    "name": "David Douděra",       "shirt": 21, "position": "DF", "dob": "1998-05-31", "age": 27, "caps": 17,  "goals": 2,  "clubId": "slavia-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-soucek",     "name": "Tomáš Souček",        "shirt": 22, "position": "MF", "dob": "1995-02-27", "age": 31, "caps": 90,  "goals": 17, "clubId": "west-ham",        "captain": false, "bio": "" },
+    { "id": "czech-republic-hornicek",   "name": "Lukáš Horníček",      "shirt": 23, "position": "GK", "dob": "2002-07-13", "age": 23, "caps": 1,   "goals": 0,  "clubId": "braga",           "captain": false, "bio": "" },
+    { "id": "czech-republic-sojka",      "name": "Alexandr Sojka",      "shirt": 24, "position": "MF", "dob": "2003-04-02", "age": 23, "caps": 2,   "goals": 0,  "clubId": "viktoria-plzen",  "captain": false, "bio": "" },
+    { "id": "czech-republic-sochurek",   "name": "Hugo Sochůrek",       "shirt": 25, "position": "MF", "dob": "2008-06-07", "age": 18, "caps": 1,   "goals": 0,  "clubId": "sparta-prague",   "captain": false, "bio": "" },
+    { "id": "czech-republic-visinsky",   "name": "Denis Višinský",      "shirt": 26, "position": "FW", "dob": "2003-03-21", "age": 23, "caps": 2,   "goals": 1,  "clubId": "viktoria-plzen",  "captain": false, "bio": "" }
+  ]
+}

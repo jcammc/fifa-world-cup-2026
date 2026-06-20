@@ -1,405 +1,3800 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-20T00:00:00Z",
+  "lastUpdated": "2026-06-20T18:26:16Z",
   "data": [
-    { "type": "team", "id": "mexico",             "label": "Mexico",                 "meta": "Group A · CONCACAF", "href": "#mexico" },
-    { "type": "team", "id": "south-korea",        "label": "South Korea",            "meta": "Group A · AFC",      "href": "#south-korea" },
-    { "type": "team", "id": "south-africa",       "label": "South Africa",           "meta": "Group A · CAF",      "href": "#south-africa" },
-    { "type": "team", "id": "czech-republic",     "label": "Czechia",                "meta": "Group A · UEFA",     "href": "#czech-republic" },
-    { "type": "team", "id": "canada",             "label": "Canada",                 "meta": "Group B · CONCACAF", "href": "#canada" },
-    { "type": "team", "id": "bosnia-herzegovina", "label": "Bosnia and Herzegovina", "meta": "Group B · UEFA",     "href": "#bosnia-herzegovina" },
-    { "type": "team", "id": "qatar",              "label": "Qatar",                  "meta": "Group B · AFC",      "href": "#qatar" },
-    { "type": "team", "id": "switzerland",        "label": "Switzerland",            "meta": "Group B · UEFA",     "href": "#switzerland" },
-    { "type": "team", "id": "brazil",             "label": "Brazil",                 "meta": "Group C · CONMEBOL", "href": "#brazil" },
-    { "type": "team", "id": "morocco",            "label": "Morocco",                "meta": "Group C · CAF",      "href": "#morocco" },
-    { "type": "team", "id": "haiti",              "label": "Haiti",                  "meta": "Group C · CONCACAF", "href": "#haiti" },
-    { "type": "team", "id": "scotland",           "label": "Scotland",               "meta": "Group C · UEFA",     "href": "#scotland" },
-    { "type": "team", "id": "usa",                "label": "United States",          "meta": "Group D · CONCACAF", "href": "#usa" },
-    { "type": "team", "id": "paraguay",           "label": "Paraguay",               "meta": "Group D · CONMEBOL", "href": "#paraguay" },
-    { "type": "team", "id": "australia",          "label": "Australia",              "meta": "Group D · AFC",      "href": "#australia" },
-    { "type": "team", "id": "turkey",             "label": "Turkey",                 "meta": "Group D · UEFA",     "href": "#turkey" },
-    { "type": "team", "id": "germany",            "label": "Germany",                "meta": "Group E · UEFA",     "href": "#germany" },
-    { "type": "team", "id": "curacao",            "label": "Curaçao",                "meta": "Group E · CONCACAF", "href": "#curacao" },
-    { "type": "team", "id": "ivory-coast",        "label": "Ivory Coast",            "meta": "Group E · CAF",      "href": "#ivory-coast" },
-    { "type": "team", "id": "ecuador",            "label": "Ecuador",                "meta": "Group E · CONMEBOL", "href": "#ecuador" },
-    { "type": "team", "id": "netherlands",        "label": "Netherlands",            "meta": "Group F · UEFA",     "href": "#netherlands" },
-    { "type": "team", "id": "japan",              "label": "Japan",                  "meta": "Group F · AFC",      "href": "#japan" },
-    { "type": "team", "id": "sweden",             "label": "Sweden",                 "meta": "Group F · UEFA",     "href": "#sweden" },
-    { "type": "team", "id": "tunisia",            "label": "Tunisia",                "meta": "Group F · CAF",      "href": "#tunisia" },
-    { "type": "team", "id": "belgium",            "label": "Belgium",                "meta": "Group G · UEFA",     "href": "#belgium" },
-    { "type": "team", "id": "egypt",              "label": "Egypt",                  "meta": "Group G · CAF",      "href": "#egypt" },
-    { "type": "team", "id": "iran",               "label": "Iran",                   "meta": "Group G · AFC",      "href": "#iran" },
-    { "type": "team", "id": "new-zealand",        "label": "New Zealand",            "meta": "Group G · OFC",      "href": "#new-zealand" },
-    { "type": "team", "id": "spain",              "label": "Spain",                  "meta": "Group H · UEFA",     "href": "#spain" },
-    { "type": "team", "id": "cape-verde",         "label": "Cape Verde",             "meta": "Group H · CAF",      "href": "#cape-verde" },
-    { "type": "team", "id": "saudi-arabia",       "label": "Saudi Arabia",           "meta": "Group H · AFC",      "href": "#saudi-arabia" },
-    { "type": "team", "id": "uruguay",            "label": "Uruguay",                "meta": "Group H · CONMEBOL", "href": "#uruguay" },
-    { "type": "team", "id": "france",             "label": "France",                 "meta": "Group I · UEFA",     "href": "#france" },
-    { "type": "team", "id": "senegal",            "label": "Senegal",                "meta": "Group I · CAF",      "href": "#senegal" },
-    { "type": "team", "id": "iraq",               "label": "Iraq",                   "meta": "Group I · AFC",      "href": "#iraq" },
-    { "type": "team", "id": "norway",             "label": "Norway",                 "meta": "Group I · UEFA",     "href": "#norway" },
-    { "type": "team", "id": "argentina",          "label": "Argentina",              "meta": "Group J · CONMEBOL", "href": "#argentina" },
-    { "type": "team", "id": "algeria",            "label": "Algeria",                "meta": "Group J · CAF",      "href": "#algeria" },
-    { "type": "team", "id": "austria",            "label": "Austria",                "meta": "Group J · UEFA",     "href": "#austria" },
-    { "type": "team", "id": "jordan",             "label": "Jordan",                 "meta": "Group J · AFC",      "href": "#jordan" },
-    { "type": "team", "id": "portugal",           "label": "Portugal",               "meta": "Group K · UEFA",     "href": "#portugal" },
-    { "type": "team", "id": "dr-congo",           "label": "DR Congo",               "meta": "Group K · CAF",      "href": "#dr-congo" },
-    { "type": "team", "id": "uzbekistan",         "label": "Uzbekistan",             "meta": "Group K · AFC",      "href": "#uzbekistan" },
-    { "type": "team", "id": "colombia",           "label": "Colombia",               "meta": "Group K · CONMEBOL", "href": "#colombia" },
-    { "type": "team", "id": "england",            "label": "England",                "meta": "Group L · UEFA",     "href": "#england" },
-    { "type": "team", "id": "croatia",            "label": "Croatia",                "meta": "Group L · UEFA",     "href": "#croatia" },
-    { "type": "team", "id": "ghana",              "label": "Ghana",                  "meta": "Group L · CAF",      "href": "#ghana" },
-    { "type": "team", "id": "panama",             "label": "Panama",                 "meta": "Group L · CONCACAF", "href": "#panama" },
-
-    { "type": "player", "id": "france-samba",           "label": "Brice Samba",          "meta": "France · GK · Stade Rennais",        "href": "#france-samba" },
-    { "type": "player", "id": "france-gusto",           "label": "Malo Gusto",           "meta": "France · DF · Chelsea",              "href": "#france-gusto" },
-    { "type": "player", "id": "france-digne",           "label": "Lucas Digne",          "meta": "France · DF · Aston Villa",          "href": "#france-digne" },
-    { "type": "player", "id": "france-upamecano",       "label": "Dayot Upamecano",      "meta": "France · DF · Bayern Munich",        "href": "#france-upamecano" },
-    { "type": "player", "id": "france-kounde",          "label": "Jules Koundé",         "meta": "France · DF · FC Barcelona",         "href": "#france-kounde" },
-    { "type": "player", "id": "france-kone",            "label": "Manu Koné",            "meta": "France · MF · AS Roma",              "href": "#france-kone" },
-    { "type": "player", "id": "france-dembele",         "label": "Ousmane Dembélé",      "meta": "France · FW · Paris Saint-Germain",  "href": "#france-dembele" },
-    { "type": "player", "id": "france-tchouameni",      "label": "Aurélien Tchouaméni",  "meta": "France · MF · Real Madrid",          "href": "#france-tchouameni" },
-    { "type": "player", "id": "france-thuram",          "label": "Marcus Thuram",        "meta": "France · FW · Inter Milan",          "href": "#france-thuram" },
-    { "type": "player", "id": "france-mbappe",          "label": "Kylian Mbappé",        "meta": "France · FW · Real Madrid",          "href": "#france-mbappe" },
-    { "type": "player", "id": "france-olise",           "label": "Michael Olise",        "meta": "France · FW · Bayern Munich",        "href": "#france-olise" },
-    { "type": "player", "id": "france-barcola",         "label": "Bradley Barcola",      "meta": "France · FW · Paris Saint-Germain",  "href": "#france-barcola" },
-    { "type": "player", "id": "france-kante",           "label": "N'Golo Kanté",         "meta": "France · MF · Fenerbahçe",           "href": "#france-kante" },
-    { "type": "player", "id": "france-rabiot",          "label": "Adrien Rabiot",        "meta": "France · MF · AC Milan",             "href": "#france-rabiot" },
-    { "type": "player", "id": "france-konate",          "label": "Ibrahima Konaté",      "meta": "France · DF · Liverpool",            "href": "#france-konate" },
-    { "type": "player", "id": "france-maignan",         "label": "Mike Maignan",         "meta": "France · GK · AC Milan",             "href": "#france-maignan" },
-    { "type": "player", "id": "france-saliba",          "label": "William Saliba",       "meta": "France · DF · Arsenal",              "href": "#france-saliba" },
-    { "type": "player", "id": "france-zaire-emery",     "label": "Warren Zaïre-Emery",   "meta": "France · MF · Paris Saint-Germain",  "href": "#france-zaire-emery" },
-    { "type": "player", "id": "france-theo-hernandez",  "label": "Théo Hernández",       "meta": "France · DF · Al-Hilal",             "href": "#france-theo-hernandez" },
-    { "type": "player", "id": "france-doue",            "label": "Désiré Doué",          "meta": "France · FW · Paris Saint-Germain",  "href": "#france-doue" },
-    { "type": "player", "id": "france-lucas-hernandez", "label": "Lucas Hernández",      "meta": "France · DF · Paris Saint-Germain",  "href": "#france-lucas-hernandez" },
-    { "type": "player", "id": "france-mateta",          "label": "Jean-Philippe Mateta", "meta": "France · FW · Crystal Palace",       "href": "#france-mateta" },
-    { "type": "player", "id": "france-risser",          "label": "Robin Risser",         "meta": "France · GK · RC Lens",              "href": "#france-risser" },
-    { "type": "player", "id": "france-cherki",          "label": "Rayan Cherki",         "meta": "France · MF · Manchester City",      "href": "#france-cherki" },
-    { "type": "player", "id": "france-akliouche",       "label": "Maghnes Akliouche",    "meta": "France · MF · AS Monaco",            "href": "#france-akliouche" },
-    { "type": "player", "id": "france-lacroix",         "label": "Maxence Lacroix",      "meta": "France · DF · Crystal Palace",       "href": "#france-lacroix" },
-
-    { "type": "player", "id": "england-pickford",         "label": "Jordan Pickford",   "meta": "England · GK · Everton",             "href": "#england-pickford" },
-    { "type": "player", "id": "england-konsa",            "label": "Ezri Konsa",        "meta": "England · DF · Aston Villa",         "href": "#england-konsa" },
-    { "type": "player", "id": "england-oreilly",          "label": "Nico O'Reilly",     "meta": "England · DF · Manchester City",     "href": "#england-oreilly" },
-    { "type": "player", "id": "england-rice",             "label": "Declan Rice",       "meta": "England · MF · Arsenal",             "href": "#england-rice" },
-    { "type": "player", "id": "england-stones",           "label": "John Stones",       "meta": "England · DF · Manchester City",     "href": "#england-stones" },
-    { "type": "player", "id": "england-guehi",            "label": "Marc Guéhi",        "meta": "England · DF · Manchester City",     "href": "#england-guehi" },
-    { "type": "player", "id": "england-saka",             "label": "Bukayo Saka",       "meta": "England · FW · Arsenal",             "href": "#england-saka" },
-    { "type": "player", "id": "england-anderson",         "label": "Elliot Anderson",   "meta": "England · MF · Nottingham Forest",   "href": "#england-anderson" },
-    { "type": "player", "id": "england-kane",             "label": "Harry Kane",        "meta": "England · FW · Bayern Munich",       "href": "#england-kane" },
-    { "type": "player", "id": "england-bellingham",       "label": "Jude Bellingham",   "meta": "England · MF · Real Madrid",         "href": "#england-bellingham" },
-    { "type": "player", "id": "england-rashford",         "label": "Marcus Rashford",   "meta": "England · FW · FC Barcelona",        "href": "#england-rashford" },
-    { "type": "player", "id": "england-chalobah",         "label": "Trevoh Chalobah",   "meta": "England · DF · Chelsea",             "href": "#england-chalobah" },
-    { "type": "player", "id": "england-dean-henderson",   "label": "Dean Henderson",    "meta": "England · GK · Crystal Palace",      "href": "#england-dean-henderson" },
-    { "type": "player", "id": "england-jordan-henderson", "label": "Jordan Henderson",  "meta": "England · MF · Brentford",           "href": "#england-jordan-henderson" },
-    { "type": "player", "id": "england-burn",             "label": "Dan Burn",          "meta": "England · DF · Newcastle United",    "href": "#england-burn" },
-    { "type": "player", "id": "england-mainoo",           "label": "Kobbie Mainoo",     "meta": "England · MF · Manchester United",   "href": "#england-mainoo" },
-    { "type": "player", "id": "england-rogers",           "label": "Morgan Rogers",     "meta": "England · MF · Aston Villa",         "href": "#england-rogers" },
-    { "type": "player", "id": "england-gordon",           "label": "Anthony Gordon",    "meta": "England · FW · Newcastle United",    "href": "#england-gordon" },
-    { "type": "player", "id": "england-watkins",          "label": "Ollie Watkins",     "meta": "England · FW · Aston Villa",         "href": "#england-watkins" },
-    { "type": "player", "id": "england-madueke",          "label": "Noni Madueke",      "meta": "England · FW · Arsenal",             "href": "#england-madueke" },
-    { "type": "player", "id": "england-eze",              "label": "Eberechi Eze",      "meta": "England · MF · Arsenal",             "href": "#england-eze" },
-    { "type": "player", "id": "england-toney",            "label": "Ivan Toney",        "meta": "England · FW · Al-Ahli",             "href": "#england-toney" },
-    { "type": "player", "id": "england-trafford",         "label": "James Trafford",    "meta": "England · GK · Manchester City",     "href": "#england-trafford" },
-    { "type": "player", "id": "england-reece-james",      "label": "Reece James",       "meta": "England · DF · Chelsea",             "href": "#england-reece-james" },
-    { "type": "player", "id": "england-spence",           "label": "Djed Spence",       "meta": "England · DF · Tottenham Hotspur",   "href": "#england-spence" },
-    { "type": "player", "id": "england-quansah",          "label": "Jarell Quansah",    "meta": "England · DF · Bayer Leverkusen",    "href": "#england-quansah" },
-
-    { "type": "player", "id": "brazil-alisson",           "label": "Alisson",            "meta": "Brazil · GK · Liverpool",              "href": "#brazil-alisson" },
-    { "type": "player", "id": "brazil-ederson-silva",     "label": "Éderson Silva",      "meta": "Brazil · MF · Atalanta",               "href": "#brazil-ederson-silva" },
-    { "type": "player", "id": "brazil-gabriel-magalhaes", "label": "Gabriel Magalhães",  "meta": "Brazil · DF · Arsenal",                "href": "#brazil-gabriel-magalhaes" },
-    { "type": "player", "id": "brazil-marquinhos",        "label": "Marquinhos",         "meta": "Brazil · DF · Paris Saint-Germain",     "href": "#brazil-marquinhos" },
-    { "type": "player", "id": "brazil-casemiro",          "label": "Casemiro",           "meta": "Brazil · MF · Manchester United",       "href": "#brazil-casemiro" },
-    { "type": "player", "id": "brazil-alex-sandro",       "label": "Alex Sandro",        "meta": "Brazil · DF · Flamengo",                "href": "#brazil-alex-sandro" },
-    { "type": "player", "id": "brazil-vinicius-junior",   "label": "Vinícius Júnior",    "meta": "Brazil · FW · Real Madrid",             "href": "#brazil-vinicius-junior" },
-    { "type": "player", "id": "brazil-bruno-guimaraes",   "label": "Bruno Guimarães",    "meta": "Brazil · MF · Newcastle United",        "href": "#brazil-bruno-guimaraes" },
-    { "type": "player", "id": "brazil-matheus-cunha",     "label": "Matheus Cunha",      "meta": "Brazil · FW · Manchester United",       "href": "#brazil-matheus-cunha" },
-    { "type": "player", "id": "brazil-neymar",            "label": "Neymar",             "meta": "Brazil · FW · Santos",                  "href": "#brazil-neymar" },
-    { "type": "player", "id": "brazil-raphinha",          "label": "Raphinha",           "meta": "Brazil · FW · FC Barcelona",            "href": "#brazil-raphinha" },
-    { "type": "player", "id": "brazil-weverton",          "label": "Weverton",           "meta": "Brazil · GK · Grêmio",                  "href": "#brazil-weverton" },
-    { "type": "player", "id": "brazil-danilo-luiz",       "label": "Danilo",             "meta": "Brazil · DF · Flamengo",                "href": "#brazil-danilo-luiz" },
-    { "type": "player", "id": "brazil-bremer",            "label": "Bremer",             "meta": "Brazil · DF · Juventus",                "href": "#brazil-bremer" },
-    { "type": "player", "id": "brazil-leo-pereira",       "label": "Léo Pereira",        "meta": "Brazil · DF · Flamengo",                "href": "#brazil-leo-pereira" },
-    { "type": "player", "id": "brazil-douglas-santos",    "label": "Douglas Santos",     "meta": "Brazil · DF · Zenit Saint Petersburg",  "href": "#brazil-douglas-santos" },
-    { "type": "player", "id": "brazil-fabinho",           "label": "Fabinho",            "meta": "Brazil · MF · Al-Ittihad",              "href": "#brazil-fabinho" },
-    { "type": "player", "id": "brazil-danilo-santos",     "label": "Danilo Santos",      "meta": "Brazil · MF · Botafogo",                "href": "#brazil-danilo-santos" },
-    { "type": "player", "id": "brazil-endrick",           "label": "Endrick",            "meta": "Brazil · FW · Olympique Lyonnais",      "href": "#brazil-endrick" },
-    { "type": "player", "id": "brazil-paqueta",           "label": "Lucas Paquetá",      "meta": "Brazil · MF · Flamengo",                "href": "#brazil-paqueta" },
-    { "type": "player", "id": "brazil-luiz-henrique",     "label": "Luiz Henrique",      "meta": "Brazil · FW · Zenit Saint Petersburg",  "href": "#brazil-luiz-henrique" },
-    { "type": "player", "id": "brazil-martinelli",        "label": "Gabriel Martinelli", "meta": "Brazil · FW · Arsenal",                "href": "#brazil-martinelli" },
-    { "type": "player", "id": "brazil-ederson-moraes",    "label": "Ederson",            "meta": "Brazil · GK · Fenerbahçe",              "href": "#brazil-ederson-moraes" },
-    { "type": "player", "id": "brazil-roger-ibanez",      "label": "Roger Ibáñez",       "meta": "Brazil · DF · Al-Ahli",                 "href": "#brazil-roger-ibanez" },
-    { "type": "player", "id": "brazil-igor-thiago",       "label": "Igor Thiago",        "meta": "Brazil · FW · Brentford",               "href": "#brazil-igor-thiago" },
-    { "type": "player", "id": "brazil-rayan",             "label": "Rayan",              "meta": "Brazil · FW · AFC Bournemouth",          "href": "#brazil-rayan" },
-
-    { "type": "player", "id": "germany-neuer",         "label": "Manuel Neuer",        "meta": "Germany · GK · Bayern Munich",          "href": "#germany-neuer" },
-    { "type": "player", "id": "germany-rudiger",       "label": "Antonio Rüdiger",     "meta": "Germany · DF · Real Madrid",            "href": "#germany-rudiger" },
-    { "type": "player", "id": "germany-anton",         "label": "Waldemar Anton",      "meta": "Germany · DF · Borussia Dortmund",      "href": "#germany-anton" },
-    { "type": "player", "id": "germany-tah",           "label": "Jonathan Tah",        "meta": "Germany · DF · Bayern Munich",          "href": "#germany-tah" },
-    { "type": "player", "id": "germany-pavlovic",      "label": "Aleksandar Pavlović", "meta": "Germany · MF · Bayern Munich",          "href": "#germany-pavlovic" },
-    { "type": "player", "id": "germany-kimmich",       "label": "Joshua Kimmich",      "meta": "Germany · DF · Bayern Munich",          "href": "#germany-kimmich" },
-    { "type": "player", "id": "germany-havertz",       "label": "Kai Havertz",         "meta": "Germany · FW · Arsenal",                "href": "#germany-havertz" },
-    { "type": "player", "id": "germany-goretzka",      "label": "Leon Goretzka",       "meta": "Germany · MF · Bayern Munich",          "href": "#germany-goretzka" },
-    { "type": "player", "id": "germany-leweling",      "label": "Jamie Leweling",      "meta": "Germany · MF · VfB Stuttgart",          "href": "#germany-leweling" },
-    { "type": "player", "id": "germany-musiala",       "label": "Jamal Musiala",       "meta": "Germany · MF · Bayern Munich",          "href": "#germany-musiala" },
-    { "type": "player", "id": "germany-woltemade",     "label": "Nick Woltemade",      "meta": "Germany · FW · Newcastle United",       "href": "#germany-woltemade" },
-    { "type": "player", "id": "germany-baumann",       "label": "Oliver Baumann",      "meta": "Germany · GK · TSG Hoffenheim",         "href": "#germany-baumann" },
-    { "type": "player", "id": "germany-gross",         "label": "Pascal Groß",         "meta": "Germany · MF · Brighton & Hove Albion", "href": "#germany-gross" },
-    { "type": "player", "id": "germany-beier",         "label": "Maximilian Beier",    "meta": "Germany · FW · Borussia Dortmund",      "href": "#germany-beier" },
-    { "type": "player", "id": "germany-schlotterbeck", "label": "Nico Schlotterbeck",  "meta": "Germany · DF · Borussia Dortmund",      "href": "#germany-schlotterbeck" },
-    { "type": "player", "id": "germany-stiller",       "label": "Angelo Stiller",      "meta": "Germany · MF · VfB Stuttgart",          "href": "#germany-stiller" },
-    { "type": "player", "id": "germany-wirtz",         "label": "Florian Wirtz",       "meta": "Germany · MF · Liverpool",              "href": "#germany-wirtz" },
-    { "type": "player", "id": "germany-brown",         "label": "Nathaniel Brown",     "meta": "Germany · DF · Eintracht Frankfurt",    "href": "#germany-brown" },
-    { "type": "player", "id": "germany-sane",          "label": "Leroy Sané",          "meta": "Germany · MF · Galatasaray",            "href": "#germany-sane" },
-    { "type": "player", "id": "germany-amiri",         "label": "Nadiem Amiri",        "meta": "Germany · MF · Mainz 05",               "href": "#germany-amiri" },
-    { "type": "player", "id": "germany-nubel",         "label": "Alexander Nübel",     "meta": "Germany · GK · VfB Stuttgart",          "href": "#germany-nubel" },
-    { "type": "player", "id": "germany-raum",          "label": "David Raum",          "meta": "Germany · DF · RB Leipzig",             "href": "#germany-raum" },
-    { "type": "player", "id": "germany-nmecha",        "label": "Felix Nmecha",        "meta": "Germany · MF · Borussia Dortmund",      "href": "#germany-nmecha" },
-    { "type": "player", "id": "germany-thiaw",         "label": "Malick Thiaw",        "meta": "Germany · DF · Newcastle United",       "href": "#germany-thiaw" },
-    { "type": "player", "id": "germany-ouedraogo",     "label": "Assan Ouédraogo",     "meta": "Germany · MF · RB Leipzig",             "href": "#germany-ouedraogo" },
-    { "type": "player", "id": "germany-undav",         "label": "Deniz Undav",         "meta": "Germany · FW · VfB Stuttgart",          "href": "#germany-undav" },
-
-    { "type": "player", "id": "spain-raya",        "label": "David Raya",       "meta": "Spain · GK · Arsenal",             "href": "#spain-raya" },
-    { "type": "player", "id": "spain-pubill",      "label": "Marc Pubill",      "meta": "Spain · DF · Atlético Madrid",     "href": "#spain-pubill" },
-    { "type": "player", "id": "spain-grimaldo",    "label": "Álex Grimaldo",    "meta": "Spain · DF · Bayer Leverkusen",    "href": "#spain-grimaldo" },
-    { "type": "player", "id": "spain-eric-garcia", "label": "Eric García",      "meta": "Spain · DF · FC Barcelona",        "href": "#spain-eric-garcia" },
-    { "type": "player", "id": "spain-llorente",    "label": "Marcos Llorente",  "meta": "Spain · DF · Atlético Madrid",     "href": "#spain-llorente" },
-    { "type": "player", "id": "spain-merino",      "label": "Mikel Merino",     "meta": "Spain · MF · Arsenal",             "href": "#spain-merino" },
-    { "type": "player", "id": "spain-torres",      "label": "Ferran Torres",    "meta": "Spain · FW · FC Barcelona",        "href": "#spain-torres" },
-    { "type": "player", "id": "spain-ruiz",        "label": "Fabián Ruiz",      "meta": "Spain · MF · Paris Saint-Germain", "href": "#spain-ruiz" },
-    { "type": "player", "id": "spain-gavi",        "label": "Gavi",             "meta": "Spain · MF · FC Barcelona",        "href": "#spain-gavi" },
-    { "type": "player", "id": "spain-olmo",        "label": "Dani Olmo",        "meta": "Spain · FW · FC Barcelona",        "href": "#spain-olmo" },
-    { "type": "player", "id": "spain-pino",        "label": "Yéremy Pino",      "meta": "Spain · FW · Crystal Palace",      "href": "#spain-pino" },
-    { "type": "player", "id": "spain-porro",       "label": "Pedro Porro",      "meta": "Spain · DF · Tottenham Hotspur",   "href": "#spain-porro" },
-    { "type": "player", "id": "spain-joan-garcia", "label": "Joan Garcia",      "meta": "Spain · GK · FC Barcelona",        "href": "#spain-joan-garcia" },
-    { "type": "player", "id": "spain-laporte",     "label": "Aymeric Laporte",  "meta": "Spain · DF · Athletic Bilbao",     "href": "#spain-laporte" },
-    { "type": "player", "id": "spain-baena",       "label": "Álex Baena",       "meta": "Spain · MF · Atlético Madrid",     "href": "#spain-baena" },
-    { "type": "player", "id": "spain-rodri",       "label": "Rodri",            "meta": "Spain · MF · Manchester City",     "href": "#spain-rodri" },
-    { "type": "player", "id": "spain-williams",    "label": "Nico Williams",    "meta": "Spain · FW · Athletic Bilbao",     "href": "#spain-williams" },
-    { "type": "player", "id": "spain-zubimendi",   "label": "Martín Zubimendi", "meta": "Spain · MF · Arsenal",             "href": "#spain-zubimendi" },
-    { "type": "player", "id": "spain-yamal",       "label": "Lamine Yamal",     "meta": "Spain · FW · FC Barcelona",        "href": "#spain-yamal" },
-    { "type": "player", "id": "spain-pedri",       "label": "Pedri",            "meta": "Spain · MF · FC Barcelona",        "href": "#spain-pedri" },
-    { "type": "player", "id": "spain-oyarzabal",   "label": "Mikel Oyarzabal",  "meta": "Spain · FW · Real Sociedad",       "href": "#spain-oyarzabal" },
-    { "type": "player", "id": "spain-cubarsi",     "label": "Pau Cubarsí",      "meta": "Spain · DF · FC Barcelona",        "href": "#spain-cubarsi" },
-    { "type": "player", "id": "spain-simon",       "label": "Unai Simón",       "meta": "Spain · GK · Athletic Bilbao",     "href": "#spain-simon" },
-    { "type": "player", "id": "spain-cucurella",   "label": "Marc Cucurella",   "meta": "Spain · DF · Chelsea",             "href": "#spain-cucurella" },
-    { "type": "player", "id": "spain-munoz",       "label": "Víctor Muñoz",     "meta": "Spain · FW · Osasuna",             "href": "#spain-munoz" },
-    { "type": "player", "id": "spain-iglesias",    "label": "Borja Iglesias",   "meta": "Spain · FW · Celta Vigo",          "href": "#spain-iglesias" },
-
-    { "type": "player", "id": "argentina-musso",             "label": "Juan Musso",          "meta": "Argentina · GK · Atlético Madrid",        "href": "#argentina-musso" },
-    { "type": "player", "id": "argentina-senesi",            "label": "Marcos Senesi",       "meta": "Argentina · DF · AFC Bournemouth",         "href": "#argentina-senesi" },
-    { "type": "player", "id": "argentina-tagliafico",        "label": "Nicolás Tagliafico",  "meta": "Argentina · DF · Olympique Lyonnais",      "href": "#argentina-tagliafico" },
-    { "type": "player", "id": "argentina-montiel",           "label": "Gonzalo Montiel",     "meta": "Argentina · DF · River Plate",             "href": "#argentina-montiel" },
-    { "type": "player", "id": "argentina-paredes",           "label": "Leandro Paredes",     "meta": "Argentina · MF · Boca Juniors",            "href": "#argentina-paredes" },
-    { "type": "player", "id": "argentina-lisandro-martinez", "label": "Lisandro Martínez",   "meta": "Argentina · DF · Manchester United",       "href": "#argentina-lisandro-martinez" },
-    { "type": "player", "id": "argentina-de-paul",           "label": "Rodrigo De Paul",     "meta": "Argentina · MF · Inter Miami CF",          "href": "#argentina-de-paul" },
-    { "type": "player", "id": "argentina-barco",             "label": "Valentín Barco",      "meta": "Argentina · MF · RC Strasbourg Alsace",    "href": "#argentina-barco" },
-    { "type": "player", "id": "argentina-alvarez",           "label": "Julián Álvarez",      "meta": "Argentina · FW · Atlético Madrid",         "href": "#argentina-alvarez" },
-    { "type": "player", "id": "argentina-messi",             "label": "Lionel Messi",        "meta": "Argentina · FW · Inter Miami CF",          "href": "#argentina-messi" },
-    { "type": "player", "id": "argentina-lo-celso",          "label": "Giovani Lo Celso",    "meta": "Argentina · MF · Real Betis",              "href": "#argentina-lo-celso" },
-    { "type": "player", "id": "argentina-rulli",             "label": "Gerónimo Rulli",      "meta": "Argentina · GK · Olympique de Marseille",  "href": "#argentina-rulli" },
-    { "type": "player", "id": "argentina-romero",            "label": "Cristian Romero",     "meta": "Argentina · DF · Tottenham Hotspur",       "href": "#argentina-romero" },
-    { "type": "player", "id": "argentina-palacios",          "label": "Exequiel Palacios",   "meta": "Argentina · MF · Bayer Leverkusen",        "href": "#argentina-palacios" },
-    { "type": "player", "id": "argentina-gonzalez",          "label": "Nicolás González",    "meta": "Argentina · MF · Atlético Madrid",         "href": "#argentina-gonzalez" },
-    { "type": "player", "id": "argentina-almada",            "label": "Thiago Almada",       "meta": "Argentina · MF · Atlético Madrid",         "href": "#argentina-almada" },
-    { "type": "player", "id": "argentina-simeone",           "label": "Giuliano Simeone",    "meta": "Argentina · FW · Atlético Madrid",         "href": "#argentina-simeone" },
-    { "type": "player", "id": "argentina-paz",               "label": "Nico Paz",            "meta": "Argentina · FW · Como 1907",               "href": "#argentina-paz" },
-    { "type": "player", "id": "argentina-otamendi",          "label": "Nicolás Otamendi",    "meta": "Argentina · DF · SL Benfica",              "href": "#argentina-otamendi" },
-    { "type": "player", "id": "argentina-mac-allister",      "label": "Alexis Mac Allister", "meta": "Argentina · MF · Liverpool",               "href": "#argentina-mac-allister" },
-    { "type": "player", "id": "argentina-lopez",             "label": "José Manuel López",   "meta": "Argentina · FW · Palmeiras",               "href": "#argentina-lopez" },
-    { "type": "player", "id": "argentina-lautaro-martinez",  "label": "Lautaro Martínez",    "meta": "Argentina · FW · Inter Milan",             "href": "#argentina-lautaro-martinez" },
-    { "type": "player", "id": "argentina-emiliano-martinez", "label": "Emiliano Martínez",   "meta": "Argentina · GK · Aston Villa",             "href": "#argentina-emiliano-martinez" },
-    { "type": "player", "id": "argentina-fernandez",         "label": "Enzo Fernández",      "meta": "Argentina · MF · Chelsea",                 "href": "#argentina-fernandez" },
-    { "type": "player", "id": "argentina-medina",            "label": "Facundo Medina",      "meta": "Argentina · DF · Olympique de Marseille",  "href": "#argentina-medina" },
-    { "type": "player", "id": "argentina-molina",            "label": "Nahuel Molina",       "meta": "Argentina · DF · Atlético Madrid",         "href": "#argentina-molina" },
-
-    { "type": "player", "id": "portugal-diogo-costa",    "label": "Diogo Costa",         "meta": "Portugal · GK · FC Porto",              "href": "#portugal-diogo-costa" },
-    { "type": "player", "id": "portugal-semedo",         "label": "Nélson Semedo",       "meta": "Portugal · DF · Fenerbahçe",            "href": "#portugal-semedo" },
-    { "type": "player", "id": "portugal-dias",           "label": "Rúben Dias",          "meta": "Portugal · DF · Manchester City",       "href": "#portugal-dias" },
-    { "type": "player", "id": "portugal-araujo",         "label": "Tomás Araújo",        "meta": "Portugal · DF · SL Benfica",            "href": "#portugal-araujo" },
-    { "type": "player", "id": "portugal-dalot",          "label": "Diogo Dalot",         "meta": "Portugal · DF · Manchester United",     "href": "#portugal-dalot" },
-    { "type": "player", "id": "portugal-nunes",          "label": "Matheus Nunes",       "meta": "Portugal · MF · Manchester City",       "href": "#portugal-nunes" },
-    { "type": "player", "id": "portugal-ronaldo",        "label": "Cristiano Ronaldo",   "meta": "Portugal · FW · Al-Nassr",              "href": "#portugal-ronaldo" },
-    { "type": "player", "id": "portugal-fernandes",      "label": "Bruno Fernandes",     "meta": "Portugal · MF · Manchester United",     "href": "#portugal-fernandes" },
-    { "type": "player", "id": "portugal-ramos",          "label": "Gonçalo Ramos",       "meta": "Portugal · FW · Paris Saint-Germain",   "href": "#portugal-ramos" },
-    { "type": "player", "id": "portugal-bernardo-silva", "label": "Bernardo Silva",      "meta": "Portugal · MF · Manchester City",       "href": "#portugal-bernardo-silva" },
-    { "type": "player", "id": "portugal-felix",          "label": "João Félix",          "meta": "Portugal · FW · Al-Nassr",              "href": "#portugal-felix" },
-    { "type": "player", "id": "portugal-sa",             "label": "José Sá",             "meta": "Portugal · GK · Wolverhampton Wanderers", "href": "#portugal-sa" },
-    { "type": "player", "id": "portugal-veiga",          "label": "Renato Veiga",        "meta": "Portugal · DF · Villarreal",            "href": "#portugal-veiga" },
-    { "type": "player", "id": "portugal-inacio",         "label": "Gonçalo Inácio",      "meta": "Portugal · DF · Sporting CP",           "href": "#portugal-inacio" },
-    { "type": "player", "id": "portugal-joao-neves",     "label": "João Neves",          "meta": "Portugal · MF · Paris Saint-Germain",   "href": "#portugal-joao-neves" },
-    { "type": "player", "id": "portugal-trincao",        "label": "Francisco Trincão",   "meta": "Portugal · FW · Sporting CP",           "href": "#portugal-trincao" },
-    { "type": "player", "id": "portugal-leao",           "label": "Rafael Leão",         "meta": "Portugal · FW · AC Milan",              "href": "#portugal-leao" },
-    { "type": "player", "id": "portugal-neto",           "label": "Pedro Neto",          "meta": "Portugal · FW · Chelsea",               "href": "#portugal-neto" },
-    { "type": "player", "id": "portugal-guedes",         "label": "Gonçalo Guedes",      "meta": "Portugal · FW · Real Sociedad",         "href": "#portugal-guedes" },
-    { "type": "player", "id": "portugal-cancelo",        "label": "João Cancelo",        "meta": "Portugal · DF · FC Barcelona",          "href": "#portugal-cancelo" },
-    { "type": "player", "id": "portugal-ruben-neves",    "label": "Rúben Neves",         "meta": "Portugal · MF · Al-Hilal",              "href": "#portugal-ruben-neves" },
-    { "type": "player", "id": "portugal-rui-silva",      "label": "Rui Silva",           "meta": "Portugal · GK · Sporting CP",           "href": "#portugal-rui-silva" },
-    { "type": "player", "id": "portugal-vitinha",        "label": "Vitinha",             "meta": "Portugal · MF · Paris Saint-Germain",   "href": "#portugal-vitinha" },
-    { "type": "player", "id": "portugal-samu-costa",     "label": "Samú Costa",          "meta": "Portugal · DF · RCD Mallorca",          "href": "#portugal-samu-costa" },
-    { "type": "player", "id": "portugal-mendes",         "label": "Nuno Mendes",         "meta": "Portugal · DF · Paris Saint-Germain",   "href": "#portugal-mendes" },
-    { "type": "player", "id": "portugal-conceicao",      "label": "Francisco Conceição", "meta": "Portugal · FW · Juventus",              "href": "#portugal-conceicao" },
-
-    { "type": "player", "id": "netherlands-verbruggen",  "label": "Bart Verbruggen",       "meta": "Netherlands · GK · Brighton & Hove Albion",  "href": "#netherlands-verbruggen" },
-    { "type": "player", "id": "netherlands-geertruida",  "label": "Lutsharel Geertruida",  "meta": "Netherlands · DF · Sunderland",              "href": "#netherlands-geertruida" },
-    { "type": "player", "id": "netherlands-de-roon",     "label": "Marten de Roon",        "meta": "Netherlands · MF · Atalanta",                "href": "#netherlands-de-roon" },
-    { "type": "player", "id": "netherlands-van-dijk",    "label": "Virgil van Dijk",       "meta": "Netherlands · DF · Liverpool",               "href": "#netherlands-van-dijk" },
-    { "type": "player", "id": "netherlands-ake",         "label": "Nathan Aké",            "meta": "Netherlands · DF · Manchester City",         "href": "#netherlands-ake" },
-    { "type": "player", "id": "netherlands-van-hecke",   "label": "Jan Paul van Hecke",    "meta": "Netherlands · DF · Brighton & Hove Albion",  "href": "#netherlands-van-hecke" },
-    { "type": "player", "id": "netherlands-kluivert",    "label": "Justin Kluivert",       "meta": "Netherlands · MF · AFC Bournemouth",         "href": "#netherlands-kluivert" },
-    { "type": "player", "id": "netherlands-gravenberch", "label": "Ryan Gravenberch",      "meta": "Netherlands · MF · Liverpool",               "href": "#netherlands-gravenberch" },
-    { "type": "player", "id": "netherlands-weghorst",    "label": "Wout Weghorst",         "meta": "Netherlands · FW · AFC Ajax",                "href": "#netherlands-weghorst" },
-    { "type": "player", "id": "netherlands-memphis",     "label": "Memphis Depay",         "meta": "Netherlands · FW · Corinthians",             "href": "#netherlands-memphis" },
-    { "type": "player", "id": "netherlands-gakpo",       "label": "Cody Gakpo",            "meta": "Netherlands · FW · Liverpool",               "href": "#netherlands-gakpo" },
-    { "type": "player", "id": "netherlands-wieffer",     "label": "Mats Wieffer",          "meta": "Netherlands · DF · Brighton & Hove Albion",  "href": "#netherlands-wieffer" },
-    { "type": "player", "id": "netherlands-roefs",       "label": "Robin Roefs",           "meta": "Netherlands · GK · Sunderland",              "href": "#netherlands-roefs" },
-    { "type": "player", "id": "netherlands-reijnders",   "label": "Tijjani Reijnders",     "meta": "Netherlands · MF · Manchester City",         "href": "#netherlands-reijnders" },
-    { "type": "player", "id": "netherlands-van-de-ven",  "label": "Micky van de Ven",      "meta": "Netherlands · DF · Tottenham Hotspur",       "href": "#netherlands-van-de-ven" },
-    { "type": "player", "id": "netherlands-til",         "label": "Guus Til",              "meta": "Netherlands · MF · PSV Eindhoven",           "href": "#netherlands-til" },
-    { "type": "player", "id": "netherlands-lang",        "label": "Noa Lang",              "meta": "Netherlands · FW · Galatasaray",             "href": "#netherlands-lang" },
-    { "type": "player", "id": "netherlands-malen",       "label": "Donyell Malen",         "meta": "Netherlands · FW · AS Roma",                 "href": "#netherlands-malen" },
-    { "type": "player", "id": "netherlands-brobbey",     "label": "Brian Brobbey",         "meta": "Netherlands · FW · Sunderland",              "href": "#netherlands-brobbey" },
-    { "type": "player", "id": "netherlands-koopmeiners", "label": "Teun Koopmeiners",      "meta": "Netherlands · MF · Juventus",                "href": "#netherlands-koopmeiners" },
-    { "type": "player", "id": "netherlands-de-jong",     "label": "Frenkie de Jong",       "meta": "Netherlands · MF · FC Barcelona",            "href": "#netherlands-de-jong" },
-    { "type": "player", "id": "netherlands-dumfries",    "label": "Denzel Dumfries",       "meta": "Netherlands · DF · Inter Milan",             "href": "#netherlands-dumfries" },
-    { "type": "player", "id": "netherlands-flekken",     "label": "Mark Flekken",          "meta": "Netherlands · GK · Bayer Leverkusen",        "href": "#netherlands-flekken" },
-    { "type": "player", "id": "netherlands-summerville", "label": "Crysencio Summerville", "meta": "Netherlands · FW · West Ham United",         "href": "#netherlands-summerville" },
-    { "type": "player", "id": "netherlands-hato",        "label": "Jorrel Hato",           "meta": "Netherlands · DF · Chelsea",                 "href": "#netherlands-hato" },
-    { "type": "player", "id": "netherlands-timber",      "label": "Quinten Timber",        "meta": "Netherlands · MF · Olympique de Marseille",  "href": "#netherlands-timber" },
-
-    { "type": "player", "id": "norway-nyland",        "label": "Ørjan Nyland",            "meta": "Norway · GK · Brentford",                     "href": "#norway-nyland" },
-    { "type": "player", "id": "norway-sels",          "label": "Matz Sels",               "meta": "Norway · GK · Nottingham Forest",             "href": "#norway-sels" },
-    { "type": "player", "id": "norway-klaesson",      "label": "Kristoffer Klaesson",     "meta": "Norway · GK · FK Bodø/Glimt",                 "href": "#norway-klaesson" },
-    { "type": "player", "id": "norway-ajer",          "label": "Kristoffer Ajer",         "meta": "Norway · DF · Brentford",                     "href": "#norway-ajer" },
-    { "type": "player", "id": "norway-ostigard",      "label": "Leo Østigård",            "meta": "Norway · DF · SSC Napoli",                    "href": "#norway-ostigard" },
-    { "type": "player", "id": "norway-ryerson",       "label": "Julian Ryerson",          "meta": "Norway · DF · Borussia Dortmund",             "href": "#norway-ryerson" },
-    { "type": "player", "id": "norway-pedersen-m",    "label": "Marcus Holmgren Pedersen","meta": "Norway · DF · Feyenoord",                     "href": "#norway-pedersen-m" },
-    { "type": "player", "id": "norway-hanche-olsen",  "label": "Andreas Hanche-Olsen",   "meta": "Norway · DF · KRC Genk",                      "href": "#norway-hanche-olsen" },
-    { "type": "player", "id": "norway-meling",        "label": "Birger Meling",           "meta": "Norway · DF · OGC Nice",                      "href": "#norway-meling" },
-    { "type": "player", "id": "norway-strandberg",    "label": "Stefan Strandberg",       "meta": "Norway · DF · Vålerenga FK",                  "href": "#norway-strandberg" },
-    { "type": "player", "id": "norway-gregersen",     "label": "Stian Gregersen",         "meta": "Norway · DF · SK Brann",                      "href": "#norway-gregersen" },
-    { "type": "player", "id": "norway-odegaard",      "label": "Martin Ødegaard",         "meta": "Norway · MF · Arsenal",                       "href": "#norway-odegaard" },
-    { "type": "player", "id": "norway-berge",         "label": "Sander Berge",            "meta": "Norway · MF · Fulham FC",                     "href": "#norway-berge" },
-    { "type": "player", "id": "norway-aursnes",       "label": "Fredrik Aursnes",         "meta": "Norway · MF · SL Benfica",                    "href": "#norway-aursnes" },
-    { "type": "player", "id": "norway-berg",          "label": "Patrick Berg",            "meta": "Norway · MF · FK Bodø/Glimt",                 "href": "#norway-berg" },
-    { "type": "player", "id": "norway-normann",       "label": "Mathias Normann",         "meta": "Norway · MF · FK Bodø/Glimt",                 "href": "#norway-normann" },
-    { "type": "player", "id": "norway-hauge",         "label": "Jens Petter Hauge",       "meta": "Norway · MF · KRC Genk",                      "href": "#norway-hauge" },
-    { "type": "player", "id": "norway-holm",          "label": "Odin Thiago Holm",        "meta": "Norway · MF · Vålerenga FK",                  "href": "#norway-holm" },
-    { "type": "player", "id": "norway-vetlesen",      "label": "Hugo Vetlesen",           "meta": "Norway · MF · FK Bodø/Glimt",                 "href": "#norway-vetlesen" },
-    { "type": "player", "id": "norway-haaland",       "label": "Erling Haaland",          "meta": "Norway · FW · Manchester City",                "href": "#norway-haaland" },
-    { "type": "player", "id": "norway-sorloth",       "label": "Alexander Sørloth",       "meta": "Norway · FW · Atlético Madrid",               "href": "#norway-sorloth" },
-    { "type": "player", "id": "norway-elyounoussi",   "label": "Mohamed Elyounoussi",     "meta": "Norway · FW · Viking FK",                     "href": "#norway-elyounoussi" },
-    { "type": "player", "id": "norway-nusa",          "label": "Antonio Nusa",            "meta": "Norway · FW · RB Leipzig",                    "href": "#norway-nusa" },
-    { "type": "player", "id": "norway-bobb",          "label": "Oscar Bobb",              "meta": "Norway · FW · Manchester City",                "href": "#norway-bobb" },
-    { "type": "player", "id": "norway-botheim",       "label": "Erik Botheim",            "meta": "Norway · FW · FK Bodø/Glimt",                 "href": "#norway-botheim" },
-    { "type": "player", "id": "norway-solbakken",     "label": "Ola Solbakken",           "meta": "Norway · FW · AS Roma",                       "href": "#norway-solbakken" },
-
-    { "type": "player", "id": "belgium-mignolet",     "label": "Simon Mignolet",          "meta": "Belgium · GK · Club Brugge",                  "href": "#belgium-mignolet" },
-    { "type": "player", "id": "belgium-casteels",     "label": "Koen Casteels",           "meta": "Belgium · GK · VfL Wolfsburg",                "href": "#belgium-casteels" },
-    { "type": "player", "id": "belgium-vandevoordt",  "label": "Maarten Vandevoordt",     "meta": "Belgium · GK · RB Leipzig",                   "href": "#belgium-vandevoordt" },
-    { "type": "player", "id": "belgium-castagne",     "label": "Timothy Castagne",        "meta": "Belgium · DF · Fulham FC",                    "href": "#belgium-castagne" },
-    { "type": "player", "id": "belgium-debast",       "label": "Zeno Debast",             "meta": "Belgium · DF · Sporting CP",                  "href": "#belgium-debast" },
-    { "type": "player", "id": "belgium-faes",         "label": "Wout Faes",               "meta": "Belgium · DF · Everton",                      "href": "#belgium-faes" },
-    { "type": "player", "id": "belgium-theate",       "label": "Arthur Theate",           "meta": "Belgium · DF · Stade Rennais",                "href": "#belgium-theate" },
-    { "type": "player", "id": "belgium-vertonghen",   "label": "Jan Vertonghen",          "meta": "Belgium · DF · RSC Anderlecht",               "href": "#belgium-vertonghen" },
-    { "type": "player", "id": "belgium-meunier",      "label": "Thomas Meunier",          "meta": "Belgium · DF · Club Brugge",                  "href": "#belgium-meunier" },
-    { "type": "player", "id": "belgium-de-cuyper",    "label": "Maxim De Cuyper",         "meta": "Belgium · DF · Club Brugge",                  "href": "#belgium-de-cuyper" },
-    { "type": "player", "id": "belgium-mechele",      "label": "Brandon Mechele",         "meta": "Belgium · DF · Club Brugge",                  "href": "#belgium-mechele" },
-    { "type": "player", "id": "belgium-debruyne",     "label": "Kevin De Bruyne",         "meta": "Belgium · MF · Manchester City",               "href": "#belgium-debruyne" },
-    { "type": "player", "id": "belgium-tielemans",    "label": "Youri Tielemans",         "meta": "Belgium · MF · Aston Villa",                  "href": "#belgium-tielemans" },
-    { "type": "player", "id": "belgium-onana",        "label": "Amadou Onana",            "meta": "Belgium · MF · Aston Villa",                  "href": "#belgium-onana" },
-    { "type": "player", "id": "belgium-witsel",       "label": "Axel Witsel",             "meta": "Belgium · MF · Atlético Madrid",              "href": "#belgium-witsel" },
-    { "type": "player", "id": "belgium-saelemaekers", "label": "Alexis Saelemaekers",     "meta": "Belgium · MF · AC Milan",                     "href": "#belgium-saelemaekers" },
-    { "type": "player", "id": "belgium-vanaken",      "label": "Hans Vanaken",            "meta": "Belgium · MF · Club Brugge",                  "href": "#belgium-vanaken" },
-    { "type": "player", "id": "belgium-carrasco",     "label": "Yannick Carrasco",        "meta": "Belgium · MF · Galatasaray",                  "href": "#belgium-carrasco" },
-    { "type": "player", "id": "belgium-vranckx",      "label": "Aster Vranckx",           "meta": "Belgium · MF · VfL Wolfsburg",                "href": "#belgium-vranckx" },
-    { "type": "player", "id": "belgium-lukaku",       "label": "Romelu Lukaku",           "meta": "Belgium · FW · SSC Napoli",                   "href": "#belgium-lukaku" },
-    { "type": "player", "id": "belgium-doku",         "label": "Jeremy Doku",             "meta": "Belgium · FW · Manchester City",               "href": "#belgium-doku" },
-    { "type": "player", "id": "belgium-de-ketelaere", "label": "Charles De Ketelaere",    "meta": "Belgium · FW · Atalanta",                     "href": "#belgium-de-ketelaere" },
-    { "type": "player", "id": "belgium-trossard",     "label": "Leandro Trossard",        "meta": "Belgium · FW · Arsenal",                      "href": "#belgium-trossard" },
-    { "type": "player", "id": "belgium-openda",       "label": "Lois Openda",             "meta": "Belgium · FW · RB Leipzig",                   "href": "#belgium-openda" },
-    { "type": "player", "id": "belgium-bakayoko",     "label": "Johan Bakayoko",          "meta": "Belgium · FW · PSV Eindhoven",                "href": "#belgium-bakayoko" },
-    { "type": "player", "id": "belgium-origi",        "label": "Divock Origi",            "meta": "Belgium · FW · Nottingham Forest",            "href": "#belgium-origi" },
-
-    { "type": "player", "id": "usa-turner",           "label": "Matt Turner",             "meta": "United States · GK · Crystal Palace",         "href": "#usa-turner" },
-    { "type": "player", "id": "usa-steffen",          "label": "Zack Steffen",            "meta": "United States · GK · Colorado Rapids",        "href": "#usa-steffen" },
-    { "type": "player", "id": "usa-schulte",          "label": "Patrick Schulte",         "meta": "United States · GK · Columbus Crew",          "href": "#usa-schulte" },
-    { "type": "player", "id": "usa-dest",             "label": "Sergiño Dest",            "meta": "United States · DF · PSV Eindhoven",          "href": "#usa-dest" },
-    { "type": "player", "id": "usa-richards",         "label": "Chris Richards",          "meta": "United States · DF · Crystal Palace",         "href": "#usa-richards" },
-    { "type": "player", "id": "usa-zimmerman",        "label": "Walker Zimmerman",        "meta": "United States · DF · Nashville SC",           "href": "#usa-zimmerman" },
-    { "type": "player", "id": "usa-carter-vickers",   "label": "Cameron Carter-Vickers",  "meta": "United States · DF · Celtic FC",              "href": "#usa-carter-vickers" },
-    { "type": "player", "id": "usa-vines",            "label": "Sam Vines",               "meta": "United States · DF · Real Betis",             "href": "#usa-vines" },
-    { "type": "player", "id": "usa-scally",           "label": "Joe Scally",              "meta": "United States · DF · Borussia Mönchengladbach","href": "#usa-scally" },
-    { "type": "player", "id": "usa-robinson",         "label": "Miles Robinson",          "meta": "United States · DF · Atlanta United FC",      "href": "#usa-robinson" },
-    { "type": "player", "id": "usa-yedlin",           "label": "DeAndre Yedlin",          "meta": "United States · DF · Inter Miami CF",         "href": "#usa-yedlin" },
-    { "type": "player", "id": "usa-adams",            "label": "Tyler Adams",             "meta": "United States · MF · AFC Bournemouth",        "href": "#usa-adams" },
-    { "type": "player", "id": "usa-mckennie",         "label": "Weston McKennie",         "meta": "United States · MF · Juventus",               "href": "#usa-mckennie" },
-    { "type": "player", "id": "usa-musah",            "label": "Yunus Musah",             "meta": "United States · MF · AC Milan",               "href": "#usa-musah" },
-    { "type": "player", "id": "usa-aaronson",         "label": "Brenden Aaronson",        "meta": "United States · MF · Brentford",              "href": "#usa-aaronson" },
-    { "type": "player", "id": "usa-de-la-torre",      "label": "Luca de la Torre",        "meta": "United States · MF · Celta Vigo",             "href": "#usa-de-la-torre" },
-    { "type": "player", "id": "usa-tillman",          "label": "Malik Tillman",           "meta": "United States · MF · PSV Eindhoven",          "href": "#usa-tillman" },
-    { "type": "player", "id": "usa-reyna",            "label": "Gio Reyna",               "meta": "United States · MF · Nottingham Forest",      "href": "#usa-reyna" },
-    { "type": "player", "id": "usa-acosta",           "label": "Kellyn Acosta",           "meta": "United States · MF · LAFC",                   "href": "#usa-acosta" },
-    { "type": "player", "id": "usa-pulisic",          "label": "Christian Pulisic",       "meta": "United States · FW · AC Milan",               "href": "#usa-pulisic" },
-    { "type": "player", "id": "usa-pepi",             "label": "Ricardo Pepi",            "meta": "United States · FW · PSV Eindhoven",          "href": "#usa-pepi" },
-    { "type": "player", "id": "usa-sargent",          "label": "Josh Sargent",            "meta": "United States · FW · West Ham United",        "href": "#usa-sargent" },
-    { "type": "player", "id": "usa-balogun",          "label": "Folarin Balogun",         "meta": "United States · FW · AS Monaco",              "href": "#usa-balogun" },
-    { "type": "player", "id": "usa-weah",             "label": "Timothy Weah",            "meta": "United States · FW · Juventus",               "href": "#usa-weah" },
-    { "type": "player", "id": "usa-ferreira",         "label": "Jesus Ferreira",          "meta": "United States · FW · FC Dallas",              "href": "#usa-ferreira" },
-    { "type": "player", "id": "usa-morris",           "label": "Jordan Morris",           "meta": "United States · FW · Seattle Sounders FC",    "href": "#usa-morris" },
-
-    { "type": "player", "id": "japan-gonda",          "label": "Shuichi Gonda",           "meta": "Japan · GK · Vissel Kobe",                    "href": "#japan-gonda" },
-    { "type": "player", "id": "japan-suzuki-z",       "label": "Zion Suzuki",             "meta": "Japan · GK · Sint-Truiden VV",                "href": "#japan-suzuki-z" },
-    { "type": "player", "id": "japan-schmidt",        "label": "Daniel Schmidt",          "meta": "Japan · GK · Sint-Truiden VV",                "href": "#japan-schmidt" },
-    { "type": "player", "id": "japan-tomiyasu",       "label": "Takehiro Tomiyasu",       "meta": "Japan · DF · Arsenal",                        "href": "#japan-tomiyasu" },
-    { "type": "player", "id": "japan-itakura",        "label": "Ko Itakura",              "meta": "Japan · DF · Borussia Mönchengladbach",       "href": "#japan-itakura" },
-    { "type": "player", "id": "japan-machida",        "label": "Koki Machida",            "meta": "Japan · DF · RC Lens",                        "href": "#japan-machida" },
-    { "type": "player", "id": "japan-ito-h",          "label": "Hiroki Ito",              "meta": "Japan · DF · VfB Stuttgart",                  "href": "#japan-ito-h" },
-    { "type": "player", "id": "japan-nakayama",       "label": "Yuta Nakayama",           "meta": "Japan · DF · Sunderland",                     "href": "#japan-nakayama" },
-    { "type": "player", "id": "japan-yoshida",        "label": "Maya Yoshida",            "meta": "Japan · DF · Urawa Red Diamonds",             "href": "#japan-yoshida" },
-    { "type": "player", "id": "japan-taniguchi",      "label": "Shogo Taniguchi",         "meta": "Japan · DF · Kawasaki Frontale",              "href": "#japan-taniguchi" },
-    { "type": "player", "id": "japan-yamane",         "label": "Miki Yamane",             "meta": "Japan · DF · Kawasaki Frontale",              "href": "#japan-yamane" },
-    { "type": "player", "id": "japan-endo",           "label": "Wataru Endo",             "meta": "Japan · MF · Liverpool",                      "href": "#japan-endo" },
-    { "type": "player", "id": "japan-morita",         "label": "Hidemasa Morita",         "meta": "Japan · MF · Sporting CP",                    "href": "#japan-morita" },
-    { "type": "player", "id": "japan-doan",           "label": "Ritsu Doan",              "meta": "Japan · MF · SC Freiburg",                    "href": "#japan-doan" },
-    { "type": "player", "id": "japan-tanaka-ao",      "label": "Ao Tanaka",               "meta": "Japan · MF · Club Brugge",                    "href": "#japan-tanaka-ao" },
-    { "type": "player", "id": "japan-kamada",         "label": "Daichi Kamada",           "meta": "Japan · MF · Crystal Palace",                 "href": "#japan-kamada" },
-    { "type": "player", "id": "japan-hatate",         "label": "Reo Hatate",              "meta": "Japan · MF · Celtic FC",                      "href": "#japan-hatate" },
-    { "type": "player", "id": "japan-ito-j",          "label": "Junya Ito",               "meta": "Japan · MF · Stade de Reims",                 "href": "#japan-ito-j" },
-    { "type": "player", "id": "japan-nakamura-k",     "label": "Keito Nakamura",          "meta": "Japan · MF · Stade de Reims",                 "href": "#japan-nakamura-k" },
-    { "type": "player", "id": "japan-mitoma",         "label": "Kaoru Mitoma",            "meta": "Japan · FW · Brighton & Hove Albion",         "href": "#japan-mitoma" },
-    { "type": "player", "id": "japan-kyogo",          "label": "Kyogo Furuhashi",         "meta": "Japan · FW · Celtic FC",                      "href": "#japan-kyogo" },
-    { "type": "player", "id": "japan-asano",          "label": "Takuma Asano",            "meta": "Japan · FW · VfL Bochum",                     "href": "#japan-asano" },
-    { "type": "player", "id": "japan-ueda",           "label": "Ayase Ueda",              "meta": "Japan · FW · Feyenoord",                      "href": "#japan-ueda" },
-    { "type": "player", "id": "japan-machino",        "label": "Shuto Machino",           "meta": "Japan · FW · Urawa Red Diamonds",             "href": "#japan-machino" },
-    { "type": "player", "id": "japan-kubo",           "label": "Takefusa Kubo",           "meta": "Japan · FW · Real Sociedad",                  "href": "#japan-kubo" },
-    { "type": "player", "id": "japan-osako",          "label": "Yuya Osako",              "meta": "Japan · FW · Vissel Kobe",                    "href": "#japan-osako" },
-
-    { "type": "player", "id": "morocco-bounou",       "label": "Yassine Bounou",          "meta": "Morocco · GK · Al-Hilal",                     "href": "#morocco-bounou" },
-    { "type": "player", "id": "morocco-el-kajoui",    "label": "Ahmed El Kajoui",         "meta": "Morocco · GK · Celta Vigo",                   "href": "#morocco-el-kajoui" },
-    { "type": "player", "id": "morocco-zniti",        "label": "Munir Zniti",             "meta": "Morocco · GK · Wydad AC",                     "href": "#morocco-zniti" },
-    { "type": "player", "id": "morocco-hakimi",       "label": "Achraf Hakimi",           "meta": "Morocco · DF · Paris Saint-Germain",          "href": "#morocco-hakimi" },
-    { "type": "player", "id": "morocco-aguerd",       "label": "Nayef Aguerd",            "meta": "Morocco · DF · West Ham United",              "href": "#morocco-aguerd" },
-    { "type": "player", "id": "morocco-mazraoui",     "label": "Noussair Mazraoui",       "meta": "Morocco · DF · Manchester United",            "href": "#morocco-mazraoui" },
-    { "type": "player", "id": "morocco-dari",         "label": "Achraf Dari",             "meta": "Morocco · DF · Stade Brest 29",               "href": "#morocco-dari" },
-    { "type": "player", "id": "morocco-saiss",        "label": "Romain Saïss",            "meta": "Morocco · DF · Galatasaray",                  "href": "#morocco-saiss" },
-    { "type": "player", "id": "morocco-masina",       "label": "Adam Masina",             "meta": "Morocco · DF · Udinese Calcio",               "href": "#morocco-masina" },
-    { "type": "player", "id": "morocco-attiyat-allah","label": "Yahia Attiyat Allah",     "meta": "Morocco · DF · Wydad AC",                     "href": "#morocco-attiyat-allah" },
-    { "type": "player", "id": "morocco-mmaee",        "label": "Sami Mmaee",              "meta": "Morocco · DF · Club Brugge",                  "href": "#morocco-mmaee" },
-    { "type": "player", "id": "morocco-amrabat",      "label": "Sofyan Amrabat",          "meta": "Morocco · MF · ACF Fiorentina",               "href": "#morocco-amrabat" },
-    { "type": "player", "id": "morocco-ounahi",       "label": "Azzedine Ounahi",         "meta": "Morocco · MF · Olympique de Marseille",       "href": "#morocco-ounahi" },
-    { "type": "player", "id": "morocco-amallah",      "label": "Selim Amallah",           "meta": "Morocco · MF · RC Strasbourg Alsace",         "href": "#morocco-amallah" },
-    { "type": "player", "id": "morocco-ziyech",       "label": "Hakim Ziyech",            "meta": "Morocco · MF · Galatasaray",                  "href": "#morocco-ziyech" },
-    { "type": "player", "id": "morocco-chair",        "label": "Ilias Chair",             "meta": "Morocco · MF · Wolverhampton Wanderers",      "href": "#morocco-chair" },
-    { "type": "player", "id": "morocco-benrahma",     "label": "Saïd Benrahma",           "meta": "Morocco · MF · Olympique Lyonnais",           "href": "#morocco-benrahma" },
-    { "type": "player", "id": "morocco-harit",        "label": "Amine Harit",             "meta": "Morocco · MF · Olympique de Marseille",       "href": "#morocco-harit" },
-    { "type": "player", "id": "morocco-zaroury",      "label": "Anass Zaroury",           "meta": "Morocco · MF · Brentford",                    "href": "#morocco-zaroury" },
-    { "type": "player", "id": "morocco-en-nesyri",    "label": "Youssef En-Nesyri",       "meta": "Morocco · FW · Fenerbahçe",                   "href": "#morocco-en-nesyri" },
-    { "type": "player", "id": "morocco-boufal",       "label": "Sofiane Boufal",          "meta": "Morocco · FW · Olympique de Marseille",       "href": "#morocco-boufal" },
-    { "type": "player", "id": "morocco-igamane",      "label": "Hamza Igamane",           "meta": "Morocco · FW · Rangers FC",                   "href": "#morocco-igamane" },
-    { "type": "player", "id": "morocco-ezzalzouli",   "label": "Abde Ezzalzouli",         "meta": "Morocco · FW · Real Betis",                   "href": "#morocco-ezzalzouli" },
-    { "type": "player", "id": "morocco-aboukhlal",    "label": "Zakaria Aboukhlal",       "meta": "Morocco · FW · Toulouse FC",                  "href": "#morocco-aboukhlal" },
-    { "type": "player", "id": "morocco-el-khannous",  "label": "Bilal El Khannous",       "meta": "Morocco · FW · KRC Genk",                     "href": "#morocco-el-khannous" },
-    { "type": "player", "id": "morocco-el-kaabi",     "label": "Ayoub El Kaabi",          "meta": "Morocco · FW · Olympiakos FC",                "href": "#morocco-el-kaabi" }
+    {
+      "type": "team",
+      "id": "mexico",
+      "label": "Mexico",
+      "meta": "Group A · CONCACAF",
+      "href": "#mexico"
+    },
+    {
+      "type": "team",
+      "id": "south-korea",
+      "label": "South Korea",
+      "meta": "Group A · AFC",
+      "href": "#south-korea"
+    },
+    {
+      "type": "team",
+      "id": "south-africa",
+      "label": "South Africa",
+      "meta": "Group A · CAF",
+      "href": "#south-africa"
+    },
+    {
+      "type": "team",
+      "id": "czech-republic",
+      "label": "Czechia",
+      "meta": "Group A · UEFA",
+      "href": "#czech-republic"
+    },
+    {
+      "type": "team",
+      "id": "canada",
+      "label": "Canada",
+      "meta": "Group B · CONCACAF",
+      "href": "#canada"
+    },
+    {
+      "type": "team",
+      "id": "bosnia-herzegovina",
+      "label": "Bosnia and Herzegovina",
+      "meta": "Group B · UEFA",
+      "href": "#bosnia-herzegovina"
+    },
+    {
+      "type": "team",
+      "id": "qatar",
+      "label": "Qatar",
+      "meta": "Group B · AFC",
+      "href": "#qatar"
+    },
+    {
+      "type": "team",
+      "id": "switzerland",
+      "label": "Switzerland",
+      "meta": "Group B · UEFA",
+      "href": "#switzerland"
+    },
+    {
+      "type": "team",
+      "id": "brazil",
+      "label": "Brazil",
+      "meta": "Group C · CONMEBOL",
+      "href": "#brazil"
+    },
+    {
+      "type": "team",
+      "id": "morocco",
+      "label": "Morocco",
+      "meta": "Group C · CAF",
+      "href": "#morocco"
+    },
+    {
+      "type": "team",
+      "id": "haiti",
+      "label": "Haiti",
+      "meta": "Group C · CONCACAF",
+      "href": "#haiti"
+    },
+    {
+      "type": "team",
+      "id": "scotland",
+      "label": "Scotland",
+      "meta": "Group C · UEFA",
+      "href": "#scotland"
+    },
+    {
+      "type": "team",
+      "id": "usa",
+      "label": "United States",
+      "meta": "Group D · CONCACAF",
+      "href": "#usa"
+    },
+    {
+      "type": "team",
+      "id": "paraguay",
+      "label": "Paraguay",
+      "meta": "Group D · CONMEBOL",
+      "href": "#paraguay"
+    },
+    {
+      "type": "team",
+      "id": "australia",
+      "label": "Australia",
+      "meta": "Group D · AFC",
+      "href": "#australia"
+    },
+    {
+      "type": "team",
+      "id": "turkey",
+      "label": "Turkey",
+      "meta": "Group D · UEFA",
+      "href": "#turkey"
+    },
+    {
+      "type": "team",
+      "id": "germany",
+      "label": "Germany",
+      "meta": "Group E · UEFA",
+      "href": "#germany"
+    },
+    {
+      "type": "team",
+      "id": "curacao",
+      "label": "Curaçao",
+      "meta": "Group E · CONCACAF",
+      "href": "#curacao"
+    },
+    {
+      "type": "team",
+      "id": "ivory-coast",
+      "label": "Ivory Coast",
+      "meta": "Group E · CAF",
+      "href": "#ivory-coast"
+    },
+    {
+      "type": "team",
+      "id": "ecuador",
+      "label": "Ecuador",
+      "meta": "Group E · CONMEBOL",
+      "href": "#ecuador"
+    },
+    {
+      "type": "team",
+      "id": "netherlands",
+      "label": "Netherlands",
+      "meta": "Group F · UEFA",
+      "href": "#netherlands"
+    },
+    {
+      "type": "team",
+      "id": "japan",
+      "label": "Japan",
+      "meta": "Group F · AFC",
+      "href": "#japan"
+    },
+    {
+      "type": "team",
+      "id": "sweden",
+      "label": "Sweden",
+      "meta": "Group F · UEFA",
+      "href": "#sweden"
+    },
+    {
+      "type": "team",
+      "id": "tunisia",
+      "label": "Tunisia",
+      "meta": "Group F · CAF",
+      "href": "#tunisia"
+    },
+    {
+      "type": "team",
+      "id": "belgium",
+      "label": "Belgium",
+      "meta": "Group G · UEFA",
+      "href": "#belgium"
+    },
+    {
+      "type": "team",
+      "id": "egypt",
+      "label": "Egypt",
+      "meta": "Group G · CAF",
+      "href": "#egypt"
+    },
+    {
+      "type": "team",
+      "id": "iran",
+      "label": "Iran",
+      "meta": "Group G · AFC",
+      "href": "#iran"
+    },
+    {
+      "type": "team",
+      "id": "new-zealand",
+      "label": "New Zealand",
+      "meta": "Group G · OFC",
+      "href": "#new-zealand"
+    },
+    {
+      "type": "team",
+      "id": "spain",
+      "label": "Spain",
+      "meta": "Group H · UEFA",
+      "href": "#spain"
+    },
+    {
+      "type": "team",
+      "id": "cape-verde",
+      "label": "Cape Verde",
+      "meta": "Group H · CAF",
+      "href": "#cape-verde"
+    },
+    {
+      "type": "team",
+      "id": "saudi-arabia",
+      "label": "Saudi Arabia",
+      "meta": "Group H · AFC",
+      "href": "#saudi-arabia"
+    },
+    {
+      "type": "team",
+      "id": "uruguay",
+      "label": "Uruguay",
+      "meta": "Group H · CONMEBOL",
+      "href": "#uruguay"
+    },
+    {
+      "type": "team",
+      "id": "france",
+      "label": "France",
+      "meta": "Group I · UEFA",
+      "href": "#france"
+    },
+    {
+      "type": "team",
+      "id": "senegal",
+      "label": "Senegal",
+      "meta": "Group I · CAF",
+      "href": "#senegal"
+    },
+    {
+      "type": "team",
+      "id": "iraq",
+      "label": "Iraq",
+      "meta": "Group I · AFC",
+      "href": "#iraq"
+    },
+    {
+      "type": "team",
+      "id": "norway",
+      "label": "Norway",
+      "meta": "Group I · UEFA",
+      "href": "#norway"
+    },
+    {
+      "type": "team",
+      "id": "argentina",
+      "label": "Argentina",
+      "meta": "Group J · CONMEBOL",
+      "href": "#argentina"
+    },
+    {
+      "type": "team",
+      "id": "algeria",
+      "label": "Algeria",
+      "meta": "Group J · CAF",
+      "href": "#algeria"
+    },
+    {
+      "type": "team",
+      "id": "austria",
+      "label": "Austria",
+      "meta": "Group J · UEFA",
+      "href": "#austria"
+    },
+    {
+      "type": "team",
+      "id": "jordan",
+      "label": "Jordan",
+      "meta": "Group J · AFC",
+      "href": "#jordan"
+    },
+    {
+      "type": "team",
+      "id": "portugal",
+      "label": "Portugal",
+      "meta": "Group K · UEFA",
+      "href": "#portugal"
+    },
+    {
+      "type": "team",
+      "id": "dr-congo",
+      "label": "DR Congo",
+      "meta": "Group K · CAF",
+      "href": "#dr-congo"
+    },
+    {
+      "type": "team",
+      "id": "uzbekistan",
+      "label": "Uzbekistan",
+      "meta": "Group K · AFC",
+      "href": "#uzbekistan"
+    },
+    {
+      "type": "team",
+      "id": "colombia",
+      "label": "Colombia",
+      "meta": "Group K · CONMEBOL",
+      "href": "#colombia"
+    },
+    {
+      "type": "team",
+      "id": "england",
+      "label": "England",
+      "meta": "Group L · UEFA",
+      "href": "#england"
+    },
+    {
+      "type": "team",
+      "id": "croatia",
+      "label": "Croatia",
+      "meta": "Group L · UEFA",
+      "href": "#croatia"
+    },
+    {
+      "type": "team",
+      "id": "ghana",
+      "label": "Ghana",
+      "meta": "Group L · CAF",
+      "href": "#ghana"
+    },
+    {
+      "type": "team",
+      "id": "panama",
+      "label": "Panama",
+      "meta": "Group L · CONCACAF",
+      "href": "#panama"
+    },
+    {
+      "type": "player",
+      "id": "argentina-musso",
+      "label": "Juan Musso",
+      "meta": "Argentina · GK · Atlético Madrid",
+      "href": "#argentina-musso"
+    },
+    {
+      "type": "player",
+      "id": "argentina-senesi",
+      "label": "Marcos Senesi",
+      "meta": "Argentina · DF · AFC Bournemouth",
+      "href": "#argentina-senesi"
+    },
+    {
+      "type": "player",
+      "id": "argentina-tagliafico",
+      "label": "Nicolás Tagliafico",
+      "meta": "Argentina · DF · Olympique Lyonnais",
+      "href": "#argentina-tagliafico"
+    },
+    {
+      "type": "player",
+      "id": "argentina-montiel",
+      "label": "Gonzalo Montiel",
+      "meta": "Argentina · DF · River Plate",
+      "href": "#argentina-montiel"
+    },
+    {
+      "type": "player",
+      "id": "argentina-paredes",
+      "label": "Leandro Paredes",
+      "meta": "Argentina · MF · Boca Juniors",
+      "href": "#argentina-paredes"
+    },
+    {
+      "type": "player",
+      "id": "argentina-lisandro-martinez",
+      "label": "Lisandro Martínez",
+      "meta": "Argentina · DF · Manchester United",
+      "href": "#argentina-lisandro-martinez"
+    },
+    {
+      "type": "player",
+      "id": "argentina-de-paul",
+      "label": "Rodrigo De Paul",
+      "meta": "Argentina · MF · Inter Miami CF",
+      "href": "#argentina-de-paul"
+    },
+    {
+      "type": "player",
+      "id": "argentina-barco",
+      "label": "Valentín Barco",
+      "meta": "Argentina · MF · RC Strasbourg Alsace",
+      "href": "#argentina-barco"
+    },
+    {
+      "type": "player",
+      "id": "argentina-alvarez",
+      "label": "Julián Álvarez",
+      "meta": "Argentina · FW · Atlético Madrid",
+      "href": "#argentina-alvarez"
+    },
+    {
+      "type": "player",
+      "id": "argentina-messi",
+      "label": "Lionel Messi",
+      "meta": "Argentina · FW · Inter Miami CF",
+      "href": "#argentina-messi"
+    },
+    {
+      "type": "player",
+      "id": "argentina-lo-celso",
+      "label": "Giovani Lo Celso",
+      "meta": "Argentina · MF · Real Betis",
+      "href": "#argentina-lo-celso"
+    },
+    {
+      "type": "player",
+      "id": "argentina-rulli",
+      "label": "Gerónimo Rulli",
+      "meta": "Argentina · GK · Olympique de Marseille",
+      "href": "#argentina-rulli"
+    },
+    {
+      "type": "player",
+      "id": "argentina-romero",
+      "label": "Cristian Romero",
+      "meta": "Argentina · DF · Tottenham Hotspur",
+      "href": "#argentina-romero"
+    },
+    {
+      "type": "player",
+      "id": "argentina-palacios",
+      "label": "Exequiel Palacios",
+      "meta": "Argentina · MF · Bayer Leverkusen",
+      "href": "#argentina-palacios"
+    },
+    {
+      "type": "player",
+      "id": "argentina-gonzalez",
+      "label": "Nicolás González",
+      "meta": "Argentina · MF · Atlético Madrid",
+      "href": "#argentina-gonzalez"
+    },
+    {
+      "type": "player",
+      "id": "argentina-almada",
+      "label": "Thiago Almada",
+      "meta": "Argentina · MF · Atlético Madrid",
+      "href": "#argentina-almada"
+    },
+    {
+      "type": "player",
+      "id": "argentina-simeone",
+      "label": "Giuliano Simeone",
+      "meta": "Argentina · FW · Atlético Madrid",
+      "href": "#argentina-simeone"
+    },
+    {
+      "type": "player",
+      "id": "argentina-paz",
+      "label": "Nico Paz",
+      "meta": "Argentina · FW · Como 1907",
+      "href": "#argentina-paz"
+    },
+    {
+      "type": "player",
+      "id": "argentina-otamendi",
+      "label": "Nicolás Otamendi",
+      "meta": "Argentina · DF · SL Benfica",
+      "href": "#argentina-otamendi"
+    },
+    {
+      "type": "player",
+      "id": "argentina-mac-allister",
+      "label": "Alexis Mac Allister",
+      "meta": "Argentina · MF · Liverpool",
+      "href": "#argentina-mac-allister"
+    },
+    {
+      "type": "player",
+      "id": "argentina-lopez",
+      "label": "José Manuel López",
+      "meta": "Argentina · FW · Palmeiras",
+      "href": "#argentina-lopez"
+    },
+    {
+      "type": "player",
+      "id": "argentina-lautaro-martinez",
+      "label": "Lautaro Martínez",
+      "meta": "Argentina · FW · Inter Milan",
+      "href": "#argentina-lautaro-martinez"
+    },
+    {
+      "type": "player",
+      "id": "argentina-emiliano-martinez",
+      "label": "Emiliano Martínez",
+      "meta": "Argentina · GK · Aston Villa",
+      "href": "#argentina-emiliano-martinez"
+    },
+    {
+      "type": "player",
+      "id": "argentina-fernandez",
+      "label": "Enzo Fernández",
+      "meta": "Argentina · MF · Chelsea",
+      "href": "#argentina-fernandez"
+    },
+    {
+      "type": "player",
+      "id": "argentina-medina",
+      "label": "Facundo Medina",
+      "meta": "Argentina · DF · Olympique de Marseille",
+      "href": "#argentina-medina"
+    },
+    {
+      "type": "player",
+      "id": "argentina-molina",
+      "label": "Nahuel Molina",
+      "meta": "Argentina · DF · Atlético Madrid",
+      "href": "#argentina-molina"
+    },
+    {
+      "type": "player",
+      "id": "belgium-mignolet",
+      "label": "Simon Mignolet",
+      "meta": "Belgium · GK · Club Brugge",
+      "href": "#belgium-mignolet"
+    },
+    {
+      "type": "player",
+      "id": "belgium-casteels",
+      "label": "Koen Casteels",
+      "meta": "Belgium · GK · VfL Wolfsburg",
+      "href": "#belgium-casteels"
+    },
+    {
+      "type": "player",
+      "id": "belgium-vandevoordt",
+      "label": "Maarten Vandevoordt",
+      "meta": "Belgium · GK · RB Leipzig",
+      "href": "#belgium-vandevoordt"
+    },
+    {
+      "type": "player",
+      "id": "belgium-castagne",
+      "label": "Timothy Castagne",
+      "meta": "Belgium · DF · Fulham FC",
+      "href": "#belgium-castagne"
+    },
+    {
+      "type": "player",
+      "id": "belgium-debast",
+      "label": "Zeno Debast",
+      "meta": "Belgium · DF · Sporting CP",
+      "href": "#belgium-debast"
+    },
+    {
+      "type": "player",
+      "id": "belgium-faes",
+      "label": "Wout Faes",
+      "meta": "Belgium · DF · Everton",
+      "href": "#belgium-faes"
+    },
+    {
+      "type": "player",
+      "id": "belgium-theate",
+      "label": "Arthur Theate",
+      "meta": "Belgium · DF · Stade Rennais",
+      "href": "#belgium-theate"
+    },
+    {
+      "type": "player",
+      "id": "belgium-vertonghen",
+      "label": "Jan Vertonghen",
+      "meta": "Belgium · DF · RSC Anderlecht",
+      "href": "#belgium-vertonghen"
+    },
+    {
+      "type": "player",
+      "id": "belgium-meunier",
+      "label": "Thomas Meunier",
+      "meta": "Belgium · DF · Club Brugge",
+      "href": "#belgium-meunier"
+    },
+    {
+      "type": "player",
+      "id": "belgium-de-cuyper",
+      "label": "Maxim De Cuyper",
+      "meta": "Belgium · DF · Club Brugge",
+      "href": "#belgium-de-cuyper"
+    },
+    {
+      "type": "player",
+      "id": "belgium-mechele",
+      "label": "Brandon Mechele",
+      "meta": "Belgium · DF · Club Brugge",
+      "href": "#belgium-mechele"
+    },
+    {
+      "type": "player",
+      "id": "belgium-debruyne",
+      "label": "Kevin De Bruyne",
+      "meta": "Belgium · MF · Manchester City",
+      "href": "#belgium-debruyne"
+    },
+    {
+      "type": "player",
+      "id": "belgium-tielemans",
+      "label": "Youri Tielemans",
+      "meta": "Belgium · MF · Aston Villa",
+      "href": "#belgium-tielemans"
+    },
+    {
+      "type": "player",
+      "id": "belgium-onana",
+      "label": "Amadou Onana",
+      "meta": "Belgium · MF · Aston Villa",
+      "href": "#belgium-onana"
+    },
+    {
+      "type": "player",
+      "id": "belgium-witsel",
+      "label": "Axel Witsel",
+      "meta": "Belgium · MF · Atlético Madrid",
+      "href": "#belgium-witsel"
+    },
+    {
+      "type": "player",
+      "id": "belgium-saelemaekers",
+      "label": "Alexis Saelemaekers",
+      "meta": "Belgium · MF · AC Milan",
+      "href": "#belgium-saelemaekers"
+    },
+    {
+      "type": "player",
+      "id": "belgium-vanaken",
+      "label": "Hans Vanaken",
+      "meta": "Belgium · MF · Club Brugge",
+      "href": "#belgium-vanaken"
+    },
+    {
+      "type": "player",
+      "id": "belgium-carrasco",
+      "label": "Yannick Carrasco",
+      "meta": "Belgium · MF · Galatasaray",
+      "href": "#belgium-carrasco"
+    },
+    {
+      "type": "player",
+      "id": "belgium-vranckx",
+      "label": "Aster Vranckx",
+      "meta": "Belgium · MF · VfL Wolfsburg",
+      "href": "#belgium-vranckx"
+    },
+    {
+      "type": "player",
+      "id": "belgium-lukaku",
+      "label": "Romelu Lukaku",
+      "meta": "Belgium · FW · SSC Napoli",
+      "href": "#belgium-lukaku"
+    },
+    {
+      "type": "player",
+      "id": "belgium-doku",
+      "label": "Jeremy Doku",
+      "meta": "Belgium · FW · Manchester City",
+      "href": "#belgium-doku"
+    },
+    {
+      "type": "player",
+      "id": "belgium-de-ketelaere",
+      "label": "Charles De Ketelaere",
+      "meta": "Belgium · FW · Atalanta",
+      "href": "#belgium-de-ketelaere"
+    },
+    {
+      "type": "player",
+      "id": "belgium-trossard",
+      "label": "Leandro Trossard",
+      "meta": "Belgium · FW · Arsenal",
+      "href": "#belgium-trossard"
+    },
+    {
+      "type": "player",
+      "id": "belgium-openda",
+      "label": "Lois Openda",
+      "meta": "Belgium · FW · RB Leipzig",
+      "href": "#belgium-openda"
+    },
+    {
+      "type": "player",
+      "id": "belgium-bakayoko",
+      "label": "Johan Bakayoko",
+      "meta": "Belgium · FW · PSV Eindhoven",
+      "href": "#belgium-bakayoko"
+    },
+    {
+      "type": "player",
+      "id": "belgium-origi",
+      "label": "Divock Origi",
+      "meta": "Belgium · FW · Nottingham Forest",
+      "href": "#belgium-origi"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-vasilj",
+      "label": "Nikola Vasilj",
+      "meta": "Bosnia and Herzegovina · GK · FC St. Pauli",
+      "href": "#bosnia-vasilj"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-mujakic",
+      "label": "Nihad Mujakić",
+      "meta": "Bosnia and Herzegovina · DF · Gaziantep FK",
+      "href": "#bosnia-mujakic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-hadzikadunc",
+      "label": "Dennis Hadžikadunić",
+      "meta": "Bosnia and Herzegovina · DF · UC Sampdoria",
+      "href": "#bosnia-hadzikadunc"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-muharemovic",
+      "label": "Tarik Muharemović",
+      "meta": "Bosnia and Herzegovina · DF · US Sassuolo",
+      "href": "#bosnia-muharemovic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-kolasinac",
+      "label": "Sead Kolašinac",
+      "meta": "Bosnia and Herzegovina · DF · Atalanta",
+      "href": "#bosnia-kolasinac"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-tahirovic",
+      "label": "Benjamin Tahirović",
+      "meta": "Bosnia and Herzegovina · MF · Brøndby IF",
+      "href": "#bosnia-tahirovic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-dedic",
+      "label": "Amar Dedić",
+      "meta": "Bosnia and Herzegovina · DF · SL Benfica",
+      "href": "#bosnia-dedic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-gigovic",
+      "label": "Armin Gigović",
+      "meta": "Bosnia and Herzegovina · MF · BSC Young Boys",
+      "href": "#bosnia-gigovic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-bazdar",
+      "label": "Samed Baždar",
+      "meta": "Bosnia and Herzegovina · FW · Jagiellonia Białystok",
+      "href": "#bosnia-bazdar"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-demirovic",
+      "label": "Ermedin Demirović",
+      "meta": "Bosnia and Herzegovina · FW · VfB Stuttgart",
+      "href": "#bosnia-demirovic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-dzeko",
+      "label": "Edin Džeko",
+      "meta": "Bosnia and Herzegovina · FW · Schalke 04",
+      "href": "#bosnia-dzeko"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-jurkas",
+      "label": "Mladen Jurkas",
+      "meta": "Bosnia and Herzegovina · GK · FK Borac Banja Luka",
+      "href": "#bosnia-jurkas"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-basic",
+      "label": "Ivan Bašić",
+      "meta": "Bosnia and Herzegovina · MF · FC Astana",
+      "href": "#bosnia-basic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-sunjic",
+      "label": "Ivan Šunjić",
+      "meta": "Bosnia and Herzegovina · MF · Pafos FC",
+      "href": "#bosnia-sunjic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-memic",
+      "label": "Amar Memić",
+      "meta": "Bosnia and Herzegovina · MF · FC Viktoria Plzeň",
+      "href": "#bosnia-memic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-hadzahmetovic",
+      "label": "Amir Hadžiahmetović",
+      "meta": "Bosnia and Herzegovina · MF · Hull City",
+      "href": "#bosnia-hadzahmetovic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-burnic",
+      "label": "Dženis Burnić",
+      "meta": "Bosnia and Herzegovina · MF · Karlsruher SC",
+      "href": "#bosnia-burnic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-katic",
+      "label": "Nikola Katić",
+      "meta": "Bosnia and Herzegovina · DF · Schalke 04",
+      "href": "#bosnia-katic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-alajbegovic",
+      "label": "Kerim Alajbegović",
+      "meta": "Bosnia and Herzegovina · FW · Red Bull Salzburg",
+      "href": "#bosnia-alajbegovic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-bajraktarevic",
+      "label": "Esmir Bajraktarević",
+      "meta": "Bosnia and Herzegovina · FW · PSV Eindhoven",
+      "href": "#bosnia-bajraktarevic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-radeljic",
+      "label": "Stjepan Radeljić",
+      "meta": "Bosnia and Herzegovina · DF · HNK Rijeka",
+      "href": "#bosnia-radeljic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-zlomislic",
+      "label": "Martin Zlomislić",
+      "meta": "Bosnia and Herzegovina · GK · HNK Rijeka",
+      "href": "#bosnia-zlomislic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-tabakovic",
+      "label": "Haris Tabaković",
+      "meta": "Bosnia and Herzegovina · FW · Borussia Mönchengladbach",
+      "href": "#bosnia-tabakovic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-malic",
+      "label": "Arjan Malić",
+      "meta": "Bosnia and Herzegovina · DF · SK Sturm Graz",
+      "href": "#bosnia-malic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-lukic",
+      "label": "Jovo Lukić",
+      "meta": "Bosnia and Herzegovina · FW · FC Universitatea Cluj",
+      "href": "#bosnia-lukic"
+    },
+    {
+      "type": "player",
+      "id": "bosnia-mahmic",
+      "label": "Ermin Mahmić",
+      "meta": "Bosnia and Herzegovina · MF · FC Slovan Liberec",
+      "href": "#bosnia-mahmic"
+    },
+    {
+      "type": "player",
+      "id": "brazil-alisson",
+      "label": "Alisson",
+      "meta": "Brazil · GK · Liverpool",
+      "href": "#brazil-alisson"
+    },
+    {
+      "type": "player",
+      "id": "brazil-ederson-silva",
+      "label": "Éderson Silva",
+      "meta": "Brazil · MF · Atalanta",
+      "href": "#brazil-ederson-silva"
+    },
+    {
+      "type": "player",
+      "id": "brazil-gabriel-magalhaes",
+      "label": "Gabriel Magalhães",
+      "meta": "Brazil · DF · Arsenal",
+      "href": "#brazil-gabriel-magalhaes"
+    },
+    {
+      "type": "player",
+      "id": "brazil-marquinhos",
+      "label": "Marquinhos",
+      "meta": "Brazil · DF · Paris Saint-Germain",
+      "href": "#brazil-marquinhos"
+    },
+    {
+      "type": "player",
+      "id": "brazil-casemiro",
+      "label": "Casemiro",
+      "meta": "Brazil · MF · Manchester United",
+      "href": "#brazil-casemiro"
+    },
+    {
+      "type": "player",
+      "id": "brazil-alex-sandro",
+      "label": "Alex Sandro",
+      "meta": "Brazil · DF · Flamengo",
+      "href": "#brazil-alex-sandro"
+    },
+    {
+      "type": "player",
+      "id": "brazil-vinicius-junior",
+      "label": "Vinícius Júnior",
+      "meta": "Brazil · FW · Real Madrid",
+      "href": "#brazil-vinicius-junior"
+    },
+    {
+      "type": "player",
+      "id": "brazil-bruno-guimaraes",
+      "label": "Bruno Guimarães",
+      "meta": "Brazil · MF · Newcastle United",
+      "href": "#brazil-bruno-guimaraes"
+    },
+    {
+      "type": "player",
+      "id": "brazil-matheus-cunha",
+      "label": "Matheus Cunha",
+      "meta": "Brazil · FW · Manchester United",
+      "href": "#brazil-matheus-cunha"
+    },
+    {
+      "type": "player",
+      "id": "brazil-neymar",
+      "label": "Neymar",
+      "meta": "Brazil · FW · Santos",
+      "href": "#brazil-neymar"
+    },
+    {
+      "type": "player",
+      "id": "brazil-raphinha",
+      "label": "Raphinha",
+      "meta": "Brazil · FW · FC Barcelona",
+      "href": "#brazil-raphinha"
+    },
+    {
+      "type": "player",
+      "id": "brazil-weverton",
+      "label": "Weverton",
+      "meta": "Brazil · GK · Grêmio",
+      "href": "#brazil-weverton"
+    },
+    {
+      "type": "player",
+      "id": "brazil-danilo-luiz",
+      "label": "Danilo",
+      "meta": "Brazil · DF · Flamengo",
+      "href": "#brazil-danilo-luiz"
+    },
+    {
+      "type": "player",
+      "id": "brazil-bremer",
+      "label": "Bremer",
+      "meta": "Brazil · DF · Juventus",
+      "href": "#brazil-bremer"
+    },
+    {
+      "type": "player",
+      "id": "brazil-leo-pereira",
+      "label": "Léo Pereira",
+      "meta": "Brazil · DF · Flamengo",
+      "href": "#brazil-leo-pereira"
+    },
+    {
+      "type": "player",
+      "id": "brazil-douglas-santos",
+      "label": "Douglas Santos",
+      "meta": "Brazil · DF · Zenit Saint Petersburg",
+      "href": "#brazil-douglas-santos"
+    },
+    {
+      "type": "player",
+      "id": "brazil-fabinho",
+      "label": "Fabinho",
+      "meta": "Brazil · MF · Al-Ittihad",
+      "href": "#brazil-fabinho"
+    },
+    {
+      "type": "player",
+      "id": "brazil-danilo-santos",
+      "label": "Danilo Santos",
+      "meta": "Brazil · MF · Botafogo",
+      "href": "#brazil-danilo-santos"
+    },
+    {
+      "type": "player",
+      "id": "brazil-endrick",
+      "label": "Endrick",
+      "meta": "Brazil · FW · Olympique Lyonnais",
+      "href": "#brazil-endrick"
+    },
+    {
+      "type": "player",
+      "id": "brazil-paqueta",
+      "label": "Lucas Paquetá",
+      "meta": "Brazil · MF · Flamengo",
+      "href": "#brazil-paqueta"
+    },
+    {
+      "type": "player",
+      "id": "brazil-luiz-henrique",
+      "label": "Luiz Henrique",
+      "meta": "Brazil · FW · Zenit Saint Petersburg",
+      "href": "#brazil-luiz-henrique"
+    },
+    {
+      "type": "player",
+      "id": "brazil-martinelli",
+      "label": "Gabriel Martinelli",
+      "meta": "Brazil · FW · Arsenal",
+      "href": "#brazil-martinelli"
+    },
+    {
+      "type": "player",
+      "id": "brazil-ederson-moraes",
+      "label": "Ederson",
+      "meta": "Brazil · GK · Fenerbahçe",
+      "href": "#brazil-ederson-moraes"
+    },
+    {
+      "type": "player",
+      "id": "brazil-roger-ibanez",
+      "label": "Roger Ibáñez",
+      "meta": "Brazil · DF · Al-Ahli",
+      "href": "#brazil-roger-ibanez"
+    },
+    {
+      "type": "player",
+      "id": "brazil-igor-thiago",
+      "label": "Igor Thiago",
+      "meta": "Brazil · FW · Brentford",
+      "href": "#brazil-igor-thiago"
+    },
+    {
+      "type": "player",
+      "id": "brazil-rayan",
+      "label": "Rayan",
+      "meta": "Brazil · FW · AFC Bournemouth",
+      "href": "#brazil-rayan"
+    },
+    {
+      "type": "player",
+      "id": "canada-st-clair",
+      "label": "Dayne St. Clair",
+      "meta": "Canada · GK · Inter Miami CF",
+      "href": "#canada-st-clair"
+    },
+    {
+      "type": "player",
+      "id": "canada-johnston",
+      "label": "Alistair Johnston",
+      "meta": "Canada · DF · Celtic FC",
+      "href": "#canada-johnston"
+    },
+    {
+      "type": "player",
+      "id": "canada-jones",
+      "label": "Alfie Jones",
+      "meta": "Canada · DF · Middlesbrough",
+      "href": "#canada-jones"
+    },
+    {
+      "type": "player",
+      "id": "canada-de-fougerolles",
+      "label": "Luc de Fougerolles",
+      "meta": "Canada · DF · Dender EH",
+      "href": "#canada-de-fougerolles"
+    },
+    {
+      "type": "player",
+      "id": "canada-waterman",
+      "label": "Joel Waterman",
+      "meta": "Canada · DF · Chicago Fire FC",
+      "href": "#canada-waterman"
+    },
+    {
+      "type": "player",
+      "id": "canada-choiniere",
+      "label": "Mathieu Choinière",
+      "meta": "Canada · MF · LAFC",
+      "href": "#canada-choiniere"
+    },
+    {
+      "type": "player",
+      "id": "canada-eustaquio",
+      "label": "Stephen Eustáquio",
+      "meta": "Canada · MF · LAFC",
+      "href": "#canada-eustaquio"
+    },
+    {
+      "type": "player",
+      "id": "canada-kone",
+      "label": "Ismaël Koné",
+      "meta": "Canada · MF · US Sassuolo",
+      "href": "#canada-kone"
+    },
+    {
+      "type": "player",
+      "id": "canada-larin",
+      "label": "Cyle Larin",
+      "meta": "Canada · FW · Southampton FC",
+      "href": "#canada-larin"
+    },
+    {
+      "type": "player",
+      "id": "canada-david-j",
+      "label": "Jonathan David",
+      "meta": "Canada · FW · Juventus",
+      "href": "#canada-david-j"
+    },
+    {
+      "type": "player",
+      "id": "canada-millar",
+      "label": "Liam Millar",
+      "meta": "Canada · MF · Hull City",
+      "href": "#canada-millar"
+    },
+    {
+      "type": "player",
+      "id": "canada-oluwaseyi",
+      "label": "Tani Oluwaseyi",
+      "meta": "Canada · FW · Villarreal",
+      "href": "#canada-oluwaseyi"
+    },
+    {
+      "type": "player",
+      "id": "canada-cornelius",
+      "label": "Derek Cornelius",
+      "meta": "Canada · DF · Rangers FC",
+      "href": "#canada-cornelius"
+    },
+    {
+      "type": "player",
+      "id": "canada-shaffelburg",
+      "label": "Jacob Shaffelburg",
+      "meta": "Canada · MF · LAFC",
+      "href": "#canada-shaffelburg"
+    },
+    {
+      "type": "player",
+      "id": "canada-bombito",
+      "label": "Moïse Bombito",
+      "meta": "Canada · DF · OGC Nice",
+      "href": "#canada-bombito"
+    },
+    {
+      "type": "player",
+      "id": "canada-crepeau",
+      "label": "Maxime Crépeau",
+      "meta": "Canada · GK · Orlando City SC",
+      "href": "#canada-crepeau"
+    },
+    {
+      "type": "player",
+      "id": "canada-buchanan",
+      "label": "Tajon Buchanan",
+      "meta": "Canada · FW · Villarreal",
+      "href": "#canada-buchanan"
+    },
+    {
+      "type": "player",
+      "id": "canada-goodman",
+      "label": "Owen Goodman",
+      "meta": "Canada · GK · Barnsley FC",
+      "href": "#canada-goodman"
+    },
+    {
+      "type": "player",
+      "id": "canada-davies",
+      "label": "Alphonso Davies",
+      "meta": "Canada · DF · Bayern Munich",
+      "href": "#canada-davies"
+    },
+    {
+      "type": "player",
+      "id": "canada-ahmed",
+      "label": "Ali Ahmed",
+      "meta": "Canada · FW · Norwich City",
+      "href": "#canada-ahmed"
+    },
+    {
+      "type": "player",
+      "id": "canada-osorio",
+      "label": "Jonathan Osorio",
+      "meta": "Canada · MF · Toronto FC",
+      "href": "#canada-osorio"
+    },
+    {
+      "type": "player",
+      "id": "canada-laryea",
+      "label": "Richie Laryea",
+      "meta": "Canada · DF · Toronto FC",
+      "href": "#canada-laryea"
+    },
+    {
+      "type": "player",
+      "id": "canada-sigur",
+      "label": "Niko Sigur",
+      "meta": "Canada · DF · HNK Hajduk Split",
+      "href": "#canada-sigur"
+    },
+    {
+      "type": "player",
+      "id": "canada-david-p",
+      "label": "Promise David",
+      "meta": "Canada · FW · Royale Union SG",
+      "href": "#canada-david-p"
+    },
+    {
+      "type": "player",
+      "id": "canada-saliba",
+      "label": "Nathan Saliba",
+      "meta": "Canada · MF · RSC Anderlecht",
+      "href": "#canada-saliba"
+    },
+    {
+      "type": "player",
+      "id": "canada-nelson",
+      "label": "Jayden Nelson",
+      "meta": "Canada · FW · Austin FC",
+      "href": "#canada-nelson"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-kovar",
+      "label": "Matěj Kovář",
+      "meta": "Czechia · GK · PSV Eindhoven",
+      "href": "#czech-republic-kovar"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-zima",
+      "label": "David Zima",
+      "meta": "Czechia · DF · SK Slavia Prague",
+      "href": "#czech-republic-zima"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-holes",
+      "label": "Tomáš Holeš",
+      "meta": "Czechia · DF · SK Slavia Prague",
+      "href": "#czech-republic-holes"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-hranac",
+      "label": "Robin Hranáč",
+      "meta": "Czechia · DF · TSG Hoffenheim",
+      "href": "#czech-republic-hranac"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-coufal",
+      "label": "Vladimír Coufal",
+      "meta": "Czechia · DF · TSG Hoffenheim",
+      "href": "#czech-republic-coufal"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-chaloupek",
+      "label": "Štěpán Chaloupek",
+      "meta": "Czechia · DF · SK Slavia Prague",
+      "href": "#czech-republic-chaloupek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-krejci",
+      "label": "Ladislav Krejčí",
+      "meta": "Czechia · DF · Wolverhampton Wanderers",
+      "href": "#czech-republic-krejci"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-darida",
+      "label": "Vladimír Darida",
+      "meta": "Czechia · MF · FC Hradec Králové",
+      "href": "#czech-republic-darida"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-hlozek",
+      "label": "Adam Hložek",
+      "meta": "Czechia · FW · TSG Hoffenheim",
+      "href": "#czech-republic-hlozek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-schick",
+      "label": "Patrik Schick",
+      "meta": "Czechia · FW · Bayer Leverkusen",
+      "href": "#czech-republic-schick"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-kuchta",
+      "label": "Jan Kuchta",
+      "meta": "Czechia · FW · AC Sparta Prague",
+      "href": "#czech-republic-kuchta"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-cerv",
+      "label": "Lukáš Červ",
+      "meta": "Czechia · MF · FC Viktoria Plzeň",
+      "href": "#czech-republic-cerv"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-chytil",
+      "label": "Mojmír Chytil",
+      "meta": "Czechia · FW · SK Slavia Prague",
+      "href": "#czech-republic-chytil"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-jurasek",
+      "label": "David Jurásek",
+      "meta": "Czechia · DF · SK Slavia Prague",
+      "href": "#czech-republic-jurasek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-sulc",
+      "label": "Pavel Šulc",
+      "meta": "Czechia · FW · Olympique Lyonnais",
+      "href": "#czech-republic-sulc"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-stanek",
+      "label": "Jindřich Staněk",
+      "meta": "Czechia · GK · SK Slavia Prague",
+      "href": "#czech-republic-stanek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-provod",
+      "label": "Lukáš Provod",
+      "meta": "Czechia · MF · SK Slavia Prague",
+      "href": "#czech-republic-provod"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-sadilek",
+      "label": "Michal Sadílek",
+      "meta": "Czechia · MF · SK Slavia Prague",
+      "href": "#czech-republic-sadilek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-chory",
+      "label": "Tomáš Chorý",
+      "meta": "Czechia · FW · SK Slavia Prague",
+      "href": "#czech-republic-chory"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-zeleny",
+      "label": "Jaroslav Zelený",
+      "meta": "Czechia · DF · AC Sparta Prague",
+      "href": "#czech-republic-zeleny"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-doudera",
+      "label": "David Douděra",
+      "meta": "Czechia · DF · SK Slavia Prague",
+      "href": "#czech-republic-doudera"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-soucek",
+      "label": "Tomáš Souček",
+      "meta": "Czechia · MF · West Ham United",
+      "href": "#czech-republic-soucek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-hornicek",
+      "label": "Lukáš Horníček",
+      "meta": "Czechia · GK · SC Braga",
+      "href": "#czech-republic-hornicek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-sojka",
+      "label": "Alexandr Sojka",
+      "meta": "Czechia · MF · FC Viktoria Plzeň",
+      "href": "#czech-republic-sojka"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-sochurek",
+      "label": "Hugo Sochůrek",
+      "meta": "Czechia · MF · AC Sparta Prague",
+      "href": "#czech-republic-sochurek"
+    },
+    {
+      "type": "player",
+      "id": "czech-republic-visinsky",
+      "label": "Denis Višinský",
+      "meta": "Czechia · FW · FC Viktoria Plzeň",
+      "href": "#czech-republic-visinsky"
+    },
+    {
+      "type": "player",
+      "id": "england-pickford",
+      "label": "Jordan Pickford",
+      "meta": "England · GK · Everton",
+      "href": "#england-pickford"
+    },
+    {
+      "type": "player",
+      "id": "england-konsa",
+      "label": "Ezri Konsa",
+      "meta": "England · DF · Aston Villa",
+      "href": "#england-konsa"
+    },
+    {
+      "type": "player",
+      "id": "england-oreilly",
+      "label": "Nico O'Reilly",
+      "meta": "England · DF · Manchester City",
+      "href": "#england-oreilly"
+    },
+    {
+      "type": "player",
+      "id": "england-rice",
+      "label": "Declan Rice",
+      "meta": "England · MF · Arsenal",
+      "href": "#england-rice"
+    },
+    {
+      "type": "player",
+      "id": "england-stones",
+      "label": "John Stones",
+      "meta": "England · DF · Manchester City",
+      "href": "#england-stones"
+    },
+    {
+      "type": "player",
+      "id": "england-guehi",
+      "label": "Marc Guéhi",
+      "meta": "England · DF · Manchester City",
+      "href": "#england-guehi"
+    },
+    {
+      "type": "player",
+      "id": "england-saka",
+      "label": "Bukayo Saka",
+      "meta": "England · FW · Arsenal",
+      "href": "#england-saka"
+    },
+    {
+      "type": "player",
+      "id": "england-anderson",
+      "label": "Elliot Anderson",
+      "meta": "England · MF · Nottingham Forest",
+      "href": "#england-anderson"
+    },
+    {
+      "type": "player",
+      "id": "england-kane",
+      "label": "Harry Kane",
+      "meta": "England · FW · Bayern Munich",
+      "href": "#england-kane"
+    },
+    {
+      "type": "player",
+      "id": "england-bellingham",
+      "label": "Jude Bellingham",
+      "meta": "England · MF · Real Madrid",
+      "href": "#england-bellingham"
+    },
+    {
+      "type": "player",
+      "id": "england-rashford",
+      "label": "Marcus Rashford",
+      "meta": "England · FW · FC Barcelona",
+      "href": "#england-rashford"
+    },
+    {
+      "type": "player",
+      "id": "england-chalobah",
+      "label": "Trevoh Chalobah",
+      "meta": "England · DF · Chelsea",
+      "href": "#england-chalobah"
+    },
+    {
+      "type": "player",
+      "id": "england-dean-henderson",
+      "label": "Dean Henderson",
+      "meta": "England · GK · Crystal Palace",
+      "href": "#england-dean-henderson"
+    },
+    {
+      "type": "player",
+      "id": "england-jordan-henderson",
+      "label": "Jordan Henderson",
+      "meta": "England · MF · Brentford",
+      "href": "#england-jordan-henderson"
+    },
+    {
+      "type": "player",
+      "id": "england-burn",
+      "label": "Dan Burn",
+      "meta": "England · DF · Newcastle United",
+      "href": "#england-burn"
+    },
+    {
+      "type": "player",
+      "id": "england-mainoo",
+      "label": "Kobbie Mainoo",
+      "meta": "England · MF · Manchester United",
+      "href": "#england-mainoo"
+    },
+    {
+      "type": "player",
+      "id": "england-rogers",
+      "label": "Morgan Rogers",
+      "meta": "England · MF · Aston Villa",
+      "href": "#england-rogers"
+    },
+    {
+      "type": "player",
+      "id": "england-gordon",
+      "label": "Anthony Gordon",
+      "meta": "England · FW · Newcastle United",
+      "href": "#england-gordon"
+    },
+    {
+      "type": "player",
+      "id": "england-watkins",
+      "label": "Ollie Watkins",
+      "meta": "England · FW · Aston Villa",
+      "href": "#england-watkins"
+    },
+    {
+      "type": "player",
+      "id": "england-madueke",
+      "label": "Noni Madueke",
+      "meta": "England · FW · Arsenal",
+      "href": "#england-madueke"
+    },
+    {
+      "type": "player",
+      "id": "england-eze",
+      "label": "Eberechi Eze",
+      "meta": "England · MF · Arsenal",
+      "href": "#england-eze"
+    },
+    {
+      "type": "player",
+      "id": "england-toney",
+      "label": "Ivan Toney",
+      "meta": "England · FW · Al-Ahli",
+      "href": "#england-toney"
+    },
+    {
+      "type": "player",
+      "id": "england-trafford",
+      "label": "James Trafford",
+      "meta": "England · GK · Manchester City",
+      "href": "#england-trafford"
+    },
+    {
+      "type": "player",
+      "id": "england-reece-james",
+      "label": "Reece James",
+      "meta": "England · DF · Chelsea",
+      "href": "#england-reece-james"
+    },
+    {
+      "type": "player",
+      "id": "england-spence",
+      "label": "Djed Spence",
+      "meta": "England · DF · Tottenham Hotspur",
+      "href": "#england-spence"
+    },
+    {
+      "type": "player",
+      "id": "england-quansah",
+      "label": "Jarell Quansah",
+      "meta": "England · DF · Bayer Leverkusen",
+      "href": "#england-quansah"
+    },
+    {
+      "type": "player",
+      "id": "france-samba",
+      "label": "Brice Samba",
+      "meta": "France · GK · Stade Rennais",
+      "href": "#france-samba"
+    },
+    {
+      "type": "player",
+      "id": "france-gusto",
+      "label": "Malo Gusto",
+      "meta": "France · DF · Chelsea",
+      "href": "#france-gusto"
+    },
+    {
+      "type": "player",
+      "id": "france-digne",
+      "label": "Lucas Digne",
+      "meta": "France · DF · Aston Villa",
+      "href": "#france-digne"
+    },
+    {
+      "type": "player",
+      "id": "france-upamecano",
+      "label": "Dayot Upamecano",
+      "meta": "France · DF · Bayern Munich",
+      "href": "#france-upamecano"
+    },
+    {
+      "type": "player",
+      "id": "france-kounde",
+      "label": "Jules Koundé",
+      "meta": "France · DF · FC Barcelona",
+      "href": "#france-kounde"
+    },
+    {
+      "type": "player",
+      "id": "france-kone",
+      "label": "Manu Koné",
+      "meta": "France · MF · AS Roma",
+      "href": "#france-kone"
+    },
+    {
+      "type": "player",
+      "id": "france-dembele",
+      "label": "Ousmane Dembélé",
+      "meta": "France · FW · Paris Saint-Germain",
+      "href": "#france-dembele"
+    },
+    {
+      "type": "player",
+      "id": "france-tchouameni",
+      "label": "Aurélien Tchouaméni",
+      "meta": "France · MF · Real Madrid",
+      "href": "#france-tchouameni"
+    },
+    {
+      "type": "player",
+      "id": "france-thuram",
+      "label": "Marcus Thuram",
+      "meta": "France · FW · Inter Milan",
+      "href": "#france-thuram"
+    },
+    {
+      "type": "player",
+      "id": "france-mbappe",
+      "label": "Kylian Mbappé",
+      "meta": "France · FW · Real Madrid",
+      "href": "#france-mbappe"
+    },
+    {
+      "type": "player",
+      "id": "france-olise",
+      "label": "Michael Olise",
+      "meta": "France · FW · Bayern Munich",
+      "href": "#france-olise"
+    },
+    {
+      "type": "player",
+      "id": "france-barcola",
+      "label": "Bradley Barcola",
+      "meta": "France · FW · Paris Saint-Germain",
+      "href": "#france-barcola"
+    },
+    {
+      "type": "player",
+      "id": "france-kante",
+      "label": "N'Golo Kanté",
+      "meta": "France · MF · Fenerbahçe",
+      "href": "#france-kante"
+    },
+    {
+      "type": "player",
+      "id": "france-rabiot",
+      "label": "Adrien Rabiot",
+      "meta": "France · MF · AC Milan",
+      "href": "#france-rabiot"
+    },
+    {
+      "type": "player",
+      "id": "france-konate",
+      "label": "Ibrahima Konaté",
+      "meta": "France · DF · Liverpool",
+      "href": "#france-konate"
+    },
+    {
+      "type": "player",
+      "id": "france-maignan",
+      "label": "Mike Maignan",
+      "meta": "France · GK · AC Milan",
+      "href": "#france-maignan"
+    },
+    {
+      "type": "player",
+      "id": "france-saliba",
+      "label": "William Saliba",
+      "meta": "France · DF · Arsenal",
+      "href": "#france-saliba"
+    },
+    {
+      "type": "player",
+      "id": "france-zaire-emery",
+      "label": "Warren Zaïre-Emery",
+      "meta": "France · MF · Paris Saint-Germain",
+      "href": "#france-zaire-emery"
+    },
+    {
+      "type": "player",
+      "id": "france-theo-hernandez",
+      "label": "Théo Hernández",
+      "meta": "France · DF · Al-Hilal",
+      "href": "#france-theo-hernandez"
+    },
+    {
+      "type": "player",
+      "id": "france-doue",
+      "label": "Désiré Doué",
+      "meta": "France · FW · Paris Saint-Germain",
+      "href": "#france-doue"
+    },
+    {
+      "type": "player",
+      "id": "france-lucas-hernandez",
+      "label": "Lucas Hernández",
+      "meta": "France · DF · Paris Saint-Germain",
+      "href": "#france-lucas-hernandez"
+    },
+    {
+      "type": "player",
+      "id": "france-mateta",
+      "label": "Jean-Philippe Mateta",
+      "meta": "France · FW · Crystal Palace",
+      "href": "#france-mateta"
+    },
+    {
+      "type": "player",
+      "id": "france-risser",
+      "label": "Robin Risser",
+      "meta": "France · GK · RC Lens",
+      "href": "#france-risser"
+    },
+    {
+      "type": "player",
+      "id": "france-cherki",
+      "label": "Rayan Cherki",
+      "meta": "France · MF · Manchester City",
+      "href": "#france-cherki"
+    },
+    {
+      "type": "player",
+      "id": "france-akliouche",
+      "label": "Maghnes Akliouche",
+      "meta": "France · MF · AS Monaco",
+      "href": "#france-akliouche"
+    },
+    {
+      "type": "player",
+      "id": "france-lacroix",
+      "label": "Maxence Lacroix",
+      "meta": "France · DF · Crystal Palace",
+      "href": "#france-lacroix"
+    },
+    {
+      "type": "player",
+      "id": "germany-neuer",
+      "label": "Manuel Neuer",
+      "meta": "Germany · GK · Bayern Munich",
+      "href": "#germany-neuer"
+    },
+    {
+      "type": "player",
+      "id": "germany-rudiger",
+      "label": "Antonio Rüdiger",
+      "meta": "Germany · DF · Real Madrid",
+      "href": "#germany-rudiger"
+    },
+    {
+      "type": "player",
+      "id": "germany-anton",
+      "label": "Waldemar Anton",
+      "meta": "Germany · DF · Borussia Dortmund",
+      "href": "#germany-anton"
+    },
+    {
+      "type": "player",
+      "id": "germany-tah",
+      "label": "Jonathan Tah",
+      "meta": "Germany · DF · Bayern Munich",
+      "href": "#germany-tah"
+    },
+    {
+      "type": "player",
+      "id": "germany-pavlovic",
+      "label": "Aleksandar Pavlović",
+      "meta": "Germany · MF · Bayern Munich",
+      "href": "#germany-pavlovic"
+    },
+    {
+      "type": "player",
+      "id": "germany-kimmich",
+      "label": "Joshua Kimmich",
+      "meta": "Germany · DF · Bayern Munich",
+      "href": "#germany-kimmich"
+    },
+    {
+      "type": "player",
+      "id": "germany-havertz",
+      "label": "Kai Havertz",
+      "meta": "Germany · FW · Arsenal",
+      "href": "#germany-havertz"
+    },
+    {
+      "type": "player",
+      "id": "germany-goretzka",
+      "label": "Leon Goretzka",
+      "meta": "Germany · MF · Bayern Munich",
+      "href": "#germany-goretzka"
+    },
+    {
+      "type": "player",
+      "id": "germany-leweling",
+      "label": "Jamie Leweling",
+      "meta": "Germany · MF · VfB Stuttgart",
+      "href": "#germany-leweling"
+    },
+    {
+      "type": "player",
+      "id": "germany-musiala",
+      "label": "Jamal Musiala",
+      "meta": "Germany · MF · Bayern Munich",
+      "href": "#germany-musiala"
+    },
+    {
+      "type": "player",
+      "id": "germany-woltemade",
+      "label": "Nick Woltemade",
+      "meta": "Germany · FW · Newcastle United",
+      "href": "#germany-woltemade"
+    },
+    {
+      "type": "player",
+      "id": "germany-baumann",
+      "label": "Oliver Baumann",
+      "meta": "Germany · GK · TSG Hoffenheim",
+      "href": "#germany-baumann"
+    },
+    {
+      "type": "player",
+      "id": "germany-gross",
+      "label": "Pascal Groß",
+      "meta": "Germany · MF · Brighton & Hove Albion",
+      "href": "#germany-gross"
+    },
+    {
+      "type": "player",
+      "id": "germany-beier",
+      "label": "Maximilian Beier",
+      "meta": "Germany · FW · Borussia Dortmund",
+      "href": "#germany-beier"
+    },
+    {
+      "type": "player",
+      "id": "germany-schlotterbeck",
+      "label": "Nico Schlotterbeck",
+      "meta": "Germany · DF · Borussia Dortmund",
+      "href": "#germany-schlotterbeck"
+    },
+    {
+      "type": "player",
+      "id": "germany-stiller",
+      "label": "Angelo Stiller",
+      "meta": "Germany · MF · VfB Stuttgart",
+      "href": "#germany-stiller"
+    },
+    {
+      "type": "player",
+      "id": "germany-wirtz",
+      "label": "Florian Wirtz",
+      "meta": "Germany · MF · Liverpool",
+      "href": "#germany-wirtz"
+    },
+    {
+      "type": "player",
+      "id": "germany-brown",
+      "label": "Nathaniel Brown",
+      "meta": "Germany · DF · Eintracht Frankfurt",
+      "href": "#germany-brown"
+    },
+    {
+      "type": "player",
+      "id": "germany-sane",
+      "label": "Leroy Sané",
+      "meta": "Germany · MF · Galatasaray",
+      "href": "#germany-sane"
+    },
+    {
+      "type": "player",
+      "id": "germany-amiri",
+      "label": "Nadiem Amiri",
+      "meta": "Germany · MF · Mainz 05",
+      "href": "#germany-amiri"
+    },
+    {
+      "type": "player",
+      "id": "germany-nubel",
+      "label": "Alexander Nübel",
+      "meta": "Germany · GK · VfB Stuttgart",
+      "href": "#germany-nubel"
+    },
+    {
+      "type": "player",
+      "id": "germany-raum",
+      "label": "David Raum",
+      "meta": "Germany · DF · RB Leipzig",
+      "href": "#germany-raum"
+    },
+    {
+      "type": "player",
+      "id": "germany-nmecha",
+      "label": "Felix Nmecha",
+      "meta": "Germany · MF · Borussia Dortmund",
+      "href": "#germany-nmecha"
+    },
+    {
+      "type": "player",
+      "id": "germany-thiaw",
+      "label": "Malick Thiaw",
+      "meta": "Germany · DF · Newcastle United",
+      "href": "#germany-thiaw"
+    },
+    {
+      "type": "player",
+      "id": "germany-ouedraogo",
+      "label": "Assan Ouédraogo",
+      "meta": "Germany · MF · RB Leipzig",
+      "href": "#germany-ouedraogo"
+    },
+    {
+      "type": "player",
+      "id": "germany-undav",
+      "label": "Deniz Undav",
+      "meta": "Germany · FW · VfB Stuttgart",
+      "href": "#germany-undav"
+    },
+    {
+      "type": "player",
+      "id": "japan-gonda",
+      "label": "Shuichi Gonda",
+      "meta": "Japan · GK · Vissel Kobe",
+      "href": "#japan-gonda"
+    },
+    {
+      "type": "player",
+      "id": "japan-suzuki-z",
+      "label": "Zion Suzuki",
+      "meta": "Japan · GK · Sint-Truiden VV",
+      "href": "#japan-suzuki-z"
+    },
+    {
+      "type": "player",
+      "id": "japan-schmidt",
+      "label": "Daniel Schmidt",
+      "meta": "Japan · GK · Sint-Truiden VV",
+      "href": "#japan-schmidt"
+    },
+    {
+      "type": "player",
+      "id": "japan-tomiyasu",
+      "label": "Takehiro Tomiyasu",
+      "meta": "Japan · DF · Arsenal",
+      "href": "#japan-tomiyasu"
+    },
+    {
+      "type": "player",
+      "id": "japan-itakura",
+      "label": "Ko Itakura",
+      "meta": "Japan · DF · Borussia Mönchengladbach",
+      "href": "#japan-itakura"
+    },
+    {
+      "type": "player",
+      "id": "japan-machida",
+      "label": "Koki Machida",
+      "meta": "Japan · DF · RC Lens",
+      "href": "#japan-machida"
+    },
+    {
+      "type": "player",
+      "id": "japan-ito-h",
+      "label": "Hiroki Ito",
+      "meta": "Japan · DF · VfB Stuttgart",
+      "href": "#japan-ito-h"
+    },
+    {
+      "type": "player",
+      "id": "japan-nakayama",
+      "label": "Yuta Nakayama",
+      "meta": "Japan · DF · Sunderland",
+      "href": "#japan-nakayama"
+    },
+    {
+      "type": "player",
+      "id": "japan-yoshida",
+      "label": "Maya Yoshida",
+      "meta": "Japan · DF · Urawa Red Diamonds",
+      "href": "#japan-yoshida"
+    },
+    {
+      "type": "player",
+      "id": "japan-taniguchi",
+      "label": "Shogo Taniguchi",
+      "meta": "Japan · DF · Kawasaki Frontale",
+      "href": "#japan-taniguchi"
+    },
+    {
+      "type": "player",
+      "id": "japan-yamane",
+      "label": "Miki Yamane",
+      "meta": "Japan · DF · Kawasaki Frontale",
+      "href": "#japan-yamane"
+    },
+    {
+      "type": "player",
+      "id": "japan-endo",
+      "label": "Wataru Endo",
+      "meta": "Japan · MF · Liverpool",
+      "href": "#japan-endo"
+    },
+    {
+      "type": "player",
+      "id": "japan-morita",
+      "label": "Hidemasa Morita",
+      "meta": "Japan · MF · Sporting CP",
+      "href": "#japan-morita"
+    },
+    {
+      "type": "player",
+      "id": "japan-doan",
+      "label": "Ritsu Doan",
+      "meta": "Japan · MF · SC Freiburg",
+      "href": "#japan-doan"
+    },
+    {
+      "type": "player",
+      "id": "japan-tanaka-ao",
+      "label": "Ao Tanaka",
+      "meta": "Japan · MF · Club Brugge",
+      "href": "#japan-tanaka-ao"
+    },
+    {
+      "type": "player",
+      "id": "japan-kamada",
+      "label": "Daichi Kamada",
+      "meta": "Japan · MF · Crystal Palace",
+      "href": "#japan-kamada"
+    },
+    {
+      "type": "player",
+      "id": "japan-hatate",
+      "label": "Reo Hatate",
+      "meta": "Japan · MF · Celtic FC",
+      "href": "#japan-hatate"
+    },
+    {
+      "type": "player",
+      "id": "japan-ito-j",
+      "label": "Junya Ito",
+      "meta": "Japan · MF · Stade de Reims",
+      "href": "#japan-ito-j"
+    },
+    {
+      "type": "player",
+      "id": "japan-nakamura-k",
+      "label": "Keito Nakamura",
+      "meta": "Japan · MF · Stade de Reims",
+      "href": "#japan-nakamura-k"
+    },
+    {
+      "type": "player",
+      "id": "japan-mitoma",
+      "label": "Kaoru Mitoma",
+      "meta": "Japan · FW · Brighton & Hove Albion",
+      "href": "#japan-mitoma"
+    },
+    {
+      "type": "player",
+      "id": "japan-kyogo",
+      "label": "Kyogo Furuhashi",
+      "meta": "Japan · FW · Celtic FC",
+      "href": "#japan-kyogo"
+    },
+    {
+      "type": "player",
+      "id": "japan-asano",
+      "label": "Takuma Asano",
+      "meta": "Japan · FW · VfL Bochum",
+      "href": "#japan-asano"
+    },
+    {
+      "type": "player",
+      "id": "japan-ueda",
+      "label": "Ayase Ueda",
+      "meta": "Japan · FW · Feyenoord",
+      "href": "#japan-ueda"
+    },
+    {
+      "type": "player",
+      "id": "japan-machino",
+      "label": "Shuto Machino",
+      "meta": "Japan · FW · Urawa Red Diamonds",
+      "href": "#japan-machino"
+    },
+    {
+      "type": "player",
+      "id": "japan-kubo",
+      "label": "Takefusa Kubo",
+      "meta": "Japan · FW · Real Sociedad",
+      "href": "#japan-kubo"
+    },
+    {
+      "type": "player",
+      "id": "japan-osako",
+      "label": "Yuya Osako",
+      "meta": "Japan · FW · Vissel Kobe",
+      "href": "#japan-osako"
+    },
+    {
+      "type": "player",
+      "id": "mexico-rangel",
+      "label": "Raúl Rangel",
+      "meta": "Mexico · GK · Guadalajara",
+      "href": "#mexico-rangel"
+    },
+    {
+      "type": "player",
+      "id": "mexico-sanchez",
+      "label": "Jorge Sánchez",
+      "meta": "Mexico · DF · PAOK FC",
+      "href": "#mexico-sanchez"
+    },
+    {
+      "type": "player",
+      "id": "mexico-montes",
+      "label": "César Montes",
+      "meta": "Mexico · DF · Lokomotiv Moscow",
+      "href": "#mexico-montes"
+    },
+    {
+      "type": "player",
+      "id": "mexico-alvarez",
+      "label": "Edson Álvarez",
+      "meta": "Mexico · DF · Fenerbahçe",
+      "href": "#mexico-alvarez"
+    },
+    {
+      "type": "player",
+      "id": "mexico-vasquez",
+      "label": "Johan Vásquez",
+      "meta": "Mexico · DF · Genoa CFC",
+      "href": "#mexico-vasquez"
+    },
+    {
+      "type": "player",
+      "id": "mexico-lira",
+      "label": "Érik Lira",
+      "meta": "Mexico · MF · Cruz Azul",
+      "href": "#mexico-lira"
+    },
+    {
+      "type": "player",
+      "id": "mexico-romo",
+      "label": "Luis Romo",
+      "meta": "Mexico · MF · Guadalajara",
+      "href": "#mexico-romo"
+    },
+    {
+      "type": "player",
+      "id": "mexico-fidalgo",
+      "label": "Álvaro Fidalgo",
+      "meta": "Mexico · MF · Real Betis",
+      "href": "#mexico-fidalgo"
+    },
+    {
+      "type": "player",
+      "id": "mexico-jimenez",
+      "label": "Raúl Jiménez",
+      "meta": "Mexico · FW · Fulham FC",
+      "href": "#mexico-jimenez"
+    },
+    {
+      "type": "player",
+      "id": "mexico-vega",
+      "label": "Alexis Vega",
+      "meta": "Mexico · FW · Toluca",
+      "href": "#mexico-vega"
+    },
+    {
+      "type": "player",
+      "id": "mexico-gimenez",
+      "label": "Santiago Giménez",
+      "meta": "Mexico · FW · AC Milan",
+      "href": "#mexico-gimenez"
+    },
+    {
+      "type": "player",
+      "id": "mexico-acevedo",
+      "label": "Carlos Acevedo",
+      "meta": "Mexico · GK · Santos Laguna",
+      "href": "#mexico-acevedo"
+    },
+    {
+      "type": "player",
+      "id": "mexico-ochoa",
+      "label": "Guillermo Ochoa",
+      "meta": "Mexico · GK · AEL Limassol",
+      "href": "#mexico-ochoa"
+    },
+    {
+      "type": "player",
+      "id": "mexico-gonzalez",
+      "label": "Armando González",
+      "meta": "Mexico · FW · Guadalajara",
+      "href": "#mexico-gonzalez"
+    },
+    {
+      "type": "player",
+      "id": "mexico-reyes",
+      "label": "Israel Reyes",
+      "meta": "Mexico · DF · Club América",
+      "href": "#mexico-reyes"
+    },
+    {
+      "type": "player",
+      "id": "mexico-quinones",
+      "label": "Julián Quiñones",
+      "meta": "Mexico · FW · Al-Qadsiah",
+      "href": "#mexico-quinones"
+    },
+    {
+      "type": "player",
+      "id": "mexico-pineda",
+      "label": "Orbelín Pineda",
+      "meta": "Mexico · MF · AEK Athens",
+      "href": "#mexico-pineda"
+    },
+    {
+      "type": "player",
+      "id": "mexico-vargas",
+      "label": "Obed Vargas",
+      "meta": "Mexico · MF · Atlético Madrid",
+      "href": "#mexico-vargas"
+    },
+    {
+      "type": "player",
+      "id": "mexico-mora",
+      "label": "Gilberto Mora",
+      "meta": "Mexico · MF · Club Tijuana",
+      "href": "#mexico-mora"
+    },
+    {
+      "type": "player",
+      "id": "mexico-chavez-m",
+      "label": "Mateo Chávez",
+      "meta": "Mexico · DF · AZ Alkmaar",
+      "href": "#mexico-chavez-m"
+    },
+    {
+      "type": "player",
+      "id": "mexico-huerta",
+      "label": "César Huerta",
+      "meta": "Mexico · FW · RSC Anderlecht",
+      "href": "#mexico-huerta"
+    },
+    {
+      "type": "player",
+      "id": "mexico-martinez",
+      "label": "Guillermo Martínez",
+      "meta": "Mexico · FW · Pumas UNAM",
+      "href": "#mexico-martinez"
+    },
+    {
+      "type": "player",
+      "id": "mexico-gallardo",
+      "label": "Jesús Gallardo",
+      "meta": "Mexico · DF · Toluca",
+      "href": "#mexico-gallardo"
+    },
+    {
+      "type": "player",
+      "id": "mexico-chavez-l",
+      "label": "Luis Chávez",
+      "meta": "Mexico · MF · Dynamo Moscow",
+      "href": "#mexico-chavez-l"
+    },
+    {
+      "type": "player",
+      "id": "mexico-alvarado",
+      "label": "Roberto Alvarado",
+      "meta": "Mexico · FW · Guadalajara",
+      "href": "#mexico-alvarado"
+    },
+    {
+      "type": "player",
+      "id": "mexico-gutierrez",
+      "label": "Brian Gutiérrez",
+      "meta": "Mexico · MF · Guadalajara",
+      "href": "#mexico-gutierrez"
+    },
+    {
+      "type": "player",
+      "id": "morocco-bounou",
+      "label": "Yassine Bounou",
+      "meta": "Morocco · GK · Al-Hilal",
+      "href": "#morocco-bounou"
+    },
+    {
+      "type": "player",
+      "id": "morocco-el-kajoui",
+      "label": "Ahmed El Kajoui",
+      "meta": "Morocco · GK · Celta Vigo",
+      "href": "#morocco-el-kajoui"
+    },
+    {
+      "type": "player",
+      "id": "morocco-zniti",
+      "label": "Munir Zniti",
+      "meta": "Morocco · GK · Wydad AC",
+      "href": "#morocco-zniti"
+    },
+    {
+      "type": "player",
+      "id": "morocco-hakimi",
+      "label": "Achraf Hakimi",
+      "meta": "Morocco · DF · Paris Saint-Germain",
+      "href": "#morocco-hakimi"
+    },
+    {
+      "type": "player",
+      "id": "morocco-aguerd",
+      "label": "Nayef Aguerd",
+      "meta": "Morocco · DF · West Ham United",
+      "href": "#morocco-aguerd"
+    },
+    {
+      "type": "player",
+      "id": "morocco-mazraoui",
+      "label": "Noussair Mazraoui",
+      "meta": "Morocco · DF · Manchester United",
+      "href": "#morocco-mazraoui"
+    },
+    {
+      "type": "player",
+      "id": "morocco-dari",
+      "label": "Achraf Dari",
+      "meta": "Morocco · DF · Stade Brest 29",
+      "href": "#morocco-dari"
+    },
+    {
+      "type": "player",
+      "id": "morocco-saiss",
+      "label": "Romain Saïss",
+      "meta": "Morocco · DF · Galatasaray",
+      "href": "#morocco-saiss"
+    },
+    {
+      "type": "player",
+      "id": "morocco-masina",
+      "label": "Adam Masina",
+      "meta": "Morocco · DF · Udinese Calcio",
+      "href": "#morocco-masina"
+    },
+    {
+      "type": "player",
+      "id": "morocco-attiyat-allah",
+      "label": "Yahia Attiyat Allah",
+      "meta": "Morocco · DF · Wydad AC",
+      "href": "#morocco-attiyat-allah"
+    },
+    {
+      "type": "player",
+      "id": "morocco-mmaee",
+      "label": "Sami Mmaee",
+      "meta": "Morocco · DF · Club Brugge",
+      "href": "#morocco-mmaee"
+    },
+    {
+      "type": "player",
+      "id": "morocco-amrabat",
+      "label": "Sofyan Amrabat",
+      "meta": "Morocco · MF · ACF Fiorentina",
+      "href": "#morocco-amrabat"
+    },
+    {
+      "type": "player",
+      "id": "morocco-ounahi",
+      "label": "Azzedine Ounahi",
+      "meta": "Morocco · MF · Olympique de Marseille",
+      "href": "#morocco-ounahi"
+    },
+    {
+      "type": "player",
+      "id": "morocco-amallah",
+      "label": "Selim Amallah",
+      "meta": "Morocco · MF · RC Strasbourg Alsace",
+      "href": "#morocco-amallah"
+    },
+    {
+      "type": "player",
+      "id": "morocco-ziyech",
+      "label": "Hakim Ziyech",
+      "meta": "Morocco · MF · Galatasaray",
+      "href": "#morocco-ziyech"
+    },
+    {
+      "type": "player",
+      "id": "morocco-chair",
+      "label": "Ilias Chair",
+      "meta": "Morocco · MF · Wolverhampton Wanderers",
+      "href": "#morocco-chair"
+    },
+    {
+      "type": "player",
+      "id": "morocco-benrahma",
+      "label": "Saïd Benrahma",
+      "meta": "Morocco · MF · Olympique Lyonnais",
+      "href": "#morocco-benrahma"
+    },
+    {
+      "type": "player",
+      "id": "morocco-harit",
+      "label": "Amine Harit",
+      "meta": "Morocco · MF · Olympique de Marseille",
+      "href": "#morocco-harit"
+    },
+    {
+      "type": "player",
+      "id": "morocco-zaroury",
+      "label": "Anass Zaroury",
+      "meta": "Morocco · MF · Brentford",
+      "href": "#morocco-zaroury"
+    },
+    {
+      "type": "player",
+      "id": "morocco-en-nesyri",
+      "label": "Youssef En-Nesyri",
+      "meta": "Morocco · FW · Fenerbahçe",
+      "href": "#morocco-en-nesyri"
+    },
+    {
+      "type": "player",
+      "id": "morocco-boufal",
+      "label": "Sofiane Boufal",
+      "meta": "Morocco · FW · Olympique de Marseille",
+      "href": "#morocco-boufal"
+    },
+    {
+      "type": "player",
+      "id": "morocco-igamane",
+      "label": "Hamza Igamane",
+      "meta": "Morocco · FW · Rangers FC",
+      "href": "#morocco-igamane"
+    },
+    {
+      "type": "player",
+      "id": "morocco-ezzalzouli",
+      "label": "Abde Ezzalzouli",
+      "meta": "Morocco · FW · Real Betis",
+      "href": "#morocco-ezzalzouli"
+    },
+    {
+      "type": "player",
+      "id": "morocco-aboukhlal",
+      "label": "Zakaria Aboukhlal",
+      "meta": "Morocco · FW · Toulouse FC",
+      "href": "#morocco-aboukhlal"
+    },
+    {
+      "type": "player",
+      "id": "morocco-el-khannous",
+      "label": "Bilal El Khannous",
+      "meta": "Morocco · FW · KRC Genk",
+      "href": "#morocco-el-khannous"
+    },
+    {
+      "type": "player",
+      "id": "morocco-el-kaabi",
+      "label": "Ayoub El Kaabi",
+      "meta": "Morocco · FW · Olympiakos FC",
+      "href": "#morocco-el-kaabi"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-verbruggen",
+      "label": "Bart Verbruggen",
+      "meta": "Netherlands · GK · Brighton & Hove Albion",
+      "href": "#netherlands-verbruggen"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-geertruida",
+      "label": "Lutsharel Geertruida",
+      "meta": "Netherlands · DF · Sunderland",
+      "href": "#netherlands-geertruida"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-de-roon",
+      "label": "Marten de Roon",
+      "meta": "Netherlands · MF · Atalanta",
+      "href": "#netherlands-de-roon"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-van-dijk",
+      "label": "Virgil van Dijk",
+      "meta": "Netherlands · DF · Liverpool",
+      "href": "#netherlands-van-dijk"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-ake",
+      "label": "Nathan Aké",
+      "meta": "Netherlands · DF · Manchester City",
+      "href": "#netherlands-ake"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-van-hecke",
+      "label": "Jan Paul van Hecke",
+      "meta": "Netherlands · DF · Brighton & Hove Albion",
+      "href": "#netherlands-van-hecke"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-kluivert",
+      "label": "Justin Kluivert",
+      "meta": "Netherlands · MF · AFC Bournemouth",
+      "href": "#netherlands-kluivert"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-gravenberch",
+      "label": "Ryan Gravenberch",
+      "meta": "Netherlands · MF · Liverpool",
+      "href": "#netherlands-gravenberch"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-weghorst",
+      "label": "Wout Weghorst",
+      "meta": "Netherlands · FW · AFC Ajax",
+      "href": "#netherlands-weghorst"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-memphis",
+      "label": "Memphis Depay",
+      "meta": "Netherlands · FW · Corinthians",
+      "href": "#netherlands-memphis"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-gakpo",
+      "label": "Cody Gakpo",
+      "meta": "Netherlands · FW · Liverpool",
+      "href": "#netherlands-gakpo"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-wieffer",
+      "label": "Mats Wieffer",
+      "meta": "Netherlands · DF · Brighton & Hove Albion",
+      "href": "#netherlands-wieffer"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-roefs",
+      "label": "Robin Roefs",
+      "meta": "Netherlands · GK · Sunderland",
+      "href": "#netherlands-roefs"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-reijnders",
+      "label": "Tijjani Reijnders",
+      "meta": "Netherlands · MF · Manchester City",
+      "href": "#netherlands-reijnders"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-van-de-ven",
+      "label": "Micky van de Ven",
+      "meta": "Netherlands · DF · Tottenham Hotspur",
+      "href": "#netherlands-van-de-ven"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-til",
+      "label": "Guus Til",
+      "meta": "Netherlands · MF · PSV Eindhoven",
+      "href": "#netherlands-til"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-lang",
+      "label": "Noa Lang",
+      "meta": "Netherlands · FW · Galatasaray",
+      "href": "#netherlands-lang"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-malen",
+      "label": "Donyell Malen",
+      "meta": "Netherlands · FW · AS Roma",
+      "href": "#netherlands-malen"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-brobbey",
+      "label": "Brian Brobbey",
+      "meta": "Netherlands · FW · Sunderland",
+      "href": "#netherlands-brobbey"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-koopmeiners",
+      "label": "Teun Koopmeiners",
+      "meta": "Netherlands · MF · Juventus",
+      "href": "#netherlands-koopmeiners"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-de-jong",
+      "label": "Frenkie de Jong",
+      "meta": "Netherlands · MF · FC Barcelona",
+      "href": "#netherlands-de-jong"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-dumfries",
+      "label": "Denzel Dumfries",
+      "meta": "Netherlands · DF · Inter Milan",
+      "href": "#netherlands-dumfries"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-flekken",
+      "label": "Mark Flekken",
+      "meta": "Netherlands · GK · Bayer Leverkusen",
+      "href": "#netherlands-flekken"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-summerville",
+      "label": "Crysencio Summerville",
+      "meta": "Netherlands · FW · West Ham United",
+      "href": "#netherlands-summerville"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-hato",
+      "label": "Jorrel Hato",
+      "meta": "Netherlands · DF · Chelsea",
+      "href": "#netherlands-hato"
+    },
+    {
+      "type": "player",
+      "id": "netherlands-timber",
+      "label": "Quinten Timber",
+      "meta": "Netherlands · MF · Olympique de Marseille",
+      "href": "#netherlands-timber"
+    },
+    {
+      "type": "player",
+      "id": "norway-nyland",
+      "label": "Ørjan Nyland",
+      "meta": "Norway · GK · Brentford",
+      "href": "#norway-nyland"
+    },
+    {
+      "type": "player",
+      "id": "norway-sels",
+      "label": "Matz Sels",
+      "meta": "Norway · GK · Nottingham Forest",
+      "href": "#norway-sels"
+    },
+    {
+      "type": "player",
+      "id": "norway-klaesson",
+      "label": "Kristoffer Klaesson",
+      "meta": "Norway · GK · FK Bodø/Glimt",
+      "href": "#norway-klaesson"
+    },
+    {
+      "type": "player",
+      "id": "norway-ajer",
+      "label": "Kristoffer Ajer",
+      "meta": "Norway · DF · Brentford",
+      "href": "#norway-ajer"
+    },
+    {
+      "type": "player",
+      "id": "norway-ostigard",
+      "label": "Leo Østigård",
+      "meta": "Norway · DF · SSC Napoli",
+      "href": "#norway-ostigard"
+    },
+    {
+      "type": "player",
+      "id": "norway-ryerson",
+      "label": "Julian Ryerson",
+      "meta": "Norway · DF · Borussia Dortmund",
+      "href": "#norway-ryerson"
+    },
+    {
+      "type": "player",
+      "id": "norway-pedersen-m",
+      "label": "Marcus Holmgren Pedersen",
+      "meta": "Norway · DF · Feyenoord",
+      "href": "#norway-pedersen-m"
+    },
+    {
+      "type": "player",
+      "id": "norway-hanche-olsen",
+      "label": "Andreas Hanche-Olsen",
+      "meta": "Norway · DF · KRC Genk",
+      "href": "#norway-hanche-olsen"
+    },
+    {
+      "type": "player",
+      "id": "norway-meling",
+      "label": "Birger Meling",
+      "meta": "Norway · DF · OGC Nice",
+      "href": "#norway-meling"
+    },
+    {
+      "type": "player",
+      "id": "norway-strandberg",
+      "label": "Stefan Strandberg",
+      "meta": "Norway · DF · Vålerenga FK",
+      "href": "#norway-strandberg"
+    },
+    {
+      "type": "player",
+      "id": "norway-gregersen",
+      "label": "Stian Gregersen",
+      "meta": "Norway · DF · SK Brann",
+      "href": "#norway-gregersen"
+    },
+    {
+      "type": "player",
+      "id": "norway-odegaard",
+      "label": "Martin Ødegaard",
+      "meta": "Norway · MF · Arsenal",
+      "href": "#norway-odegaard"
+    },
+    {
+      "type": "player",
+      "id": "norway-berge",
+      "label": "Sander Berge",
+      "meta": "Norway · MF · Fulham FC",
+      "href": "#norway-berge"
+    },
+    {
+      "type": "player",
+      "id": "norway-aursnes",
+      "label": "Fredrik Aursnes",
+      "meta": "Norway · MF · SL Benfica",
+      "href": "#norway-aursnes"
+    },
+    {
+      "type": "player",
+      "id": "norway-berg",
+      "label": "Patrick Berg",
+      "meta": "Norway · MF · FK Bodø/Glimt",
+      "href": "#norway-berg"
+    },
+    {
+      "type": "player",
+      "id": "norway-normann",
+      "label": "Mathias Normann",
+      "meta": "Norway · MF · FK Bodø/Glimt",
+      "href": "#norway-normann"
+    },
+    {
+      "type": "player",
+      "id": "norway-hauge",
+      "label": "Jens Petter Hauge",
+      "meta": "Norway · MF · KRC Genk",
+      "href": "#norway-hauge"
+    },
+    {
+      "type": "player",
+      "id": "norway-holm",
+      "label": "Odin Thiago Holm",
+      "meta": "Norway · MF · Vålerenga FK",
+      "href": "#norway-holm"
+    },
+    {
+      "type": "player",
+      "id": "norway-vetlesen",
+      "label": "Hugo Vetlesen",
+      "meta": "Norway · MF · FK Bodø/Glimt",
+      "href": "#norway-vetlesen"
+    },
+    {
+      "type": "player",
+      "id": "norway-haaland",
+      "label": "Erling Haaland",
+      "meta": "Norway · FW · Manchester City",
+      "href": "#norway-haaland"
+    },
+    {
+      "type": "player",
+      "id": "norway-sorloth",
+      "label": "Alexander Sørloth",
+      "meta": "Norway · FW · Atlético Madrid",
+      "href": "#norway-sorloth"
+    },
+    {
+      "type": "player",
+      "id": "norway-elyounoussi",
+      "label": "Mohamed Elyounoussi",
+      "meta": "Norway · FW · Viking FK",
+      "href": "#norway-elyounoussi"
+    },
+    {
+      "type": "player",
+      "id": "norway-nusa",
+      "label": "Antonio Nusa",
+      "meta": "Norway · FW · RB Leipzig",
+      "href": "#norway-nusa"
+    },
+    {
+      "type": "player",
+      "id": "norway-bobb",
+      "label": "Oscar Bobb",
+      "meta": "Norway · FW · Manchester City",
+      "href": "#norway-bobb"
+    },
+    {
+      "type": "player",
+      "id": "norway-botheim",
+      "label": "Erik Botheim",
+      "meta": "Norway · FW · FK Bodø/Glimt",
+      "href": "#norway-botheim"
+    },
+    {
+      "type": "player",
+      "id": "norway-solbakken",
+      "label": "Ola Solbakken",
+      "meta": "Norway · FW · AS Roma",
+      "href": "#norway-solbakken"
+    },
+    {
+      "type": "player",
+      "id": "portugal-diogo-costa",
+      "label": "Diogo Costa",
+      "meta": "Portugal · GK · FC Porto",
+      "href": "#portugal-diogo-costa"
+    },
+    {
+      "type": "player",
+      "id": "portugal-semedo",
+      "label": "Nélson Semedo",
+      "meta": "Portugal · DF · Fenerbahçe",
+      "href": "#portugal-semedo"
+    },
+    {
+      "type": "player",
+      "id": "portugal-dias",
+      "label": "Rúben Dias",
+      "meta": "Portugal · DF · Manchester City",
+      "href": "#portugal-dias"
+    },
+    {
+      "type": "player",
+      "id": "portugal-araujo",
+      "label": "Tomás Araújo",
+      "meta": "Portugal · DF · SL Benfica",
+      "href": "#portugal-araujo"
+    },
+    {
+      "type": "player",
+      "id": "portugal-dalot",
+      "label": "Diogo Dalot",
+      "meta": "Portugal · DF · Manchester United",
+      "href": "#portugal-dalot"
+    },
+    {
+      "type": "player",
+      "id": "portugal-nunes",
+      "label": "Matheus Nunes",
+      "meta": "Portugal · MF · Manchester City",
+      "href": "#portugal-nunes"
+    },
+    {
+      "type": "player",
+      "id": "portugal-ronaldo",
+      "label": "Cristiano Ronaldo",
+      "meta": "Portugal · FW · Al-Nassr",
+      "href": "#portugal-ronaldo"
+    },
+    {
+      "type": "player",
+      "id": "portugal-fernandes",
+      "label": "Bruno Fernandes",
+      "meta": "Portugal · MF · Manchester United",
+      "href": "#portugal-fernandes"
+    },
+    {
+      "type": "player",
+      "id": "portugal-ramos",
+      "label": "Gonçalo Ramos",
+      "meta": "Portugal · FW · Paris Saint-Germain",
+      "href": "#portugal-ramos"
+    },
+    {
+      "type": "player",
+      "id": "portugal-bernardo-silva",
+      "label": "Bernardo Silva",
+      "meta": "Portugal · MF · Manchester City",
+      "href": "#portugal-bernardo-silva"
+    },
+    {
+      "type": "player",
+      "id": "portugal-felix",
+      "label": "João Félix",
+      "meta": "Portugal · FW · Al-Nassr",
+      "href": "#portugal-felix"
+    },
+    {
+      "type": "player",
+      "id": "portugal-sa",
+      "label": "José Sá",
+      "meta": "Portugal · GK · Wolverhampton Wanderers",
+      "href": "#portugal-sa"
+    },
+    {
+      "type": "player",
+      "id": "portugal-veiga",
+      "label": "Renato Veiga",
+      "meta": "Portugal · DF · Villarreal",
+      "href": "#portugal-veiga"
+    },
+    {
+      "type": "player",
+      "id": "portugal-inacio",
+      "label": "Gonçalo Inácio",
+      "meta": "Portugal · DF · Sporting CP",
+      "href": "#portugal-inacio"
+    },
+    {
+      "type": "player",
+      "id": "portugal-joao-neves",
+      "label": "João Neves",
+      "meta": "Portugal · MF · Paris Saint-Germain",
+      "href": "#portugal-joao-neves"
+    },
+    {
+      "type": "player",
+      "id": "portugal-trincao",
+      "label": "Francisco Trincão",
+      "meta": "Portugal · FW · Sporting CP",
+      "href": "#portugal-trincao"
+    },
+    {
+      "type": "player",
+      "id": "portugal-leao",
+      "label": "Rafael Leão",
+      "meta": "Portugal · FW · AC Milan",
+      "href": "#portugal-leao"
+    },
+    {
+      "type": "player",
+      "id": "portugal-neto",
+      "label": "Pedro Neto",
+      "meta": "Portugal · FW · Chelsea",
+      "href": "#portugal-neto"
+    },
+    {
+      "type": "player",
+      "id": "portugal-guedes",
+      "label": "Gonçalo Guedes",
+      "meta": "Portugal · FW · Real Sociedad",
+      "href": "#portugal-guedes"
+    },
+    {
+      "type": "player",
+      "id": "portugal-cancelo",
+      "label": "João Cancelo",
+      "meta": "Portugal · DF · FC Barcelona",
+      "href": "#portugal-cancelo"
+    },
+    {
+      "type": "player",
+      "id": "portugal-ruben-neves",
+      "label": "Rúben Neves",
+      "meta": "Portugal · MF · Al-Hilal",
+      "href": "#portugal-ruben-neves"
+    },
+    {
+      "type": "player",
+      "id": "portugal-rui-silva",
+      "label": "Rui Silva",
+      "meta": "Portugal · GK · Sporting CP",
+      "href": "#portugal-rui-silva"
+    },
+    {
+      "type": "player",
+      "id": "portugal-vitinha",
+      "label": "Vitinha",
+      "meta": "Portugal · MF · Paris Saint-Germain",
+      "href": "#portugal-vitinha"
+    },
+    {
+      "type": "player",
+      "id": "portugal-samu-costa",
+      "label": "Samú Costa",
+      "meta": "Portugal · DF · RCD Mallorca",
+      "href": "#portugal-samu-costa"
+    },
+    {
+      "type": "player",
+      "id": "portugal-mendes",
+      "label": "Nuno Mendes",
+      "meta": "Portugal · DF · Paris Saint-Germain",
+      "href": "#portugal-mendes"
+    },
+    {
+      "type": "player",
+      "id": "portugal-conceicao",
+      "label": "Francisco Conceição",
+      "meta": "Portugal · FW · Juventus",
+      "href": "#portugal-conceicao"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-williams",
+      "label": "Ronwen Williams",
+      "meta": "South Africa · GK · Mamelodi Sundowns",
+      "href": "#south-africa-williams"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-matuludi",
+      "label": "Thabang Matuludi",
+      "meta": "South Africa · DF · Polokwane City",
+      "href": "#south-africa-matuludi"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-ndamane",
+      "label": "Khulumani Ndamane",
+      "meta": "South Africa · DF · Mamelodi Sundowns",
+      "href": "#south-africa-ndamane"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-mokoena",
+      "label": "Teboho Mokoena",
+      "meta": "South Africa · MF · Mamelodi Sundowns",
+      "href": "#south-africa-mokoena"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-mbatha",
+      "label": "Thalente Mbatha",
+      "meta": "South Africa · MF · Orlando Pirates",
+      "href": "#south-africa-mbatha"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-modiba",
+      "label": "Aubrey Modiba",
+      "meta": "South Africa · DF · Mamelodi Sundowns",
+      "href": "#south-africa-modiba"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-appollis",
+      "label": "Oswin Appollis",
+      "meta": "South Africa · FW · Orlando Pirates",
+      "href": "#south-africa-appollis"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-moremi",
+      "label": "Tshepang Moremi",
+      "meta": "South Africa · FW · Orlando Pirates",
+      "href": "#south-africa-moremi"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-foster",
+      "label": "Lyle Foster",
+      "meta": "South Africa · FW · Burnley FC",
+      "href": "#south-africa-foster"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-mofokeng",
+      "label": "Relebohile Mofokeng",
+      "meta": "South Africa · FW · Orlando Pirates",
+      "href": "#south-africa-mofokeng"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-zwane",
+      "label": "Themba Zwane",
+      "meta": "South Africa · MF · Mamelodi Sundowns",
+      "href": "#south-africa-zwane"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-maseko",
+      "label": "Thapelo Maseko",
+      "meta": "South Africa · FW · AEL Limassol",
+      "href": "#south-africa-maseko"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-sithole",
+      "label": "Sphephelo Sithole",
+      "meta": "South Africa · MF · CD Tondela",
+      "href": "#south-africa-sithole"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-mbokazi",
+      "label": "Mbekezeli Mbokazi",
+      "meta": "South Africa · DF · Chicago Fire FC",
+      "href": "#south-africa-mbokazi"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-rayners",
+      "label": "Iqraam Rayners",
+      "meta": "South Africa · FW · Mamelodi Sundowns",
+      "href": "#south-africa-rayners"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-chaine",
+      "label": "Sipho Chaine",
+      "meta": "South Africa · GK · Orlando Pirates",
+      "href": "#south-africa-chaine"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-makgopa",
+      "label": "Evidence Makgopa",
+      "meta": "South Africa · FW · Orlando Pirates",
+      "href": "#south-africa-makgopa"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-kabini",
+      "label": "Samukele Kabini",
+      "meta": "South Africa · DF · Molde FK",
+      "href": "#south-africa-kabini"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-sibisi",
+      "label": "Nkosinathi Sibisi",
+      "meta": "South Africa · DF · Orlando Pirates",
+      "href": "#south-africa-sibisi"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-mudau",
+      "label": "Khuliso Mudau",
+      "meta": "South Africa · DF · Mamelodi Sundowns",
+      "href": "#south-africa-mudau"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-okon",
+      "label": "Ime Okon",
+      "meta": "South Africa · DF · Hannover 96",
+      "href": "#south-africa-okon"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-goss",
+      "label": "Ricardo Goss",
+      "meta": "South Africa · GK · Siwelele",
+      "href": "#south-africa-goss"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-adams",
+      "label": "Jayden Adams",
+      "meta": "South Africa · MF · Mamelodi Sundowns",
+      "href": "#south-africa-adams"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-makhanya",
+      "label": "Olwethu Makhanya",
+      "meta": "South Africa · DF · Philadelphia Union",
+      "href": "#south-africa-makhanya"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-sebelebele",
+      "label": "Kamogelo Sebelebele",
+      "meta": "South Africa · FW · Orlando Pirates",
+      "href": "#south-africa-sebelebele"
+    },
+    {
+      "type": "player",
+      "id": "south-africa-cross",
+      "label": "Bradley Cross",
+      "meta": "South Africa · DF · Kaizer Chiefs",
+      "href": "#south-africa-cross"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-kim-sg",
+      "label": "Kim Seung-gyu",
+      "meta": "South Korea · GK · FC Tokyo",
+      "href": "#south-korea-kim-sg"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-lee-hb",
+      "label": "Lee Han-beom",
+      "meta": "South Korea · DF · FC Midtjylland",
+      "href": "#south-korea-lee-hb"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-lee-gh",
+      "label": "Lee Gi-hyuk",
+      "meta": "South Korea · MF · Gangwon FC",
+      "href": "#south-korea-lee-gh"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-kim-mj",
+      "label": "Kim Min-jae",
+      "meta": "South Korea · DF · Bayern Munich",
+      "href": "#south-korea-kim-mj"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-kim-th",
+      "label": "Kim Tae-hyeon",
+      "meta": "South Korea · DF · Kashima Antlers",
+      "href": "#south-korea-kim-th"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-hwang-ib",
+      "label": "Hwang In-beom",
+      "meta": "South Korea · MF · Feyenoord",
+      "href": "#south-korea-hwang-ib"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-son",
+      "label": "Son Heung-min",
+      "meta": "South Korea · FW · LAFC",
+      "href": "#south-korea-son"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-paik",
+      "label": "Paik Seung-ho",
+      "meta": "South Korea · MF · Birmingham City",
+      "href": "#south-korea-paik"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-cho-gs",
+      "label": "Cho Gue-sung",
+      "meta": "South Korea · FW · FC Midtjylland",
+      "href": "#south-korea-cho-gs"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-lee-js",
+      "label": "Lee Jae-sung",
+      "meta": "South Korea · MF · Mainz 05",
+      "href": "#south-korea-lee-js"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-hwang-hc",
+      "label": "Hwang Hee-chan",
+      "meta": "South Korea · MF · Wolverhampton Wanderers",
+      "href": "#south-korea-hwang-hc"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-song",
+      "label": "Song Bum-keun",
+      "meta": "South Korea · GK · Jeonbuk Hyundai Motors",
+      "href": "#south-korea-song"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-lee-ts",
+      "label": "Lee Tae-seok",
+      "meta": "South Korea · DF · Austria Wien",
+      "href": "#south-korea-lee-ts"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-cho-wj",
+      "label": "Cho Wi-je",
+      "meta": "South Korea · DF · Jeonbuk Hyundai Motors",
+      "href": "#south-korea-cho-wj"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-kim-mh",
+      "label": "Kim Moon-hwan",
+      "meta": "South Korea · DF · Daejeon Hana Citizen",
+      "href": "#south-korea-kim-mh"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-park",
+      "label": "Park Jin-seob",
+      "meta": "South Korea · DF · Zhejiang Professional",
+      "href": "#south-korea-park"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-bae",
+      "label": "Bae Jun-ho",
+      "meta": "South Korea · MF · Stoke City",
+      "href": "#south-korea-bae"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-oh",
+      "label": "Oh Hyeon-gyu",
+      "meta": "South Korea · FW · Beşiktaş JK",
+      "href": "#south-korea-oh"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-lee-ki",
+      "label": "Lee Kang-in",
+      "meta": "South Korea · MF · Paris Saint-Germain",
+      "href": "#south-korea-lee-ki"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-yang",
+      "label": "Yang Hyun-jun",
+      "meta": "South Korea · MF · Celtic FC",
+      "href": "#south-korea-yang"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-jo",
+      "label": "Jo Hyeon-woo",
+      "meta": "South Korea · GK · Ulsan HD FC",
+      "href": "#south-korea-jo"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-seol",
+      "label": "Seol Young-woo",
+      "meta": "South Korea · DF · FK Crvena zvezda",
+      "href": "#south-korea-seol"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-castrop",
+      "label": "Jens Castrop",
+      "meta": "South Korea · DF · Borussia Mönchengladbach",
+      "href": "#south-korea-castrop"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-kim-jg",
+      "label": "Kim Jin-gyu",
+      "meta": "South Korea · MF · Jeonbuk Hyundai Motors",
+      "href": "#south-korea-kim-jg"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-eom",
+      "label": "Eom Ji-sung",
+      "meta": "South Korea · MF · Swansea City",
+      "href": "#south-korea-eom"
+    },
+    {
+      "type": "player",
+      "id": "south-korea-lee-dg",
+      "label": "Lee Dong-gyeong",
+      "meta": "South Korea · MF · Ulsan HD FC",
+      "href": "#south-korea-lee-dg"
+    },
+    {
+      "type": "player",
+      "id": "spain-raya",
+      "label": "David Raya",
+      "meta": "Spain · GK · Arsenal",
+      "href": "#spain-raya"
+    },
+    {
+      "type": "player",
+      "id": "spain-pubill",
+      "label": "Marc Pubill",
+      "meta": "Spain · DF · Atlético Madrid",
+      "href": "#spain-pubill"
+    },
+    {
+      "type": "player",
+      "id": "spain-grimaldo",
+      "label": "Álex Grimaldo",
+      "meta": "Spain · DF · Bayer Leverkusen",
+      "href": "#spain-grimaldo"
+    },
+    {
+      "type": "player",
+      "id": "spain-eric-garcia",
+      "label": "Eric García",
+      "meta": "Spain · DF · FC Barcelona",
+      "href": "#spain-eric-garcia"
+    },
+    {
+      "type": "player",
+      "id": "spain-llorente",
+      "label": "Marcos Llorente",
+      "meta": "Spain · DF · Atlético Madrid",
+      "href": "#spain-llorente"
+    },
+    {
+      "type": "player",
+      "id": "spain-merino",
+      "label": "Mikel Merino",
+      "meta": "Spain · MF · Arsenal",
+      "href": "#spain-merino"
+    },
+    {
+      "type": "player",
+      "id": "spain-torres",
+      "label": "Ferran Torres",
+      "meta": "Spain · FW · FC Barcelona",
+      "href": "#spain-torres"
+    },
+    {
+      "type": "player",
+      "id": "spain-ruiz",
+      "label": "Fabián Ruiz",
+      "meta": "Spain · MF · Paris Saint-Germain",
+      "href": "#spain-ruiz"
+    },
+    {
+      "type": "player",
+      "id": "spain-gavi",
+      "label": "Gavi",
+      "meta": "Spain · MF · FC Barcelona",
+      "href": "#spain-gavi"
+    },
+    {
+      "type": "player",
+      "id": "spain-olmo",
+      "label": "Dani Olmo",
+      "meta": "Spain · FW · FC Barcelona",
+      "href": "#spain-olmo"
+    },
+    {
+      "type": "player",
+      "id": "spain-pino",
+      "label": "Yéremy Pino",
+      "meta": "Spain · FW · Crystal Palace",
+      "href": "#spain-pino"
+    },
+    {
+      "type": "player",
+      "id": "spain-porro",
+      "label": "Pedro Porro",
+      "meta": "Spain · DF · Tottenham Hotspur",
+      "href": "#spain-porro"
+    },
+    {
+      "type": "player",
+      "id": "spain-joan-garcia",
+      "label": "Joan Garcia",
+      "meta": "Spain · GK · FC Barcelona",
+      "href": "#spain-joan-garcia"
+    },
+    {
+      "type": "player",
+      "id": "spain-laporte",
+      "label": "Aymeric Laporte",
+      "meta": "Spain · DF · Athletic Bilbao",
+      "href": "#spain-laporte"
+    },
+    {
+      "type": "player",
+      "id": "spain-baena",
+      "label": "Álex Baena",
+      "meta": "Spain · MF · Atlético Madrid",
+      "href": "#spain-baena"
+    },
+    {
+      "type": "player",
+      "id": "spain-rodri",
+      "label": "Rodri",
+      "meta": "Spain · MF · Manchester City",
+      "href": "#spain-rodri"
+    },
+    {
+      "type": "player",
+      "id": "spain-williams",
+      "label": "Nico Williams",
+      "meta": "Spain · FW · Athletic Bilbao",
+      "href": "#spain-williams"
+    },
+    {
+      "type": "player",
+      "id": "spain-zubimendi",
+      "label": "Martín Zubimendi",
+      "meta": "Spain · MF · Arsenal",
+      "href": "#spain-zubimendi"
+    },
+    {
+      "type": "player",
+      "id": "spain-yamal",
+      "label": "Lamine Yamal",
+      "meta": "Spain · FW · FC Barcelona",
+      "href": "#spain-yamal"
+    },
+    {
+      "type": "player",
+      "id": "spain-pedri",
+      "label": "Pedri",
+      "meta": "Spain · MF · FC Barcelona",
+      "href": "#spain-pedri"
+    },
+    {
+      "type": "player",
+      "id": "spain-oyarzabal",
+      "label": "Mikel Oyarzabal",
+      "meta": "Spain · FW · Real Sociedad",
+      "href": "#spain-oyarzabal"
+    },
+    {
+      "type": "player",
+      "id": "spain-cubarsi",
+      "label": "Pau Cubarsí",
+      "meta": "Spain · DF · FC Barcelona",
+      "href": "#spain-cubarsi"
+    },
+    {
+      "type": "player",
+      "id": "spain-simon",
+      "label": "Unai Simón",
+      "meta": "Spain · GK · Athletic Bilbao",
+      "href": "#spain-simon"
+    },
+    {
+      "type": "player",
+      "id": "spain-cucurella",
+      "label": "Marc Cucurella",
+      "meta": "Spain · DF · Chelsea",
+      "href": "#spain-cucurella"
+    },
+    {
+      "type": "player",
+      "id": "spain-munoz",
+      "label": "Víctor Muñoz",
+      "meta": "Spain · FW · Osasuna",
+      "href": "#spain-munoz"
+    },
+    {
+      "type": "player",
+      "id": "spain-iglesias",
+      "label": "Borja Iglesias",
+      "meta": "Spain · FW · Celta Vigo",
+      "href": "#spain-iglesias"
+    },
+    {
+      "type": "player",
+      "id": "usa-turner",
+      "label": "Matt Turner",
+      "meta": "United States · GK · Crystal Palace",
+      "href": "#usa-turner"
+    },
+    {
+      "type": "player",
+      "id": "usa-steffen",
+      "label": "Zack Steffen",
+      "meta": "United States · GK · Colorado Rapids",
+      "href": "#usa-steffen"
+    },
+    {
+      "type": "player",
+      "id": "usa-schulte",
+      "label": "Patrick Schulte",
+      "meta": "United States · GK · Columbus Crew",
+      "href": "#usa-schulte"
+    },
+    {
+      "type": "player",
+      "id": "usa-dest",
+      "label": "Sergiño Dest",
+      "meta": "United States · DF · PSV Eindhoven",
+      "href": "#usa-dest"
+    },
+    {
+      "type": "player",
+      "id": "usa-richards",
+      "label": "Chris Richards",
+      "meta": "United States · DF · Crystal Palace",
+      "href": "#usa-richards"
+    },
+    {
+      "type": "player",
+      "id": "usa-zimmerman",
+      "label": "Walker Zimmerman",
+      "meta": "United States · DF · Nashville SC",
+      "href": "#usa-zimmerman"
+    },
+    {
+      "type": "player",
+      "id": "usa-carter-vickers",
+      "label": "Cameron Carter-Vickers",
+      "meta": "United States · DF · Celtic FC",
+      "href": "#usa-carter-vickers"
+    },
+    {
+      "type": "player",
+      "id": "usa-vines",
+      "label": "Sam Vines",
+      "meta": "United States · DF · Real Betis",
+      "href": "#usa-vines"
+    },
+    {
+      "type": "player",
+      "id": "usa-scally",
+      "label": "Joe Scally",
+      "meta": "United States · DF · Borussia Mönchengladbach",
+      "href": "#usa-scally"
+    },
+    {
+      "type": "player",
+      "id": "usa-robinson",
+      "label": "Miles Robinson",
+      "meta": "United States · DF · Atlanta United FC",
+      "href": "#usa-robinson"
+    },
+    {
+      "type": "player",
+      "id": "usa-yedlin",
+      "label": "DeAndre Yedlin",
+      "meta": "United States · DF · Inter Miami CF",
+      "href": "#usa-yedlin"
+    },
+    {
+      "type": "player",
+      "id": "usa-adams",
+      "label": "Tyler Adams",
+      "meta": "United States · MF · AFC Bournemouth",
+      "href": "#usa-adams"
+    },
+    {
+      "type": "player",
+      "id": "usa-mckennie",
+      "label": "Weston McKennie",
+      "meta": "United States · MF · Juventus",
+      "href": "#usa-mckennie"
+    },
+    {
+      "type": "player",
+      "id": "usa-musah",
+      "label": "Yunus Musah",
+      "meta": "United States · MF · AC Milan",
+      "href": "#usa-musah"
+    },
+    {
+      "type": "player",
+      "id": "usa-aaronson",
+      "label": "Brenden Aaronson",
+      "meta": "United States · MF · Brentford",
+      "href": "#usa-aaronson"
+    },
+    {
+      "type": "player",
+      "id": "usa-de-la-torre",
+      "label": "Luca de la Torre",
+      "meta": "United States · MF · Celta Vigo",
+      "href": "#usa-de-la-torre"
+    },
+    {
+      "type": "player",
+      "id": "usa-tillman",
+      "label": "Malik Tillman",
+      "meta": "United States · MF · PSV Eindhoven",
+      "href": "#usa-tillman"
+    },
+    {
+      "type": "player",
+      "id": "usa-reyna",
+      "label": "Gio Reyna",
+      "meta": "United States · MF · Nottingham Forest",
+      "href": "#usa-reyna"
+    },
+    {
+      "type": "player",
+      "id": "usa-acosta",
+      "label": "Kellyn Acosta",
+      "meta": "United States · MF · LAFC",
+      "href": "#usa-acosta"
+    },
+    {
+      "type": "player",
+      "id": "usa-pulisic",
+      "label": "Christian Pulisic",
+      "meta": "United States · FW · AC Milan",
+      "href": "#usa-pulisic"
+    },
+    {
+      "type": "player",
+      "id": "usa-pepi",
+      "label": "Ricardo Pepi",
+      "meta": "United States · FW · PSV Eindhoven",
+      "href": "#usa-pepi"
+    },
+    {
+      "type": "player",
+      "id": "usa-sargent",
+      "label": "Josh Sargent",
+      "meta": "United States · FW · West Ham United",
+      "href": "#usa-sargent"
+    },
+    {
+      "type": "player",
+      "id": "usa-balogun",
+      "label": "Folarin Balogun",
+      "meta": "United States · FW · AS Monaco",
+      "href": "#usa-balogun"
+    },
+    {
+      "type": "player",
+      "id": "usa-weah",
+      "label": "Timothy Weah",
+      "meta": "United States · FW · Juventus",
+      "href": "#usa-weah"
+    },
+    {
+      "type": "player",
+      "id": "usa-ferreira",
+      "label": "Jesus Ferreira",
+      "meta": "United States · FW · FC Dallas",
+      "href": "#usa-ferreira"
+    },
+    {
+      "type": "player",
+      "id": "usa-morris",
+      "label": "Jordan Morris",
+      "meta": "United States · FW · Seattle Sounders FC",
+      "href": "#usa-morris"
+    }
   ]
 }

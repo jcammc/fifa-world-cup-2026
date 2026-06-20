@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "bosnia-vasilj",         "name": "Nikola Vasilj",           "shirt": 1,  "position": "GK", "dob": "1995-12-02", "age": 30, "caps": 26,  "goals": 0,  "clubId": "fc-st-pauli",      "captain": false, "bio": "" },
+    { "id": "bosnia-mujakic",        "name": "Nihad Mujakić",           "shirt": 2,  "position": "DF", "dob": "1998-04-15", "age": 28, "caps": 12,  "goals": 1,  "clubId": "gaziantep",        "captain": false, "bio": "" },
+    { "id": "bosnia-hadzikadunc",    "name": "Dennis Hadžikadunić",     "shirt": 3,  "position": "DF", "dob": "1998-07-09", "age": 27, "caps": 32,  "goals": 0,  "clubId": "sampdoria",        "captain": false, "bio": "" },
+    { "id": "bosnia-muharemovic",    "name": "Tarik Muharemović",       "shirt": 4,  "position": "DF", "dob": "2003-02-28", "age": 23, "caps": 14,  "goals": 1,  "clubId": "sassuolo",         "captain": false, "bio": "" },
+    { "id": "bosnia-kolasinac",      "name": "Sead Kolašinac",          "shirt": 5,  "position": "DF", "dob": "1993-06-20", "age": 32, "caps": 65,  "goals": 0,  "clubId": "atalanta",         "captain": false, "bio": "" },
+    { "id": "bosnia-tahirovic",      "name": "Benjamin Tahirović",      "shirt": 6,  "position": "MF", "dob": "2003-03-03", "age": 23, "caps": 28,  "goals": 2,  "clubId": "brondby",          "captain": false, "bio": "" },
+    { "id": "bosnia-dedic",          "name": "Amar Dedić",              "shirt": 7,  "position": "DF", "dob": "2002-08-18", "age": 23, "caps": 28,  "goals": 1,  "clubId": "benfica",          "captain": false, "bio": "" },
+    { "id": "bosnia-gigovic",        "name": "Armin Gigović",           "shirt": 8,  "position": "MF", "dob": "2002-04-06", "age": 24, "caps": 20,  "goals": 1,  "clubId": "young-boys",       "captain": false, "bio": "" },
+    { "id": "bosnia-bazdar",         "name": "Samed Baždar",            "shirt": 9,  "position": "FW", "dob": "2004-01-31", "age": 22, "caps": 13,  "goals": 1,  "clubId": "jagiellonia",      "captain": false, "bio": "" },
+    { "id": "bosnia-demirovic",      "name": "Ermedin Demirović",       "shirt": 10, "position": "FW", "dob": "1998-03-25", "age": 28, "caps": 40,  "goals": 4,  "clubId": "vfb-stuttgart",    "captain": false, "bio": "" },
+    { "id": "bosnia-dzeko",          "name": "Edin Džeko",              "shirt": 11, "position": "FW", "dob": "1986-03-17", "age": 40, "caps": 148, "goals": 73, "clubId": "schalke-04",       "captain": true,  "bio": "" },
+    { "id": "bosnia-jurkas",         "name": "Mladen Jurkas",           "shirt": 12, "position": "GK", "dob": "2007-10-07", "age": 18, "caps": 0,   "goals": 0,  "clubId": "fc-borac",         "captain": false, "bio": "" },
+    { "id": "bosnia-basic",          "name": "Ivan Bašić",              "shirt": 13, "position": "MF", "dob": "2002-04-30", "age": 24, "caps": 17,  "goals": 0,  "clubId": "fc-astana",        "captain": false, "bio": "" },
+    { "id": "bosnia-sunjic",         "name": "Ivan Šunjić",             "shirt": 14, "position": "MF", "dob": "1996-10-09", "age": 29, "caps": 11,  "goals": 0,  "clubId": "pafos",            "captain": false, "bio": "" },
+    { "id": "bosnia-memic",          "name": "Amar Memić",              "shirt": 15, "position": "MF", "dob": "2001-01-20", "age": 25, "caps": 13,  "goals": 1,  "clubId": "viktoria-plzen",   "captain": false, "bio": "" },
+    { "id": "bosnia-hadzahmetovic",  "name": "Amir Hadžiahmetović",     "shirt": 16, "position": "MF", "dob": "1997-03-08", "age": 29, "caps": 36,  "goals": 0,  "clubId": "hull-city",        "captain": false, "bio": "" },
+    { "id": "bosnia-burnic",         "name": "Dženis Burnić",           "shirt": 17, "position": "MF", "dob": "1998-05-22", "age": 27, "caps": 20,  "goals": 0,  "clubId": "karlsruher-sc",    "captain": false, "bio": "" },
+    { "id": "bosnia-katic",          "name": "Nikola Katić",            "shirt": 18, "position": "DF", "dob": "1996-10-10", "age": 29, "caps": 17,  "goals": 2,  "clubId": "schalke-04",       "captain": false, "bio": "" },
+    { "id": "bosnia-alajbegovic",    "name": "Kerim Alajbegović",       "shirt": 19, "position": "FW", "dob": "2007-09-21", "age": 18, "caps": 10,  "goals": 1,  "clubId": "red-bull-salzburg","captain": false, "bio": "" },
+    { "id": "bosnia-bajraktarevic",  "name": "Esmir Bajraktarević",     "shirt": 20, "position": "FW", "dob": "2005-03-10", "age": 21, "caps": 16,  "goals": 1,  "clubId": "psv-eindhoven",    "captain": false, "bio": "" },
+    { "id": "bosnia-radeljic",       "name": "Stjepan Radeljić",        "shirt": 21, "position": "DF", "dob": "1997-09-05", "age": 28, "caps": 5,   "goals": 0,  "clubId": "hnk-rijeka",       "captain": false, "bio": "" },
+    { "id": "bosnia-zlomislic",      "name": "Martin Zlomislić",        "shirt": 22, "position": "GK", "dob": "1998-08-16", "age": 27, "caps": 3,   "goals": 0,  "clubId": "hnk-rijeka",       "captain": false, "bio": "" },
+    { "id": "bosnia-tabakovic",      "name": "Haris Tabaković",         "shirt": 23, "position": "FW", "dob": "1994-06-20", "age": 31, "caps": 10,  "goals": 4,  "clubId": "gladbach",         "captain": false, "bio": "" },
+    { "id": "bosnia-malic",          "name": "Arjan Malić",             "shirt": 24, "position": "DF", "dob": "2005-08-28", "age": 20, "caps": 8,   "goals": 0,  "clubId": "sk-sturm-graz",    "captain": false, "bio": "" },
+    { "id": "bosnia-lukic",          "name": "Jovo Lukić",              "shirt": 25, "position": "FW", "dob": "1998-11-28", "age": 27, "caps": 3,   "goals": 0,  "clubId": "fc-universitatea-cluj","captain": false, "bio": "" },
+    { "id": "bosnia-mahmic",         "name": "Ermin Mahmić",            "shirt": 26, "position": "MF", "dob": "2005-03-14", "age": 21, "caps": 2,   "goals": 0,  "clubId": "fc-slovan-liberec","captain": false, "bio": "" }
+  ]
+}

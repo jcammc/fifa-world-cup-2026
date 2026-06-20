@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "south-korea-kim-sg",  "name": "Kim Seung-gyu",   "shirt": 1,  "position": "GK", "dob": "1990-09-30", "age": 35, "caps": 87,  "goals": 0,  "clubId": "fc-tokyo",          "captain": false, "bio": "" },
+    { "id": "south-korea-lee-hb",  "name": "Lee Han-beom",    "shirt": 2,  "position": "DF", "dob": "2002-06-17", "age": 23, "caps": 8,   "goals": 0,  "clubId": "fc-midtjylland",    "captain": false, "bio": "" },
+    { "id": "south-korea-lee-gh",  "name": "Lee Gi-hyuk",     "shirt": 3,  "position": "MF", "dob": "2000-07-07", "age": 25, "caps": 3,   "goals": 0,  "clubId": "gangwon",           "captain": false, "bio": "" },
+    { "id": "south-korea-kim-mj",  "name": "Kim Min-jae",     "shirt": 4,  "position": "DF", "dob": "1996-11-15", "age": 29, "caps": 79,  "goals": 4,  "clubId": "bayern-munich",     "captain": false, "bio": "" },
+    { "id": "south-korea-kim-th",  "name": "Kim Tae-hyeon",   "shirt": 5,  "position": "DF", "dob": "2000-09-17", "age": 25, "caps": 7,   "goals": 0,  "clubId": "kashima-antlers",   "captain": false, "bio": "" },
+    { "id": "south-korea-hwang-ib","name": "Hwang In-beom",   "shirt": 6,  "position": "MF", "dob": "1996-09-20", "age": 29, "caps": 73,  "goals": 6,  "clubId": "feyenoord",         "captain": false, "bio": "" },
+    { "id": "south-korea-son",     "name": "Son Heung-min",   "shirt": 7,  "position": "FW", "dob": "1992-07-08", "age": 33, "caps": 144, "goals": 56, "clubId": "lafc",              "captain": true,  "bio": "" },
+    { "id": "south-korea-paik",    "name": "Paik Seung-ho",   "shirt": 8,  "position": "MF", "dob": "1997-03-17", "age": 29, "caps": 27,  "goals": 3,  "clubId": "birmingham-city",   "captain": false, "bio": "" },
+    { "id": "south-korea-cho-gs",  "name": "Cho Gue-sung",    "shirt": 9,  "position": "FW", "dob": "1998-01-25", "age": 28, "caps": 44,  "goals": 12, "clubId": "fc-midtjylland",    "captain": false, "bio": "" },
+    { "id": "south-korea-lee-js",  "name": "Lee Jae-sung",    "shirt": 10, "position": "MF", "dob": "1992-08-10", "age": 33, "caps": 105, "goals": 15, "clubId": "mainz-05",          "captain": false, "bio": "" },
+    { "id": "south-korea-hwang-hc","name": "Hwang Hee-chan",  "shirt": 11, "position": "MF", "dob": "1996-01-26", "age": 30, "caps": 79,  "goals": 17, "clubId": "wolverhampton",     "captain": false, "bio": "" },
+    { "id": "south-korea-song",    "name": "Song Bum-keun",   "shirt": 12, "position": "GK", "dob": "1997-10-15", "age": 28, "caps": 3,   "goals": 0,  "clubId": "jeonbuk",           "captain": false, "bio": "" },
+    { "id": "south-korea-lee-ts",  "name": "Lee Tae-seok",    "shirt": 13, "position": "DF", "dob": "2002-07-28", "age": 23, "caps": 15,  "goals": 1,  "clubId": "austria-wien",      "captain": false, "bio": "" },
+    { "id": "south-korea-cho-wj",  "name": "Cho Wi-je",       "shirt": 14, "position": "DF", "dob": "2001-08-25", "age": 24, "caps": 1,   "goals": 0,  "clubId": "jeonbuk",           "captain": false, "bio": "" },
+    { "id": "south-korea-kim-mh",  "name": "Kim Moon-hwan",   "shirt": 15, "position": "DF", "dob": "1995-08-01", "age": 30, "caps": 35,  "goals": 0,  "clubId": "daejeon",           "captain": false, "bio": "" },
+    { "id": "south-korea-park",    "name": "Park Jin-seob",   "shirt": 16, "position": "DF", "dob": "1995-10-23", "age": 30, "caps": 14,  "goals": 1,  "clubId": "zhejiang",          "captain": false, "bio": "" },
+    { "id": "south-korea-bae",     "name": "Bae Jun-ho",      "shirt": 17, "position": "MF", "dob": "2003-08-21", "age": 22, "caps": 13,  "goals": 2,  "clubId": "stoke-city",        "captain": false, "bio": "" },
+    { "id": "south-korea-oh",      "name": "Oh Hyeon-gyu",    "shirt": 18, "position": "FW", "dob": "2001-04-12", "age": 25, "caps": 27,  "goals": 6,  "clubId": "besiktas",          "captain": false, "bio": "" },
+    { "id": "south-korea-lee-ki",  "name": "Lee Kang-in",     "shirt": 19, "position": "MF", "dob": "2001-02-19", "age": 25, "caps": 47,  "goals": 11, "clubId": "paris-saint-germain","captain": false, "bio": "" },
+    { "id": "south-korea-yang",    "name": "Yang Hyun-jun",   "shirt": 20, "position": "MF", "dob": "2002-05-25", "age": 23, "caps": 9,   "goals": 0,  "clubId": "celtic",            "captain": false, "bio": "" },
+    { "id": "south-korea-jo",      "name": "Jo Hyeon-woo",    "shirt": 21, "position": "GK", "dob": "1991-09-25", "age": 34, "caps": 48,  "goals": 0,  "clubId": "ulsan-hd",          "captain": false, "bio": "" },
+    { "id": "south-korea-seol",    "name": "Seol Young-woo",  "shirt": 22, "position": "DF", "dob": "1998-12-05", "age": 27, "caps": 34,  "goals": 0,  "clubId": "red-star-belgrade", "captain": false, "bio": "" },
+    { "id": "south-korea-castrop", "name": "Jens Castrop",    "shirt": 23, "position": "DF", "dob": "2003-07-29", "age": 22, "caps": 7,   "goals": 0,  "clubId": "gladbach",          "captain": false, "bio": "" },
+    { "id": "south-korea-kim-jg",  "name": "Kim Jin-gyu",     "shirt": 24, "position": "MF", "dob": "1997-02-24", "age": 29, "caps": 22,  "goals": 3,  "clubId": "jeonbuk",           "captain": false, "bio": "" },
+    { "id": "south-korea-eom",     "name": "Eom Ji-sung",     "shirt": 25, "position": "MF", "dob": "2002-05-09", "age": 24, "caps": 9,   "goals": 2,  "clubId": "swansea-city",      "captain": false, "bio": "" },
+    { "id": "south-korea-lee-dg",  "name": "Lee Dong-gyeong", "shirt": 26, "position": "MF", "dob": "1997-09-20", "age": 28, "caps": 18,  "goals": 4,  "clubId": "ulsan-hd",          "captain": false, "bio": "" }
+  ]
+}

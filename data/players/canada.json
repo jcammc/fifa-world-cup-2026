@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "canada-st-clair",        "name": "Dayne St. Clair",        "shirt": 1,  "position": "GK", "dob": "1997-05-09", "age": 29, "caps": 20,  "goals": 0,  "clubId": "inter-miami",          "captain": false, "bio": "" },
+    { "id": "canada-johnston",        "name": "Alistair Johnston",       "shirt": 2,  "position": "DF", "dob": "1998-10-08", "age": 27, "caps": 58,  "goals": 1,  "clubId": "celtic",               "captain": false, "bio": "" },
+    { "id": "canada-jones",           "name": "Alfie Jones",             "shirt": 3,  "position": "DF", "dob": "1997-10-07", "age": 28, "caps": 2,   "goals": 0,  "clubId": "middlesbrough",        "captain": false, "bio": "" },
+    { "id": "canada-de-fougerolles",  "name": "Luc de Fougerolles",     "shirt": 4,  "position": "DF", "dob": "2005-10-12", "age": 20, "caps": 13,  "goals": 0,  "clubId": "dender-eh",            "captain": false, "bio": "" },
+    { "id": "canada-waterman",        "name": "Joel Waterman",           "shirt": 5,  "position": "DF", "dob": "1996-01-24", "age": 30, "caps": 17,  "goals": 0,  "clubId": "chicago-fire",         "captain": false, "bio": "" },
+    { "id": "canada-choiniere",       "name": "Mathieu Choinière",       "shirt": 6,  "position": "MF", "dob": "1999-02-07", "age": 27, "caps": 23,  "goals": 0,  "clubId": "lafc",                 "captain": false, "bio": "" },
+    { "id": "canada-eustaquio",       "name": "Stephen Eustáquio",      "shirt": 7,  "position": "MF", "dob": "1996-12-21", "age": 29, "caps": 56,  "goals": 4,  "clubId": "lafc",                 "captain": false, "bio": "" },
+    { "id": "canada-kone",            "name": "Ismaël Koné",             "shirt": 8,  "position": "MF", "dob": "2002-06-16", "age": 23, "caps": 40,  "goals": 4,  "clubId": "sassuolo",             "captain": false, "bio": "" },
+    { "id": "canada-larin",           "name": "Cyle Larin",              "shirt": 9,  "position": "FW", "dob": "1995-04-17", "age": 31, "caps": 90,  "goals": 30, "clubId": "southampton",          "captain": false, "bio": "" },
+    { "id": "canada-david-j",         "name": "Jonathan David",          "shirt": 10, "position": "FW", "dob": "2000-01-14", "age": 26, "caps": 77,  "goals": 39, "clubId": "juventus",             "captain": false, "bio": "" },
+    { "id": "canada-millar",          "name": "Liam Millar",             "shirt": 11, "position": "MF", "dob": "1999-09-27", "age": 26, "caps": 41,  "goals": 1,  "clubId": "hull-city",            "captain": false, "bio": "" },
+    { "id": "canada-oluwaseyi",       "name": "Tani Oluwaseyi",          "shirt": 12, "position": "FW", "dob": "2000-05-15", "age": 26, "caps": 24,  "goals": 2,  "clubId": "villarreal",           "captain": false, "bio": "" },
+    { "id": "canada-cornelius",       "name": "Derek Cornelius",         "shirt": 13, "position": "DF", "dob": "1997-11-25", "age": 28, "caps": 44,  "goals": 1,  "clubId": "rangers",              "captain": false, "bio": "" },
+    { "id": "canada-shaffelburg",     "name": "Jacob Shaffelburg",       "shirt": 14, "position": "MF", "dob": "1999-11-26", "age": 26, "caps": 31,  "goals": 6,  "clubId": "lafc",                 "captain": false, "bio": "" },
+    { "id": "canada-bombito",         "name": "Moïse Bombito",           "shirt": 15, "position": "DF", "dob": "2000-03-30", "age": 26, "caps": 20,  "goals": 0,  "clubId": "nice",                 "captain": false, "bio": "" },
+    { "id": "canada-crepeau",         "name": "Maxime Crépeau",          "shirt": 16, "position": "GK", "dob": "1994-05-11", "age": 32, "caps": 32,  "goals": 0,  "clubId": "orlando-city",         "captain": false, "bio": "" },
+    { "id": "canada-buchanan",        "name": "Tajon Buchanan",          "shirt": 17, "position": "FW", "dob": "1999-02-08", "age": 27, "caps": 60,  "goals": 8,  "clubId": "villarreal",           "captain": false, "bio": "" },
+    { "id": "canada-goodman",         "name": "Owen Goodman",            "shirt": 18, "position": "GK", "dob": "2003-11-27", "age": 22, "caps": 0,   "goals": 0,  "clubId": "barnsley",             "captain": false, "bio": "" },
+    { "id": "canada-davies",          "name": "Alphonso Davies",         "shirt": 19, "position": "DF", "dob": "2000-11-02", "age": 25, "caps": 58,  "goals": 15, "clubId": "bayern-munich",        "captain": true,  "bio": "" },
+    { "id": "canada-ahmed",           "name": "Ali Ahmed",               "shirt": 20, "position": "FW", "dob": "2000-10-10", "age": 25, "caps": 24,  "goals": 1,  "clubId": "norwich-city",         "captain": false, "bio": "" },
+    { "id": "canada-osorio",          "name": "Jonathan Osorio",         "shirt": 21, "position": "MF", "dob": "1992-06-12", "age": 33, "caps": 90,  "goals": 10, "clubId": "toronto-fc",           "captain": false, "bio": "" },
+    { "id": "canada-laryea",          "name": "Richie Laryea",           "shirt": 22, "position": "DF", "dob": "1995-01-07", "age": 31, "caps": 75,  "goals": 1,  "clubId": "toronto-fc",           "captain": false, "bio": "" },
+    { "id": "canada-sigur",           "name": "Niko Sigur",              "shirt": 23, "position": "DF", "dob": "2003-09-09", "age": 22, "caps": 19,  "goals": 2,  "clubId": "hajduk-split",         "captain": false, "bio": "" },
+    { "id": "canada-david-p",         "name": "Promise David",           "shirt": 24, "position": "FW", "dob": "2001-07-03", "age": 24, "caps": 10,  "goals": 3,  "clubId": "union-saint-gilloise", "captain": false, "bio": "" },
+    { "id": "canada-saliba",          "name": "Nathan Saliba",           "shirt": 25, "position": "MF", "dob": "2004-02-07", "age": 22, "caps": 15,  "goals": 2,  "clubId": "anderlecht",           "captain": false, "bio": "" },
+    { "id": "canada-nelson",          "name": "Jayden Nelson",           "shirt": 26, "position": "FW", "dob": "2002-09-26", "age": 23, "caps": 14,  "goals": 3,  "clubId": "austin-fc",            "captain": false, "bio": "" }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "mexico-rangel",     "name": "Raúl Rangel",        "shirt": 1,  "position": "GK", "dob": "2000-02-25", "age": 26, "caps": 14,  "goals": 0,  "clubId": "guadalajara",       "captain": false, "bio": "" },
+    { "id": "mexico-sanchez",    "name": "Jorge Sánchez",       "shirt": 2,  "position": "DF", "dob": "1997-12-10", "age": 28, "caps": 59,  "goals": 3,  "clubId": "paok",              "captain": false, "bio": "" },
+    { "id": "mexico-montes",     "name": "César Montes",        "shirt": 3,  "position": "DF", "dob": "1997-02-24", "age": 29, "caps": 67,  "goals": 4,  "clubId": "lokomotiv-moscow",  "captain": false, "bio": "" },
+    { "id": "mexico-alvarez",    "name": "Edson Álvarez",       "shirt": 4,  "position": "DF", "dob": "1997-10-24", "age": 28, "caps": 98,  "goals": 7,  "clubId": "fenerbahce",        "captain": true,  "bio": "" },
+    { "id": "mexico-vasquez",    "name": "Johan Vásquez",       "shirt": 5,  "position": "DF", "dob": "1998-10-22", "age": 27, "caps": 46,  "goals": 3,  "clubId": "genoa",             "captain": false, "bio": "" },
+    { "id": "mexico-lira",       "name": "Érik Lira",           "shirt": 6,  "position": "MF", "dob": "2000-05-08", "age": 26, "caps": 25,  "goals": 0,  "clubId": "cruz-azul",         "captain": false, "bio": "" },
+    { "id": "mexico-romo",       "name": "Luis Romo",           "shirt": 7,  "position": "MF", "dob": "1995-06-05", "age": 31, "caps": 63,  "goals": 4,  "clubId": "guadalajara",       "captain": false, "bio": "" },
+    { "id": "mexico-fidalgo",    "name": "Álvaro Fidalgo",      "shirt": 8,  "position": "MF", "dob": "1997-04-09", "age": 29, "caps": 4,   "goals": 0,  "clubId": "real-betis",        "captain": false, "bio": "" },
+    { "id": "mexico-jimenez",    "name": "Raúl Jiménez",        "shirt": 9,  "position": "FW", "dob": "1991-05-05", "age": 35, "caps": 124, "goals": 45, "clubId": "fulham",            "captain": false, "bio": "" },
+    { "id": "mexico-vega",       "name": "Alexis Vega",         "shirt": 10, "position": "FW", "dob": "1997-11-25", "age": 28, "caps": 52,  "goals": 7,  "clubId": "toluca",            "captain": false, "bio": "" },
+    { "id": "mexico-gimenez",    "name": "Santiago Giménez",    "shirt": 11, "position": "FW", "dob": "2001-04-18", "age": 25, "caps": 47,  "goals": 6,  "clubId": "ac-milan",          "captain": false, "bio": "" },
+    { "id": "mexico-acevedo",    "name": "Carlos Acevedo",      "shirt": 12, "position": "GK", "dob": "1996-04-19", "age": 30, "caps": 7,   "goals": 0,  "clubId": "santos-laguna",     "captain": false, "bio": "" },
+    { "id": "mexico-ochoa",      "name": "Guillermo Ochoa",     "shirt": 13, "position": "GK", "dob": "1985-07-13", "age": 40, "caps": 152, "goals": 0,  "clubId": "ael-limassol",      "captain": false, "bio": "" },
+    { "id": "mexico-gonzalez",   "name": "Armando González",    "shirt": 14, "position": "FW", "dob": "2003-04-20", "age": 23, "caps": 7,   "goals": 1,  "clubId": "guadalajara",       "captain": false, "bio": "" },
+    { "id": "mexico-reyes",      "name": "Israel Reyes",        "shirt": 15, "position": "DF", "dob": "2000-05-23", "age": 26, "caps": 34,  "goals": 2,  "clubId": "america",           "captain": false, "bio": "" },
+    { "id": "mexico-quinones",   "name": "Julián Quiñones",     "shirt": 16, "position": "FW", "dob": "1997-03-24", "age": 29, "caps": 22,  "goals": 2,  "clubId": "al-qadsiah",        "captain": false, "bio": "" },
+    { "id": "mexico-pineda",     "name": "Orbelín Pineda",      "shirt": 17, "position": "MF", "dob": "1996-03-24", "age": 30, "caps": 92,  "goals": 12, "clubId": "aek-athens",        "captain": false, "bio": "" },
+    { "id": "mexico-vargas",     "name": "Obed Vargas",         "shirt": 18, "position": "MF", "dob": "2005-08-05", "age": 20, "caps": 6,   "goals": 0,  "clubId": "atletico-madrid",   "captain": false, "bio": "" },
+    { "id": "mexico-mora",       "name": "Gilberto Mora",       "shirt": 19, "position": "MF", "dob": "2008-10-14", "age": 17, "caps": 8,   "goals": 0,  "clubId": "tijuana",           "captain": false, "bio": "" },
+    { "id": "mexico-chavez-m",   "name": "Mateo Chávez",        "shirt": 20, "position": "DF", "dob": "2004-05-12", "age": 22, "caps": 10,  "goals": 0,  "clubId": "az-alkmaar",        "captain": false, "bio": "" },
+    { "id": "mexico-huerta",     "name": "César Huerta",        "shirt": 21, "position": "FW", "dob": "2000-12-03", "age": 25, "caps": 26,  "goals": 3,  "clubId": "anderlecht",        "captain": false, "bio": "" },
+    { "id": "mexico-martinez",   "name": "Guillermo Martínez",  "shirt": 22, "position": "FW", "dob": "1995-03-15", "age": 31, "caps": 12,  "goals": 3,  "clubId": "pumas-unam",        "captain": false, "bio": "" },
+    { "id": "mexico-gallardo",   "name": "Jesús Gallardo",      "shirt": 23, "position": "DF", "dob": "1994-08-15", "age": 31, "caps": 121, "goals": 3,  "clubId": "toluca",            "captain": false, "bio": "" },
+    { "id": "mexico-chavez-l",   "name": "Luis Chávez",         "shirt": 24, "position": "MF", "dob": "1996-01-15", "age": 30, "caps": 45,  "goals": 5,  "clubId": "dynamo-moscow",     "captain": false, "bio": "" },
+    { "id": "mexico-alvarado",   "name": "Roberto Alvarado",    "shirt": 25, "position": "FW", "dob": "1998-09-07", "age": 27, "caps": 67,  "goals": 5,  "clubId": "guadalajara",       "captain": false, "bio": "" },
+    { "id": "mexico-gutierrez",  "name": "Brian Gutiérrez",     "shirt": 26, "position": "MF", "dob": "2003-06-17", "age": 22, "caps": 7,   "goals": 2,  "clubId": "guadalajara",       "captain": false, "bio": "" }
+  ]
+}
