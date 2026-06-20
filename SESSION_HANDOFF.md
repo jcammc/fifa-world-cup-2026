@@ -137,6 +137,14 @@ These are the live schemas in use. The original spec differs in field names — 
 
 Key differences from spec: `shirt` (not `shirtNumber`), `position` values are `GK/DF/MF/FW` (not GK/DEF/MID/FWD), no `countryId` field, no `leagueId` field, no `photoUrl` at runtime.
 
+### Group (`data/groups.json`)
+
+```json
+{ "id": "A", "name": "Group A", "teamIds": ["mexico", "south-korea", "south-africa", "czech-republic"] }
+```
+
+`DataManager.loadGroups()` returns the array of these objects. GroupCarousel uses `group.id` and `group.name`.
+
 ### Country (`data/countries.json`)
 
 ```json
@@ -333,8 +341,8 @@ On navigation away: `this.#currentModule?.teardown();`
 ## AUTO-FOCUS SYSTEM (Squad tab)
 
 IntersectionObserver on `.squad-group[data-position]` sections:
-- `root: document.getElementById('app-content')` (the scroll container)
-- `rootMargin: '-20% 0px -60% 0px'`, `threshold: 0`
+- `root: document.getElementById('app-content')` (the scroll container, also the router's `#contentEl`)
+- `rootMargin: '-30% 0px'`, `threshold: 0`
 - On intersect: load the first visible player in that position group into ProfilePanel
 - `#rowSelections` Map (keyed by position string "GK"/"DF"/"MF"/"FW") tracks last-viewed player per group
 - Keyboard: `card.addEventListener('focus', ...)` → `card.scrollIntoView({ behavior: 'smooth', block: 'center' })` → observer fires naturally
