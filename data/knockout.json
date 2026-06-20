@@ -1,1 +1,68 @@
-{ "version": "1.0", "lastUpdated": "2026-06-19T00:00:00Z", "data": [] }
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    {
+      "id": "r32",
+      "label": "Round of 32",
+      "matches": [
+        { "id": "r32-m1",  "homeLabel": "1A",       "awayLabel": "2B",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m2",  "homeLabel": "1C",       "awayLabel": "2D",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m3",  "homeLabel": "1E",       "awayLabel": "2F",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m4",  "homeLabel": "1G",       "awayLabel": "2H",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m5",  "homeLabel": "1I",       "awayLabel": "2J",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m6",  "homeLabel": "1K",       "awayLabel": "2L",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m7",  "homeLabel": "1B",       "awayLabel": "2A",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m8",  "homeLabel": "1D",       "awayLabel": "2C",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m9",  "homeLabel": "1F",       "awayLabel": "2E",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m10", "homeLabel": "1H",       "awayLabel": "2G",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m11", "homeLabel": "1J",       "awayLabel": "2I",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m12", "homeLabel": "1L",       "awayLabel": "2K",       "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m13", "homeLabel": "Best 3rd", "awayLabel": "Best 3rd", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m14", "homeLabel": "Best 3rd", "awayLabel": "Best 3rd", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m15", "homeLabel": "Best 3rd", "awayLabel": "Best 3rd", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r32-m16", "homeLabel": "Best 3rd", "awayLabel": "Best 3rd", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null }
+      ]
+    },
+    {
+      "id": "r16",
+      "label": "Round of 16",
+      "matches": [
+        { "id": "r16-m1", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r16-m2", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r16-m3", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r16-m4", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r16-m5", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r16-m6", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r16-m7", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "r16-m8", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null }
+      ]
+    },
+    {
+      "id": "qf",
+      "label": "Quarter-finals",
+      "matches": [
+        { "id": "qf-m1", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "qf-m2", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "qf-m3", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "qf-m4", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null }
+      ]
+    },
+    {
+      "id": "sf",
+      "label": "Semi-finals",
+      "matches": [
+        { "id": "sf-m1", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null },
+        { "id": "sf-m2", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null }
+      ]
+    },
+    {
+      "id": "final",
+      "label": "Final",
+      "matches": [
+        { "id": "3rd-place", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null, "matchLabel": "3rd Place" },
+        { "id": "final-m1",  "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": null, "status": "scheduled", "venue": null, "matchLabel": "Final" }
+      ]
+    }
+  ]
+}

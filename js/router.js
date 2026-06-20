@@ -106,6 +106,21 @@ class _Router {
       return { Module: TournamentCentre, params: {} };
     }
 
+    // Deep-linked tournament tabs
+    if (hash === 'today') {
+      return { Module: TournamentCentre, params: { initialTab: 'today' } };
+    }
+    if (hash === 'knockout') {
+      return { Module: TournamentCentre, params: { initialTab: 'knockout' } };
+    }
+    // Group deep-link: #group-a through #group-l
+    if (/^group-[a-l]$/.test(hash)) {
+      return {
+        Module: TournamentCentre,
+        params: { initialTab: 'groups', groupId: hash.slice(6).toUpperCase() },
+      };
+    }
+
     // Player route: must check before country route (e.g. #france-mbappe)
     for (const id of (this.#countryIds ?? [])) {
       if (hash.startsWith(id + '-')) {

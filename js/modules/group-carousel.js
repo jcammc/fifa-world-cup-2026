@@ -219,6 +219,21 @@ export class GroupCarousel {
     carousel.addEventListener('pointercancel', stop);
   }
 
+  // ─── Public API ──────────────────────────────────────────
+
+  scrollToGroup(groupId) {
+    const carousel = this.#carouselEl;
+    if (!carousel) return;
+    const cards = [...carousel.querySelectorAll('.group-card')];
+    const card  = carousel.querySelector(`.group-card[data-group="${groupId}"]`);
+    if (!card) return;
+    const idx  = cards.indexOf(card);
+    if (idx === -1) return;
+    const gap  = parseFloat(getComputedStyle(carousel).columnGap) || 16;
+    const cardW = (cards[0]?.offsetWidth ?? 0) + gap;
+    carousel.scrollTo({ left: idx * cardW, behavior: 'instant' });
+  }
+
   // ─── Wheel redirect to horizontal ─────────────────────────
 
   #initWheelScroll() {

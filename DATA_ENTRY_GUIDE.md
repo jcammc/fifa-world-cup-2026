@@ -338,4 +338,90 @@ Before committing a new squad file:
 
 ---
 
+## SECTION 13 — FIXTURE AND STANDINGS SCHEMA
+
+### Fixture record (data/fixtures.json)
+
+```json
+{
+  "id":           "c-r1-bra-mor",
+  "groupId":      "C",
+  "round":        1,
+  "homeTeamId":   "brazil",
+  "awayTeamId":   "morocco",
+  "kickoff":      "2026-06-13T22:00:00Z",
+  "status":       "FT",
+  "homeScore":    1,
+  "awayScore":    1,
+  "venue":        "MetLife Stadium, East Rutherford NJ",
+  "broadcaster":  null
+}
+```
+
+#### Status values — exactly three valid values
+
+| Value       | Meaning                                     |
+|-------------|---------------------------------------------|
+| `"scheduled"` | Match not yet played; homeScore/awayScore ignored |
+| `"live"`      | Match in progress                           |
+| `"FT"`        | Full time / completed                       |
+
+**Never use:** `"finished"`, `"complete"`, `"played"`, `"TBD"`, or any other variant.
+
+#### Score fields
+
+Use `homeScore` / `awayScore` (integer or null). NOT `score.home` / `score.away`. Set to `null` for scheduled matches.
+
+#### File envelope
+
+```json
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [ ...fixtures... ]
+}
+```
+
+---
+
+### Standings record (data/standings.json)
+
+**NESTED structure — NOT flat per-team array.**
+
+```json
+{
+  "data": [
+    {
+      "groupId": "C",
+      "teams": [
+        {
+          "teamId":             "scotland",
+          "position":           1,
+          "played":             1,
+          "won":                1,
+          "drawn":              0,
+          "lost":               0,
+          "goalsFor":           1,
+          "goalsAgainst":       0,
+          "goalDifference":     1,
+          "points":             3,
+          "qualificationStatus": null
+        }
+      ]
+    }
+  ]
+}
+```
+
+Key rules:
+- `data` is an array of group objects, each with `groupId` and `teams[]`.
+- `teams[]` is ordered by `position` (position 1 = current leader at index 0).
+- `qualificationStatus`: `null` | `"qualified"` | `"eliminated"` | `"playoff"`.
+- Use `teamId` (not `countryId`) — matches `id` field in `data/countries.json`.
+- `goalDifference` = goalsFor − goalsAgainst (can be negative).
+
+When reading standings in code: `group.teams[0]` is the group leader.
+
+---
+
 End of DATA_ENTRY_GUIDE.md

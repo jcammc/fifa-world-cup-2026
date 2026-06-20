@@ -421,7 +421,10 @@ hash → parser → { type, params }
 '#france-mbappe'       → { type: 'player', countryId: 'france', playerId: 'mbappe' }
 '#club-real-madrid'    → { type: 'club', clubId: 'real-madrid' }
 '#league-premier-league' → { type: 'league', leagueId: 'premier-league' }
-'#tournament'          → { type: 'tournament' }
+'#tournament'          → { type: 'tournament' }         → TournamentCentre, tab: today
+'#today'               → { type: 'tournament-today' }   → TournamentCentre, tab: today
+'#group-a' … '#group-l'→ { type: 'group', groupId:'A' } → TournamentCentre, tab: groups, scroll carousel to groupId
+'#knockout'            → { type: 'tournament-knockout' } → TournamentCentre, tab: knockout
 '#compare'             → { type: 'compare' }
 '#statistics'          → { type: 'statistics' }
 '#club-explorer'       → { type: 'clubExplorer' }
@@ -453,6 +456,23 @@ export class SomeModule {
 ```
 
 Router calls `teardown()` before unmounting, then instantiates the new module.
+
+## Listener attachment rule
+
+Event listeners attached in `render()` or `init()` must target elements **inside
+the module's rendered HTML** — not the persistent `#app-content` container.
+
+```javascript
+// BAD: listener on #app-content accumulates across navigations
+this.#container.addEventListener('click', handler);
+
+// GOOD: listener on inner element — destroyed when innerHTML is replaced
+this.#container.querySelector('.module-root').addEventListener('click', handler);
+```
+
+`#app-content` is never replaced; its `innerHTML` is. Any listener attached to
+it directly is NOT cleaned up by `teardown()`. Always attach to elements your
+`render()` creates, or use explicit `removeEventListener` in `teardown()`.
 
 ---
 

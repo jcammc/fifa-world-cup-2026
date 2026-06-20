@@ -587,6 +587,7 @@ TournamentCentreModule:
 - Tab switching (no reload)
 - Breadcrumb: World Cup 2026 > Tournament Centre > {Section}
 Dependency: T-011, T-019.
+Status: COMPLETE (Sprint 4A) — 3-tab layout with Today/Group Stage/Knockout. Params-driven initial tab from route. Event listener on inner .tournament-centre element (not #app-content) to avoid accumulation.
 
 ---
 
@@ -602,6 +603,7 @@ Status states:
 - Finished: FT label + score
 Empty state: "No matches scheduled today" + next matchday info (using getNextMatchday()).
 Dependency: T-015, T-020, T-045.
+Status: COMPLETE (Sprint 4A) — uses isToday() from time.js; falls back to next 6 scheduled fixtures when no today matches. Status field: "FT" | "scheduled" | "live" (not "finished").
 
 ### T-047 — Broadcaster badges
 Complexity: S
@@ -610,6 +612,7 @@ ITV badge: styled with ITV colours.
 TBD: plain grey badge "TBD".
 Other string: plain text display.
 Dependency: T-046.
+Status: COMPLETE (Sprint 4A) — .badge--bbc (#bb1919 red), .badge--itv (#181818 dark). Styles in carousel.css (shared by match cards and group card fixture strips). Broadcaster field in fixtures.json is null for all fixtures pending real UK schedule data.
 
 ---
 
@@ -629,6 +632,7 @@ Full implementation per blueprint §12.
 - No partial resting: CSS scroll-snap-type: x mandatory guarantees this
 - Mobile: same behaviour, finger drag replaces pointer drag
 Dependency: T-045, T-020.
+Status: COMPLETE (Sprint 4A) — implemented in group-carousel.js. Gap read via getComputedStyle().columnGap for accurate index math. scroll-snap-type disabled via .is-dragging class during pointer drag. Public scrollToGroup(groupId) method for deep-link navigation. Groups without standings data show "available soon" placeholder.
 
 ### T-049 — Group Card component
 Complexity: M
@@ -639,6 +643,7 @@ Each card contains (in this order):
 4. Qualification indicators (team name + status for each team)
 Qualification uses colour + text/icon (never colour alone).
 Dependency: T-048, T-020.
+Status: COMPLETE (Sprint 4A) — standings table with flag + linked team name + P/W/D/L/GF/GA/GD/Pts. Fixture strip shows 2 upcoming or 2 most recent completed. QualificationStatus deferred (all null at tournament start).
 
 ---
 

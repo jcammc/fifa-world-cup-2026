@@ -2,9 +2,11 @@ import { DataManager } from '../data.js';
 import { formatKickoff, isToday } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { GroupCarousel } from './group-carousel.js';
+import { KnockoutBracket } from './knockout-bracket.js';
 
 export class TournamentCentre {
   #container;
+  #params     = {};
   #activeTab  = 'today';
   #tabEl      = null;
   #tabModule  = null;
@@ -16,6 +18,7 @@ export class TournamentCentre {
 
   constructor(container, params = {}) {
     this.#container = container;
+    this.#params    = params;
   }
 
   async render() {
@@ -42,7 +45,7 @@ export class TournamentCentre {
       </div>`;
 
     this.#tabEl = this.#container.querySelector('.tc-tab-content');
-    await this.#loadTab('today');
+    await this.#loadTab(this.#params.initialTab ?? 'today');
 
     // Attach to inner element (re-created each render) to avoid listener accumulation
     this.#container.querySelector('.tournament-centre').addEventListener('click', async e => {
@@ -78,13 +81,15 @@ export class TournamentCentre {
       );
       this.#tabModule.render();
       this.#tabModule.init();
-    } else {
-      this.#tabEl.innerHTML = `
-        <div class="empty-state empty-state--compact tc-knockout-stub">
-          <div class="empty-state__icon">&#127942;</div>
-          <p class="empty-state__title">Knockout Stage</p>
-          <p class="empty-state__message">Full bracket will appear once all group matches are complete.</p>
-        </div>`;
+      const groupId = this.#params.groupId;
+      if (groupId) {
+        this.#params.groupId = null;
+        setTimeout(() => this.#tabModule?.scrollToGroup(groupId), 0);
+      }
+    } else if (tab === 'knockout') {
+      this.#tabModule = new KnockoutBracket(this.#tabEl);
+      await this.#tabModule.render();
+      this.#tabModule.init();
     }
   }
 
