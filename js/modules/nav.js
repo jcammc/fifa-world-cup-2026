@@ -148,7 +148,8 @@ class _Nav {
   #updateActiveLink() {
     const hash = window.location.hash.slice(1);
     document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('nav-link--active'));
-    const href = (!hash || hash === 'tournament') ? '#tournament' : `#${hash}`;
+    const isTc = !hash || hash === 'tournament' || hash === 'today' || hash === 'knockout' || /^group-[a-l]$/.test(hash);
+    const href = isTc ? '#tournament' : `#${hash}`;
     document.querySelector(`.nav-link[href="${href}"]`)?.classList.add('nav-link--active');
   }
 }

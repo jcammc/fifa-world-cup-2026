@@ -151,10 +151,9 @@ class _Router {
 
   #updateActiveLink(hash) {
     document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('nav-link--active'));
-    const target = (!hash || hash === 'tournament')
-      ? document.querySelector('.nav-link[href="#tournament"]')
-      : document.querySelector(`.nav-link[href="#${hash}"]`);
-    target?.classList.add('nav-link--active');
+    const isTc = !hash || hash === 'tournament' || hash === 'today' || hash === 'knockout' || /^group-[a-l]$/.test(hash);
+    const href = isTc ? '#tournament' : `#${hash}`;
+    document.querySelector(`.nav-link[href="${href}"]`)?.classList.add('nav-link--active');
   }
 }
 
