@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "iraq-talib",        "name": "Fahad Talib",              "shirt": 1,  "position": "GK", "dob": "1994-10-21", "age": 31, "caps": 21,  "goals": 0,  "clubId": "al-talaba",      "captain": false, "bio": "" },
+    { "id": "iraq-sulaka",       "name": "Rebin Sulaka",             "shirt": 2,  "position": "DF", "dob": "1992-04-12", "age": 34, "caps": 56,  "goals": 1,  "clubId": "port-iraq",      "captain": false, "bio": "" },
+    { "id": "iraq-ali-h",        "name": "Hussein Ali",              "shirt": 3,  "position": "DF", "dob": "2002-03-01", "age": 24, "caps": 27,  "goals": 1,  "clubId": "pogon-szczecin",  "captain": false, "bio": "" },
+    { "id": "iraq-tahseen",      "name": "Zaid Tahseen",             "shirt": 4,  "position": "DF", "dob": "2001-01-29", "age": 25, "caps": 28,  "goals": 1,  "clubId": "pakhtakor",      "captain": false, "bio": "" },
+    { "id": "iraq-hashim",       "name": "Akam Hashim",              "shirt": 5,  "position": "DF", "dob": "1998-08-16", "age": 27, "caps": 14,  "goals": 1,  "clubId": "al-zawraa",      "captain": false, "bio": "" },
+    { "id": "iraq-younis",       "name": "Munaf Younis",             "shirt": 6,  "position": "DF", "dob": "1996-11-16", "age": 29, "caps": 34,  "goals": 1,  "clubId": "al-shorta",      "captain": false, "bio": "" },
+    { "id": "iraq-amyn",         "name": "Youssef Amyn",             "shirt": 7,  "position": "MF", "dob": "2003-08-21", "age": 22, "caps": 27,  "goals": 2,  "clubId": "aek-larnaca",    "captain": false, "bio": "" },
+    { "id": "iraq-bayesh",       "name": "Ibrahim Bayesh",           "shirt": 8,  "position": "MF", "dob": "2000-05-01", "age": 26, "caps": 76,  "goals": 8,  "clubId": "al-dhafra",      "captain": false, "bio": "" },
+    { "id": "iraq-al-hamadi",    "name": "Ali Al-Hamadi",            "shirt": 9,  "position": "FW", "dob": "2002-03-01", "age": 24, "caps": 20,  "goals": 5,  "clubId": "luton-town",     "captain": false, "bio": "" },
+    { "id": "iraq-ali-m",        "name": "Mohanad Ali",              "shirt": 10, "position": "FW", "dob": "2000-06-20", "age": 25, "caps": 72,  "goals": 27, "clubId": "dibba",          "captain": false, "bio": "" },
+    { "id": "iraq-qasem",        "name": "Ahmed Qasem",              "shirt": 11, "position": "FW", "dob": "2003-07-12", "age": 22, "caps": 3,   "goals": 0,  "clubId": "nashville-sc",   "captain": false, "bio": "" },
+    { "id": "iraq-hassan",       "name": "Jalal Hassan",             "shirt": 12, "position": "GK", "dob": "1991-05-18", "age": 35, "caps": 102, "goals": 0,  "clubId": "al-zawraa",      "captain": true,  "bio": "" },
+    { "id": "iraq-yousif",       "name": "Ali Yousif",               "shirt": 13, "position": "FW", "dob": "1996-01-19", "age": 30, "caps": 7,   "goals": 1,  "clubId": "al-talaba",      "captain": false, "bio": "" },
+    { "id": "iraq-iqbal",        "name": "Zidane Iqbal",             "shirt": 14, "position": "MF", "dob": "2003-04-27", "age": 23, "caps": 25,  "goals": 2,  "clubId": "fc-utrecht",     "captain": false, "bio": "" },
+    { "id": "iraq-maknzi",       "name": "Ahmed Maknzi",             "shirt": 15, "position": "DF", "dob": "2001-09-24", "age": 24, "caps": 7,   "goals": 0,  "clubId": "al-karma",       "captain": false, "bio": "" },
+    { "id": "iraq-al-ammari",    "name": "Amir Al-Ammari",           "shirt": 16, "position": "MF", "dob": "1997-07-27", "age": 28, "caps": 51,  "goals": 3,  "clubId": "ks-cracovia",    "captain": false, "bio": "" },
+    { "id": "iraq-jasim",        "name": "Ali Jasim",                "shirt": 17, "position": "FW", "dob": "2004-01-20", "age": 22, "caps": 36,  "goals": 2,  "clubId": "al-najma",       "captain": false, "bio": "" },
+    { "id": "iraq-hussein",      "name": "Aymen Hussein",            "shirt": 18, "position": "FW", "dob": "1996-03-22", "age": 30, "caps": 95,  "goals": 33, "clubId": "al-karma",       "captain": false, "bio": "" },
+    { "id": "iraq-yakob",        "name": "Kevin Yakob",              "shirt": 19, "position": "MF", "dob": "2000-10-10", "age": 25, "caps": 9,   "goals": 0,  "clubId": "agf",            "captain": false, "bio": "" },
+    { "id": "iraq-sher",         "name": "Aimar Sher",               "shirt": 20, "position": "MF", "dob": "2002-12-20", "age": 23, "caps": 7,   "goals": 0,  "clubId": "sarpsborg-08",   "captain": false, "bio": "" },
+    { "id": "iraq-farji",        "name": "Marko Farji",              "shirt": 21, "position": "FW", "dob": "2004-03-16", "age": 22, "caps": 12,  "goals": 0,  "clubId": "venezia",        "captain": false, "bio": "" },
+    { "id": "iraq-basil",        "name": "Ahmed Basil",              "shirt": 22, "position": "GK", "dob": "1996-08-19", "age": 29, "caps": 16,  "goals": 0,  "clubId": "al-shorta",      "captain": false, "bio": "" },
+    { "id": "iraq-doski",        "name": "Merchas Doski",            "shirt": 23, "position": "DF", "dob": "1999-12-07", "age": 26, "caps": 31,  "goals": 1,  "clubId": "viktoria-plzen", "captain": false, "bio": "" },
+    { "id": "iraq-ismail",       "name": "Zaid Ismail",              "shirt": 24, "position": "MF", "dob": "2002-01-03", "age": 24, "caps": 6,   "goals": 0,  "clubId": "al-talaba",      "captain": false, "bio": "" },
+    { "id": "iraq-saadoon",      "name": "Mustafa Saadoon",          "shirt": 25, "position": "DF", "dob": "2001-05-25", "age": 25, "caps": 17,  "goals": 0,  "clubId": "al-shorta",      "captain": false, "bio": "" },
+    { "id": "iraq-putros",       "name": "Frans Putros",             "shirt": 26, "position": "DF", "dob": "1993-07-14", "age": 32, "caps": 28,  "goals": 0,  "clubId": "persib",         "captain": false, "bio": "" }
+  ]
+}

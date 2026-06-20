@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "new-zealand-crocombe",    "name": "Max Crocombe",        "shirt": 1,  "position": "GK", "dob": "1993-08-12", "age": 32, "caps": 24,  "goals": 0,  "clubId": "millwall",                  "captain": false, "bio": "" },
+    { "id": "new-zealand-payne",       "name": "Tim Payne",           "shirt": 2,  "position": "DF", "dob": "1994-01-10", "age": 32, "caps": 51,  "goals": 3,  "clubId": "wellington-phoenix",        "captain": false, "bio": "" },
+    { "id": "new-zealand-de-vries",    "name": "Francis de Vries",    "shirt": 3,  "position": "DF", "dob": "1994-11-28", "age": 31, "caps": 20,  "goals": 1,  "clubId": "auckland-fc",               "captain": false, "bio": "" },
+    { "id": "new-zealand-bindon",      "name": "Tyler Bindon",        "shirt": 4,  "position": "DF", "dob": "2005-01-27", "age": 21, "caps": 25,  "goals": 3,  "clubId": "sheffield-united",          "captain": false, "bio": "" },
+    { "id": "new-zealand-boxall",      "name": "Michael Boxall",      "shirt": 5,  "position": "DF", "dob": "1988-08-18", "age": 37, "caps": 63,  "goals": 1,  "clubId": "minnesota-united",          "captain": false, "bio": "" },
+    { "id": "new-zealand-bell",        "name": "Joe Bell",            "shirt": 6,  "position": "MF", "dob": "1999-04-27", "age": 27, "caps": 32,  "goals": 1,  "clubId": "viking",                    "captain": false, "bio": "" },
+    { "id": "new-zealand-rogerson",    "name": "Logan Rogerson",      "shirt": 7,  "position": "FW", "dob": "1998-05-28", "age": 28, "caps": 18,  "goals": 2,  "clubId": "auckland-fc",               "captain": false, "bio": "" },
+    { "id": "new-zealand-stamenic",    "name": "Marko Stamenić",      "shirt": 8,  "position": "MF", "dob": "2002-02-19", "age": 24, "caps": 39,  "goals": 3,  "clubId": "swansea-city",              "captain": false, "bio": "" },
+    { "id": "new-zealand-wood",        "name": "Chris Wood",          "shirt": 9,  "position": "FW", "dob": "1991-12-07", "age": 34, "caps": 90,  "goals": 45, "clubId": "nottingham-forest",         "captain": true,  "bio": "" },
+    { "id": "new-zealand-singh",       "name": "Sarpreet Singh",      "shirt": 10, "position": "MF", "dob": "1999-02-20", "age": 27, "caps": 28,  "goals": 3,  "clubId": "wellington-phoenix",        "captain": false, "bio": "" },
+    { "id": "new-zealand-just",        "name": "Elijah Just",         "shirt": 11, "position": "MF", "dob": "2000-05-01", "age": 26, "caps": 44,  "goals": 9,  "clubId": "motherwell",                "captain": false, "bio": "" },
+    { "id": "new-zealand-paulsen",     "name": "Alex Paulsen",        "shirt": 12, "position": "GK", "dob": "2002-07-04", "age": 23, "caps": 8,   "goals": 0,  "clubId": "lechia-gdansk",             "captain": false, "bio": "" },
+    { "id": "new-zealand-cacace",      "name": "Liberato Cacace",     "shirt": 13, "position": "DF", "dob": "2000-09-27", "age": 25, "caps": 37,  "goals": 1,  "clubId": "wrexham",                   "captain": false, "bio": "" },
+    { "id": "new-zealand-rufer",       "name": "Alex Rufer",          "shirt": 14, "position": "MF", "dob": "1996-06-12", "age": 29, "caps": 26,  "goals": 0,  "clubId": "wellington-phoenix",        "captain": false, "bio": "" },
+    { "id": "new-zealand-pijnaker",    "name": "Nando Pijnaker",      "shirt": 15, "position": "DF", "dob": "1999-02-25", "age": 27, "caps": 25,  "goals": 0,  "clubId": "auckland-fc",               "captain": false, "bio": "" },
+    { "id": "new-zealand-surman",      "name": "Finn Surman",         "shirt": 16, "position": "DF", "dob": "2003-09-23", "age": 22, "caps": 19,  "goals": 2,  "clubId": "portland-timbers",          "captain": false, "bio": "" },
+    { "id": "new-zealand-barbarouses", "name": "Kosta Barbarouses",   "shirt": 17, "position": "FW", "dob": "1990-02-19", "age": 36, "caps": 76,  "goals": 10, "clubId": "western-sydney-wanderers",  "captain": false, "bio": "" },
+    { "id": "new-zealand-waine",       "name": "Ben Waine",           "shirt": 18, "position": "FW", "dob": "2001-06-11", "age": 25, "caps": 31,  "goals": 9,  "clubId": "port-vale",                 "captain": false, "bio": "" },
+    { "id": "new-zealand-old",         "name": "Ben Old",             "shirt": 19, "position": "MF", "dob": "2002-08-13", "age": 23, "caps": 24,  "goals": 2,  "clubId": "saint-etienne",             "captain": false, "bio": "" },
+    { "id": "new-zealand-mccowatt",    "name": "Callum McCowatt",     "shirt": 20, "position": "MF", "dob": "1999-04-30", "age": 27, "caps": 32,  "goals": 4,  "clubId": "silkeborg",                 "captain": false, "bio": "" },
+    { "id": "new-zealand-randall",     "name": "Jesse Randall",       "shirt": 21, "position": "FW", "dob": "2002-08-19", "age": 23, "caps": 11,  "goals": 2,  "clubId": "auckland-fc",               "captain": false, "bio": "" },
+    { "id": "new-zealand-woud",        "name": "Michael Woud",        "shirt": 22, "position": "GK", "dob": "1999-01-16", "age": 27, "caps": 6,   "goals": 0,  "clubId": "auckland-fc",               "captain": false, "bio": "" },
+    { "id": "new-zealand-thomas",      "name": "Ryan Thomas",         "shirt": 23, "position": "MF", "dob": "1994-12-20", "age": 31, "caps": 25,  "goals": 3,  "clubId": "pec-zwolle",                "captain": false, "bio": "" },
+    { "id": "new-zealand-elliot",      "name": "Callan Elliot",       "shirt": 24, "position": "DF", "dob": "1999-07-07", "age": 26, "caps": 11,  "goals": 0,  "clubId": "auckland-fc",               "captain": false, "bio": "" },
+    { "id": "new-zealand-bayliss",     "name": "Lachlan Bayliss",     "shirt": 25, "position": "MF", "dob": "2002-07-24", "age": 23, "caps": 4,   "goals": 0,  "clubId": "newcastle-jets",            "captain": false, "bio": "" },
+    { "id": "new-zealand-smith",       "name": "Tommy Smith",         "shirt": 26, "position": "DF", "dob": "1990-03-31", "age": 36, "caps": 56,  "goals": 2,  "clubId": "braintree-town",            "captain": false, "bio": "" }
+  ]
+}

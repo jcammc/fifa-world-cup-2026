@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "saudi-arabia-al-aqidi",        "name": "Nawaf Al-Aqidi",            "shirt": 1,  "position": "GK", "dob": "2000-05-10", "age": 26, "caps": 24,  "goals": 0,  "clubId": "al-nassr",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-majrashi",         "name": "Ali Majrashi",              "shirt": 2,  "position": "DF", "dob": "1999-10-02", "age": 26, "caps": 21,  "goals": 0,  "clubId": "al-ahli",     "captain": false, "bio": "" },
+    { "id": "saudi-arabia-lajami",           "name": "Ali Lajami",                "shirt": 3,  "position": "DF", "dob": "1996-04-24", "age": 30, "caps": 24,  "goals": 1,  "clubId": "al-hilal",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-amri",          "name": "Abdulelah Al-Amri",         "shirt": 4,  "position": "DF", "dob": "1997-01-15", "age": 29, "caps": 44,  "goals": 1,  "clubId": "al-nassr",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-tambakti",      "name": "Hassan Al-Tambakti",        "shirt": 5,  "position": "DF", "dob": "1999-02-09", "age": 27, "caps": 54,  "goals": 1,  "clubId": "al-hilal",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-nasser-al-dawsari","name": "Nasser Al-Dawsari",         "shirt": 6,  "position": "MF", "dob": "1998-12-19", "age": 27, "caps": 47,  "goals": 1,  "clubId": "al-hilal",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-juwayr",        "name": "Musab Al-Juwayr",           "shirt": 7,  "position": "MF", "dob": "2003-06-20", "age": 22, "caps": 37,  "goals": 6,  "clubId": "al-qadsiah", "captain": false, "bio": "" },
+    { "id": "saudi-arabia-yahya",            "name": "Ayman Yahya",               "shirt": 8,  "position": "FW", "dob": "2001-05-14", "age": 25, "caps": 26,  "goals": 0,  "clubId": "al-nassr",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-buraikan",      "name": "Firas Al-Buraikan",         "shirt": 9,  "position": "FW", "dob": "2000-05-14", "age": 26, "caps": 72,  "goals": 16, "clubId": "al-ahli",     "captain": false, "bio": "" },
+    { "id": "saudi-arabia-salem-al-dawsari", "name": "Salem Al-Dawsari",          "shirt": 10, "position": "FW", "dob": "1991-08-19", "age": 34, "caps": 111, "goals": 27, "clubId": "al-hilal",    "captain": true,  "bio": "" },
+    { "id": "saudi-arabia-al-shehri",        "name": "Saleh Al-Shehri",           "shirt": 11, "position": "FW", "dob": "1993-11-01", "age": 32, "caps": 59,  "goals": 17, "clubId": "al-ittihad", "captain": false, "bio": "" },
+    { "id": "saudi-arabia-abdulhamid",       "name": "Saud Abdulhamid",           "shirt": 12, "position": "DF", "dob": "1999-07-18", "age": 26, "caps": 55,  "goals": 1,  "clubId": "lens",        "captain": false, "bio": "" },
+    { "id": "saudi-arabia-boushal",          "name": "Nawaf Boushal",             "shirt": 13, "position": "DF", "dob": "1999-09-16", "age": 26, "caps": 27,  "goals": 0,  "clubId": "al-nassr",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-kadesh",           "name": "Hassan Kadesh",             "shirt": 14, "position": "DF", "dob": "1992-09-26", "age": 33, "caps": 21,  "goals": 2,  "clubId": "al-ittihad", "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-khaibari",      "name": "Abdullah Al-Khaibari",      "shirt": 15, "position": "MF", "dob": "1996-08-16", "age": 29, "caps": 42,  "goals": 0,  "clubId": "al-nassr",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-johani",        "name": "Ziyad Al-Johani",           "shirt": 16, "position": "MF", "dob": "2001-11-11", "age": 24, "caps": 12,  "goals": 0,  "clubId": "al-ahli",     "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-ghannam",       "name": "Khalid Al-Ghannam",         "shirt": 17, "position": "FW", "dob": "2000-11-08", "age": 25, "caps": 7,   "goals": 0,  "clubId": "al-ettifaq", "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-hejji",         "name": "Alaa Al-Hejji",             "shirt": 18, "position": "MF", "dob": "1995-12-03", "age": 30, "caps": 3,   "goals": 0,  "clubId": "neom",        "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-hamdan",        "name": "Abdullah Al-Hamdan",        "shirt": 19, "position": "FW", "dob": "1999-09-13", "age": 26, "caps": 52,  "goals": 13, "clubId": "al-nassr",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-mandash",          "name": "Sultan Mandash",            "shirt": 20, "position": "FW", "dob": "1994-10-17", "age": 31, "caps": 7,   "goals": 2,  "clubId": "al-hilal",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-owais",         "name": "Mohammed Al-Owais",         "shirt": 21, "position": "GK", "dob": "1991-10-10", "age": 34, "caps": 65,  "goals": 0,  "clubId": "al-ula",      "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-kassar",        "name": "Ahmed Al-Kassar",           "shirt": 22, "position": "GK", "dob": "1991-05-08", "age": 35, "caps": 9,   "goals": 0,  "clubId": "al-qadsiah", "captain": false, "bio": "" },
+    { "id": "saudi-arabia-kanno",            "name": "Mohamed Kanno",             "shirt": 23, "position": "MF", "dob": "1994-09-22", "age": 31, "caps": 79,  "goals": 8,  "clubId": "al-hilal",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-al-harbi",         "name": "Moteb Al-Harbi",            "shirt": 24, "position": "DF", "dob": "2000-02-20", "age": 26, "caps": 13,  "goals": 0,  "clubId": "al-hilal",    "captain": false, "bio": "" },
+    { "id": "saudi-arabia-thakri",           "name": "Jehad Thakri",              "shirt": 25, "position": "DF", "dob": "2001-07-21", "age": 24, "caps": 8,   "goals": 0,  "clubId": "al-qadsiah", "captain": false, "bio": "" },
+    { "id": "saudi-arabia-abu-al-shamat",    "name": "Mohammed Abu Al-Shamat",    "shirt": 26, "position": "DF", "dob": "2002-08-11", "age": 23, "caps": 8,   "goals": 0,  "clubId": "al-qadsiah", "captain": false, "bio": "" }
+  ]
+}

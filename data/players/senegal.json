@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "senegal-diouf-y",      "name": "Yehvann Diouf",           "shirt": 1,  "position": "GK", "dob": "1999-11-16", "age": 26, "caps": 2,   "goals": 0,  "clubId": "nice",           "captain": false, "bio": "" },
+    { "id": "senegal-sarr-m",       "name": "Mamadou Sarr",            "shirt": 2,  "position": "DF", "dob": "2005-08-29", "age": 20, "caps": 8,   "goals": 0,  "clubId": "chelsea",        "captain": false, "bio": "" },
+    { "id": "senegal-koulibaly",    "name": "Kalidou Koulibaly",       "shirt": 3,  "position": "DF", "dob": "1991-06-20", "age": 34, "caps": 103, "goals": 2,  "clubId": "al-hilal",       "captain": true,  "bio": "" },
+    { "id": "senegal-seck",         "name": "Abdoulaye Seck",          "shirt": 4,  "position": "DF", "dob": "1992-06-04", "age": 34, "caps": 22,  "goals": 4,  "clubId": "maccabi-haifa",  "captain": false, "bio": "" },
+    { "id": "senegal-gueye",        "name": "Idrissa Gueye",           "shirt": 5,  "position": "MF", "dob": "1989-09-26", "age": 36, "caps": 131, "goals": 7,  "clubId": "everton",        "captain": false, "bio": "" },
+    { "id": "senegal-ciss",         "name": "Pathé Ciss",              "shirt": 6,  "position": "MF", "dob": "1994-03-16", "age": 32, "caps": 30,  "goals": 0,  "clubId": "rayo-vallecano", "captain": false, "bio": "" },
+    { "id": "senegal-diao",         "name": "Assane Diao",             "shirt": 7,  "position": "FW", "dob": "2005-09-07", "age": 20, "caps": 5,   "goals": 0,  "clubId": "como",           "captain": false, "bio": "" },
+    { "id": "senegal-camara",       "name": "Lamine Camara",           "shirt": 8,  "position": "MF", "dob": "2004-01-01", "age": 22, "caps": 33,  "goals": 7,  "clubId": "monaco",         "captain": false, "bio": "" },
+    { "id": "senegal-dieng",        "name": "Bamba Dieng",             "shirt": 9,  "position": "FW", "dob": "2000-03-23", "age": 26, "caps": 23,  "goals": 2,  "clubId": "lorient",        "captain": false, "bio": "" },
+    { "id": "senegal-mane",         "name": "Sadio Mané",              "shirt": 10, "position": "FW", "dob": "1992-04-10", "age": 34, "caps": 128, "goals": 55, "clubId": "al-nassr",       "captain": false, "bio": "" },
+    { "id": "senegal-jackson",      "name": "Nicolas Jackson",         "shirt": 11, "position": "FW", "dob": "2001-06-20", "age": 24, "caps": 33,  "goals": 8,  "clubId": "bayern-munich",  "captain": false, "bio": "" },
+    { "id": "senegal-ndiaye-c",     "name": "Cherif Ndiaye",           "shirt": 12, "position": "FW", "dob": "1996-01-23", "age": 30, "caps": 19,  "goals": 4,  "clubId": "samsunspor",     "captain": false, "bio": "" },
+    { "id": "senegal-ndiaye-i",     "name": "Iliman Ndiaye",           "shirt": 13, "position": "FW", "dob": "2000-03-06", "age": 26, "caps": 40,  "goals": 4,  "clubId": "everton",        "captain": false, "bio": "" },
+    { "id": "senegal-jakobs",       "name": "Ismail Jakobs",           "shirt": 14, "position": "DF", "dob": "1999-08-17", "age": 26, "caps": 30,  "goals": 0,  "clubId": "galatasaray",    "captain": false, "bio": "" },
+    { "id": "senegal-diatta",       "name": "Krépin Diatta",           "shirt": 15, "position": "DF", "dob": "1999-02-25", "age": 27, "caps": 61,  "goals": 2,  "clubId": "monaco",         "captain": false, "bio": "" },
+    { "id": "senegal-mendy-e",      "name": "Édouard Mendy",           "shirt": 16, "position": "GK", "dob": "1992-03-01", "age": 34, "caps": 57,  "goals": 0,  "clubId": "al-ahli",        "captain": false, "bio": "" },
+    { "id": "senegal-sarr-pm",      "name": "Pape Matar Sarr",         "shirt": 17, "position": "MF", "dob": "2002-09-14", "age": 23, "caps": 40,  "goals": 4,  "clubId": "tottenham-hotspur","captain": false, "bio": "" },
+    { "id": "senegal-sarr-i",       "name": "Ismaïla Sarr",            "shirt": 18, "position": "FW", "dob": "1998-02-25", "age": 28, "caps": 83,  "goals": 19, "clubId": "crystal-palace", "captain": false, "bio": "" },
+    { "id": "senegal-niakhate",     "name": "Moussa Niakhaté",         "shirt": 19, "position": "DF", "dob": "1996-03-08", "age": 30, "caps": 31,  "goals": 0,  "clubId": "lyon",           "captain": false, "bio": "" },
+    { "id": "senegal-mbaye",        "name": "Ibrahim Mbaye",           "shirt": 20, "position": "FW", "dob": "2008-01-24", "age": 18, "caps": 11,  "goals": 3,  "clubId": "paris-saint-germain","captain": false, "bio": "" },
+    { "id": "senegal-diarra",       "name": "Habib Diarra",            "shirt": 21, "position": "MF", "dob": "2004-01-03", "age": 22, "caps": 21,  "goals": 4,  "clubId": "sunderland",     "captain": false, "bio": "" },
+    { "id": "senegal-ndiaye-bs",    "name": "Bara Sapoko Ndiaye",      "shirt": 22, "position": "MF", "dob": "2007-12-31", "age": 18, "caps": 1,   "goals": 0,  "clubId": "bayern-munich",  "captain": false, "bio": "" },
+    { "id": "senegal-diaw",         "name": "Mory Diaw",               "shirt": 23, "position": "GK", "dob": "1993-06-22", "age": 32, "caps": 5,   "goals": 0,  "clubId": "le-havre",       "captain": false, "bio": "" },
+    { "id": "senegal-mendy-a",      "name": "Antoine Mendy",           "shirt": 24, "position": "DF", "dob": "2004-05-27", "age": 22, "caps": 7,   "goals": 0,  "clubId": "nice",           "captain": false, "bio": "" },
+    { "id": "senegal-diouf-m",      "name": "El Hadji Malick Diouf",   "shirt": 25, "position": "DF", "dob": "2004-12-29", "age": 21, "caps": 20,  "goals": 1,  "clubId": "west-ham",       "captain": false, "bio": "" },
+    { "id": "senegal-gueye-p",      "name": "Pape Gueye",              "shirt": 26, "position": "MF", "dob": "1999-01-24", "age": 27, "caps": 41,  "goals": 5,  "clubId": "villarreal",     "captain": false, "bio": "" }
+  ]
+}

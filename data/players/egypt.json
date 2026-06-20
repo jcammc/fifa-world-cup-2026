@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "egypt-el-shenawy",     "name": "Mohamed El Shenawy",    "shirt": 1,  "position": "GK", "dob": "1988-12-18", "age": 37, "caps": 76,  "goals": 0,  "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-ibrahim",        "name": "Yasser Ibrahim",         "shirt": 2,  "position": "DF", "dob": "1993-02-10", "age": 33, "caps": 17,  "goals": 1,  "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-hany",           "name": "Mohamed Hany",           "shirt": 3,  "position": "DF", "dob": "1996-02-02", "age": 30, "caps": 42,  "goals": 0,  "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-abdelmaguid",    "name": "Hossam Abdelmaguid",     "shirt": 4,  "position": "DF", "dob": "2001-04-30", "age": 25, "caps": 13,  "goals": 0,  "clubId": "zamalek",           "captain": false, "bio": "" },
+    { "id": "egypt-rabia",          "name": "Ramy Rabia",             "shirt": 5,  "position": "DF", "dob": "1993-05-20", "age": 33, "caps": 44,  "goals": 5,  "clubId": "al-ain",            "captain": false, "bio": "" },
+    { "id": "egypt-abdelmonem",     "name": "Mohamed Abdelmonem",     "shirt": 6,  "position": "DF", "dob": "1999-02-01", "age": 27, "caps": 36,  "goals": 3,  "clubId": "nice",              "captain": false, "bio": "" },
+    { "id": "egypt-trezeguet",      "name": "Trézéguet",              "shirt": 7,  "position": "FW", "dob": "1994-10-01", "age": 31, "caps": 96,  "goals": 23, "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-ashour",         "name": "Emam Ashour",            "shirt": 8,  "position": "MF", "dob": "1998-02-20", "age": 28, "caps": 29,  "goals": 0,  "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-abdelkarim",     "name": "Hamza Abdelkarim",       "shirt": 9,  "position": "FW", "dob": "2008-01-01", "age": 18, "caps": 2,   "goals": 0,  "clubId": "barcelona-b",       "captain": false, "bio": "" },
+    { "id": "egypt-salah",          "name": "Mohamed Salah",          "shirt": 10, "position": "FW", "dob": "1992-06-15", "age": 33, "caps": 116, "goals": 67, "clubId": "liverpool",         "captain": true,  "bio": "" },
+    { "id": "egypt-ziko",           "name": "Mostafa Ziko",           "shirt": 11, "position": "MF", "dob": "1997-04-27", "age": 29, "caps": 2,   "goals": 2,  "clubId": "pyramids",          "captain": false, "bio": "" },
+    { "id": "egypt-hassan-h",       "name": "Haissem Hassan",         "shirt": 12, "position": "FW", "dob": "2002-02-08", "age": 24, "caps": 4,   "goals": 0,  "clubId": "real-oviedo",       "captain": false, "bio": "" },
+    { "id": "egypt-fatouh",         "name": "Ahmed Fatouh",           "shirt": 13, "position": "DF", "dob": "1998-03-22", "age": 28, "caps": 39,  "goals": 1,  "clubId": "zamalek",           "captain": false, "bio": "" },
+    { "id": "egypt-fathy",          "name": "Hamdy Fathy",            "shirt": 14, "position": "MF", "dob": "1994-09-29", "age": 31, "caps": 63,  "goals": 3,  "clubId": "al-wakrah",         "captain": false, "bio": "" },
+    { "id": "egypt-hafez",          "name": "Karim Hafez",            "shirt": 15, "position": "DF", "dob": "1996-03-12", "age": 30, "caps": 9,   "goals": 0,  "clubId": "pyramids",          "captain": false, "bio": "" },
+    { "id": "egypt-soliman",        "name": "El Mahdy Soliman",       "shirt": 16, "position": "GK", "dob": "1987-06-08", "age": 38, "caps": 0,   "goals": 0,  "clubId": "zamalek",           "captain": false, "bio": "" },
+    { "id": "egypt-lasheen",        "name": "Mohanad Lasheen",        "shirt": 17, "position": "MF", "dob": "1996-05-29", "age": 30, "caps": 23,  "goals": 0,  "clubId": "pyramids",          "captain": false, "bio": "" },
+    { "id": "egypt-emad",           "name": "Nabil Emad",             "shirt": 18, "position": "MF", "dob": "1996-04-06", "age": 30, "caps": 12,  "goals": 0,  "clubId": "al-najma",          "captain": false, "bio": "" },
+    { "id": "egypt-attia",          "name": "Marwan Attia",           "shirt": 19, "position": "MF", "dob": "1998-08-01", "age": 27, "caps": 34,  "goals": 1,  "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-adel",           "name": "Ibrahim Adel",           "shirt": 20, "position": "FW", "dob": "2001-04-23", "age": 25, "caps": 24,  "goals": 3,  "clubId": "fc-nordsjaelland",  "captain": false, "bio": "" },
+    { "id": "egypt-saber",          "name": "Mahmoud Saber",          "shirt": 21, "position": "MF", "dob": "2001-07-30", "age": 24, "caps": 15,  "goals": 1,  "clubId": "zed",               "captain": false, "bio": "" },
+    { "id": "egypt-marmoush",       "name": "Omar Marmoush",          "shirt": 22, "position": "FW", "dob": "1999-02-07", "age": 27, "caps": 50,  "goals": 11, "clubId": "manchester-city",   "captain": false, "bio": "" },
+    { "id": "egypt-shobeir",        "name": "Mostafa Shobeir",        "shirt": 23, "position": "GK", "dob": "2000-05-15", "age": 26, "caps": 9,   "goals": 0,  "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-alaa-t",         "name": "Tarek Alaa",             "shirt": 24, "position": "DF", "dob": "2002-01-05", "age": 24, "caps": 3,   "goals": 0,  "clubId": "zed",               "captain": false, "bio": "" },
+    { "id": "egypt-zizo",           "name": "Zizo",                   "shirt": 25, "position": "FW", "dob": "1996-01-10", "age": 30, "caps": 63,  "goals": 5,  "clubId": "al-ahly",           "captain": false, "bio": "" },
+    { "id": "egypt-alaa-m",         "name": "Mohamed Alaa",           "shirt": 26, "position": "GK", "dob": "1999-01-01", "age": 27, "caps": 0,   "goals": 0,  "clubId": "el-gouna",          "captain": false, "bio": "" }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "panama-mosquera",     "name": "Orlando Mosquera",        "shirt": 1,  "position": "GK", "dob": "2002-11-07", "age": 23, "caps": 18,  "goals": 0,  "clubId": "independiente-del-valle","captain": false, "bio": "" },
+    { "id": "panama-murillo",      "name": "César Blackman",          "shirt": 2,  "position": "DF", "dob": "1993-08-18", "age": 32, "caps": 74,  "goals": 1,  "clubId": "inter-miami",        "captain": false, "bio": "" },
+    { "id": "panama-miller",       "name": "Eric Davis",              "shirt": 3,  "position": "DF", "dob": "1989-09-14", "age": 36, "caps": 82,  "goals": 2,  "clubId": "inter-miami",        "captain": false, "bio": "" },
+    { "id": "panama-torres",       "name": "Fidel Escobar",           "shirt": 4,  "position": "DF", "dob": "1993-09-17", "age": 32, "caps": 58,  "goals": 1,  "clubId": "nacional-uru",       "captain": false, "bio": "" },
+    { "id": "panama-penedo-l",     "name": "Harold Cummings",         "shirt": 5,  "position": "DF", "dob": "1992-07-21", "age": 33, "caps": 85,  "goals": 7,  "clubId": "slovan-bratislava",  "captain": false, "bio": "" },
+    { "id": "panama-quintero-n",   "name": "Adalberto Carrasquilla",  "shirt": 6,  "position": "MF", "dob": "1999-03-14", "age": 27, "caps": 45,  "goals": 3,  "clubId": "houston-dynamo",     "captain": false, "bio": "" },
+    { "id": "panama-baloy",        "name": "José Fajardo",            "shirt": 7,  "position": "FW", "dob": "1996-02-28", "age": 30, "caps": 47,  "goals": 8,  "clubId": "saprissa",           "captain": false, "bio": "" },
+    { "id": "panama-cooper",       "name": "Rolando Blackburn",       "shirt": 8,  "position": "FW", "dob": "1995-03-19", "age": 31, "caps": 40,  "goals": 5,  "clubId": "pari-nn",            "captain": false, "bio": "" },
+    { "id": "panama-perez-b",      "name": "Adolfo Machado",          "shirt": 9,  "position": "FW", "dob": "1998-08-12", "age": 27, "caps": 41,  "goals": 11, "clubId": "ironi-kiryat-shmona","captain": false, "bio": "" },
+    { "id": "panama-quintero-e",   "name": "Miguel Camargo",          "shirt": 10, "position": "MF", "dob": "1997-12-04", "age": 28, "caps": 32,  "goals": 6,  "clubId": "juarez",             "captain": false, "bio": "" },
+    { "id": "panama-perez-j",      "name": "Ismael Díaz",             "shirt": 11, "position": "FW", "dob": "1999-11-15", "age": 26, "caps": 42,  "goals": 9,  "clubId": "leon",               "captain": false, "bio": "" },
+    { "id": "panama-penedo",       "name": "Luis Mejía",              "shirt": 12, "position": "GK", "dob": "1994-12-06", "age": 31, "caps": 46,  "goals": 0,  "clubId": "mazatlan",           "captain": false, "bio": "" },
+    { "id": "panama-godoy-r",      "name": "Roderick Miller",         "shirt": 13, "position": "DF", "dob": "1995-09-10", "age": 30, "caps": 62,  "goals": 3,  "clubId": "marathon-honduras",  "captain": false, "bio": "" },
+    { "id": "panama-brown-s",      "name": "Édgar Bárcenas",          "shirt": 14, "position": "FW", "dob": "1993-09-24", "age": 32, "caps": 80,  "goals": 14, "clubId": "puerto-cabello",     "captain": false, "bio": "" },
+    { "id": "panama-mitre",        "name": "Alberto Quintero",        "shirt": 15, "position": "FW", "dob": "1989-04-30", "age": 37, "caps": 88,  "goals": 18, "clubId": "plaza-amador",       "captain": false, "bio": "" },
+    { "id": "panama-azcargorrota", "name": "Édgar Yoel Bárcenas",     "shirt": 16, "position": "MF", "dob": "1997-11-19", "age": 28, "caps": 27,  "goals": 3,  "clubId": "universidad-catolica-ecu","captain": false, "bio": "" },
+    { "id": "panama-gabriel-torres","name": "Gabriel Torres",          "shirt": 17, "position": "FW", "dob": "1988-07-25", "age": 37, "caps": 134, "goals": 43, "clubId": "universidad-de-concepcion","captain": false, "bio": "" },
+    { "id": "panama-murillo-e",    "name": "Andrés Andrade",          "shirt": 18, "position": "MF", "dob": "1993-10-02", "age": 32, "caps": 76,  "goals": 5,  "clubId": "san-diego-fc",       "captain": false, "bio": "" },
+    { "id": "panama-escobar",      "name": "Freddy Gondola",          "shirt": 19, "position": "FW", "dob": "2000-05-08", "age": 26, "caps": 12,  "goals": 2,  "clubId": "cobresal",           "captain": false, "bio": "" },
+    { "id": "panama-godoy",        "name": "Anibal Godoy",            "shirt": 20, "position": "MF", "dob": "1990-03-16", "age": 36, "caps": 159, "goals": 4,  "clubId": "san-diego-fc",       "captain": true,  "bio": "" },
+    { "id": "panama-morrison",     "name": "Alfredo Stephens",        "shirt": 21, "position": "DF", "dob": "1993-12-25", "age": 32, "caps": 57,  "goals": 3,  "clubId": "al-fayha",           "captain": false, "bio": "" },
+    { "id": "panama-pimentel",     "name": "Abdiel Ayarza",           "shirt": 22, "position": "GK", "dob": "1999-06-01", "age": 27, "caps": 7,   "goals": 0,  "clubId": "turan-tovuz",        "captain": false, "bio": "" },
+    { "id": "panama-polo",         "name": "Eduardo Anderson",        "shirt": 23, "position": "MF", "dob": "1996-01-18", "age": 30, "caps": 36,  "goals": 1,  "clubId": "deportivo-la-guaira","captain": false, "bio": "" },
+    { "id": "panama-quintero-c",   "name": "Cesar Yanis",             "shirt": 24, "position": "MF", "dob": "1994-11-11", "age": 31, "caps": 46,  "goals": 4,  "clubId": "al-fayha",           "captain": false, "bio": "" },
+    { "id": "panama-taylor",       "name": "Michael Murillo",         "shirt": 25, "position": "DF", "dob": "1996-01-04", "age": 30, "caps": 58,  "goals": 1,  "clubId": "anderlecht",         "captain": false, "bio": "" },
+    { "id": "panama-mosquera-s",   "name": "Néstor Almendra",         "shirt": 26, "position": "MF", "dob": "1998-09-11", "age": 27, "caps": 11,  "goals": 1,  "clubId": "plaza-amador",       "captain": false, "bio": "" }
+  ]
+}

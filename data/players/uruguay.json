@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "uruguay-rochet",         "name": "Sergio Rochet",           "shirt": 1,  "position": "GK", "dob": "1993-03-23", "age": 33, "caps": 35,  "goals": 0,  "clubId": "internacional",  "captain": false, "bio": "" },
+    { "id": "uruguay-gimenez",        "name": "José María Giménez",      "shirt": 2,  "position": "DF", "dob": "1995-01-20", "age": 31, "caps": 99,  "goals": 8,  "clubId": "atletico-madrid","captain": true,  "bio": "" },
+    { "id": "uruguay-caceres-s",      "name": "Sebastián Cáceres",       "shirt": 3,  "position": "DF", "dob": "1999-08-18", "age": 26, "caps": 24,  "goals": 0,  "clubId": "america",        "captain": false, "bio": "" },
+    { "id": "uruguay-araujo",         "name": "Ronald Araújo",           "shirt": 4,  "position": "DF", "dob": "1999-03-07", "age": 27, "caps": 27,  "goals": 1,  "clubId": "barcelona",      "captain": false, "bio": "" },
+    { "id": "uruguay-ugarte",         "name": "Manuel Ugarte",           "shirt": 5,  "position": "MF", "dob": "2001-04-11", "age": 25, "caps": 36,  "goals": 1,  "clubId": "manchester-united","captain": false, "bio": "" },
+    { "id": "uruguay-bentancur",      "name": "Rodrigo Bentancur",       "shirt": 6,  "position": "MF", "dob": "1997-06-25", "age": 28, "caps": 74,  "goals": 3,  "clubId": "tottenham-hotspur","captain": false, "bio": "" },
+    { "id": "uruguay-de-la-cruz",     "name": "Nicolás de la Cruz",      "shirt": 7,  "position": "MF", "dob": "1997-06-01", "age": 29, "caps": 34,  "goals": 5,  "clubId": "flamengo",       "captain": false, "bio": "" },
+    { "id": "uruguay-valverde",       "name": "Federico Valverde",       "shirt": 8,  "position": "MF", "dob": "1998-07-22", "age": 27, "caps": 73,  "goals": 9,  "clubId": "real-madrid",    "captain": false, "bio": "" },
+    { "id": "uruguay-nunez",          "name": "Darwin Núñez",            "shirt": 9,  "position": "FW", "dob": "1999-06-24", "age": 26, "caps": 38,  "goals": 13, "clubId": "al-hilal",       "captain": false, "bio": "" },
+    { "id": "uruguay-de-arrascaeta",  "name": "Giorgian de Arrascaeta",  "shirt": 10, "position": "MF", "dob": "1994-06-01", "age": 32, "caps": 60,  "goals": 13, "clubId": "flamengo",       "captain": false, "bio": "" },
+    { "id": "uruguay-pellistri",      "name": "Facundo Pellistri",       "shirt": 11, "position": "FW", "dob": "2001-12-20", "age": 24, "caps": 39,  "goals": 2,  "clubId": "panathinaikos",  "captain": false, "bio": "" },
+    { "id": "uruguay-mele",           "name": "Santiago Mele",           "shirt": 12, "position": "GK", "dob": "1997-09-06", "age": 28, "caps": 8,   "goals": 0,  "clubId": "monterrey",      "captain": false, "bio": "" },
+    { "id": "uruguay-varela",         "name": "Guillermo Varela",        "shirt": 13, "position": "DF", "dob": "1993-03-24", "age": 33, "caps": 28,  "goals": 0,  "clubId": "flamengo",       "captain": false, "bio": "" },
+    { "id": "uruguay-canobbio",       "name": "Agustín Canobbio",        "shirt": 14, "position": "MF", "dob": "1998-10-01", "age": 27, "caps": 15,  "goals": 1,  "clubId": "fluminense",     "captain": false, "bio": "" },
+    { "id": "uruguay-martinez-e",     "name": "Emiliano Martínez",       "shirt": 15, "position": "MF", "dob": "1999-08-17", "age": 26, "caps": 10,  "goals": 0,  "clubId": "palmeiras",      "captain": false, "bio": "" },
+    { "id": "uruguay-olivera",        "name": "Mathías Olivera",         "shirt": 16, "position": "DF", "dob": "1997-10-31", "age": 28, "caps": 35,  "goals": 2,  "clubId": "napoli",         "captain": false, "bio": "" },
+    { "id": "uruguay-vina",           "name": "Matías Viña",             "shirt": 17, "position": "DF", "dob": "1997-11-09", "age": 28, "caps": 43,  "goals": 1,  "clubId": "river-plate",    "captain": false, "bio": "" },
+    { "id": "uruguay-rodriguez-b",    "name": "Brian Rodríguez",         "shirt": 18, "position": "FW", "dob": "2000-05-20", "age": 26, "caps": 32,  "goals": 4,  "clubId": "america",        "captain": false, "bio": "" },
+    { "id": "uruguay-aguirre",        "name": "Rodrigo Aguirre",         "shirt": 19, "position": "FW", "dob": "1994-10-01", "age": 31, "caps": 10,  "goals": 3,  "clubId": "tigres-uanl",    "captain": false, "bio": "" },
+    { "id": "uruguay-araujo-m",       "name": "Maximiliano Araújo",      "shirt": 20, "position": "MF", "dob": "2000-02-15", "age": 26, "caps": 28,  "goals": 3,  "clubId": "sporting-cp",    "captain": false, "bio": "" },
+    { "id": "uruguay-vinas",          "name": "Federico Viñas",          "shirt": 21, "position": "FW", "dob": "1998-06-30", "age": 27, "caps": 11,  "goals": 2,  "clubId": "real-oviedo",    "captain": false, "bio": "" },
+    { "id": "uruguay-piquerez",       "name": "Joaquín Piquerez",        "shirt": 22, "position": "MF", "dob": "1998-08-24", "age": 27, "caps": 19,  "goals": 0,  "clubId": "palmeiras",      "captain": false, "bio": "" },
+    { "id": "uruguay-muslera",        "name": "Fernando Muslera",        "shirt": 23, "position": "GK", "dob": "1986-06-16", "age": 39, "caps": 134, "goals": 0,  "clubId": "estudiantes",    "captain": false, "bio": "" },
+    { "id": "uruguay-bueno",          "name": "Santiago Bueno",          "shirt": 24, "position": "DF", "dob": "1998-11-09", "age": 27, "caps": 8,   "goals": 0,  "clubId": "wolverhampton",  "captain": false, "bio": "" },
+    { "id": "uruguay-sanabria-jm",    "name": "Juan Manuel Sanabria",    "shirt": 25, "position": "MF", "dob": "2000-03-29", "age": 26, "caps": 5,   "goals": 1,  "clubId": "real-salt-lake", "captain": false, "bio": "" },
+    { "id": "uruguay-zalazar",        "name": "Rodrigo Zalazar",         "shirt": 26, "position": "MF", "dob": "1999-08-12", "age": 26, "caps": 8,   "goals": 2,  "clubId": "braga",          "captain": false, "bio": "" }
+  ]
+}

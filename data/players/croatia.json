@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "croatia-livakovic",    "name": "Dominik Livaković",      "shirt": 1,  "position": "GK", "dob": "1995-01-09", "age": 31, "caps": 64,  "goals": 0,  "clubId": "fenerbahce",         "captain": false, "bio": "" },
+    { "id": "croatia-juranovic",    "name": "Josip Juranović",        "shirt": 2,  "position": "DF", "dob": "1995-08-16", "age": 30, "caps": 57,  "goals": 2,  "clubId": "union-berlin",       "captain": false, "bio": "" },
+    { "id": "croatia-sutalo",       "name": "Josip Šutalo",           "shirt": 3,  "position": "DF", "dob": "2000-02-28", "age": 26, "caps": 30,  "goals": 1,  "clubId": "ajax",               "captain": false, "bio": "" },
+    { "id": "croatia-pongracic",    "name": "Marin Pongračić",        "shirt": 4,  "position": "DF", "dob": "1997-09-11", "age": 28, "caps": 36,  "goals": 1,  "clubId": "red-star-belgrade",      "captain": false, "bio": "" },
+    { "id": "croatia-gvardiol",     "name": "Joško Gvardiol",         "shirt": 5,  "position": "DF", "dob": "2002-01-23", "age": 24, "caps": 48,  "goals": 4,  "clubId": "manchester-city",    "captain": false, "bio": "" },
+    { "id": "croatia-brozovic",     "name": "Marcelo Brozović",       "shirt": 6,  "position": "MF", "dob": "1992-11-16", "age": 33, "caps": 90,  "goals": 15, "clubId": "al-nassr",           "captain": false, "bio": "" },
+    { "id": "croatia-pasalic",      "name": "Mario Pašalić",          "shirt": 7,  "position": "MF", "dob": "1995-02-09", "age": 31, "caps": 73,  "goals": 20, "clubId": "atalanta",           "captain": false, "bio": "" },
+    { "id": "croatia-kovacic",      "name": "Mateo Kovačić",          "shirt": 8,  "position": "MF", "dob": "1994-05-06", "age": 32, "caps": 110, "goals": 14, "clubId": "manchester-city",    "captain": false, "bio": "" },
+    { "id": "croatia-kramaric",     "name": "Andrej Kramarić",        "shirt": 9,  "position": "FW", "dob": "1991-06-19", "age": 35, "caps": 83,  "goals": 30, "clubId": "tsg-hoffenheim",         "captain": false, "bio": "" },
+    { "id": "croatia-modric",       "name": "Luka Modrić",            "shirt": 10, "position": "MF", "dob": "1985-09-09", "age": 40, "caps": 198, "goals": 29, "clubId": "ac-milan",           "captain": true,  "bio": "" },
+    { "id": "croatia-budimir",      "name": "Ante Budimir",           "shirt": 11, "position": "FW", "dob": "1991-07-22", "age": 34, "caps": 48,  "goals": 17, "clubId": "osasuna",            "captain": false, "bio": "" },
+    { "id": "croatia-labrovic",     "name": "Nediljko Labrović",      "shirt": 12, "position": "GK", "dob": "1998-07-17", "age": 27, "caps": 13,  "goals": 0,  "clubId": "hajduk-split",       "captain": false, "bio": "" },
+    { "id": "croatia-ivanusec",     "name": "Luka Ivanušec",          "shirt": 13, "position": "MF", "dob": "1998-11-26", "age": 27, "caps": 38,  "goals": 6,  "clubId": "fenerbahce",         "captain": false, "bio": "" },
+    { "id": "croatia-perisic",      "name": "Ivan Perišić",           "shirt": 14, "position": "MF", "dob": "1989-02-02", "age": 37, "caps": 122, "goals": 33, "clubId": "psv-eindhoven",                "captain": false, "bio": "" },
+    { "id": "croatia-lovren",       "name": "Dejan Lovren",           "shirt": 15, "position": "DF", "dob": "1989-07-05", "age": 36, "caps": 87,  "goals": 9,  "clubId": "fc-copenhagen",      "captain": false, "bio": "" },
+    { "id": "croatia-orsic",        "name": "Mislav Oršić",           "shirt": 16, "position": "FW", "dob": "1992-12-29", "age": 33, "caps": 39,  "goals": 9,  "clubId": "celta-vigo",         "captain": false, "bio": "" },
+    { "id": "croatia-vlasic",       "name": "Nikola Vlašić",          "shirt": 17, "position": "MF", "dob": "1997-10-04", "age": 28, "caps": 79,  "goals": 17, "clubId": "torino",             "captain": false, "bio": "" },
+    { "id": "croatia-liber",        "name": "Stipe Biuk",             "shirt": 18, "position": "FW", "dob": "2001-11-24", "age": 24, "caps": 18,  "goals": 1,  "clubId": "hajduk-split",       "captain": false, "bio": "" },
+    { "id": "croatia-sosa",         "name": "Borna Sosa",             "shirt": 19, "position": "DF", "dob": "1998-01-21", "age": 28, "caps": 38,  "goals": 5,  "clubId": "ajax",               "captain": false, "bio": "" },
+    { "id": "croatia-stanisic",     "name": "Josip Staniši",          "shirt": 20, "position": "DF", "dob": "2000-04-02", "age": 26, "caps": 25,  "goals": 1,  "clubId": "bayer-leverkusen",   "captain": false, "bio": "" },
+    { "id": "croatia-drmics",       "name": "Ante Palaversa",         "shirt": 21, "position": "MF", "dob": "2000-07-06", "age": 25, "caps": 12,  "goals": 0,  "clubId": "kaa-gent",               "captain": false, "bio": "" },
+    { "id": "croatia-zagorac",      "name": "Toma Bašić",             "shirt": 22, "position": "MF", "dob": "1996-11-25", "age": 29, "caps": 22,  "goals": 3,  "clubId": "inter-miami",        "captain": false, "bio": "" },
+    { "id": "croatia-ivusic",       "name": "Ivan Ivušić",            "shirt": 23, "position": "GK", "dob": "1995-02-24", "age": 31, "caps": 21,  "goals": 0,  "clubId": "osasuna",            "captain": false, "bio": "" },
+    { "id": "croatia-pasalic-m",    "name": "Marco Pašalić",          "shirt": 24, "position": "FW", "dob": "2001-07-24", "age": 24, "caps": 11,  "goals": 2,  "clubId": "wolfsburg",          "captain": false, "bio": "" },
+    { "id": "croatia-sucic",        "name": "Luka Sučić",             "shirt": 25, "position": "MF", "dob": "2002-11-08", "age": 23, "caps": 28,  "goals": 4,  "clubId": "red-bull-salzburg",        "captain": false, "bio": "" },
+    { "id": "croatia-majer",        "name": "Lovro Majer",            "shirt": 26, "position": "MF", "dob": "1998-01-17", "age": 28, "caps": 38,  "goals": 4,  "clubId": "wolfsburg",          "captain": false, "bio": "" }
+  ]
+}

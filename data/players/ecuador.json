@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "ecuador-galindez",     "name": "Hernán Galíndez",       "shirt": 1,  "position": "GK", "dob": "1987-03-30", "age": 39, "caps": 35,  "goals": 0,  "clubId": "huracan",               "captain": false, "bio": "" },
+    { "id": "ecuador-torres",       "name": "Félix Torres",          "shirt": 2,  "position": "DF", "dob": "1997-01-11", "age": 29, "caps": 49,  "goals": 5,  "clubId": "internacional",         "captain": false, "bio": "" },
+    { "id": "ecuador-hincapie",     "name": "Piero Hincapié",        "shirt": 3,  "position": "DF", "dob": "2002-01-09", "age": 24, "caps": 52,  "goals": 3,  "clubId": "arsenal",               "captain": false, "bio": "" },
+    { "id": "ecuador-ordonez",      "name": "Joel Ordóñez",          "shirt": 4,  "position": "DF", "dob": "2004-04-21", "age": 22, "caps": 17,  "goals": 0,  "clubId": "club-brugge",           "captain": false, "bio": "" },
+    { "id": "ecuador-alcivar",      "name": "Jordy Alcívar",         "shirt": 5,  "position": "MF", "dob": "1999-08-05", "age": 26, "caps": 11,  "goals": 1,  "clubId": "independiente-del-valle","captain": false, "bio": "" },
+    { "id": "ecuador-pacho",        "name": "Willian Pacho",         "shirt": 6,  "position": "DF", "dob": "2001-10-16", "age": 24, "caps": 34,  "goals": 2,  "clubId": "paris-saint-germain",   "captain": false, "bio": "" },
+    { "id": "ecuador-estupinian",   "name": "Pervis Estupiñán",      "shirt": 7,  "position": "DF", "dob": "1998-01-21", "age": 28, "caps": 54,  "goals": 5,  "clubId": "ac-milan",              "captain": false, "bio": "" },
+    { "id": "ecuador-valencia-a",   "name": "Anthony Valencia",      "shirt": 8,  "position": "MF", "dob": "2003-07-21", "age": 22, "caps": 3,   "goals": 1,  "clubId": "antwerp",               "captain": false, "bio": "" },
+    { "id": "ecuador-yeboah",       "name": "John Yeboah",           "shirt": 9,  "position": "FW", "dob": "2000-06-23", "age": 25, "caps": 23,  "goals": 3,  "clubId": "venezia",               "captain": false, "bio": "" },
+    { "id": "ecuador-paez",         "name": "Kendry Páez",           "shirt": 10, "position": "MF", "dob": "2007-05-04", "age": 19, "caps": 26,  "goals": 2,  "clubId": "river-plate",           "captain": false, "bio": "" },
+    { "id": "ecuador-rodriguez-k",  "name": "Kevin Rodríguez",       "shirt": 11, "position": "FW", "dob": "2000-03-04", "age": 26, "caps": 31,  "goals": 2,  "clubId": "union-saint-gilloise",  "captain": false, "bio": "" },
+    { "id": "ecuador-ramirez",      "name": "Moisés Ramírez",        "shirt": 12, "position": "GK", "dob": "2000-09-09", "age": 25, "caps": 7,   "goals": 0,  "clubId": "ae-kifisia",            "captain": false, "bio": "" },
+    { "id": "ecuador-valencia-e",   "name": "Enner Valencia",        "shirt": 13, "position": "FW", "dob": "1989-11-04", "age": 36, "caps": 105, "goals": 49, "clubId": "pachuca",               "captain": true,  "bio": "" },
+    { "id": "ecuador-minda",        "name": "Alan Minda",            "shirt": 14, "position": "MF", "dob": "2003-05-14", "age": 23, "caps": 20,  "goals": 2,  "clubId": "atletico-mineiro",      "captain": false, "bio": "" },
+    { "id": "ecuador-vite",         "name": "Pedro Vite",            "shirt": 15, "position": "MF", "dob": "2002-03-09", "age": 24, "caps": 17,  "goals": 1,  "clubId": "pumas-unam",            "captain": false, "bio": "" },
+    { "id": "ecuador-caicedo-j",    "name": "Jordy Caicedo",         "shirt": 16, "position": "FW", "dob": "1997-11-18", "age": 28, "caps": 20,  "goals": 4,  "clubId": "huracan",               "captain": false, "bio": "" },
+    { "id": "ecuador-preciado",     "name": "Ángelo Preciado",       "shirt": 17, "position": "DF", "dob": "1998-02-18", "age": 28, "caps": 55,  "goals": 0,  "clubId": "atletico-mineiro",      "captain": false, "bio": "" },
+    { "id": "ecuador-castillo",     "name": "Denil Castillo",        "shirt": 18, "position": "MF", "dob": "2004-03-24", "age": 22, "caps": 5,   "goals": 0,  "clubId": "fc-midtjylland",        "captain": false, "bio": "" },
+    { "id": "ecuador-plata",        "name": "Gonzalo Plata",         "shirt": 19, "position": "FW", "dob": "2000-11-01", "age": 25, "caps": 50,  "goals": 8,  "clubId": "flamengo",              "captain": false, "bio": "" },
+    { "id": "ecuador-angulo",       "name": "Nilson Angulo",         "shirt": 20, "position": "FW", "dob": "2003-06-19", "age": 22, "caps": 14,  "goals": 2,  "clubId": "sunderland",            "captain": false, "bio": "" },
+    { "id": "ecuador-franco",       "name": "Alan Franco",           "shirt": 21, "position": "MF", "dob": "1998-08-21", "age": 27, "caps": 58,  "goals": 1,  "clubId": "atletico-mineiro",      "captain": false, "bio": "" },
+    { "id": "ecuador-valle",        "name": "Gonzalo Valle",         "shirt": 22, "position": "GK", "dob": "1996-02-28", "age": 30, "caps": 4,   "goals": 0,  "clubId": "ldu-quito",             "captain": false, "bio": "" },
+    { "id": "ecuador-caicedo-m",    "name": "Moisés Caicedo",        "shirt": 23, "position": "MF", "dob": "2001-11-02", "age": 24, "caps": 61,  "goals": 3,  "clubId": "chelsea",               "captain": false, "bio": "" },
+    { "id": "ecuador-arevalo",      "name": "Jeremy Arévalo",        "shirt": 24, "position": "FW", "dob": "2005-03-19", "age": 21, "caps": 4,   "goals": 0,  "clubId": "vfb-stuttgart",         "captain": false, "bio": "" },
+    { "id": "ecuador-porozo",       "name": "Jackson Porozo",        "shirt": 25, "position": "DF", "dob": "2000-08-04", "age": 25, "caps": 10,  "goals": 1,  "clubId": "tijuana",               "captain": false, "bio": "" },
+    { "id": "ecuador-medina",       "name": "Yaimar Medina",         "shirt": 26, "position": "DF", "dob": "2004-11-05", "age": 21, "caps": 6,   "goals": 0,  "clubId": "genk",                  "captain": false, "bio": "" }
+  ]
+}

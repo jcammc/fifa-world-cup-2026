@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "algeria-mastil",      "name": "Melvin Mastil",          "shirt": 1,  "position": "GK", "dob": "2000-02-19", "age": 26, "caps": 3,   "goals": 0,  "clubId": "stade-nyonnais",  "captain": false, "bio": "" },
+    { "id": "algeria-mandi",       "name": "Aïssa Mandi",            "shirt": 2,  "position": "DF", "dob": "1991-10-22", "age": 34, "caps": 120, "goals": 9,  "clubId": "lille",           "captain": false, "bio": "" },
+    { "id": "algeria-abada",       "name": "Achref Abada",           "shirt": 3,  "position": "DF", "dob": "1999-06-15", "age": 26, "caps": 9,   "goals": 1,  "clubId": "usm-alger",       "captain": false, "bio": "" },
+    { "id": "algeria-tougai",      "name": "Mohamed Amine Tougai",   "shirt": 4,  "position": "DF", "dob": "2000-01-22", "age": 26, "caps": 31,  "goals": 2,  "clubId": "esperance-de-tunis","captain": false, "bio": "" },
+    { "id": "algeria-belaid",      "name": "Zineddine Belaïd",       "shirt": 5,  "position": "DF", "dob": "1999-03-20", "age": 27, "caps": 13,  "goals": 1,  "clubId": "js-kabylie",      "captain": false, "bio": "" },
+    { "id": "algeria-zerrouki",    "name": "Ramiz Zerrouki",         "shirt": 6,  "position": "MF", "dob": "1998-05-26", "age": 28, "caps": 54,  "goals": 3,  "clubId": "twente",          "captain": false, "bio": "" },
+    { "id": "algeria-mahrez",      "name": "Riyad Mahrez",           "shirt": 7,  "position": "FW", "dob": "1991-02-21", "age": 35, "caps": 117, "goals": 38, "clubId": "al-ahli",         "captain": true,  "bio": "" },
+    { "id": "algeria-aouar",       "name": "Houssem Aouar",          "shirt": 8,  "position": "MF", "dob": "1998-06-30", "age": 27, "caps": 23,  "goals": 6,  "clubId": "al-ittihad",      "captain": false, "bio": "" },
+    { "id": "algeria-gouiri",      "name": "Amine Gouiri",           "shirt": 9,  "position": "FW", "dob": "2000-02-16", "age": 26, "caps": 24,  "goals": 12, "clubId": "marseille",       "captain": false, "bio": "" },
+    { "id": "algeria-chaibi",      "name": "Farès Chaïbi",           "shirt": 10, "position": "MF", "dob": "2002-11-28", "age": 23, "caps": 32,  "goals": 3,  "clubId": "eintracht-frankfurt","captain": false, "bio": "" },
+    { "id": "algeria-hadj-moussa", "name": "Anis Hadj Moussa",       "shirt": 11, "position": "FW", "dob": "2002-02-11", "age": 24, "caps": 16,  "goals": 3,  "clubId": "feyenoord",       "captain": false, "bio": "" },
+    { "id": "algeria-benbouali",   "name": "Nadhir Benbouali",       "shirt": 12, "position": "FW", "dob": "2000-04-17", "age": 26, "caps": 5,   "goals": 1,  "clubId": "gyori-eto",       "captain": false, "bio": "" },
+    { "id": "algeria-hadjam",      "name": "Jaouen Hadjam",          "shirt": 13, "position": "DF", "dob": "2003-03-26", "age": 23, "caps": 19,  "goals": 3,  "clubId": "young-boys",      "captain": false, "bio": "" },
+    { "id": "algeria-boudaoui",    "name": "Hicham Boudaoui",        "shirt": 14, "position": "MF", "dob": "1999-09-23", "age": 26, "caps": 35,  "goals": 0,  "clubId": "nice",            "captain": false, "bio": "" },
+    { "id": "algeria-ait-nouri",   "name": "Rayan Aït-Nouri",        "shirt": 15, "position": "DF", "dob": "2001-06-06", "age": 25, "caps": 31,  "goals": 0,  "clubId": "manchester-city", "captain": false, "bio": "" },
+    { "id": "algeria-benbot",      "name": "Oussama Benbot",         "shirt": 16, "position": "GK", "dob": "1994-10-11", "age": 31, "caps": 4,   "goals": 0,  "clubId": "usm-alger",       "captain": false, "bio": "" },
+    { "id": "algeria-belghali",    "name": "Rafik Belghali",         "shirt": 17, "position": "DF", "dob": "2002-06-07", "age": 24, "caps": 14,  "goals": 1,  "clubId": "hellas-verona",   "captain": false, "bio": "" },
+    { "id": "algeria-amoura",      "name": "Mohamed Amoura",         "shirt": 18, "position": "FW", "dob": "2000-05-09", "age": 26, "caps": 48,  "goals": 19, "clubId": "wolfsburg",       "captain": false, "bio": "" },
+    { "id": "algeria-bentaleb",    "name": "Nabil Bentaleb",         "shirt": 19, "position": "MF", "dob": "1994-11-24", "age": 31, "caps": 62,  "goals": 6,  "clubId": "lille",           "captain": false, "bio": "" },
+    { "id": "algeria-boulbina",    "name": "Adil Boulbina",          "shirt": 20, "position": "FW", "dob": "2003-05-02", "age": 23, "caps": 11,  "goals": 4,  "clubId": "al-duhail",       "captain": false, "bio": "" },
+    { "id": "algeria-bensebaini",  "name": "Ramy Bensebaini",        "shirt": 21, "position": "DF", "dob": "1995-04-16", "age": 31, "caps": 82,  "goals": 9,  "clubId": "borussia-dortmund","captain": false, "bio": "" },
+    { "id": "algeria-maza",        "name": "Ibrahim Maza",           "shirt": 22, "position": "MF", "dob": "2005-11-24", "age": 20, "caps": 18,  "goals": 2,  "clubId": "bayer-leverkusen","captain": false, "bio": "" },
+    { "id": "algeria-zidane-l",    "name": "Luca Zidane",            "shirt": 23, "position": "GK", "dob": "1998-05-13", "age": 28, "caps": 7,   "goals": 0,  "clubId": "granada",         "captain": false, "bio": "" },
+    { "id": "algeria-titraoui",    "name": "Yacine Titraoui",        "shirt": 24, "position": "MF", "dob": "2003-07-26", "age": 22, "caps": 5,   "goals": 0,  "clubId": "charleroi",       "captain": false, "bio": "" },
+    { "id": "algeria-ghedjemis",   "name": "Farès Ghedjemis",        "shirt": 25, "position": "FW", "dob": "2002-09-06", "age": 23, "caps": 1,   "goals": 1,  "clubId": "frosinone",       "captain": false, "bio": "" },
+    { "id": "algeria-chergui",     "name": "Samir Chergui",          "shirt": 26, "position": "DF", "dob": "1999-02-06", "age": 27, "caps": 6,   "goals": 0,  "clubId": "paris-fc",        "captain": false, "bio": "" }
+  ]
+}

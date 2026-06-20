@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "paraguay-fernandez",           "name": "Gatito Fernández",       "shirt": 1,  "position": "GK", "dob": "1988-03-29", "age": 38, "caps": 31,  "goals": 0,  "clubId": "cerro-porteno",           "captain": false, "bio": "" },
+    { "id": "paraguay-velazquez",           "name": "Gustavo Velázquez",      "shirt": 2,  "position": "DF", "dob": "1991-04-17", "age": 35, "caps": 13,  "goals": 1,  "clubId": "cerro-porteno",           "captain": false, "bio": "" },
+    { "id": "paraguay-alderete",            "name": "Omar Alderete",          "shirt": 3,  "position": "DF", "dob": "1996-12-26", "age": 29, "caps": 36,  "goals": 3,  "clubId": "sunderland",              "captain": false, "bio": "" },
+    { "id": "paraguay-caceres",             "name": "Juan José Cáceres",      "shirt": 4,  "position": "DF", "dob": "2000-06-01", "age": 26, "caps": 17,  "goals": 0,  "clubId": "dynamo-moscow",           "captain": false, "bio": "" },
+    { "id": "paraguay-balbuena",            "name": "Fabián Balbuena",        "shirt": 5,  "position": "DF", "dob": "1991-08-23", "age": 34, "caps": 48,  "goals": 2,  "clubId": "gremio",                  "captain": false, "bio": "" },
+    { "id": "paraguay-alonso",              "name": "Júnior Alonso",          "shirt": 6,  "position": "DF", "dob": "1993-02-09", "age": 33, "caps": 71,  "goals": 3,  "clubId": "atletico-mineiro",        "captain": false, "bio": "" },
+    { "id": "paraguay-sosa",                "name": "Ramón Sosa",             "shirt": 7,  "position": "MF", "dob": "1999-08-31", "age": 26, "caps": 29,  "goals": 1,  "clubId": "palmeiras",               "captain": false, "bio": "" },
+    { "id": "paraguay-gomez-d",             "name": "Diego Gómez",            "shirt": 8,  "position": "MF", "dob": "2003-03-27", "age": 23, "caps": 24,  "goals": 3,  "clubId": "brighton",                "captain": false, "bio": "" },
+    { "id": "paraguay-sanabria",            "name": "Antonio Sanabria",       "shirt": 9,  "position": "FW", "dob": "1996-03-04", "age": 30, "caps": 48,  "goals": 7,  "clubId": "cremonese",               "captain": false, "bio": "" },
+    { "id": "paraguay-almiron",             "name": "Miguel Almirón",         "shirt": 10, "position": "MF", "dob": "1994-02-10", "age": 32, "caps": 76,  "goals": 10, "clubId": "atlanta-united",          "captain": false, "bio": "" },
+    { "id": "paraguay-mauricio",            "name": "Maurício",               "shirt": 11, "position": "MF", "dob": "2001-06-22", "age": 24, "caps": 3,   "goals": 0,  "clubId": "palmeiras",               "captain": false, "bio": "" },
+    { "id": "paraguay-gill",                "name": "Orlando Gill",           "shirt": 12, "position": "GK", "dob": "2000-06-11", "age": 26, "caps": 6,   "goals": 0,  "clubId": "san-lorenzo",             "captain": false, "bio": "" },
+    { "id": "paraguay-canale",              "name": "José Canale",            "shirt": 13, "position": "DF", "dob": "1996-07-20", "age": 29, "caps": 2,   "goals": 0,  "clubId": "lanus",                   "captain": false, "bio": "" },
+    { "id": "paraguay-cubas",               "name": "Andrés Cubas",           "shirt": 14, "position": "MF", "dob": "1996-05-11", "age": 30, "caps": 33,  "goals": 0,  "clubId": "vancouver-whitecaps",     "captain": false, "bio": "" },
+    { "id": "paraguay-gomez-g",             "name": "Gustavo Gómez",          "shirt": 15, "position": "DF", "dob": "1993-05-06", "age": 33, "caps": 89,  "goals": 4,  "clubId": "palmeiras",               "captain": true,  "bio": "" },
+    { "id": "paraguay-bobadilla",           "name": "Damián Bobadilla",       "shirt": 16, "position": "MF", "dob": "2001-07-11", "age": 24, "caps": 19,  "goals": 1,  "clubId": "sao-paulo",               "captain": false, "bio": "" },
+    { "id": "paraguay-kaku",                "name": "Kaku",                   "shirt": 17, "position": "FW", "dob": "1995-01-11", "age": 31, "caps": 33,  "goals": 6,  "clubId": "al-ain",                  "captain": false, "bio": "" },
+    { "id": "paraguay-arce",                "name": "Álex Arce",              "shirt": 18, "position": "FW", "dob": "1995-06-16", "age": 30, "caps": 15,  "goals": 1,  "clubId": "independiente-rivadavia", "captain": false, "bio": "" },
+    { "id": "paraguay-enciso",              "name": "Julio Enciso",           "shirt": 19, "position": "FW", "dob": "2004-01-23", "age": 22, "caps": 32,  "goals": 4,  "clubId": "strasbourg",              "captain": false, "bio": "" },
+    { "id": "paraguay-ojeda",               "name": "Braian Ojeda",           "shirt": 20, "position": "MF", "dob": "2000-06-27", "age": 25, "caps": 17,  "goals": 0,  "clubId": "orlando-city",            "captain": false, "bio": "" },
+    { "id": "paraguay-avalos",              "name": "Gabriel Ávalos",         "shirt": 21, "position": "FW", "dob": "1991-07-09", "age": 34, "caps": 23,  "goals": 2,  "clubId": "independiente",           "captain": false, "bio": "" },
+    { "id": "paraguay-olveira",             "name": "Gastón Olveira",         "shirt": 22, "position": "GK", "dob": "1993-04-21", "age": 33, "caps": 1,   "goals": 0,  "clubId": "olimpia",                 "captain": false, "bio": "" },
+    { "id": "paraguay-galarza",             "name": "Matías Galarza",         "shirt": 23, "position": "MF", "dob": "2002-02-11", "age": 24, "caps": 15,  "goals": 3,  "clubId": "atlanta-united",          "captain": false, "bio": "" },
+    { "id": "paraguay-caballero",           "name": "Gustavo Caballero",      "shirt": 24, "position": "MF", "dob": "2001-09-21", "age": 24, "caps": 2,   "goals": 1,  "clubId": "portsmouth",              "captain": false, "bio": "" },
+    { "id": "paraguay-pitta",               "name": "Isidro Pitta",           "shirt": 25, "position": "FW", "dob": "1999-08-14", "age": 26, "caps": 5,   "goals": 0,  "clubId": "red-bull-bragantino",     "captain": false, "bio": "" },
+    { "id": "paraguay-maidana",             "name": "Alexandro Maidana",      "shirt": 26, "position": "DF", "dob": "2005-07-26", "age": 20, "caps": 2,   "goals": 1,  "clubId": "talleres",                "captain": false, "bio": "" }
+  ]
+}

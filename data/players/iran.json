@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "iran-beiranvand",       "name": "Alireza Beiranvand",        "shirt": 1,  "position": "GK", "dob": "1992-09-21", "age": 33, "caps": 86,  "goals": 0,  "clubId": "tractor",            "captain": false, "bio": "" },
+    { "id": "iran-hardani",          "name": "Saleh Hardani",             "shirt": 2,  "position": "DF", "dob": "1998-12-26", "age": 27, "caps": 18,  "goals": 1,  "clubId": "esteghlal",          "captain": false, "bio": "" },
+    { "id": "iran-hajsafi",          "name": "Ehsan Hajsafi",             "shirt": 3,  "position": "DF", "dob": "1990-02-25", "age": 36, "caps": 146, "goals": 7,  "clubId": "sepahan",            "captain": true,  "bio": "" },
+    { "id": "iran-khalilzadeh",      "name": "Shojae Khalilzadeh",       "shirt": 4,  "position": "DF", "dob": "1989-05-14", "age": 37, "caps": 58,  "goals": 2,  "clubId": "tractor",            "captain": false, "bio": "" },
+    { "id": "iran-mohammadi",        "name": "Milad Mohammadi",           "shirt": 5,  "position": "DF", "dob": "1993-09-29", "age": 32, "caps": 76,  "goals": 1,  "clubId": "persepolis",         "captain": false, "bio": "" },
+    { "id": "iran-ezatolahi",        "name": "Saeid Ezatolahi",           "shirt": 6,  "position": "MF", "dob": "1996-10-01", "age": 29, "caps": 83,  "goals": 2,  "clubId": "shabab-al-ahli",     "captain": false, "bio": "" },
+    { "id": "iran-jahanbakhsh",      "name": "Alireza Jahanbakhsh",       "shirt": 7,  "position": "MF", "dob": "1993-08-11", "age": 32, "caps": 98,  "goals": 17, "clubId": "dender-eh",          "captain": false, "bio": "" },
+    { "id": "iran-mohebi",           "name": "Mohammad Mohebi",           "shirt": 8,  "position": "MF", "dob": "1998-12-20", "age": 27, "caps": 37,  "goals": 14, "clubId": "rostov",             "captain": false, "bio": "" },
+    { "id": "iran-taremi",           "name": "Mehdi Taremi",              "shirt": 9,  "position": "FW", "dob": "1992-07-18", "age": 33, "caps": 105, "goals": 60, "clubId": "olympiakos",         "captain": false, "bio": "" },
+    { "id": "iran-ghayedi",          "name": "Mehdi Ghayedi",             "shirt": 10, "position": "FW", "dob": "1998-12-05", "age": 27, "caps": 30,  "goals": 10, "clubId": "al-nassr",           "captain": false, "bio": "" },
+    { "id": "iran-alipour",          "name": "Ali Alipour",               "shirt": 11, "position": "FW", "dob": "1995-11-11", "age": 30, "caps": 14,  "goals": 1,  "clubId": "persepolis",         "captain": false, "bio": "" },
+    { "id": "iran-niazmand",         "name": "Payam Niazmand",            "shirt": 12, "position": "GK", "dob": "1995-04-06", "age": 31, "caps": 15,  "goals": 0,  "clubId": "persepolis",         "captain": false, "bio": "" },
+    { "id": "iran-kanaanizadegan",   "name": "Hossein Kanaanizadegan",    "shirt": 13, "position": "DF", "dob": "1994-03-23", "age": 32, "caps": 65,  "goals": 6,  "clubId": "persepolis",         "captain": false, "bio": "" },
+    { "id": "iran-ghoddos",          "name": "Saman Ghoddos",             "shirt": 14, "position": "MF", "dob": "1993-09-06", "age": 32, "caps": 68,  "goals": 3,  "clubId": "kalba",              "captain": false, "bio": "" },
+    { "id": "iran-cheshmi",          "name": "Rouzbeh Cheshmi",           "shirt": 15, "position": "MF", "dob": "1993-07-24", "age": 32, "caps": 40,  "goals": 3,  "clubId": "esteghlal",          "captain": false, "bio": "" },
+    { "id": "iran-torabi",           "name": "Mahdi Torabi",              "shirt": 16, "position": "MF", "dob": "1994-09-10", "age": 31, "caps": 52,  "goals": 7,  "clubId": "tractor",            "captain": false, "bio": "" },
+    { "id": "iran-yousefi",          "name": "Arya Yousefi",              "shirt": 17, "position": "DF", "dob": "2002-04-22", "age": 24, "caps": 14,  "goals": 1,  "clubId": "sepahan",            "captain": false, "bio": "" },
+    { "id": "iran-hosseinzadeh",     "name": "Amirhossein Hosseinzadeh", "shirt": 18, "position": "FW", "dob": "2000-10-30", "age": 25, "caps": 18,  "goals": 5,  "clubId": "tractor",            "captain": false, "bio": "" },
+    { "id": "iran-nemati",           "name": "Ali Nemati",                "shirt": 19, "position": "DF", "dob": "1996-02-08", "age": 30, "caps": 18,  "goals": 0,  "clubId": "foolad",             "captain": false, "bio": "" },
+    { "id": "iran-moghanlou",        "name": "Shahriyar Moghanlou",       "shirt": 20, "position": "FW", "dob": "1994-12-21", "age": 31, "caps": 21,  "goals": 2,  "clubId": "kalba",              "captain": false, "bio": "" },
+    { "id": "iran-ghorbani",         "name": "Mohammad Ghorbani",         "shirt": 21, "position": "MF", "dob": "2001-10-07", "age": 24, "caps": 16,  "goals": 0,  "clubId": "al-wahda",           "captain": false, "bio": "" },
+    { "id": "iran-hosseini",         "name": "Hossein Hosseini",          "shirt": 22, "position": "GK", "dob": "1992-06-30", "age": 33, "caps": 13,  "goals": 0,  "clubId": "sepahan",            "captain": false, "bio": "" },
+    { "id": "iran-rezaeian",         "name": "Ramin Rezaeian",            "shirt": 23, "position": "DF", "dob": "1990-03-21", "age": 36, "caps": 74,  "goals": 8,  "clubId": "foolad",             "captain": false, "bio": "" },
+    { "id": "iran-eckert",           "name": "Dennis Eckert",             "shirt": 24, "position": "FW", "dob": "1997-01-09", "age": 29, "caps": 0,   "goals": 0,  "clubId": "standard-liege",     "captain": false, "bio": "" },
+    { "id": "iran-eiri",             "name": "Danial Eiri",               "shirt": 25, "position": "DF", "dob": "2003-10-26", "age": 22, "caps": 0,   "goals": 0,  "clubId": "malavan",            "captain": false, "bio": "" },
+    { "id": "iran-razzaghinia",      "name": "Amirmohammad Razzaghinia",  "shirt": 26, "position": "MF", "dob": "2006-04-11", "age": 20, "caps": 4,   "goals": 0,  "clubId": "esteghlal",          "captain": false, "bio": "" }
+  ]
+}

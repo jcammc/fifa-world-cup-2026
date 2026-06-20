@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "ivory-coast-fofana-y",    "name": "Yahia Fofana",          "shirt": 1,  "position": "GK", "dob": "2000-08-21", "age": 25, "caps": 35,  "goals": 0,  "clubId": "caykur-rizespor",    "captain": false, "bio": "" },
+    { "id": "ivory-coast-diomande-o",  "name": "Ousmane Diomandé",      "shirt": 2,  "position": "DF", "dob": "2003-12-04", "age": 22, "caps": 15,  "goals": 1,  "clubId": "sporting-cp",        "captain": false, "bio": "" },
+    { "id": "ivory-coast-konan",       "name": "Ghislain Konan",        "shirt": 3,  "position": "DF", "dob": "1995-12-27", "age": 30, "caps": 54,  "goals": 0,  "clubId": "gil-vicente",        "captain": false, "bio": "" },
+    { "id": "ivory-coast-seri",        "name": "Jean Michaël Seri",     "shirt": 4,  "position": "MF", "dob": "1991-07-19", "age": 34, "caps": 65,  "goals": 4,  "clubId": "nk-maribor",         "captain": false, "bio": "" },
+    { "id": "ivory-coast-singo",       "name": "Wilfried Singo",        "shirt": 5,  "position": "DF", "dob": "2000-12-25", "age": 25, "caps": 34,  "goals": 1,  "clubId": "galatasaray",        "captain": false, "bio": "" },
+    { "id": "ivory-coast-fofana-s",    "name": "Seko Fofana",           "shirt": 6,  "position": "MF", "dob": "1995-05-07", "age": 31, "caps": 33,  "goals": 7,  "clubId": "fc-porto",           "captain": false, "bio": "" },
+    { "id": "ivory-coast-kossounou",   "name": "Odilon Kossounou",      "shirt": 7,  "position": "DF", "dob": "2001-01-04", "age": 25, "caps": 36,  "goals": 0,  "clubId": "atalanta",           "captain": false, "bio": "" },
+    { "id": "ivory-coast-kessie",      "name": "Franck Kessié",         "shirt": 8,  "position": "MF", "dob": "1996-12-19", "age": 29, "caps": 102, "goals": 15, "clubId": "al-ahli",            "captain": true,  "bio": "" },
+    { "id": "ivory-coast-bonny",       "name": "Ange-Yoan Bonny",       "shirt": 9,  "position": "FW", "dob": "2003-10-25", "age": 22, "caps": 1,   "goals": 0,  "clubId": "inter-milan",        "captain": false, "bio": "" },
+    { "id": "ivory-coast-adingra",     "name": "Simon Adingra",         "shirt": 10, "position": "FW", "dob": "2002-01-01", "age": 24, "caps": 29,  "goals": 5,  "clubId": "monaco",             "captain": false, "bio": "" },
+    { "id": "ivory-coast-diomande-y",  "name": "Yan Diomandé",          "shirt": 11, "position": "FW", "dob": "2006-11-14", "age": 19, "caps": 10,  "goals": 3,  "clubId": "rb-leipzig",         "captain": false, "bio": "" },
+    { "id": "ivory-coast-wahi",        "name": "Elye Wahi",             "shirt": 12, "position": "FW", "dob": "2003-01-02", "age": 23, "caps": 2,   "goals": 0,  "clubId": "nice",               "captain": false, "bio": "" },
+    { "id": "ivory-coast-operi",       "name": "Christopher Opéri",     "shirt": 13, "position": "DF", "dob": "1997-04-29", "age": 29, "caps": 12,  "goals": 0,  "clubId": "istanbul-basaksehir","captain": false, "bio": "" },
+    { "id": "ivory-coast-diakite",     "name": "Oumar Diakité",         "shirt": 14, "position": "FW", "dob": "2003-12-20", "age": 22, "caps": 30,  "goals": 6,  "clubId": "cercle-brugge",      "captain": false, "bio": "" },
+    { "id": "ivory-coast-diallo",      "name": "Amad Diallo",           "shirt": 15, "position": "FW", "dob": "2002-07-11", "age": 23, "caps": 19,  "goals": 6,  "clubId": "manchester-united",  "captain": false, "bio": "" },
+    { "id": "ivory-coast-kone-m",      "name": "Mohamed Koné",          "shirt": 16, "position": "GK", "dob": "2002-03-07", "age": 24, "caps": 0,   "goals": 0,  "clubId": "charleroi",          "captain": false, "bio": "" },
+    { "id": "ivory-coast-doue",        "name": "Guéla Doué",            "shirt": 17, "position": "DF", "dob": "2002-10-17", "age": 23, "caps": 20,  "goals": 3,  "clubId": "strasbourg",         "captain": false, "bio": "" },
+    { "id": "ivory-coast-sangare",     "name": "Ibrahim Sangaré",       "shirt": 18, "position": "MF", "dob": "1997-12-02", "age": 28, "caps": 57,  "goals": 12, "clubId": "nottingham-forest",  "captain": false, "bio": "" },
+    { "id": "ivory-coast-pepe",        "name": "Nicolas Pépé",          "shirt": 19, "position": "FW", "dob": "1995-05-29", "age": 31, "caps": 56,  "goals": 12, "clubId": "villarreal",         "captain": false, "bio": "" },
+    { "id": "ivory-coast-agbadou",     "name": "Emmanuel Agbadou",      "shirt": 20, "position": "DF", "dob": "1997-06-17", "age": 28, "caps": 20,  "goals": 2,  "clubId": "besiktas",           "captain": false, "bio": "" },
+    { "id": "ivory-coast-ndicka",      "name": "Evan Ndicka",           "shirt": 21, "position": "DF", "dob": "1999-08-20", "age": 26, "caps": 28,  "goals": 0,  "clubId": "roma",               "captain": false, "bio": "" },
+    { "id": "ivory-coast-guessand",    "name": "Evann Guessand",        "shirt": 22, "position": "FW", "dob": "2001-07-01", "age": 24, "caps": 21,  "goals": 4,  "clubId": "crystal-palace",     "captain": false, "bio": "" },
+    { "id": "ivory-coast-lafont",      "name": "Alban Lafont",          "shirt": 23, "position": "GK", "dob": "1999-01-23", "age": 27, "caps": 4,   "goals": 0,  "clubId": "panathinaikos",      "captain": false, "bio": "" },
+    { "id": "ivory-coast-toure-b",     "name": "Bazoumana Touré",       "shirt": 24, "position": "FW", "dob": "2006-03-02", "age": 20, "caps": 6,   "goals": 2,  "clubId": "tsg-hoffenheim",     "captain": false, "bio": "" },
+    { "id": "ivory-coast-guiagon",     "name": "Parfait Guiagon",       "shirt": 25, "position": "MF", "dob": "2001-02-22", "age": 25, "caps": 5,   "goals": 0,  "clubId": "charleroi",          "captain": false, "bio": "" },
+    { "id": "ivory-coast-oulai",       "name": "Christ Inao Oulaï",     "shirt": 26, "position": "MF", "dob": "2006-04-06", "age": 20, "caps": 9,   "goals": 0,  "clubId": "trabzonspor",        "captain": false, "bio": "" }
+  ]
+}

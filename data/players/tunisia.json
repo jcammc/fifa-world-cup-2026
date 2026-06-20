@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "tunisia-chamakh",        "name": "Mouhib Chamakh",             "shirt": 1,  "position": "GK", "dob": "2001-08-25", "age": 24, "caps": 3,   "goals": 0,  "clubId": "club-africain",         "captain": false, "bio": "" },
+    { "id": "tunisia-abdi",           "name": "Ali Abdi",                   "shirt": 2,  "position": "DF", "dob": "1993-12-20", "age": 32, "caps": 46,  "goals": 7,  "clubId": "nice",                  "captain": false, "bio": "" },
+    { "id": "tunisia-talbi",          "name": "Montassar Talbi",            "shirt": 3,  "position": "DF", "dob": "1998-05-26", "age": 28, "caps": 64,  "goals": 4,  "clubId": "lorient",               "captain": false, "bio": "" },
+    { "id": "tunisia-rekik",          "name": "Omar Rekik",                 "shirt": 4,  "position": "DF", "dob": "2001-12-20", "age": 24, "caps": 6,   "goals": 0,  "clubId": "nk-maribor",            "captain": false, "bio": "" },
+    { "id": "tunisia-arous",          "name": "Adem Arous",                 "shirt": 5,  "position": "DF", "dob": "2004-07-17", "age": 21, "caps": 2,   "goals": 0,  "clubId": "kasimpasa",             "captain": false, "bio": "" },
+    { "id": "tunisia-bronn",          "name": "Dylan Bronn",                "shirt": 6,  "position": "DF", "dob": "1995-06-19", "age": 30, "caps": 52,  "goals": 2,  "clubId": "servette-fc",           "captain": false, "bio": "" },
+    { "id": "tunisia-achouri",        "name": "Elias Achouri",              "shirt": 7,  "position": "FW", "dob": "1999-02-10", "age": 27, "caps": 30,  "goals": 4,  "clubId": "fc-copenhagen",         "captain": false, "bio": "" },
+    { "id": "tunisia-saad",           "name": "Elias Saad",                 "shirt": 8,  "position": "FW", "dob": "1999-12-27", "age": 26, "caps": 15,  "goals": 4,  "clubId": "hannover-96",           "captain": false, "bio": "" },
+    { "id": "tunisia-mastouri",       "name": "Hazem Mastouri",             "shirt": 9,  "position": "FW", "dob": "1997-06-18", "age": 28, "caps": 19,  "goals": 4,  "clubId": "fc-dynamo-makhachkala", "captain": false, "bio": "" },
+    { "id": "tunisia-mejbri",         "name": "Hannibal Mejbri",            "shirt": 10, "position": "MF", "dob": "2003-01-21", "age": 23, "caps": 45,  "goals": 1,  "clubId": "burnley",               "captain": false, "bio": "" },
+    { "id": "tunisia-gharbi",         "name": "Ismaël Gharbi",              "shirt": 11, "position": "MF", "dob": "2004-04-10", "age": 22, "caps": 17,  "goals": 2,  "clubId": "fc-augsburg",           "captain": false, "bio": "" },
+    { "id": "tunisia-ben-ouanes",     "name": "Mortadha Ben Ouanes",        "shirt": 12, "position": "DF", "dob": "1994-07-02", "age": 31, "caps": 18,  "goals": 0,  "clubId": "kasimpasa",             "captain": false, "bio": "" },
+    { "id": "tunisia-khedira",        "name": "Rani Khedira",               "shirt": 13, "position": "MF", "dob": "1994-01-27", "age": 32, "caps": 3,   "goals": 0,  "clubId": "union-berlin",          "captain": false, "bio": "" },
+    { "id": "tunisia-ayari-k",        "name": "Khalil Ayari",               "shirt": 14, "position": "MF", "dob": "2005-02-02", "age": 21, "caps": 4,   "goals": 0,  "clubId": "paris-saint-germain",   "captain": false, "bio": "" },
+    { "id": "tunisia-mahmoud",        "name": "Hadj Mahmoud",               "shirt": 15, "position": "MF", "dob": "2000-04-24", "age": 26, "caps": 9,   "goals": 0,  "clubId": "fc-lugano",             "captain": false, "bio": "" },
+    { "id": "tunisia-dahmen",         "name": "Aymen Dahmen",               "shirt": 16, "position": "GK", "dob": "1997-01-28", "age": 29, "caps": 37,  "goals": 0,  "clubId": "cs-sfaxien",            "captain": false, "bio": "" },
+    { "id": "tunisia-skhiri",         "name": "Ellyes Skhiri",              "shirt": 17, "position": "MF", "dob": "1995-05-10", "age": 31, "caps": 83,  "goals": 4,  "clubId": "eintracht-frankfurt",   "captain": true,  "bio": "" },
+    { "id": "tunisia-elloumi",        "name": "Rayan Elloumi",              "shirt": 18, "position": "FW", "dob": "2007-09-17", "age": 18, "caps": 4,   "goals": 0,  "clubId": "vancouver-whitecaps",   "captain": false, "bio": "" },
+    { "id": "tunisia-chaouat",        "name": "Firas Chaouat",              "shirt": 19, "position": "FW", "dob": "1996-05-08", "age": 30, "caps": 30,  "goals": 6,  "clubId": "club-africain",         "captain": false, "bio": "" },
+    { "id": "tunisia-valery",         "name": "Yan Valery",                 "shirt": 20, "position": "DF", "dob": "1999-02-22", "age": 27, "caps": 22,  "goals": 0,  "clubId": "young-boys",            "captain": false, "bio": "" },
+    { "id": "tunisia-ben-hamida",     "name": "Mohamed Amine Ben Hamida",   "shirt": 21, "position": "DF", "dob": "1995-12-15", "age": 30, "caps": 13,  "goals": 0,  "clubId": "esperance-de-tunis",    "captain": false, "bio": "" },
+    { "id": "tunisia-ben-hessen",     "name": "Sabri Ben Hessen",           "shirt": 22, "position": "GK", "dob": "1996-06-13", "age": 29, "caps": 2,   "goals": 0,  "clubId": "etoile-du-sahel",       "captain": false, "bio": "" },
+    { "id": "tunisia-neffati",        "name": "Moutaz Neffati",             "shirt": 23, "position": "DF", "dob": "2004-09-04", "age": 21, "caps": 5,   "goals": 0,  "clubId": "ifk-norrkoping",        "captain": false, "bio": "" },
+    { "id": "tunisia-chikhaoui",      "name": "Raed Chikhaoui",             "shirt": 24, "position": "DF", "dob": "2004-06-09", "age": 22, "caps": 0,   "goals": 0,  "clubId": "us-monastir",           "captain": false, "bio": "" },
+    { "id": "tunisia-ben-slimane",    "name": "Anis Ben Slimane",           "shirt": 25, "position": "MF", "dob": "2001-03-16", "age": 25, "caps": 41,  "goals": 4,  "clubId": "norwich-city",          "captain": false, "bio": "" },
+    { "id": "tunisia-tounekti",       "name": "Sebastian Tounekti",         "shirt": 26, "position": "MF", "dob": "2002-07-13", "age": 23, "caps": 12,  "goals": 1,  "clubId": "celtic",                "captain": false, "bio": "" }
+  ]
+}

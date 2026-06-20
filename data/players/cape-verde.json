@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "cape-verde-vozinha",       "name": "Vozinha",                "shirt": 1,  "position": "GK", "dob": "1986-06-03", "age": 40, "caps": 90,  "goals": 0,  "clubId": "chaves",             "captain": false, "bio": "" },
+    { "id": "cape-verde-stopira",       "name": "Stopira",                "shirt": 2,  "position": "DF", "dob": "1988-05-20", "age": 38, "caps": 61,  "goals": 4,  "clubId": "torreense",          "captain": false, "bio": "" },
+    { "id": "cape-verde-diney",         "name": "Diney",                  "shirt": 3,  "position": "DF", "dob": "1995-01-17", "age": 31, "caps": 32,  "goals": 2,  "clubId": "al-bataeh",          "captain": false, "bio": "" },
+    { "id": "cape-verde-pico-lopes",    "name": "Pico Lopes",             "shirt": 4,  "position": "DF", "dob": "1992-06-17", "age": 33, "caps": 45,  "goals": 0,  "clubId": "shamrock-rovers",     "captain": false, "bio": "" },
+    { "id": "cape-verde-logan-costa",   "name": "Logan Costa",            "shirt": 5,  "position": "DF", "dob": "2001-04-01", "age": 25, "caps": 28,  "goals": 0,  "clubId": "villarreal",         "captain": false, "bio": "" },
+    { "id": "cape-verde-kevin-pina",    "name": "Kevin Pina",             "shirt": 6,  "position": "MF", "dob": "1997-01-27", "age": 29, "caps": 31,  "goals": 3,  "clubId": "krasnodar",          "captain": false, "bio": "" },
+    { "id": "cape-verde-jovane",        "name": "Jovane Cabral",          "shirt": 7,  "position": "MF", "dob": "1998-06-14", "age": 27, "caps": 29,  "goals": 3,  "clubId": "estrela-amadora",    "captain": false, "bio": "" },
+    { "id": "cape-verde-joao-paulo",    "name": "João Paulo Fernandes",   "shirt": 8,  "position": "MF", "dob": "1998-05-26", "age": 28, "caps": 41,  "goals": 1,  "clubId": "fcsb",               "captain": false, "bio": "" },
+    { "id": "cape-verde-benchimol",     "name": "Gilson Benchimol",       "shirt": 9,  "position": "FW", "dob": "2001-12-29", "age": 24, "caps": 21,  "goals": 6,  "clubId": "akron-tolyatti",     "captain": false, "bio": "" },
+    { "id": "cape-verde-monteiro",      "name": "Jamiro Monteiro",        "shirt": 10, "position": "MF", "dob": "1993-11-23", "age": 32, "caps": 55,  "goals": 5,  "clubId": "pec-zwolle",         "captain": false, "bio": "" },
+    { "id": "cape-verde-garry",         "name": "Garry Rodrigues",        "shirt": 11, "position": "MF", "dob": "1990-11-27", "age": 35, "caps": 61,  "goals": 10, "clubId": "apollon-limassol",   "captain": false, "bio": "" },
+    { "id": "cape-verde-mario-rosa",    "name": "Mário Rosa",             "shirt": 12, "position": "GK", "dob": "1997-02-23", "age": 29, "caps": 11,  "goals": 0,  "clubId": "montana",            "captain": false, "bio": "" },
+    { "id": "cape-verde-sidny",         "name": "Sidny Lopes Cabral",     "shirt": 13, "position": "DF", "dob": "2002-09-18", "age": 23, "caps": 11,  "goals": 3,  "clubId": "benfica",            "captain": false, "bio": "" },
+    { "id": "cape-verde-deroy",         "name": "Deroy Duarte",           "shirt": 14, "position": "MF", "dob": "1999-07-04", "age": 26, "caps": 33,  "goals": 0,  "clubId": "ludogorets",         "captain": false, "bio": "" },
+    { "id": "cape-verde-laros",         "name": "Laros Duarte",           "shirt": 15, "position": "MF", "dob": "1997-02-28", "age": 29, "caps": 20,  "goals": 1,  "clubId": "puskas-akademia",    "captain": false, "bio": "" },
+    { "id": "cape-verde-yannick",       "name": "Yannick Semedo",         "shirt": 16, "position": "MF", "dob": "1995-12-29", "age": 30, "caps": 11,  "goals": 1,  "clubId": "farense",            "captain": false, "bio": "" },
+    { "id": "cape-verde-willy",         "name": "Willy Semedo",           "shirt": 17, "position": "MF", "dob": "1994-04-27", "age": 32, "caps": 38,  "goals": 3,  "clubId": "omonia",             "captain": false, "bio": "" },
+    { "id": "cape-verde-arcanjo",       "name": "Telmo Arcanjo",          "shirt": 18, "position": "MF", "dob": "2001-06-21", "age": 24, "caps": 16,  "goals": 1,  "clubId": "vitoria-de-guimaraes","captain": false, "bio": "" },
+    { "id": "cape-verde-livramento",    "name": "Dailon Livramento",      "shirt": 19, "position": "FW", "dob": "2001-05-04", "age": 25, "caps": 22,  "goals": 7,  "clubId": "casa-pia",           "captain": false, "bio": "" },
+    { "id": "cape-verde-ryan-mendes",   "name": "Ryan Mendes",            "shirt": 20, "position": "FW", "dob": "1990-01-08", "age": 36, "caps": 98,  "goals": 22, "clubId": "igdir-fk",           "captain": true,  "bio": "" },
+    { "id": "cape-verde-nuno-costa",    "name": "Nuno da Costa",          "shirt": 21, "position": "MF", "dob": "1991-02-10", "age": 35, "caps": 9,   "goals": 2,  "clubId": "istanbul-basaksehir","captain": false, "bio": "" },
+    { "id": "cape-verde-moreira",       "name": "Steven Moreira",         "shirt": 22, "position": "DF", "dob": "1994-08-13", "age": 31, "caps": 20,  "goals": 0,  "clubId": "columbus-crew",      "captain": false, "bio": "" },
+    { "id": "cape-verde-cj-dos-santos", "name": "CJ dos Santos",          "shirt": 23, "position": "GK", "dob": "2000-08-24", "age": 25, "caps": 1,   "goals": 0,  "clubId": "san-diego-fc",       "captain": false, "bio": "" },
+    { "id": "cape-verde-wagner-pina",   "name": "Wagner Pina",            "shirt": 24, "position": "DF", "dob": "2002-11-03", "age": 23, "caps": 14,  "goals": 0,  "clubId": "trabzonspor",        "captain": false, "bio": "" },
+    { "id": "cape-verde-kelvin",        "name": "Kelvin Pires",           "shirt": 25, "position": "DF", "dob": "2000-06-05", "age": 26, "caps": 6,   "goals": 1,  "clubId": "sjk",                "captain": false, "bio": "" },
+    { "id": "cape-verde-varela",        "name": "Hélio Varela",           "shirt": 26, "position": "MF", "dob": "2002-05-03", "age": 24, "caps": 21,  "goals": 0,  "clubId": "maccabi-tel-aviv",   "captain": false, "bio": "" }
+  ]
+}

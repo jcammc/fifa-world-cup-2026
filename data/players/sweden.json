@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-20T00:00:00Z",
+  "data": [
+    { "id": "sweden-zetterström",   "name": "Jacob Widell Zetterström", "shirt": 1,  "position": "GK", "dob": "1998-07-11", "age": 27, "caps": 3,   "goals": 0,  "clubId": "derby-county",       "captain": false, "bio": "" },
+    { "id": "sweden-lagerbielke",   "name": "Gustaf Lagerbielke",       "shirt": 2,  "position": "DF", "dob": "2000-04-10", "age": 26, "caps": 11,  "goals": 2,  "clubId": "braga",              "captain": false, "bio": "" },
+    { "id": "sweden-lindelof",      "name": "Victor Lindelöf",          "shirt": 3,  "position": "DF", "dob": "1994-07-17", "age": 31, "caps": 76,  "goals": 3,  "clubId": "aston-villa",        "captain": true,  "bio": "" },
+    { "id": "sweden-hien",          "name": "Isak Hien",                "shirt": 4,  "position": "DF", "dob": "1999-01-13", "age": 27, "caps": 29,  "goals": 0,  "clubId": "atalanta",           "captain": false, "bio": "" },
+    { "id": "sweden-gudmundsson",   "name": "Gabriel Gudmundsson",      "shirt": 5,  "position": "DF", "dob": "1999-04-29", "age": 27, "caps": 24,  "goals": 0,  "clubId": "leeds-united",       "captain": false, "bio": "" },
+    { "id": "sweden-johansson-h",   "name": "Herman Johansson",         "shirt": 6,  "position": "DF", "dob": "1997-10-16", "age": 28, "caps": 3,   "goals": 0,  "clubId": "fc-dallas",          "captain": false, "bio": "" },
+    { "id": "sweden-bergvall",      "name": "Lucas Bergvall",           "shirt": 7,  "position": "MF", "dob": "2006-02-02", "age": 20, "caps": 10,  "goals": 0,  "clubId": "tottenham-hotspur",  "captain": false, "bio": "" },
+    { "id": "sweden-svensson",      "name": "Daniel Svensson",          "shirt": 8,  "position": "DF", "dob": "2002-02-12", "age": 24, "caps": 13,  "goals": 0,  "clubId": "borussia-dortmund",  "captain": false, "bio": "" },
+    { "id": "sweden-isak",          "name": "Alexander Isak",           "shirt": 9,  "position": "FW", "dob": "1999-09-21", "age": 26, "caps": 58,  "goals": 17, "clubId": "liverpool",          "captain": false, "bio": "" },
+    { "id": "sweden-nygren",        "name": "Benjamin Nygren",          "shirt": 10, "position": "MF", "dob": "2001-07-08", "age": 24, "caps": 11,  "goals": 3,  "clubId": "celtic",             "captain": false, "bio": "" },
+    { "id": "sweden-elanga",        "name": "Anthony Elanga",           "shirt": 11, "position": "FW", "dob": "2002-04-27", "age": 24, "caps": 30,  "goals": 6,  "clubId": "newcastle-united",   "captain": false, "bio": "" },
+    { "id": "sweden-johansson-v",   "name": "Viktor Johansson",         "shirt": 12, "position": "GK", "dob": "1998-09-14", "age": 27, "caps": 12,  "goals": 0,  "clubId": "stoke-city",         "captain": false, "bio": "" },
+    { "id": "sweden-sema",          "name": "Ken Sema",                 "shirt": 13, "position": "MF", "dob": "1993-09-30", "age": 32, "caps": 33,  "goals": 5,  "clubId": "pafos",              "captain": false, "bio": "" },
+    { "id": "sweden-ekdal",         "name": "Hjalmar Ekdal",            "shirt": 14, "position": "DF", "dob": "1998-10-21", "age": 27, "caps": 13,  "goals": 0,  "clubId": "burnley",            "captain": false, "bio": "" },
+    { "id": "sweden-starfelt",      "name": "Carl Starfelt",            "shirt": 15, "position": "DF", "dob": "1995-06-01", "age": 31, "caps": 18,  "goals": 0,  "clubId": "celta-vigo",         "captain": false, "bio": "" },
+    { "id": "sweden-karlstrom",     "name": "Jesper Karlström",         "shirt": 16, "position": "MF", "dob": "1995-06-21", "age": 30, "caps": 25,  "goals": 0,  "clubId": "udinese",            "captain": false, "bio": "" },
+    { "id": "sweden-gyokeres",      "name": "Viktor Gyökeres",          "shirt": 17, "position": "FW", "dob": "1998-06-04", "age": 28, "caps": 33,  "goals": 20, "clubId": "arsenal",            "captain": false, "bio": "" },
+    { "id": "sweden-ayari",         "name": "Yasin Ayari",              "shirt": 18, "position": "MF", "dob": "2003-10-06", "age": 22, "caps": 21,  "goals": 3,  "clubId": "brighton",           "captain": false, "bio": "" },
+    { "id": "sweden-svanberg",      "name": "Mattias Svanberg",         "shirt": 19, "position": "MF", "dob": "1999-01-05", "age": 27, "caps": 41,  "goals": 2,  "clubId": "wolfsburg",          "captain": false, "bio": "" },
+    { "id": "sweden-smith",         "name": "Eric Smith",               "shirt": 20, "position": "DF", "dob": "1997-01-08", "age": 29, "caps": 2,   "goals": 0,  "clubId": "fc-st-pauli",        "captain": false, "bio": "" },
+    { "id": "sweden-bernhardsson",  "name": "Alexander Bernhardsson",   "shirt": 21, "position": "DF", "dob": "1998-09-08", "age": 27, "caps": 11,  "goals": 0,  "clubId": "holstein-kiel",      "captain": false, "bio": "" },
+    { "id": "sweden-zeneli",        "name": "Besfort Zeneli",           "shirt": 22, "position": "MF", "dob": "2002-11-21", "age": 23, "caps": 8,   "goals": 0,  "clubId": "union-saint-gilloise","captain": false, "bio": "" },
+    { "id": "sweden-nordfeldt",     "name": "Kristoffer Nordfeldt",     "shirt": 23, "position": "GK", "dob": "1989-06-23", "age": 36, "caps": 21,  "goals": 0,  "clubId": "aik",                "captain": false, "bio": "" },
+    { "id": "sweden-stroud",        "name": "Elliot Stroud",            "shirt": 24, "position": "DF", "dob": "2002-06-22", "age": 23, "caps": 1,   "goals": 0,  "clubId": "mjallby-aif",        "captain": false, "bio": "" },
+    { "id": "sweden-nilsson",       "name": "Gustaf Nilsson",           "shirt": 25, "position": "FW", "dob": "1997-05-23", "age": 29, "caps": 10,  "goals": 4,  "clubId": "club-brugge",        "captain": false, "bio": "" },
+    { "id": "sweden-ali",           "name": "Taha Ali",                 "shirt": 26, "position": "FW", "dob": "1998-07-01", "age": 27, "caps": 2,   "goals": 0,  "clubId": "malmo-ff",           "captain": false, "bio": "" }
+  ]
+}
