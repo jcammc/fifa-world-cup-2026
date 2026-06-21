@@ -6,6 +6,7 @@ import { CountriesPage } from './modules/countries-page.js';
 import { ContinentsPage } from './modules/continents-page.js';
 import { StatisticsPage } from './modules/statistics-page.js';
 import { LeagueExplorer } from './modules/league-explorer.js';
+import { ClubExplorer } from './modules/club-explorer.js';
 import { escapeHtml } from './utils.js';
 
 // ─── Placeholder for unimplemented routes ──────────────────
@@ -50,9 +51,7 @@ class NotFoundModule {
 
 // ─── Named stub routes ─────────────────────────────────────
 
-const STUB_ROUTES = new Set([
-  'club-explorer',
-]);
+const STUB_ROUTES = new Set([]);
 
 // ─── Router ────────────────────────────────────────────────
 
@@ -140,6 +139,11 @@ class _Router {
     // League explorer
     if (hash === 'league-explorer') {
       return { Module: LeagueExplorer, params: {} };
+    }
+
+    // Club explorer
+    if (hash === 'club-explorer') {
+      return { Module: ClubExplorer, params: {} };
     }
 
     // Groups — alias for Tournament Centre group stage tab

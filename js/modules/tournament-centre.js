@@ -6,15 +6,16 @@ import { KnockoutBracket } from './knockout-bracket.js';
 
 export class TournamentCentre {
   #container;
-  #params     = {};
-  #activeTab  = 'today';
-  #tabEl      = null;
-  #tabModule  = null;
-  #countries  = [];
-  #fixtures   = [];
-  #standings  = [];
-  #groups     = [];
-  #countryMap = new Map();
+  #params          = {};
+  #activeTab       = 'today';
+  #tabEl           = null;
+  #tabModule       = null;
+  #countries       = [];
+  #fixtures        = [];
+  #knockoutMatches = [];
+  #standings       = [];
+  #groups          = [];
+  #countryMap      = new Map();
 
   constructor(container, params = {}) {
     this.#container = container;
@@ -22,12 +23,18 @@ export class TournamentCentre {
   }
 
   async render() {
-    [this.#fixtures, this.#standings, this.#countries, this.#groups] = await Promise.all([
+    const [fixtures, standings, countries, groups, knockoutRounds] = await Promise.all([
       DataManager.loadFixtures(),
       DataManager.loadStandings(),
       DataManager.loadCountries(),
       DataManager.loadGroups(),
+      DataManager.loadKnockout(),
     ]);
+    this.#fixtures        = fixtures;
+    this.#standings       = standings;
+    this.#countries       = countries;
+    this.#groups          = groups;
+    this.#knockoutMatches = knockoutRounds.flatMap(r => r.matches ?? []);
     this.#countryMap = new Map(this.#countries.map(c => [c.id, c]));
 
     this.#container.innerHTML = `
@@ -124,10 +131,15 @@ export class TournamentCentre {
   // ─── Today tab ────────────────────────────────────────────
 
   #renderTodayTab() {
-    const todayFixtures    = this.#fixtures.filter(f => isToday(f.kickoff));
-    const isNext           = todayFixtures.length === 0;
-    const displayFixtures  = isNext
-      ? this.#fixtures.filter(f => f.status === 'scheduled').slice(0, 6)
+    const todayGroup    = this.#fixtures.filter(f => isToday(f.kickoff));
+    const todayKnockout = this.#knockoutMatches.filter(m => isToday(m.kickoff));
+    const todayFixtures = [...todayGroup, ...todayKnockout];
+
+    const nextGroup    = this.#fixtures.filter(f => f.status === 'scheduled');
+    const nextKnockout = this.#knockoutMatches.filter(m => m.status === 'scheduled' && m.kickoff);
+    const isNext       = todayFixtures.length === 0;
+    const displayFixtures = isNext
+      ? [...nextGroup, ...nextKnockout].slice(0, 6)
       : todayFixtures;
 
     return `
@@ -166,13 +178,13 @@ export class TournamentCentre {
   #matchCard(f) {
     const home     = this.#countryMap.get(f.homeTeamId);
     const away     = this.#countryMap.get(f.awayTeamId);
-    const homeName = escapeHtml(home?.name ?? f.homeTeamId ?? 'TBD');
-    const awayName = escapeHtml(away?.name ?? f.awayTeamId ?? 'TBD');
+    const homeName = escapeHtml(home?.name ?? f.homeLabel ?? f.homeTeamId ?? 'TBD');
+    const awayName = escapeHtml(away?.name ?? f.awayLabel ?? f.awayTeamId ?? 'TBD');
     const kickoff  = escapeHtml(formatKickoff(f.kickoff));
     const venue    = f.venue ? escapeHtml(f.venue) : '';
 
     const middle = f.status === 'FT' || f.status === 'live'
-      ? `<span class="match-card__score">${f.homeScore}&nbsp;&ndash;&nbsp;${f.awayScore}</span>`
+      ? `<span class="match-card__score">${f.homeScore ?? 0}&nbsp;&ndash;&nbsp;${f.awayScore ?? 0}</span>`
       : `<span class="match-card__time">${kickoff}</span>`;
 
     const statusBadge = f.status === 'live'
