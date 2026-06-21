@@ -57,6 +57,7 @@
 | Sprint 14 | Production verification (code audit + data consistency check — all 48 player files present, leagues/clubs perfectly in sync, zero app errors); recentForm audit (schema ✓, null only for Egypt/Cape Verde, short arrays documented); search upgrade (relevance scoring, word-prefix matching, subsequence + Levenshtein fuzzy fallback); hero photo architecture (player-photos.json, DataManager.loadPlayerPhotos(), photoMap threaded through team-page → overview-tab + squad-tab → profile-panel, gather-photos.js fully implemented). | **COMPLETE** |
 | Sprint 15 | Global Statistics Dashboard (`#statistics`): experience, career scorers, demographics, club & league representation. Countries Browse page (`#countries`): 48 nations by tournament group A–L, 4-wide card grid. `#groups` redirect to TournamentCentre groups tab. `DataManager.loadAllPlayers()` + `loadPlayerPhotos()` added. squad-tab photoMap fix. | **COMPLETE** |
 | Sprint 17 | Continents page (`#continents`): 48 nations by confederation, sorted by FIFA ranking. League Explorer (`#league-explorer`): ranked list of all 86 leagues, click-to-expand club lists with nation flags, real-time search, confederation badges. Router fully wired — only `club-explorer` remains a stub. PlaceholderModule text cleaned up. | **COMPLETE** |
+| Sprint 18 | Club Explorer (`#club-explorer`): search-first, 2+/all toggle, nation flags linking to team pages. All named routes now functional — STUB_ROUTES is empty. Today tab knockout awareness: loads `knockout.json` alongside `fixtures.json`, merges both into today/next-matches display. `#matchCard()` falls back to `homeLabel`/`awayLabel` for pre-populated slots. Live score null guard fixed. | **COMPLETE** |
 
 ---
 
@@ -90,6 +91,7 @@
 | `modules/statistics-page.js` | **Complete** | Tournament-wide stats: Squad Experience (caps leaderboard, top 10 squads + top 15 players), Career International Scorers (with caveat note — not WC 2026 match scorers), Tournament Demographics (avg age, youngest/oldest, position breakdown), Club & League Representation. Uses `loadAllPlayers()`. CSS namespace `sp-`. |
 | `modules/continents-page.js` | **Complete** | 48 nations grouped by confederation (UEFA, CONMEBOL, CAF, AFC, CONCACAF, OFC) sorted by FIFA ranking within each section. Team count badge on each section heading. Reuses all `cp-` CSS classes. |
 | `modules/league-explorer.js` | **Complete** | Ranked list of all 86 leagues by player count. 3 summary stat cards. Real-time search filters by league name + country. Click-to-expand rows show all clubs sorted by player count with nation flag strips (up to 8 flags + overflow). One expanded at a time. Confederation colour-coded badges. CSS namespace `le-`. |
+| `modules/club-explorer.js` | **Complete** | 453 clubs ranked by player count. Search-first (real-time name filter). 2+/all toggle (default: 231 clubs with 2+ players; active search overrides toggle). Nation flags per club (up to 8, each an `<a href="#countryId">` linking to team page), +N overflow. Empty state with clear button. CSS namespace `ce-`. |
 
 ### CSS files (`styles/`)
 
@@ -109,6 +111,7 @@ All files exist and are fully implemented unless noted:
 - `countries.css` — **Complete** (`cp-` namespace: page, group sections, 4-wide card grid, flag + meta cards, responsive breakpoints at 960px/640px)
 - `stats-global.css` — **Complete** (`sp-` namespace: page, header, loading state, two-col layout, player rows, squad rows, caveat note, stat cards)
 - `league-explorer.css` — **Complete** (`le-` namespace: header, stat cards, search input, row list, expand/collapse rows, confederation badges with per-conf colours, club rows with flag strips, responsive)
+- `club-explorer.css` — **Complete** (`ce-` namespace: header, stat cards, controls row, search input, 2+/all toggle button group, club rows with flag links, empty state, responsive)
 - `utilities.css` — badge classes (badge--ft, badge--live, badge--bbc, badge--itv, empty-state)
 
 ### Scripts (`scripts/`)
@@ -446,11 +449,13 @@ Hash                  Module             Params
 #continents           ContinentsPage     {}
 #statistics           StatisticsPage     {}
 #league-explorer      LeagueExplorer     {}
+#club-explorer        ClubExplorer       {}
 #compare              CompareView        { teamA: null, teamB: null }
 #compare/arg/ger      CompareView        { teamA: 'argentina', teamB: 'germany' }
-#club-explorer        PlaceholderModule  (stub — Sprint 18)
 (anything else)       NotFoundModule
 ```
+
+**STUB_ROUTES is now empty. Every named route in the nav is functional.**
 
 Group deep-link regex: `/^group-[a-l]$/` — matched before country route check. Letter extracted as `hash.slice(6).toUpperCase()`.
 
@@ -640,8 +645,7 @@ All squad data is complete. The natural next work areas, in rough priority order
 ### Sprint 6 continued (immediate) — Tournament data
 Complete R2 for Groups E–L as results come in June 20–24, then R3 for all groups June 25–27. Populate knockout.json R32 once all groups complete. This is the most time-sensitive work.
 
-### Sprint 18 (June 23–24) — Club Explorer
-Club Explorer (`#club-explorer`): ranked list of 453 clubs by player count, real-time search, 2+/all toggle (default: clubs with 2+ players), nation flags per club (clickable → team pages). No confederation filter in MVP. CSS namespace `ce-`. Also fix CompareView silent failure and live score null guard.
+### Sprint 19 (June 25–27) — R3 data + knockout preparation
 
 ### Sprint 19 (June 25–27) — R3 data + knockout preparation
 Update all 12 groups' R3 results (June 25–27). Set qualificationStatus for all 48 teams. Populate knockout.json R32 homeTeamId/awayTeamId once group stage completes (~June 27). Look up best-3rd assignment from FIFA Annex C. First R32 match: June 28.
@@ -659,8 +663,8 @@ Populate R32 results as they happen (June 28 – July 6), propagate winners to R
 - ~~Search overlay not implemented~~ — **Implemented Sprint 7**
 - ~~Stats tab on TeamPage was a placeholder stub~~ — **Implemented Sprint 11** (`js/modules/stats-tab.js`)
 - ~~Compare view not implemented~~ — **Implemented Sprint 12** (`js/modules/compare-view.js`)
-- **CompareView silent failure (minor, unfixed):** `if (!countryA || !countryB) return` in `#runComparison()` leaves result div showing "Loading comparison…" indefinitely when called before selections are made. Fix: add `resultEl.innerHTML = this.#buildPrompt()` before the return. Scheduled Sprint 18.
-- **Live score null render (latent, unfixed):** Tournament centre `#matchCard()` renders `${f.homeScore}&ndash;${f.awayScore}` — would show `null–null` if a fixture has `status: 'live'` with null scores. Fix: `${f.homeScore ?? 0}&ndash;${f.awayScore ?? 0}`. Zero live fixtures currently, so not triggered. Scheduled Sprint 18.
+- **CompareView silent failure (minor, unfixed):** `if (!countryA || !countryB) return` in `#runComparison()` leaves result div showing "Loading comparison…" indefinitely when called before selections are made. Fix: add `resultEl.innerHTML = this.#buildPrompt()` before the return.
+- ~~**Live score null render**~~ — **Fixed Sprint 18.** `#matchCard()` now uses `homeScore ?? 0` and `awayScore ?? 0`.
 - No club badges (CSS fallback active).
 - `data/rankings.json` empty — Rankings component not implemented.
 - `scotland-gordon` age (43, DOB 1982-12-31) triggers a validator DOB-range warning — expected and benign (Craig Gordon is genuinely 43; the DOB_MIN=1984 bound is a soft warning, not fatal).
