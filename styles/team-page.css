@@ -485,6 +485,75 @@
   background: var(--color-bg-elevated);
 }
 
+/* ─── Manager profile card ────────────────────────────────── */
+.tp-manager-section {
+  margin-bottom: var(--space-4);
+}
+
+.tp-manager {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.tp-manager__photo {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-secondary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tp-manager__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.tp-manager__initials {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+}
+
+.tp-manager__info { flex: 1; min-width: 0; }
+
+.tp-manager__name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+  line-height: 1.3;
+}
+
+.tp-manager__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.tp-manager__bio {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .tp-manager { flex-direction: row; gap: var(--space-3); }
+  .tp-manager__photo { flex: 0 0 56px; width: 56px; height: 56px; }
+}
+
 /* ─── Recent form bubbles ─────────────────────────────────── */
 .tp-form {
   display: flex;

@@ -1,54 +1,1234 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-21T12:00:00Z",
+  "lastUpdated": "2026-06-21T22:55:05.434Z",
   "data": [
-    { "id": "mexico",             "name": "Mexico",                 "code": "MEX", "confederation": "CONCACAF", "fifaRanking": 16, "groupId": "A", "manager": "Javier Aguirre",      "recentForm": ["W","W"],               "teamStrength": { "attack": 76, "midfield": 75, "defence": 74, "goalkeeping": 73, "depth": 75 } },
-    { "id": "south-korea",        "name": "South Korea",            "code": "KOR", "confederation": "AFC",      "fifaRanking": 22, "groupId": "A", "manager": "Hong Myung-bo",        "recentForm": ["W","W","W","W","L"],   "teamStrength": { "attack": 76, "midfield": 74, "defence": 72, "goalkeeping": 73, "depth": 72 } },
-    { "id": "south-africa",       "name": "South Africa",           "code": "RSA", "confederation": "CAF",      "fifaRanking": 56, "groupId": "A", "manager": "Hugo Broos",           "recentForm": ["D","D","W","L","D"],   "teamStrength": { "attack": 64, "midfield": 63, "defence": 64, "goalkeeping": 63, "depth": 62 } },
-    { "id": "czech-republic",     "name": "Czechia",                "code": "CZE", "confederation": "UEFA",     "fifaRanking": 37, "groupId": "A", "manager": "Miroslav Koubek",      "recentForm": ["D","W","W","L","D"],   "teamStrength": { "attack": 70, "midfield": 72, "defence": 71, "goalkeeping": 72, "depth": 70 } },
-    { "id": "canada",             "name": "Canada",                 "code": "CAN", "confederation": "CONCACAF", "fifaRanking": 40, "groupId": "B", "manager": "Jesse Marsch",         "recentForm": ["D","W"],               "teamStrength": { "attack": 74, "midfield": 72, "defence": 70, "goalkeeping": 70, "depth": 70 } },
-    { "id": "bosnia-herzegovina", "name": "Bosnia and Herzegovina", "code": "BIH", "confederation": "UEFA",     "fifaRanking": 55, "groupId": "B", "manager": "Sergej Barbarez",      "recentForm": ["L","W","D","D","L"],   "teamStrength": { "attack": 68, "midfield": 67, "defence": 66, "goalkeeping": 66, "depth": 65 } },
-    { "id": "qatar",              "name": "Qatar",                  "code": "QAT", "confederation": "AFC",      "fifaRanking": 60, "groupId": "B", "manager": "Julen Lopetegui",      "recentForm": ["W","L","L","D","L"],   "teamStrength": { "attack": 63, "midfield": 64, "defence": 62, "goalkeeping": 62, "depth": 60 } },
-    { "id": "switzerland",        "name": "Switzerland",            "code": "SUI", "confederation": "UEFA",     "fifaRanking": 19, "groupId": "B", "manager": "Murat Yakin",          "recentForm": ["D","W","D","D","W"],   "teamStrength": { "attack": 77, "midfield": 78, "defence": 78, "goalkeeping": 77, "depth": 76 } },
-    { "id": "brazil",             "name": "Brazil",                 "code": "BRA", "confederation": "CONMEBOL", "fifaRanking": 6,  "groupId": "C", "manager": "Carlo Ancelotti",      "recentForm": ["W","W","L","D","W"],   "teamStrength": { "attack": 89, "midfield": 88, "defence": 80, "goalkeeping": 82, "depth": 87 } },
-    { "id": "morocco",            "name": "Morocco",                "code": "MAR", "confederation": "CAF",      "fifaRanking": 14, "groupId": "C", "manager": "Mohamed Ouahbi",       "recentForm": ["W","W","W","D","W"],   "teamStrength": { "attack": 77, "midfield": 79, "defence": 84, "goalkeeping": 82, "depth": 76 } },
-    { "id": "haiti",              "name": "Haiti",                  "code": "HAI", "confederation": "CONCACAF", "fifaRanking": 85, "groupId": "C", "manager": "Sébastien Migné",      "recentForm": ["L","W","W","L","L"],   "teamStrength": { "attack": 58, "midfield": 57, "defence": 56, "goalkeeping": 55, "depth": 53 } },
-    { "id": "scotland",           "name": "Scotland",               "code": "SCO", "confederation": "UEFA",     "fifaRanking": 29, "groupId": "C", "manager": "Steve Clarke",          "recentForm": ["W","L","W","W","L"],   "teamStrength": { "attack": 68, "midfield": 70, "defence": 70, "goalkeeping": 70, "depth": 67 } },
-    { "id": "usa",                "name": "United States",          "code": "USA", "confederation": "CONCACAF", "fifaRanking": 11, "groupId": "D", "manager": "Mauricio Pochettino",  "recentForm": ["W","W"],               "teamStrength": { "attack": 78, "midfield": 76, "defence": 75, "goalkeeping": 76, "depth": 77 } },
-    { "id": "paraguay",           "name": "Paraguay",               "code": "PAR", "confederation": "CONMEBOL", "fifaRanking": 50, "groupId": "D", "manager": "Gustavo Alfaro",       "recentForm": ["L","D","W","L","W"],   "teamStrength": { "attack": 68, "midfield": 67, "defence": 68, "goalkeeping": 67, "depth": 65 } },
-    { "id": "australia",          "name": "Australia",              "code": "AUS", "confederation": "AFC",      "fifaRanking": 23, "groupId": "D", "manager": "Tony Popovic",         "recentForm": ["W","L"],               "teamStrength": { "attack": 73, "midfield": 72, "defence": 72, "goalkeeping": 71, "depth": 70 } },
-    { "id": "turkey",             "name": "Turkey",                 "code": "TUR", "confederation": "UEFA",     "fifaRanking": 26, "groupId": "D", "manager": "Vincenzo Montella",    "recentForm": ["W","W","D","L","L"],   "teamStrength": { "attack": 75, "midfield": 77, "defence": 73, "goalkeeping": 74, "depth": 73 } },
-    { "id": "germany",            "name": "Germany",                "code": "GER", "confederation": "UEFA",     "fifaRanking": 4,  "groupId": "E", "manager": "Julian Nagelsmann",    "recentForm": ["W","W","W","W","W"],   "teamStrength": { "attack": 84, "midfield": 84, "defence": 82, "goalkeeping": 85, "depth": 84 } },
-    { "id": "curacao",            "name": "Curaçao",                "code": "CUW", "confederation": "CONCACAF", "fifaRanking": 80, "groupId": "E", "manager": "Dick Advocaat",        "recentForm": ["D","W","D","L","D"],   "teamStrength": { "attack": 55, "midfield": 54, "defence": 52, "goalkeeping": 52, "depth": 50 } },
-    { "id": "ivory-coast",        "name": "Ivory Coast",            "code": "CIV", "confederation": "CAF",      "fifaRanking": 22, "groupId": "E", "manager": "Emerse Faé",           "recentForm": ["D","W","W","W","L"],   "teamStrength": { "attack": 77, "midfield": 75, "defence": 72, "goalkeeping": 73, "depth": 73 } },
-    { "id": "ecuador",            "name": "Ecuador",                "code": "ECU", "confederation": "CONMEBOL", "fifaRanking": 30, "groupId": "E", "manager": "Sebastián Beccacece",  "recentForm": ["D","D","W","L","D"],   "teamStrength": { "attack": 72, "midfield": 71, "defence": 72, "goalkeeping": 70, "depth": 69 } },
-    { "id": "netherlands",        "name": "Netherlands",            "code": "NED", "confederation": "UEFA",     "fifaRanking": 7,  "groupId": "F", "manager": "Ronald Koeman",        "recentForm": ["W","D","W","D","W"],   "teamStrength": { "attack": 87, "midfield": 83, "defence": 79, "goalkeeping": 81, "depth": 82 } },
-    { "id": "japan",              "name": "Japan",                  "code": "JPN", "confederation": "AFC",      "fifaRanking": 18, "groupId": "F", "manager": "Hajime Moriyasu",      "recentForm": ["W","D","W"],           "teamStrength": { "attack": 78, "midfield": 81, "defence": 77, "goalkeeping": 76, "depth": 75 } },
-    { "id": "sweden",             "name": "Sweden",                 "code": "SWE", "confederation": "UEFA",     "fifaRanking": 25, "groupId": "F", "manager": "Graham Potter",        "recentForm": ["L","L","D","W","L"],   "teamStrength": { "attack": 80, "midfield": 75, "defence": 74, "goalkeeping": 73, "depth": 73 } },
-    { "id": "tunisia",            "name": "Tunisia",                "code": "TUN", "confederation": "CAF",      "fifaRanking": 45, "groupId": "F", "manager": "Sabri Lamouchi",       "recentForm": ["W","W","W","L","L"],   "teamStrength": { "attack": 67, "midfield": 67, "defence": 68, "goalkeeping": 66, "depth": 63 } },
-    { "id": "belgium",            "name": "Belgium",                "code": "BEL", "confederation": "UEFA",     "fifaRanking": 13, "groupId": "G", "manager": "Rudi Garcia",          "recentForm": ["D","L","D","W","D"],   "teamStrength": { "attack": 81, "midfield": 79, "defence": 77, "goalkeeping": 78, "depth": 76 } },
-    { "id": "egypt",              "name": "Egypt",                  "code": "EGY", "confederation": "CAF",      "fifaRanking": 36, "groupId": "G", "manager": "Hossam Hassan",        "recentForm": ["D"],                   "teamStrength": { "attack": 70, "midfield": 71, "defence": 72, "goalkeeping": 71, "depth": 68 } },
-    { "id": "iran",               "name": "Iran",                   "code": "IRN", "confederation": "AFC",      "fifaRanking": 25, "groupId": "G", "manager": "Amir Ghalenoei",       "recentForm": ["L","D","W","W","D"],   "teamStrength": { "attack": 66, "midfield": 68, "defence": 73, "goalkeeping": 72, "depth": 67 } },
-    { "id": "new-zealand",        "name": "New Zealand",            "code": "NZL", "confederation": "OFC",      "fifaRanking": 92, "groupId": "G", "manager": "Darren Bazeley",       "recentForm": ["W","W","W","W","D"],   "teamStrength": { "attack": 59, "midfield": 58, "defence": 60, "goalkeeping": 58, "depth": 55 } },
-    { "id": "spain",              "name": "Spain",                  "code": "ESP", "confederation": "UEFA",     "fifaRanking": 3,  "groupId": "H", "manager": "Luis de la Fuente",    "recentForm": ["W","W","W","D","D"],   "teamStrength": { "attack": 86, "midfield": 92, "defence": 83, "goalkeeping": 81, "depth": 86 } },
-    { "id": "cape-verde",         "name": "Cape Verde",             "code": "CPV", "confederation": "CAF",      "fifaRanking": 65, "groupId": "H", "manager": "Bubista",              "recentForm": ["D"],                   "teamStrength": { "attack": 64, "midfield": 63, "defence": 64, "goalkeeping": 62, "depth": 60 } },
-    { "id": "saudi-arabia",       "name": "Saudi Arabia",           "code": "KSA", "confederation": "AFC",      "fifaRanking": 58, "groupId": "H", "manager": "Georgios Donis",       "recentForm": ["D"],                   "teamStrength": { "attack": 66, "midfield": 65, "defence": 65, "goalkeeping": 64, "depth": 63 } },
-    { "id": "uruguay",            "name": "Uruguay",                "code": "URU", "confederation": "CONMEBOL", "fifaRanking": 17, "groupId": "H", "manager": "Marcelo Bielsa",       "recentForm": ["L","W","W","D","D"],   "teamStrength": { "attack": 80, "midfield": 77, "defence": 78, "goalkeeping": 77, "depth": 76 } },
-    { "id": "france",             "name": "France",                 "code": "FRA", "confederation": "UEFA",     "fifaRanking": 2,  "groupId": "I", "manager": "Didier Deschamps",     "recentForm": ["W","D","W","W","W"],   "teamStrength": { "attack": 95, "midfield": 88, "defence": 82, "goalkeeping": 90, "depth": 91 } },
-    { "id": "senegal",            "name": "Senegal",                "code": "SEN", "confederation": "CAF",      "fifaRanking": 20, "groupId": "I", "manager": "Pape Thiaw",           "recentForm": ["W","W","W","W","L"],   "teamStrength": { "attack": 79, "midfield": 76, "defence": 75, "goalkeeping": 74, "depth": 75 } },
-    { "id": "iraq",               "name": "Iraq",                   "code": "IRQ", "confederation": "AFC",      "fifaRanking": 70, "groupId": "I", "manager": "Graham Arnold",        "recentForm": ["D","W","L","D","L"],   "teamStrength": { "attack": 63, "midfield": 62, "defence": 62, "goalkeeping": 60, "depth": 59 } },
-    { "id": "norway",             "name": "Norway",                 "code": "NOR", "confederation": "UEFA",     "fifaRanking": 35, "groupId": "I", "manager": "Ståle Solbakken",      "recentForm": ["W","W","W","W","W"],   "teamStrength": { "attack": 83, "midfield": 73, "defence": 71, "goalkeeping": 71, "depth": 70 } },
-    { "id": "argentina",          "name": "Argentina",              "code": "ARG", "confederation": "CONMEBOL", "fifaRanking": 1,  "groupId": "J", "manager": "Lionel Scaloni",       "recentForm": ["W","D","W","L","W"],   "teamStrength": { "attack": 92, "midfield": 86, "defence": 82, "goalkeeping": 80, "depth": 85 } },
-    { "id": "algeria",            "name": "Algeria",                "code": "ALG", "confederation": "CAF",      "fifaRanking": 42, "groupId": "J", "manager": "Vladimir Petković",    "recentForm": ["W","D","W","W","L"],   "teamStrength": { "attack": 69, "midfield": 68, "defence": 67, "goalkeeping": 66, "depth": 64 } },
-    { "id": "austria",            "name": "Austria",                "code": "AUT", "confederation": "UEFA",     "fifaRanking": 21, "groupId": "J", "manager": "Ralf Rangnick",        "recentForm": ["W","W","W","D","W"],   "teamStrength": { "attack": 77, "midfield": 79, "defence": 75, "goalkeeping": 74, "depth": 74 } },
-    { "id": "jordan",             "name": "Jordan",                 "code": "JOR", "confederation": "AFC",      "fifaRanking": 75, "groupId": "J", "manager": "Jamal Sellami",        "recentForm": ["W","L","W","D","L"],   "teamStrength": { "attack": 62, "midfield": 61, "defence": 63, "goalkeeping": 61, "depth": 58 } },
-    { "id": "portugal",           "name": "Portugal",               "code": "POR", "confederation": "UEFA",     "fifaRanking": 8,  "groupId": "K", "manager": "Roberto Martínez",     "recentForm": ["W","D","L","W","D"],   "teamStrength": { "attack": 87, "midfield": 81, "defence": 77, "goalkeeping": 78, "depth": 80 } },
-    { "id": "dr-congo",           "name": "DR Congo",               "code": "COD", "confederation": "CAF",      "fifaRanking": 55, "groupId": "K", "manager": "Sébastien Desabre",    "recentForm": ["W","L","W","W","D"],   "teamStrength": { "attack": 66, "midfield": 65, "defence": 65, "goalkeeping": 64, "depth": 62 } },
-    { "id": "uzbekistan",         "name": "Uzbekistan",             "code": "UZB", "confederation": "AFC",      "fifaRanking": 72, "groupId": "K", "manager": "Fabio Cannavaro",      "recentForm": ["W","D","W","W","L"],   "teamStrength": { "attack": 63, "midfield": 63, "defence": 62, "goalkeeping": 61, "depth": 60 } },
-    { "id": "colombia",           "name": "Colombia",               "code": "COL", "confederation": "CONMEBOL", "fifaRanking": 9,  "groupId": "K", "manager": "Néstor Lorenzo",       "recentForm": ["D","D","W","W","W"],   "teamStrength": { "attack": 83, "midfield": 80, "defence": 74, "goalkeeping": 76, "depth": 78 } },
-    { "id": "england",            "name": "England",                "code": "ENG", "confederation": "UEFA",     "fifaRanking": 5,  "groupId": "L", "manager": "Thomas Tuchel",        "recentForm": ["W","W","W","W","W"],   "teamStrength": { "attack": 87, "midfield": 90, "defence": 82, "goalkeeping": 85, "depth": 88 } },
-    { "id": "croatia",            "name": "Croatia",                "code": "CRO", "confederation": "UEFA",     "fifaRanking": 12, "groupId": "L", "manager": "Zlatko Dalić",         "recentForm": ["D","W","W","W","L"],   "teamStrength": { "attack": 78, "midfield": 83, "defence": 78, "goalkeeping": 77, "depth": 74 } },
-    { "id": "ghana",              "name": "Ghana",                  "code": "GHA", "confederation": "CAF",      "fifaRanking": 60, "groupId": "L", "manager": "Carlos Queiroz",       "recentForm": ["D","W","W","W","W"],   "teamStrength": { "attack": 68, "midfield": 67, "defence": 66, "goalkeeping": 65, "depth": 63 } },
-    { "id": "panama",             "name": "Panama",                 "code": "PAN", "confederation": "CONCACAF", "fifaRanking": 35, "groupId": "L", "manager": "Thomas Christiansen",  "recentForm": ["W","D","W","W","L"],   "teamStrength": { "attack": 63, "midfield": 63, "defence": 67, "goalkeeping": 65, "depth": 60 } }
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "code": "MEX",
+      "confederation": "CONCACAF",
+      "fifaRanking": 16,
+      "groupId": "A",
+      "manager": "Javier Aguirre",
+      "recentForm": [
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 76,
+        "midfield": 75,
+        "defence": 74,
+        "goalkeeping": 73,
+        "depth": 75
+      },
+      "managerNationality": "Mexican",
+      "managerDob": "1958-12-01",
+      "managerBio": "Javier Aguirre is on his third spell as Mexico head coach, having previously led El Tri at the 2002 and 2010 World Cups. The former midfielder managed clubs in Spain, Japan and Egypt before returning to the national setup in 2023. His disciplined defensive organisation and deep familiarity with Mexican football culture make him a trusted and experienced leader."
+    },
+    {
+      "id": "south-korea",
+      "name": "South Korea",
+      "code": "KOR",
+      "confederation": "AFC",
+      "fifaRanking": 22,
+      "groupId": "A",
+      "manager": "Hong Myung-bo",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 76,
+        "midfield": 74,
+        "defence": 72,
+        "goalkeeping": 73,
+        "depth": 72
+      },
+      "managerNationality": "South Korean",
+      "managerDob": "1969-02-12",
+      "managerBio": "Hong Myung-bo is South Korea's most capped outfield player and captained the team to a historic fourth-place finish at the 2002 World Cup. After a decorated career with Pohang Steelers, Kashiwa Reysol and LA Galaxy he became national head coach in 2023, his second stint in charge. His legendary status gives him natural authority and deep respect within the squad."
+    },
+    {
+      "id": "south-africa",
+      "name": "South Africa",
+      "code": "RSA",
+      "confederation": "CAF",
+      "fifaRanking": 56,
+      "groupId": "A",
+      "manager": "Hugo Broos",
+      "recentForm": [
+        "D",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 64,
+        "midfield": 63,
+        "defence": 64,
+        "goalkeeping": 63,
+        "depth": 62
+      },
+      "managerNationality": "Belgian",
+      "managerDob": "1952-04-10",
+      "managerBio": "Hugo Broos is a Belgian manager best known for guiding Cameroon to the 2017 AFCON title. A former defender who spent decades managing clubs in Belgium, Turkey and Cyprus, he joined South Africa in 2021 and orchestrated their first World Cup qualification since 2010. His patient squad-building approach has earned wide respect across the continent.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "czech-republic",
+      "name": "Czechia",
+      "code": "CZE",
+      "confederation": "UEFA",
+      "fifaRanking": 37,
+      "groupId": "A",
+      "manager": "Miroslav Koubek",
+      "recentForm": [
+        "D",
+        "W",
+        "W",
+        "L",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 70,
+        "midfield": 72,
+        "defence": 71,
+        "goalkeeping": 72,
+        "depth": 70
+      },
+      "managerNationality": "Czech",
+      "managerDob": "1952-01-17",
+      "managerBio": "Miroslav Koubek is a veteran Czech manager with decades of top-flight domestic experience, having coached Sparta Prague, Slavia Prague and Viktoria Plzeň among others. A former goalkeeper, he was appointed Czechia head coach in 2023 and guided the team through qualifying to secure a return to the World Cup for the first time since 2006.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "canada",
+      "name": "Canada",
+      "code": "CAN",
+      "confederation": "CONCACAF",
+      "fifaRanking": 40,
+      "groupId": "B",
+      "manager": "Jesse Marsch",
+      "recentForm": [
+        "D",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 74,
+        "midfield": 72,
+        "defence": 70,
+        "goalkeeping": 70,
+        "depth": 70
+      },
+      "managerNationality": "American",
+      "managerDob": "1973-11-09",
+      "managerBio": "Jesse Marsch is an American manager who made his name in the Red Bull football network, leading RB Salzburg to back-to-back Austrian titles and coaching RB Leipzig before a stint at Leeds United. The former US international midfielder was appointed Canada head coach in 2023, tasked with building on the historic 2022 World Cup qualification as the nation co-hosts the 2026 tournament."
+    },
+    {
+      "id": "bosnia-herzegovina",
+      "name": "Bosnia and Herzegovina",
+      "code": "BIH",
+      "confederation": "UEFA",
+      "fifaRanking": 55,
+      "groupId": "B",
+      "manager": "Sergej Barbarez",
+      "recentForm": [
+        "L",
+        "W",
+        "D",
+        "D",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 68,
+        "midfield": 67,
+        "defence": 66,
+        "goalkeeping": 66,
+        "depth": 65
+      },
+      "managerNationality": "Bosnian",
+      "managerDob": "1971-11-17",
+      "managerBio": "Sergej Barbarez enjoyed a long Bundesliga career as a striker with Hamburger SV and Borussia Dortmund and was once Bosnia and Herzegovina's all-time top scorer. After retiring from a decorated playing career he moved into club management before being appointed national head coach. His attacking instincts and emotional connection to the program define his footballing identity."
+    },
+    {
+      "id": "qatar",
+      "name": "Qatar",
+      "code": "QAT",
+      "confederation": "AFC",
+      "fifaRanking": 60,
+      "groupId": "B",
+      "manager": "Julen Lopetegui",
+      "recentForm": [
+        "W",
+        "L",
+        "L",
+        "D",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 63,
+        "midfield": 64,
+        "defence": 62,
+        "goalkeeping": 62,
+        "depth": 60
+      },
+      "managerNationality": "Spanish",
+      "managerDob": "1966-08-28",
+      "managerBio": "Julen Lopetegui is a Spanish manager with elite experience having managed the Spanish national team, Real Madrid and Sevilla, where he won the Europa League in 2020. The former goalkeeper was appointed Qatar head coach to bring top-level tactical knowledge to a program seeking to build on the legacy of hosting the 2022 World Cup."
+    },
+    {
+      "id": "switzerland",
+      "name": "Switzerland",
+      "code": "SUI",
+      "confederation": "UEFA",
+      "fifaRanking": 19,
+      "groupId": "B",
+      "manager": "Murat Yakin",
+      "recentForm": [
+        "D",
+        "W",
+        "D",
+        "D",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 77,
+        "midfield": 78,
+        "defence": 78,
+        "goalkeeping": 77,
+        "depth": 76
+      },
+      "managerNationality": "Swiss",
+      "managerDob": "1974-09-26",
+      "managerBio": "Murat Yakin is a Swiss-born manager of Turkish heritage who represented Switzerland as a defender during his playing career. He managed clubs including Basel and Luzern before taking the national team role in 2021. Yakin has built a tactically disciplined, compact system that has brought genuine stability to Swiss football."
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "code": "BRA",
+      "confederation": "CONMEBOL",
+      "fifaRanking": 6,
+      "groupId": "C",
+      "manager": "Carlo Ancelotti",
+      "recentForm": [
+        "W",
+        "W",
+        "L",
+        "D",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 89,
+        "midfield": 88,
+        "defence": 80,
+        "goalkeeping": 82,
+        "depth": 87
+      },
+      "managerNationality": "Italian",
+      "managerDob": "1959-06-10",
+      "managerBio": "Carlo Ancelotti is one of football's most decorated managers, having won the UEFA Champions League four times with AC Milan and Real Madrid. The Italian tactician previously managed Chelsea, Paris Saint-Germain, Bayern Munich and Everton before joining Brazil in 2024. His calm man-management and tactical adaptability bring world-class credibility to the Seleção's bid for a sixth world title."
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "code": "MAR",
+      "confederation": "CAF",
+      "fifaRanking": 14,
+      "groupId": "C",
+      "manager": "Mohamed Ouahbi",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 77,
+        "midfield": 79,
+        "defence": 84,
+        "goalkeeping": 82,
+        "depth": 76
+      },
+      "managerNationality": "Moroccan",
+      "managerBio": "Mohamed Ouahbi was appointed Morocco head coach as the Atlas Lions sought to build on their historic 2022 World Cup semi-final run. He continues to develop the disciplined, well-organised pressing structure that has made Morocco one of the most feared sides in African and world football.",
+      "_verificationManager": "dob uncertain; confirm current appointment"
+    },
+    {
+      "id": "haiti",
+      "name": "Haiti",
+      "code": "HAI",
+      "confederation": "CONCACAF",
+      "fifaRanking": 85,
+      "groupId": "C",
+      "manager": "Sébastien Migné",
+      "recentForm": [
+        "L",
+        "W",
+        "W",
+        "L",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 58,
+        "midfield": 57,
+        "defence": 56,
+        "goalkeeping": 55,
+        "depth": 53
+      },
+      "managerNationality": "French",
+      "managerBio": "Sébastien Migné is a French manager who previously coached Kenya's Harambee Stars. He was appointed Haiti head coach to lead the Caribbean nation in their first World Cup appearance, bringing structured continental experience to a program with limited resources but extraordinary passion.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "scotland",
+      "name": "Scotland",
+      "code": "SCO",
+      "confederation": "UEFA",
+      "fifaRanking": 29,
+      "groupId": "C",
+      "manager": "Steve Clarke",
+      "recentForm": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 68,
+        "midfield": 70,
+        "defence": 70,
+        "goalkeeping": 70,
+        "depth": 67
+      },
+      "managerNationality": "Scottish",
+      "managerDob": "1963-08-29",
+      "managerBio": "Steve Clarke is the most successful Scotland manager of the modern era, transforming a side that had not qualified for a major tournament since 1998 into consistent World Cup and European Championship participants. The former Chelsea defender guided Scotland to Euro 2020 and Euro 2024 before this historic World Cup return. His meticulous preparation and defensive organisation are the hallmarks of his work."
+    },
+    {
+      "id": "usa",
+      "name": "United States",
+      "code": "USA",
+      "confederation": "CONCACAF",
+      "fifaRanking": 11,
+      "groupId": "D",
+      "manager": "Mauricio Pochettino",
+      "recentForm": [
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 78,
+        "midfield": 76,
+        "defence": 75,
+        "goalkeeping": 76,
+        "depth": 77
+      },
+      "managerNationality": "Argentine",
+      "managerDob": "1972-03-02",
+      "managerBio": "Mauricio Pochettino is one of the most celebrated managers of his generation, having led Tottenham Hotspur to the 2019 Champions League final and managed Paris Saint-Germain and Chelsea. The former Argentine centre-back is renowned for his high-intensity pressing system and talent for developing young players. He was appointed United States head coach in 2024 to lead a squad on home soil."
+    },
+    {
+      "id": "paraguay",
+      "name": "Paraguay",
+      "code": "PAR",
+      "confederation": "CONMEBOL",
+      "fifaRanking": 50,
+      "groupId": "D",
+      "manager": "Gustavo Alfaro",
+      "recentForm": [
+        "L",
+        "D",
+        "W",
+        "L",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 68,
+        "midfield": 67,
+        "defence": 68,
+        "goalkeeping": 67,
+        "depth": 65
+      },
+      "managerNationality": "Argentine",
+      "managerDob": "1962-10-03",
+      "managerBio": "Gustavo Alfaro is an experienced Argentine manager known throughout South American football for building compact, resilient sides with strong team spirit. He previously managed Boca Juniors, Ecuador and Costa Rica before joining Paraguay in 2023. His tactical discipline and man-management have restored consistency to the Albirroja."
+    },
+    {
+      "id": "australia",
+      "name": "Australia",
+      "code": "AUS",
+      "confederation": "AFC",
+      "fifaRanking": 23,
+      "groupId": "D",
+      "manager": "Tony Popovic",
+      "recentForm": [
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 73,
+        "midfield": 72,
+        "defence": 72,
+        "goalkeeping": 71,
+        "depth": 70
+      },
+      "managerNationality": "Australian",
+      "managerDob": "1973-07-04",
+      "managerBio": "Tony Popovic is an Australian manager of Croatian heritage who had a distinguished playing career as a central defender with Crystal Palace and the Socceroos. After successful stints with Perth Glory and Melbourne Victory in the A-League he was appointed national head coach in 2024. His tactical organisation and deep knowledge of the Australian football landscape make him a well-suited appointment."
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "code": "TUR",
+      "confederation": "UEFA",
+      "fifaRanking": 26,
+      "groupId": "D",
+      "manager": "Vincenzo Montella",
+      "recentForm": [
+        "W",
+        "W",
+        "D",
+        "L",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 75,
+        "midfield": 77,
+        "defence": 73,
+        "goalkeeping": 74,
+        "depth": 73
+      },
+      "managerNationality": "Italian",
+      "managerDob": "1974-06-18",
+      "managerBio": "Vincenzo Montella is an Italian manager who was a prolific striker for Fiorentina and Sampdoria during his playing career. He managed clubs including Fiorentina, AC Milan and Sevilla before taking the Turkey role in 2023, leading the Crescent Stars to a memorable Euro 2024 quarter-final. His possession-based attacking philosophy has revitalised the national team."
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "code": "GER",
+      "confederation": "UEFA",
+      "fifaRanking": 4,
+      "groupId": "E",
+      "manager": "Julian Nagelsmann",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 84,
+        "midfield": 84,
+        "defence": 82,
+        "goalkeeping": 85,
+        "depth": 84
+      },
+      "managerNationality": "German",
+      "managerDob": "1987-07-23",
+      "managerBio": "Julian Nagelsmann is one of football's most exciting managerial talents, having guided RB Leipzig to the Champions League semi-finals before joining Bayern Munich aged just 33. Appointed Germany head coach in 2023, he reinvigorated the squad with a dynamic, high-tempo system and renewed tactical ambition. His innovation and youth have restored genuine confidence to German football."
+    },
+    {
+      "id": "curacao",
+      "name": "Curaçao",
+      "code": "CUW",
+      "confederation": "CONCACAF",
+      "fifaRanking": 80,
+      "groupId": "E",
+      "manager": "Dick Advocaat",
+      "recentForm": [
+        "D",
+        "W",
+        "D",
+        "L",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 55,
+        "midfield": 54,
+        "defence": 52,
+        "goalkeeping": 52,
+        "depth": 50
+      },
+      "managerNationality": "Dutch",
+      "managerDob": "1947-09-27",
+      "managerBio": "Dick Advocaat is one of football's most experienced managers, having led the Netherlands, South Korea, Russia, Belgium and dozens of clubs across five decades. The veteran Dutch tactician was appointed Curaçao head coach to bring unparalleled top-flight wisdom to the Caribbean island's growing program. At an age when most have long since retired, he remains a highly respected tactical voice in world football."
+    },
+    {
+      "id": "ivory-coast",
+      "name": "Ivory Coast",
+      "code": "CIV",
+      "confederation": "CAF",
+      "fifaRanking": 22,
+      "groupId": "E",
+      "manager": "Emerse Faé",
+      "recentForm": [
+        "D",
+        "W",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 77,
+        "midfield": 75,
+        "defence": 72,
+        "goalkeeping": 73,
+        "depth": 73
+      },
+      "managerNationality": "Ivorian",
+      "managerDob": "1981-02-06",
+      "managerBio": "Emerse Faé became one of football's most celebrated young managers when he stepped up as caretaker during AFCON 2023 and steered Ivory Coast to a dramatic home title. The former Ivorian international midfielder was subsequently confirmed as permanent head coach and has maintained the team's high-energy attacking ambition. His emotional connection to the squad and fearless tactical decisions define his tenure."
+    },
+    {
+      "id": "ecuador",
+      "name": "Ecuador",
+      "code": "ECU",
+      "confederation": "CONMEBOL",
+      "fifaRanking": 30,
+      "groupId": "E",
+      "manager": "Sebastián Beccacece",
+      "recentForm": [
+        "D",
+        "D",
+        "W",
+        "L",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 72,
+        "midfield": 71,
+        "defence": 72,
+        "goalkeeping": 70,
+        "depth": 69
+      },
+      "managerNationality": "Argentine",
+      "managerDob": "1981-12-16",
+      "managerBio": "Sebastián Beccacece developed his coaching philosophy as assistant to Jorge Sampaoli at Sevilla and with the Argentina national team. He managed Defensa y Justicia and Racing Club before taking over Ecuador in 2023. His high-energy pressing system and intense personality have brought renewed attacking ambition to La Tricolor."
+    },
+    {
+      "id": "netherlands",
+      "name": "Netherlands",
+      "code": "NED",
+      "confederation": "UEFA",
+      "fifaRanking": 7,
+      "groupId": "F",
+      "manager": "Ronald Koeman",
+      "recentForm": [
+        "W",
+        "D",
+        "W",
+        "D",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 87,
+        "midfield": 83,
+        "defence": 79,
+        "goalkeeping": 81,
+        "depth": 82
+      },
+      "managerNationality": "Dutch",
+      "managerDob": "1963-03-21",
+      "managerBio": "Ronald Koeman is a Dutch footballing icon renowned for his powerful shooting and commanding defensive play with Ajax, PSV and Barcelona. As a manager he led Feyenoord, PSV and Barcelona before returning for a second stint as Netherlands head coach in 2023. He guided the Oranje to the Euro 2024 semi-finals and has assembled one of the tournament's most complete squads."
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "code": "JPN",
+      "confederation": "AFC",
+      "fifaRanking": 18,
+      "groupId": "F",
+      "manager": "Hajime Moriyasu",
+      "recentForm": [
+        "W",
+        "D",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 78,
+        "midfield": 81,
+        "defence": 77,
+        "goalkeeping": 76,
+        "depth": 75
+      },
+      "managerNationality": "Japanese",
+      "managerDob": "1968-08-23",
+      "managerBio": "Hajime Moriyasu transformed Japan into one of Asia's most dynamic and tactically sophisticated national teams. The former midfielder served as assistant before taking the head coach role in 2018 and has overseen Japan's remarkable knockout-round performances at the last two World Cups. His emphasis on pressing intensity and European-style positioning has produced an exceptional generation of players."
+    },
+    {
+      "id": "sweden",
+      "name": "Sweden",
+      "code": "SWE",
+      "confederation": "UEFA",
+      "fifaRanking": 25,
+      "groupId": "F",
+      "manager": "Graham Potter",
+      "recentForm": [
+        "L",
+        "L",
+        "D",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 80,
+        "midfield": 75,
+        "defence": 74,
+        "goalkeeping": 73,
+        "depth": 73
+      },
+      "managerNationality": "English",
+      "managerDob": "1975-05-20",
+      "managerBio": "Graham Potter is an English manager who built an outstanding reputation at Brighton and Hove Albion with a distinctive possession-based, tactically flexible approach. After a difficult spell at Chelsea he was appointed Sweden head coach in 2023. Potter's emphasis on intelligent movement and structural versatility suits Sweden's technically gifted squad."
+    },
+    {
+      "id": "tunisia",
+      "name": "Tunisia",
+      "code": "TUN",
+      "confederation": "CAF",
+      "fifaRanking": 45,
+      "groupId": "F",
+      "manager": "Sabri Lamouchi",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "L",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 67,
+        "midfield": 67,
+        "defence": 68,
+        "goalkeeping": 66,
+        "depth": 63
+      },
+      "managerNationality": "French",
+      "managerDob": "1971-09-09",
+      "managerBio": "Sabri Lamouchi is a French manager of Tunisian heritage who played as a midfielder for Auxerre and Parma and represented Ivory Coast internationally. He managed Nottingham Forest, Rennes and other clubs before taking the Tunisia role. His experience spanning both French and African football brings a cross-cultural perspective to the Carthage Eagles."
+    },
+    {
+      "id": "belgium",
+      "name": "Belgium",
+      "code": "BEL",
+      "confederation": "UEFA",
+      "fifaRanking": 13,
+      "groupId": "G",
+      "manager": "Rudi Garcia",
+      "recentForm": [
+        "D",
+        "L",
+        "D",
+        "W",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 81,
+        "midfield": 79,
+        "defence": 77,
+        "goalkeeping": 78,
+        "depth": 76
+      },
+      "managerNationality": "French",
+      "managerDob": "1964-02-21",
+      "managerBio": "Rudi Garcia is an experienced French manager whose club career included title-winning spells at Lille and high-profile positions at Roma, Marseille and Lyon. Appointed Belgium head coach in 2024, he took over a squad balancing experienced stars with a promising new generation and has brought clear tactical organisation to their World Cup preparation."
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "code": "EGY",
+      "confederation": "CAF",
+      "fifaRanking": 36,
+      "groupId": "G",
+      "manager": "Hossam Hassan",
+      "recentForm": [
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 70,
+        "midfield": 71,
+        "defence": 72,
+        "goalkeeping": 71,
+        "depth": 68
+      },
+      "managerNationality": "Egyptian",
+      "managerDob": "1966-08-10",
+      "managerBio": "Hossam Hassan is Egypt's all-time top scorer and one of Africa's greatest ever players, having represented the Pharaohs for over two decades. The legendary striker was appointed head coach to lead Egypt in their first World Cup appearance since 1990. His iconic status and comprehensive knowledge of Egyptian football command natural authority in the dressing room."
+    },
+    {
+      "id": "iran",
+      "name": "Iran",
+      "code": "IRN",
+      "confederation": "AFC",
+      "fifaRanking": 25,
+      "groupId": "G",
+      "manager": "Amir Ghalenoei",
+      "recentForm": [
+        "L",
+        "D",
+        "W",
+        "W",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 66,
+        "midfield": 68,
+        "defence": 73,
+        "goalkeeping": 72,
+        "depth": 67
+      },
+      "managerNationality": "Iranian",
+      "managerBio": "Amir Ghalenoei is an Iranian manager with extensive experience in the Persian Gulf Pro League who was appointed Team Melli head coach to build on Iran's status as one of Asia's most defensively organised sides. His tactical discipline and familiarity with Iranian football culture have been central to the team's qualifying campaign.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "new-zealand",
+      "name": "New Zealand",
+      "code": "NZL",
+      "confederation": "OFC",
+      "fifaRanking": 92,
+      "groupId": "G",
+      "manager": "Darren Bazeley",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 59,
+        "midfield": 58,
+        "defence": 60,
+        "goalkeeping": 58,
+        "depth": 55
+      },
+      "managerNationality": "English",
+      "managerBio": "Darren Bazeley is an English manager and former professional right back appointed to guide New Zealand through their OFC qualifying campaign. He led the All Whites to a historic World Cup qualification — the country's first since 2010 — with a well-organised defensive structure and effective use of the squad's European-based players.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "spain",
+      "name": "Spain",
+      "code": "ESP",
+      "confederation": "UEFA",
+      "fifaRanking": 3,
+      "groupId": "H",
+      "manager": "Luis de la Fuente",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 86,
+        "midfield": 92,
+        "defence": 83,
+        "goalkeeping": 81,
+        "depth": 86
+      },
+      "managerNationality": "Spanish",
+      "managerDob": "1961-11-11",
+      "managerBio": "Luis de la Fuente led Spain to Euro 2024 glory, their fourth European Championship and a vindication of his possession-dominant philosophy. A former winger who played for Athletic Club, he spent years developing Spain's youth and Olympic teams before being appointed senior head coach in 2023. His fluid, collective pressing system has produced the most exciting Spanish side in a generation.",
+      "_verificationManager": "dob confirmed via Wikipedia article title (born 1961)"
+    },
+    {
+      "id": "cape-verde",
+      "name": "Cape Verde",
+      "code": "CPV",
+      "confederation": "CAF",
+      "fifaRanking": 65,
+      "groupId": "H",
+      "manager": "Bubista",
+      "recentForm": [
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 64,
+        "midfield": 63,
+        "defence": 64,
+        "goalkeeping": 62,
+        "depth": 60
+      },
+      "managerNationality": "Cape Verdean",
+      "managerBio": "Bubista has built one of African football's most remarkable success stories as Cape Verde head coach, transforming a tiny island nation into genuine AFCON contenders and now World Cup debutants. His approach maximises the squad's physicality, collective organisation and team spirit to consistently perform above expectations against stronger opponents.",
+      "_verificationManager": "dob uncertain; nationality uncertain"
+    },
+    {
+      "id": "saudi-arabia",
+      "name": "Saudi Arabia",
+      "code": "KSA",
+      "confederation": "AFC",
+      "fifaRanking": 58,
+      "groupId": "H",
+      "manager": "Georgios Donis",
+      "recentForm": [
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 66,
+        "midfield": 65,
+        "defence": 65,
+        "goalkeeping": 64,
+        "depth": 63
+      },
+      "managerNationality": "Greek",
+      "managerDob": "1969-10-29",
+      "managerBio": "Georgios Donis is a former Greek international winger who played in the Premier League with Blackburn Rovers before moving into management. He has managed clubs in Greece and took the Saudi Arabia head coach role to guide the Green Falcons through qualifying. His European background and understanding of the Saudi setup have shaped a more structured tactical identity.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "uruguay",
+      "name": "Uruguay",
+      "code": "URU",
+      "confederation": "CONMEBOL",
+      "fifaRanking": 17,
+      "groupId": "H",
+      "manager": "Marcelo Bielsa",
+      "recentForm": [
+        "L",
+        "W",
+        "W",
+        "D",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 80,
+        "midfield": 77,
+        "defence": 78,
+        "goalkeeping": 77,
+        "depth": 76
+      },
+      "managerNationality": "Argentine",
+      "managerDob": "1955-07-25",
+      "managerBio": "Marcelo Bielsa is one of football's most visionary and influential tacticians, whose high-intensity pressing system inspired a generation including Pep Guardiola and Mauricio Pochettino. The Argentine previously managed Chile, Athletic Club, Marseille and Leeds United — whom he famously promoted to the Premier League — before joining Uruguay in 2023. His total-football philosophy demands extraordinary commitment but unlocks the full collective potential of any squad."
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "code": "FRA",
+      "confederation": "UEFA",
+      "fifaRanking": 2,
+      "groupId": "I",
+      "manager": "Didier Deschamps",
+      "recentForm": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 95,
+        "midfield": 88,
+        "defence": 82,
+        "goalkeeping": 90,
+        "depth": 91
+      },
+      "managerNationality": "French",
+      "managerDob": "1968-10-15",
+      "managerBio": "Didier Deschamps is the most successful manager in French football history, guiding Les Bleus to World Cup glory in 2018 and the final in 2022. The former captain — who lifted the trophy himself in 1998 — has managed the national team since 2012. His pragmatic, defensively sound approach and exceptional ability to manage elite egos make him indispensable to the French football establishment."
+    },
+    {
+      "id": "senegal",
+      "name": "Senegal",
+      "code": "SEN",
+      "confederation": "CAF",
+      "fifaRanking": 20,
+      "groupId": "I",
+      "manager": "Pape Thiaw",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 79,
+        "midfield": 76,
+        "defence": 75,
+        "goalkeeping": 74,
+        "depth": 75
+      },
+      "managerNationality": "Senegalese",
+      "managerBio": "Pape Thiaw was appointed Senegal head coach to maintain the Lions of Teranga's status as one of Africa's most powerful sides following their 2021 AFCON triumph. A former Senegalese international, he brings continuity and a deep understanding of the squad's dynamics as they seek to make their mark on the world stage.",
+      "_verificationManager": "dob uncertain; confirm appointment details"
+    },
+    {
+      "id": "iraq",
+      "name": "Iraq",
+      "code": "IRQ",
+      "confederation": "AFC",
+      "fifaRanking": 70,
+      "groupId": "I",
+      "manager": "Graham Arnold",
+      "recentForm": [
+        "D",
+        "W",
+        "L",
+        "D",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 63,
+        "midfield": 62,
+        "defence": 62,
+        "goalkeeping": 60,
+        "depth": 59
+      },
+      "managerNationality": "Australian",
+      "managerDob": "1963-08-03",
+      "managerBio": "Graham Arnold is an experienced Australian manager who guided the Socceroos to back-to-back World Cup appearances and a memorable round-of-16 run in 2022. After leaving the Australia role he was appointed Iraq head coach in 2024, bringing proven AFC qualifying experience and a direct, results-focused approach to one of Asia's most passionate footballing nations."
+    },
+    {
+      "id": "norway",
+      "name": "Norway",
+      "code": "NOR",
+      "confederation": "UEFA",
+      "fifaRanking": 35,
+      "groupId": "I",
+      "manager": "Ståle Solbakken",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 83,
+        "midfield": 73,
+        "defence": 71,
+        "goalkeeping": 71,
+        "depth": 70
+      },
+      "managerNationality": "Norwegian",
+      "managerDob": "1968-02-27",
+      "managerBio": "Ståle Solbakken is one of Scandinavia's most respected managers, having built FC Copenhagen into a dominant force in Danish football and managed clubs in Germany and England. The former Norwegian international was appointed national head coach in 2021 and delivered Norway's first World Cup since 1998. His intelligent build-up play system has unlocked the full potential of Erling Haaland and the squad around him."
+    },
+    {
+      "id": "argentina",
+      "name": "Argentina",
+      "code": "ARG",
+      "confederation": "CONMEBOL",
+      "fifaRanking": 1,
+      "groupId": "J",
+      "manager": "Lionel Scaloni",
+      "recentForm": [
+        "W",
+        "D",
+        "W",
+        "L",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 92,
+        "midfield": 86,
+        "defence": 82,
+        "goalkeeping": 80,
+        "depth": 85
+      },
+      "managerNationality": "Argentine",
+      "managerDob": "1978-05-16",
+      "managerBio": "Lionel Scaloni became Argentina's greatest ever manager when he ended a 28-year international trophy drought, delivering the Copa América in 2021, the World Cup in 2022 and Copa América again in 2024. The former right-back had modest managerial experience when unexpectedly appointed in 2018 but transformed La Albiceleste into an unstoppable collective. His tactical flexibility and deep bond with Lionel Messi are the foundations of a dynasty."
+    },
+    {
+      "id": "algeria",
+      "name": "Algeria",
+      "code": "ALG",
+      "confederation": "CAF",
+      "fifaRanking": 42,
+      "groupId": "J",
+      "manager": "Vladimir Petković",
+      "recentForm": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 69,
+        "midfield": 68,
+        "defence": 67,
+        "goalkeeping": 66,
+        "depth": 64
+      },
+      "managerNationality": "Bosnian",
+      "managerDob": "1963-08-15",
+      "managerBio": "Vladimir Petković is a Bosnian-born Swiss manager who guided Switzerland to consecutive World Cup knockout rounds and a famous Euro quarter-final run. After his long Swiss national team tenure he took charge of Algeria in 2022, bringing European tactical organisation and high-level tournament experience to the Desert Foxes' World Cup campaign."
+    },
+    {
+      "id": "austria",
+      "name": "Austria",
+      "code": "AUT",
+      "confederation": "UEFA",
+      "fifaRanking": 21,
+      "groupId": "J",
+      "manager": "Ralf Rangnick",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "D",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 77,
+        "midfield": 79,
+        "defence": 75,
+        "goalkeeping": 74,
+        "depth": 74
+      },
+      "managerNationality": "German",
+      "managerDob": "1958-06-29",
+      "managerBio": "Ralf Rangnick is the architect of the Red Bull football philosophy and one of the most influential tactical minds in modern football, having pioneered gegenpressing and the high-pressing 4-2-2-2 system that inspired a generation of coaches. He became Austria head coach in 2022 and led the nation to their first knockout stage at a major tournament. His analytical rigour and commitment to structural discipline have transformed Austrian football."
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan",
+      "code": "JOR",
+      "confederation": "AFC",
+      "fifaRanking": 75,
+      "groupId": "J",
+      "manager": "Jamal Sellami",
+      "recentForm": [
+        "W",
+        "L",
+        "W",
+        "D",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 62,
+        "midfield": 61,
+        "defence": 63,
+        "goalkeeping": 61,
+        "depth": 58
+      },
+      "managerNationality": "Moroccan",
+      "managerBio": "Jamal Sellami guided Jordan to their historic first World Cup qualification, creating one of the most remarkable stories in Asian football. His compact defensive organisation and ability to prepare a team for major upsets against stronger opponents have made Jordan one of the AFC's most competitive sides.",
+      "_verificationManager": "dob uncertain; nationality uncertain"
+    },
+    {
+      "id": "portugal",
+      "name": "Portugal",
+      "code": "POR",
+      "confederation": "UEFA",
+      "fifaRanking": 8,
+      "groupId": "K",
+      "manager": "Roberto Martínez",
+      "recentForm": [
+        "W",
+        "D",
+        "L",
+        "W",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 87,
+        "midfield": 81,
+        "defence": 77,
+        "goalkeeping": 78,
+        "depth": 80
+      },
+      "managerNationality": "Spanish",
+      "managerDob": "1973-07-13",
+      "managerBio": "Roberto Martínez is a Spanish manager who spent much of his career in England, most notably winning the FA Cup with Wigan Athletic in 2013. He led Belgium's Golden Generation to third place at the 2018 World Cup before being appointed Portugal head coach in 2022. His possession-based, attack-minded philosophy has unlocked a squad built around Cristiano Ronaldo and an exciting emerging generation."
+    },
+    {
+      "id": "dr-congo",
+      "name": "DR Congo",
+      "code": "COD",
+      "confederation": "CAF",
+      "fifaRanking": 55,
+      "groupId": "K",
+      "manager": "Sébastien Desabre",
+      "recentForm": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "D"
+      ],
+      "teamStrength": {
+        "attack": 66,
+        "midfield": 65,
+        "defence": 65,
+        "goalkeeping": 64,
+        "depth": 62
+      },
+      "managerNationality": "French",
+      "managerBio": "Sébastien Desabre is a French manager with extensive experience in African football, having previously guided Uganda to the 2019 Africa Cup of Nations. He was appointed DR Congo head coach to bring structural organisation to a team of considerable natural talent. His patient approach to building team shape has helped the Leopards develop a more cohesive collective identity.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "uzbekistan",
+      "name": "Uzbekistan",
+      "code": "UZB",
+      "confederation": "AFC",
+      "fifaRanking": 72,
+      "groupId": "K",
+      "manager": "Fabio Cannavaro",
+      "recentForm": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 63,
+        "midfield": 63,
+        "defence": 62,
+        "goalkeeping": 61,
+        "depth": 60
+      },
+      "managerNationality": "Italian",
+      "managerDob": "1973-09-13",
+      "managerBio": "Fabio Cannavaro is Italy's 2006 World Cup-winning captain and Ballon d'Or winner, widely regarded as one of the greatest defenders in football history. After retirement he moved into management in China and Saudi Arabia before taking charge of Uzbekistan. His global profile and elite-level experience have raised the White Wolves' ambition and brought international attention to Central Asian football."
+    },
+    {
+      "id": "colombia",
+      "name": "Colombia",
+      "code": "COL",
+      "confederation": "CONMEBOL",
+      "fifaRanking": 9,
+      "groupId": "K",
+      "manager": "Néstor Lorenzo",
+      "recentForm": [
+        "D",
+        "D",
+        "W",
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 83,
+        "midfield": 80,
+        "defence": 74,
+        "goalkeeping": 76,
+        "depth": 78
+      },
+      "managerNationality": "Argentine",
+      "managerDob": "1966-06-09",
+      "managerBio": "Néstor Lorenzo served as assistant to José Pékerman during Colombia's celebrated 2014 World Cup run and brings deep tactical continuity to the program. He managed clubs in Argentina before being appointed Colombia head coach in 2022. Lorenzo has restored discipline and structure while preserving the attacking flair that makes Los Cafeteros one of South America's most entertaining teams.",
+      "_verificationManager": "dob uncertain"
+    },
+    {
+      "id": "england",
+      "name": "England",
+      "code": "ENG",
+      "confederation": "UEFA",
+      "fifaRanking": 5,
+      "groupId": "L",
+      "manager": "Thomas Tuchel",
+      "recentForm": [
+        "W",
+        "W",
+        "W",
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 87,
+        "midfield": 90,
+        "defence": 82,
+        "goalkeeping": 85,
+        "depth": 88
+      },
+      "managerNationality": "German",
+      "managerDob": "1973-08-29",
+      "managerBio": "Thomas Tuchel is a German manager renowned for his sophisticated tactical systems and meticulous preparation, having won the UEFA Champions League with Chelsea in 2021. He previously managed Borussia Dortmund, Paris Saint-Germain and Bayern Munich before being appointed England head coach in 2024. Tuchel has brought world-class tactical structure to the Three Lions as they target a first World Cup title on home soil."
+    },
+    {
+      "id": "croatia",
+      "name": "Croatia",
+      "code": "CRO",
+      "confederation": "UEFA",
+      "fifaRanking": 12,
+      "groupId": "L",
+      "manager": "Zlatko Dalić",
+      "recentForm": [
+        "D",
+        "W",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 78,
+        "midfield": 83,
+        "defence": 78,
+        "goalkeeping": 77,
+        "depth": 74
+      },
+      "managerNationality": "Croatian",
+      "managerDob": "1966-10-26",
+      "managerBio": "Zlatko Dalić is the most successful manager in Croatian history, guiding the nation to the 2018 World Cup final and third place in 2022. The quietly effective tactician took charge in 2017 when qualification looked impossible and immediately galvanised the squad around Luka Modrić. His ability to consistently extract maximum results from a relatively small player pool has earned him enormous global respect."
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "code": "GHA",
+      "confederation": "CAF",
+      "fifaRanking": 60,
+      "groupId": "L",
+      "manager": "Carlos Queiroz",
+      "recentForm": [
+        "D",
+        "W",
+        "W",
+        "W",
+        "W"
+      ],
+      "teamStrength": {
+        "attack": 68,
+        "midfield": 67,
+        "defence": 66,
+        "goalkeeping": 65,
+        "depth": 63
+      },
+      "managerNationality": "Portuguese",
+      "managerDob": "1953-03-01",
+      "managerBio": "Carlos Queiroz is one of football's most experienced and widely travelled managers, having served as Sir Alex Ferguson's assistant at Manchester United and managed Portugal, South Africa, Colombia and Iran at international level. He guided Iran to three consecutive World Cups. Appointed Ghana head coach in 2024, Queiroz brings formidable tournament experience to a Black Stars squad rebuilding after a difficult 2022 campaign."
+    },
+    {
+      "id": "panama",
+      "name": "Panama",
+      "code": "PAN",
+      "confederation": "CONCACAF",
+      "fifaRanking": 35,
+      "groupId": "L",
+      "manager": "Thomas Christiansen",
+      "recentForm": [
+        "W",
+        "D",
+        "W",
+        "W",
+        "L"
+      ],
+      "teamStrength": {
+        "attack": 63,
+        "midfield": 63,
+        "defence": 67,
+        "goalkeeping": 65,
+        "depth": 60
+      },
+      "managerNationality": "Danish",
+      "managerDob": "1973-02-14",
+      "managerBio": "Thomas Christiansen is a Danish-Spanish manager who played as a striker for clubs including Borussia Dortmund and represented Denmark internationally. He managed clubs in Cyprus before taking the Panama role and has guided Los Canaleros with a tenacious, well-organised style. Under his management Panama have consistently qualified for and competed in major international tournaments.",
+      "_verificationManager": "career details uncertain"
+    }
   ]
 }

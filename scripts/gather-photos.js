@@ -1,31 +1,33 @@
-// Queries Wikipedia pageimages API for player photos, writes data/player-photos.json
+// Queries Wikipedia/Wikidata APIs for player + manager photos.
 // Run: node scripts/gather-photos.js
 //
-// Modes (set constants below):
-//   RETRY_NULLS = false  — normal mode: query new players (undefined in map)
-//   RETRY_NULLS = true   — Pass 1 retry: use Search API to resolve null entries
-//                          Only writes null→URL updates; never overwrites URL or re-writes null.
-import { readFileSync, readdirSync, writeFileSync } from 'fs';
+// Modes (set exactly one to true; rest false):
+//   RETRY_NULLS    = true  — Pass 1: Search API retry for null player entries
+//   GATHER_MANAGERS = true — Manager mode: photo gathering for all 48 managers
+//   WIKIDATA_PASS  = true  — Pass 2: Wikidata P18 fallback for null player entries
+//   (all false)            — Normal: exact-title lookup for undefined player entries
+import { readFileSync, writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT          = join(__dirname, '..');
-const PLAYERS_DIR   = join(ROOT, 'data', 'players');
-const OUTPUT_FILE   = join(ROOT, 'data', 'player-photos.json');
+const ROOT           = join(__dirname, '..');
+const PLAYERS_DIR    = join(ROOT, 'data', 'players');
+const OUTPUT_FILE    = join(ROOT, 'data', 'player-photos.json');
 const COUNTRIES_FILE = join(ROOT, 'data', 'countries.json');
 
-const WIKI_API  = 'https://en.wikipedia.org/w/api.php';
-const BATCH_SIZE     = 50;    // Wikipedia allows up to 50 titles per request
-const THUMB_SIZE     = 200;
-// Set to 0 to query all players; set to N to query only top-N by caps per team
-const HEROES_PER_TEAM = 0;
-// Pass 1: retry existing null entries via Wikipedia Search API instead of exact-title lookup
-const RETRY_NULLS    = true;
-const SEARCH_DELAY_MS  = 2000; // ms between individual search API calls
-const BATCH_DELAY_MS   = 2000; // ms between pageimages batch calls
-const RETRY_WAIT_MS    = 90_000; // ms to wait after a 429 before retrying
-const MAX_RETRIES      = 3;    // max retries per failed request
+const WIKI_API      = 'https://en.wikipedia.org/w/api.php';
+const WIKIDATA_API  = 'https://www.wikidata.org/w/api.php';
+const BATCH_SIZE    = 50;
+const THUMB_SIZE    = 250;
+const HEROES_PER_TEAM  = 0;
+const RETRY_NULLS      = false;
+const GATHER_MANAGERS  = false;
+const WIKIDATA_PASS    = true;   // ← Pass 2: Wikidata P18 fallback for null player entries
+const SEARCH_DELAY_MS  = 2000;
+const BATCH_DELAY_MS   = 2000;
+const RETRY_WAIT_MS    = 90_000;
+const MAX_RETRIES      = 3;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
@@ -86,15 +88,13 @@ function parsePages(pages) {
 }
 
 // ─── Wikipedia Search API (one query at a time) ───────────────
-// Returns the best article title for a player name, or null if none found.
-// Uses "name footballer" search to disambiguate common names and
-// handles diacritic/macron normalisation (Wikipedia search normalises these).
+// qualifier: 'footballer' for players, 'football manager' for coaches.
 
-async function searchWikiTitle(name) {
+async function searchWikiTitle(name, qualifier = 'footballer') {
   const params = new URLSearchParams({
     action:      'query',
     list:        'search',
-    srsearch:    `${name} footballer`,
+    srsearch:    `${name} ${qualifier}`,
     srlimit:     '5',
     srnamespace: '0',
     format:      'json',
@@ -103,12 +103,40 @@ async function searchWikiTitle(name) {
   const res = await fetchWithRetry(`${WIKI_API}?${params}`, `search:${name}`);
   const json = await res.json();
   const results = json.query?.search ?? [];
-  // Skip explicit disambiguation pages; take first substantive result
   const first = results.find(r =>
     !r.title.toLowerCase().endsWith('(disambiguation)') &&
     !r.title.toLowerCase().startsWith('list of')
   );
   return first?.title ?? null;
+}
+
+// ─── Wikidata P18 image lookup (batch, up to 50 titles) ──────
+// Returns { [wikiTitle]: commonsFilePathUrl | null }
+
+function commonsFilePath(filename, width = THUMB_SIZE) {
+  const safe = filename.replace(/ /g, '_');
+  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(safe)}?width=${width}`;
+}
+
+async function fetchWikidataImages(titles) {
+  const params = new URLSearchParams({
+    action: 'wbgetentities',
+    sites:  'enwiki',
+    titles: titles.join('|'),
+    props:  'claims|sitelinks',
+    format: 'json',
+    origin: '*',
+  });
+  const res = await fetchWithRetry(`${WIKIDATA_API}?${params}`, 'wikidata-batch');
+  const json = await res.json();
+  const result = {};
+  for (const entity of Object.values(json.entities ?? {})) {
+    const sitelink = entity.sitelinks?.enwiki?.title;
+    if (!sitelink) continue;
+    const filename = entity.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
+    result[sitelink] = filename ? commonsFilePath(filename) : null;
+  }
+  return result;
 }
 
 // ─── Suspicious-image check ───────────────────────────────────
@@ -325,10 +353,188 @@ async function runRetryPass(countries, photoMap) {
   return recovered;
 }
 
+// ─── Manager photo pass ───────────────────────────────────────
+// Searches for all 48 managers and stores photos as manager-{countryId} keys.
+
+async function runManagerPass(countries, photoMap) {
+  const targets = countries
+    .filter(c => photoMap[`manager-${c.id}`] === undefined)
+    .map(c => ({ key: `manager-${c.id}`, name: c.manager, countryId: c.id }));
+
+  console.log(`Manager pass: searching for ${targets.length} manager photos…`);
+  if (!targets.length) { console.log('  All manager photos already in map.'); return 0; }
+
+  // Phase A: search Wikipedia for each manager
+  console.log('\nPhase A: searching Wikipedia for manager articles…');
+  const titleMap = new Map();
+  for (let i = 0; i < targets.length; i++) {
+    const t = targets[i];
+    try {
+      const title = await searchWikiTitle(t.name, 'football manager');
+      if (title) titleMap.set(t.key, { title, t });
+      else console.log(`  — no article: ${t.name}`);
+    } catch (err) {
+      console.error(`  search error for "${t.name}": ${err.message}`);
+    }
+    if (i < targets.length - 1) await sleep(SEARCH_DELAY_MS);
+  }
+
+  console.log(`  Found ${titleMap.size}/${targets.length} articles`);
+  if (!titleMap.size) return 0;
+
+  console.log('\nCooling down 45s before Phase B…');
+  await sleep(45_000);
+
+  // Phase B: pageimages batch
+  console.log('Phase B: fetching manager images…');
+  const allTitles = [...new Set([...titleMap.values()].map(v => v.title))];
+  const imageByTitle = {};
+  for (let i = 0; i < allTitles.length; i += BATCH_SIZE) {
+    const batch = allTitles.slice(i, i + BATCH_SIZE);
+    try {
+      const pages = await fetchWikiImages(batch);
+      Object.assign(imageByTitle, parsePages(pages));
+    } catch (err) { console.error(`  batch failed: ${err.message}`); }
+    if (i + BATCH_SIZE < allTitles.length) await sleep(BATCH_DELAY_MS);
+  }
+
+  // Phase C: update map
+  let found = 0;
+  for (const [key, { title, t }] of titleMap) {
+    const url = imageByTitle[title];
+    if (!url || isSuspicious(url)) {
+      photoMap[key] = null;
+      if (!url) console.log(`  — no image: ${t.name} (article: "${title}")`);
+      else console.log(`  ⚠ suspicious: ${t.name}`);
+      continue;
+    }
+    photoMap[key] = url;
+    found++;
+    console.log(`  ✓ ${t.name.padEnd(28)} → "${title}"`);
+  }
+
+  // Mark unfound as null so they aren't re-searched on next run
+  for (const t of targets) {
+    if (photoMap[t.key] === undefined) photoMap[t.key] = null;
+  }
+
+  return found;
+}
+
+// ─── Wikidata Pass 2 ─────────────────────────────────────────
+// For null player entries: re-search Wikipedia, then query Wikidata P18
+// for articles that have no Wikipedia lead image.
+
+async function runWikidataPass(countries, photoMap) {
+  const nullHeroes = [];
+  for (const country of countries) {
+    const file = join(PLAYERS_DIR, `${country.id}.json`);
+    let players = [];
+    try { players = JSON.parse(readFileSync(file, 'utf8')).data ?? []; }
+    catch { continue; }
+    for (const p of players) {
+      if (photoMap[p.id] === null) nullHeroes.push({ id: p.id, name: p.name, team: country.id });
+    }
+  }
+
+  console.log(`\nWikidata Pass 2: ${nullHeroes.length} null entries`);
+  if (!nullHeroes.length) return 0;
+
+  // Phase A: search Wikipedia for article titles
+  console.log('\nPhase A: searching Wikipedia…');
+  const titleMap = new Map();
+  for (let i = 0; i < nullHeroes.length; i++) {
+    const hero = nullHeroes[i];
+    try {
+      const title = await searchWikiTitle(hero.name);
+      if (title) titleMap.set(hero.id, { title, hero });
+    } catch (err) { console.error(`  search error for "${hero.name}": ${err.message}`); }
+    if (i % 50 === 0 && i > 0) console.log(`  searched ${i}/${nullHeroes.length}…`);
+    if (i < nullHeroes.length - 1) await sleep(SEARCH_DELAY_MS);
+  }
+  console.log(`  Found ${titleMap.size} articles`);
+  if (!titleMap.size) return 0;
+
+  console.log('\nCooling down 45s…');
+  await sleep(45_000);
+
+  // Phase B: Wikipedia pageimages — players who have a lead image are already in map;
+  // for those WITHOUT a lead image, we fall through to Wikidata
+  console.log('Phase B: pageimages batch…');
+  const allTitles = [...new Set([...titleMap.values()].map(v => v.title))];
+  const wikiImage = {};
+  for (let i = 0; i < allTitles.length; i += BATCH_SIZE) {
+    const batch = allTitles.slice(i, i + BATCH_SIZE);
+    try {
+      const pages = await fetchWikiImages(batch);
+      Object.assign(wikiImage, parsePages(pages));
+    } catch (err) { console.error(`  pageimages batch failed: ${err.message}`); }
+    if (i + BATCH_SIZE < allTitles.length) await sleep(BATCH_DELAY_MS);
+  }
+
+  // Split: titles with Wikipedia image vs. those needing Wikidata fallback
+  const wikiFounds = [];
+  const needWikidata = [];
+  for (const [playerId, { title, hero }] of titleMap) {
+    const url = wikiImage[title];
+    if (url) wikiFounds.push({ playerId, url, hero });
+    else needWikidata.push({ playerId, title, hero });
+  }
+  console.log(`  Wiki image found: ${wikiFounds.length} — Wikidata fallback needed: ${needWikidata.length}`);
+
+  // Phase C: Wikidata P18 for articles without Wikipedia lead image
+  let wikidataImage = {};
+  if (needWikidata.length) {
+    console.log('\nPhase C: Wikidata P18 lookup…');
+    await sleep(BATCH_DELAY_MS);
+    const wdTitles = [...new Set(needWikidata.map(e => e.title))];
+    for (let i = 0; i < wdTitles.length; i += BATCH_SIZE) {
+      const batch = wdTitles.slice(i, i + BATCH_SIZE);
+      try {
+        const result = await fetchWikidataImages(batch);
+        Object.assign(wikidataImage, result);
+      } catch (err) { console.error(`  wikidata batch failed: ${err.message}`); }
+      if (i + BATCH_SIZE < wdTitles.length) await sleep(BATCH_DELAY_MS);
+    }
+  }
+
+  // Phase D: duplicate-URL pre-scan across all candidates
+  const allCandidates = [
+    ...wikiFounds.map(e => ({ playerId: e.playerId, url: e.url, hero: e.hero })),
+    ...needWikidata
+      .map(e => ({ playerId: e.playerId, url: wikidataImage[e.title], hero: e.hero }))
+      .filter(e => e.url),
+  ];
+  const urlToIds = new Map();
+  for (const e of allCandidates) {
+    if (!e.url || isSuspicious(e.url)) continue;
+    if (!urlToIds.has(e.url)) urlToIds.set(e.url, []);
+    urlToIds.get(e.url).push(e.playerId);
+  }
+  const dupeUrls = new Set([...urlToIds.entries()].filter(([, ids]) => ids.length > 1).map(([u]) => u));
+
+  // Phase E: write results
+  let recovered = 0, skipped = 0;
+  for (const e of allCandidates) {
+    if (!e.url) continue;
+    if (isSuspicious(e.url)) { skipped++; continue; }
+    if (dupeUrls.has(e.url)) { skipped++; continue; }
+    photoMap[e.playerId] = e.url;
+    recovered++;
+    const src = wikiFounds.some(f => f.playerId === e.playerId) ? 'wiki' : 'wikidata';
+    console.log(`  ✓ [${src}] ${e.hero.name.padEnd(28)} (${e.hero.team})`);
+  }
+  if (skipped) console.log(`  ${skipped} skipped (suspicious or duplicate URL)`);
+  return recovered;
+}
+
 // ─── Main ─────────────────────────────────────────────────────
 
 async function main() {
-  const mode = RETRY_NULLS ? 'Pass 1 (Search API retry)' : 'Normal (exact-title)';
+  const mode = GATHER_MANAGERS ? 'Manager photos'
+             : WIKIDATA_PASS   ? 'Pass 2 (Wikidata P18)'
+             : RETRY_NULLS     ? 'Pass 1 (Search API retry)'
+                               : 'Normal (exact-title)';
   console.log(`gather-photos: starting in ${mode} mode…\n`);
 
   const countries = JSON.parse(readFileSync(COUNTRIES_FILE, 'utf8')).data;
@@ -336,26 +542,36 @@ async function main() {
   const photoMap  = { ...existing };
 
   const nullsBefore = Object.values(photoMap).filter(v => v === null).length;
-  const hitsBefore  = Object.values(photoMap).filter(v => v !== null).length;
-  const totalBefore = Object.keys(photoMap).length;
+  const hitsBefore  = Object.values(photoMap).filter(v => v !== null && v !== undefined).length;
+  console.log(`Starting state: ${hitsBefore} photos, ${nullsBefore} nulls (${Object.keys(photoMap).length} in map)`);
 
-  console.log(`Starting state: ${hitsBefore} hits, ${nullsBefore} nulls (${totalBefore} total in map)`);
+  if (GATHER_MANAGERS) {
+    const found = await runManagerPass(countries, photoMap);
+    const managerKeys = Object.keys(photoMap).filter(k => k.startsWith('manager-'));
+    const withPhoto   = managerKeys.filter(k => photoMap[k]).length;
+    console.log(`\nManager photos: ${withPhoto}/${managerKeys.length} (${found} new this run)`);
 
-  if (RETRY_NULLS) {
+  } else if (WIKIDATA_PASS) {
+    const recovered = await runWikidataPass(countries, photoMap);
+    const playerHits = Object.entries(photoMap)
+      .filter(([k, v]) => !k.startsWith('manager-') && v).length;
+    console.log(`\nWikidata Pass 2 complete. Recovered: ${recovered}`);
+    console.log(`Player coverage: ${playerHits}/1248 (${(playerHits/1248*100).toFixed(1)}%)`);
+
+  } else if (RETRY_NULLS) {
     const recovered = await runRetryPass(countries, photoMap);
+    const hitsAfter  = Object.values(photoMap).filter(v => v !== null && v !== undefined).length;
     const nullsAfter = Object.values(photoMap).filter(v => v === null).length;
-    const hitsAfter  = Object.values(photoMap).filter(v => v !== null).length;
     const allPlayers = countries.reduce((n, c) => {
       try { return n + (JSON.parse(readFileSync(join(PLAYERS_DIR, `${c.id}.json`), 'utf8')).data?.length ?? 0); }
       catch { return n; }
     }, 0);
 
-    // Per-team breakdown — iterate squad files directly (avoids ID-prefix ambiguity)
     const teamStats = {};
     for (const country of countries) {
       let players = [];
       try { players = JSON.parse(readFileSync(join(PLAYERS_DIR, `${country.id}.json`), 'utf8')).data ?? []; }
-      catch { /* skip */ }
+      catch { continue; }
       let before = 0, after = 0;
       for (const p of players) {
         if (existing[p.id] !== null && existing[p.id] !== undefined) before++;
@@ -374,20 +590,14 @@ async function main() {
 
     const gainers = Object.entries(teamStats)
       .map(([, s]) => ({ name: s.name, gain: s.after - s.before, after: s.after, total: s.total }))
-      .filter(s => s.gain > 0)
-      .sort((a, b) => b.gain - a.gain);
-
+      .filter(s => s.gain > 0).sort((a, b) => b.gain - a.gain);
     if (gainers.length) {
       console.log('\nTeams with biggest gains:');
       gainers.forEach(s => console.log(`  ${s.name.padEnd(26)} +${s.gain} (now ${s.after}/${s.total})`));
     }
-
-    // Remaining nulls by team
     const remaining = Object.entries(teamStats)
       .map(([, s]) => ({ name: s.name, nulls: s.total - s.after }))
-      .filter(s => s.nulls > 0)
-      .sort((a, b) => b.nulls - a.nulls);
-
+      .filter(s => s.nulls > 0).sort((a, b) => b.nulls - a.nulls);
     console.log('\nRemaining nulls by team:');
     remaining.forEach(s => console.log(`  ${s.name.padEnd(26)} ${s.nulls} remaining`));
     console.log('═══════════════════════════════════════════════════════\n');
@@ -398,7 +608,6 @@ async function main() {
     console.log(`Total in map: ${Object.keys(photoMap).length}`);
   }
 
-  // Write output (always)
   writeFileSync(OUTPUT_FILE, JSON.stringify({
     version:     '1.0',
     lastUpdated: new Date().toISOString(),

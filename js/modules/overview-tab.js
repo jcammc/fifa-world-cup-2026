@@ -68,6 +68,7 @@ export class OverviewTab {
     this.#container.innerHTML = `
       <div class="tp-overview">
         ${this.#renderHeroes(heroes)}
+        ${this.#renderManager(country)}
         <div class="tp-overview-grid">
           ${country.teamStrength ? this.#renderRadarSection(country) : ''}
           ${this.#renderSquadMakeup(byPos)}
@@ -125,6 +126,48 @@ export class OverviewTab {
         <h2 class="tp-section__title">Key Players</h2>
         <div class="tp-heroes">${cards}</div>
         <p class="tp-hero-hint">Click a player to see their profile</p>
+      </section>`;
+  }
+
+  // ─── Manager profile ─────────────────────────────────────────
+
+  #managerAge(dob) {
+    if (!dob) return null;
+    const born = new Date(dob);
+    const ref  = new Date('2026-06-11');
+    let age = ref.getFullYear() - born.getFullYear();
+    const m = ref.getMonth() - born.getMonth();
+    if (m < 0 || (m === 0 && ref.getDate() < born.getDate())) age--;
+    return age;
+  }
+
+  #renderManager(country) {
+    if (!country.managerBio) return '';
+    const name     = escapeHtml(country.manager);
+    const nat      = escapeHtml(country.managerNationality ?? '');
+    const age      = this.#managerAge(country.managerDob);
+    const meta     = [nat, age != null ? `Age ${age}` : null].filter(Boolean).join(' · ');
+    const bio      = escapeHtml(country.managerBio);
+    const initials = escapeHtml(getInitials(country.manager));
+    const photoSrc = this.#photoMap[`manager-${country.id}`];
+
+    const photoInner = photoSrc
+      ? `<img src="${escapeHtml(photoSrc)}" alt="${name}" loading="lazy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+         <div class="tp-manager__initials" aria-hidden="true">${initials}</div>`
+      : `<div class="tp-manager__initials" style="display:flex" aria-hidden="true">${initials}</div>`;
+
+    return `
+      <section class="tp-section tp-manager-section">
+        <h2 class="tp-section__title">Head Coach</h2>
+        <div class="tp-manager">
+          <div class="tp-manager__photo">${photoInner}</div>
+          <div class="tp-manager__info">
+            <div class="tp-manager__name">${name}</div>
+            ${meta ? `<div class="tp-manager__meta">${meta}</div>` : ''}
+            <p class="tp-manager__bio">${bio}</p>
+          </div>
+        </div>
       </section>`;
   }
 
