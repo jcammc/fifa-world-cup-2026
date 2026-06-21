@@ -95,12 +95,13 @@ export class SearchOverlay {
     const q = this.#norm(query.trim());
     if (!q) { this.#resultsEl.innerHTML = ''; return; }
 
-    const hits = this.#index.filter(item =>
-      this.#norm(item.label).includes(q) || this.#norm(item.meta).includes(q)
-    );
+    const scored = this.#index
+      .map(item => ({ item, score: this.#score(item, q) }))
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score);
 
-    const teams   = hits.filter(h => h.type === 'team').slice(0, 6);
-    const players = hits.filter(h => h.type === 'player').slice(0, 8);
+    const teams   = scored.filter(x => x.item.type === 'team').slice(0, 6).map(x => x.item);
+    const players = scored.filter(x => x.item.type === 'player').slice(0, 8).map(x => x.item);
 
     if (!teams.length && !players.length) {
       this.#resultsEl.innerHTML =
@@ -112,6 +113,52 @@ export class SearchOverlay {
     if (teams.length)   html += this.#group('Teams',   teams);
     if (players.length) html += this.#group('Players', players);
     this.#resultsEl.innerHTML = html;
+  }
+
+  #score(item, q) {
+    const label = this.#norm(item.label);
+    const meta  = this.#norm(item.meta);
+
+    if (label === q)                                        return 100;
+    if (label.startsWith(q))                                return 90;
+    if (label.includes(q))                                  return 80;
+    if (label.split(/\s+/).some(w => w.startsWith(q)))     return 75;
+    if (meta.includes(q))                                   return 60;
+
+    if (q.length >= 4) {
+      if (this.#isSubsequence(q, label))                    return 35;
+      const words = label.split(/\s+/);
+      const maxD  = q.length >= 6 ? 2 : 1;
+      if (words.some(w => this.#levenshtein(q, w) <= maxD)) return 25;
+    }
+
+    return 0;
+  }
+
+  #isSubsequence(q, str) {
+    let j = 0;
+    for (let i = 0; i < str.length && j < q.length; i++) {
+      if (str[i] === q[j]) j++;
+    }
+    return j === q.length;
+  }
+
+  #levenshtein(a, b) {
+    const m = a.length, n = b.length;
+    if (Math.abs(m - n) > 3) return 99;
+    const row = Array.from({ length: n + 1 }, (_, i) => i);
+    for (let i = 1; i <= m; i++) {
+      let prev = i;
+      for (let j = 1; j <= n; j++) {
+        const val = a[i - 1] === b[j - 1]
+          ? row[j - 1]
+          : 1 + Math.min(prev, row[j], row[j - 1]);
+        row[j - 1] = prev;
+        prev = val;
+      }
+      row[n] = prev;
+    }
+    return row[n];
   }
 
   #group(heading, items) {

@@ -10,14 +10,16 @@ export class OverviewTab {
   #clubMap;
   #leagueMap;
   #onHeroSelect;
+  #photoMap;
 
-  constructor(container, country, players, clubs, leagues, onHeroSelect) {
+  constructor(container, country, players, clubs, leagues, onHeroSelect, photoMap = {}) {
     this.#container    = container;
     this.#country      = country;
     this.#players      = players;
     this.#clubMap      = new Map(clubs.map(c => [c.id, c]));
     this.#leagueMap    = new Map(leagues.map(l => [l.id, l]));
     this.#onHeroSelect = onHeroSelect;
+    this.#photoMap     = photoMap;
   }
 
   async render() {
@@ -100,10 +102,11 @@ export class OverviewTab {
       const pos      = escapeHtml(p.position);
       const initials = escapeHtml(getInitials(p.name));
 
+      const photoSrc = this.#photoMap[p.id] || `assets/players/${id}.jpg`;
       return `
         <button class="tp-hero-card" type="button" data-player-id="${id}">
           <div class="tp-hero-card__photo">
-            <img src="assets/players/${id}.jpg" alt="${name}" loading="lazy"
+            <img src="${escapeHtml(photoSrc)}" alt="${name}" loading="lazy"
                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="tp-hero-card__initials" aria-hidden="true">${initials}</div>
           </div>

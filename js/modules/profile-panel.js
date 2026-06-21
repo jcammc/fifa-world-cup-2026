@@ -4,16 +4,18 @@ import { generateFallbackBio } from '../bio.js';
 export class ProfilePanel {
   #container;
   #currentPlayerId = null;
+  #photoMap;
 
-  constructor(container) {
+  constructor(container, photoMap = {}) {
     this.#container = container;
+    this.#photoMap  = photoMap;
     this.#showEmpty();
   }
 
   show(player, club = null) {
     if (player.id === this.#currentPlayerId) return;
     this.#currentPlayerId = player.id;
-    this.#container.innerHTML = this.#buildCard(player, club);
+    this.#container.innerHTML = this.#buildCard(player, club, this.#photoMap);
   }
 
   hide() {
@@ -28,7 +30,7 @@ export class ProfilePanel {
       </div>`;
   }
 
-  #buildCard(player, club) {
+  #buildCard(player, club, photoMap = {}) {
     const id       = escapeHtml(player.id);
     const name     = escapeHtml(player.name);
     const initials = escapeHtml(getInitials(player.name));
@@ -44,10 +46,11 @@ export class ProfilePanel {
       ? `<span class="pp-captain" title="Captain">C</span>`
       : '';
 
+    const photoSrc = escapeHtml(photoMap[player.id] || `assets/players/${id}.jpg`);
     return `
       <div class="pp-card">
         <div class="pp-photo">
-          <img src="assets/players/${id}.jpg" alt="${name}"
+          <img src="${photoSrc}" alt="${name}"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="pp-photo__initials" aria-hidden="true">${initials}</div>
           <span class="pp-photo__shirt">#${shirt}</span>

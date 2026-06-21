@@ -9,8 +9,9 @@ const URLS = {
   leagues:     'data/leagues.json',
   rankings:    'data/rankings.json',
   knockout:    'data/knockout.json',
-  searchIndex: 'data/search-index.json',
-  players:     (id) => `data/players/${id}.json`,
+  searchIndex:   'data/search-index.json',
+  players:       (id) => `data/players/${id}.json`,
+  playerPhotos:  'data/player-photos.json',
 };
 
 class _DataManager {
@@ -77,6 +78,22 @@ class _DataManager {
       };
     }
     return null;
+  }
+
+  async loadPlayerPhotos() {
+    const key = 'player-photos';
+    if (this.#cache.has(key)) return this.#cache.get(key);
+    try {
+      const res = await fetch(URLS.playerPhotos);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      const data = (json.data && typeof json.data === 'object' && !Array.isArray(json.data))
+        ? json.data : {};
+      this.#cache.set(key, data);
+      return data;
+    } catch {
+      return {};
+    }
   }
 
   // ─── Cache management ───────────────────────────────────
