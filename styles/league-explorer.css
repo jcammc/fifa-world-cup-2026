@@ -1,0 +1,281 @@
+/* ─── League Explorer page (#league-explorer) ──────────────── */
+
+.le-page {
+  padding: var(--space-6);
+  max-width: 960px;
+}
+
+/* ─── Header ──────────────────────────────────────────────── */
+
+.le-header {
+  margin-bottom: var(--space-6);
+}
+
+.le-header__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+  line-height: 1.1;
+}
+
+.le-header__sub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ─── Summary stat cards ──────────────────────────────────── */
+
+.le-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.le-stat-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.le-stat-card__value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.le-stat-card__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
+
+/* ─── Search ──────────────────────────────────────────────── */
+
+.le-search-bar {
+  margin-bottom: var(--space-4);
+}
+
+.le-search__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  outline: none;
+  transition: border-color var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.le-search__input:focus {
+  border-color: var(--color-accent);
+}
+
+.le-search__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* ─── League list ─────────────────────────────────────────── */
+
+.le-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* ─── League row ──────────────────────────────────────────── */
+
+.le-row {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.le-row--expanded {
+  border-color: var(--color-accent);
+}
+
+.le-row__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  text-align: left;
+  transition: background var(--transition-fast);
+}
+
+.le-row__header:hover {
+  background: var(--color-bg-muted);
+}
+
+/* ─── Confederation badge ─────────────────────────────────── */
+
+.le-conf-badge {
+  flex-shrink: 0;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-muted);
+  color: var(--color-text-muted);
+  min-width: 56px;
+  text-align: center;
+}
+
+.le-conf-badge--uefa     { background: rgba(0, 89, 179, 0.15); color: #4a9eff; }
+.le-conf-badge--caf      { background: rgba(255, 165, 0, 0.15); color: #f5a623; }
+.le-conf-badge--afc      { background: rgba(0, 170, 120, 0.15); color: #2ecc8a; }
+.le-conf-badge--concacaf { background: rgba(220, 50, 50, 0.15);  color: #e05252; }
+.le-conf-badge--conmebol { background: rgba(100, 60, 200, 0.15); color: #9b7be8; }
+.le-conf-badge--ofc      { background: rgba(120, 120, 120, 0.15); color: var(--color-text-muted); }
+
+/* ─── Row content ─────────────────────────────────────────── */
+
+.le-row__name {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.le-row__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.le-row__chevron {
+  flex-shrink: 0;
+  width: 16px;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.le-row__chevron::after {
+  content: '▾';
+}
+
+.le-row--expanded .le-row__chevron::after {
+  content: '▴';
+}
+
+/* ─── Expanded club list ──────────────────────────────────── */
+
+.le-row__clubs {
+  padding: 0 var(--space-4) var(--space-3);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ─── Individual club row ─────────────────────────────────── */
+
+.le-club-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-1);
+  border-radius: var(--radius-sm);
+}
+
+.le-club-row:hover {
+  background: var(--color-bg-muted);
+}
+
+.le-club-row__name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.le-club-row__count {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-accent);
+  min-width: 24px;
+  text-align: right;
+}
+
+.le-club-row__flags {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-wrap: nowrap;
+}
+
+/* ─── Nation flags ────────────────────────────────────────── */
+
+.le-flag {
+  border-radius: 2px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.le-flag-overflow {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .le-page {
+    padding: var(--space-4);
+  }
+
+  .le-header__title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .le-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2);
+  }
+
+  .le-stat-card {
+    padding: var(--space-3);
+  }
+
+  .le-stat-card__value {
+    font-size: var(--font-size-xl);
+  }
+
+  .le-row__meta {
+    display: none;
+  }
+
+  .le-club-row__flags {
+    display: none;
+  }
+}

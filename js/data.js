@@ -80,6 +80,21 @@ class _DataManager {
     return null;
   }
 
+  async loadAllPlayers() {
+    const key = 'all-players';
+    if (this.#cache.has(key)) return this.#cache.get(key);
+    const countries = await this.loadCountries();
+    const chunks = await Promise.all(
+      countries.map(async c => {
+        const ps = await this.loadPlayersForTeam(c.id);
+        return ps.map(p => ({ ...p, countryId: c.id }));
+      })
+    );
+    const result = chunks.flat();
+    this.#cache.set(key, result);
+    return result;
+  }
+
   async loadPlayerPhotos() {
     const key = 'player-photos';
     if (this.#cache.has(key)) return this.#cache.get(key);

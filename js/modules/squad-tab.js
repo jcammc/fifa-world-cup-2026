@@ -69,17 +69,18 @@ export class SquadTab {
   // ─── Player card ──────────────────────────────────────────────
 
   #renderCard(p) {
-    const id      = escapeHtml(p.id);
-    const name    = escapeHtml(p.name);
-    const pos     = escapeHtml(p.position);
+    const id       = escapeHtml(p.id);
+    const name     = escapeHtml(p.name);
+    const pos      = escapeHtml(p.position);
     const initials = escapeHtml(getInitials(p.name));
-    const club    = this.#clubMap.get(p.clubId);
+    const club     = this.#clubMap.get(p.clubId);
     const clubName = escapeHtml(club?.name ?? '');
+    const photoSrc = escapeHtml(this.#photoMap[p.id] || `assets/players/${id}.jpg`);
 
     return `
       <button class="squad-card" type="button" data-player-id="${id}">
         <div class="squad-card__photo">
-          <img src="assets/players/${id}.jpg" alt="${name}" loading="lazy"
+          <img src="${photoSrc}" alt="${name}" loading="lazy"
                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
           <div class="squad-card__initials" aria-hidden="true">${initials}</div>
           <span class="squad-card__shirt">${p.shirt ?? '—'}</span>

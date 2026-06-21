@@ -1,0 +1,135 @@
+/* ─── Countries browse page ───────────────────────────────── */
+
+.cp-page {
+  padding: var(--space-6);
+  max-width: 1100px;
+}
+
+.cp-page__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+  line-height: 1.1;
+}
+
+.cp-page__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-8);
+}
+
+/* ─── Group sections ──────────────────────────────────────── */
+
+.cp-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.cp-group__title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-3);
+}
+
+/* ─── 4-card grid (one per team in the group) ─────────────── */
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+/* ─── Country card ────────────────────────────────────────── */
+
+.cp-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  text-decoration: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast),
+              transform var(--transition-fast);
+  min-width: 0;
+}
+
+.cp-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-1px);
+}
+
+.cp-card__flag {
+  flex-shrink: 0;
+}
+
+.cp-card__flag img {
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.cp-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.cp-card__name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.cp-card__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── Confederation team-count badge (continents page) ───── */
+
+.cp-group__badge {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  margin-left: var(--space-2);
+  vertical-align: middle;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 960px) {
+  .cp-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .cp-page {
+    padding: var(--space-4);
+  }
+  .cp-page__title {
+    font-size: var(--font-size-2xl);
+  }
+  .cp-grid {
+    grid-template-columns: 1fr;
+  }
+}

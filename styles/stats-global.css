@@ -1,0 +1,207 @@
+/* ─── Global Statistics page (#statistics) ────────────────── */
+
+.sp-page {
+  padding: var(--space-6);
+}
+
+.sp-header {
+  margin-bottom: var(--space-6);
+}
+
+.sp-header__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-1);
+  line-height: 1.1;
+}
+
+.sp-header__sub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ─── Sections layout ─────────────────────────────────────── */
+
+.sp-sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ─── Loading state ───────────────────────────────────────── */
+
+.sp-loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-12) var(--space-6);
+}
+
+.sp-loading__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* ─── Caveat note (career vs. tournament stats) ───────────── */
+
+.sp-caveat {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0 0 var(--space-4);
+}
+
+/* ─── Two-column sub-layout ───────────────────────────────── */
+
+.sp-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+.sp-col-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+}
+
+/* ─── Squad-level ranked rows (rank + flag + name + value) ── */
+
+.sp-squad-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-squad-row {
+  display: grid;
+  grid-template-columns: 24px 22px 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.sp-squad-row:last-child { border-bottom: none; }
+
+.sp-squad-row__rank {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.sp-squad-row__flag {
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.sp-squad-row__name {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sp-squad-row__value {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ─── Cross-team player rows (rank + flag + pos + name + val) */
+
+.sp-player-row {
+  display: grid;
+  grid-template-columns: 28px 20px 40px 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.sp-player-row:last-child { border-bottom: none; }
+
+.sp-row__flag {
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.sp-row__flag-ph {
+  width: 20px;
+  flex-shrink: 0;
+}
+
+/* ─── Age records panel ───────────────────────────────────── */
+
+.sp-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sp-note-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.sp-note-row:last-child { border-bottom: none; }
+
+.sp-note-row__label {
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+}
+
+.sp-note-row__val {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.sp-note-row__val strong {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.sp-note-row__detail {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.sp-note-row__val img {
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .sp-page {
+    padding: var(--space-4);
+  }
+  .sp-header__title {
+    font-size: var(--font-size-2xl);
+  }
+  .sp-two-col {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  .sp-player-row {
+    grid-template-columns: 20px 18px 34px 1fr auto;
+    gap: var(--space-1);
+  }
+}

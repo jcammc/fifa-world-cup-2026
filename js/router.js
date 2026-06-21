@@ -2,6 +2,10 @@ import { DataManager } from './data.js';
 import { TournamentCentre } from './modules/tournament-centre.js';
 import { TeamPage } from './modules/team-page.js';
 import { CompareView } from './modules/compare-view.js';
+import { CountriesPage } from './modules/countries-page.js';
+import { ContinentsPage } from './modules/continents-page.js';
+import { StatisticsPage } from './modules/statistics-page.js';
+import { LeagueExplorer } from './modules/league-explorer.js';
 import { escapeHtml } from './utils.js';
 
 // ─── Placeholder for unimplemented routes ──────────────────
@@ -10,13 +14,11 @@ class PlaceholderModule {
   #container; #params;
   constructor(container, params = {}) { this.#container = container; this.#params = params; }
   async render() {
-    const route = escapeHtml(this.#params.route ?? 'this page');
     this.#container.innerHTML = `
       <div class="page-content">
         <div class="empty-state">
-          <div class="empty-state__icon">🚧</div>
           <p class="empty-state__title">Coming Soon</p>
-          <p class="empty-state__message">${route} is not yet implemented.</p>
+          <p class="empty-state__message">This page will be available shortly.</p>
           <a href="#tournament" class="btn-link">← Tournament Centre</a>
         </div>
       </div>`;
@@ -49,9 +51,7 @@ class NotFoundModule {
 // ─── Named stub routes ─────────────────────────────────────
 
 const STUB_ROUTES = new Set([
-  'countries', 'groups', 'continents',
-  'statistics',
-  'club-explorer', 'league-explorer',
+  'club-explorer',
 ]);
 
 // ─── Router ────────────────────────────────────────────────
@@ -120,6 +120,31 @@ class _Router {
         Module: TournamentCentre,
         params: { initialTab: 'groups', groupId: hash.slice(6).toUpperCase() },
       };
+    }
+
+    // Countries browse
+    if (hash === 'countries') {
+      return { Module: CountriesPage, params: {} };
+    }
+
+    // Continents browse
+    if (hash === 'continents') {
+      return { Module: ContinentsPage, params: {} };
+    }
+
+    // Global statistics dashboard
+    if (hash === 'statistics') {
+      return { Module: StatisticsPage, params: {} };
+    }
+
+    // League explorer
+    if (hash === 'league-explorer') {
+      return { Module: LeagueExplorer, params: {} };
+    }
+
+    // Groups — alias for Tournament Centre group stage tab
+    if (hash === 'groups') {
+      return { Module: TournamentCentre, params: { initialTab: 'groups' } };
     }
 
     // Compare route: #compare or #compare/teamA/teamB
