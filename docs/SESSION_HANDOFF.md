@@ -55,6 +55,8 @@
 | Sprint 12 | Flag download utility (scripts/download-flags.js). teamStrength for all 48 teams in countries.json. Compare Teams full implementation (compare-view.js + styles/compare.css + router compare route + nav active-link fix). | **COMPLETE** |
 | Sprint 13 Phase 1 | Code-based verification pass (carousel, bracket, search, compare URL flow). update-knockout.js fully implemented. knockout.json bracket corrected against Wikipedia: actual R32 structure (non-sequential paths, host-nation home matches, best-3rd eligible-group labels), kickoff dates, venues all populated. | **COMPLETE** |
 | Sprint 14 | Production verification (code audit + data consistency check — all 48 player files present, leagues/clubs perfectly in sync, zero app errors); recentForm audit (schema ✓, null only for Egypt/Cape Verde, short arrays documented); search upgrade (relevance scoring, word-prefix matching, subsequence + Levenshtein fuzzy fallback); hero photo architecture (player-photos.json, DataManager.loadPlayerPhotos(), photoMap threaded through team-page → overview-tab + squad-tab → profile-panel, gather-photos.js fully implemented). | **COMPLETE** |
+| Sprint 15 | Global Statistics Dashboard (`#statistics`): experience, career scorers, demographics, club & league representation. Countries Browse page (`#countries`): 48 nations by tournament group A–L, 4-wide card grid. `#groups` redirect to TournamentCentre groups tab. `DataManager.loadAllPlayers()` + `loadPlayerPhotos()` added. squad-tab photoMap fix. | **COMPLETE** |
+| Sprint 17 | Continents page (`#continents`): 48 nations by confederation, sorted by FIFA ranking. League Explorer (`#league-explorer`): ranked list of all 86 leagues, click-to-expand club lists with nation flags, real-time search, confederation badges. Router fully wired — only `club-explorer` remains a stub. PlaceholderModule text cleaned up. | **COMPLETE** |
 
 ---
 
@@ -66,7 +68,7 @@
 |------|--------|-------|
 | `app.js` | Complete | Entry point — ThemeManager, Nav, Router.init(), SearchOverlay.init() |
 | `router.js` | Complete | Hash routing, all current routes wired |
-| `data.js` | Complete | DataManager singleton, #cache Map, all loaders including loadSearchIndex() and loadPlayerPhotos() (returns Object not array — uses custom loader, not #load()) |
+| `data.js` | Complete | DataManager singleton, #cache Map, all loaders including `loadSearchIndex()`, `loadPlayerPhotos()` (returns Object not array — custom loader, not #load()), and `loadAllPlayers()` (parallel fetch all 48 squads, annotates each player with `countryId`, caches under `'all-players'`) |
 | `time.js` | Complete | `formatKickoff()`, `isToday()` |
 | `utils.js` | Complete | `escapeHtml()` |
 | `theme.js` | Complete | localStorage, data-theme attribute toggle |
@@ -84,6 +86,10 @@
 | `modules/knockout-bracket.js` | Complete | Horizontal bracket, 5 rounds, seed labels, wheel redirect |
 | `modules/search-overlay.js` | **Complete** | Ctrl+K or nav button trigger, relevance-scored results (exact→prefix→contains→word-prefix→subsequence→Levenshtein), diacritic normalisation, team/player results, player deep-link nav |
 | `modules/compare-view.js` | **Complete** | Two `<select>` dropdowns grouped by optgroup (Group A–L). URL scheme `#compare/teamA/teamB` via `history.replaceState`. Sections: Experience, International Goals, Squad Profile, Squad Makeup, Team Strength (radar, conditional on teamStrength). Winner highlighting for Experience/Goals. |
+| `modules/countries-page.js` | **Complete** | 48 nations grouped by tournament group A–L, sorted within each group, 4-wide card grid with flag + FIFA ranking + confederation. Reuses `cp-` CSS namespace from countries.css. |
+| `modules/statistics-page.js` | **Complete** | Tournament-wide stats: Squad Experience (caps leaderboard, top 10 squads + top 15 players), Career International Scorers (with caveat note — not WC 2026 match scorers), Tournament Demographics (avg age, youngest/oldest, position breakdown), Club & League Representation. Uses `loadAllPlayers()`. CSS namespace `sp-`. |
+| `modules/continents-page.js` | **Complete** | 48 nations grouped by confederation (UEFA, CONMEBOL, CAF, AFC, CONCACAF, OFC) sorted by FIFA ranking within each section. Team count badge on each section heading. Reuses all `cp-` CSS classes. |
+| `modules/league-explorer.js` | **Complete** | Ranked list of all 86 leagues by player count. 3 summary stat cards. Real-time search filters by league name + country. Click-to-expand rows show all clubs sorted by player count with nation flag strips (up to 8 flags + overflow). One expanded at a time. Confederation colour-coded badges. CSS namespace `le-`. |
 
 ### CSS files (`styles/`)
 
@@ -100,6 +106,9 @@ All files exist and are fully implemented unless noted:
 - `knockout.css` — horizontal bracket, round columns, team slots
 - `compare.css` — **Complete** (selectors, duel rows, headers, radar section, responsive)
 - `search.css` — **Complete** (overlay, modal, result groups, empty state, responsive)
+- `countries.css` — **Complete** (`cp-` namespace: page, group sections, 4-wide card grid, flag + meta cards, responsive breakpoints at 960px/640px)
+- `stats-global.css` — **Complete** (`sp-` namespace: page, header, loading state, two-col layout, player rows, squad rows, caveat note, stat cards)
+- `league-explorer.css` — **Complete** (`le-` namespace: header, stat cards, search input, row list, expand/collapse rows, confederation badges with per-conf colours, club rows with flag strips, responsive)
 - `utilities.css` — badge classes (badge--ft, badge--live, badge--bbc, badge--itv, empty-state)
 
 ### Scripts (`scripts/`)
@@ -137,7 +146,7 @@ After any squad data change: `node scripts/generate-search-index.js` then `npm r
 | `knockout.json` | R32 labels corrected against actual Wikipedia bracket (Sprint 13). All `homeTeamId`/`awayTeamId` null (R3 not complete). All 32 matches now have `kickoff` dates and `venue`. See Knockout Bracket section below for R32 structure. |
 | `rankings.json` | Empty stub |
 | `search-index.json` | **1,296 entries** — envelope format `{ version, lastUpdated, data }`. 48 team entries + 1,248 player entries. Regenerated by generate-search-index.js. |
-| `player-photos.json` | **Empty stub** `{ version, lastUpdated, data: {} }` — run `node scripts/gather-photos.js` to populate. Schema: `data` is an Object keyed by player ID (e.g. `"france-mbappe": "https://upload.wikimedia.org/..."`), NOT an array. `null` value means looked up but no image found. |
+| `player-photos.json` | **200/240 URLs populated** — run `node scripts/gather-photos.js` to refresh or add missing entries. Schema: `data` is an Object keyed by player ID (e.g. `"france-mbappe": "https://upload.wikimedia.org/..."`), NOT an array. `null` value means looked up but no image found. Idempotent — cached entries are skipped on re-run. |
 | `players/france.json` | Complete — 26 players |
 | `players/england.json` | Complete — 26 players |
 | `players/brazil.json` | Complete — 26 players |
@@ -240,10 +249,10 @@ Key rules:
 ### League (`data/leagues.json`)
 
 ```json
-{ "id": "premier-league", "name": "Premier League", "country": "England" }
+{ "id": "premier-league", "name": "Premier League", "country": "England", "confederation": "UEFA" }
 ```
 
-14 entries, covers the most common leagues. Not exhaustive — do not require leagues.json coverage to add a club.
+**86 entries** — covers all leagueIds referenced by the 48 squads. Fields: `id`, `name`, `country` (league's home country as string), `confederation` (UEFA/CAF/AFC/CONCACAF/CONMEBOL/OFC). Not exhaustive — do not require leagues.json coverage to add a club. The validator does NOT check leagueId resolution.
 
 ### Group (`data/groups.json`)
 
@@ -428,16 +437,18 @@ Hash                  Module             Params
 ─────────────────────────────────────────────────────────────────
 (empty) / #tournament TournamentCentre   {}
 #today                TournamentCentre   { initialTab: 'today' }
+#groups               TournamentCentre   { initialTab: 'groups' }
 #group-a … #group-l   TournamentCentre   { initialTab: 'groups', groupId: 'A'…'L' }
 #knockout             TournamentCentre   { initialTab: 'knockout' }
 #france               TeamPage           { countryId: 'france' }
 #france-mbappe        TeamPage           { countryId: 'france', scrollToPlayer: 'mbappe' }
-#countries            PlaceholderModule  (stub)
+#countries            CountriesPage      {}
+#continents           ContinentsPage     {}
+#statistics           StatisticsPage     {}
+#league-explorer      LeagueExplorer     {}
 #compare              CompareView        { teamA: null, teamB: null }
 #compare/arg/ger      CompareView        { teamA: 'argentina', teamB: 'germany' }
-#statistics           PlaceholderModule  (stub)
-#club-explorer        PlaceholderModule  (stub)
-#league-explorer      PlaceholderModule  (stub)
+#club-explorer        PlaceholderModule  (stub — Sprint 18)
 (anything else)       NotFoundModule
 ```
 
@@ -506,7 +517,16 @@ Navigation-triggered carousel position changes use `behavior: 'instant'`. User-t
 ### 8. clubs.json vs leagues.json coverage
 `leagues.json` has **86 entries** (expanded during Sprints 9/10 to cover all leagueIds in the 48 squads). When adding new clubs, any freeform `leagueId` string is still acceptable — the validator does NOT check leagueId resolution. `validate-data.js` checks that each player's `clubId` exists in `clubs.json`; it does NOT check that `leagueId` exists in `leagues.json`.
 
-### 9. Search overlay — persistent singleton
+### 9. loadAllPlayers() — annotated player objects
+
+`DataManager.loadAllPlayers()` returns all 1,248 players in a flat array. Each player object is a spread copy of the original player JSON **plus a `countryId` field** injected at load time. The per-team caches (`players-{id}`) are NOT mutated — the `countryId` annotation only exists on `all-players` cache entries. Use this method for any cross-team player comparison (Statistics page, League Explorer, Club Explorer).
+
+```javascript
+const allPlayers = await DataManager.loadAllPlayers();
+// allPlayers[0] = { id: 'mexico-guardado', name: '...', countryId: 'mexico', ... }
+```
+
+### 10. Search overlay — persistent singleton
 `SearchOverlay` is instantiated once in `app.js` and persists across navigations. It is NOT torn down by the router. Its `#index` array is loaded once and cached — no re-fetch on re-open.
 
 ### 10. Player ID disambiguation
@@ -620,11 +640,14 @@ All squad data is complete. The natural next work areas, in rough priority order
 ### Sprint 6 continued (immediate) — Tournament data
 Complete R2 for Groups E–L as results come in June 20–24, then R3 for all groups June 25–27. Populate knockout.json R32 once all groups complete. This is the most time-sensitive work.
 
-### Sprint 15 — Run gather-photos.js + populate player-photos.json
-Architecture is complete (Sprint 14). Run `node scripts/gather-photos.js` to populate `data/player-photos.json` with Wikipedia thumbnail URLs for the 240 hero players. Expected ~84% hit rate. Review the manual QA warnings the script outputs (suspicious filenames). Push the populated JSON to trigger deploy.
+### Sprint 18 (June 23–24) — Club Explorer
+Club Explorer (`#club-explorer`): ranked list of 453 clubs by player count, real-time search, 2+/all toggle (default: clubs with 2+ players), nation flags per club (clickable → team pages). No confederation filter in MVP. CSS namespace `ce-`. Also fix CompareView silent failure and live score null guard.
 
-### Sprint 16 — Rankings + bio generation
-`data/rankings.json` empty stub. `scripts/generate-rankings.js` stub. FIFA ranking data for all 48 nations is already in `countries.json` (`fifaRanking` field). Rankings tab/page is still a PlaceholderModule stub.
+### Sprint 19 (June 25–27) — R3 data + knockout preparation
+Update all 12 groups' R3 results (June 25–27). Set qualificationStatus for all 48 teams. Populate knockout.json R32 homeTeamId/awayTeamId once group stage completes (~June 27). Look up best-3rd assignment from FIFA Annex C. First R32 match: June 28.
+
+### Post-June 27 — Knockout maintenance
+Populate R32 results as they happen (June 28 – July 6), propagate winners to R16. Maintain R16 → QF → SF → Final through July 19.
 
 ---
 
@@ -636,14 +659,14 @@ Architecture is complete (Sprint 14). Run `node scripts/gather-photos.js` to pop
 - ~~Search overlay not implemented~~ — **Implemented Sprint 7**
 - ~~Stats tab on TeamPage was a placeholder stub~~ — **Implemented Sprint 11** (`js/modules/stats-tab.js`)
 - ~~Compare view not implemented~~ — **Implemented Sprint 12** (`js/modules/compare-view.js`)
-- Hero photo architecture complete (Sprint 14) — player-photos.json loaded via DataManager.loadPlayerPhotos(), threaded through team-page → overview-tab and squad-tab → profile-panel. gather-photos.js implemented. Still need to RUN the script to actually populate data/player-photos.json with Wikipedia URLs (currently empty `{}`). Run: `node scripts/gather-photos.js`.
-- No club badges (CSS fallback active)
-- `data/rankings.json` empty — Rankings component not implemented
-- `leagues.json` has 86 entries and covers all leagueIds in use across the 48 squads. The validator does not check leagueId resolution — it only validates clubId against clubs.json.
+- **CompareView silent failure (minor, unfixed):** `if (!countryA || !countryB) return` in `#runComparison()` leaves result div showing "Loading comparison…" indefinitely when called before selections are made. Fix: add `resultEl.innerHTML = this.#buildPrompt()` before the return. Scheduled Sprint 18.
+- **Live score null render (latent, unfixed):** Tournament centre `#matchCard()` renders `${f.homeScore}&ndash;${f.awayScore}` — would show `null–null` if a fixture has `status: 'live'` with null scores. Fix: `${f.homeScore ?? 0}&ndash;${f.awayScore ?? 0}`. Zero live fixtures currently, so not triggered. Scheduled Sprint 18.
+- No club badges (CSS fallback active).
+- `data/rankings.json` empty — Rankings component not implemented.
 - `scotland-gordon` age (43, DOB 1982-12-31) triggers a validator DOB-range warning — expected and benign (Craig Gordon is genuinely 43; the DOB_MIN=1984 bound is a soft warning, not fatal).
 - `jordan-zito` has `_verification: "caps/club uncertain"` — data confidence flag, no action needed.
 - `uzbekistan.json` has two players with identical name "Eldor Shomurodov" (shirt 9 and shirt 14, different IDs) — cosmetic data quality issue. Validator passes because IDs are unique. Shirt 14 (`uzbekistan-shomurodov`) is the real captain at Istanbul Başakşehir; shirt 9 (`uzbekistan-turgunboev`) is a different player entered with the wrong name.
-- `scripts/update-standings.js`, `scripts/update-knockout.js`, `scripts/generate-player-bios.js`, `scripts/generate-rankings.js`, `scripts/gather-photos.js` are all stubs.
+- `scripts/update-standings.js`, `scripts/generate-player-bios.js`, `scripts/generate-rankings.js` are stubs. `update-knockout.js` and `gather-photos.js` are fully implemented.
 
 ---
 
