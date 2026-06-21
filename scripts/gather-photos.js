@@ -23,7 +23,7 @@ const THUMB_SIZE    = 250;
 const HEROES_PER_TEAM  = 0;
 const RETRY_NULLS      = false;
 const GATHER_MANAGERS  = false;
-const WIKIDATA_PASS    = true;   // ← Pass 2: Wikidata P18 fallback for null player entries
+const WIKIDATA_PASS    = false;  // ← Pass 2: Wikidata P18 fallback for null player entries
 const SEARCH_DELAY_MS  = 2000;
 const BATCH_DELAY_MS   = 2000;
 const RETRY_WAIT_MS    = 90_000;
@@ -498,7 +498,11 @@ async function runWikidataPass(countries, photoMap) {
     }
   }
 
-  // Phase D: duplicate-URL pre-scan across all candidates
+  // Phase D: duplicate-URL pre-scan across all candidates AND existing photoMap entries.
+  // Without checking the existing map, a URL already assigned to player A can be
+  // assigned again to player B in this pass (root cause of Sprint 21 false-positive re-introductions).
+  const existingUrls = new Set(Object.values(photoMap).filter(v => v !== null && v !== undefined));
+
   const allCandidates = [
     ...wikiFounds.map(e => ({ playerId: e.playerId, url: e.url, hero: e.hero })),
     ...needWikidata
@@ -511,7 +515,12 @@ async function runWikidataPass(countries, photoMap) {
     if (!urlToIds.has(e.url)) urlToIds.set(e.url, []);
     urlToIds.get(e.url).push(e.playerId);
   }
-  const dupeUrls = new Set([...urlToIds.entries()].filter(([, ids]) => ids.length > 1).map(([u]) => u));
+  const dupeUrls = new Set([
+    // Multiple candidates in this batch map to the same URL
+    ...[...urlToIds.entries()].filter(([, ids]) => ids.length > 1).map(([u]) => u),
+    // URL already assigned to a different player in the existing map
+    ...[...urlToIds.keys()].filter(u => existingUrls.has(u)),
+  ]);
 
   // Phase E: write results
   let recovered = 0, skipped = 0;
