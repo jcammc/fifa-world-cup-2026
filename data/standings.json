@@ -304,8 +304,21 @@
           "qualificationStatus": null
         },
         {
-          "teamId": "sweden",
+          "teamId": "japan",
           "position": 2,
+          "played": 2,
+          "won": 1,
+          "drawn": 1,
+          "lost": 0,
+          "goalsFor": 6,
+          "goalsAgainst": 2,
+          "goalDifference": 4,
+          "points": 4,
+          "qualificationStatus": null
+        },
+        {
+          "teamId": "sweden",
+          "position": 3,
           "played": 2,
           "won": 1,
           "drawn": 0,
@@ -317,30 +330,17 @@
           "qualificationStatus": null
         },
         {
-          "teamId": "japan",
-          "position": 3,
-          "played": 1,
-          "won": 0,
-          "drawn": 1,
-          "lost": 0,
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "points": 1,
-          "qualificationStatus": null
-        },
-        {
           "teamId": "tunisia",
           "position": 4,
-          "played": 1,
+          "played": 2,
           "won": 0,
           "drawn": 0,
-          "lost": 1,
+          "lost": 2,
           "goalsFor": 1,
-          "goalsAgainst": 5,
-          "goalDifference": -4,
+          "goalsAgainst": 9,
+          "goalDifference": -8,
           "points": 0,
-          "qualificationStatus": null
+          "qualificationStatus": "eliminated"
         }
       ]
     },

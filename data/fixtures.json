@@ -438,9 +438,9 @@
       "homeTeamId": "tunisia",
       "awayTeamId": "japan",
       "kickoff": "2026-06-21T04:00:00Z",
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "FT",
+      "homeScore": 0,
+      "awayScore": 4,
       "venue": "Estadio BBVA, Guadalupe NL",
       "broadcaster": null
     },
