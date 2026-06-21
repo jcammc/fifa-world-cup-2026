@@ -58,6 +58,7 @@
 | Sprint 15 | Global Statistics Dashboard (`#statistics`): experience, career scorers, demographics, club & league representation. Countries Browse page (`#countries`): 48 nations by tournament group A–L, 4-wide card grid. `#groups` redirect to TournamentCentre groups tab. `DataManager.loadAllPlayers()` + `loadPlayerPhotos()` added. squad-tab photoMap fix. | **COMPLETE** |
 | Sprint 17 | Continents page (`#continents`): 48 nations by confederation, sorted by FIFA ranking. League Explorer (`#league-explorer`): ranked list of all 86 leagues, click-to-expand club lists with nation flags, real-time search, confederation badges. Router fully wired — only `club-explorer` remains a stub. PlaceholderModule text cleaned up. | **COMPLETE** |
 | Sprint 18 | Club Explorer (`#club-explorer`): search-first, 2+/all toggle, nation flags linking to team pages. All named routes now functional — STUB_ROUTES is empty. Today tab knockout awareness: loads `knockout.json` alongside `fixtures.json`, merges both into today/next-matches display. `#matchCard()` falls back to `homeLabel`/`awayLabel` for pre-populated slots. Live score null guard fixed. | **COMPLETE** |
+| Sprint 19 | Snapshot remaining-count fix (tournament-centre.js now counts knockout matches in played/remaining). CompareView silent failure fixed (resets result div to prompt state when countryA/B not found). Statistics player rows converted from `<div>` to `<a href="#playerId">` — click through to team page. Egypt and Cape Verde recentForm populated from WC 2026 R1 results (`["D"]` each). | **COMPLETE** |
 
 ---
 
@@ -82,13 +83,13 @@
 | `modules/overview-tab.js` | Complete | Hero cards, captain highlight, fixture strip, group standing |
 | `modules/stats-tab.js` | **Complete** | Experience (caps leaderboard), International Goals (scorers), Squad Profile (avg age, youngest/oldest, by-position age). Constructor: `(container, country, players)` — all computation inline, no DataManager calls. |
 | `modules/fixtures-tab.js` | Complete | Group-stage results + W/D/L indicators, TC deep-links (#group-x, #knockout), knockout pending state |
-| `modules/tournament-centre.js` | Complete | 3-tab shell — Today / Group Stage / Knockout Stage |
+| `modules/tournament-centre.js` | Complete | 3-tab shell — Today / Group Stage / Knockout Stage. `#renderSnapshot()` includes both group + knockout matches in played/remaining count (shows 32 remaining after all 72 group matches are FT). Today tab merges `#fixtures` + `#knockoutMatches`. |
 | `modules/group-carousel.js` | Complete | 12 group cards, standings tables, fixture strips, drag/wheel/arrow nav, `scrollToGroup()` |
 | `modules/knockout-bracket.js` | Complete | Horizontal bracket, 5 rounds, seed labels, wheel redirect |
 | `modules/search-overlay.js` | **Complete** | Ctrl+K or nav button trigger, relevance-scored results (exact→prefix→contains→word-prefix→subsequence→Levenshtein), diacritic normalisation, team/player results, player deep-link nav |
-| `modules/compare-view.js` | **Complete** | Two `<select>` dropdowns grouped by optgroup (Group A–L). URL scheme `#compare/teamA/teamB` via `history.replaceState`. Sections: Experience, International Goals, Squad Profile, Squad Makeup, Team Strength (radar, conditional on teamStrength). Winner highlighting for Experience/Goals. |
+| `modules/compare-view.js` | **Complete** | Two `<select>` dropdowns grouped by optgroup (Group A–L). URL scheme `#compare/teamA/teamB` via `history.replaceState`. Sections: Experience, International Goals, Squad Profile, Squad Makeup, Team Strength (radar, conditional on teamStrength). Winner highlighting for Experience/Goals. Silent failure fixed (Sprint 19): if `#runComparison()` can't find countryA/B in `this.#countries`, it now resets `#cv-result` to the prompt state rather than leaving "Loading comparison…" forever. |
 | `modules/countries-page.js` | **Complete** | 48 nations grouped by tournament group A–L, sorted within each group, 4-wide card grid with flag + FIFA ranking + confederation. Reuses `cp-` CSS namespace from countries.css. |
-| `modules/statistics-page.js` | **Complete** | Tournament-wide stats: Squad Experience (caps leaderboard, top 10 squads + top 15 players), Career International Scorers (with caveat note — not WC 2026 match scorers), Tournament Demographics (avg age, youngest/oldest, position breakdown), Club & League Representation. Uses `loadAllPlayers()`. CSS namespace `sp-`. |
+| `modules/statistics-page.js` | **Complete** | Tournament-wide stats: Squad Experience (caps leaderboard, top 10 squads + top 15 players), Career International Scorers (with caveat note — not WC 2026 match scorers), Tournament Demographics (avg age, youngest/oldest, position breakdown), Club & League Representation. Uses `loadAllPlayers()`. CSS namespace `sp-`. Player rows in Experience and Scorers lists are `<a href="#playerId">` links — clicking navigates to team page and scrolls to the player. |
 | `modules/continents-page.js` | **Complete** | 48 nations grouped by confederation (UEFA, CONMEBOL, CAF, AFC, CONCACAF, OFC) sorted by FIFA ranking within each section. Team count badge on each section heading. Reuses all `cp-` CSS classes. |
 | `modules/league-explorer.js` | **Complete** | Ranked list of all 86 leagues by player count. 3 summary stat cards. Real-time search filters by league name + country. Click-to-expand rows show all clubs sorted by player count with nation flag strips (up to 8 flags + overflow). One expanded at a time. Confederation colour-coded badges. CSS namespace `le-`. |
 | `modules/club-explorer.js` | **Complete** | 453 clubs ranked by player count. Search-first (real-time name filter). 2+/all toggle (default: 231 clubs with 2+ players; active search overrides toggle). Nation flags per club (up to 8, each an `<a href="#countryId">` linking to team page), +N overflow. Empty state with clear button. CSS namespace `ce-`. |
@@ -140,16 +141,16 @@ After any squad data change: `node scripts/generate-search-index.js` then `npm r
 
 | File | Status |
 |------|--------|
-| `countries.json` | Complete — all 48 teams, all 48 managers, `recentForm: null`, **`teamStrength` populated for all 48 teams** (Sprint 12) |
+| `countries.json` | Complete — all 48 teams, all 48 managers, `teamStrength` populated for all 48 teams (Sprint 12). `recentForm` populated for 46 teams; Egypt `["D"]` (drew Belgium 1-1 R1), Cape Verde `["D"]` (drew Spain 0-0 R1). Will expand to 2+ entries as R2/R3 results arrive. Constraint: WC 2026 group matches + WC 2026 qualifiers only — no friendlies. |
 | `groups.json` | Complete — all 12 groups A–L |
 | `leagues.json` | **86 entries** — covers all leagueIds referenced by the 48 squads. Expanded during Sprint 9/10. Note: validate-data.js does NOT check leagueId against leagues.json; it only validates clubId against clubs.json. |
 | `clubs.json` | **456 entries, 86 distinct leagueIds** — all clubs referenced by all 48 squads |
-| `fixtures.json` | **72 fixtures total. R1+R2 FT for A–D. R2 FT for Group E (ger-civ 2-1, ecu-cur 0-0), R2 partially complete for F (ned-swe 5-1 FT; tun-jpn pending June 21). G–L R2 play June 21–24. All R3 play June 25–27.** |
-| `standings.json` | **Through R2 for A–E; through R1 for F–L.** Qualified: mexico, canada, switzerland, usa. Eliminated: bosnia-herzegovina, qatar, haiti, turkey. All others null. |
+| `fixtures.json` | **72 group fixtures total. R1+R2 FT for Groups A–F (inc. ecu-cur 0-0 FT, tun-jpn FT June 21 early). Groups G–L R2 scheduled June 21–24. R3 all groups June 25–27.** |
+| `standings.json` | **R2 complete for Groups A–F.** Qualified: mexico, canada, switzerland, usa, germany. Eliminated: bosnia-herzegovina, qatar, haiti, turkey. Groups G–L at R1 only. All others null. |
 | `knockout.json` | R32 labels corrected against actual Wikipedia bracket (Sprint 13). All `homeTeamId`/`awayTeamId` null (R3 not complete). All 32 matches now have `kickoff` dates and `venue`. See Knockout Bracket section below for R32 structure. |
 | `rankings.json` | Empty stub |
 | `search-index.json` | **1,296 entries** — envelope format `{ version, lastUpdated, data }`. 48 team entries + 1,248 player entries. Regenerated by generate-search-index.js. |
-| `player-photos.json` | **200/240 URLs populated** — run `node scripts/gather-photos.js` to refresh or add missing entries. Schema: `data` is an Object keyed by player ID (e.g. `"france-mbappe": "https://upload.wikimedia.org/..."`), NOT an array. `null` value means looked up but no image found. Idempotent — cached entries are skipped on re-run. |
+| `player-photos.json` | **844/1,248 URLs populated (67.6%)**, 404 confirmed no-image (null). Covers all 1,248 players across all 48 squads — queried via Wikipedia pageimages API (`gather-photos.js` with `HEROES_PER_TEAM=0`). Schema: `data` is an Object keyed by player ID (e.g. `"france-mbappe": "https://upload.wikimedia.org/..."`), NOT an array. `null` value means looked up and confirmed no image. Idempotent — cached entries are skipped on re-run. All three photo surfaces (Overview hero cards, Squad grid cards, Profile panel) are wired and working. No further implementation work needed. |
 | `players/france.json` | Complete — 26 players |
 | `players/england.json` | Complete — 26 players |
 | `players/brazil.json` | Complete — 26 players |
@@ -645,13 +646,36 @@ All squad data is complete. The natural next work areas, in rough priority order
 ### Sprint 6 continued (immediate) — Tournament data
 Complete R2 for Groups E–L as results come in June 20–24, then R3 for all groups June 25–27. Populate knockout.json R32 once all groups complete. This is the most time-sensitive work.
 
-### Sprint 19 (June 25–27) — R3 data + knockout preparation
+### Sprint 20 (now) — R2+R3 data maintenance + knockout population ⚡ TIME-CRITICAL
 
-### Sprint 19 (June 25–27) — R3 data + knockout preparation
-Update all 12 groups' R3 results (June 25–27). Set qualificationStatus for all 48 teams. Populate knockout.json R32 homeTeamId/awayTeamId once group stage completes (~June 27). Look up best-3rd assignment from FIFA Annex C. First R32 match: June 28.
+R2 matches for Groups G–L: June 21–24. R3 for all 12 groups: June 25–27. R32 kick-off: June 28.
 
-### Post-June 27 — Knockout maintenance
-Populate R32 results as they happen (June 28 – July 6), propagate winners to R16. Maintain R16 → QF → SF → Final through July 19.
+**Pre-June 28 checklist (MUST complete before first knockout match):**
+- [ ] All 72 group fixtures FT with correct scores
+- [ ] All 48 teams have non-null qualificationStatus
+- [ ] All 16 R32 slots in knockout.json have homeTeamId/awayTeamId set
+- [ ] Best-3rd assignment confirmed from FIFA Annex C (8 slots)
+- [ ] `npm run validate` — zero errors
+- [ ] Snapshot shows "Remaining: 32"
+
+**R2 update windows:**
+
+| Date (UTC) | Fixture IDs |
+|-----------|-------------|
+| June 21 (today) | `g-r2-bel-irn` (19:00), `h-r2-esp-ksa` (16:00), `h-r2-uru-cpv` (22:00) |
+| June 22 | `g-r2-nzl-egy` (01:00), `i-r2-fra-irq` (21:00), `j-r2-arg-aut` (17:00) |
+| June 23 | `i-r2-nor-sen` (00:00), `j-r2-jor-alg` (03:00), `k-r2-por-uzb` (17:00) |
+| June 24 | `k-r2-col-cod`, `l-r2-eng-gha`, `l-r2-pan-cro` |
+
+**R3:** All 12 groups play simultaneous pairs June 25–27. Full standings + qualificationStatus for all 48 teams.
+
+**After R3:** Populate knockout.json R32 using final group standings + FIFA Annex C best-3rd lookup. Use `scripts/update-knockout.js` for subsequent round results.
+
+### Sprint 21 — Manager profiles (deferred from Sprint 19)
+Manager bio panel on TeamPage Overview tab. ~9–10 hours. Deferred to avoid quality compromise during active tournament maintenance.
+
+### Post-June 28 — Knockout maintenance (rolling)
+Populate R32 results as they happen (June 28 – July 6), propagate winners to R16. Use `scripts/update-knockout.js --match <id> --home N --away N`. Maintain R16 → QF → SF → Final through July 19.
 
 ---
 
@@ -663,7 +687,7 @@ Populate R32 results as they happen (June 28 – July 6), propagate winners to R
 - ~~Search overlay not implemented~~ — **Implemented Sprint 7**
 - ~~Stats tab on TeamPage was a placeholder stub~~ — **Implemented Sprint 11** (`js/modules/stats-tab.js`)
 - ~~Compare view not implemented~~ — **Implemented Sprint 12** (`js/modules/compare-view.js`)
-- **CompareView silent failure (minor, unfixed):** `if (!countryA || !countryB) return` in `#runComparison()` leaves result div showing "Loading comparison…" indefinitely when called before selections are made. Fix: add `resultEl.innerHTML = this.#buildPrompt()` before the return.
+- ~~**CompareView silent failure**~~ — **Fixed Sprint 19.** `#runComparison()` now resets `#cv-result` to the prompt state before returning if countryA/B is not found.
 - ~~**Live score null render**~~ — **Fixed Sprint 18.** `#matchCard()` now uses `homeScore ?? 0` and `awayScore ?? 0`.
 - No club badges (CSS fallback active).
 - `data/rankings.json` empty — Rankings component not implemented.
