@@ -109,7 +109,11 @@ export class CompareView {
 
     const countryA = this.#countries.find(c => c.id === this.#teamAId);
     const countryB = this.#countries.find(c => c.id === this.#teamBId);
-    if (!countryA || !countryB) return;
+    if (!countryA || !countryB) {
+      const resultEl = this.#container.querySelector('#cv-result');
+      if (resultEl) resultEl.innerHTML = this.#buildPrompt();
+      return;
+    }
 
     const resultEl = this.#container.querySelector('#cv-result');
     resultEl.innerHTML = this.#buildComparison(countryA, playersA, countryB, playersB);

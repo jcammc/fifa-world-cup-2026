@@ -103,8 +103,11 @@ export class TournamentCentre {
   // ─── Snapshot (always visible above tabs) ─────────────────
 
   #renderSnapshot() {
-    const played    = this.#fixtures.filter(f => f.status === 'FT').length;
-    const remaining = this.#fixtures.length ? this.#fixtures.length - played : '—';
+    const playedGroup    = this.#fixtures.filter(f => f.status === 'FT').length;
+    const playedKnockout = this.#knockoutMatches.filter(m => m.status === 'FT').length;
+    const played         = playedGroup + playedKnockout;
+    const total          = this.#fixtures.length + this.#knockoutMatches.length;
+    const remaining      = total ? total - played : '—';
     const teams     = this.#countries.length || 48;
 
     return `

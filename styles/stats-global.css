@@ -128,6 +128,16 @@
 
 .sp-player-row:last-child { border-bottom: none; }
 
+a.sp-player-row {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a.sp-player-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+}
+
 .sp-row__flag {
   border-radius: 2px;
   flex-shrink: 0;

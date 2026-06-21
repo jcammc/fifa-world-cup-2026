@@ -269,13 +269,13 @@ export class StatisticsPage {
       : `<span class="sp-row__flag-ph"></span>`;
 
     return `
-      <div class="sp-player-row">
+      <a href="#${escapeHtml(player.id)}" class="sp-player-row">
         <span class="ts-player-row__rank">${rank}</span>
         ${flagHtml}
         <span class="tp-pos tp-pos--${pos.toLowerCase()}">${pos}</span>
         <span class="ts-player-row__name">${name}</span>
         <span class="ts-player-row__value">${escapeHtml(String(value))}</span>
-      </div>`;
+      </a>`;
   }
 
   init() {}
