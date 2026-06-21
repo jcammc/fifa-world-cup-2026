@@ -112,13 +112,23 @@ async function searchWikiTitle(name) {
 }
 
 // ─── Suspicious-image check ───────────────────────────────────
+// Rejects generic placeholders, logos, SVG badge thumbnails, and
+// club/competition crests that Wikipedia returns for team/org articles.
 
 function isSuspicious(url) {
   const f = url.toLowerCase();
-  return f.includes('joueur') || f.includes('footballer') ||
-         f.includes('footballeur') || f.includes('generic') ||
-         f.includes('silhouette') || f.includes('unknown_person') ||
-         f.includes('no_image') || f.includes('placeholder');
+  // Generic placeholders / silhouettes
+  if (f.includes('joueur') || f.includes('footballer') ||
+      f.includes('footballeur') || f.includes('generic') ||
+      f.includes('silhouette') || f.includes('unknown_person') ||
+      f.includes('no_image') || f.includes('placeholder')) return true;
+  // Logos, crests, badges — these come from club/association/competition articles
+  if (f.includes('logo') || f.includes('_crest') || f.includes('_badge') ||
+      f.includes('_emblem') || f.includes('_shield') || f.includes('_coat_of_arms') ||
+      f.includes('federation') || f.includes('association')) return true;
+  // SVG files served as PNG thumbnails — almost always crests/flags/logos
+  if (f.endsWith('.svg.png')) return true;
+  return false;
 }
 
 // ─── Normal mode (exact-title lookup for undefined entries) ──
@@ -264,6 +274,26 @@ async function runRetryPass(countries, photoMap) {
   const recovered_list = [];
   const warnings = [];
 
+  // Pre-scan for duplicate URLs — same photo assigned to multiple players is a false positive signal
+  const urlToPlayers = new Map();
+  for (const [playerId, { foundTitle }] of entries) {
+    const url = imageByTitle[foundTitle];
+    if (!url || isSuspicious(url)) continue;
+    if (!urlToPlayers.has(url)) urlToPlayers.set(url, []);
+    urlToPlayers.get(url).push(playerId);
+  }
+  const duplicateUrls = new Set(
+    [...urlToPlayers.entries()].filter(([, ids]) => ids.length > 1).map(([url]) => url)
+  );
+  if (duplicateUrls.size > 0) {
+    console.log(`  ⚠ ${duplicateUrls.size} URL(s) map to multiple players — skipping all to avoid false positives`);
+    for (const [url, ids] of urlToPlayers.entries()) {
+      if (ids.length > 1) {
+        warnings.push(`  ⚠ duplicate URL for ${ids.join(', ')}: ${decodeURIComponent(url.split('/').pop()).slice(0, 60)}`);
+      }
+    }
+  }
+
   for (const [playerId, { foundTitle, hero }] of entries) {
     const url = imageByTitle[foundTitle];
     if (!url) continue; // No image at found title — leave as null for Pass 2
@@ -273,13 +303,15 @@ async function runRetryPass(countries, photoMap) {
       continue; // Don't update — leave as null for Pass 2
     }
 
+    if (duplicateUrls.has(url)) continue; // Ambiguous match — skip
+
     photoMap[playerId] = url;
     recovered++;
     recovered_list.push({ name: hero.name, team: hero.team, fromTitle: foundTitle });
   }
 
   if (warnings.length) {
-    console.log('\nSuspicious images skipped (leaving as null for Pass 2):');
+    console.log('\nSuspicious/duplicate images skipped (leaving as null for Pass 2):');
     warnings.forEach(w => console.log(w));
   }
 
