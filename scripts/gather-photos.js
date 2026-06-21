@@ -13,7 +13,8 @@ const COUNTRIES_FILE = join(ROOT, 'data', 'countries.json');
 
 const WIKI_API  = 'https://en.wikipedia.org/w/api.php';
 const BATCH_SIZE = 50;   // Wikipedia allows up to 50 titles per request
-const HEROES_PER_TEAM = 5;
+// Set to 0 to query all players; set to N to query only top-N by caps per team
+const HEROES_PER_TEAM = 0;
 const THUMB_SIZE = 200;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -92,10 +93,10 @@ async function main() {
       console.warn(`  skipping ${country.id} — file not found`);
       continue;
     }
-    const top5 = [...players]
-      .sort((a, b) => (b.caps ?? 0) - (a.caps ?? 0))
-      .slice(0, HEROES_PER_TEAM);
-    for (const p of top5) {
+    const selected = HEROES_PER_TEAM > 0
+      ? [...players].sort((a, b) => (b.caps ?? 0) - (a.caps ?? 0)).slice(0, HEROES_PER_TEAM)
+      : players;
+    for (const p of selected) {
       if (photoMap[p.id] !== undefined) continue; // already in map (null = confirmed no photo)
       heroes.push({ id: p.id, name: p.name, team: country.id });
     }
@@ -144,7 +145,7 @@ async function main() {
     }
 
     console.log(`  batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(heroes.length / BATCH_SIZE)} done — ${hits} hits, ${nulls} nulls so far`);
-    if (i + BATCH_SIZE < heroes.length) await sleep(500); // rate-limit courtesy
+    if (i + BATCH_SIZE < heroes.length) await sleep(1500); // rate-limit courtesy
   }
 
   // Write output
