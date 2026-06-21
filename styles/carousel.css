@@ -181,6 +181,14 @@
   text-overflow: ellipsis;
 }
 
+a.gc-fixture__team {
+  text-decoration: none;
+}
+
+a.gc-fixture__team:hover {
+  color: var(--color-accent);
+}
+
 .gc-fixture__team--away { text-align: right; }
 
 .gc-fixture__score {

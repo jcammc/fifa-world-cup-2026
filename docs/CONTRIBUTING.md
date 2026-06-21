@@ -49,4 +49,12 @@ Every `git push master` auto-deploys to Netlify within ~30 seconds. No manual de
 
 ## File Structure
 
-See `SESSION_HANDOFF.md` or `PROJECT_ANALYSIS.md` for the full file tree and architectural decisions.
+See `docs/SESSION_HANDOFF.md` or `docs/PROJECT_ANALYSIS.md` for the full file tree and architectural decisions.
+
+## Documentation Convention
+
+All `.md` documentation files live in `docs/`. Do not place `.md` files in the project root or other directories.
+
+Exceptions:
+- `skills/**/SKILL.md` — must stay alongside their skill directory for the skill system to discover them
+- `schemas/README.md` — subdirectory-level reference, stays with the schemas it describes

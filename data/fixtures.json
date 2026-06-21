@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-20T12:00:00Z",
+  "lastUpdated": "2026-06-21T12:00:00Z",
   "data": [
     {
       "id": "a-r1-mex-rsa",
@@ -347,9 +347,9 @@
       "homeTeamId": "germany",
       "awayTeamId": "ivory-coast",
       "kickoff": "2026-06-20T20:00:00Z",
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "FT",
+      "homeScore": 2,
+      "awayScore": 1,
       "venue": "BMO Field, Toronto ON",
       "broadcaster": null
     },
@@ -360,9 +360,9 @@
       "homeTeamId": "ecuador",
       "awayTeamId": "curacao",
       "kickoff": "2026-06-21T00:00:00Z",
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "FT",
+      "homeScore": 0,
+      "awayScore": 0,
       "venue": "Arrowhead Stadium, Kansas City MO",
       "broadcaster": null
     },
@@ -425,9 +425,9 @@
       "homeTeamId": "netherlands",
       "awayTeamId": "sweden",
       "kickoff": "2026-06-20T17:00:00Z",
-      "status": "scheduled",
-      "homeScore": null,
-      "awayScore": null,
+      "status": "FT",
+      "homeScore": 5,
+      "awayScore": 1,
       "venue": "NRG Stadium, Houston TX",
       "broadcaster": null
     },

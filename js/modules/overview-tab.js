@@ -191,7 +191,18 @@ export class OverviewTab {
           </div>
         </section>`;
     }
-    return '';
+    const bubbles = country.recentForm.map(result => {
+      const cls   = result === 'W' ? 'tp-form-bubble--win'
+                  : result === 'L' ? 'tp-form-bubble--loss'
+                  : 'tp-form-bubble--draw';
+      const label = result === 'W' ? 'Win' : result === 'L' ? 'Loss' : 'Draw';
+      return `<span class="tp-form-bubble ${cls}" aria-label="${label}">${escapeHtml(result)}</span>`;
+    }).join('');
+    return `
+      <section class="tp-section">
+        <h2 class="tp-section__title">Recent Form</h2>
+        <div class="tp-form">${bubbles}</div>
+      </section>`;
   }
 
   init() {}

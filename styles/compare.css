@@ -1,0 +1,218 @@
+/* ─── Compare Teams View ──────────────────────────────────── */
+.cv-page {
+  padding: var(--space-4) 0 var(--space-8);
+}
+
+.cv-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 var(--space-5);
+}
+
+/* ─── Team selectors ──────────────────────────────────────── */
+.cv-selectors {
+  display: grid;
+  grid-template-columns: 1fr 40px 1fr;
+  gap: var(--space-3);
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.cv-vs {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.cv-select {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color var(--transition-fast);
+}
+
+.cv-select:hover,
+.cv-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.cv-select option,
+.cv-select optgroup {
+  background: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+}
+
+/* ─── State messages ──────────────────────────────────────── */
+.cv-loading,
+.cv-same-team {
+  text-align: center;
+  padding: var(--space-8) var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* ─── Prompt (empty state) ────────────────────────────────── */
+.cv-prompt {
+  text-align: center;
+  padding: var(--space-12) var(--space-4);
+}
+
+.cv-prompt__icon {
+  font-size: 3rem;
+  margin: 0 0 var(--space-3);
+  line-height: 1;
+}
+
+.cv-prompt__title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--space-2);
+}
+
+.cv-prompt__hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ─── Comparison layout ───────────────────────────────────── */
+.cv-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ─── Team headers ────────────────────────────────────────── */
+.cv-headers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.cv-team-header {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cv-team-header__flag {
+  width: 48px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.cv-team-header__name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.cv-team-header__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: var(--space-1) 0 0;
+}
+
+/* ─── Stat sections ───────────────────────────────────────── */
+.cv-section {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.cv-section__title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  padding: var(--space-3) var(--space-4) var(--space-2);
+  border-bottom: 1px solid var(--color-border-subtle);
+  margin: 0;
+}
+
+/* ─── Duel rows ───────────────────────────────────────────── */
+.cv-duel__row {
+  display: grid;
+  grid-template-columns: 1fr 130px 1fr;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.cv-duel__row:last-child { border-bottom: none; }
+
+.cv-duel__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cv-duel__val {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+  transition: color var(--transition-fast);
+}
+
+.cv-duel__val--a { text-align: left; }
+.cv-duel__val--b { text-align: right; }
+
+.cv-duel__val--winner {
+  color: var(--color-accent);
+  font-size: var(--font-size-2xl);
+}
+
+/* ─── Radar section ───────────────────────────────────────── */
+.cv-radar-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .cv-selectors {
+    grid-template-columns: 1fr 32px 1fr;
+    gap: var(--space-2);
+  }
+
+  .cv-headers { grid-template-columns: 1fr; gap: var(--space-2); }
+
+  .cv-team-header__flag { width: 36px; height: 24px; }
+
+  .cv-duel__row {
+    grid-template-columns: 1fr 90px 1fr;
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .cv-duel__val          { font-size: var(--font-size-base); }
+  .cv-duel__val--winner  { font-size: var(--font-size-xl); }
+
+  .cv-radar-row { grid-template-columns: 1fr; }
+}

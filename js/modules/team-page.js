@@ -3,6 +3,7 @@ import { escapeHtml } from '../utils.js';
 import { OverviewTab } from './overview-tab.js';
 import { SquadTab } from './squad-tab.js';
 import { FixturesTab } from './fixtures-tab.js';
+import { StatsTab } from './stats-tab.js';
 
 const TABS = ['overview', 'squad', 'fixtures', 'statistics'];
 
@@ -82,7 +83,11 @@ export class TeamPage {
     const ranking = country.fifaRanking ? `#${country.fifaRanking} FIFA` : '';
     const conf    = escapeHtml(country.confederation ?? '');
     const manager = escapeHtml(country.manager ?? 'TBC');
-    const meta    = [group, ranking, conf].filter(Boolean).join(' · ');
+    const withAge = this.#players.filter(p => p.age > 0);
+    const avgAge  = withAge.length
+      ? `avg age ${(withAge.reduce((s, p) => s + p.age, 0) / withAge.length).toFixed(1)}`
+      : '';
+    const meta    = [group, ranking, conf, avgAge].filter(Boolean).join(' · ');
 
     const tabs = TABS.map(t => {
       const label  = t.charAt(0).toUpperCase() + t.slice(1);
@@ -142,6 +147,8 @@ export class TeamPage {
       );
     } else if (tab === 'fixtures') {
       this.#tabModule = new FixturesTab(this.#tabEl, this.#country);
+    } else if (tab === 'statistics') {
+      this.#tabModule = new StatsTab(this.#tabEl, this.#country, this.#players);
     } else {
       const label = tab.charAt(0).toUpperCase() + tab.slice(1);
       this.#tabEl.innerHTML = `

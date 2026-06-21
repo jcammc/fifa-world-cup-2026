@@ -1,6 +1,7 @@
 import { DataManager } from './data.js';
 import { TournamentCentre } from './modules/tournament-centre.js';
 import { TeamPage } from './modules/team-page.js';
+import { CompareView } from './modules/compare-view.js';
 import { escapeHtml } from './utils.js';
 
 // ─── Placeholder for unimplemented routes ──────────────────
@@ -49,7 +50,7 @@ class NotFoundModule {
 
 const STUB_ROUTES = new Set([
   'countries', 'groups', 'continents',
-  'compare', 'statistics',
+  'statistics',
   'club-explorer', 'league-explorer',
 ]);
 
@@ -121,6 +122,12 @@ class _Router {
       };
     }
 
+    // Compare route: #compare or #compare/teamA/teamB
+    if (hash === 'compare' || hash.startsWith('compare/')) {
+      const parts = hash.split('/');
+      return { Module: CompareView, params: { teamA: parts[1] ?? null, teamB: parts[2] ?? null } };
+    }
+
     // Player route: must check before country route (e.g. #france-mbappe)
     for (const id of (this.#countryIds ?? [])) {
       if (hash.startsWith(id + '-')) {
@@ -152,7 +159,9 @@ class _Router {
   #updateActiveLink(hash) {
     document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('nav-link--active'));
     const isTc = !hash || hash === 'tournament' || hash === 'today' || hash === 'knockout' || /^group-[a-l]$/.test(hash);
-    const href = isTc ? '#tournament' : `#${hash}`;
+    const href = isTc ? '#tournament'
+      : hash.startsWith('compare/') ? '#compare'
+      : `#${hash}`;
     document.querySelector(`.nav-link[href="${href}"]`)?.classList.add('nav-link--active');
   }
 }

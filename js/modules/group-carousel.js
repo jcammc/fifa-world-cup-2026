@@ -134,6 +134,8 @@ export class GroupCarousel {
     const away     = this.#countryMap.get(f.awayTeamId);
     const homeName = escapeHtml(home?.name ?? f.homeTeamId);
     const awayName = escapeHtml(away?.name ?? f.awayTeamId);
+    const homeId   = escapeHtml(f.homeTeamId);
+    const awayId   = escapeHtml(f.awayTeamId);
 
     const middle = f.status === 'FT'
       ? `<span class="gc-fixture__score">${f.homeScore}&ndash;${f.awayScore}</span>`
@@ -148,9 +150,9 @@ export class GroupCarousel {
 
     return `
       <div class="gc-fixture">
-        <span class="gc-fixture__team gc-fixture__team--home">${homeName}</span>
+        <a href="#${homeId}" class="gc-fixture__team gc-fixture__team--home">${homeName}</a>
         ${middle}
-        <span class="gc-fixture__team gc-fixture__team--away">${awayName}</span>
+        <a href="#${awayId}" class="gc-fixture__team gc-fixture__team--away">${awayName}</a>
         ${extras ? `<span class="gc-fixture__extras">${extras}</span>` : ''}
       </div>`;
   }
@@ -204,24 +206,35 @@ export class GroupCarousel {
     const carousel = this.#carouselEl;
     if (!carousel) return;
 
-    let isDown = false, startX = 0, scrollLeft = 0;
+    let isDown = false, isDragging = false, startX = 0, scrollLeft = 0, activePointerId = null;
 
     carousel.addEventListener('pointerdown', e => {
-      isDown     = true;
-      startX     = e.pageX - carousel.offsetLeft;
-      scrollLeft = carousel.scrollLeft;
-      carousel.setPointerCapture(e.pointerId);
-      carousel.classList.add('is-dragging');
+      isDown          = true;
+      isDragging      = false;
+      activePointerId = e.pointerId;
+      startX          = e.pageX - carousel.offsetLeft;
+      scrollLeft      = carousel.scrollLeft;
+      // Capture and drag-class deferred to first pointermove past threshold,
+      // so that clicks on child links are not suppressed by scroll mutation.
     });
 
     carousel.addEventListener('pointermove', e => {
       if (!isDown) return;
-      const x = e.pageX - carousel.offsetLeft;
+      const x    = e.pageX - carousel.offsetLeft;
+      const dist = Math.abs(x - startX);
+      if (!isDragging) {
+        if (dist < 5) return;
+        isDragging = true;
+        carousel.setPointerCapture(activePointerId);
+        carousel.classList.add('is-dragging');
+      }
       carousel.scrollLeft = scrollLeft - (x - startX) * 1.5;
     });
 
     const stop = () => {
-      isDown = false;
+      isDown          = false;
+      isDragging      = false;
+      activePointerId = null;
       carousel.classList.remove('is-dragging');
     };
     carousel.addEventListener('pointerup',     stop);
