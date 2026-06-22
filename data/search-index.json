@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-21T10:04:55Z",
+  "lastUpdated": "2026-06-22T00:26:55Z",
   "data": [
     {
       "type": "team",
@@ -5016,10 +5016,10 @@
     },
     {
       "type": "player",
-      "id": "jordan-zito",
-      "label": "Zito Luvumbo",
-      "meta": "Jordan · FW · Al-Hussein SC",
-      "href": "#jordan-zito"
+      "id": "jordan-al-rosan",
+      "label": "Saed Al-Rosan",
+      "meta": "Jordan · DF · Al-Hussein SC",
+      "href": "#jordan-al-rosan"
     },
     {
       "type": "player",

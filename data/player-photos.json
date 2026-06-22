@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-21T23:15:52.202Z",
+  "lastUpdated": "2026-06-22T00:18:27.755Z",
   "data": {
     "mexico-ochoa": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Mex-Kor_%281%29_%28cropped%29.jpg/250px-Mex-Kor_%281%29_%28cropped%29.jpg",
     "mexico-jimenez": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Ra%C3%BAl_Jim%C3%A9nez_04032026_%281%29.jpg/250px-Ra%C3%BAl_Jim%C3%A9nez_04032026_%281%29.jpg",
@@ -1075,7 +1075,6 @@
     "jordan-al-masatfa": null,
     "jordan-al-omari-a": null,
     "jordan-al-qasem": null,
-    "jordan-zito": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/ZitoLuvumbo2023.png/250px-ZitoLuvumbo2023.png",
     "jordan-al-nakhaleh": null,
     "jordan-al-siyabi": null,
     "jordan-al-badaineh": null,
@@ -1297,6 +1296,7 @@
     "manager-england": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93175.jpg/250px-2019-07-17_SG_Dynamo_Dresden_vs._Paris_Saint-Germain_by_Sandro_Halank%E2%80%93175.jpg",
     "manager-croatia": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Zlatko_Dali%C4%87_Croatia.jpg/250px-Zlatko_Dali%C4%87_Croatia.jpg",
     "manager-ghana": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/%D9%86%D8%B4%D8%B3%D8%AA_%D8%AE%D8%A8%D8%B1%DB%8C_%D9%BE%DB%8C%D8%B4_%D8%A7%D8%B2_%D8%A8%D8%A7%D8%B2%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86_%D9%88_%D8%A7%D9%86%DA%AF%D9%84%DB%8C%D8%B3_%2827%29_%28cropped%29.jpg/250px-%D9%86%D8%B4%D8%B3%D8%AA_%D8%AE%D8%A8%D8%B1%DB%8C_%D9%BE%DB%8C%D8%B4_%D8%A7%D8%B2_%D8%A8%D8%A7%D8%B2%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86_%D9%88_%D8%A7%D9%86%DA%AF%D9%84%DB%8C%D8%B3_%2827%29_%28cropped%29.jpg",
-    "manager-panama": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Partido_Galicia_-_Panam%C3%A1_en_Bala%C3%ADdos_149_%28cropped%29.jpg/250px-Partido_Galicia_-_Panam%C3%A1_en_Bala%C3%ADdos_149_%28cropped%29.jpg"
+    "manager-panama": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Partido_Galicia_-_Panam%C3%A1_en_Bala%C3%ADdos_149_%28cropped%29.jpg/250px-Partido_Galicia_-_Panam%C3%A1_en_Bala%C3%ADdos_149_%28cropped%29.jpg",
+    "jordan-al-rosan": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/ZitoLuvumbo2023.png/250px-ZitoLuvumbo2023.png"
   }
 }
