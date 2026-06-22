@@ -111,6 +111,27 @@ class _DataManager {
     }
   }
 
+  async loadManagers() {
+    const key = 'managers';
+    if (this.#cache.has(key)) return this.#cache.get(key);
+    try {
+      const res = await fetch('data/managers.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      const data = (json.data && typeof json.data === 'object' && !Array.isArray(json.data))
+        ? json.data : {};
+      this.#cache.set(key, data);
+      return data;
+    } catch {
+      return {};
+    }
+  }
+
+  async loadManager(countryId) {
+    const managers = await this.loadManagers();
+    return managers[countryId] ?? null;
+  }
+
   // ─── Cache management ───────────────────────────────────
 
   invalidateCache(key) { this.#cache.delete(key); }

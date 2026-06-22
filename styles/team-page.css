@@ -554,6 +554,148 @@
   .tp-manager__photo { flex: 0 0 56px; width: 56px; height: 56px; }
 }
 
+/* ─── Manager tenure + accordion ─────────────────────────── */
+.tp-manager__tenure {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
+  font-weight: var(--font-weight-medium);
+  margin: 0 0 var(--space-2);
+}
+
+.tp-manager__details {
+  margin-top: var(--space-3);
+}
+
+.tp-manager__toggle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  user-select: none;
+  padding: 0;
+}
+
+.tp-manager__toggle::-webkit-details-marker { display: none; }
+
+.tp-manager__toggle::before {
+  content: '▸';
+  font-size: 10px;
+  color: var(--color-accent);
+  transition: transform 200ms ease;
+  display: inline-block;
+}
+
+.tp-manager__details[open] .tp-manager__toggle::before {
+  transform: rotate(90deg);
+}
+
+.tp-manager__expanded {
+  margin-top: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.tp-mgr-section__label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.tp-mgr-career {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tp-mgr-career__item {
+  display: flex;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.tp-mgr-career__years {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  min-width: 82px;
+  flex-shrink: 0;
+}
+
+.tp-mgr-career__club {
+  color: var(--color-text-secondary);
+}
+
+.tp-mgr-player-clubs {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.tp-mgr-honours {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tp-mgr-honour {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  line-height: 1.5;
+}
+
+.tp-mgr-honour__title {
+  color: var(--color-text-secondary);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tp-mgr-honour__year {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tp-mgr-honour__role {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tp-mgr-honour__role--manager {
+  background: var(--color-bg-secondary);
+  color: var(--color-accent);
+}
+
+.tp-mgr-honour__role--player {
+  background: rgba(74, 222, 128, 0.12);
+  color: var(--color-success);
+}
+
 /* ─── Recent form bubbles ─────────────────────────────────── */
 .tp-form {
   display: flex;

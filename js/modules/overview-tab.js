@@ -1,5 +1,6 @@
 import { escapeHtml, getInitials } from '../utils.js';
 import { Charts } from '../charts.js';
+import { DataManager } from '../data.js';
 
 const POSITION_GROUPS = ['GK', 'DF', 'MF', 'FW'];
 
@@ -65,10 +66,12 @@ export class OverviewTab {
       .sort((a, b) => b[1] - a[1])
       .map(([id, count]) => ({ league: this.#leagueMap.get(id) ?? null, count }));
 
+    const managerData = country.managerBio ? await DataManager.loadManager(country.id) : null;
+
     this.#container.innerHTML = `
       <div class="tp-overview">
         ${this.#renderHeroes(heroes)}
-        ${this.#renderManager(country)}
+        ${this.#renderManager(country, managerData)}
         <div class="tp-overview-grid">
           ${country.teamStrength ? this.#renderRadarSection(country) : ''}
           ${this.#renderSquadMakeup(byPos)}
@@ -141,12 +144,14 @@ export class OverviewTab {
     return age;
   }
 
-  #renderManager(country) {
+  #renderManager(country, managerData) {
     if (!country.managerBio) return '';
     const name     = escapeHtml(country.manager);
     const nat      = escapeHtml(country.managerNationality ?? '');
     const age      = this.#managerAge(country.managerDob);
-    const meta     = [nat, age != null ? `Age ${age}` : null].filter(Boolean).join(' · ');
+    const fmrPos   = escapeHtml(country.managerFormerPosition ?? '');
+    const tenure   = escapeHtml(country.managerTenure ?? '');
+    const meta     = [nat, age != null ? `Age ${age}` : null, fmrPos || null].filter(Boolean).join(' · ');
     const bio      = escapeHtml(country.managerBio);
     const initials = escapeHtml(getInitials(country.manager));
     const photoSrc = this.#photoMap[`manager-${country.id}`];
@@ -157,6 +162,8 @@ export class OverviewTab {
          <div class="tp-manager__initials" aria-hidden="true">${initials}</div>`
       : `<div class="tp-manager__initials" style="display:flex" aria-hidden="true">${initials}</div>`;
 
+    const accordion = managerData ? this.#renderManagerAccordion(managerData) : '';
+
     return `
       <section class="tp-section tp-manager-section">
         <h2 class="tp-section__title">Head Coach</h2>
@@ -165,10 +172,59 @@ export class OverviewTab {
           <div class="tp-manager__info">
             <div class="tp-manager__name">${name}</div>
             ${meta ? `<div class="tp-manager__meta">${meta}</div>` : ''}
+            ${tenure ? `<div class="tp-manager__tenure">In charge: ${tenure}</div>` : ''}
             <p class="tp-manager__bio">${bio}</p>
+            ${accordion}
           </div>
         </div>
       </section>`;
+  }
+
+  #renderManagerAccordion(data) {
+    const parts = [];
+
+    if (data.career?.length) {
+      const items = data.career.map(c => `
+        <li class="tp-mgr-career__item">
+          <span class="tp-mgr-career__years">${escapeHtml(c.years)}</span>
+          <span class="tp-mgr-career__club">${escapeHtml(c.club)}</span>
+        </li>`).join('');
+      parts.push(`
+        <div class="tp-mgr-section">
+          <div class="tp-mgr-section__label">Managerial Career</div>
+          <ul class="tp-mgr-career">${items}</ul>
+        </div>`);
+    }
+
+    if (data.playerClubs?.length) {
+      parts.push(`
+        <div class="tp-mgr-section">
+          <div class="tp-mgr-section__label">As Player</div>
+          <p class="tp-mgr-player-clubs">${data.playerClubs.map(c => escapeHtml(c)).join(' · ')}</p>
+        </div>`);
+    }
+
+    if (data.honours?.length) {
+      const items = data.honours.map(h => `
+        <li class="tp-mgr-honour">
+          <span class="tp-mgr-honour__title">${escapeHtml(h.title)}</span>
+          <span class="tp-mgr-honour__year">${escapeHtml(String(h.year))}</span>
+          <span class="tp-mgr-honour__role tp-mgr-honour__role--${escapeHtml(h.role.toLowerCase())}">${escapeHtml(h.role)}</span>
+        </li>`).join('');
+      parts.push(`
+        <div class="tp-mgr-section">
+          <div class="tp-mgr-section__label">Major Honours</div>
+          <ul class="tp-mgr-honours">${items}</ul>
+        </div>`);
+    }
+
+    if (!parts.length) return '';
+
+    return `
+      <details class="tp-manager__details">
+        <summary class="tp-manager__toggle">Career &amp; Honours</summary>
+        <div class="tp-manager__expanded">${parts.join('')}</div>
+      </details>`;
   }
 
   // ─── Radar chart ─────────────────────────────────────────────

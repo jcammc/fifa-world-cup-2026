@@ -23,7 +23,9 @@
       },
       "managerNationality": "Mexican",
       "managerDob": "1958-12-01",
-      "managerBio": "Javier Aguirre is on his third spell as Mexico head coach, having previously led El Tri at the 2002 and 2010 World Cups. The former midfielder managed clubs in Spain, Japan and Egypt before returning to the national setup in 2023. His disciplined defensive organisation and deep familiarity with Mexican football culture make him a trusted and experienced leader."
+      "managerBio": "Javier Aguirre is on his third spell as Mexico head coach, having previously led El Tri at the 2002 and 2010 World Cups. The former midfielder managed clubs in Spain, Japan and Egypt before returning to the national setup in 2023. His disciplined defensive organisation and deep familiarity with Mexican football culture make him a trusted and experienced leader.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "south-korea",
@@ -49,7 +51,9 @@
       },
       "managerNationality": "South Korean",
       "managerDob": "1969-02-12",
-      "managerBio": "Hong Myung-bo is South Korea's most capped outfield player and captained the team to a historic fourth-place finish at the 2002 World Cup. After a decorated career with Pohang Steelers, Kashiwa Reysol and LA Galaxy he became national head coach in 2023, his second stint in charge. His legendary status gives him natural authority and deep respect within the squad."
+      "managerBio": "Hong Myung-bo is South Korea's most capped outfield player and captained the team to a historic fourth-place finish at the 2002 World Cup. After a decorated career with Pohang Steelers, Kashiwa Reysol and LA Galaxy he became national head coach in 2023, his second stint in charge. His legendary status gives him natural authority and deep respect within the squad.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "south-africa",
@@ -76,6 +80,8 @@
       "managerNationality": "Belgian",
       "managerDob": "1952-04-10",
       "managerBio": "Hugo Broos is a Belgian manager best known for guiding Cameroon to the 2017 AFCON title. A former defender who spent decades managing clubs in Belgium, Turkey and Cyprus, he joined South Africa in 2021 and orchestrated their first World Cup qualification since 2010. His patient squad-building approach has earned wide respect across the continent.",
+      "managerTenure": "2021–present",
+      "managerFormerPosition": "Defender",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -103,6 +109,8 @@
       "managerNationality": "Czech",
       "managerDob": "1952-01-17",
       "managerBio": "Miroslav Koubek is a veteran Czech manager with decades of top-flight domestic experience, having coached Sparta Prague, Slavia Prague and Viktoria Plzeň among others. A former goalkeeper, he was appointed Czechia head coach in 2023 and guided the team through qualifying to secure a return to the World Cup for the first time since 2006.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Goalkeeper",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -126,7 +134,9 @@
       },
       "managerNationality": "American",
       "managerDob": "1973-11-09",
-      "managerBio": "Jesse Marsch is an American manager who made his name in the Red Bull football network, leading RB Salzburg to back-to-back Austrian titles and coaching RB Leipzig before a stint at Leeds United. The former US international midfielder was appointed Canada head coach in 2023, tasked with building on the historic 2022 World Cup qualification as the nation co-hosts the 2026 tournament."
+      "managerBio": "Jesse Marsch is an American manager who made his name in the Red Bull football network, leading RB Salzburg to back-to-back Austrian titles and coaching RB Leipzig before a stint at Leeds United. The former US international midfielder was appointed Canada head coach in 2023, tasked with building on the historic 2022 World Cup qualification as the nation co-hosts the 2026 tournament.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "bosnia-herzegovina",
@@ -152,7 +162,9 @@
       },
       "managerNationality": "Bosnian",
       "managerDob": "1971-11-17",
-      "managerBio": "Sergej Barbarez enjoyed a long Bundesliga career as a striker with Hamburger SV and Borussia Dortmund and was once Bosnia and Herzegovina's all-time top scorer. After retiring from a decorated playing career he moved into club management before being appointed national head coach. His attacking instincts and emotional connection to the program define his footballing identity."
+      "managerBio": "Sergej Barbarez enjoyed a long Bundesliga career as a striker with Hamburger SV and Borussia Dortmund and was once Bosnia and Herzegovina's all-time top scorer. After retiring from a decorated playing career he moved into club management before being appointed national head coach. His attacking instincts and emotional connection to the program define his footballing identity.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": "Forward"
     },
     {
       "id": "qatar",
@@ -178,7 +190,9 @@
       },
       "managerNationality": "Spanish",
       "managerDob": "1966-08-28",
-      "managerBio": "Julen Lopetegui is a Spanish manager with elite experience having managed the Spanish national team, Real Madrid and Sevilla, where he won the Europa League in 2020. The former goalkeeper was appointed Qatar head coach to bring top-level tactical knowledge to a program seeking to build on the legacy of hosting the 2022 World Cup."
+      "managerBio": "Julen Lopetegui is a Spanish manager with elite experience having managed the Spanish national team, Real Madrid and Sevilla, where he won the Europa League in 2020. The former goalkeeper was appointed Qatar head coach to bring top-level tactical knowledge to a program seeking to build on the legacy of hosting the 2022 World Cup.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Goalkeeper"
     },
     {
       "id": "switzerland",
@@ -204,7 +218,9 @@
       },
       "managerNationality": "Swiss",
       "managerDob": "1974-09-26",
-      "managerBio": "Murat Yakin is a Swiss-born manager of Turkish heritage who represented Switzerland as a defender during his playing career. He managed clubs including Basel and Luzern before taking the national team role in 2021. Yakin has built a tactically disciplined, compact system that has brought genuine stability to Swiss football."
+      "managerBio": "Murat Yakin is a Swiss-born manager of Turkish heritage who represented Switzerland as a defender during his playing career. He managed clubs including Basel and Luzern before taking the national team role in 2021. Yakin has built a tactically disciplined, compact system that has brought genuine stability to Swiss football.",
+      "managerTenure": "2021–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "brazil",
@@ -230,7 +246,9 @@
       },
       "managerNationality": "Italian",
       "managerDob": "1959-06-10",
-      "managerBio": "Carlo Ancelotti is one of football's most decorated managers, having won the UEFA Champions League four times with AC Milan and Real Madrid. The Italian tactician previously managed Chelsea, Paris Saint-Germain, Bayern Munich and Everton before joining Brazil in 2024. His calm man-management and tactical adaptability bring world-class credibility to the Seleção's bid for a sixth world title."
+      "managerBio": "Carlo Ancelotti is one of football's most decorated managers, having won the UEFA Champions League four times with AC Milan and Real Madrid. The Italian tactician previously managed Chelsea, Paris Saint-Germain, Bayern Munich and Everton before joining Brazil in 2024. His calm man-management and tactical adaptability bring world-class credibility to the Seleção's bid for a sixth world title.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "morocco",
@@ -256,6 +274,8 @@
       },
       "managerNationality": "Moroccan",
       "managerBio": "Mohamed Ouahbi was appointed Morocco head coach as the Atlas Lions sought to build on their historic 2022 World Cup semi-final run. He continues to develop the disciplined, well-organised pressing structure that has made Morocco one of the most feared sides in African and world football.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "",
       "_verificationManager": "dob uncertain; confirm current appointment"
     },
     {
@@ -282,6 +302,8 @@
       },
       "managerNationality": "French",
       "managerBio": "Sébastien Migné is a French manager who previously coached Kenya's Harambee Stars. He was appointed Haiti head coach to lead the Caribbean nation in their first World Cup appearance, bringing structured continental experience to a program with limited resources but extraordinary passion.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -308,7 +330,9 @@
       },
       "managerNationality": "Scottish",
       "managerDob": "1963-08-29",
-      "managerBio": "Steve Clarke is the most successful Scotland manager of the modern era, transforming a side that had not qualified for a major tournament since 1998 into consistent World Cup and European Championship participants. The former Chelsea defender guided Scotland to Euro 2020 and Euro 2024 before this historic World Cup return. His meticulous preparation and defensive organisation are the hallmarks of his work."
+      "managerBio": "Steve Clarke is the most successful Scotland manager of the modern era, transforming a side that had not qualified for a major tournament since 1998 into consistent World Cup and European Championship participants. The former Chelsea defender guided Scotland to Euro 2020 and Euro 2024 before this historic World Cup return. His meticulous preparation and defensive organisation are the hallmarks of his work.",
+      "managerTenure": "2019–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "usa",
@@ -331,7 +355,9 @@
       },
       "managerNationality": "Argentine",
       "managerDob": "1972-03-02",
-      "managerBio": "Mauricio Pochettino is one of the most celebrated managers of his generation, having led Tottenham Hotspur to the 2019 Champions League final and managed Paris Saint-Germain and Chelsea. The former Argentine centre-back is renowned for his high-intensity pressing system and talent for developing young players. He was appointed United States head coach in 2024 to lead a squad on home soil."
+      "managerBio": "Mauricio Pochettino is one of the most celebrated managers of his generation, having led Tottenham Hotspur to the 2019 Champions League final and managed Paris Saint-Germain and Chelsea. The former Argentine centre-back is renowned for his high-intensity pressing system and talent for developing young players. He was appointed United States head coach in 2024 to lead a squad on home soil.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "paraguay",
@@ -357,7 +383,9 @@
       },
       "managerNationality": "Argentine",
       "managerDob": "1962-10-03",
-      "managerBio": "Gustavo Alfaro is an experienced Argentine manager known throughout South American football for building compact, resilient sides with strong team spirit. He previously managed Boca Juniors, Ecuador and Costa Rica before joining Paraguay in 2023. His tactical discipline and man-management have restored consistency to the Albirroja."
+      "managerBio": "Gustavo Alfaro is an experienced Argentine manager known throughout South American football for building compact, resilient sides with strong team spirit. He previously managed Boca Juniors, Ecuador and Costa Rica before joining Paraguay in 2023. His tactical discipline and man-management have restored consistency to the Albirroja.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": ""
     },
     {
       "id": "australia",
@@ -380,7 +408,9 @@
       },
       "managerNationality": "Australian",
       "managerDob": "1973-07-04",
-      "managerBio": "Tony Popovic is an Australian manager of Croatian heritage who had a distinguished playing career as a central defender with Crystal Palace and the Socceroos. After successful stints with Perth Glory and Melbourne Victory in the A-League he was appointed national head coach in 2024. His tactical organisation and deep knowledge of the Australian football landscape make him a well-suited appointment."
+      "managerBio": "Tony Popovic is an Australian manager of Croatian heritage who had a distinguished playing career as a central defender with Crystal Palace and the Socceroos. After successful stints with Perth Glory and Melbourne Victory in the A-League he was appointed national head coach in 2024. His tactical organisation and deep knowledge of the Australian football landscape make him a well-suited appointment.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "turkey",
@@ -406,7 +436,9 @@
       },
       "managerNationality": "Italian",
       "managerDob": "1974-06-18",
-      "managerBio": "Vincenzo Montella is an Italian manager who was a prolific striker for Fiorentina and Sampdoria during his playing career. He managed clubs including Fiorentina, AC Milan and Sevilla before taking the Turkey role in 2023, leading the Crescent Stars to a memorable Euro 2024 quarter-final. His possession-based attacking philosophy has revitalised the national team."
+      "managerBio": "Vincenzo Montella is an Italian manager who was a prolific striker for Fiorentina and Sampdoria during his playing career. He managed clubs including Fiorentina, AC Milan and Sevilla before taking the Turkey role in 2023, leading the Crescent Stars to a memorable Euro 2024 quarter-final. His possession-based attacking philosophy has revitalised the national team.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Forward"
     },
     {
       "id": "germany",
@@ -432,7 +464,9 @@
       },
       "managerNationality": "German",
       "managerDob": "1987-07-23",
-      "managerBio": "Julian Nagelsmann is one of football's most exciting managerial talents, having guided RB Leipzig to the Champions League semi-finals before joining Bayern Munich aged just 33. Appointed Germany head coach in 2023, he reinvigorated the squad with a dynamic, high-tempo system and renewed tactical ambition. His innovation and youth have restored genuine confidence to German football."
+      "managerBio": "Julian Nagelsmann is one of football's most exciting managerial talents, having guided RB Leipzig to the Champions League semi-finals before joining Bayern Munich aged just 33. Appointed Germany head coach in 2023, he reinvigorated the squad with a dynamic, high-tempo system and renewed tactical ambition. His innovation and youth have restored genuine confidence to German football.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": ""
     },
     {
       "id": "curacao",
@@ -458,7 +492,9 @@
       },
       "managerNationality": "Dutch",
       "managerDob": "1947-09-27",
-      "managerBio": "Dick Advocaat is one of football's most experienced managers, having led the Netherlands, South Korea, Russia, Belgium and dozens of clubs across five decades. The veteran Dutch tactician was appointed Curaçao head coach to bring unparalleled top-flight wisdom to the Caribbean island's growing program. At an age when most have long since retired, he remains a highly respected tactical voice in world football."
+      "managerBio": "Dick Advocaat is one of football's most experienced managers, having led the Netherlands, South Korea, Russia, Belgium and dozens of clubs across five decades. The veteran Dutch tactician was appointed Curaçao head coach to bring unparalleled top-flight wisdom to the Caribbean island's growing program. At an age when most have long since retired, he remains a highly respected tactical voice in world football.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "ivory-coast",
@@ -484,7 +520,9 @@
       },
       "managerNationality": "Ivorian",
       "managerDob": "1981-02-06",
-      "managerBio": "Emerse Faé became one of football's most celebrated young managers when he stepped up as caretaker during AFCON 2023 and steered Ivory Coast to a dramatic home title. The former Ivorian international midfielder was subsequently confirmed as permanent head coach and has maintained the team's high-energy attacking ambition. His emotional connection to the squad and fearless tactical decisions define his tenure."
+      "managerBio": "Emerse Faé became one of football's most celebrated young managers when he stepped up as caretaker during AFCON 2023 and steered Ivory Coast to a dramatic home title. The former Ivorian international midfielder was subsequently confirmed as permanent head coach and has maintained the team's high-energy attacking ambition. His emotional connection to the squad and fearless tactical decisions define his tenure.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "ecuador",
@@ -510,7 +548,9 @@
       },
       "managerNationality": "Argentine",
       "managerDob": "1981-12-16",
-      "managerBio": "Sebastián Beccacece developed his coaching philosophy as assistant to Jorge Sampaoli at Sevilla and with the Argentina national team. He managed Defensa y Justicia and Racing Club before taking over Ecuador in 2023. His high-energy pressing system and intense personality have brought renewed attacking ambition to La Tricolor."
+      "managerBio": "Sebastián Beccacece developed his coaching philosophy as assistant to Jorge Sampaoli at Sevilla and with the Argentina national team. He managed Defensa y Justicia and Racing Club before taking over Ecuador in 2023. His high-energy pressing system and intense personality have brought renewed attacking ambition to La Tricolor.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": ""
     },
     {
       "id": "netherlands",
@@ -536,7 +576,9 @@
       },
       "managerNationality": "Dutch",
       "managerDob": "1963-03-21",
-      "managerBio": "Ronald Koeman is a Dutch footballing icon renowned for his powerful shooting and commanding defensive play with Ajax, PSV and Barcelona. As a manager he led Feyenoord, PSV and Barcelona before returning for a second stint as Netherlands head coach in 2023. He guided the Oranje to the Euro 2024 semi-finals and has assembled one of the tournament's most complete squads."
+      "managerBio": "Ronald Koeman is a Dutch footballing icon renowned for his powerful shooting and commanding defensive play with Ajax, PSV and Barcelona. As a manager he led Feyenoord, PSV and Barcelona before returning for a second stint as Netherlands head coach in 2023. He guided the Oranje to the Euro 2024 semi-finals and has assembled one of the tournament's most complete squads.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "japan",
@@ -560,7 +602,9 @@
       },
       "managerNationality": "Japanese",
       "managerDob": "1968-08-23",
-      "managerBio": "Hajime Moriyasu transformed Japan into one of Asia's most dynamic and tactically sophisticated national teams. The former midfielder served as assistant before taking the head coach role in 2018 and has overseen Japan's remarkable knockout-round performances at the last two World Cups. His emphasis on pressing intensity and European-style positioning has produced an exceptional generation of players."
+      "managerBio": "Hajime Moriyasu transformed Japan into one of Asia's most dynamic and tactically sophisticated national teams. The former midfielder served as assistant before taking the head coach role in 2018 and has overseen Japan's remarkable knockout-round performances at the last two World Cups. His emphasis on pressing intensity and European-style positioning has produced an exceptional generation of players.",
+      "managerTenure": "2018–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "sweden",
@@ -586,7 +630,9 @@
       },
       "managerNationality": "English",
       "managerDob": "1975-05-20",
-      "managerBio": "Graham Potter is an English manager who built an outstanding reputation at Brighton and Hove Albion with a distinctive possession-based, tactically flexible approach. After a difficult spell at Chelsea he was appointed Sweden head coach in 2023. Potter's emphasis on intelligent movement and structural versatility suits Sweden's technically gifted squad."
+      "managerBio": "Graham Potter is an English manager who built an outstanding reputation at Brighton and Hove Albion with a distinctive possession-based, tactically flexible approach. After a difficult spell at Chelsea he was appointed Sweden head coach in 2024. Potter's emphasis on intelligent movement and structural versatility suits Sweden's technically gifted squad.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "tunisia",
@@ -612,7 +658,9 @@
       },
       "managerNationality": "French",
       "managerDob": "1971-09-09",
-      "managerBio": "Sabri Lamouchi is a French manager of Tunisian heritage who played as a midfielder for Auxerre and Parma and represented Ivory Coast internationally. He managed Nottingham Forest, Rennes and other clubs before taking the Tunisia role. His experience spanning both French and African football brings a cross-cultural perspective to the Carthage Eagles."
+      "managerBio": "Sabri Lamouchi is a French manager of Tunisian heritage who played as a midfielder for Auxerre and Parma and represented Ivory Coast internationally. He managed Nottingham Forest, Rennes and other clubs before taking the Tunisia role. His experience spanning both French and African football brings a cross-cultural perspective to the Carthage Eagles.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "belgium",
@@ -638,7 +686,9 @@
       },
       "managerNationality": "French",
       "managerDob": "1964-02-21",
-      "managerBio": "Rudi Garcia is an experienced French manager whose club career included title-winning spells at Lille and high-profile positions at Roma, Marseille and Lyon. Appointed Belgium head coach in 2024, he took over a squad balancing experienced stars with a promising new generation and has brought clear tactical organisation to their World Cup preparation."
+      "managerBio": "Rudi Garcia is an experienced French manager whose club career included title-winning spells at Lille and high-profile positions at Roma, Marseille and Lyon. Appointed Belgium head coach in 2024, he took over a squad balancing experienced stars with a promising new generation and has brought clear tactical organisation to their World Cup preparation.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "egypt",
@@ -660,7 +710,9 @@
       },
       "managerNationality": "Egyptian",
       "managerDob": "1966-08-10",
-      "managerBio": "Hossam Hassan is Egypt's all-time top scorer and one of Africa's greatest ever players, having represented the Pharaohs for over two decades. The legendary striker was appointed head coach to lead Egypt in their first World Cup appearance since 1990. His iconic status and comprehensive knowledge of Egyptian football command natural authority in the dressing room."
+      "managerBio": "Hossam Hassan is Egypt's all-time top scorer and one of Africa's greatest ever players, having represented the Pharaohs for over two decades. The legendary striker was appointed head coach to lead Egypt in their first World Cup appearance since 1990. His iconic status and comprehensive knowledge of Egyptian football command natural authority in the dressing room.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Forward"
     },
     {
       "id": "iran",
@@ -686,6 +738,8 @@
       },
       "managerNationality": "Iranian",
       "managerBio": "Amir Ghalenoei is an Iranian manager with extensive experience in the Persian Gulf Pro League who was appointed Team Melli head coach to build on Iran's status as one of Asia's most defensively organised sides. His tactical discipline and familiarity with Iranian football culture have been central to the team's qualifying campaign.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Midfielder",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -712,6 +766,8 @@
       },
       "managerNationality": "English",
       "managerBio": "Darren Bazeley is an English manager and former professional right back appointed to guide New Zealand through their OFC qualifying campaign. He led the All Whites to a historic World Cup qualification — the country's first since 2010 — with a well-organised defensive structure and effective use of the squad's European-based players.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": "Defender",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -739,6 +795,8 @@
       "managerNationality": "Spanish",
       "managerDob": "1961-11-11",
       "managerBio": "Luis de la Fuente led Spain to Euro 2024 glory, their fourth European Championship and a vindication of his possession-dominant philosophy. A former winger who played for Athletic Club, he spent years developing Spain's youth and Olympic teams before being appointed senior head coach in 2023. His fluid, collective pressing system has produced the most exciting Spanish side in a generation.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Forward",
       "_verificationManager": "dob confirmed via Wikipedia article title (born 1961)"
     },
     {
@@ -761,6 +819,8 @@
       },
       "managerNationality": "Cape Verdean",
       "managerBio": "Bubista has built one of African football's most remarkable success stories as Cape Verde head coach, transforming a tiny island nation into genuine AFCON contenders and now World Cup debutants. His approach maximises the squad's physicality, collective organisation and team spirit to consistently perform above expectations against stronger opponents.",
+      "managerTenure": "2018–present",
+      "managerFormerPosition": "Midfielder",
       "_verificationManager": "dob uncertain; nationality uncertain"
     },
     {
@@ -784,6 +844,8 @@
       "managerNationality": "Greek",
       "managerDob": "1969-10-29",
       "managerBio": "Georgios Donis is a former Greek international winger who played in the Premier League with Blackburn Rovers before moving into management. He has managed clubs in Greece and took the Saudi Arabia head coach role to guide the Green Falcons through qualifying. His European background and understanding of the Saudi setup have shaped a more structured tactical identity.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Forward",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -810,7 +872,9 @@
       },
       "managerNationality": "Argentine",
       "managerDob": "1955-07-25",
-      "managerBio": "Marcelo Bielsa is one of football's most visionary and influential tacticians, whose high-intensity pressing system inspired a generation including Pep Guardiola and Mauricio Pochettino. The Argentine previously managed Chile, Athletic Club, Marseille and Leeds United — whom he famously promoted to the Premier League — before joining Uruguay in 2023. His total-football philosophy demands extraordinary commitment but unlocks the full collective potential of any squad."
+      "managerBio": "Marcelo Bielsa is one of football's most visionary and influential tacticians, whose high-intensity pressing system inspired a generation including Pep Guardiola and Mauricio Pochettino. The Argentine previously managed Chile, Athletic Club, Marseille and Leeds United — whom he famously promoted to the Premier League — before joining Uruguay in 2023. His total-football philosophy demands extraordinary commitment but unlocks the full collective potential of any squad.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": ""
     },
     {
       "id": "france",
@@ -836,7 +900,9 @@
       },
       "managerNationality": "French",
       "managerDob": "1968-10-15",
-      "managerBio": "Didier Deschamps is the most successful manager in French football history, guiding Les Bleus to World Cup glory in 2018 and the final in 2022. The former captain — who lifted the trophy himself in 1998 — has managed the national team since 2012. His pragmatic, defensively sound approach and exceptional ability to manage elite egos make him indispensable to the French football establishment."
+      "managerBio": "Didier Deschamps is the most successful manager in French football history, guiding Les Bleus to World Cup glory in 2018 and the final in 2022. The former captain — who lifted the trophy himself in 1998 — has managed the national team since 2012. His pragmatic, defensively sound approach and exceptional ability to manage elite egos make him indispensable to the French football establishment.",
+      "managerTenure": "2012–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "senegal",
@@ -862,6 +928,8 @@
       },
       "managerNationality": "Senegalese",
       "managerBio": "Pape Thiaw was appointed Senegal head coach to maintain the Lions of Teranga's status as one of Africa's most powerful sides following their 2021 AFCON triumph. A former Senegalese international, he brings continuity and a deep understanding of the squad's dynamics as they seek to make their mark on the world stage.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Midfielder",
       "_verificationManager": "dob uncertain; confirm appointment details"
     },
     {
@@ -888,7 +956,9 @@
       },
       "managerNationality": "Australian",
       "managerDob": "1963-08-03",
-      "managerBio": "Graham Arnold is an experienced Australian manager who guided the Socceroos to back-to-back World Cup appearances and a memorable round-of-16 run in 2022. After leaving the Australia role he was appointed Iraq head coach in 2024, bringing proven AFC qualifying experience and a direct, results-focused approach to one of Asia's most passionate footballing nations."
+      "managerBio": "Graham Arnold is an experienced Australian manager who guided the Socceroos to back-to-back World Cup appearances and a memorable round-of-16 run in 2022. After leaving the Australia role he was appointed Iraq head coach in 2024, bringing proven AFC qualifying experience and a direct, results-focused approach to one of Asia's most passionate footballing nations.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Forward"
     },
     {
       "id": "norway",
@@ -914,7 +984,9 @@
       },
       "managerNationality": "Norwegian",
       "managerDob": "1968-02-27",
-      "managerBio": "Ståle Solbakken is one of Scandinavia's most respected managers, having built FC Copenhagen into a dominant force in Danish football and managed clubs in Germany and England. The former Norwegian international was appointed national head coach in 2021 and delivered Norway's first World Cup since 1998. His intelligent build-up play system has unlocked the full potential of Erling Haaland and the squad around him."
+      "managerBio": "Ståle Solbakken is one of Scandinavia's most respected managers, having built FC Copenhagen into a dominant force in Danish football and managed clubs in Germany and England. The former Norwegian international was appointed national head coach in 2021 and delivered Norway's first World Cup since 1998. His intelligent build-up play system has unlocked the full potential of Erling Haaland and the squad around him.",
+      "managerTenure": "2021–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "argentina",
@@ -940,7 +1012,9 @@
       },
       "managerNationality": "Argentine",
       "managerDob": "1978-05-16",
-      "managerBio": "Lionel Scaloni became Argentina's greatest ever manager when he ended a 28-year international trophy drought, delivering the Copa América in 2021, the World Cup in 2022 and Copa América again in 2024. The former right-back had modest managerial experience when unexpectedly appointed in 2018 but transformed La Albiceleste into an unstoppable collective. His tactical flexibility and deep bond with Lionel Messi are the foundations of a dynasty."
+      "managerBio": "Lionel Scaloni became Argentina's greatest ever manager when he ended a 28-year international trophy drought, delivering the Copa América in 2021, the World Cup in 2022 and Copa América again in 2024. The former right-back had modest managerial experience when unexpectedly appointed in 2018 but transformed La Albiceleste into an unstoppable collective. His tactical flexibility and deep bond with Lionel Messi are the foundations of a dynasty.",
+      "managerTenure": "2018–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "algeria",
@@ -966,7 +1040,9 @@
       },
       "managerNationality": "Bosnian",
       "managerDob": "1963-08-15",
-      "managerBio": "Vladimir Petković is a Bosnian-born Swiss manager who guided Switzerland to consecutive World Cup knockout rounds and a famous Euro quarter-final run. After his long Swiss national team tenure he took charge of Algeria in 2022, bringing European tactical organisation and high-level tournament experience to the Desert Foxes' World Cup campaign."
+      "managerBio": "Vladimir Petković is a Bosnian-born Swiss manager who guided Switzerland to consecutive World Cup knockout rounds and a famous Euro quarter-final run. After his long Swiss national team tenure he took charge of Algeria in 2022, bringing European tactical organisation and high-level tournament experience to the Desert Foxes' World Cup campaign.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "austria",
@@ -992,7 +1068,9 @@
       },
       "managerNationality": "German",
       "managerDob": "1958-06-29",
-      "managerBio": "Ralf Rangnick is the architect of the Red Bull football philosophy and one of the most influential tactical minds in modern football, having pioneered gegenpressing and the high-pressing 4-2-2-2 system that inspired a generation of coaches. He became Austria head coach in 2022 and led the nation to their first knockout stage at a major tournament. His analytical rigour and commitment to structural discipline have transformed Austrian football."
+      "managerBio": "Ralf Rangnick is the architect of the Red Bull football philosophy and one of the most influential tactical minds in modern football, having pioneered gegenpressing and the high-pressing 4-2-2-2 system that inspired a generation of coaches. He became Austria head coach in 2022 and led the nation to their first knockout stage at a major tournament. His analytical rigour and commitment to structural discipline have transformed Austrian football.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": ""
     },
     {
       "id": "jordan",
@@ -1018,6 +1096,8 @@
       },
       "managerNationality": "Moroccan",
       "managerBio": "Jamal Sellami guided Jordan to their historic first World Cup qualification, creating one of the most remarkable stories in Asian football. His compact defensive organisation and ability to prepare a team for major upsets against stronger opponents have made Jordan one of the AFC's most competitive sides.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": "",
       "_verificationManager": "dob uncertain; nationality uncertain"
     },
     {
@@ -1044,7 +1124,9 @@
       },
       "managerNationality": "Spanish",
       "managerDob": "1973-07-13",
-      "managerBio": "Roberto Martínez is a Spanish manager who spent much of his career in England, most notably winning the FA Cup with Wigan Athletic in 2013. He led Belgium's Golden Generation to third place at the 2018 World Cup before being appointed Portugal head coach in 2022. His possession-based, attack-minded philosophy has unlocked a squad built around Cristiano Ronaldo and an exciting emerging generation."
+      "managerBio": "Roberto Martínez is a Spanish manager who spent much of his career in England, most notably winning the FA Cup with Wigan Athletic in 2013. He led Belgium's Golden Generation to third place at the 2018 World Cup before being appointed Portugal head coach in 2022. His possession-based, attack-minded philosophy has unlocked a squad built around Cristiano Ronaldo and an exciting emerging generation.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "dr-congo",
@@ -1070,6 +1152,8 @@
       },
       "managerNationality": "French",
       "managerBio": "Sébastien Desabre is a French manager with extensive experience in African football, having previously guided Uganda to the 2019 Africa Cup of Nations. He was appointed DR Congo head coach to bring structural organisation to a team of considerable natural talent. His patient approach to building team shape has helped the Leopards develop a more cohesive collective identity.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -1096,7 +1180,9 @@
       },
       "managerNationality": "Italian",
       "managerDob": "1973-09-13",
-      "managerBio": "Fabio Cannavaro is Italy's 2006 World Cup-winning captain and Ballon d'Or winner, widely regarded as one of the greatest defenders in football history. After retirement he moved into management in China and Saudi Arabia before taking charge of Uzbekistan. His global profile and elite-level experience have raised the White Wolves' ambition and brought international attention to Central Asian football."
+      "managerBio": "Fabio Cannavaro is Italy's 2006 World Cup-winning captain and Ballon d'Or winner, widely regarded as one of the greatest defenders in football history. After retirement he moved into management in China and Saudi Arabia before taking charge of Uzbekistan. His global profile and elite-level experience have raised the White Wolves' ambition and brought international attention to Central Asian football.",
+      "managerTenure": "2023–present",
+      "managerFormerPosition": "Defender"
     },
     {
       "id": "colombia",
@@ -1123,6 +1209,8 @@
       "managerNationality": "Argentine",
       "managerDob": "1966-06-09",
       "managerBio": "Néstor Lorenzo served as assistant to José Pékerman during Colombia's celebrated 2014 World Cup run and brings deep tactical continuity to the program. He managed clubs in Argentina before being appointed Colombia head coach in 2022. Lorenzo has restored discipline and structure while preserving the attacking flair that makes Los Cafeteros one of South America's most entertaining teams.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": "Midfielder",
       "_verificationManager": "dob uncertain"
     },
     {
@@ -1149,7 +1237,9 @@
       },
       "managerNationality": "German",
       "managerDob": "1973-08-29",
-      "managerBio": "Thomas Tuchel is a German manager renowned for his sophisticated tactical systems and meticulous preparation, having won the UEFA Champions League with Chelsea in 2021. He previously managed Borussia Dortmund, Paris Saint-Germain and Bayern Munich before being appointed England head coach in 2024. Tuchel has brought world-class tactical structure to the Three Lions as they target a first World Cup title on home soil."
+      "managerBio": "Thomas Tuchel is a German manager renowned for his sophisticated tactical systems and meticulous preparation, having won the UEFA Champions League with Chelsea in 2021. He previously managed Borussia Dortmund, Paris Saint-Germain and Bayern Munich before being appointed England head coach in 2024. Tuchel has brought world-class tactical structure to the Three Lions as they target a first World Cup title on home soil.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": ""
     },
     {
       "id": "croatia",
@@ -1175,7 +1265,9 @@
       },
       "managerNationality": "Croatian",
       "managerDob": "1966-10-26",
-      "managerBio": "Zlatko Dalić is the most successful manager in Croatian history, guiding the nation to the 2018 World Cup final and third place in 2022. The quietly effective tactician took charge in 2017 when qualification looked impossible and immediately galvanised the squad around Luka Modrić. His ability to consistently extract maximum results from a relatively small player pool has earned him enormous global respect."
+      "managerBio": "Zlatko Dalić is the most successful manager in Croatian history, guiding the nation to the 2018 World Cup final and third place in 2022. The quietly effective tactician took charge in 2017 when qualification looked impossible and immediately galvanised the squad around Luka Modrić. His ability to consistently extract maximum results from a relatively small player pool has earned him enormous global respect.",
+      "managerTenure": "2017–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "ghana",
@@ -1201,7 +1293,9 @@
       },
       "managerNationality": "Portuguese",
       "managerDob": "1953-03-01",
-      "managerBio": "Carlos Queiroz is one of football's most experienced and widely travelled managers, having served as Sir Alex Ferguson's assistant at Manchester United and managed Portugal, South Africa, Colombia and Iran at international level. He guided Iran to three consecutive World Cups. Appointed Ghana head coach in 2024, Queiroz brings formidable tournament experience to a Black Stars squad rebuilding after a difficult 2022 campaign."
+      "managerBio": "Carlos Queiroz is one of football's most experienced and widely travelled managers, having served as Sir Alex Ferguson's assistant at Manchester United and managed Portugal, South Africa, Colombia and Iran at international level. He guided Iran to three consecutive World Cups. Appointed Ghana head coach in 2024, Queiroz brings formidable tournament experience to a Black Stars squad rebuilding after a difficult 2022 campaign.",
+      "managerTenure": "2024–present",
+      "managerFormerPosition": "Midfielder"
     },
     {
       "id": "panama",
@@ -1228,6 +1322,8 @@
       "managerNationality": "Danish",
       "managerDob": "1973-02-14",
       "managerBio": "Thomas Christiansen is a Danish-Spanish manager who played as a striker for clubs including Borussia Dortmund and represented Denmark internationally. He managed clubs in Cyprus before taking the Panama role and has guided Los Canaleros with a tenacious, well-organised style. Under his management Panama have consistently qualified for and competed in major international tournaments.",
+      "managerTenure": "2022–present",
+      "managerFormerPosition": "Forward",
       "_verificationManager": "career details uncertain"
     }
   ]

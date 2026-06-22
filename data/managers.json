@@ -1,0 +1,632 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-22T00:00:00Z",
+  "data": {
+    "mexico": {
+      "career": [
+        { "role": "Manager", "club": "Osasuna", "years": "1998–2002" },
+        { "role": "Manager", "club": "Mexico", "years": "2002–2006" },
+        { "role": "Manager", "club": "Getafe", "years": "2006–2009" },
+        { "role": "Manager", "club": "Atlético Madrid", "years": "2009–2011" },
+        { "role": "Manager", "club": "Zaragoza", "years": "2011–2012" },
+        { "role": "Manager", "club": "Espanyol", "years": "2012–2014" },
+        { "role": "Manager", "club": "Monterrey", "years": "2015–2016" },
+        { "role": "Manager", "club": "Málaga", "years": "2016–2018" },
+        { "role": "Manager", "club": "Vissel Kobe", "years": "2020–2021" },
+        { "role": "Manager", "club": "Al Wasl", "years": "2021–2022" },
+        { "role": "Manager", "club": "Mexico", "years": "2023–present" }
+      ],
+      "playerClubs": ["UNAM", "Osasuna", "Atlas"],
+      "honours": []
+    },
+    "south-korea": {
+      "career": [
+        { "role": "Manager", "club": "South Korea Olympic", "years": "2010–2012" },
+        { "role": "Manager", "club": "South Korea", "years": "2013–2014" },
+        { "role": "Manager", "club": "Hangzhou Greentown", "years": "2015–2016" },
+        { "role": "Manager", "club": "Ulsan Hyundai", "years": "2017–2020" },
+        { "role": "Manager", "club": "Jeonbuk Hyundai Motors", "years": "2021" },
+        { "role": "Manager", "club": "South Korea", "years": "2023–present" }
+      ],
+      "playerClubs": ["Pohang Steelers", "Kashiwa Reysol", "LA Galaxy"],
+      "honours": [
+        { "title": "K League 1", "year": "2017", "role": "Manager" },
+        { "title": "K League 1", "year": "2018", "role": "Manager" },
+        { "title": "K League 1", "year": "2019", "role": "Manager" },
+        { "title": "K League 1", "year": "2020", "role": "Manager" }
+      ]
+    },
+    "south-africa": {
+      "career": [
+        { "role": "Manager", "club": "Club Brugge", "years": "1997–2003" },
+        { "role": "Manager", "club": "Various Belgian clubs", "years": "2003–2015" },
+        { "role": "Manager", "club": "Cameroon", "years": "2016–2019" },
+        { "role": "Manager", "club": "South Africa", "years": "2021–present" }
+      ],
+      "playerClubs": ["Club Brugge", "KV Mechelen"],
+      "honours": [
+        { "title": "Africa Cup of Nations", "year": "2017", "role": "Manager" }
+      ]
+    },
+    "czech-republic": {
+      "career": [
+        { "role": "Manager", "club": "Various Czech clubs", "years": "1980s–2000s" },
+        { "role": "Manager", "club": "Sparta Prague", "years": "1997–1999" },
+        { "role": "Manager", "club": "Viktoria Plzeň", "years": "2009–2011" },
+        { "role": "Manager", "club": "Slavia Prague", "years": "2012–2013" },
+        { "role": "Manager", "club": "Viktoria Plzeň", "years": "2016–2019" },
+        { "role": "Manager", "club": "Czechia", "years": "2023–present" }
+      ],
+      "playerClubs": ["Sparta Prague", "Dukla Prague"],
+      "honours": []
+    },
+    "canada": {
+      "career": [
+        { "role": "Manager", "club": "Montreal Impact", "years": "2012–2014" },
+        { "role": "Manager", "club": "New York Red Bulls", "years": "2015–2018" },
+        { "role": "Manager", "club": "RB Salzburg", "years": "2019–2021" },
+        { "role": "Manager", "club": "RB Leipzig", "years": "2021" },
+        { "role": "Manager", "club": "Leeds United", "years": "2022–2023" },
+        { "role": "Manager", "club": "Canada", "years": "2023–present" }
+      ],
+      "playerClubs": ["DC United", "Red Bull New York", "Chicago Fire"],
+      "honours": [
+        { "title": "Austrian Bundesliga", "year": "2020", "role": "Manager" }
+      ]
+    },
+    "bosnia-herzegovina": {
+      "career": [
+        { "role": "Manager", "club": "Hamburger SV (youth)", "years": "2015–2018" },
+        { "role": "Manager", "club": "Bosnian clubs", "years": "2018–2021" },
+        { "role": "Assistant Manager", "club": "Bosnia and Herzegovina", "years": "2021–2022" },
+        { "role": "Manager", "club": "Bosnia and Herzegovina", "years": "2022–present" }
+      ],
+      "playerClubs": ["Hamburger SV", "Borussia Dortmund", "Bayer Leverkusen"],
+      "honours": []
+    },
+    "qatar": {
+      "career": [
+        { "role": "Manager", "club": "Spain U19", "years": "2002–2006" },
+        { "role": "Manager", "club": "Spain U21", "years": "2006–2008" },
+        { "role": "Manager", "club": "Porto", "years": "2014–2016" },
+        { "role": "Manager", "club": "Spain", "years": "2016–2018" },
+        { "role": "Manager", "club": "Real Madrid", "years": "2018" },
+        { "role": "Manager", "club": "Sevilla", "years": "2019–2022" },
+        { "role": "Manager", "club": "Wolverhampton Wanderers", "years": "2022–2023" },
+        { "role": "Manager", "club": "West Ham United", "years": "2023–2024" },
+        { "role": "Manager", "club": "Qatar", "years": "2024–present" }
+      ],
+      "playerClubs": ["Real Madrid", "Barcelona", "Logroñés"],
+      "honours": [
+        { "title": "UEFA Europa League", "year": "2020", "role": "Manager" }
+      ]
+    },
+    "switzerland": {
+      "career": [
+        { "role": "Manager", "club": "FC Schaffhausen", "years": "2010–2012" },
+        { "role": "Manager", "club": "FC Basel", "years": "2013–2014" },
+        { "role": "Manager", "club": "Luzern", "years": "2017–2019" },
+        { "role": "Manager", "club": "SK Rapid Wien", "years": "2019–2021" },
+        { "role": "Manager", "club": "Switzerland", "years": "2021–present" }
+      ],
+      "playerClubs": ["FC Basel", "Galatasaray", "VfB Stuttgart"],
+      "honours": [
+        { "title": "Swiss Super League", "year": "2014", "role": "Manager" }
+      ]
+    },
+    "brazil": {
+      "career": [
+        { "role": "Manager", "club": "Reggiana", "years": "1995–1996" },
+        { "role": "Manager", "club": "Parma", "years": "1996–1998" },
+        { "role": "Manager", "club": "Juventus", "years": "1999–2001" },
+        { "role": "Manager", "club": "AC Milan", "years": "2001–2009" },
+        { "role": "Manager", "club": "Chelsea", "years": "2009–2011" },
+        { "role": "Manager", "club": "Paris Saint-Germain", "years": "2011–2013" },
+        { "role": "Manager", "club": "Real Madrid", "years": "2013–2015" },
+        { "role": "Manager", "club": "Bayern Munich", "years": "2016–2017" },
+        { "role": "Manager", "club": "Napoli", "years": "2018–2019" },
+        { "role": "Manager", "club": "Everton", "years": "2019–2021" },
+        { "role": "Manager", "club": "Real Madrid", "years": "2021–2024" },
+        { "role": "Manager", "club": "Brazil", "years": "2024–present" }
+      ],
+      "playerClubs": ["Parma", "Roma", "AC Milan"],
+      "honours": [
+        { "title": "UEFA Champions League", "year": "2003", "role": "Manager" },
+        { "title": "UEFA Champions League", "year": "2007", "role": "Manager" },
+        { "title": "UEFA Champions League", "year": "2014", "role": "Manager" },
+        { "title": "UEFA Champions League", "year": "2022", "role": "Manager" },
+        { "title": "UEFA Champions League", "year": "2024", "role": "Manager" },
+        { "title": "Serie A", "year": "2004", "role": "Manager" },
+        { "title": "La Liga", "year": "2022", "role": "Manager" }
+      ]
+    },
+    "morocco": {
+      "career": [
+        { "role": "Manager", "club": "Moroccan domestic clubs", "years": "2010s" },
+        { "role": "Manager", "club": "Morocco", "years": "2024–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "haiti": {
+      "career": [
+        { "role": "Assistant Manager", "club": "Lens", "years": "2000s" },
+        { "role": "Manager", "club": "Kenya", "years": "2017–2020" },
+        { "role": "Manager", "club": "Haiti", "years": "2023–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "scotland": {
+      "career": [
+        { "role": "Manager", "club": "Kilmarnock", "years": "2011–2019" },
+        { "role": "Manager", "club": "Scotland", "years": "2019–present" }
+      ],
+      "playerClubs": ["Chelsea", "West Brom", "Newcastle United"],
+      "honours": []
+    },
+    "usa": {
+      "career": [
+        { "role": "Manager", "club": "Espanyol", "years": "2009–2012" },
+        { "role": "Manager", "club": "Southampton", "years": "2013–2014" },
+        { "role": "Manager", "club": "Tottenham Hotspur", "years": "2014–2019" },
+        { "role": "Manager", "club": "Paris Saint-Germain", "years": "2021–2022" },
+        { "role": "Manager", "club": "Chelsea", "years": "2023–2024" },
+        { "role": "Manager", "club": "United States", "years": "2024–present" }
+      ],
+      "playerClubs": ["Newell's Old Boys", "Espanyol", "Paris Saint-Germain"],
+      "honours": []
+    },
+    "paraguay": {
+      "career": [
+        { "role": "Manager", "club": "Arsenal de Sarandí", "years": "2008–2011" },
+        { "role": "Manager", "club": "Boca Juniors", "years": "2018–2019" },
+        { "role": "Manager", "club": "Ecuador", "years": "2020–2022" },
+        { "role": "Manager", "club": "Costa Rica", "years": "2022" },
+        { "role": "Manager", "club": "Paraguay", "years": "2023–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "australia": {
+      "career": [
+        { "role": "Manager", "club": "Western Sydney Wanderers", "years": "2012" },
+        { "role": "Manager", "club": "Perth Glory", "years": "2018–2020" },
+        { "role": "Manager", "club": "Melbourne Victory", "years": "2022–2024" },
+        { "role": "Manager", "club": "Australia", "years": "2024–present" }
+      ],
+      "playerClubs": ["Crystal Palace", "Sanfrecce Hiroshima", "Yokohama F. Marinos"],
+      "honours": []
+    },
+    "turkey": {
+      "career": [
+        { "role": "Manager", "club": "Catania", "years": "2011" },
+        { "role": "Manager", "club": "Siena", "years": "2011–2012" },
+        { "role": "Manager", "club": "Fiorentina", "years": "2012–2015" },
+        { "role": "Manager", "club": "Sampdoria", "years": "2015–2016" },
+        { "role": "Manager", "club": "AC Milan", "years": "2016–2017" },
+        { "role": "Manager", "club": "Sevilla", "years": "2017–2018" },
+        { "role": "Manager", "club": "Aston Villa", "years": "2018" },
+        { "role": "Manager", "club": "Fiorentina", "years": "2019" },
+        { "role": "Manager", "club": "Beşiktaş", "years": "2021–2022" },
+        { "role": "Manager", "club": "Turkey", "years": "2023–present" }
+      ],
+      "playerClubs": ["Roma", "Fiorentina", "Sampdoria"],
+      "honours": []
+    },
+    "germany": {
+      "career": [
+        { "role": "Manager", "club": "TSG Hoffenheim U19", "years": "2015–2016" },
+        { "role": "Manager", "club": "TSG Hoffenheim", "years": "2016–2019" },
+        { "role": "Manager", "club": "RB Leipzig", "years": "2019–2021" },
+        { "role": "Manager", "club": "Bayern Munich", "years": "2021–2023" },
+        { "role": "Manager", "club": "Germany", "years": "2023–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "curacao": {
+      "career": [
+        { "role": "Manager", "club": "PSV Eindhoven", "years": "1994–2002" },
+        { "role": "Manager", "club": "Rangers", "years": "2002–2003" },
+        { "role": "Manager", "club": "Netherlands", "years": "2002–2004" },
+        { "role": "Manager", "club": "South Korea", "years": "2005–2006" },
+        { "role": "Manager", "club": "Zenit Saint Petersburg", "years": "2006–2009" },
+        { "role": "Manager", "club": "Belgium", "years": "2009–2010" },
+        { "role": "Manager", "club": "Russia", "years": "2010–2012" },
+        { "role": "Manager", "club": "Various clubs (Sunderland, Fenerbahçe, others)", "years": "2012–2020" },
+        { "role": "Manager", "club": "Feyenoord", "years": "2020–2021" },
+        { "role": "Manager", "club": "Curaçao", "years": "2023–present" }
+      ],
+      "playerClubs": ["ADO Den Haag", "Brentford"],
+      "honours": [
+        { "title": "Eredivisie", "year": "1997", "role": "Manager" },
+        { "title": "Eredivisie", "year": "2000", "role": "Manager" },
+        { "title": "Scottish Premier League", "year": "2003", "role": "Manager" }
+      ]
+    },
+    "ivory-coast": {
+      "career": [
+        { "role": "Manager", "club": "Ivory Coast U23", "years": "2022–2024" },
+        { "role": "Manager", "club": "Ivory Coast (caretaker)", "years": "2024" },
+        { "role": "Manager", "club": "Ivory Coast", "years": "2024–present" }
+      ],
+      "playerClubs": ["Nice", "Nantes", "Reading"],
+      "honours": [
+        { "title": "Africa Cup of Nations", "year": "2023", "role": "Manager" }
+      ]
+    },
+    "ecuador": {
+      "career": [
+        { "role": "Assistant Manager", "club": "Argentina", "years": "2016" },
+        { "role": "Assistant Manager", "club": "Sevilla", "years": "2016–2017" },
+        { "role": "Manager", "club": "Defensa y Justicia", "years": "2018–2020" },
+        { "role": "Manager", "club": "Racing Club", "years": "2020–2021" },
+        { "role": "Manager", "club": "Independiente", "years": "2022" },
+        { "role": "Manager", "club": "Ecuador", "years": "2023–present" }
+      ],
+      "playerClubs": [],
+      "honours": [
+        { "title": "Copa Sudamericana", "year": "2020", "role": "Manager" }
+      ]
+    },
+    "netherlands": {
+      "career": [
+        { "role": "Manager", "club": "Ajax", "years": "2000–2001" },
+        { "role": "Manager", "club": "Barcelona", "years": "2001" },
+        { "role": "Manager", "club": "Valencia", "years": "2007–2008" },
+        { "role": "Manager", "club": "AZ", "years": "2009–2012" },
+        { "role": "Manager", "club": "Feyenoord", "years": "2011" },
+        { "role": "Manager", "club": "Southampton", "years": "2012" },
+        { "role": "Manager", "club": "Everton", "years": "2014–2016" },
+        { "role": "Manager", "club": "Netherlands", "years": "2018–2020" },
+        { "role": "Manager", "club": "Barcelona", "years": "2020–2021" },
+        { "role": "Manager", "club": "Netherlands", "years": "2023–present" }
+      ],
+      "playerClubs": ["Ajax", "PSV Eindhoven", "Barcelona"],
+      "honours": [
+        { "title": "UEFA Champions League", "year": "1995", "role": "Player" },
+        { "title": "Eredivisie", "year": "1985", "role": "Player" },
+        { "title": "La Liga", "year": "1991", "role": "Player" },
+        { "title": "La Liga", "year": "1992", "role": "Player" },
+        { "title": "La Liga", "year": "1993", "role": "Player" },
+        { "title": "La Liga", "year": "1994", "role": "Player" }
+      ]
+    },
+    "japan": {
+      "career": [
+        { "role": "Manager", "club": "Sanfrecce Hiroshima", "years": "2012–2017" },
+        { "role": "Assistant Manager", "club": "Japan", "years": "2017–2018" },
+        { "role": "Manager", "club": "Japan", "years": "2018–present" }
+      ],
+      "playerClubs": ["Sanfrecce Hiroshima"],
+      "honours": [
+        { "title": "J1 League", "year": "2012", "role": "Manager" },
+        { "title": "J1 League", "year": "2013", "role": "Manager" },
+        { "title": "J1 League", "year": "2015", "role": "Manager" }
+      ]
+    },
+    "sweden": {
+      "career": [
+        { "role": "Manager", "club": "Östersunds FK", "years": "2011–2018" },
+        { "role": "Manager", "club": "Swansea City", "years": "2018–2019" },
+        { "role": "Manager", "club": "Brighton & Hove Albion", "years": "2019–2022" },
+        { "role": "Manager", "club": "Chelsea", "years": "2022–2023" },
+        { "role": "Manager", "club": "Sweden", "years": "2024–present" }
+      ],
+      "playerClubs": ["York City", "Northampton Town", "Stoke City"],
+      "honours": []
+    },
+    "tunisia": {
+      "career": [
+        { "role": "Manager", "club": "Ivory Coast", "years": "2012–2013" },
+        { "role": "Manager", "club": "Rennes", "years": "2013–2015" },
+        { "role": "Manager", "club": "Al-Gharafa", "years": "2016–2018" },
+        { "role": "Manager", "club": "Nottingham Forest", "years": "2019–2020" },
+        { "role": "Manager", "club": "Al-Qadsiah", "years": "2021–2023" },
+        { "role": "Manager", "club": "Tunisia", "years": "2024–present" }
+      ],
+      "playerClubs": ["Auxerre", "Parma", "Inter Milan"],
+      "honours": []
+    },
+    "belgium": {
+      "career": [
+        { "role": "Manager", "club": "Dijon", "years": "2002–2007" },
+        { "role": "Manager", "club": "Le Mans", "years": "2007–2008" },
+        { "role": "Manager", "club": "Lille", "years": "2008–2013" },
+        { "role": "Manager", "club": "Roma", "years": "2013–2016" },
+        { "role": "Manager", "club": "Marseille", "years": "2016–2019" },
+        { "role": "Manager", "club": "Lyon", "years": "2019–2021" },
+        { "role": "Manager", "club": "Napoli", "years": "2022–2023" },
+        { "role": "Manager", "club": "Belgium", "years": "2024–present" }
+      ],
+      "playerClubs": [],
+      "honours": [
+        { "title": "Ligue 1", "year": "2011", "role": "Manager" }
+      ]
+    },
+    "egypt": {
+      "career": [
+        { "role": "Manager", "club": "Wadi Degla", "years": "2014–2015" },
+        { "role": "Manager", "club": "Egyptian clubs", "years": "2015–2023" },
+        { "role": "Manager", "club": "Egypt", "years": "2024–present" }
+      ],
+      "playerClubs": ["Zamalek", "PAOK", "Al-Ain"],
+      "honours": [
+        { "title": "Africa Cup of Nations", "year": "1998", "role": "Player" },
+        { "title": "Africa Cup of Nations", "year": "2006", "role": "Player" },
+        { "title": "Africa Cup of Nations", "year": "2008", "role": "Player" }
+      ]
+    },
+    "iran": {
+      "career": [
+        { "role": "Manager", "club": "Tractor SC", "years": "2013–2016" },
+        { "role": "Manager", "club": "Esteghlal", "years": "2016–2019" },
+        { "role": "Manager", "club": "Persepolis", "years": "2020–2021" },
+        { "role": "Manager", "club": "Tractor SC", "years": "2021–2023" },
+        { "role": "Manager", "club": "Iran", "years": "2023–present" }
+      ],
+      "playerClubs": ["Esteghlal", "Persepolis"],
+      "honours": []
+    },
+    "new-zealand": {
+      "career": [
+        { "role": "Coach", "club": "Watford (academy)", "years": "2000s" },
+        { "role": "Manager", "club": "New Zealand U20", "years": "2019–2022" },
+        { "role": "Manager", "club": "New Zealand", "years": "2022–present" }
+      ],
+      "playerClubs": ["Watford", "Wolverhampton Wanderers", "Swindon Town"],
+      "honours": []
+    },
+    "spain": {
+      "career": [
+        { "role": "Manager", "club": "Spain U18", "years": "2010–2013" },
+        { "role": "Manager", "club": "Spain U19", "years": "2013–2014" },
+        { "role": "Manager", "club": "Spain U21", "years": "2013–2022" },
+        { "role": "Manager", "club": "Spain", "years": "2023–present" }
+      ],
+      "playerClubs": ["Athletic Club", "Real Sociedad", "Logroñés"],
+      "honours": [
+        { "title": "UEFA European U-21 Championship", "year": "2019", "role": "Manager" },
+        { "title": "UEFA European U-21 Championship", "year": "2021", "role": "Manager" },
+        { "title": "UEFA European Championship", "year": "2024", "role": "Manager" }
+      ]
+    },
+    "cape-verde": {
+      "career": [
+        { "role": "Player/Coach", "club": "Cape Verdean clubs", "years": "2010–2018" },
+        { "role": "Manager", "club": "Cape Verde", "years": "2018–present" }
+      ],
+      "playerClubs": ["Sporting Clube da Praia"],
+      "honours": []
+    },
+    "saudi-arabia": {
+      "career": [
+        { "role": "Manager", "club": "Atromitos", "years": "2018–2020" },
+        { "role": "Manager", "club": "Panetolikos", "years": "2020–2021" },
+        { "role": "Manager", "club": "Aris Thessaloniki", "years": "2021–2022" },
+        { "role": "Manager", "club": "Saudi Arabia", "years": "2024–present" }
+      ],
+      "playerClubs": ["Blackburn Rovers", "Panathinaikos", "Stuttgart"],
+      "honours": []
+    },
+    "uruguay": {
+      "career": [
+        { "role": "Manager", "club": "Newell's Old Boys", "years": "1990–1992" },
+        { "role": "Manager", "club": "Argentina", "years": "1998–2004" },
+        { "role": "Manager", "club": "Chile", "years": "2007–2011" },
+        { "role": "Manager", "club": "Athletic Club", "years": "2011–2013" },
+        { "role": "Manager", "club": "Marseille", "years": "2014–2015" },
+        { "role": "Manager", "club": "Lille", "years": "2017" },
+        { "role": "Manager", "club": "Leeds United", "years": "2018–2022" },
+        { "role": "Manager", "club": "Uruguay", "years": "2023–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "france": {
+      "career": [
+        { "role": "Manager", "club": "Monaco", "years": "2001–2005" },
+        { "role": "Manager", "club": "Juventus", "years": "2006–2007" },
+        { "role": "Manager", "club": "Marseille", "years": "2009–2012" },
+        { "role": "Manager", "club": "France", "years": "2012–present" }
+      ],
+      "playerClubs": ["Marseille", "Juventus", "Chelsea"],
+      "honours": [
+        { "title": "UEFA Champions League", "year": "1993", "role": "Player" },
+        { "title": "UEFA Champions League", "year": "1996", "role": "Player" },
+        { "title": "FIFA World Cup", "year": "1998", "role": "Player" },
+        { "title": "FIFA World Cup", "year": "2018", "role": "Manager" }
+      ]
+    },
+    "senegal": {
+      "career": [
+        { "role": "Manager", "club": "Senegal U20", "years": "2020–2023" },
+        { "role": "Assistant Manager", "club": "Senegal", "years": "2023–2024" },
+        { "role": "Manager", "club": "Senegal", "years": "2024–present" }
+      ],
+      "playerClubs": ["Paris FC", "Valenciennes FC"],
+      "honours": []
+    },
+    "iraq": {
+      "career": [
+        { "role": "Manager", "club": "Central Coast Mariners", "years": "2010–2012" },
+        { "role": "Manager", "club": "Newcastle Jets", "years": "2013–2014" },
+        { "role": "Manager", "club": "Australia", "years": "2018–2024" },
+        { "role": "Manager", "club": "Iraq", "years": "2024–present" }
+      ],
+      "playerClubs": ["Sydney City", "Club Brugge", "Nagoya Grampus Eight"],
+      "honours": []
+    },
+    "norway": {
+      "career": [
+        { "role": "Manager", "club": "FC Copenhagen", "years": "1997" },
+        { "role": "Manager", "club": "FC Copenhagen", "years": "2002–2011" },
+        { "role": "Manager", "club": "1. FC Köln", "years": "2011–2012" },
+        { "role": "Manager", "club": "Wolverhampton Wanderers", "years": "2012–2013" },
+        { "role": "Manager", "club": "FC Copenhagen", "years": "2013–2015" },
+        { "role": "Manager", "club": "FC Copenhagen", "years": "2020" },
+        { "role": "Manager", "club": "Norway", "years": "2021–present" }
+      ],
+      "playerClubs": ["Lillestrøm SK", "FK Kongsvinger", "FC Copenhagen"],
+      "honours": [
+        { "title": "Danish Superliga", "year": "2006", "role": "Manager" },
+        { "title": "Danish Superliga", "year": "2009", "role": "Manager" },
+        { "title": "Danish Superliga", "year": "2010", "role": "Manager" }
+      ]
+    },
+    "argentina": {
+      "career": [
+        { "role": "Manager", "club": "Argentina U20", "years": "2018" },
+        { "role": "Manager", "club": "Argentina (caretaker)", "years": "2018" },
+        { "role": "Manager", "club": "Argentina", "years": "2018–present" }
+      ],
+      "playerClubs": ["Deportivo La Coruña", "Lazio", "West Ham United"],
+      "honours": [
+        { "title": "Copa América", "year": "2021", "role": "Manager" },
+        { "title": "FIFA World Cup", "year": "2022", "role": "Manager" },
+        { "title": "Copa América", "year": "2024", "role": "Manager" }
+      ]
+    },
+    "algeria": {
+      "career": [
+        { "role": "Manager", "club": "FC Sion", "years": "2006–2009" },
+        { "role": "Manager", "club": "Lazio", "years": "2012–2013" },
+        { "role": "Manager", "club": "Trabzonspor", "years": "2013–2014" },
+        { "role": "Manager", "club": "Switzerland", "years": "2014–2021" },
+        { "role": "Manager", "club": "Bordeaux", "years": "2021–2022" },
+        { "role": "Manager", "club": "Algeria", "years": "2022–present" }
+      ],
+      "playerClubs": ["FC Sion", "Lausanne-Sport", "Servette"],
+      "honours": []
+    },
+    "austria": {
+      "career": [
+        { "role": "Manager", "club": "VfB Stuttgart (youth)", "years": "1983–1985" },
+        { "role": "Manager", "club": "Hannover 96", "years": "1991–1992" },
+        { "role": "Manager", "club": "Ulm 1846", "years": "1994–1999" },
+        { "role": "Manager", "club": "Schalke 04", "years": "1999–2004" },
+        { "role": "Manager", "club": "TSG Hoffenheim", "years": "2006–2011" },
+        { "role": "Manager", "club": "RB Salzburg", "years": "2012–2015" },
+        { "role": "Manager", "club": "RB Leipzig", "years": "2015–2019" },
+        { "role": "Manager", "club": "Lokomotiv Moscow", "years": "2019–2020" },
+        { "role": "Manager", "club": "Manchester United (interim)", "years": "2021–2022" },
+        { "role": "Manager", "club": "Austria", "years": "2022–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "jordan": {
+      "career": [
+        { "role": "Manager", "club": "Moroccan clubs", "years": "2010s" },
+        { "role": "Manager", "club": "Jordan", "years": "2022–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "portugal": {
+      "career": [
+        { "role": "Manager", "club": "Swansea City", "years": "2007–2009" },
+        { "role": "Manager", "club": "Wigan Athletic", "years": "2009–2013" },
+        { "role": "Manager", "club": "Everton", "years": "2013–2016" },
+        { "role": "Manager", "club": "Belgium", "years": "2016–2022" },
+        { "role": "Manager", "club": "Portugal", "years": "2022–present" }
+      ],
+      "playerClubs": ["Real Zaragoza", "Wigan Athletic", "Motherwell"],
+      "honours": [
+        { "title": "FA Cup", "year": "2013", "role": "Manager" }
+      ]
+    },
+    "dr-congo": {
+      "career": [
+        { "role": "Manager", "club": "Clermont Foot", "years": "2010–2013" },
+        { "role": "Manager", "club": "Uganda", "years": "2017–2019" },
+        { "role": "Manager", "club": "Al-Wahda", "years": "2019–2021" },
+        { "role": "Manager", "club": "DR Congo", "years": "2023–present" }
+      ],
+      "playerClubs": [],
+      "honours": []
+    },
+    "uzbekistan": {
+      "career": [
+        { "role": "Manager", "club": "Dubai Club", "years": "2010–2011" },
+        { "role": "Manager", "club": "Guangzhou Evergrande", "years": "2014" },
+        { "role": "Manager", "club": "UAE national team", "years": "2019" },
+        { "role": "Manager", "club": "Guangzhou FC", "years": "2019–2021" },
+        { "role": "Manager", "club": "Benevento", "years": "2022–2023" },
+        { "role": "Manager", "club": "Uzbekistan", "years": "2023–present" }
+      ],
+      "playerClubs": ["Napoli", "Parma", "Juventus"],
+      "honours": [
+        { "title": "FIFA World Cup", "year": "2006", "role": "Player" },
+        { "title": "Serie A", "year": "2002", "role": "Player" },
+        { "title": "Serie A", "year": "2003", "role": "Player" },
+        { "title": "Serie A", "year": "2004", "role": "Player" },
+        { "title": "La Liga", "year": "2007", "role": "Player" }
+      ]
+    },
+    "colombia": {
+      "career": [
+        { "role": "Assistant Manager", "club": "Colombia", "years": "2012–2016" },
+        { "role": "Manager", "club": "San Lorenzo", "years": "2019–2020" },
+        { "role": "Manager", "club": "Argentinos Juniors", "years": "2021–2022" },
+        { "role": "Manager", "club": "Colombia", "years": "2022–present" }
+      ],
+      "playerClubs": ["Independiente", "River Plate", "Ferro Carril Oeste"],
+      "honours": []
+    },
+    "england": {
+      "career": [
+        { "role": "Manager", "club": "Mainz 05", "years": "2009–2014" },
+        { "role": "Manager", "club": "Borussia Dortmund", "years": "2015–2017" },
+        { "role": "Manager", "club": "Paris Saint-Germain", "years": "2018–2020" },
+        { "role": "Manager", "club": "Chelsea", "years": "2021–2022" },
+        { "role": "Manager", "club": "Bayern Munich", "years": "2023–2024" },
+        { "role": "Manager", "club": "England", "years": "2024–present" }
+      ],
+      "playerClubs": [],
+      "honours": [
+        { "title": "UEFA Champions League", "year": "2021", "role": "Manager" },
+        { "title": "DFB-Pokal", "year": "2017", "role": "Manager" }
+      ]
+    },
+    "croatia": {
+      "career": [
+        { "role": "Manager", "club": "NK Varteks", "years": "2004–2007" },
+        { "role": "Manager", "club": "HNK Rijeka", "years": "2010–2012" },
+        { "role": "Manager", "club": "Al Ain", "years": "2014–2017" },
+        { "role": "Manager", "club": "Croatia", "years": "2017–present" }
+      ],
+      "playerClubs": ["NK Varteks", "NK Varaždin"],
+      "honours": []
+    },
+    "ghana": {
+      "career": [
+        { "role": "Manager", "club": "Sporting CP", "years": "1991–1992" },
+        { "role": "Manager", "club": "Portugal U20", "years": "1994–1996" },
+        { "role": "Manager", "club": "New York MetroStars", "years": "1996" },
+        { "role": "Assistant Manager", "club": "Manchester United", "years": "2002–2008" },
+        { "role": "Manager", "club": "Portugal", "years": "2008–2010" },
+        { "role": "Manager", "club": "South Africa", "years": "2010–2012" },
+        { "role": "Manager", "club": "Iran", "years": "2011–2019" },
+        { "role": "Manager", "club": "Colombia", "years": "2019–2020" },
+        { "role": "Manager", "club": "Egypt", "years": "2021–2022" },
+        { "role": "Manager", "club": "Ghana", "years": "2024–present" }
+      ],
+      "playerClubs": ["Vitória de Setúbal"],
+      "honours": []
+    },
+    "panama": {
+      "career": [
+        { "role": "Manager", "club": "APOEL Nicosia", "years": "2016–2017" },
+        { "role": "Manager", "club": "Leeds United", "years": "2017–2018" },
+        { "role": "Manager", "club": "Standard Liège", "years": "2018–2019" },
+        { "role": "Manager", "club": "Panathinaikos", "years": "2020–2021" },
+        { "role": "Manager", "club": "Club Brugge (assistant)", "years": "2021–2022" },
+        { "role": "Manager", "club": "Panama", "years": "2022–present" }
+      ],
+      "playerClubs": ["Borussia Dortmund", "Club Brugge", "PAOK"],
+      "honours": []
+    }
+  }
+}
