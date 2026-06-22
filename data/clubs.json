@@ -2,463 +2,2933 @@
   "version": "1.0",
   "lastUpdated": "2026-06-20T00:00:00Z",
   "data": [
-    { "id": "arsenal",              "name": "Arsenal",                    "leagueId": "premier-league",       "country": "England"      },
-    { "id": "aston-villa",          "name": "Aston Villa",                "leagueId": "premier-league",       "country": "England"      },
-    { "id": "brentford",            "name": "Brentford",                  "leagueId": "premier-league",       "country": "England"      },
-    { "id": "bournemouth",          "name": "AFC Bournemouth",            "leagueId": "premier-league",       "country": "England"      },
-    { "id": "chelsea",              "name": "Chelsea",                    "leagueId": "premier-league",       "country": "England"      },
-    { "id": "crystal-palace",       "name": "Crystal Palace",             "leagueId": "premier-league",       "country": "England"      },
-    { "id": "everton",              "name": "Everton",                    "leagueId": "premier-league",       "country": "England"      },
-    { "id": "liverpool",            "name": "Liverpool",                  "leagueId": "premier-league",       "country": "England"      },
-    { "id": "manchester-city",      "name": "Manchester City",            "leagueId": "premier-league",       "country": "England"      },
-    { "id": "manchester-united",    "name": "Manchester United",          "leagueId": "premier-league",       "country": "England"      },
-    { "id": "newcastle-united",     "name": "Newcastle United",           "leagueId": "premier-league",       "country": "England"      },
-    { "id": "nottingham-forest",    "name": "Nottingham Forest",          "leagueId": "premier-league",       "country": "England"      },
-    { "id": "tottenham-hotspur",    "name": "Tottenham Hotspur",          "leagueId": "premier-league",       "country": "England"      },
-    { "id": "brighton",             "name": "Brighton & Hove Albion",     "leagueId": "premier-league",       "country": "England"      },
-    { "id": "wolverhampton",        "name": "Wolverhampton Wanderers",    "leagueId": "premier-league",       "country": "England"      },
-    { "id": "west-ham",             "name": "West Ham United",            "leagueId": "premier-league",       "country": "England"      },
-    { "id": "fulham",               "name": "Fulham FC",                  "leagueId": "premier-league",       "country": "England"      },
-    { "id": "sunderland",           "name": "Sunderland",                 "leagueId": "championship",         "country": "England"      },
-    { "id": "barcelona",            "name": "FC Barcelona",               "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "real-madrid",          "name": "Real Madrid",                "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "atletico-madrid",      "name": "Atlético Madrid",            "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "athletic-bilbao",      "name": "Athletic Bilbao",            "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "real-sociedad",        "name": "Real Sociedad",              "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "real-betis",           "name": "Real Betis",                 "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "osasuna",              "name": "Osasuna",                    "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "celta-vigo",           "name": "Celta Vigo",                 "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "villarreal",           "name": "Villarreal",                 "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "mallorca",             "name": "RCD Mallorca",               "leagueId": "la-liga",              "country": "Spain"        },
-    { "id": "ac-milan",             "name": "AC Milan",                   "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "atalanta",             "name": "Atalanta",                   "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "inter-milan",          "name": "Inter Milan",                "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "juventus",             "name": "Juventus",                   "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "roma",                 "name": "AS Roma",                    "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "como",                 "name": "Como 1907",                  "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "napoli",               "name": "SSC Napoli",                 "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "fiorentina",           "name": "ACF Fiorentina",             "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "udinese",              "name": "Udinese Calcio",             "leagueId": "serie-a",              "country": "Italy"        },
-    { "id": "lens",                 "name": "RC Lens",                    "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "lyon",                 "name": "Olympique Lyonnais",         "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "monaco",               "name": "AS Monaco",                  "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "paris-saint-germain",  "name": "Paris Saint-Germain",        "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "rennes",               "name": "Stade Rennais",              "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "marseille",            "name": "Olympique de Marseille",     "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "strasbourg",           "name": "RC Strasbourg Alsace",       "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "nice",                 "name": "OGC Nice",                   "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "reims",                "name": "Stade de Reims",             "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "brest",                "name": "Stade Brest 29",             "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "toulouse",             "name": "Toulouse FC",                "leagueId": "ligue-1",              "country": "France"       },
-    { "id": "bayer-leverkusen",     "name": "Bayer Leverkusen",           "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "bayern-munich",        "name": "Bayern Munich",              "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "borussia-dortmund",    "name": "Borussia Dortmund",          "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "vfb-stuttgart",        "name": "VfB Stuttgart",              "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "eintracht-frankfurt",  "name": "Eintracht Frankfurt",        "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "rb-leipzig",           "name": "RB Leipzig",                 "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "tsg-hoffenheim",       "name": "TSG Hoffenheim",             "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "mainz-05",             "name": "Mainz 05",                   "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "wolfsburg",            "name": "VfL Wolfsburg",              "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "freiburg",             "name": "SC Freiburg",                "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "gladbach",             "name": "Borussia Mönchengladbach",   "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "bochum",               "name": "VfL Bochum",                 "leagueId": "bundesliga",           "country": "Germany"      },
-    { "id": "fenerbahce",           "name": "Fenerbahçe",                 "leagueId": "super-lig",            "country": "Turkey"       },
-    { "id": "galatasaray",          "name": "Galatasaray",                "leagueId": "super-lig",            "country": "Turkey"       },
-    { "id": "fc-porto",             "name": "FC Porto",                   "leagueId": "primeira-liga",        "country": "Portugal"     },
-    { "id": "benfica",              "name": "SL Benfica",                 "leagueId": "primeira-liga",        "country": "Portugal"     },
-    { "id": "sporting-cp",          "name": "Sporting CP",                "leagueId": "primeira-liga",        "country": "Portugal"     },
-    { "id": "ajax",                 "name": "AFC Ajax",                   "leagueId": "eredivisie",           "country": "Netherlands"  },
-    { "id": "psv-eindhoven",        "name": "PSV Eindhoven",              "leagueId": "eredivisie",           "country": "Netherlands"  },
-    { "id": "feyenoord",            "name": "Feyenoord",                  "leagueId": "eredivisie",           "country": "Netherlands"  },
-    { "id": "club-brugge",          "name": "Club Brugge",                "leagueId": "pro-league",           "country": "Belgium"      },
-    { "id": "anderlecht",           "name": "RSC Anderlecht",             "leagueId": "pro-league",           "country": "Belgium"      },
-    { "id": "genk",                 "name": "KRC Genk",                   "leagueId": "pro-league",           "country": "Belgium"      },
-    { "id": "sint-truiden",         "name": "Sint-Truiden VV",            "leagueId": "pro-league",           "country": "Belgium"      },
-    { "id": "celtic",               "name": "Celtic FC",                  "leagueId": "scottish-premiership", "country": "Scotland"     },
-    { "id": "rangers",              "name": "Rangers FC",                 "leagueId": "scottish-premiership", "country": "Scotland"     },
-    { "id": "bodo-glimt",           "name": "FK Bodø/Glimt",              "leagueId": "eliteserien",          "country": "Norway"       },
-    { "id": "valerenga",            "name": "Vålerenga FK",               "leagueId": "eliteserien",          "country": "Norway"       },
-    { "id": "brann",                "name": "SK Brann",                   "leagueId": "eliteserien",          "country": "Norway"       },
-    { "id": "rosenborg",            "name": "Rosenborg BK",               "leagueId": "eliteserien",          "country": "Norway"       },
-    { "id": "viking",               "name": "Viking FK",                  "leagueId": "eliteserien",          "country": "Norway"       },
-    { "id": "vissel-kobe",          "name": "Vissel Kobe",                "leagueId": "j-league",             "country": "Japan"        },
-    { "id": "urawa-red-diamonds",   "name": "Urawa Red Diamonds",         "leagueId": "j-league",             "country": "Japan"        },
-    { "id": "kawasaki-frontale",    "name": "Kawasaki Frontale",          "leagueId": "j-league",             "country": "Japan"        },
-    { "id": "al-ahli",              "name": "Al-Ahli",                    "leagueId": "saudi-pro-league",     "country": "Saudi Arabia" },
-    { "id": "al-hilal",             "name": "Al-Hilal",                   "leagueId": "saudi-pro-league",     "country": "Saudi Arabia" },
-    { "id": "al-ittihad",           "name": "Al-Ittihad",                 "leagueId": "saudi-pro-league",     "country": "Saudi Arabia" },
-    { "id": "al-nassr",             "name": "Al-Nassr",                   "leagueId": "saudi-pro-league",     "country": "Saudi Arabia" },
-    { "id": "botafogo",             "name": "Botafogo",                   "leagueId": "brasileirao",          "country": "Brazil"       },
-    { "id": "flamengo",             "name": "Flamengo",                   "leagueId": "brasileirao",          "country": "Brazil"       },
-    { "id": "gremio",               "name": "Grêmio",                     "leagueId": "brasileirao",          "country": "Brazil"       },
-    { "id": "santos",               "name": "Santos",                     "leagueId": "brasileirao",          "country": "Brazil"       },
-    { "id": "palmeiras",            "name": "Palmeiras",                  "leagueId": "brasileirao",          "country": "Brazil"       },
-    { "id": "corinthians",          "name": "Corinthians",                "leagueId": "brasileirao",          "country": "Brazil"       },
-    { "id": "inter-miami",          "name": "Inter Miami CF",             "leagueId": "mls",                  "country": "USA"          },
-    { "id": "colorado-rapids",      "name": "Colorado Rapids",            "leagueId": "mls",                  "country": "USA"          },
-    { "id": "columbus-crew",        "name": "Columbus Crew",              "leagueId": "mls",                  "country": "USA"          },
-    { "id": "nashville-sc",         "name": "Nashville SC",               "leagueId": "mls",                  "country": "USA"          },
-    { "id": "atlanta-united",       "name": "Atlanta United FC",          "leagueId": "mls",                  "country": "USA"          },
-    { "id": "lafc",                 "name": "LAFC",                       "leagueId": "mls",                  "country": "USA"          },
-    { "id": "fc-dallas",            "name": "FC Dallas",                  "leagueId": "mls",                  "country": "USA"          },
-    { "id": "seattle-sounders",     "name": "Seattle Sounders FC",        "leagueId": "mls",                  "country": "USA"          },
-    { "id": "zenit",                "name": "Zenit Saint Petersburg",     "leagueId": "russian-premier-league","country": "Russia"       },
-    { "id": "river-plate",          "name": "River Plate",                "leagueId": "primera-division",     "country": "Argentina"    },
-    { "id": "boca-juniors",         "name": "Boca Juniors",               "leagueId": "primera-division",     "country": "Argentina"    },
-    { "id": "wydad-casablanca",        "name": "Wydad AC",                   "leagueId": "botola-pro",            "country": "Morocco"              },
-    { "id": "olympiakos",             "name": "Olympiakos FC",              "leagueId": "super-league",          "country": "Greece"               },
-    { "id": "paok",                   "name": "PAOK FC",                    "leagueId": "super-league",          "country": "Greece"               },
-    { "id": "aek-athens",             "name": "AEK Athens",                 "leagueId": "super-league",          "country": "Greece"               },
-    { "id": "genoa",                  "name": "Genoa CFC",                  "leagueId": "serie-a",               "country": "Italy"                },
-    { "id": "sampdoria",              "name": "UC Sampdoria",               "leagueId": "serie-b",               "country": "Italy"                },
-    { "id": "guadalajara",            "name": "Guadalajara",                "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "cruz-azul",              "name": "Cruz Azul",                  "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "toluca",                 "name": "Toluca",                     "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "america",                "name": "Club América",               "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "pumas-unam",             "name": "Pumas UNAM",                 "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "santos-laguna",          "name": "Santos Laguna",              "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "tijuana",                "name": "Club Tijuana",               "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "lokomotiv-moscow",       "name": "Lokomotiv Moscow",           "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "dynamo-moscow",          "name": "Dynamo Moscow",              "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "ael-limassol",           "name": "AEL Limassol",               "leagueId": "cypriot-first-division","country": "Cyprus"               },
-    { "id": "pafos",                  "name": "Pafos FC",                   "leagueId": "cypriot-first-division","country": "Cyprus"               },
-    { "id": "al-qadsiah",             "name": "Al-Qadsiah",                 "leagueId": "saudi-pro-league",      "country": "Saudi Arabia"         },
-    { "id": "az-alkmaar",             "name": "AZ Alkmaar",                 "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "fc-tokyo",               "name": "FC Tokyo",                   "leagueId": "j-league",              "country": "Japan"                },
-    { "id": "kashima-antlers",        "name": "Kashima Antlers",            "leagueId": "j-league",              "country": "Japan"                },
-    { "id": "jeonbuk",                "name": "Jeonbuk Hyundai Motors",     "leagueId": "k-league",              "country": "South Korea"          },
-    { "id": "gangwon",                "name": "Gangwon FC",                 "leagueId": "k-league",              "country": "South Korea"          },
-    { "id": "daejeon",                "name": "Daejeon Hana Citizen",       "leagueId": "k-league",              "country": "South Korea"          },
-    { "id": "ulsan-hd",               "name": "Ulsan HD FC",                "leagueId": "k-league",              "country": "South Korea"          },
-    { "id": "fc-midtjylland",         "name": "FC Midtjylland",             "leagueId": "danish-superliga",      "country": "Denmark"              },
-    { "id": "brondby",                "name": "Brøndby IF",                 "leagueId": "danish-superliga",      "country": "Denmark"              },
-    { "id": "austria-wien",           "name": "Austria Wien",               "leagueId": "austrian-bundesliga",   "country": "Austria"              },
-    { "id": "red-bull-salzburg",      "name": "Red Bull Salzburg",          "leagueId": "austrian-bundesliga",   "country": "Austria"              },
-    { "id": "sk-sturm-graz",          "name": "SK Sturm Graz",              "leagueId": "austrian-bundesliga",   "country": "Austria"              },
-    { "id": "zhejiang",               "name": "Zhejiang Professional",      "leagueId": "chinese-super-league",  "country": "China"                },
-    { "id": "birmingham-city",        "name": "Birmingham City",            "leagueId": "championship",          "country": "England"              },
-    { "id": "stoke-city",             "name": "Stoke City",                 "leagueId": "championship",          "country": "England"              },
-    { "id": "swansea-city",           "name": "Swansea City",               "leagueId": "championship",          "country": "England"              },
-    { "id": "middlesbrough",          "name": "Middlesbrough",              "leagueId": "championship",          "country": "England"              },
-    { "id": "hull-city",              "name": "Hull City",                  "leagueId": "championship",          "country": "England"              },
-    { "id": "southampton",            "name": "Southampton FC",             "leagueId": "championship",          "country": "England"              },
-    { "id": "barnsley",               "name": "Barnsley FC",                "leagueId": "championship",          "country": "England"              },
-    { "id": "norwich-city",           "name": "Norwich City",               "leagueId": "championship",          "country": "England"              },
-    { "id": "burnley",                "name": "Burnley FC",                 "leagueId": "championship",          "country": "England"              },
-    { "id": "red-star-belgrade",      "name": "FK Crvena zvezda",           "leagueId": "serbian-super-liga",    "country": "Serbia"               },
-    { "id": "mamelodi-sundowns",      "name": "Mamelodi Sundowns",          "leagueId": "psl",                   "country": "South Africa"         },
-    { "id": "orlando-pirates",        "name": "Orlando Pirates",            "leagueId": "psl",                   "country": "South Africa"         },
-    { "id": "kaizer-chiefs",          "name": "Kaizer Chiefs",              "leagueId": "psl",                   "country": "South Africa"         },
-    { "id": "polokwane-city",         "name": "Polokwane City",             "leagueId": "psl",                   "country": "South Africa"         },
-    { "id": "siwelele",               "name": "Siwelele",                   "leagueId": "psl",                   "country": "South Africa"         },
-    { "id": "braga",                  "name": "SC Braga",                   "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "tondela",                "name": "CD Tondela",                 "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "chicago-fire",           "name": "Chicago Fire FC",            "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "toronto-fc",             "name": "Toronto FC",                 "leagueId": "mls",                   "country": "Canada"               },
-    { "id": "orlando-city",           "name": "Orlando City SC",            "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "austin-fc",              "name": "Austin FC",                  "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "philadelphia-union",     "name": "Philadelphia Union",         "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "molde",                  "name": "Molde FK",                   "leagueId": "eliteserien",           "country": "Norway"               },
-    { "id": "hannover-96",            "name": "Hannover 96",                "leagueId": "2-bundesliga",          "country": "Germany"              },
-    { "id": "karlsruher-sc",          "name": "Karlsruher SC",              "leagueId": "2-bundesliga",          "country": "Germany"              },
-    { "id": "schalke-04",             "name": "Schalke 04",                 "leagueId": "2-bundesliga",          "country": "Germany"              },
-    { "id": "fc-st-pauli",            "name": "FC St. Pauli",               "leagueId": "bundesliga",            "country": "Germany"              },
-    { "id": "young-boys",             "name": "BSC Young Boys",             "leagueId": "swiss-super-league",    "country": "Switzerland"          },
-    { "id": "jagiellonia",            "name": "Jagiellonia Białystok",      "leagueId": "ekstraklasa",           "country": "Poland"               },
-    { "id": "fc-borac",               "name": "FK Borac Banja Luka",        "leagueId": "premier-liga-bih",      "country": "Bosnia and Herzegovina"},
-    { "id": "fc-astana",              "name": "FC Astana",                  "leagueId": "kazakh-premier-league", "country": "Kazakhstan"           },
-    { "id": "fc-universitatea-cluj",  "name": "FC Universitatea Cluj",      "leagueId": "superliga-romania",     "country": "Romania"              },
-    { "id": "hajduk-split",           "name": "HNK Hajduk Split",           "leagueId": "hnl",                   "country": "Croatia"              },
-    { "id": "hnk-rijeka",             "name": "HNK Rijeka",                 "leagueId": "hnl",                   "country": "Croatia"              },
-    { "id": "dender-eh",              "name": "Dender EH",                  "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "union-saint-gilloise",   "name": "Royale Union SG",            "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "slavia-prague",          "name": "SK Slavia Prague",           "leagueId": "czech-first-league",    "country": "Czech Republic"       },
-    { "id": "sparta-prague",          "name": "AC Sparta Prague",           "leagueId": "czech-first-league",    "country": "Czech Republic"       },
-    { "id": "viktoria-plzen",         "name": "FC Viktoria Plzeň",          "leagueId": "czech-first-league",    "country": "Czech Republic"       },
-    { "id": "hradec-kralove",         "name": "FC Hradec Králové",          "leagueId": "czech-first-league",    "country": "Czech Republic"       },
-    { "id": "fc-slovan-liberec",      "name": "FC Slovan Liberec",          "leagueId": "czech-first-league",    "country": "Czech Republic"       },
-    { "id": "besiktas",               "name": "Beşiktaş JK",                "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "gaziantep",              "name": "Gaziantep FK",               "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "sassuolo",               "name": "US Sassuolo",                "leagueId": "serie-b",               "country": "Italy"                },
-
-    { "id": "al-sadd",               "name": "Al-Sadd SC",                 "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "al-duhail",             "name": "Al-Duhail SC",               "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "al-wakrah",             "name": "Al-Wakrah SC",               "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "al-arabi",              "name": "Al-Arabi SC",                "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "al-gharafa",            "name": "Al-Gharafa SC",              "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "al-shamal",             "name": "Al-Shamal SC",               "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "al-rayyan",             "name": "Al-Rayyan SC",               "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "cultural-leonesa",      "name": "Cultural Leonesa",           "leagueId": "segunda-division",      "country": "Spain"                },
-    { "id": "sevilla",               "name": "Sevilla FC",                 "leagueId": "la-liga",               "country": "Spain"                },
-    { "id": "valencia",              "name": "Valencia CF",                "leagueId": "la-liga",               "country": "Spain"                },
-    { "id": "levante",               "name": "Levante UD",                 "leagueId": "segunda-division",      "country": "Spain"                },
-    { "id": "castellon",             "name": "CD Castellón",               "leagueId": "segunda-division",      "country": "Spain"                },
-    { "id": "ipswich-town",          "name": "Ipswich Town",               "leagueId": "premier-league",        "country": "England"              },
-    { "id": "wrexham",               "name": "Wrexham AFC",                "leagueId": "championship",          "country": "Wales"                },
-    { "id": "watford",               "name": "Watford FC",                 "leagueId": "championship",          "country": "England"              },
-    { "id": "leicester-city",        "name": "Leicester City",             "leagueId": "championship",          "country": "England"              },
-    { "id": "charlton-athletic",     "name": "Charlton Athletic",          "leagueId": "league-one",            "country": "England"              },
-    { "id": "hibernian",             "name": "Hibernian FC",               "leagueId": "scottish-premiership",  "country": "Scotland"             },
-    { "id": "hearts",                "name": "Heart of Midlothian",        "leagueId": "scottish-premiership",  "country": "Scotland"             },
-    { "id": "kilmarnock",            "name": "Kilmarnock FC",              "leagueId": "scottish-premiership",  "country": "Scotland"             },
-    { "id": "torino",                "name": "Torino FC",                  "leagueId": "serie-a",               "country": "Italy"                },
-    { "id": "parma",                 "name": "Parma Calcio 1913",          "leagueId": "serie-a",               "country": "Italy"                },
-    { "id": "pisa",                  "name": "AC Pisa 1909",               "leagueId": "serie-b",               "country": "Italy"                },
-    { "id": "hamburger-sv",          "name": "Hamburger SV",               "leagueId": "2-bundesliga",          "country": "Germany"              },
-    { "id": "fc-augsburg",           "name": "FC Augsburg",                "leagueId": "bundesliga",            "country": "Germany"              },
-    { "id": "fortuna-dusseldorf",    "name": "Fortuna Düsseldorf",         "leagueId": "2-bundesliga",          "country": "Germany"              },
-    { "id": "fc-cosmos-koblenz",     "name": "FC Cosmos Koblenz",          "leagueId": "regionalliga-sw",       "country": "Germany"              },
-    { "id": "lorient",               "name": "FC Lorient",                 "leagueId": "ligue-2",               "country": "France"               },
-    { "id": "sc-bastia",             "name": "SC Bastia",                  "leagueId": "ligue-2",               "country": "France"               },
-    { "id": "angers",                "name": "Angers SCO",                 "leagueId": "ligue-2",               "country": "France"               },
-    { "id": "as-nancy-lorraine",     "name": "AS Nancy-Lorraine",          "leagueId": "national-2",            "country": "France"               },
-    { "id": "fc-sochaux",            "name": "FC Sochaux-Montbéliard",     "leagueId": "national",              "country": "France"               },
-    { "id": "aj-auxerre",            "name": "AJ Auxerre",                 "leagueId": "ligue-1",               "country": "France"               },
-    { "id": "al-ettifaq",            "name": "Al-Ettifaq FC",              "leagueId": "saudi-pro-league",      "country": "Saudi Arabia"         },
-    { "id": "caykur-rizespor",       "name": "Çaykur Rizespor",            "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "kasimpasa",             "name": "Kasımpaşa SK",               "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "dinamo-zagreb",         "name": "GNK Dinamo Zagreb",          "leagueId": "hnl",                   "country": "Croatia"              },
-    { "id": "almere-city",           "name": "Almere City FC",             "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "heracles-almelo",       "name": "Heracles Almelo",            "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "kaa-gent",              "name": "KAA Gent",                   "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "sv-zulte-waregem",      "name": "SV Zulte Waregem",           "leagueId": "first-division-b",      "country": "Belgium"              },
-    { "id": "ferencvaros",           "name": "Ferencvárosi TC",            "leagueId": "otpbank-liga",          "country": "Hungary"              },
-    { "id": "fc-vizela",             "name": "FC Vizela",                  "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "fc-lugano",             "name": "FC Lugano",                  "leagueId": "swiss-super-league",    "country": "Switzerland"          },
-    { "id": "tatran-presov",         "name": "FK Tatran Prešov",           "leagueId": "fortuna-liga",          "country": "Slovakia"             },
-    { "id": "esteghlal",             "name": "Esteghlal FC",               "leagueId": "persian-gulf-pro-league","country": "Iran"                },
-    { "id": "ldu-quito",             "name": "LDU Quito",                  "leagueId": "liga-pro-ecuador",      "country": "Ecuador"              },
-    { "id": "el-paso-locomotive",    "name": "El Paso Locomotive FC",      "leagueId": "usl-championship",      "country": "USA"                  },
-    { "id": "colorado-springs-switchbacks","name": "Colorado Springs Switchbacks FC","leagueId": "usl-championship","country": "USA"               },
-    { "id": "nyc-fc",                "name": "New York City FC",           "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "melbourne-city",        "name": "Melbourne City FC",          "leagueId": "a-league",              "country": "Australia"            },
-    { "id": "melbourne-victory",     "name": "Melbourne Victory",          "leagueId": "a-league",              "country": "Australia"            },
-    { "id": "sydney-fc",             "name": "Sydney FC",                  "leagueId": "a-league",              "country": "Australia"            },
-    { "id": "grazer-ak",             "name": "Grazer AK",                  "leagueId": "austrian-bundesliga",   "country": "Austria"              },
-    { "id": "albirex-niigata",       "name": "Albirex Niigata FC",         "leagueId": "j-league",              "country": "Japan"                },
-    { "id": "machida-zelvia",        "name": "FC Machida Zelvia",          "leagueId": "j-league",              "country": "Japan"                },
-    { "id": "randers",               "name": "Randers FC",                 "leagueId": "danish-superliga",      "country": "Denmark"              },
-    { "id": "apoel",                 "name": "APOEL FC",                   "leagueId": "cypriot-first-division","country": "Cyprus"               },
-    { "id": "violette-ac",           "name": "Violette AC",                "leagueId": "haitian-league",        "country": "Haiti"                },
-    { "id": "bologna",               "name": "Bologna FC 1909",            "leagueId": "serie-a",               "country": "Italy"                },
-    { "id": "leeds-united",          "name": "Leeds United",               "leagueId": "championship",          "country": "England"              },
-
-    { "id": "sheffield-united",      "name": "Sheffield United",           "leagueId": "championship",          "country": "England"              },
-    { "id": "luton-town",            "name": "Luton Town",                 "leagueId": "championship",          "country": "England"              },
-    { "id": "millwall",              "name": "Millwall FC",                "leagueId": "championship",          "country": "England"              },
-    { "id": "rotherham-united",      "name": "Rotherham United",           "leagueId": "championship",          "country": "England"              },
-    { "id": "coventry-city",         "name": "Coventry City",              "leagueId": "championship",          "country": "England"              },
-    { "id": "reading",               "name": "Reading FC",                 "leagueId": "championship",          "country": "England"              },
-    { "id": "derby-county",          "name": "Derby County",               "leagueId": "championship",          "country": "England"              },
-    { "id": "portsmouth",            "name": "Portsmouth FC",              "leagueId": "championship",          "country": "England"              },
-    { "id": "port-vale",             "name": "Port Vale FC",               "leagueId": "league-one",            "country": "England"              },
-    { "id": "braintree-town",        "name": "Braintree Town",             "leagueId": "national-league",       "country": "England"              },
-    { "id": "spezia",                "name": "Spezia Calcio",              "leagueId": "serie-b",               "country": "Italy"                },
-    { "id": "venezia",               "name": "Venezia FC",                 "leagueId": "serie-a",               "country": "Italy"                },
-    { "id": "cagliari",              "name": "Cagliari Calcio",            "leagueId": "serie-a",               "country": "Italy"                },
-    { "id": "hellas-verona",         "name": "Hellas Verona",              "leagueId": "serie-a",               "country": "Italy"                },
-    { "id": "frosinone",             "name": "Frosinone Calcio",           "leagueId": "serie-b",               "country": "Italy"                },
-    { "id": "cremonese",             "name": "US Cremonese",               "leagueId": "serie-b",               "country": "Italy"                },
-    { "id": "espanyol",              "name": "RCD Espanyol",               "leagueId": "la-liga",               "country": "Spain"                },
-    { "id": "elche",                 "name": "Elche CF",                   "leagueId": "segunda-division",      "country": "Spain"                },
-    { "id": "real-oviedo",           "name": "Real Oviedo",                "leagueId": "segunda-division",      "country": "Spain"                },
-    { "id": "rayo-vallecano",        "name": "Rayo Vallecano",             "leagueId": "la-liga",               "country": "Spain"                },
-    { "id": "racing-santander",      "name": "Racing de Santander",        "leagueId": "segunda-division",      "country": "Spain"                },
-    { "id": "granada",               "name": "Granada CF",                 "leagueId": "segunda-division",      "country": "Spain"                },
-    { "id": "barcelona-b",           "name": "FC Barcelona B",             "leagueId": "primera-rfef",          "country": "Spain"                },
-    { "id": "lille",                 "name": "LOSC Lille",                 "leagueId": "ligue-1",               "country": "France"               },
-    { "id": "nantes",                "name": "FC Nantes",                  "leagueId": "ligue-1",               "country": "France"               },
-    { "id": "le-havre",              "name": "Le Havre AC",                "leagueId": "ligue-1",               "country": "France"               },
-    { "id": "montpellier",           "name": "Montpellier HSC",            "leagueId": "ligue-1",               "country": "France"               },
-    { "id": "paris-fc",              "name": "Paris FC",                   "leagueId": "ligue-2",               "country": "France"               },
-    { "id": "saint-etienne",         "name": "AS Saint-Étienne",           "leagueId": "ligue-1",               "country": "France"               },
-    { "id": "union-berlin",          "name": "1. FC Union Berlin",         "leagueId": "bundesliga",            "country": "Germany"              },
-    { "id": "werder-bremen",         "name": "SV Werder Bremen",           "leagueId": "bundesliga",            "country": "Germany"              },
-    { "id": "holstein-kiel",         "name": "Holstein Kiel",              "leagueId": "bundesliga",            "country": "Germany"              },
-    { "id": "cologne",               "name": "1. FC Köln",                 "leagueId": "2-bundesliga",          "country": "Germany"              },
-    { "id": "twente",                "name": "FC Twente",                  "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "nec-nijmegen",          "name": "NEC Nijmegen",               "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "vvv-venlo",             "name": "VVV-Venlo",                  "leagueId": "eerste-divisie",        "country": "Netherlands"          },
-    { "id": "rkc-waalwijk",          "name": "RKC Waalwijk",               "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "pec-zwolle",            "name": "PEC Zwolle",                 "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "fc-volendam",           "name": "FC Volendam",                "leagueId": "eerste-divisie",        "country": "Netherlands"          },
-    { "id": "sc-telstar",            "name": "SC Telstar",                 "leagueId": "eerste-divisie",        "country": "Netherlands"          },
-    { "id": "fc-den-bosch",          "name": "FC Den Bosch",               "leagueId": "eerste-divisie",        "country": "Netherlands"          },
-    { "id": "sparta-rotterdam",      "name": "Sparta Rotterdam",           "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "istanbul-basaksehir",   "name": "Istanbul Basaksehir",        "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "kayserispor",           "name": "Kayserispor",                "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "konyaspor",             "name": "Konyaspor",                  "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "samsunspor",            "name": "Samsunspor",                 "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "trabzonspor",           "name": "Trabzonspor",                "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "alanyaspor",            "name": "Alanyaspor",                 "leagueId": "super-lig",             "country": "Turkey"               },
-    { "id": "igdir-fk",              "name": "Igdir FK",                   "leagueId": "tff-3-lig",             "country": "Turkey"               },
-    { "id": "cercle-brugge",         "name": "Cercle Brugge",              "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "charleroi",             "name": "Sporting Charleroi",         "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "sk-beveren",            "name": "SK Beveren",                 "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "antwerp",               "name": "Royal Antwerp FC",           "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "standard-liege",        "name": "Standard Liege",             "leagueId": "pro-league",            "country": "Belgium"              },
-    { "id": "ae-kifisia",            "name": "AE Kifisia",                 "leagueId": "super-league",          "country": "Greece"               },
-    { "id": "panathinaikos",         "name": "Panathinaikos FC",           "leagueId": "super-league",          "country": "Greece"               },
-    { "id": "atromitos",             "name": "Atromitos FC",               "leagueId": "super-league",          "country": "Greece"               },
-    { "id": "aek-larnaca",           "name": "AEK Larnaca",                "leagueId": "cypriot-first-division","country": "Cyprus"               },
-    { "id": "aris-limassol",         "name": "Aris Limassol",              "leagueId": "cypriot-first-division","country": "Cyprus"               },
-    { "id": "apollon-limassol",      "name": "Apollon Limassol",           "leagueId": "cypriot-first-division","country": "Cyprus"               },
-    { "id": "omonia",                "name": "AC Omonia",                  "leagueId": "cypriot-first-division","country": "Cyprus"               },
-    { "id": "fc-zurich",             "name": "FC Zurich",                  "leagueId": "swiss-super-league",    "country": "Switzerland"          },
-    { "id": "stade-nyonnais",        "name": "Stade Nyonnais",             "leagueId": "promotion-league",      "country": "Switzerland"          },
-    { "id": "servette-fc",           "name": "Servette FC",                "leagueId": "swiss-super-league",    "country": "Switzerland"          },
-    { "id": "sarpsborg-08",          "name": "Sarpsborg 08 FF",            "leagueId": "eliteserien",           "country": "Norway"               },
-    { "id": "agf",                   "name": "AGF Aarhus",                 "leagueId": "danish-superliga",      "country": "Denmark"              },
-    { "id": "silkeborg",             "name": "Silkeborg IF",               "leagueId": "danish-superliga",      "country": "Denmark"              },
-    { "id": "fc-nordsjaelland",      "name": "FC Nordsjaelland",           "leagueId": "danish-superliga",      "country": "Denmark"              },
-    { "id": "fc-copenhagen",         "name": "FC Copenhagen",              "leagueId": "danish-superliga",      "country": "Denmark"              },
-    { "id": "aik",                   "name": "AIK",                        "leagueId": "allsvenskan",           "country": "Sweden"               },
-    { "id": "mjallby-aif",           "name": "Mjallby AIF",                "leagueId": "allsvenskan",           "country": "Sweden"               },
-    { "id": "malmo-ff",              "name": "Malmo FF",                   "leagueId": "allsvenskan",           "country": "Sweden"               },
-    { "id": "ifk-norrkoping",        "name": "IFK Norrkoping",             "leagueId": "allsvenskan",           "country": "Sweden"               },
-    { "id": "motherwell",            "name": "Motherwell FC",              "leagueId": "scottish-premiership",  "country": "Scotland"             },
-    { "id": "shamrock-rovers",       "name": "Shamrock Rovers",            "leagueId": "league-of-ireland",     "country": "Ireland"              },
-    { "id": "st-patricks-athletic",  "name": "St Patricks Athletic",       "leagueId": "league-of-ireland",     "country": "Ireland"              },
-    { "id": "sjk",                   "name": "SJK Seinajoki",              "leagueId": "veikkausliiga",         "country": "Finland"              },
-    { "id": "nk-maribor",            "name": "NK Maribor",                 "leagueId": "prvaliga",              "country": "Slovenia"             },
-    { "id": "internacional",         "name": "Sport Club Internacional",   "leagueId": "brasileirao",           "country": "Brazil"               },
-    { "id": "fluminense",            "name": "Fluminense FC",              "leagueId": "brasileirao",           "country": "Brazil"               },
-    { "id": "atletico-mineiro",      "name": "Atletico Mineiro",           "leagueId": "brasileirao",           "country": "Brazil"               },
-    { "id": "sao-paulo",             "name": "Sao Paulo FC",               "leagueId": "brasileirao",           "country": "Brazil"               },
-    { "id": "red-bull-bragantino",   "name": "Red Bull Bragantino",        "leagueId": "brasileirao",           "country": "Brazil"               },
-    { "id": "athletico-paranaense",  "name": "Athletico Paranaense",       "leagueId": "brasileirao",           "country": "Brazil"               },
-    { "id": "vasco-da-gama",         "name": "CR Vasco da Gama",           "leagueId": "brasileirao",           "country": "Brazil"               },
-    { "id": "san-lorenzo",           "name": "CA San Lorenzo de Almagro",  "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "lanus",                 "name": "Club Atletico Lanus",        "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "independiente-rivadavia","name": "CA Independiente Rivadavia", "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "talleres",              "name": "CA Talleres",                "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "huracan",               "name": "CA Huracan",                 "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "independiente",         "name": "Club Atletico Independiente","leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "rosario-central",       "name": "CA Rosario Central",         "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "velez-sarsfield",       "name": "Velez Sarsfield",            "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "estudiantes",           "name": "Estudiantes de La Plata",    "leagueId": "primera-division",      "country": "Argentina"            },
-    { "id": "atletico-nacional",     "name": "Atletico Nacional",          "leagueId": "liga-betplay",          "country": "Colombia"             },
-    { "id": "monterrey",             "name": "CF Monterrey",               "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "tigres-uanl",           "name": "Tigres UANL",                "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "atlas",                 "name": "Club Atlas",                 "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "juarez",                "name": "FC Juarez",                  "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "leon",                  "name": "Club Leon",                  "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "mazatlan",              "name": "Mazatlan FC",                "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "pachuca",               "name": "CF Pachuca",                 "leagueId": "liga-mx",               "country": "Mexico"               },
-    { "id": "universidad-de-concepcion","name": "Universidad de Concepcion","leagueId": "primera-division-chile","country": "Chile"              },
-    { "id": "cobresal",              "name": "CD Cobresal",                "leagueId": "primera-division-chile","country": "Chile"               },
-    { "id": "independiente-del-valle","name": "Independiente del Valle",   "leagueId": "liga-pro-ecuador",      "country": "Ecuador"              },
-    { "id": "universidad-catolica-ecu","name": "SD Universidad Catolica",  "leagueId": "liga-pro-ecuador",      "country": "Ecuador"              },
-    { "id": "cerro-porteno",         "name": "Club Cerro Porteno",         "leagueId": "division-profesional-paraguay","country": "Paraguay"     },
-    { "id": "olimpia",               "name": "Club Olimpia",               "leagueId": "division-profesional-paraguay","country": "Paraguay"     },
-    { "id": "nacional-uru",          "name": "Club Nacional de Football",  "leagueId": "primera-division-uruguay","country": "Uruguay"          },
-    { "id": "real-salt-lake",        "name": "Real Salt Lake",             "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "minnesota-united",      "name": "Minnesota United FC",        "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "portland-timbers",      "name": "Portland Timbers",           "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "houston-dynamo",        "name": "Houston Dynamo FC",          "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "san-diego-fc",          "name": "San Diego FC",               "leagueId": "mls",                   "country": "USA"                  },
-    { "id": "miami-fc",              "name": "Miami FC",                   "leagueId": "usl-championship",      "country": "USA"                  },
-    { "id": "vancouver-whitecaps",   "name": "Vancouver Whitecaps FC",     "leagueId": "mls",                   "country": "Canada"               },
-    { "id": "wellington-phoenix",    "name": "Wellington Phoenix",         "leagueId": "a-league",              "country": "New Zealand"          },
-    { "id": "auckland-fc",           "name": "Auckland FC",                "leagueId": "a-league",              "country": "New Zealand"          },
-    { "id": "western-sydney-wanderers","name": "Western Sydney Wanderers", "leagueId": "a-league",              "country": "Australia"            },
-    { "id": "newcastle-jets",        "name": "Newcastle Jets",             "leagueId": "a-league",              "country": "Australia"            },
-    { "id": "neom",                  "name": "Neom SC",                    "leagueId": "saudi-pro-league",      "country": "Saudi Arabia"         },
-    { "id": "al-ula",                "name": "Al-Ula FC",                  "leagueId": "saudi-pro-league",      "country": "Saudi Arabia"         },
-    { "id": "al-fayha",              "name": "Al-Fayha FC",                "leagueId": "saudi-pro-league",      "country": "Saudi Arabia"         },
-    { "id": "abha",                  "name": "Abha Club",                  "leagueId": "saudi-pro-league",      "country": "Saudi Arabia"         },
-    { "id": "al-ain",                "name": "Al Ain FC",                  "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "al-dhafra",             "name": "Al-Dhafra FC",               "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "al-wahda",              "name": "Al Wahda FC",                "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "dibba",                 "name": "Dibba Al-Fujairah",          "leagueId": "uae-division-1",        "country": "UAE"                  },
-    { "id": "shabab-al-ahli",        "name": "Shabab Al-Ahli Dubai FC",    "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "al-jazira",             "name": "Al Jazira Club",             "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "baniyas",               "name": "Baniyas SC",                 "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "al-bataeh",             "name": "Al-Bataeh Club",             "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "kalba",                 "name": "Kalba FC",                   "leagueId": "uae-pro-league",        "country": "UAE"                  },
-    { "id": "sepahan",               "name": "Sepahan FC",                 "leagueId": "persian-gulf-pro-league","country": "Iran"                },
-    { "id": "persepolis",            "name": "Persepolis FC",              "leagueId": "persian-gulf-pro-league","country": "Iran"                },
-    { "id": "tractor",               "name": "Tractor SC",                 "leagueId": "persian-gulf-pro-league","country": "Iran"                },
-    { "id": "foolad",                "name": "Foolad FC",                  "leagueId": "persian-gulf-pro-league","country": "Iran"                },
-    { "id": "malavan",               "name": "Malavan FC",                 "leagueId": "persian-gulf-pro-league","country": "Iran"                },
-    { "id": "navbahor-namangan",     "name": "Navbahor Namangan",          "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "neftchi-fergana",       "name": "Neftchi Fergana",            "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "nasaf",                 "name": "FC Nasaf",                   "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "dinamo-samarqand",      "name": "Dinamo Samarqand",           "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "bukhara",               "name": "FC Bukhara",                 "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "surkhon-termiz",        "name": "Surkhon Termiz",             "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "agmk",                  "name": "AGMK FC",                   "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "pakhtakor",             "name": "Pakhtakor FC",               "leagueId": "uzbekistan-superleague","country": "Uzbekistan"           },
-    { "id": "rostov",                "name": "FC Rostov",                  "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "spartak-moscow",        "name": "Spartak Moscow",             "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "krasnodar",             "name": "FC Krasnodar",               "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "akron-tolyatti",        "name": "FK Akron Tolyatti",          "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "fc-dynamo-makhachkala", "name": "FK Dynamo Makhachkala",      "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "pogon-szczecin",        "name": "Pogon Szczecin",             "leagueId": "ekstraklasa",           "country": "Poland"               },
-    { "id": "ks-cracovia",           "name": "KS Cracovia",                "leagueId": "ekstraklasa",           "country": "Poland"               },
-    { "id": "widzew-lodz",           "name": "Widzew Lodz",                "leagueId": "ekstraklasa",           "country": "Poland"               },
-    { "id": "lechia-gdansk",         "name": "Lechia Gdansk",              "leagueId": "ekstraklasa",           "country": "Poland"               },
-    { "id": "al-talaba",             "name": "Al-Talaba SC",               "leagueId": "iraq-stars-league",     "country": "Iraq"                 },
-    { "id": "port-iraq",             "name": "Port Club",                  "leagueId": "iraq-stars-league",     "country": "Iraq"                 },
-    { "id": "al-zawraa",             "name": "Al-Zawraa SC",               "leagueId": "iraq-stars-league",     "country": "Iraq"                 },
-    { "id": "al-shorta",             "name": "Al-Shorta SC",               "leagueId": "iraq-stars-league",     "country": "Iraq"                 },
-    { "id": "al-karma",              "name": "Al-Karma SC",                "leagueId": "iraq-stars-league",     "country": "Iraq"                 },
-    { "id": "al-quwa-al-jawiya",     "name": "Al-Quwa Al-Jawiya",          "leagueId": "iraq-stars-league",     "country": "Iraq"                 },
-    { "id": "al-hussein",            "name": "Al-Hussein SC",              "leagueId": "jordan-premier-league", "country": "Jordan"               },
-    { "id": "al-faisaly",            "name": "Al-Faisaly FC",              "leagueId": "jordan-premier-league", "country": "Jordan"               },
-    { "id": "al-wehdat",             "name": "Al-Wehdat SC",               "leagueId": "jordan-premier-league", "country": "Jordan"               },
-    { "id": "al-shabab",             "name": "Al-Shabab FC",               "leagueId": "jordan-premier-league", "country": "Jordan"               },
-    { "id": "al-salteh",             "name": "Al-Salt SC",                 "leagueId": "jordan-premier-league", "country": "Jordan"               },
-    { "id": "al-sailiya",            "name": "Al-Sailiya SC",              "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "qatar-sc",              "name": "Qatar SC",                   "leagueId": "qatar-stars-league",    "country": "Qatar"                },
-    { "id": "raja-casablanca",       "name": "Raja Club Athletic",         "leagueId": "botola-pro",            "country": "Morocco"              },
-    { "id": "selangor",              "name": "Selangor FC",                "leagueId": "malaysia-super-league", "country": "Malaysia"             },
-    { "id": "terengganu-fc",         "name": "Terengganu FC",              "leagueId": "malaysia-super-league", "country": "Malaysia"             },
-    { "id": "fc-seoul",              "name": "FC Seoul",                   "leagueId": "k-league",              "country": "South Korea"          },
-    { "id": "persib",                "name": "Persib Bandung",             "leagueId": "liga-1-indonesia",      "country": "Indonesia"            },
-    { "id": "slovan-bratislava",     "name": "SK Slovan Bratislava",       "leagueId": "fortuna-liga",          "country": "Slovakia"             },
-    { "id": "saprissa",              "name": "Deportivo Saprissa",         "leagueId": "liga-fpd",              "country": "Costa Rica"           },
-    { "id": "pari-nn",               "name": "FK Pari Nizhny Novgorod",    "leagueId": "russian-premier-league","country": "Russia"               },
-    { "id": "ironi-kiryat-shmona",   "name": "Ironi Kiryat Shmona",        "leagueId": "israeli-premier-league","country": "Israel"               },
-    { "id": "maccabi-haifa",         "name": "Maccabi Haifa FC",           "leagueId": "israeli-premier-league","country": "Israel"               },
-    { "id": "maccabi-tel-aviv",      "name": "Maccabi Tel Aviv FC",        "leagueId": "israeli-premier-league","country": "Israel"               },
-    { "id": "marathon-honduras",     "name": "CD Marathon",                "leagueId": "liga-nacional-honduras","country": "Honduras"             },
-    { "id": "puerto-cabello",        "name": "Academia Puerto Cabello",    "leagueId": "liga-futve",            "country": "Venezuela"            },
-    { "id": "deportivo-la-guaira",   "name": "Caracas FC",                 "leagueId": "liga-futve",            "country": "Venezuela"            },
-    { "id": "plaza-amador",          "name": "Plaza Amador",               "leagueId": "lpf-panama",            "country": "Panama"               },
-    { "id": "turan-tovuz",           "name": "FK Turan Tovuz",             "leagueId": "azerbaijan-premier-league","country": "Azerbaijan"       },
-    { "id": "fc-noah",               "name": "FK Noah",                    "leagueId": "armenian-premier-league","country": "Armenia"            },
-    { "id": "ludogorets",            "name": "PFC Ludogorets Razgrad",     "leagueId": "parva-liga",            "country": "Bulgaria"             },
-    { "id": "montana",               "name": "FC Montana",                 "leagueId": "parva-liga",            "country": "Bulgaria"             },
-    { "id": "gyori-eto",             "name": "Gyori ETO FC",               "leagueId": "otpbank-liga",          "country": "Hungary"              },
-    { "id": "puskas-akademia",       "name": "Puskas Akademia FC",         "leagueId": "otpbank-liga",          "country": "Hungary"              },
-    { "id": "fcsb",                  "name": "FCSB",                       "leagueId": "superliga-romania",     "country": "Romania"              },
-    { "id": "al-najma",              "name": "Al-Najma Club",              "leagueId": "bahrain-premier-league","country": "Bahrain"              },
-    { "id": "al-ahly",               "name": "Al Ahly SC",                 "leagueId": "egyptian-premier-league","country": "Egypt"               },
-    { "id": "zamalek",               "name": "Zamalek SC",                 "leagueId": "egyptian-premier-league","country": "Egypt"               },
-    { "id": "pyramids",              "name": "Pyramids FC",                "leagueId": "egyptian-premier-league","country": "Egypt"               },
-    { "id": "zed",                   "name": "ZED FC",                     "leagueId": "egyptian-premier-league","country": "Egypt"               },
-    { "id": "el-gouna",              "name": "El Gouna FC",                "leagueId": "egyptian-premier-league","country": "Egypt"               },
-    { "id": "esperance-de-tunis",    "name": "Esperance Sportive de Tunis","leagueId": "tunisian-ligue-1",      "country": "Tunisia"              },
-    { "id": "club-africain",         "name": "Club Africain",              "leagueId": "tunisian-ligue-1",      "country": "Tunisia"              },
-    { "id": "cs-sfaxien",            "name": "CS Sfaxien",                 "leagueId": "tunisian-ligue-1",      "country": "Tunisia"              },
-    { "id": "us-monastir",           "name": "US Monastir",                "leagueId": "tunisian-ligue-1",      "country": "Tunisia"              },
-    { "id": "etoile-du-sahel",       "name": "Etoile Sportive du Sahel",   "leagueId": "tunisian-ligue-1",      "country": "Tunisia"              },
-    { "id": "js-kabylie",            "name": "JS Kabylie",                 "leagueId": "ligue-pro-algerie",     "country": "Algeria"              },
-    { "id": "usm-alger",             "name": "USM Alger",                  "leagueId": "ligue-pro-algerie",     "country": "Algeria"              },
-    { "id": "hearts-of-oak",         "name": "Accra Hearts of Oak SC",     "leagueId": "ghana-premier-league",  "country": "Ghana"                },
-    { "id": "chaves",                "name": "GD Chaves",                  "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "torreense",             "name": "CF Torreense",               "leagueId": "liga-portugal-2",       "country": "Portugal"             },
-    { "id": "estrela-amadora",       "name": "Estrela da Amadora",         "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "farense",               "name": "SC Farense",                 "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "vitoria-de-guimaraes",  "name": "Vitoria SC",                 "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "casa-pia",              "name": "Casa Pia AC",                "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "gil-vicente",           "name": "Gil Vicente FC",             "leagueId": "primeira-liga",         "country": "Portugal"             },
-    { "id": "lask",                  "name": "LASK",                       "leagueId": "austrian-bundesliga",   "country": "Austria"              },
-    { "id": "wolfsberger-ac",        "name": "Wolfsberger AC",             "leagueId": "austrian-bundesliga",   "country": "Austria"              },
-    { "id": "barcelona-b",           "name": "FC Barcelona B",             "leagueId": "primera-rfef",          "country": "Spain"                },
-    { "id": "psv",                   "name": "PSV Eindhoven",              "leagueId": "eredivisie",            "country": "Netherlands"          },
-    { "id": "st-gallen",             "name": "FC St. Gallen",              "leagueId": "swiss-super-league",    "country": "Switzerland"          },
-    { "id": "fc-utrecht",            "name": "FC Utrecht",                 "leagueId": "eredivisie",            "country": "Netherlands"          }
+    {
+      "id": "arsenal",
+      "name": "Arsenal",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "aston-villa",
+      "name": "Aston Villa",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "brentford",
+      "name": "Brentford",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "bournemouth",
+      "name": "AFC Bournemouth",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "chelsea",
+      "name": "Chelsea",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "crystal-palace",
+      "name": "Crystal Palace",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "everton",
+      "name": "Everton",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "liverpool",
+      "name": "Liverpool",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "manchester-city",
+      "name": "Manchester City",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "manchester-united",
+      "name": "Manchester United",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "newcastle-united",
+      "name": "Newcastle United",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "nottingham-forest",
+      "name": "Nottingham Forest",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "tottenham-hotspur",
+      "name": "Tottenham Hotspur",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "brighton",
+      "name": "Brighton & Hove Albion",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "wolverhampton",
+      "name": "Wolverhampton Wanderers",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "west-ham",
+      "name": "West Ham United",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "fulham",
+      "name": "Fulham FC",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "sunderland",
+      "name": "Sunderland",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "barcelona",
+      "name": "FC Barcelona",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "real-madrid",
+      "name": "Real Madrid",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "atletico-madrid",
+      "name": "Atlético Madrid",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "athletic-bilbao",
+      "name": "Athletic Bilbao",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "real-sociedad",
+      "name": "Real Sociedad",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "real-betis",
+      "name": "Real Betis",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "osasuna",
+      "name": "Osasuna",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "celta-vigo",
+      "name": "Celta Vigo",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "villarreal",
+      "name": "Villarreal",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "mallorca",
+      "name": "RCD Mallorca",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "ac-milan",
+      "name": "AC Milan",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "atalanta",
+      "name": "Atalanta",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "inter-milan",
+      "name": "Inter Milan",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "juventus",
+      "name": "Juventus",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "roma",
+      "name": "AS Roma",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "como",
+      "name": "Como 1907",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "napoli",
+      "name": "SSC Napoli",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "fiorentina",
+      "name": "ACF Fiorentina",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "udinese",
+      "name": "Udinese Calcio",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "lens",
+      "name": "RC Lens",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "lyon",
+      "name": "Olympique Lyonnais",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "monaco",
+      "name": "AS Monaco",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "paris-saint-germain",
+      "name": "Paris Saint-Germain",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "rennes",
+      "name": "Stade Rennais",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "marseille",
+      "name": "Olympique de Marseille",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "strasbourg",
+      "name": "RC Strasbourg Alsace",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "nice",
+      "name": "OGC Nice",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "reims",
+      "name": "Stade de Reims",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "brest",
+      "name": "Stade Brest 29",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "toulouse",
+      "name": "Toulouse FC",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "bayer-leverkusen",
+      "name": "Bayer Leverkusen",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "bayern-munich",
+      "name": "Bayern Munich",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "borussia-dortmund",
+      "name": "Borussia Dortmund",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "vfb-stuttgart",
+      "name": "VfB Stuttgart",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "eintracht-frankfurt",
+      "name": "Eintracht Frankfurt",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "rb-leipzig",
+      "name": "RB Leipzig",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "tsg-hoffenheim",
+      "name": "TSG Hoffenheim",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "mainz-05",
+      "name": "Mainz 05",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "wolfsburg",
+      "name": "VfL Wolfsburg",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "freiburg",
+      "name": "SC Freiburg",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "gladbach",
+      "name": "Borussia Mönchengladbach",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "bochum",
+      "name": "VfL Bochum",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "fenerbahce",
+      "name": "Fenerbahçe",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "galatasaray",
+      "name": "Galatasaray",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "fc-porto",
+      "name": "FC Porto",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "benfica",
+      "name": "SL Benfica",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "sporting-cp",
+      "name": "Sporting CP",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "ajax",
+      "name": "AFC Ajax",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "psv-eindhoven",
+      "name": "PSV Eindhoven",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "feyenoord",
+      "name": "Feyenoord",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "club-brugge",
+      "name": "Club Brugge",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "anderlecht",
+      "name": "RSC Anderlecht",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "genk",
+      "name": "KRC Genk",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "sint-truiden",
+      "name": "Sint-Truiden VV",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "celtic",
+      "name": "Celtic FC",
+      "leagueId": "scottish-premiership",
+      "country": "Scotland"
+    },
+    {
+      "id": "rangers",
+      "name": "Rangers FC",
+      "leagueId": "scottish-premiership",
+      "country": "Scotland"
+    },
+    {
+      "id": "bodo-glimt",
+      "name": "FK Bodø/Glimt",
+      "leagueId": "eliteserien",
+      "country": "Norway"
+    },
+    {
+      "id": "valerenga",
+      "name": "Vålerenga FK",
+      "leagueId": "eliteserien",
+      "country": "Norway"
+    },
+    {
+      "id": "brann",
+      "name": "SK Brann",
+      "leagueId": "eliteserien",
+      "country": "Norway"
+    },
+    {
+      "id": "rosenborg",
+      "name": "Rosenborg BK",
+      "leagueId": "eliteserien",
+      "country": "Norway"
+    },
+    {
+      "id": "viking",
+      "name": "Viking FK",
+      "leagueId": "eliteserien",
+      "country": "Norway"
+    },
+    {
+      "id": "vissel-kobe",
+      "name": "Vissel Kobe",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "urawa-red-diamonds",
+      "name": "Urawa Red Diamonds",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "kawasaki-frontale",
+      "name": "Kawasaki Frontale",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "al-ahli",
+      "name": "Al-Ahli",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "al-hilal",
+      "name": "Al-Hilal",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "al-ittihad",
+      "name": "Al-Ittihad",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "al-nassr",
+      "name": "Al-Nassr",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "botafogo",
+      "name": "Botafogo",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "flamengo",
+      "name": "Flamengo",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "gremio",
+      "name": "Grêmio",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "santos",
+      "name": "Santos",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "palmeiras",
+      "name": "Palmeiras",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "corinthians",
+      "name": "Corinthians",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "inter-miami",
+      "name": "Inter Miami CF",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "colorado-rapids",
+      "name": "Colorado Rapids",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "columbus-crew",
+      "name": "Columbus Crew",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "nashville-sc",
+      "name": "Nashville SC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "atlanta-united",
+      "name": "Atlanta United FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "lafc",
+      "name": "LAFC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "fc-dallas",
+      "name": "FC Dallas",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "seattle-sounders",
+      "name": "Seattle Sounders FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "zenit",
+      "name": "Zenit Saint Petersburg",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "river-plate",
+      "name": "River Plate",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "boca-juniors",
+      "name": "Boca Juniors",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "wydad-casablanca",
+      "name": "Wydad AC",
+      "leagueId": "botola-pro",
+      "country": "Morocco"
+    },
+    {
+      "id": "olympiakos",
+      "name": "Olympiakos FC",
+      "leagueId": "super-league",
+      "country": "Greece"
+    },
+    {
+      "id": "paok",
+      "name": "PAOK FC",
+      "leagueId": "super-league",
+      "country": "Greece"
+    },
+    {
+      "id": "aek-athens",
+      "name": "AEK Athens",
+      "leagueId": "super-league",
+      "country": "Greece"
+    },
+    {
+      "id": "genoa",
+      "name": "Genoa CFC",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "sampdoria",
+      "name": "UC Sampdoria",
+      "leagueId": "serie-b",
+      "country": "Italy"
+    },
+    {
+      "id": "guadalajara",
+      "name": "Guadalajara",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "cruz-azul",
+      "name": "Cruz Azul",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "toluca",
+      "name": "Toluca",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "america",
+      "name": "Club América",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "pumas-unam",
+      "name": "Pumas UNAM",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "santos-laguna",
+      "name": "Santos Laguna",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "tijuana",
+      "name": "Club Tijuana",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "lokomotiv-moscow",
+      "name": "Lokomotiv Moscow",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "dynamo-moscow",
+      "name": "Dynamo Moscow",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "ael-limassol",
+      "name": "AEL Limassol",
+      "leagueId": "cypriot-first-division",
+      "country": "Cyprus"
+    },
+    {
+      "id": "pafos",
+      "name": "Pafos FC",
+      "leagueId": "cypriot-first-division",
+      "country": "Cyprus"
+    },
+    {
+      "id": "al-qadsiah",
+      "name": "Al-Qadsiah",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "az-alkmaar",
+      "name": "AZ Alkmaar",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "fc-tokyo",
+      "name": "FC Tokyo",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "kashima-antlers",
+      "name": "Kashima Antlers",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "jeonbuk",
+      "name": "Jeonbuk Hyundai Motors",
+      "leagueId": "k-league",
+      "country": "South Korea"
+    },
+    {
+      "id": "gangwon",
+      "name": "Gangwon FC",
+      "leagueId": "k-league",
+      "country": "South Korea"
+    },
+    {
+      "id": "daejeon",
+      "name": "Daejeon Hana Citizen",
+      "leagueId": "k-league",
+      "country": "South Korea"
+    },
+    {
+      "id": "ulsan-hd",
+      "name": "Ulsan HD FC",
+      "leagueId": "k-league",
+      "country": "South Korea"
+    },
+    {
+      "id": "fc-midtjylland",
+      "name": "FC Midtjylland",
+      "leagueId": "danish-superliga",
+      "country": "Denmark"
+    },
+    {
+      "id": "brondby",
+      "name": "Brøndby IF",
+      "leagueId": "danish-superliga",
+      "country": "Denmark"
+    },
+    {
+      "id": "austria-wien",
+      "name": "Austria Wien",
+      "leagueId": "austrian-bundesliga",
+      "country": "Austria"
+    },
+    {
+      "id": "red-bull-salzburg",
+      "name": "Red Bull Salzburg",
+      "leagueId": "austrian-bundesliga",
+      "country": "Austria"
+    },
+    {
+      "id": "sk-sturm-graz",
+      "name": "SK Sturm Graz",
+      "leagueId": "austrian-bundesliga",
+      "country": "Austria"
+    },
+    {
+      "id": "zhejiang",
+      "name": "Zhejiang Professional",
+      "leagueId": "chinese-super-league",
+      "country": "China"
+    },
+    {
+      "id": "birmingham-city",
+      "name": "Birmingham City",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "stoke-city",
+      "name": "Stoke City",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "swansea-city",
+      "name": "Swansea City",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "middlesbrough",
+      "name": "Middlesbrough",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "hull-city",
+      "name": "Hull City",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "southampton",
+      "name": "Southampton FC",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "barnsley",
+      "name": "Barnsley FC",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "norwich-city",
+      "name": "Norwich City",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "burnley",
+      "name": "Burnley FC",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "red-star-belgrade",
+      "name": "FK Crvena zvezda",
+      "leagueId": "serbian-super-liga",
+      "country": "Serbia"
+    },
+    {
+      "id": "mamelodi-sundowns",
+      "name": "Mamelodi Sundowns",
+      "leagueId": "psl",
+      "country": "South Africa"
+    },
+    {
+      "id": "orlando-pirates",
+      "name": "Orlando Pirates",
+      "leagueId": "psl",
+      "country": "South Africa"
+    },
+    {
+      "id": "kaizer-chiefs",
+      "name": "Kaizer Chiefs",
+      "leagueId": "psl",
+      "country": "South Africa"
+    },
+    {
+      "id": "polokwane-city",
+      "name": "Polokwane City",
+      "leagueId": "psl",
+      "country": "South Africa"
+    },
+    {
+      "id": "siwelele",
+      "name": "Siwelele",
+      "leagueId": "psl",
+      "country": "South Africa"
+    },
+    {
+      "id": "braga",
+      "name": "SC Braga",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "tondela",
+      "name": "CD Tondela",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "chicago-fire",
+      "name": "Chicago Fire FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "toronto-fc",
+      "name": "Toronto FC",
+      "leagueId": "mls",
+      "country": "Canada"
+    },
+    {
+      "id": "orlando-city",
+      "name": "Orlando City SC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "austin-fc",
+      "name": "Austin FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "philadelphia-union",
+      "name": "Philadelphia Union",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "molde",
+      "name": "Molde FK",
+      "leagueId": "eliteserien",
+      "country": "Norway"
+    },
+    {
+      "id": "hannover-96",
+      "name": "Hannover 96",
+      "leagueId": "2-bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "karlsruher-sc",
+      "name": "Karlsruher SC",
+      "leagueId": "2-bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "schalke-04",
+      "name": "Schalke 04",
+      "leagueId": "2-bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "fc-st-pauli",
+      "name": "FC St. Pauli",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "young-boys",
+      "name": "BSC Young Boys",
+      "leagueId": "swiss-super-league",
+      "country": "Switzerland"
+    },
+    {
+      "id": "jagiellonia",
+      "name": "Jagiellonia Białystok",
+      "leagueId": "ekstraklasa",
+      "country": "Poland"
+    },
+    {
+      "id": "fc-borac",
+      "name": "FK Borac Banja Luka",
+      "leagueId": "premier-liga-bih",
+      "country": "Bosnia and Herzegovina"
+    },
+    {
+      "id": "fc-astana",
+      "name": "FC Astana",
+      "leagueId": "kazakh-premier-league",
+      "country": "Kazakhstan"
+    },
+    {
+      "id": "fc-universitatea-cluj",
+      "name": "FC Universitatea Cluj",
+      "leagueId": "superliga-romania",
+      "country": "Romania"
+    },
+    {
+      "id": "hajduk-split",
+      "name": "HNK Hajduk Split",
+      "leagueId": "hnl",
+      "country": "Croatia"
+    },
+    {
+      "id": "hnk-rijeka",
+      "name": "HNK Rijeka",
+      "leagueId": "hnl",
+      "country": "Croatia"
+    },
+    {
+      "id": "dender-eh",
+      "name": "Dender EH",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "union-saint-gilloise",
+      "name": "Royale Union SG",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "slavia-prague",
+      "name": "SK Slavia Prague",
+      "leagueId": "czech-first-league",
+      "country": "Czech Republic"
+    },
+    {
+      "id": "sparta-prague",
+      "name": "AC Sparta Prague",
+      "leagueId": "czech-first-league",
+      "country": "Czech Republic"
+    },
+    {
+      "id": "viktoria-plzen",
+      "name": "FC Viktoria Plzeň",
+      "leagueId": "czech-first-league",
+      "country": "Czech Republic"
+    },
+    {
+      "id": "hradec-kralove",
+      "name": "FC Hradec Králové",
+      "leagueId": "czech-first-league",
+      "country": "Czech Republic"
+    },
+    {
+      "id": "fc-slovan-liberec",
+      "name": "FC Slovan Liberec",
+      "leagueId": "czech-first-league",
+      "country": "Czech Republic"
+    },
+    {
+      "id": "besiktas",
+      "name": "Beşiktaş JK",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "gaziantep",
+      "name": "Gaziantep FK",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "sassuolo",
+      "name": "US Sassuolo",
+      "leagueId": "serie-b",
+      "country": "Italy"
+    },
+    {
+      "id": "al-sadd",
+      "name": "Al-Sadd SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "al-duhail",
+      "name": "Al-Duhail SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "al-wakrah",
+      "name": "Al-Wakrah SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "al-arabi",
+      "name": "Al-Arabi SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "al-gharafa",
+      "name": "Al-Gharafa SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "al-shamal",
+      "name": "Al-Shamal SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "al-rayyan",
+      "name": "Al-Rayyan SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "cultural-leonesa",
+      "name": "Cultural Leonesa",
+      "leagueId": "segunda-division",
+      "country": "Spain"
+    },
+    {
+      "id": "sevilla",
+      "name": "Sevilla FC",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "valencia",
+      "name": "Valencia CF",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "levante",
+      "name": "Levante UD",
+      "leagueId": "segunda-division",
+      "country": "Spain"
+    },
+    {
+      "id": "castellon",
+      "name": "CD Castellón",
+      "leagueId": "segunda-division",
+      "country": "Spain"
+    },
+    {
+      "id": "ipswich-town",
+      "name": "Ipswich Town",
+      "leagueId": "premier-league",
+      "country": "England"
+    },
+    {
+      "id": "wrexham",
+      "name": "Wrexham AFC",
+      "leagueId": "championship",
+      "country": "Wales"
+    },
+    {
+      "id": "watford",
+      "name": "Watford FC",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "leicester-city",
+      "name": "Leicester City",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "charlton-athletic",
+      "name": "Charlton Athletic",
+      "leagueId": "league-one",
+      "country": "England"
+    },
+    {
+      "id": "hibernian",
+      "name": "Hibernian FC",
+      "leagueId": "scottish-premiership",
+      "country": "Scotland"
+    },
+    {
+      "id": "hearts",
+      "name": "Heart of Midlothian",
+      "leagueId": "scottish-premiership",
+      "country": "Scotland"
+    },
+    {
+      "id": "kilmarnock",
+      "name": "Kilmarnock FC",
+      "leagueId": "scottish-premiership",
+      "country": "Scotland"
+    },
+    {
+      "id": "torino",
+      "name": "Torino FC",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "parma",
+      "name": "Parma Calcio 1913",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "pisa",
+      "name": "AC Pisa 1909",
+      "leagueId": "serie-b",
+      "country": "Italy"
+    },
+    {
+      "id": "hamburger-sv",
+      "name": "Hamburger SV",
+      "leagueId": "2-bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "fc-augsburg",
+      "name": "FC Augsburg",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "fortuna-dusseldorf",
+      "name": "Fortuna Düsseldorf",
+      "leagueId": "2-bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "fc-cosmos-koblenz",
+      "name": "FC Cosmos Koblenz",
+      "leagueId": "regionalliga-sw",
+      "country": "Germany"
+    },
+    {
+      "id": "lorient",
+      "name": "FC Lorient",
+      "leagueId": "ligue-2",
+      "country": "France"
+    },
+    {
+      "id": "sc-bastia",
+      "name": "SC Bastia",
+      "leagueId": "ligue-2",
+      "country": "France"
+    },
+    {
+      "id": "angers",
+      "name": "Angers SCO",
+      "leagueId": "ligue-2",
+      "country": "France"
+    },
+    {
+      "id": "as-nancy-lorraine",
+      "name": "AS Nancy-Lorraine",
+      "leagueId": "national-2",
+      "country": "France"
+    },
+    {
+      "id": "fc-sochaux",
+      "name": "FC Sochaux-Montbéliard",
+      "leagueId": "national",
+      "country": "France"
+    },
+    {
+      "id": "aj-auxerre",
+      "name": "AJ Auxerre",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "al-ettifaq",
+      "name": "Al-Ettifaq FC",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "caykur-rizespor",
+      "name": "Çaykur Rizespor",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "kasimpasa",
+      "name": "Kasımpaşa SK",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "dinamo-zagreb",
+      "name": "GNK Dinamo Zagreb",
+      "leagueId": "hnl",
+      "country": "Croatia"
+    },
+    {
+      "id": "almere-city",
+      "name": "Almere City FC",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "heracles-almelo",
+      "name": "Heracles Almelo",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "kaa-gent",
+      "name": "KAA Gent",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "sv-zulte-waregem",
+      "name": "SV Zulte Waregem",
+      "leagueId": "first-division-b",
+      "country": "Belgium"
+    },
+    {
+      "id": "ferencvaros",
+      "name": "Ferencvárosi TC",
+      "leagueId": "otpbank-liga",
+      "country": "Hungary"
+    },
+    {
+      "id": "fc-vizela",
+      "name": "FC Vizela",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "fc-lugano",
+      "name": "FC Lugano",
+      "leagueId": "swiss-super-league",
+      "country": "Switzerland"
+    },
+    {
+      "id": "tatran-presov",
+      "name": "FK Tatran Prešov",
+      "leagueId": "fortuna-liga",
+      "country": "Slovakia"
+    },
+    {
+      "id": "esteghlal",
+      "name": "Esteghlal FC",
+      "leagueId": "persian-gulf-pro-league",
+      "country": "Iran"
+    },
+    {
+      "id": "ldu-quito",
+      "name": "LDU Quito",
+      "leagueId": "liga-pro-ecuador",
+      "country": "Ecuador"
+    },
+    {
+      "id": "el-paso-locomotive",
+      "name": "El Paso Locomotive FC",
+      "leagueId": "usl-championship",
+      "country": "USA"
+    },
+    {
+      "id": "colorado-springs-switchbacks",
+      "name": "Colorado Springs Switchbacks FC",
+      "leagueId": "usl-championship",
+      "country": "USA"
+    },
+    {
+      "id": "nyc-fc",
+      "name": "New York City FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "melbourne-city",
+      "name": "Melbourne City FC",
+      "leagueId": "a-league",
+      "country": "Australia"
+    },
+    {
+      "id": "melbourne-victory",
+      "name": "Melbourne Victory",
+      "leagueId": "a-league",
+      "country": "Australia"
+    },
+    {
+      "id": "sydney-fc",
+      "name": "Sydney FC",
+      "leagueId": "a-league",
+      "country": "Australia"
+    },
+    {
+      "id": "grazer-ak",
+      "name": "Grazer AK",
+      "leagueId": "austrian-bundesliga",
+      "country": "Austria"
+    },
+    {
+      "id": "albirex-niigata",
+      "name": "Albirex Niigata FC",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "machida-zelvia",
+      "name": "FC Machida Zelvia",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "randers",
+      "name": "Randers FC",
+      "leagueId": "danish-superliga",
+      "country": "Denmark"
+    },
+    {
+      "id": "apoel",
+      "name": "APOEL FC",
+      "leagueId": "cypriot-first-division",
+      "country": "Cyprus"
+    },
+    {
+      "id": "violette-ac",
+      "name": "Violette AC",
+      "leagueId": "haitian-league",
+      "country": "Haiti"
+    },
+    {
+      "id": "bologna",
+      "name": "Bologna FC 1909",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "leeds-united",
+      "name": "Leeds United",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "sheffield-united",
+      "name": "Sheffield United",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "luton-town",
+      "name": "Luton Town",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "millwall",
+      "name": "Millwall FC",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "rotherham-united",
+      "name": "Rotherham United",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "coventry-city",
+      "name": "Coventry City",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "reading",
+      "name": "Reading FC",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "derby-county",
+      "name": "Derby County",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "portsmouth",
+      "name": "Portsmouth FC",
+      "leagueId": "championship",
+      "country": "England"
+    },
+    {
+      "id": "port-vale",
+      "name": "Port Vale FC",
+      "leagueId": "league-one",
+      "country": "England"
+    },
+    {
+      "id": "braintree-town",
+      "name": "Braintree Town",
+      "leagueId": "national-league",
+      "country": "England"
+    },
+    {
+      "id": "spezia",
+      "name": "Spezia Calcio",
+      "leagueId": "serie-b",
+      "country": "Italy"
+    },
+    {
+      "id": "venezia",
+      "name": "Venezia FC",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "cagliari",
+      "name": "Cagliari Calcio",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "hellas-verona",
+      "name": "Hellas Verona",
+      "leagueId": "serie-a",
+      "country": "Italy"
+    },
+    {
+      "id": "frosinone",
+      "name": "Frosinone Calcio",
+      "leagueId": "serie-b",
+      "country": "Italy"
+    },
+    {
+      "id": "cremonese",
+      "name": "US Cremonese",
+      "leagueId": "serie-b",
+      "country": "Italy"
+    },
+    {
+      "id": "espanyol",
+      "name": "RCD Espanyol",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "elche",
+      "name": "Elche CF",
+      "leagueId": "segunda-division",
+      "country": "Spain"
+    },
+    {
+      "id": "real-oviedo",
+      "name": "Real Oviedo",
+      "leagueId": "segunda-division",
+      "country": "Spain"
+    },
+    {
+      "id": "rayo-vallecano",
+      "name": "Rayo Vallecano",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "racing-santander",
+      "name": "Racing de Santander",
+      "leagueId": "segunda-division",
+      "country": "Spain"
+    },
+    {
+      "id": "granada",
+      "name": "Granada CF",
+      "leagueId": "segunda-division",
+      "country": "Spain"
+    },
+    {
+      "id": "barcelona-b",
+      "name": "FC Barcelona B",
+      "leagueId": "primera-rfef",
+      "country": "Spain"
+    },
+    {
+      "id": "lille",
+      "name": "LOSC Lille",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "nantes",
+      "name": "FC Nantes",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "le-havre",
+      "name": "Le Havre AC",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "montpellier",
+      "name": "Montpellier HSC",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "paris-fc",
+      "name": "Paris FC",
+      "leagueId": "ligue-2",
+      "country": "France"
+    },
+    {
+      "id": "saint-etienne",
+      "name": "AS Saint-Étienne",
+      "leagueId": "ligue-1",
+      "country": "France"
+    },
+    {
+      "id": "union-berlin",
+      "name": "1. FC Union Berlin",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "werder-bremen",
+      "name": "SV Werder Bremen",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "holstein-kiel",
+      "name": "Holstein Kiel",
+      "leagueId": "bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "cologne",
+      "name": "1. FC Köln",
+      "leagueId": "2-bundesliga",
+      "country": "Germany"
+    },
+    {
+      "id": "twente",
+      "name": "FC Twente",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "nec-nijmegen",
+      "name": "NEC Nijmegen",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "vvv-venlo",
+      "name": "VVV-Venlo",
+      "leagueId": "eerste-divisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "rkc-waalwijk",
+      "name": "RKC Waalwijk",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "pec-zwolle",
+      "name": "PEC Zwolle",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "fc-volendam",
+      "name": "FC Volendam",
+      "leagueId": "eerste-divisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "sc-telstar",
+      "name": "SC Telstar",
+      "leagueId": "eerste-divisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "fc-den-bosch",
+      "name": "FC Den Bosch",
+      "leagueId": "eerste-divisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "sparta-rotterdam",
+      "name": "Sparta Rotterdam",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "istanbul-basaksehir",
+      "name": "Istanbul Basaksehir",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "kayserispor",
+      "name": "Kayserispor",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "konyaspor",
+      "name": "Konyaspor",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "samsunspor",
+      "name": "Samsunspor",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "trabzonspor",
+      "name": "Trabzonspor",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "alanyaspor",
+      "name": "Alanyaspor",
+      "leagueId": "super-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "igdir-fk",
+      "name": "Igdir FK",
+      "leagueId": "tff-3-lig",
+      "country": "Turkey"
+    },
+    {
+      "id": "cercle-brugge",
+      "name": "Cercle Brugge",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "charleroi",
+      "name": "Sporting Charleroi",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "sk-beveren",
+      "name": "SK Beveren",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "antwerp",
+      "name": "Royal Antwerp FC",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "standard-liege",
+      "name": "Standard Liege",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "ae-kifisia",
+      "name": "AE Kifisia",
+      "leagueId": "super-league",
+      "country": "Greece"
+    },
+    {
+      "id": "panathinaikos",
+      "name": "Panathinaikos FC",
+      "leagueId": "super-league",
+      "country": "Greece"
+    },
+    {
+      "id": "atromitos",
+      "name": "Atromitos FC",
+      "leagueId": "super-league",
+      "country": "Greece"
+    },
+    {
+      "id": "aek-larnaca",
+      "name": "AEK Larnaca",
+      "leagueId": "cypriot-first-division",
+      "country": "Cyprus"
+    },
+    {
+      "id": "aris-limassol",
+      "name": "Aris Limassol",
+      "leagueId": "cypriot-first-division",
+      "country": "Cyprus"
+    },
+    {
+      "id": "apollon-limassol",
+      "name": "Apollon Limassol",
+      "leagueId": "cypriot-first-division",
+      "country": "Cyprus"
+    },
+    {
+      "id": "omonia",
+      "name": "AC Omonia",
+      "leagueId": "cypriot-first-division",
+      "country": "Cyprus"
+    },
+    {
+      "id": "fc-zurich",
+      "name": "FC Zurich",
+      "leagueId": "swiss-super-league",
+      "country": "Switzerland"
+    },
+    {
+      "id": "stade-nyonnais",
+      "name": "Stade Nyonnais",
+      "leagueId": "promotion-league",
+      "country": "Switzerland"
+    },
+    {
+      "id": "servette-fc",
+      "name": "Servette FC",
+      "leagueId": "swiss-super-league",
+      "country": "Switzerland"
+    },
+    {
+      "id": "sarpsborg-08",
+      "name": "Sarpsborg 08 FF",
+      "leagueId": "eliteserien",
+      "country": "Norway"
+    },
+    {
+      "id": "agf",
+      "name": "AGF Aarhus",
+      "leagueId": "danish-superliga",
+      "country": "Denmark"
+    },
+    {
+      "id": "silkeborg",
+      "name": "Silkeborg IF",
+      "leagueId": "danish-superliga",
+      "country": "Denmark"
+    },
+    {
+      "id": "fc-nordsjaelland",
+      "name": "FC Nordsjaelland",
+      "leagueId": "danish-superliga",
+      "country": "Denmark"
+    },
+    {
+      "id": "fc-copenhagen",
+      "name": "FC Copenhagen",
+      "leagueId": "danish-superliga",
+      "country": "Denmark"
+    },
+    {
+      "id": "aik",
+      "name": "AIK",
+      "leagueId": "allsvenskan",
+      "country": "Sweden"
+    },
+    {
+      "id": "mjallby-aif",
+      "name": "Mjallby AIF",
+      "leagueId": "allsvenskan",
+      "country": "Sweden"
+    },
+    {
+      "id": "malmo-ff",
+      "name": "Malmo FF",
+      "leagueId": "allsvenskan",
+      "country": "Sweden"
+    },
+    {
+      "id": "ifk-norrkoping",
+      "name": "IFK Norrkoping",
+      "leagueId": "allsvenskan",
+      "country": "Sweden"
+    },
+    {
+      "id": "motherwell",
+      "name": "Motherwell FC",
+      "leagueId": "scottish-premiership",
+      "country": "Scotland"
+    },
+    {
+      "id": "shamrock-rovers",
+      "name": "Shamrock Rovers",
+      "leagueId": "league-of-ireland",
+      "country": "Ireland"
+    },
+    {
+      "id": "st-patricks-athletic",
+      "name": "St Patricks Athletic",
+      "leagueId": "league-of-ireland",
+      "country": "Ireland"
+    },
+    {
+      "id": "sjk",
+      "name": "SJK Seinajoki",
+      "leagueId": "veikkausliiga",
+      "country": "Finland"
+    },
+    {
+      "id": "nk-maribor",
+      "name": "NK Maribor",
+      "leagueId": "prvaliga",
+      "country": "Slovenia"
+    },
+    {
+      "id": "internacional",
+      "name": "Sport Club Internacional",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "fluminense",
+      "name": "Fluminense FC",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "atletico-mineiro",
+      "name": "Atletico Mineiro",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "sao-paulo",
+      "name": "Sao Paulo FC",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "red-bull-bragantino",
+      "name": "Red Bull Bragantino",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "athletico-paranaense",
+      "name": "Athletico Paranaense",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "vasco-da-gama",
+      "name": "CR Vasco da Gama",
+      "leagueId": "brasileirao",
+      "country": "Brazil"
+    },
+    {
+      "id": "san-lorenzo",
+      "name": "CA San Lorenzo de Almagro",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "lanus",
+      "name": "Club Atletico Lanus",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "independiente-rivadavia",
+      "name": "CA Independiente Rivadavia",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "talleres",
+      "name": "CA Talleres",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "huracan",
+      "name": "CA Huracan",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "independiente",
+      "name": "Club Atletico Independiente",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "rosario-central",
+      "name": "CA Rosario Central",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "velez-sarsfield",
+      "name": "Velez Sarsfield",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "estudiantes",
+      "name": "Estudiantes de La Plata",
+      "leagueId": "primera-division",
+      "country": "Argentina"
+    },
+    {
+      "id": "atletico-nacional",
+      "name": "Atletico Nacional",
+      "leagueId": "liga-betplay",
+      "country": "Colombia"
+    },
+    {
+      "id": "monterrey",
+      "name": "CF Monterrey",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "tigres-uanl",
+      "name": "Tigres UANL",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "atlas",
+      "name": "Club Atlas",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "juarez",
+      "name": "FC Juarez",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "leon",
+      "name": "Club Leon",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "mazatlan",
+      "name": "Mazatlan FC",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "pachuca",
+      "name": "CF Pachuca",
+      "leagueId": "liga-mx",
+      "country": "Mexico"
+    },
+    {
+      "id": "universidad-de-concepcion",
+      "name": "Universidad de Concepcion",
+      "leagueId": "primera-division-chile",
+      "country": "Chile"
+    },
+    {
+      "id": "cobresal",
+      "name": "CD Cobresal",
+      "leagueId": "primera-division-chile",
+      "country": "Chile"
+    },
+    {
+      "id": "independiente-del-valle",
+      "name": "Independiente del Valle",
+      "leagueId": "liga-pro-ecuador",
+      "country": "Ecuador"
+    },
+    {
+      "id": "universidad-catolica-ecu",
+      "name": "SD Universidad Catolica",
+      "leagueId": "liga-pro-ecuador",
+      "country": "Ecuador"
+    },
+    {
+      "id": "cerro-porteno",
+      "name": "Club Cerro Porteno",
+      "leagueId": "division-profesional-paraguay",
+      "country": "Paraguay"
+    },
+    {
+      "id": "olimpia",
+      "name": "Club Olimpia",
+      "leagueId": "division-profesional-paraguay",
+      "country": "Paraguay"
+    },
+    {
+      "id": "nacional-uru",
+      "name": "Club Nacional de Football",
+      "leagueId": "primera-division-uruguay",
+      "country": "Uruguay"
+    },
+    {
+      "id": "real-salt-lake",
+      "name": "Real Salt Lake",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "minnesota-united",
+      "name": "Minnesota United FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "portland-timbers",
+      "name": "Portland Timbers",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "houston-dynamo",
+      "name": "Houston Dynamo FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "san-diego-fc",
+      "name": "San Diego FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "miami-fc",
+      "name": "Miami FC",
+      "leagueId": "usl-championship",
+      "country": "USA"
+    },
+    {
+      "id": "vancouver-whitecaps",
+      "name": "Vancouver Whitecaps FC",
+      "leagueId": "mls",
+      "country": "Canada"
+    },
+    {
+      "id": "wellington-phoenix",
+      "name": "Wellington Phoenix",
+      "leagueId": "a-league",
+      "country": "New Zealand"
+    },
+    {
+      "id": "auckland-fc",
+      "name": "Auckland FC",
+      "leagueId": "a-league",
+      "country": "New Zealand"
+    },
+    {
+      "id": "western-sydney-wanderers",
+      "name": "Western Sydney Wanderers",
+      "leagueId": "a-league",
+      "country": "Australia"
+    },
+    {
+      "id": "newcastle-jets",
+      "name": "Newcastle Jets",
+      "leagueId": "a-league",
+      "country": "Australia"
+    },
+    {
+      "id": "neom",
+      "name": "Neom SC",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "al-ula",
+      "name": "Al-Ula FC",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "al-fayha",
+      "name": "Al-Fayha FC",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "abha",
+      "name": "Abha Club",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "al-ain",
+      "name": "Al Ain FC",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "al-dhafra",
+      "name": "Al-Dhafra FC",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "al-wahda",
+      "name": "Al Wahda FC",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "dibba",
+      "name": "Dibba Al-Fujairah",
+      "leagueId": "uae-division-1",
+      "country": "UAE"
+    },
+    {
+      "id": "shabab-al-ahli",
+      "name": "Shabab Al-Ahli Dubai FC",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "al-jazira",
+      "name": "Al Jazira Club",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "baniyas",
+      "name": "Baniyas SC",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "al-bataeh",
+      "name": "Al-Bataeh Club",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "kalba",
+      "name": "Kalba FC",
+      "leagueId": "uae-pro-league",
+      "country": "UAE"
+    },
+    {
+      "id": "sepahan",
+      "name": "Sepahan FC",
+      "leagueId": "persian-gulf-pro-league",
+      "country": "Iran"
+    },
+    {
+      "id": "persepolis",
+      "name": "Persepolis FC",
+      "leagueId": "persian-gulf-pro-league",
+      "country": "Iran"
+    },
+    {
+      "id": "tractor",
+      "name": "Tractor SC",
+      "leagueId": "persian-gulf-pro-league",
+      "country": "Iran"
+    },
+    {
+      "id": "foolad",
+      "name": "Foolad FC",
+      "leagueId": "persian-gulf-pro-league",
+      "country": "Iran"
+    },
+    {
+      "id": "malavan",
+      "name": "Malavan FC",
+      "leagueId": "persian-gulf-pro-league",
+      "country": "Iran"
+    },
+    {
+      "id": "navbahor-namangan",
+      "name": "Navbahor Namangan",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "neftchi-fergana",
+      "name": "Neftchi Fergana",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "nasaf",
+      "name": "FC Nasaf",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "dinamo-samarqand",
+      "name": "Dinamo Samarqand",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "bukhara",
+      "name": "FC Bukhara",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "surkhon-termiz",
+      "name": "Surkhon Termiz",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "agmk",
+      "name": "AGMK FC",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "pakhtakor",
+      "name": "Pakhtakor FC",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "rostov",
+      "name": "FC Rostov",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "spartak-moscow",
+      "name": "Spartak Moscow",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "krasnodar",
+      "name": "FC Krasnodar",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "akron-tolyatti",
+      "name": "FK Akron Tolyatti",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "fc-dynamo-makhachkala",
+      "name": "FK Dynamo Makhachkala",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "pogon-szczecin",
+      "name": "Pogon Szczecin",
+      "leagueId": "ekstraklasa",
+      "country": "Poland"
+    },
+    {
+      "id": "ks-cracovia",
+      "name": "KS Cracovia",
+      "leagueId": "ekstraklasa",
+      "country": "Poland"
+    },
+    {
+      "id": "widzew-lodz",
+      "name": "Widzew Lodz",
+      "leagueId": "ekstraklasa",
+      "country": "Poland"
+    },
+    {
+      "id": "lechia-gdansk",
+      "name": "Lechia Gdansk",
+      "leagueId": "ekstraklasa",
+      "country": "Poland"
+    },
+    {
+      "id": "al-talaba",
+      "name": "Al-Talaba SC",
+      "leagueId": "iraq-stars-league",
+      "country": "Iraq"
+    },
+    {
+      "id": "port-iraq",
+      "name": "Port Club",
+      "leagueId": "iraq-stars-league",
+      "country": "Iraq"
+    },
+    {
+      "id": "al-zawraa",
+      "name": "Al-Zawraa SC",
+      "leagueId": "iraq-stars-league",
+      "country": "Iraq"
+    },
+    {
+      "id": "al-shorta",
+      "name": "Al-Shorta SC",
+      "leagueId": "iraq-stars-league",
+      "country": "Iraq"
+    },
+    {
+      "id": "al-karma",
+      "name": "Al-Karma SC",
+      "leagueId": "iraq-stars-league",
+      "country": "Iraq"
+    },
+    {
+      "id": "al-quwa-al-jawiya",
+      "name": "Al-Quwa Al-Jawiya",
+      "leagueId": "iraq-stars-league",
+      "country": "Iraq"
+    },
+    {
+      "id": "al-hussein",
+      "name": "Al-Hussein SC",
+      "leagueId": "jordan-premier-league",
+      "country": "Jordan"
+    },
+    {
+      "id": "al-faisaly",
+      "name": "Al-Faisaly FC",
+      "leagueId": "jordan-premier-league",
+      "country": "Jordan"
+    },
+    {
+      "id": "al-wehdat",
+      "name": "Al-Wehdat SC",
+      "leagueId": "jordan-premier-league",
+      "country": "Jordan"
+    },
+    {
+      "id": "al-shabab",
+      "name": "Al-Shabab FC",
+      "leagueId": "jordan-premier-league",
+      "country": "Jordan"
+    },
+    {
+      "id": "al-salteh",
+      "name": "Al-Salt SC",
+      "leagueId": "jordan-premier-league",
+      "country": "Jordan"
+    },
+    {
+      "id": "al-sailiya",
+      "name": "Al-Sailiya SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "qatar-sc",
+      "name": "Qatar SC",
+      "leagueId": "qatar-stars-league",
+      "country": "Qatar"
+    },
+    {
+      "id": "raja-casablanca",
+      "name": "Raja Club Athletic",
+      "leagueId": "botola-pro",
+      "country": "Morocco"
+    },
+    {
+      "id": "selangor",
+      "name": "Selangor FC",
+      "leagueId": "malaysia-super-league",
+      "country": "Malaysia"
+    },
+    {
+      "id": "terengganu-fc",
+      "name": "Terengganu FC",
+      "leagueId": "malaysia-super-league",
+      "country": "Malaysia"
+    },
+    {
+      "id": "fc-seoul",
+      "name": "FC Seoul",
+      "leagueId": "k-league",
+      "country": "South Korea"
+    },
+    {
+      "id": "persib",
+      "name": "Persib Bandung",
+      "leagueId": "liga-1-indonesia",
+      "country": "Indonesia"
+    },
+    {
+      "id": "slovan-bratislava",
+      "name": "SK Slovan Bratislava",
+      "leagueId": "fortuna-liga",
+      "country": "Slovakia"
+    },
+    {
+      "id": "saprissa",
+      "name": "Deportivo Saprissa",
+      "leagueId": "liga-fpd",
+      "country": "Costa Rica"
+    },
+    {
+      "id": "pari-nn",
+      "name": "FK Pari Nizhny Novgorod",
+      "leagueId": "russian-premier-league",
+      "country": "Russia"
+    },
+    {
+      "id": "ironi-kiryat-shmona",
+      "name": "Ironi Kiryat Shmona",
+      "leagueId": "israeli-premier-league",
+      "country": "Israel"
+    },
+    {
+      "id": "maccabi-haifa",
+      "name": "Maccabi Haifa FC",
+      "leagueId": "israeli-premier-league",
+      "country": "Israel"
+    },
+    {
+      "id": "maccabi-tel-aviv",
+      "name": "Maccabi Tel Aviv FC",
+      "leagueId": "israeli-premier-league",
+      "country": "Israel"
+    },
+    {
+      "id": "marathon-honduras",
+      "name": "CD Marathon",
+      "leagueId": "liga-nacional-honduras",
+      "country": "Honduras"
+    },
+    {
+      "id": "puerto-cabello",
+      "name": "Academia Puerto Cabello",
+      "leagueId": "liga-futve",
+      "country": "Venezuela"
+    },
+    {
+      "id": "deportivo-la-guaira",
+      "name": "Caracas FC",
+      "leagueId": "liga-futve",
+      "country": "Venezuela"
+    },
+    {
+      "id": "plaza-amador",
+      "name": "Plaza Amador",
+      "leagueId": "lpf-panama",
+      "country": "Panama"
+    },
+    {
+      "id": "turan-tovuz",
+      "name": "FK Turan Tovuz",
+      "leagueId": "azerbaijan-premier-league",
+      "country": "Azerbaijan"
+    },
+    {
+      "id": "fc-noah",
+      "name": "FK Noah",
+      "leagueId": "armenian-premier-league",
+      "country": "Armenia"
+    },
+    {
+      "id": "ludogorets",
+      "name": "PFC Ludogorets Razgrad",
+      "leagueId": "parva-liga",
+      "country": "Bulgaria"
+    },
+    {
+      "id": "montana",
+      "name": "FC Montana",
+      "leagueId": "parva-liga",
+      "country": "Bulgaria"
+    },
+    {
+      "id": "gyori-eto",
+      "name": "Gyori ETO FC",
+      "leagueId": "otpbank-liga",
+      "country": "Hungary"
+    },
+    {
+      "id": "puskas-akademia",
+      "name": "Puskas Akademia FC",
+      "leagueId": "otpbank-liga",
+      "country": "Hungary"
+    },
+    {
+      "id": "fcsb",
+      "name": "FCSB",
+      "leagueId": "superliga-romania",
+      "country": "Romania"
+    },
+    {
+      "id": "al-najma",
+      "name": "Al-Najma Club",
+      "leagueId": "bahrain-premier-league",
+      "country": "Bahrain"
+    },
+    {
+      "id": "al-ahly",
+      "name": "Al Ahly SC",
+      "leagueId": "egyptian-premier-league",
+      "country": "Egypt"
+    },
+    {
+      "id": "zamalek",
+      "name": "Zamalek SC",
+      "leagueId": "egyptian-premier-league",
+      "country": "Egypt"
+    },
+    {
+      "id": "pyramids",
+      "name": "Pyramids FC",
+      "leagueId": "egyptian-premier-league",
+      "country": "Egypt"
+    },
+    {
+      "id": "zed",
+      "name": "ZED FC",
+      "leagueId": "egyptian-premier-league",
+      "country": "Egypt"
+    },
+    {
+      "id": "el-gouna",
+      "name": "El Gouna FC",
+      "leagueId": "egyptian-premier-league",
+      "country": "Egypt"
+    },
+    {
+      "id": "esperance-de-tunis",
+      "name": "Esperance Sportive de Tunis",
+      "leagueId": "tunisian-ligue-1",
+      "country": "Tunisia"
+    },
+    {
+      "id": "club-africain",
+      "name": "Club Africain",
+      "leagueId": "tunisian-ligue-1",
+      "country": "Tunisia"
+    },
+    {
+      "id": "cs-sfaxien",
+      "name": "CS Sfaxien",
+      "leagueId": "tunisian-ligue-1",
+      "country": "Tunisia"
+    },
+    {
+      "id": "us-monastir",
+      "name": "US Monastir",
+      "leagueId": "tunisian-ligue-1",
+      "country": "Tunisia"
+    },
+    {
+      "id": "etoile-du-sahel",
+      "name": "Etoile Sportive du Sahel",
+      "leagueId": "tunisian-ligue-1",
+      "country": "Tunisia"
+    },
+    {
+      "id": "js-kabylie",
+      "name": "JS Kabylie",
+      "leagueId": "ligue-pro-algerie",
+      "country": "Algeria"
+    },
+    {
+      "id": "usm-alger",
+      "name": "USM Alger",
+      "leagueId": "ligue-pro-algerie",
+      "country": "Algeria"
+    },
+    {
+      "id": "hearts-of-oak",
+      "name": "Accra Hearts of Oak SC",
+      "leagueId": "ghana-premier-league",
+      "country": "Ghana"
+    },
+    {
+      "id": "chaves",
+      "name": "GD Chaves",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "torreense",
+      "name": "CF Torreense",
+      "leagueId": "liga-portugal-2",
+      "country": "Portugal"
+    },
+    {
+      "id": "estrela-amadora",
+      "name": "Estrela da Amadora",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "farense",
+      "name": "SC Farense",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "vitoria-de-guimaraes",
+      "name": "Vitoria SC",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "casa-pia",
+      "name": "Casa Pia AC",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "gil-vicente",
+      "name": "Gil Vicente FC",
+      "leagueId": "primeira-liga",
+      "country": "Portugal"
+    },
+    {
+      "id": "lask",
+      "name": "LASK",
+      "leagueId": "austrian-bundesliga",
+      "country": "Austria"
+    },
+    {
+      "id": "wolfsberger-ac",
+      "name": "Wolfsberger AC",
+      "leagueId": "austrian-bundesliga",
+      "country": "Austria"
+    },
+    {
+      "id": "barcelona-b",
+      "name": "FC Barcelona B",
+      "leagueId": "primera-rfef",
+      "country": "Spain"
+    },
+    {
+      "id": "psv",
+      "name": "PSV Eindhoven",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "st-gallen",
+      "name": "FC St. Gallen",
+      "leagueId": "swiss-super-league",
+      "country": "Switzerland"
+    },
+    {
+      "id": "fc-utrecht",
+      "name": "FC Utrecht",
+      "leagueId": "eredivisie",
+      "country": "Netherlands"
+    },
+    {
+      "id": "al-fateh",
+      "name": "Al-Fateh SC",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
+    },
+    {
+      "id": "girona",
+      "name": "Girona FC",
+      "leagueId": "la-liga",
+      "country": "Spain"
+    },
+    {
+      "id": "rs-berkane",
+      "name": "RS Berkane",
+      "leagueId": "botola-pro",
+      "country": "Morocco"
+    },
+    {
+      "id": "as-far",
+      "name": "AS FAR",
+      "leagueId": "botola-pro",
+      "country": "Morocco"
+    },
+    {
+      "id": "mechelen",
+      "name": "KV Mechelen",
+      "leagueId": "pro-league",
+      "country": "Belgium"
+    },
+    {
+      "id": "charlotte-fc",
+      "name": "Charlotte FC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "fc-cincinnati",
+      "name": "FC Cincinnati",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "st-louis-city",
+      "name": "St. Louis City SC",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "new-england-revolution",
+      "name": "New England Revolution",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "new-york-red-bulls",
+      "name": "New York Red Bulls",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "sporting-kc",
+      "name": "Sporting Kansas City",
+      "leagueId": "mls",
+      "country": "USA"
+    },
+    {
+      "id": "yokohama-f-marinos",
+      "name": "Yokohama F. Marinos",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "gamba-osaka",
+      "name": "Gamba Osaka",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "nagoya-grampus",
+      "name": "Nagoya Grampus",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "shonan-bellmare",
+      "name": "Shonan Bellmare",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "sanfrecce-hiroshima",
+      "name": "Sanfrecce Hiroshima",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "ventforet-kofu",
+      "name": "Ventforet Kofu",
+      "leagueId": "j-league",
+      "country": "Japan"
+    },
+    {
+      "id": "rapid-wien",
+      "name": "SK Rapid Wien",
+      "leagueId": "austrian-bundesliga",
+      "country": "Austria"
+    },
+    {
+      "id": "lokomotiv-tashkent",
+      "name": "FC Lokomotiv Tashkent",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "sogdiana",
+      "name": "FC Sogdiana",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "fc-andijan",
+      "name": "FC Andijan",
+      "leagueId": "uzbekistan-superleague",
+      "country": "Uzbekistan"
+    },
+    {
+      "id": "asante-kotoko",
+      "name": "Asante Kotoko SC",
+      "leagueId": "ghana-premier-league",
+      "country": "Ghana"
+    },
+    {
+      "id": "deportes-tolima",
+      "name": "Deportes Tolima",
+      "leagueId": "liga-betplay",
+      "country": "Colombia"
+    },
+    {
+      "id": "millonarios",
+      "name": "Millonarios FC",
+      "leagueId": "liga-betplay",
+      "country": "Colombia"
+    },
+    {
+      "id": "independiente-medellin",
+      "name": "Independiente Medellín",
+      "leagueId": "liga-betplay",
+      "country": "Colombia"
+    },
+    {
+      "id": "once-caldas",
+      "name": "Once Caldas",
+      "leagueId": "liga-betplay",
+      "country": "Colombia"
+    },
+    {
+      "id": "junior-barranquilla",
+      "name": "Junior FC",
+      "leagueId": "liga-betplay",
+      "country": "Colombia"
+    },
+    {
+      "id": "tp-mazembe",
+      "name": "TP Mazembe",
+      "leagueId": "linafoot",
+      "country": "DR Congo"
+    },
+    {
+      "id": "as-vita-club",
+      "name": "AS Vita Club",
+      "leagueId": "linafoot",
+      "country": "DR Congo"
+    },
+    {
+      "id": "osijek",
+      "name": "NK Osijek",
+      "leagueId": "hnl",
+      "country": "Croatia"
+    },
+    {
+      "id": "mainz",
+      "name": "1. FSV Mainz 05",
+      "leagueId": "bundesliga-2",
+      "country": "Germany"
+    },
+    {
+      "id": "fc-schalke-04",
+      "name": "FC Schalke 04",
+      "leagueId": "bundesliga-2",
+      "country": "Germany"
+    }
   ]
 }
