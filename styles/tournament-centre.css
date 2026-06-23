@@ -1,6 +1,5 @@
 /* ─── Page root ──────────────────────────────────────────── */
 .tournament-centre {
-  max-width: var(--max-content-width);
 }
 
 /* ─── Tab bar ─────────────────────────────────────────────── */
@@ -50,6 +49,193 @@
   margin-top: var(--space-4);
 }
 
+/* ─── Two-column layout ───────────────────────────────────── */
+.tc-layout {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+
+.tc-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Fixture rail (desktop) ──────────────────────────────── */
+.tc-rail {
+  width: 240px;
+  flex-shrink: 0;
+  position: sticky;
+  top: var(--space-6);
+  max-height: calc(100vh - var(--nav-height) - var(--space-6));
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+.tc-rail__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-bottom: var(--space-6);
+}
+
+.tc-rail__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.tc-rail__label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  padding: 0 var(--space-1);
+  margin: 0;
+}
+
+.tc-rail__label--live {
+  color: #ef4444;
+}
+
+.tc-rail__empty {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  padding: var(--space-4) var(--space-1);
+  text-align: center;
+  margin: 0;
+}
+
+/* ─── Rail card ───────────────────────────────────────────── */
+.tc-rail-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+}
+
+.tc-rail-card--live {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.tc-rail-card__teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1);
+  margin-bottom: var(--space-1);
+}
+
+.tc-rail-card__team {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.tc-rail-card__team--away {
+  text-align: right;
+}
+
+.tc-rail-card__score {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  flex-shrink: 0;
+  padding: 0 var(--space-1);
+  white-space: nowrap;
+}
+
+.tc-rail-card__time {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  padding: 0 var(--space-1);
+  white-space: nowrap;
+}
+
+.tc-rail-card__meta {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ─── Mobile fixture strip ────────────────────────────────── */
+.tc-fixture-strip {
+  display: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: var(--space-2);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.tc-fixture-strip::-webkit-scrollbar { display: none; }
+
+.tc-strip-card {
+  flex-shrink: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  min-width: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.tc-strip-card--live {
+  border-color: #ef4444;
+}
+
+.tc-strip-card__row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tc-strip-card__team {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  width: 28px;
+  text-align: center;
+}
+
+.tc-strip-card__score {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+.tc-strip-card__time {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.tc-strip-card__badge {
+  font-size: 9px;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.tc-strip-card__badge--live {
+  color: #ef4444;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
 @media (max-width: 768px) {
   .tc-tabs {
     overflow-x: auto;
@@ -59,6 +245,12 @@
   .tc-tab {
     padding: var(--space-3) var(--space-3);
     font-size: var(--font-size-xs);
+  }
+  .tc-rail {
+    display: none;
+  }
+  .tc-fixture-strip {
+    display: flex;
   }
 }
 

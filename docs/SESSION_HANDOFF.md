@@ -21,6 +21,7 @@
 - `docs/TASK_BREAKDOWN.md` — all tasks T-001 through T-083 with statuses
 - `docs/RECOMMENDATIONS.md` — 18 architectural recommendations with adopt/reject status
 - `docs/DATA_ENTRY_GUIDE.md` — squad/fixture/standings entry conventions and ID rules
+- `docs/LIVE_DATA_PLAN.md` — concrete implementation plan for automated fixture/standings/knockout updates via football-data.org + Netlify Scheduled Functions (Sprint 24, not yet implemented)
 
 ---
 
@@ -65,6 +66,8 @@
 | Sprint 21 — Photo Pass 2 | Wikidata P18 fallback for null player entries. Phases: A (Wikipedia search API), 45s cooldown, B (pageimages), C (Wikidata wbgetentities P18 for articles without lead image), D (duplicate URL scan — now also cross-checks existing photoMap), E (write). Net recovered: 968 − 952 = +16 genuine new photos. 9 false positives nulled post-run (uruguay-martinez-e, ghana-harrison, colombia-diaz-s, jordan-al-bawab, jordan-al-omari-a, jordan-al-qasem, jordan-haddad, uzbekistan-alijonov, uzbekistan-khamdamov). Bug fixed: `runWikidataPass()` Phase D now builds `existingUrls` set from current photoMap before scanning candidates — prevents any URL already assigned to another player from being assigned again. WIKIDATA_PASS reset to false. Final coverage: 968/1248 (77.6%). | **COMPLETE** |
 | Sprint 22 — Squad Audit | Wikipedia squad section API audit across all 48 teams. 23 accurate, 1 minor fix (Cape Verde: "Mário Rosa" → "Mércio Rosa"), 12 full replacements (Morocco, USA, Japan, Austria, Uzbekistan, Ghana, Panama, Belgium, Norway, Colombia, DR Congo, Croatia) — pre-submission stale data. clubs.json expanded from 456 → 488 entries. search-index.json regenerated (1,296 entries). Uzbekistan duplicate-name bug (two players named "Eldor Shomurodov") resolved by squad replacement. **Note:** the git commit for this work is mislabeled "Sprint 14" — actual Sprint 14 was photo architecture. Cannot be amended; document inconsistency only. | **COMPLETE** |
 | Sprint 22 — Manager Profiles | `managerTenure` + `managerFormerPosition` added to all 48 countries.json entries. `data/managers.json` created: 48 entries (object-keyed by countryId), each with `career[]` (managerial appointments), `playerClubs[]` (max 3 notable clubs), `honours[]` (major titles, role-labeled Manager/Player). `DataManager.loadManagers()` + `loadManager(countryId)` added. Accordion UI in overview-tab.js: tenure shown in accent colour below meta line; `<details>/<summary>` "Career & Honours" section with career timeline, player clubs, honour chips. player-photos.json reconciled after squad replacements: 200 orphaned keys removed, 200 new players gathered via gather-photos.js normal mode. Final state: 1,296 total keys (996 URLs + 300 null). | **COMPLETE** |
+| Sprint 23 | Desktop layout & information density. `max-width` lifted from 960px/1100px to `var(--max-content-width)` across Tournament Centre, League Explorer, Club Explorer, Countries. Compare Teams radar promoted to primary position (full-width, above cv-body). cv-body 2-col grid at ≥1280px. Statistics Dashboard `.sp-sections` 2-col grid at ≥1280px; scorers section gains squad goal totals column. Club Explorer and League Explorer 2-col item lists at ≥1280px. | **COMPLETE** |
+| Sprint 24 | Part A: Compare Teams consistency fix — `.cv-page` no longer overrides padding from `.page-content` (was `var(--space-4) 0 var(--space-8)`, zero horizontal padding was the root cause); `.cv-title` font-size corrected 2xl→3xl to match all other page titles. Part B: Tournament Centre fixture rail — Today's Matches tab removed; desktop gets a sticky ~240px rail (Live→Today→Recent→Coming Up sections); mobile gets a horizontal strip above the tabs. Default tab changed to Groups. Part C: Live data implementation plan written to `docs/LIVE_DATA_PLAN.md`. | **COMPLETE** |
 
 ---
 
@@ -89,7 +92,7 @@
 | `modules/overview-tab.js` | Complete | Hero cards, captain highlight, fixture strip, group standing. Imports `DataManager` — calls `DataManager.loadManager(country.id)` in `render()`. Manager profile section (Sprint 21+22): `#renderManager(country, managerData)` renders 72px photo + name / nationality · age · former-position meta line + tenure in accent colour + bio. `#renderManagerAccordion(data)` renders `<details>/<summary>` "Career & Honours" element: managerial career list (years column + club), player clubs paragraph, honours list with Manager/Player role chips. `#managerAge(dob)` computes age at tournament start (June 11 2026). Photo keyed as `manager-{countryId}` in photoMap. Initials fallback via `getInitials()`. |
 | `modules/stats-tab.js` | **Complete** | Experience (caps leaderboard), International Goals (scorers), Squad Profile (avg age, youngest/oldest, by-position age). Constructor: `(container, country, players)` — all computation inline, no DataManager calls. |
 | `modules/fixtures-tab.js` | Complete | Group-stage results + W/D/L indicators, TC deep-links (#group-x, #knockout), knockout pending state |
-| `modules/tournament-centre.js` | Complete | 3-tab shell — Today / Group Stage / Knockout Stage. `#renderSnapshot()` includes both group + knockout matches in played/remaining count (shows 32 remaining after all 72 group matches are FT). Today tab merges `#fixtures` + `#knockoutMatches`. |
+| `modules/tournament-centre.js` | Complete | 2-tab shell (Group Stage / Knockout Stage) — Today's Matches tab removed (Sprint 24). `#renderSnapshot()` counts both group + knockout played/remaining. Desktop: sticky ~240px fixture rail via `#renderRail()` showing Live → Today → Recent → Coming Up sections (`#railCard()`). Mobile: horizontal scrolling strip above tabs via `#renderFixtureStrip()` / `#stripCard()`. Default tab: groups. `#allFixturesWithKickoff()` merges group fixtures + knockout matches with a kickoff date. |
 | `modules/group-carousel.js` | Complete | 12 group cards, standings tables, fixture strips, drag/wheel/arrow nav, `scrollToGroup()` |
 | `modules/knockout-bracket.js` | Complete | Horizontal bracket, 5 rounds, seed labels, wheel redirect |
 | `modules/search-overlay.js` | **Complete** | Ctrl+K or nav button trigger, relevance-scored results (exact→prefix→contains→word-prefix→subsequence→Levenshtein), diacritic normalisation, team/player results, player deep-link nav |
@@ -110,10 +113,10 @@ All files exist and are fully implemented unless noted:
 - `team-page.css` — TeamPage tabs, squad layout, manager accordion styles (`.tp-manager__tenure`, `.tp-manager__details`, `.tp-manager__toggle`, `.tp-manager__expanded`, `.tp-mgr-career`, `.tp-mgr-honours`, `.tp-mgr-honour__role--manager/--player`)
 - `squad.css` — squad cards, position group headers
 - `profile-panel.css` — sticky side panel
-- `tournament-centre.css` — snapshot, tabs, match cards, group leaders
+- `tournament-centre.css` — snapshot, tabs, match cards, group leaders. Sprint 24 additions: `.tc-layout` (flex row), `.tc-main`, `.tc-rail` (sticky 240px, desktop), `.tc-rail__inner/section/label/label--live/empty`, `.tc-rail-card/--live/__teams/__team/__score/__time/__meta`, `.tc-fixture-strip` (hidden desktop, flex on mobile), `.tc-strip-card/--live/__row/__team/__score/__time/__badge/--live`
 - `carousel.css` — GroupCarousel, standings table, fixture strip, broadcaster badges
 - `knockout.css` — horizontal bracket, round columns, team slots
-- `compare.css` — **Complete** (selectors, duel rows, headers, radar section, responsive)
+- `compare.css` — **Complete** (selectors, duel rows, headers, radar section, responsive). Sprint 24: `.cv-page` padding removed (now inherits from `.page-content`); `.cv-title` font-size corrected to `var(--font-size-3xl)`.
 - `search.css` — **Complete** (overlay, modal, result groups, empty state, responsive)
 - `countries.css` — **Complete** (`cp-` namespace: page, group sections, 4-wide card grid, flag + meta cards, responsive breakpoints at 960px/640px)
 - `stats-global.css` — **Complete** (`sp-` namespace: page, header, loading state, two-col layout, player rows, squad rows, caveat note, stat cards)
@@ -491,7 +494,7 @@ All data files use:
 Hash                  Module             Params
 ─────────────────────────────────────────────────────────────────
 (empty) / #tournament TournamentCentre   {}
-#today                TournamentCentre   { initialTab: 'today' }
+#today                TournamentCentre   { initialTab: 'today' }  ← DEPRECATED (Sprint 24): Today tab removed; route now falls through to default (groups)
 #groups               TournamentCentre   { initialTab: 'groups' }
 #group-a … #group-l   TournamentCentre   { initialTab: 'groups', groupId: 'A'…'L' }
 #knockout             TournamentCentre   { initialTab: 'knockout' }
@@ -734,7 +737,10 @@ npm run validate
 
 ---
 
-### Sprint 23 — candidate feature sprints
+### Sprint 25 — candidate feature sprints
+
+**Live data implementation (from LIVE_DATA_PLAN.md)**
+Register football-data.org, write `data/api-team-map.json`, create `netlify/functions/sync-tournament.mts`, update DataManager to fetch from Blob Store. Estimated ~8–10h. Eliminates manual fixture/standings maintenance. See `docs/LIVE_DATA_PLAN.md` for full plan.
 
 **Photo Pass 3 — manager gap recovery + harder player nulls**
 3 managers still null (Migné/Haiti, Bubista/Cape Verde, Donis/Saudi Arabia). Set `GATHER_MANAGERS=true` + add Wikidata P18 fallback for managers. ~300 player nulls remain; a targeted pass with alternate qualifiers (birth year, nationality) may recover more.
@@ -744,9 +750,6 @@ Clicking a fixture card could open a lightweight modal/panel with: scorers, card
 
 **Knockout bracket live updates**
 As R32/R16/QF/SF results land, the bracket updates — but there's no visual "just updated" indicator or animation. Could add a subtle pulse on newly-set slots, or a "last updated" timestamp in the bracket header.
-
-**Player stats enrichment**
-Current stats tab only shows caps/goals from squad data. Could add WC 2026 group-stage goals/assists if we track per-fixture scorers. Requires new data model (scorers array per fixture).
 
 **Post-June 28 — Knockout maintenance (rolling)**
 Populate R32 results as they happen (June 28 – July 6), propagate winners to R16. Use `scripts/update-knockout.js --match <id> --home N --away N`. Maintain R16 → QF → SF → Final through July 19.

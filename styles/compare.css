@@ -1,10 +1,10 @@
 /* ─── Compare Teams View ──────────────────────────────────── */
 .cv-page {
-  padding: var(--space-4) 0 var(--space-8);
+  /* padding from .page-content */
 }
 
 .cv-title {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-3xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   margin: 0 0 var(--space-5);

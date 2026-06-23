@@ -2,7 +2,6 @@
 
 .cp-page {
   padding: var(--space-6);
-  max-width: var(--max-content-width);
 }
 
 .cp-page__title {

@@ -7,7 +7,7 @@ import { KnockoutBracket } from './knockout-bracket.js';
 export class TournamentCentre {
   #container;
   #params          = {};
-  #activeTab       = 'today';
+  #activeTab       = 'groups';
   #tabEl           = null;
   #tabModule       = null;
   #countries       = [];
@@ -35,26 +35,34 @@ export class TournamentCentre {
     this.#countries       = countries;
     this.#groups          = groups;
     this.#knockoutMatches = knockoutRounds.flatMap(r => r.matches ?? []);
-    this.#countryMap = new Map(this.#countries.map(c => [c.id, c]));
+    this.#countryMap      = new Map(this.#countries.map(c => [c.id, c]));
 
     this.#container.innerHTML = `
       <div class="page-content tournament-centre">
         ${this.#renderSnapshot()}
-        <div class="tc-tabs" role="tablist">
-          <button class="tc-tab tc-tab--active" data-tab="today"
-                  role="tab" aria-selected="true" type="button">Today's Matches</button>
-          <button class="tc-tab" data-tab="groups"
-                  role="tab" aria-selected="false" type="button">Group Stage</button>
-          <button class="tc-tab" data-tab="knockout"
-                  role="tab" aria-selected="false" type="button">Knockout Stage</button>
+        <div class="tc-layout">
+          <div class="tc-main">
+            ${this.#renderFixtureStrip()}
+            <div class="tc-tabs" role="tablist">
+              <button class="tc-tab tc-tab--active" data-tab="groups"
+                      role="tab" aria-selected="true" type="button">Group Stage</button>
+              <button class="tc-tab" data-tab="knockout"
+                      role="tab" aria-selected="false" type="button">Knockout Stage</button>
+            </div>
+            <div class="tc-tab-content"></div>
+          </div>
+          ${this.#renderRail()}
         </div>
-        <div class="tc-tab-content"></div>
       </div>`;
 
     this.#tabEl = this.#container.querySelector('.tc-tab-content');
-    await this.#loadTab(this.#params.initialTab ?? 'today');
 
-    // Attach to inner element (re-created each render) to avoid listener accumulation
+    const validTabs = ['groups', 'knockout'];
+    const initialTab = validTabs.includes(this.#params.initialTab)
+      ? this.#params.initialTab
+      : 'groups';
+    await this.#loadTab(initialTab);
+
     this.#container.querySelector('.tournament-centre').addEventListener('click', async e => {
       const btn = e.target.closest('[data-tab]');
       if (!btn || btn.dataset.tab === this.#activeTab) return;
@@ -76,9 +84,7 @@ export class TournamentCentre {
       btn.setAttribute('aria-selected', String(active));
     });
 
-    if (tab === 'today') {
-      this.#tabEl.innerHTML = this.#renderTodayTab();
-    } else if (tab === 'groups') {
+    if (tab === 'groups') {
       this.#tabModule = new GroupCarousel(
         this.#tabEl,
         this.#groups,
@@ -100,7 +106,7 @@ export class TournamentCentre {
     }
   }
 
-  // ─── Snapshot (always visible above tabs) ─────────────────
+  // ─── Snapshot ─────────────────────────────────────────────
 
   #renderSnapshot() {
     const playedGroup    = this.#fixtures.filter(f => f.status === 'FT').length;
@@ -108,7 +114,7 @@ export class TournamentCentre {
     const played         = playedGroup + playedKnockout;
     const total          = this.#fixtures.length + this.#knockoutMatches.length;
     const remaining      = total ? total - played : '—';
-    const teams     = this.#countries.length || 48;
+    const teams          = this.#countries.length || 48;
 
     return `
       <section class="tc-snapshot">
@@ -131,128 +137,122 @@ export class TournamentCentre {
       </section>`;
   }
 
-  // ─── Today tab ────────────────────────────────────────────
+  // ─── Mobile fixture strip ──────────────────────────────────
 
-  #renderTodayTab() {
-    const todayGroup    = this.#fixtures.filter(f => isToday(f.kickoff));
-    const todayKnockout = this.#knockoutMatches.filter(m => isToday(m.kickoff));
-    const todayFixtures = [...todayGroup, ...todayKnockout];
+  #renderFixtureStrip() {
+    const allFixtures = this.#allFixturesWithKickoff();
+    const todayAll    = allFixtures.filter(f => isToday(f.kickoff));
+    const displayFixtures = todayAll.length > 0
+      ? todayAll
+      : [...allFixtures]
+          .filter(f => f.status === 'scheduled')
+          .sort((a, b) => new Date(a.kickoff) - new Date(b.kickoff))
+          .slice(0, 8);
 
-    const nextGroup    = this.#fixtures.filter(f => f.status === 'scheduled');
-    const nextKnockout = this.#knockoutMatches.filter(m => m.status === 'scheduled' && m.kickoff);
-    const isNext       = todayFixtures.length === 0;
-    const displayFixtures = isNext
-      ? [...nextGroup, ...nextKnockout].slice(0, 6)
-      : todayFixtures;
+    if (!displayFixtures.length) return '';
+    const cards = displayFixtures.map(f => this.#stripCard(f)).join('');
+    return `<div class="tc-fixture-strip">${cards}</div>`;
+  }
 
+  #stripCard(f) {
+    const home     = this.#countryMap.get(f.homeTeamId);
+    const away     = this.#countryMap.get(f.awayTeamId);
+    const homeAbbr = escapeHtml((home?.name ?? f.homeLabel ?? f.homeTeamId ?? 'TBD').slice(0, 3).toUpperCase());
+    const awayAbbr = escapeHtml((away?.name ?? f.awayLabel ?? f.awayTeamId ?? 'TBD').slice(0, 3).toUpperCase());
+    const isLive   = f.status === 'live';
+    const isFT     = f.status === 'FT';
+    const middle   = (isFT || isLive)
+      ? `<span class="tc-strip-card__score">${f.homeScore ?? 0}–${f.awayScore ?? 0}</span>`
+      : `<span class="tc-strip-card__time">${escapeHtml(formatKickoff(f.kickoff))}</span>`;
+    const badge = isLive
+      ? `<span class="tc-strip-card__badge tc-strip-card__badge--live">LIVE</span>`
+      : isFT ? `<span class="tc-strip-card__badge">FT</span>` : '';
     return `
-      <div class="tc-today-tab">
-        ${this.#renderMatchSection(displayFixtures, isNext)}
-        ${this.#renderGroupLeaders()}
+      <div class="tc-strip-card${isLive ? ' tc-strip-card--live' : ''}">
+        <div class="tc-strip-card__row">
+          <span class="tc-strip-card__team">${homeAbbr}</span>
+          ${middle}
+          <span class="tc-strip-card__team">${awayAbbr}</span>
+        </div>
+        ${badge}
       </div>`;
   }
 
-  // ─── Match section ────────────────────────────────────────
+  // ─── Fixture rail (desktop) ────────────────────────────────
 
-  #renderMatchSection(displayFixtures, isNext) {
-    const heading = isNext ? 'Next Matches' : "Today's Matches";
-    const note    = isNext
-      ? `<span class="tc-section__note">(no matches today)</span>`
-      : '';
+  #renderRail() {
+    const allFixtures = this.#allFixturesWithKickoff();
 
-    if (!displayFixtures.length) {
-      return `
-        <section class="tc-section">
-          <h2 class="tc-section__title">${heading}</h2>
-          <div class="empty-state empty-state--compact">
-            <p class="empty-state__message">No fixtures available yet.</p>
-          </div>
-        </section>`;
-    }
+    const live         = allFixtures.filter(f => f.status === 'live');
+    const todayUpcoming = allFixtures.filter(f =>
+      f.status === 'scheduled' && isToday(f.kickoff)
+    );
+    const recentFT = [...allFixtures]
+      .filter(f => f.status === 'FT')
+      .sort((a, b) => new Date(b.kickoff) - new Date(a.kickoff))
+      .slice(0, 5);
+    const nextScheduled = [...allFixtures]
+      .filter(f => f.status === 'scheduled' && !isToday(f.kickoff))
+      .sort((a, b) => new Date(a.kickoff) - new Date(b.kickoff))
+      .slice(0, 5);
 
-    const cards = displayFixtures.map(f => this.#matchCard(f)).join('');
-    return `
-      <section class="tc-section">
-        <h2 class="tc-section__title">${heading}${note}</h2>
-        <div class="match-cards">${cards}</div>
-      </section>`;
+    const sections = [
+      live.length          ? this.#railSection('Live', live, true) : '',
+      todayUpcoming.length ? this.#railSection('Today', todayUpcoming) : '',
+      recentFT.length      ? this.#railSection('Recent', recentFT) : '',
+      nextScheduled.length ? this.#railSection('Coming Up', nextScheduled) : '',
+    ].join('');
+
+    const inner = sections || `<p class="tc-rail__empty">No fixtures available</p>`;
+    return `<aside class="tc-rail"><div class="tc-rail__inner">${inner}</div></aside>`;
   }
 
-  #matchCard(f) {
+  #railSection(label, fixtures, isLive = false) {
+    const labelClass = isLive ? 'tc-rail__label tc-rail__label--live' : 'tc-rail__label';
+    const cards = fixtures.map(f => this.#railCard(f)).join('');
+    return `
+      <div class="tc-rail__section">
+        <p class="${labelClass}">${escapeHtml(label)}</p>
+        ${cards}
+      </div>`;
+  }
+
+  #railCard(f) {
     const home     = this.#countryMap.get(f.homeTeamId);
     const away     = this.#countryMap.get(f.awayTeamId);
     const homeName = escapeHtml(home?.name ?? f.homeLabel ?? f.homeTeamId ?? 'TBD');
     const awayName = escapeHtml(away?.name ?? f.awayLabel ?? f.awayTeamId ?? 'TBD');
-    const kickoff  = escapeHtml(formatKickoff(f.kickoff));
-    const venue    = f.venue ? escapeHtml(f.venue) : '';
+    const isLive   = f.status === 'live';
+    const isFT     = f.status === 'FT';
+    const hasScore = isFT || isLive;
 
-    const middle = f.status === 'FT' || f.status === 'live'
-      ? `<span class="match-card__score">${f.homeScore ?? 0}&nbsp;&ndash;&nbsp;${f.awayScore ?? 0}</span>`
-      : `<span class="match-card__time">${kickoff}</span>`;
+    const middle = hasScore
+      ? `<span class="tc-rail-card__score">${f.homeScore ?? 0}–${f.awayScore ?? 0}</span>`
+      : `<span class="tc-rail-card__time">${escapeHtml(formatKickoff(f.kickoff))}</span>`;
 
-    const statusBadge = f.status === 'live'
-      ? `<span class="badge badge--live" aria-label="Live match">&#128308; LIVE</span>`
-      : f.status === 'FT'
-      ? `<span class="badge badge--ft">FT</span>`
-      : '';
-
-    const broadcaster = f.broadcaster
-      ? `<span class="badge badge--broadcaster badge--${escapeHtml(f.broadcaster.toLowerCase())}">${escapeHtml(f.broadcaster)}</span>`
-      : '';
+    const metaParts = [];
+    if (isFT)        metaParts.push('FT');
+    else if (isLive) metaParts.push(`${f.minute ?? 'LIVE'}'`);
+    if (f.groupId)   metaParts.push(`Grp ${escapeHtml(f.groupId)}`);
 
     return `
-      <div class="match-card">
-        <div class="match-card__teams">
-          <span class="match-card__team">${homeName}</span>
+      <div class="tc-rail-card${isLive ? ' tc-rail-card--live' : ''}">
+        <div class="tc-rail-card__teams">
+          <span class="tc-rail-card__team">${homeName}</span>
           ${middle}
-          <span class="match-card__team match-card__team--away">${awayName}</span>
+          <span class="tc-rail-card__team tc-rail-card__team--away">${awayName}</span>
         </div>
-        <div class="match-card__meta">
-          ${statusBadge}
-          ${broadcaster}
-          ${venue ? `<span class="match-card__venue">${venue}</span>` : ''}
-        </div>
+        ${metaParts.length ? `<p class="tc-rail-card__meta">${metaParts.join(' · ')}</p>` : ''}
       </div>`;
   }
 
-  // ─── Group leaders (quick-glance, Today tab) ─────────────
+  // ─── Shared helpers ────────────────────────────────────────
 
-  #renderGroupLeaders() {
-    if (!this.#standings.length) {
-      return `
-        <section class="tc-section">
-          <h2 class="tc-section__title">Group Leaders</h2>
-          <div class="empty-state empty-state--compact">
-            <p class="empty-state__message">Standings will appear once matches begin.</p>
-          </div>
-        </section>`;
-    }
-
-    const cards = [...this.#standings]
-      .sort((a, b) => a.groupId.localeCompare(b.groupId))
-      .map(group => {
-        const leader = group.teams?.[0];
-        if (!leader) return '';
-        const country = this.#countryMap.get(leader.teamId);
-        const name    = escapeHtml(country?.name ?? leader.teamId);
-        const id      = escapeHtml(leader.teamId);
-        return `
-          <div class="leader-card">
-            <span class="leader-card__group">Group ${escapeHtml(group.groupId)}</span>
-            <a href="#${id}" class="leader-card__team">${name}</a>
-            <span class="leader-card__pts">${leader.points} pts</span>
-          </div>`;
-      }).filter(Boolean).join('');
-
-    return `
-      <section class="tc-section">
-        <div class="tc-section__header">
-          <h2 class="tc-section__title">Group Leaders</h2>
-          <button class="btn-link tc-section__link" type="button"
-                  data-tab="groups">View all groups &rarr;</button>
-        </div>
-        <div class="leader-cards">${cards}</div>
-      </section>`;
+  #allFixturesWithKickoff() {
+    return [
+      ...this.#fixtures,
+      ...this.#knockoutMatches.filter(m => m.kickoff),
+    ];
   }
 
   init() {}
