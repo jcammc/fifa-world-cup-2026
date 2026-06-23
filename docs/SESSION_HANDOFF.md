@@ -63,6 +63,8 @@
 | Sprint 20 — Audit | Photo Quality Audit: enumerated all 130 Pass-1 recoveries by filename. Found 22 confirmed false positives: logos (KRC Genk, Uzbekistan league/cup, Jordan team ×2), non-persons (Qasem Soleimani, Iran protests 2026), wrong-player assignments (Erick Davis, Stiven Mendoza, Behruz Karimov, Al Mehdi Al Harrar ×2, Ahmed Al-Kaf, Argentina GK photo on Uruguay's Emiliano Martínez, Wollacott photo on Ghana Harrison), duplicate-URL pairs. All 22 nulled. Coverage: 974 → 952/1248 (76.3%). Note: 4 entries (dr-congo-ngoy/Meschack Elia, colombia-cumbal/Cristian Borja, panama-godoy-r/Roderick Miller, panama-taylor/Michael Murillo) were later found to be correct — the player names match the photo subjects; ID vs name mismatch misled the audit. These were correctly restored by Pass 2. `isSuspicious()` strengthened: now also blocks `logo`, `_crest`, `_badge`, `_emblem`, `_shield`, `_coat_of_arms`, `federation`, `association` tokens and `.svg.png` thumbnails. Post-batch duplicate-URL rejection added to `runRetryPass()`. | **COMPLETE** |
 | Sprint 21 — Manager Profiles | Manager data model (managerNationality, managerDob, managerBio added to all 48 countries.json entries; _verificationManager flags on 14 uncertain entries). UI: `#renderManager(country)` in overview-tab.js renders 72px avatar, name, nationality · Age N, bio between hero cards and stats grid. Styles in team-page.css (`.tp-manager-section`, `.tp-manager`, `.tp-manager__photo`, `.tp-manager__initials`, `.tp-manager__info`, `.tp-manager__name`, `.tp-manager__meta`, `.tp-manager__bio`). Manager photos gathered via gather-photos.js GATHER_MANAGERS mode using "football manager" qualifier. 45/48 manager photos found. Gaps: Haiti (Migné), Cape Verde (Bubista), Saudi Arabia (Donis) — no Wikipedia lead image; Wikidata P18 may recover them. | **COMPLETE** |
 | Sprint 21 — Photo Pass 2 | Wikidata P18 fallback for null player entries. Phases: A (Wikipedia search API), 45s cooldown, B (pageimages), C (Wikidata wbgetentities P18 for articles without lead image), D (duplicate URL scan — now also cross-checks existing photoMap), E (write). Net recovered: 968 − 952 = +16 genuine new photos. 9 false positives nulled post-run (uruguay-martinez-e, ghana-harrison, colombia-diaz-s, jordan-al-bawab, jordan-al-omari-a, jordan-al-qasem, jordan-haddad, uzbekistan-alijonov, uzbekistan-khamdamov). Bug fixed: `runWikidataPass()` Phase D now builds `existingUrls` set from current photoMap before scanning candidates — prevents any URL already assigned to another player from being assigned again. WIKIDATA_PASS reset to false. Final coverage: 968/1248 (77.6%). | **COMPLETE** |
+| Sprint 22 — Squad Audit | Wikipedia squad section API audit across all 48 teams. 23 accurate, 1 minor fix (Cape Verde: "Mário Rosa" → "Mércio Rosa"), 12 full replacements (Morocco, USA, Japan, Austria, Uzbekistan, Ghana, Panama, Belgium, Norway, Colombia, DR Congo, Croatia) — pre-submission stale data. clubs.json expanded from 456 → 488 entries. search-index.json regenerated (1,296 entries). Uzbekistan duplicate-name bug (two players named "Eldor Shomurodov") resolved by squad replacement. **Note:** the git commit for this work is mislabeled "Sprint 14" — actual Sprint 14 was photo architecture. Cannot be amended; document inconsistency only. | **COMPLETE** |
+| Sprint 22 — Manager Profiles | `managerTenure` + `managerFormerPosition` added to all 48 countries.json entries. `data/managers.json` created: 48 entries (object-keyed by countryId), each with `career[]` (managerial appointments), `playerClubs[]` (max 3 notable clubs), `honours[]` (major titles, role-labeled Manager/Player). `DataManager.loadManagers()` + `loadManager(countryId)` added. Accordion UI in overview-tab.js: tenure shown in accent colour below meta line; `<details>/<summary>` "Career & Honours" section with career timeline, player clubs, honour chips. player-photos.json reconciled after squad replacements: 200 orphaned keys removed, 200 new players gathered via gather-photos.js normal mode. Final state: 1,296 total keys (996 URLs + 300 null). | **COMPLETE** |
 
 ---
 
@@ -74,7 +76,7 @@
 |------|--------|-------|
 | `app.js` | Complete | Entry point — ThemeManager, Nav, Router.init(), SearchOverlay.init() |
 | `router.js` | Complete | Hash routing, all current routes wired |
-| `data.js` | Complete | DataManager singleton, #cache Map, all loaders including `loadSearchIndex()`, `loadPlayerPhotos()` (returns Object not array — custom loader, not #load()), and `loadAllPlayers()` (parallel fetch all 48 squads, annotates each player with `countryId`, caches under `'all-players'`) |
+| `data.js` | Complete | DataManager singleton, #cache Map, all loaders including `loadSearchIndex()`, `loadPlayerPhotos()` (returns Object not array — custom loader, not #load()), `loadAllPlayers()` (parallel fetch all 48 squads, annotates each player with `countryId`, caches under `'all-players'`), `loadManagers()` (returns Object keyed by countryId — custom loader, same pattern as loadPlayerPhotos), `loadManager(countryId)` (calls loadManagers(), returns single entry or null) |
 | `time.js` | Complete | `formatKickoff()`, `isToday()` |
 | `utils.js` | Complete | `escapeHtml()` |
 | `theme.js` | Complete | localStorage, data-theme attribute toggle |
@@ -84,7 +86,7 @@
 | `modules/team-page.js` | Complete | TeamPage — 4-tab shell, tab switching, `scrollToPlayer` param |
 | `modules/squad-tab.js` | Complete | Squad tab — position groups, Auto-Focus IntersectionObserver |
 | `modules/profile-panel.js` | Complete | Singleton panel — player stats, club badge, bio, similar players |
-| `modules/overview-tab.js` | Complete | Hero cards, captain highlight, fixture strip, group standing. Manager profile section added (Sprint 21): `#renderManager(country)` renders 72px photo avatar + name/nationality/age/bio between hero section and stats grid. `#managerAge(dob)` computes age at tournament start (June 11 2026). Photo keyed as `manager-{countryId}` in photoMap. Initials fallback via `getInitials()`. |
+| `modules/overview-tab.js` | Complete | Hero cards, captain highlight, fixture strip, group standing. Imports `DataManager` — calls `DataManager.loadManager(country.id)` in `render()`. Manager profile section (Sprint 21+22): `#renderManager(country, managerData)` renders 72px photo + name / nationality · age · former-position meta line + tenure in accent colour + bio. `#renderManagerAccordion(data)` renders `<details>/<summary>` "Career & Honours" element: managerial career list (years column + club), player clubs paragraph, honours list with Manager/Player role chips. `#managerAge(dob)` computes age at tournament start (June 11 2026). Photo keyed as `manager-{countryId}` in photoMap. Initials fallback via `getInitials()`. |
 | `modules/stats-tab.js` | **Complete** | Experience (caps leaderboard), International Goals (scorers), Squad Profile (avg age, youngest/oldest, by-position age). Constructor: `(container, country, players)` — all computation inline, no DataManager calls. |
 | `modules/fixtures-tab.js` | Complete | Group-stage results + W/D/L indicators, TC deep-links (#group-x, #knockout), knockout pending state |
 | `modules/tournament-centre.js` | Complete | 3-tab shell — Today / Group Stage / Knockout Stage. `#renderSnapshot()` includes both group + knockout matches in played/remaining count (shows 32 remaining after all 72 group matches are FT). Today tab merges `#fixtures` + `#knockoutMatches`. |
@@ -96,7 +98,7 @@
 | `modules/statistics-page.js` | **Complete** | Tournament-wide stats: Squad Experience (caps leaderboard, top 10 squads + top 15 players), Career International Scorers (with caveat note — not WC 2026 match scorers), Tournament Demographics (avg age, youngest/oldest, position breakdown), Club & League Representation. Uses `loadAllPlayers()`. CSS namespace `sp-`. Player rows in Experience and Scorers lists are `<a href="#playerId">` links — clicking navigates to team page and scrolls to the player. |
 | `modules/continents-page.js` | **Complete** | 48 nations grouped by confederation (UEFA, CONMEBOL, CAF, AFC, CONCACAF, OFC) sorted by FIFA ranking within each section. Team count badge on each section heading. Reuses all `cp-` CSS classes. |
 | `modules/league-explorer.js` | **Complete** | Ranked list of all 86 leagues by player count. 3 summary stat cards. Real-time search filters by league name + country. Click-to-expand rows show all clubs sorted by player count with nation flag strips (up to 8 flags + overflow). One expanded at a time. Confederation colour-coded badges. CSS namespace `le-`. |
-| `modules/club-explorer.js` | **Complete** | 453 clubs ranked by player count. Search-first (real-time name filter). 2+/all toggle (default: 231 clubs with 2+ players; active search overrides toggle). Nation flags per club (up to 8, each an `<a href="#countryId">` linking to team page), +N overflow. Empty state with clear button. CSS namespace `ce-`. |
+| `modules/club-explorer.js` | **Complete** | ~452 clubs ranked by player count (clubs currently referenced by 48 squads). Search-first (real-time name filter). 2+/all toggle (default: 231 clubs with 2+ players; active search overrides toggle). Nation flags per club (up to 8, each an `<a href="#countryId">` linking to team page), +N overflow. Empty state with clear button. CSS namespace `ce-`. |
 
 ### CSS files (`styles/`)
 
@@ -105,7 +107,7 @@ All files exist and are fully implemented unless noted:
 - `theme.css` — light/dark colour tokens
 - `layout.css` — page grid, `.page-content` max-width
 - `nav.css` — top nav bar
-- `team-page.css` — TeamPage tabs, squad layout
+- `team-page.css` — TeamPage tabs, squad layout, manager accordion styles (`.tp-manager__tenure`, `.tp-manager__details`, `.tp-manager__toggle`, `.tp-manager__expanded`, `.tp-mgr-career`, `.tp-mgr-honours`, `.tp-mgr-honour__role--manager/--player`)
 - `squad.css` — squad cards, position group headers
 - `profile-panel.css` — sticky side panel
 - `tournament-centre.css` — snapshot, tabs, match cards, group leaders
@@ -145,16 +147,17 @@ After any squad data change: `node scripts/generate-search-index.js` then `npm r
 
 | File | Status |
 |------|--------|
-| `countries.json` | Complete — all 48 teams, all 48 managers, `teamStrength` populated for all 48 teams (Sprint 12). `recentForm` populated for 46 teams; Egypt `["D"]` (drew Belgium 1-1 R1), Cape Verde `["D"]` (drew Spain 0-0 R1). Will expand to 2+ entries as R2/R3 results arrive. Constraint: WC 2026 group matches + WC 2026 qualifiers only — no friendlies. |
+| `countries.json` | Complete — all 48 teams, all 48 managers. Manager fields: `manager`, `managerNationality`, `managerDob`, `managerBio`, `managerTenure` (e.g. `"2018–present"`), `managerFormerPosition` (e.g. `"Defender"`, `""` for non-players like Nagelsmann/Rangnick/Tuchel). 14 entries have `_verificationManager` flags. `teamStrength` populated for all 48 teams (Sprint 12). `recentForm` expands as results arrive; constraint: WC 2026 group matches + WC 2026 qualifiers ONLY — no friendlies or other tournaments. |
+| `managers.json` | **New (Sprint 22)** — 48 entries, object-keyed by countryId. Each: `career[]` (managerial appointments, chronological, `{ role, club, years }`), `playerClubs[]` (max 3 notable clubs as player, empty array if never played professionally), `honours[]` (major titles only, `{ title, year, role: "Manager"\|"Player" }`). Lazy-loaded per team via `DataManager.loadManager(countryId)`. |
 | `groups.json` | Complete — all 12 groups A–L |
 | `leagues.json` | **86 entries** — covers all leagueIds referenced by the 48 squads. Expanded during Sprint 9/10. Note: validate-data.js does NOT check leagueId against leagues.json; it only validates clubId against clubs.json. |
-| `clubs.json` | **456 entries, 86 distinct leagueIds** — all clubs referenced by all 48 squads |
+| `clubs.json` | **488 entries** — lookup file for all squads. ~452 currently referenced by the 48 squads; remainder are legacy entries from replaced squads retained for stability. |
 | `fixtures.json` | **72 group fixtures total. R1+R2 FT for Groups A–F (inc. ecu-cur 0-0 FT, tun-jpn FT June 21 early). Groups G–L R2 scheduled June 21–24. R3 all groups June 25–27.** |
 | `standings.json` | **R2 complete for Groups A–F.** Qualified: mexico, canada, switzerland, usa, germany. Eliminated: bosnia-herzegovina, qatar, haiti, turkey. Groups G–L at R1 only. All others null. |
 | `knockout.json` | R32 labels corrected against actual Wikipedia bracket (Sprint 13). All `homeTeamId`/`awayTeamId` null (R3 not complete). All 32 matches now have `kickoff` dates and `venue`. See Knockout Bracket section below for R32 structure. |
 | `rankings.json` | Empty stub |
 | `search-index.json` | **1,296 entries** — envelope format `{ version, lastUpdated, data }`. 48 team entries + 1,248 player entries. Regenerated by generate-search-index.js. |
-| `player-photos.json` | **968/1,248 player URLs (77.6%)** + **45/48 manager URLs**. Total 1,296 entries (1,248 player + 48 manager). History: original 844 → Pass 1 +130 → Audit −22 = 952 → Pass 2 (Wikidata) net +16 = 968. 3 manager gaps: Haiti (Migné), Cape Verde (Bubista), Saudi Arabia (Donis). Schema: envelope `{ version, lastUpdated, data: Object }`. Player keys: `"{countryId}-{playerId-slug}"`. Manager keys: `"manager-{countryId}"`. Values: URL string or `null` (confirmed no image / failed QA). No `undefined` entries remain. |
+| `player-photos.json` | **1,296 total entries** (48 manager + 1,248 player keys). 996 with photo URL, 300 confirmed-null (no image or failed QA). History: original 844 → Pass 1 +130 → Audit −22 = 952 → Pass 2 (Wikidata) net +16 = 968 → Sprint 22 squad audit reconcile: −200 orphaned (replaced squad old IDs) → gather-photos normal mode: +200 new player entries → current state. 3 manager gaps remain: Haiti (Migné), Cape Verde (Bubista), Saudi Arabia (Donis). Schema: envelope `{ version, lastUpdated, data: Object }`. Player keys: `"{countryId}-{slug}"`. Manager keys: `"manager-{countryId}"`. Values: URL string or `null`. No `undefined` entries. |
 | `players/france.json` | Complete — 26 players |
 | `players/england.json` | Complete — 26 players |
 | `players/brazil.json` | Complete — 26 players |
@@ -252,7 +255,7 @@ Key rules:
 { "id": "real-madrid", "name": "Real Madrid", "leagueId": "la-liga", "country": "Spain" }
 ```
 
-456 clubs currently. `leagueId` values do NOT need to match `leagues.json` — the validator does not enforce this. `leagues.json` has 86 entries covering all leagues in current use, but freeform strings remain valid.
+**488 entries** in clubs.json (expanded to 488 during Sprint 22 squad audit — new clubs added for replaced squads). `leagueId` values do NOT need to match `leagues.json` — the validator does not enforce this. `leagues.json` has 86 entries covering all leagues in current use, but freeform strings remain valid.
 
 ### League (`data/leagues.json`)
 
@@ -281,12 +284,21 @@ Key rules:
   "fifaRanking": 2,
   "groupId": "I",
   "manager": "Didier Deschamps",
+  "managerNationality": "French",
+  "managerDob": "1968-12-15",
+  "managerBio": "...",
+  "managerTenure": "2012–present",
+  "managerFormerPosition": "Midfielder",
   "recentForm": null,
   "teamStrength": { "attack": 95, "midfield": 88, "defence": 82, "goalkeeping": 90, "depth": 91 }
 }
 ```
 
-`recentForm`: `null | string[]` — last 5 international results oldest→newest, e.g. `["W","D","W","W","L"]`. Set on countries, not players. Populate only from verified match data.
+`managerTenure`: format `"YYYY–present"` or `"YYYY–YYYY"`. Use the year formally appointed to the current role.
+
+`managerFormerPosition`: playing position as a footballer — `"Goalkeeper"`, `"Defender"`, `"Midfielder"`, `"Forward"`, or `""` for managers with no significant professional playing career (e.g. Nagelsmann, Rangnick, Tuchel). 14 entries have `_verificationManager` flags indicating uncertain data.
+
+`recentForm`: `null | string[]` — last 5 results oldest→newest, e.g. `["W","D","W","W","L"]`. **WC 2026 group matches + WC 2026 qualifiers ONLY — no friendlies or other tournaments.** Set on countries, not players.
 
 `teamStrength`: **populated for all 48 teams** (Sprint 12). Five axes, all 0–100: `{ attack, midfield, defence, goalkeeping, depth }`. Rendered as a radar chart in Compare Teams via `Charts.renderRadar(container, data)`.
 
@@ -429,12 +441,47 @@ Player `href` is `#player-id` — a direct deep-link. The router parses this as 
 
 **Always regenerate with:** `node scripts/generate-search-index.js` after any squad data change.
 
+### Manager (`data/managers.json`)
+
+**Object-keyed** — `data` is an object, NOT an array (unlike every other data file):
+
+```json
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-22T00:00:00Z",
+  "data": {
+    "argentina": {
+      "career": [
+        { "role": "Manager", "club": "Argentina U20", "years": "2018" },
+        { "role": "Manager", "club": "Argentina (caretaker)", "years": "2018" },
+        { "role": "Manager", "club": "Argentina", "years": "2018–present" }
+      ],
+      "playerClubs": ["Deportivo La Coruña", "Lazio", "West Ham United"],
+      "honours": [
+        { "title": "Copa América", "year": "2021", "role": "Manager" },
+        { "title": "FIFA World Cup", "year": "2022", "role": "Manager" },
+        { "title": "Copa América", "year": "2024", "role": "Manager" }
+      ]
+    }
+  }
+}
+```
+
+Rules:
+- `career`: managerial roles only (no playing career), chronological, most recent last. Include caretaker/interim if notable.
+- `playerClubs`: max 3 most notable clubs where the manager played as a professional. Empty array `[]` if they never played professionally.
+- `honours`: MAJOR titles only — World Cup, continental trophies (Euro/Copa América/AFCON/etc.), top domestic leagues (PL/Bundesliga/La Liga/Serie A/Ligue 1), UCL. NOT minor cups or lower-league titles. `role` must be exactly `"Manager"` or `"Player"`.
+- Loaded via `DataManager.loadManagers()` (caches full object) + `DataManager.loadManager(countryId)` (returns single entry or null).
+- **Do NOT route through `DataManager.#load()`** — that assumes arrays and would return `{}` via the `?? []` fallback.
+
 ### Standard data file envelope
 
 All data files use:
 ```json
 { "version": "1.0", "lastUpdated": "2026-06-20T00:00:00Z", "data": [] }
 ```
+
+**Exception:** `player-photos.json` and `managers.json` use `data: Object` (not array). Both have custom loaders (`loadPlayerPhotos()`, `loadManagers()`) that do not call `#load()`.
 
 ---
 
@@ -538,6 +585,21 @@ const allPlayers = await DataManager.loadAllPlayers();
 
 ### 10. Search overlay — persistent singleton
 `SearchOverlay` is instantiated once in `app.js` and persists across navigations. It is NOT torn down by the router. Its `#index` array is loaded once and cached — no re-fetch on re-open.
+
+### 11. managers.json — object-keyed, custom loader
+
+`data/managers.json` uses `{ data: Object }` not `{ data: Array }`. **Do NOT load it through `DataManager.#load()`** — that method unwraps via `json.data ?? []`, which would silently return an empty array for an object value.
+
+Use the dedicated loaders:
+```javascript
+// Load whole map (cached after first call)
+const managers = await DataManager.loadManagers();  // { argentina: {...}, france: {...}, ... }
+
+// Load single entry
+const data = await DataManager.loadManager('argentina');  // { career, playerClubs, honours } | null
+```
+
+This is the same pattern as `loadPlayerPhotos()` — the two files that use object envelopes both have standalone methods outside `#load()`.
 
 ### 10. Player ID disambiguation
 When multiple players on the same squad share a surname, append a suffix:
@@ -645,14 +707,11 @@ npm run validate
 
 ## WHAT'S NEXT — CANDIDATE SPRINTS
 
-All squad data is complete. The natural next work areas, in rough priority order:
+**Operating model (binding rule):** Operational track (fixtures/standings/knockout maintenance — short JSON edits) runs in parallel with the feature track and never blocks it. Finish a feature sprint → concise summary → note any pending operational items → immediately identify and begin next highest-value feature sprint. No automatic "prioritization reviews" between sprints unless: major architectural issue arises, significant data quality problem, priorities materially change, or explicitly requested.
 
-### Sprint 6 continued (immediate) — Tournament data
-Complete R2 for Groups E–L as results come in June 20–24, then R3 for all groups June 25–27. Populate knockout.json R32 once all groups complete. This is the most time-sensitive work.
+---
 
-### Sprint 20 (now) — R2+R3 data maintenance + knockout population ⚡ TIME-CRITICAL
-
-R2 matches for Groups G–L: June 21–24. R3 for all 12 groups: June 25–27. R32 kick-off: June 28.
+### Operational (ongoing, not sprint work)
 
 **Pre-June 28 checklist (MUST complete before first knockout match):**
 - [ ] All 72 group fixtures FT with correct scores
@@ -662,28 +721,34 @@ R2 matches for Groups G–L: June 21–24. R3 for all 12 groups: June 25–27. R
 - [ ] `npm run validate` — zero errors
 - [ ] Snapshot shows "Remaining: 32"
 
-**R2 update windows:**
+**R2 remaining windows:**
 
 | Date (UTC) | Fixture IDs |
 |-----------|-------------|
-| June 21 (today) | `g-r2-bel-irn` (19:00), `h-r2-esp-ksa` (16:00), `h-r2-uru-cpv` (22:00) |
-| June 22 | `g-r2-nzl-egy` (01:00), `i-r2-fra-irq` (21:00), `j-r2-arg-aut` (17:00) |
-| June 23 | `i-r2-nor-sen` (00:00), `j-r2-jor-alg` (03:00), `k-r2-por-uzb` (17:00) |
+| June 23 | `i-r2-nor-sen`, `j-r2-jor-alg`, `k-r2-por-uzb` |
 | June 24 | `k-r2-col-cod`, `l-r2-eng-gha`, `l-r2-pan-cro` |
 
-**R3:** All 12 groups play simultaneous pairs June 25–27. Full standings + qualificationStatus for all 48 teams.
+**R3:** All 12 groups play simultaneous pairs June 25–27.
 
-**After R3:** Populate knockout.json R32 using final group standings + FIFA Annex C best-3rd lookup. Use `scripts/update-knockout.js` for subsequent round results.
+**After R3:** Populate knockout.json R32 homeTeamId/awayTeamId. Use `scripts/update-knockout.js` for R32 onwards.
 
-### Sprint 20 (optional) — Photo Pass 2: Wikidata P18 fallback
-Remaining 296 nulls include many players with valid Wikipedia articles that have no lead image but have a Wikidata image (P18). Approach: for each null entry, query Wikidata `wbgetentities` by sitelink (`enwiki` article title from the search API) → read `claims.P18[0].mainsnak.datavalue.value` → construct `https://commons.wikimedia.org/wiki/Special:FilePath/{filename}` URL. Expected gain: ~30–50 additional photos. `isSuspicious()` and duplicate-URL rejection are already in place. This is lower priority than tournament data maintenance.
+---
 
-### Sprint 22 — Manager photo gap recovery + Photo Pass 3
-3 managers still null (Migné/Haiti, Bubista/Cape Verde, Donis/Saudi Arabia). Their Wikipedia articles exist but have no lead image — Wikidata P18 may recover them. Set `GATHER_MANAGERS=true` + add a Wikidata fallback phase for managers, OR manually supply photo URLs. Low priority vs tournament data.
+### Sprint 23 — candidate feature sprints
 
-Also: 280 player nulls remain. A targeted Pass 3 could try alternate search qualifiers (remove "footballer", add birth year, add nationality) for the hardest-to-find entries. Low expected yield vs effort.
+**Photo Pass 3 — manager gap recovery + harder player nulls**
+3 managers still null (Migné/Haiti, Bubista/Cape Verde, Donis/Saudi Arabia). Set `GATHER_MANAGERS=true` + add Wikidata P18 fallback for managers. ~300 player nulls remain; a targeted pass with alternate qualifiers (birth year, nationality) may recover more.
 
-### Post-June 28 — Knockout maintenance (rolling)
+**Fixture result detail page / match modal**
+Clicking a fixture card could open a lightweight modal/panel with: scorers, cards, result timeline. Requires a new data structure (match events) in fixtures.json. High-visibility UX improvement for the tournament phase.
+
+**Knockout bracket live updates**
+As R32/R16/QF/SF results land, the bracket updates — but there's no visual "just updated" indicator or animation. Could add a subtle pulse on newly-set slots, or a "last updated" timestamp in the bracket header.
+
+**Player stats enrichment**
+Current stats tab only shows caps/goals from squad data. Could add WC 2026 group-stage goals/assists if we track per-fixture scorers. Requires new data model (scorers array per fixture).
+
+**Post-June 28 — Knockout maintenance (rolling)**
 Populate R32 results as they happen (June 28 – July 6), propagate winners to R16. Use `scripts/update-knockout.js --match <id> --home N --away N`. Maintain R16 → QF → SF → Final through July 19.
 
 ---
@@ -702,7 +767,7 @@ Populate R32 results as they happen (June 28 – July 6), propagate winners to R
 - `data/rankings.json` empty — Rankings component not implemented.
 - `scotland-gordon` age (43, DOB 1982-12-31) triggers a validator DOB-range warning — expected and benign (Craig Gordon is genuinely 43; the DOB_MIN=1984 bound is a soft warning, not fatal).
 - `jordan-zito` has `_verification: "caps/club uncertain"` — data confidence flag, no action needed.
-- `uzbekistan.json` has two players with identical name "Eldor Shomurodov" (shirt 9 and shirt 14, different IDs) — cosmetic data quality issue. Validator passes because IDs are unique. Shirt 14 (`uzbekistan-shomurodov`) is the real captain at Istanbul Başakşehir; shirt 9 (`uzbekistan-turgunboev`) is a different player entered with the wrong name.
+- ~~`uzbekistan.json` had two players named "Eldor Shomurodov"~~ — **Resolved Sprint 22 squad audit.** Full squad replaced from Wikipedia. Shirt 9 is now Odiljon Hamrobekov (`uzbekistan-hamrobekov`), shirt 14 is Eldor Shomurodov (`uzbekistan-shomurodov`, captain). No duplicates remain.
 - `scripts/update-standings.js`, `scripts/generate-player-bios.js`, `scripts/generate-rankings.js` are stubs. `update-knockout.js` and `gather-photos.js` are fully implemented.
 
 ---
