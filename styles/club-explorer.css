@@ -2,7 +2,7 @@
 
 .ce-page {
   padding: var(--space-6);
-  max-width: 960px;
+  max-width: var(--max-content-width);
 }
 
 /* ─── Header ──────────────────────────────────────────────── */
@@ -210,6 +210,19 @@
   font-size: var(--font-size-sm);
   color: var(--color-text-muted);
   margin: 0 0 var(--space-3);
+}
+
+/* ─── Desktop: 2-col club list ───────────────────────────── */
+
+@media (min-width: 1280px) {
+  .ce-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-6);
+  }
+  .ce-club-row:last-child {
+    border-bottom: 1px solid var(--color-border);
+  }
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */

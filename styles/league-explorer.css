@@ -2,7 +2,7 @@
 
 .le-page {
   padding: var(--space-6);
-  max-width: 960px;
+  max-width: var(--max-content-width);
 }
 
 /* ─── Header ──────────────────────────────────────────────── */
@@ -245,6 +245,17 @@
   font-size: 10px;
   color: var(--color-text-muted);
   white-space: nowrap;
+}
+
+/* ─── Desktop: 2-col expanded club list ──────────────────── */
+
+@media (min-width: 1280px) {
+  .le-row__clubs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-6);
+    padding: 0 var(--space-4) var(--space-4);
+  }
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */

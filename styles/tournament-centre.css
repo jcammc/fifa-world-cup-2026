@@ -1,6 +1,6 @@
 /* ─── Page root ──────────────────────────────────────────── */
 .tournament-centre {
-  max-width: 960px;
+  max-width: var(--max-content-width);
 }
 
 /* ─── Tab bar ─────────────────────────────────────────────── */

@@ -129,14 +129,17 @@ export class CompareView {
   // ─── Comparison sections ──────────────────────────────────────
 
   #buildComparison(cA, pA, cB, pB) {
+    const hasStrength = cA.teamStrength && cB.teamStrength;
     return `
       <div class="cv-comparison">
         ${this.#buildHeaders(cA, cB)}
-        ${this.#buildExperience(pA, pB)}
-        ${this.#buildGoals(pA, pB)}
-        ${this.#buildProfile(pA, pB)}
-        ${this.#buildMakeup(pA, pB)}
-        ${(cA.teamStrength && cB.teamStrength) ? this.#buildRadarSection() : ''}
+        ${hasStrength ? this.#buildRadarSection(cA, cB) : ''}
+        <div class="cv-body">
+          ${this.#buildExperience(pA, pB)}
+          ${this.#buildGoals(pA, pB)}
+          ${this.#buildProfile(pA, pB)}
+          ${this.#buildMakeup(pA, pB)}
+        </div>
       </div>`;
   }
 
@@ -234,13 +237,19 @@ export class CompareView {
       </div>`;
   }
 
-  #buildRadarSection() {
+  #buildRadarSection(cA, cB) {
     return `
-      <div class="cv-section">
-        <p class="cv-section__title">Team Strength</p>
+      <div class="cv-section cv-section--radar">
+        <p class="cv-section__title cv-section__title--radar">Team Strength</p>
         <div class="cv-radar-row">
-          <div id="cv-radar-a"></div>
-          <div id="cv-radar-b"></div>
+          <div class="cv-radar-col">
+            <p class="cv-radar-col__name">${escapeHtml(cA.name)}</p>
+            <div id="cv-radar-a"></div>
+          </div>
+          <div class="cv-radar-col">
+            <p class="cv-radar-col__name">${escapeHtml(cB.name)}</p>
+            <div id="cv-radar-b"></div>
+          </div>
         </div>
       </div>`;
   }

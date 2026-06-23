@@ -109,7 +109,24 @@ export class StatisticsPage {
     const totalGoals = scorers.reduce((s, p) => s + (p.goals ?? 0), 0);
     const topScorer  = scorers[0];
 
-    const rows = scorers.slice(0, 15)
+    const squadGoals = [...countryMap.values()]
+      .map(c => ({
+        country: c,
+        total: allPlayers.filter(p => p.countryId === c.id).reduce((s, p) => s + (p.goals ?? 0), 0),
+      }))
+      .filter(s => s.total > 0)
+      .sort((a, b) => b.total - a.total);
+
+    const squadRows = squadGoals.slice(0, 10).map((s, i) => `
+      <div class="sp-squad-row">
+        <span class="sp-squad-row__rank">${i + 1}</span>
+        <img src="assets/flags/${escapeHtml(s.country.id)}.svg" alt="" class="sp-squad-row__flag"
+             width="20" height="14" onerror="this.style.display='none'">
+        <span class="sp-squad-row__name">${escapeHtml(s.country.name)}</span>
+        <span class="sp-squad-row__value">${s.total.toLocaleString()}</span>
+      </div>`).join('');
+
+    const playerRows = scorers.slice(0, 15)
       .map((p, i) => this.#playerRow(i + 1, p, (p.goals ?? 0).toLocaleString()))
       .join('');
 
@@ -122,7 +139,16 @@ export class StatisticsPage {
           ${this.#statCard(scorers.length.toLocaleString(), 'Goalscorers')}
           ${this.#statCard((topScorer?.goals ?? 0).toLocaleString(), 'Top scorer')}
         </div>
-        <div class="ts-list">${rows}</div>
+        <div class="sp-two-col">
+          <div>
+            <p class="sp-col-label">Goals by squad</p>
+            <div class="sp-squad-list">${squadRows}</div>
+          </div>
+          <div>
+            <p class="sp-col-label">Top individual scorers</p>
+            <div class="ts-list">${playerRows}</div>
+          </div>
+        </div>
       </section>`;
   }
 

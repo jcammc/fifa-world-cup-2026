@@ -197,6 +197,17 @@ a.sp-player-row:hover {
   flex-shrink: 0;
 }
 
+/* ─── Desktop: 2-col section grid ────────────────────────── */
+
+@media (min-width: 1280px) {
+  .sp-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+    align-items: start;
+  }
+}
+
 /* ─── Responsive ──────────────────────────────────────────── */
 
 @media (max-width: 640px) {
