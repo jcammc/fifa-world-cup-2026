@@ -21,7 +21,7 @@
 - `docs/TASK_BREAKDOWN.md` — all tasks T-001 through T-083 with statuses
 - `docs/RECOMMENDATIONS.md` — 18 architectural recommendations with adopt/reject status
 - `docs/DATA_ENTRY_GUIDE.md` — squad/fixture/standings entry conventions and ID rules
-- `docs/LIVE_DATA_PLAN.md` — concrete implementation plan for automated fixture/standings/knockout updates via football-data.org + Netlify Scheduled Functions (Sprint 24, not yet implemented)
+- `docs/LIVE_DATA_PLAN.md` — live data pipeline implementation — football-data.org + Netlify Blob Store + Scheduled Functions. **Implemented Sprint 25.** See §8 of that doc for deviations from the original plan.
 
 ---
 
@@ -47,7 +47,7 @@
 | Sprint 5A | Nav active-state fix for all TC deep-link routes; fixtures.json + standings.json populated for all 12 groups R1; qualificationStatus set where certain after R1 | **COMPLETE** |
 | Sprint 5B | Fix leagueId bug in getPlayerResolved(); qualification badges in carousel; Team Fixtures Tab; knockout bracket connector lines; all 48 manager fields; Group C + D R2 results | **COMPLETE** |
 | Sprint 5C | Data model decisions (recentForm → country level; teamStrength deferred); squad files for Germany/Spain/Argentina/Portugal/Netherlands; leagues.json + clubs.json expanded | **COMPLETE** |
-| Sprint 6 | Tournament data maintenance — R2 results for Groups A–D confirmed FT; qualificationStatus set for 8 teams. R2 for Groups E–L and all R3 still scheduled as of June 20. | **IN PROGRESS** |
+| Sprint 6 | Tournament data maintenance (rolling). All 48 matchday 1+2 results synced via `sync-data.mjs` (June 24). R3 (matchday 3) all groups June 25–27. After R3: set qualificationStatus for remaining 36 teams, populate R32 knockout slots. | **IN PROGRESS** |
 | Sprint 7 | Search overlay — Ctrl+K trigger, 1,296-entry index, diacritic normalisation, player deep-link `#player-id` | **COMPLETE** |
 | Sprint 8 | Squad population for Norway, Belgium, USA, Japan, Morocco (5 squads × 26 players) | **COMPLETE** |
 | Sprint 9 | Squad population for all remaining 23 teams — all 48 squads now complete (1,248 players). validate-data.js tooling. generate-search-index.js script. clubs.json grown to 456 entries. | **COMPLETE** |
@@ -103,6 +103,13 @@
 | `modules/continents-page.js` | **Complete** | 48 nations grouped by confederation (UEFA, CONMEBOL, CAF, AFC, CONCACAF, OFC) sorted by FIFA ranking within each section. Team count badge on each section heading. Reuses all `cp-` CSS classes. |
 | `modules/league-explorer.js` | **Complete** | Ranked list of all 86 leagues by player count. 3 summary stat cards. Real-time search filters by league name + country. Click-to-expand rows show all clubs sorted by player count with nation flag strips (up to 8 flags + overflow). One expanded at a time. Confederation colour-coded badges. CSS namespace `le-`. |
 | `modules/club-explorer.js` | **Complete** | ~452 clubs ranked by player count (clubs currently referenced by 48 squads). Search-first (real-time name filter). 2+/all toggle (default: 231 clubs with 2+ players; active search overrides toggle). Nation flags per club (up to 8, each an `<a href="#countryId">` linking to team page), +N overflow. Empty state with clear button. CSS namespace `ce-`. |
+
+### Netlify Functions (`netlify/functions/`)
+
+| File | Role |
+|------|------|
+| `sync-tournament.mjs` | Scheduled Function — runs every 2 min (`*/2 * * * *` cron). Fetches `/v4/competitions/WC/matches` + `/v4/competitions/WC/standings` from football-data.org. Merges results into existing structure fetched from the live site (preserves venues, IDs, qualificationStatus). Writes three blobs to Netlify Blob Store: `tournament/fixtures`, `tournament/standings`, `tournament/knockout`. Requires `FOOTBALL_DATA_API_KEY` env var. Logs count of FINISHED + IN_PLAY matches on each run. |
+| `live-data.mjs` | On-demand HTTP endpoint at `/api/live?type=fixtures\|standings\|knockout`. Reads from Netlify Blob Store (`consistency: 'eventual'`), returns JSON. Response headers: `Cache-Control: public, max-age=30, stale-while-revalidate=90`. Returns HTTP 503 if Blob Store not yet populated (SPA DataManager treats 503 as a fallback signal). |
 
 ### CSS files (`styles/`)
 
@@ -610,7 +617,16 @@ const data = await DataManager.loadManager('argentina');  // { career, playerClu
 
 This is the same pattern as `loadPlayerPhotos()` — the two files that use object envelopes both have standalone methods outside `#load()`.
 
-### 10. Player ID disambiguation
+### 11. Live data — #loadLive and the IS_LIVE flag
+
+`js/data.js` uses `IS_LIVE = !['localhost', '127.0.0.1'].includes(window.location.hostname)` to decide whether to try the Netlify live endpoint.
+
+- **On production (Netlify):** `loadFixtures/loadStandings/loadKnockout` call `#loadLive()`, which fetches `/api/live?type=fixtures` etc. If the Blob Store is populated and the request succeeds, that data is used and cached. On failure or 503, it silently falls through to `#load(staticUrl)`.
+- **On localhost:** `IS_LIVE` is false, `#loadLive()` skips the network attempt entirely and goes straight to the static file. There is no failing request on localhost.
+- **Cache invalidation:** The DataManager cache is a plain Map that persists for the lifetime of the page. Live data is fetched at most once per page load. No polling or refresh — the SPA reads fresh data on each page navigation (new render cycle).
+- **Do not add** `IS_LIVE` checks to loaders for static data (countries, squads, clubs, etc.) — those files don't change at runtime.
+
+### 12. Player ID disambiguation
 When multiple players on the same squad share a surname, append a suffix:
 - `-2` for a second player
 - initials: `-g` / `-d` (e.g. `paraguay-gomez-g` vs `paraguay-gomez-d`)
@@ -647,37 +663,25 @@ IntersectionObserver on `.squad-group[data-position]` sections:
 
 Sprint 6 is a rolling data-only sprint. No code changes — data updates only.
 
-### Current state as of June 21, 2026
-- Groups A–D: R1 + R2 complete (FT). qualificationStatus set for 8 teams.
-  - Qualified: mexico (A), canada + switzerland (B), usa (D)
-  - Eliminated: bosnia-herzegovina + qatar (B), haiti (C), turkey (D)
-- Group E: R1 + R2 complete (FT). germany 2-1 ivory-coast; ecuador 0-0 curacao. Standings updated.
-- Group F: R1 complete. ned-swe 5-1 complete. tun-jpn (June 21 04:00 UTC) — check for result.
-- Groups G–L: R1 complete. R2 plays June 21–24. R3 for all groups plays June 25–27.
-- Knockout round: labels, kickoffs, venues all populated. All teamId slots null — no confirmed qualifiers yet.
+**From Sprint 25, scores and standings are automated.** `npm run sync-data` replaces all manual `fixtures.json` and `standings.json` score editing. What remains manual: `qualificationStatus`, best-3rd knockout slot assignment, and `recentForm`.
 
-### R2 Update Windows
+### Current state as of June 24, 2026
+- All 48 matchday 1+2 results: synced via `sync-data.mjs` (June 24). All FT.
+- qualificationStatus set: mexico (A), canada + switzerland (B), usa (D), germany (E), netherlands (F). Eliminated: bosnia-herzegovina + qatar (B), haiti (C), turkey (D).
+- R3 (matchday 3): all 12 groups play June 25–27 (simultaneous pairs — all 4 teams per group play at once).
+- Knockout: labels, kickoffs, venues all populated. All `homeTeamId`/`awayTeamId` null — no confirmed qualifiers yet.
 
-| Date (UTC) | Groups | Key fixture IDs |
-|-----------|--------|----------------|
-| June 20 | E, F | `e-r2-ger-civ`, `f-r2-ned-swe` |
-| June 21 | E, F, G, H | `e-r2-ecu-cur`, `f-r2-tun-jpn`, `g-r2-bel-irn`, `h-r2-esp-ksa` |
-| June 22 | G, H, I, J | `g-r2-nzl-egy`, `h-r2-uru-cpv`, `i-r2-fra-irq`, `j-r2-arg-aut` |
-| June 23 | I, J, K, L | `i-r2-nor-sen`, `j-r2-jor-alg`, `k-r2-por-uzb`, `l-r2-eng-gha` |
-| June 24 | K, L | `k-r2-col-cod`, `l-r2-pan-cro` |
+### After R3 completes (~June 27)
 
-R3 all play June 25–27 (simultaneous pairs per group, all 4 teams playing at once).
-
-### Per-fixture update pattern
-
-**fixtures.json:** For each completed match, set `"status": "FT"`, `homeScore`, `awayScore`.
-
-**standings.json:** For the group containing the match, update all 4 teams' `played/won/drawn/lost/goalsFor/goalsAgainst/goalDifference/points/position`. Re-sort by: 1) points desc, 2) GD desc, 3) GF desc.
-
-Apply `qualificationStatus` rules (see Data Schemas section above) after each R2 and again after R3.
-
-### After all R3 complete (~June 27) → knockout.json
-Populate `homeTeamId`/`awayTeamId` for all 16 R32 matches. Set `kickoff` and `venue` for R32 matches (June 28 onwards).
+1. Run `npm run sync-data` — confirms all 72 group results and updates standings tables.
+2. Set `qualificationStatus` manually for all remaining teams in `data/standings.json`:
+   - Top 2 per group → `"qualified"`
+   - Bottom 2 per group (eliminated from top-2 contention) → `"eliminated"`
+   - 3rd-place teams advancing → `"qualified"` (after FIFA Annex C confirmed)
+   - 3rd-place teams eliminated → `"eliminated"`
+3. Identify the 8 advancing 3rd-place teams from FIFA Annex C. Update their `homeLabel`/`awayLabel` in `knockout.json` from e.g. `"3rd A/B/C/D/F"` to the specific `"3rd X"` seed.
+4. The automated sync will populate `homeTeamId`/`awayTeamId` in `knockout.json` as the API assigns teams to R32 slots. Verify these are correct before June 28.
+5. Confirm `npm run validate` — zero errors. Snapshot should show "Remaining: 32".
 
 ---
 
@@ -786,5 +790,6 @@ Populate R32 results as they happen (June 28 – July 6), propagate winners to R
 2. Read `TASK_BREAKDOWN.md` for the detailed task list with statuses.
 3. If implementing a module, read the relevant section of `IMPLEMENTATION_BLUEPRINT.md`.
 4. If entering data, read `DATA_ENTRY_GUIDE.md` before touching any JSON.
-5. After any squad data change: run `node scripts/generate-search-index.js` then `npm run validate`.
-6. Pick up from the next uncompleted task. Do not re-implement completed work.
+5. **Run `npm run sync-data`** to pull the latest fixture results and standings from football-data.org into the local JSON files before doing any tournament data work.
+6. After any squad data change: run `node scripts/generate-search-index.js` then `npm run validate`.
+7. Pick up from the next uncompleted task. Do not re-implement completed work.
