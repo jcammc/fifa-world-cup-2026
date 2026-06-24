@@ -14,6 +14,11 @@ const URLS = {
   playerPhotos:  'data/player-photos.json',
 };
 
+// On production (not localhost) try the live Blob Store endpoint first.
+// Falls back to static files if the endpoint fails or isn't populated yet.
+const IS_LIVE = !['localhost', '127.0.0.1'].includes(window.location.hostname);
+const LIVE_ENDPOINT = '/api/live';
+
 class _DataManager {
   #cache = new Map();
 
@@ -33,13 +38,34 @@ class _DataManager {
     }
   }
 
+  // Tries live Blob Store endpoint first; falls back to static file.
+  async #loadLive(key, staticUrl, type) {
+    if (this.#cache.has(key)) return this.#cache.get(key);
+    if (IS_LIVE) {
+      try {
+        const res = await fetch(`${LIVE_ENDPOINT}?type=${type}`);
+        if (res.ok) {
+          const json = await res.json();
+          if (!json.error) {
+            const data = Array.isArray(json) ? json : (json.data ?? []);
+            this.#cache.set(key, data);
+            return data;
+          }
+        }
+      } catch {
+        // fall through to static
+      }
+    }
+    return this.#load(key, staticUrl);
+  }
+
   // ─── Core loaders ──────────────────────────────────────
 
   async loadCountries()            { return this.#load('countries', URLS.countries); }
   async loadGroups()               { return this.#load('groups',    URLS.groups); }
-  async loadFixtures()             { return this.#load('fixtures',  URLS.fixtures); }
-  async loadStandings()            { return this.#load('standings', URLS.standings); }
-  async loadKnockout()             { return this.#load('knockout',  URLS.knockout); }
+  async loadFixtures()             { return this.#loadLive('fixtures',  URLS.fixtures,  'fixtures'); }
+  async loadStandings()            { return this.#loadLive('standings', URLS.standings, 'standings'); }
+  async loadKnockout()             { return this.#loadLive('knockout',  URLS.knockout,  'knockout'); }
   async loadClubs()                { return this.#load('clubs',     URLS.clubs); }
   async loadLeagues()              { return this.#load('leagues',   URLS.leagues); }
   async loadRankings()             { return this.#load('rankings',     URLS.rankings); }

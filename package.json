@@ -4,6 +4,7 @@
   "description": "FIFA World Cup 2026 Squad Explorer and Tournament Companion",
   "type": "module",
   "scripts": {
+    "sync-data": "node scripts/sync-data.mjs",
     "generate-bios": "node scripts/generate-player-bios.js",
     "generate-rankings": "node scripts/generate-rankings.js",
     "update-standings": "node scripts/update-standings.js",
@@ -14,5 +15,7 @@
     "pre-deploy": "npm run validate && npm run generate-bios && npm run generate-rankings && npm run build-search-index"
   },
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
 }
