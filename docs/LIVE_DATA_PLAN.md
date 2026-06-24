@@ -1,7 +1,7 @@
 # Live Tournament Data — Implementation Plan
 
-**Status:** Plan only. Not yet implemented.  
-**Written:** Sprint 24 (2026-06-23)  
+**Status:** Implemented — Sprint 25 (2026-06-24). All core components deployed.  
+**Written:** Sprint 24 (2026-06-23) | **Implemented:** Sprint 25 (2026-06-24)  
 **Goal:** Replace manual fixture, standings, and knockout updates with automated data pipeline while keeping all squad/player/manager/club/league data static.
 
 ---
@@ -153,24 +153,40 @@ After live data is wired:
 
 ---
 
-## 8. Implementation Steps
+## 8. Implementation — What Was Built
 
-1. **Register** football-data.org account, obtain API key, note WC competition ID
-2. **Write one-time mapping** `data/api-team-map.json` — API team ID → internal country ID (48 entries)
-3. **Create Netlify Function** `netlify/functions/sync-tournament.mts`
-   - Fetch, map, validate, write to Blob Store
-   - Add error handling and staleness guard (don't write if API returns error)
-4. **Set schedule** in `netlify.toml`:
-   ```toml
-   [[plugins]]
-   package = "@netlify/plugin-scheduled-functions"
-   
-   [functions.sync-tournament]
-   schedule = "*/2 * * * *"
-   ```
-5. **Update `DataManager`** to fetch from Blob Store URL (feature-flagged behind `VITE_LIVE_DATA=true` or similar)
-6. **Test locally** with `netlify dev` + manual function invocation
-7. **Deploy and monitor** — verify Blob Store updates, check match day score latency
+All steps completed in Sprint 25. Deviations from the original plan are noted.
+
+### Files created
+
+| File | Role |
+|------|------|
+| `data/api-team-map.json` | 48-entry map: API numeric team ID → internal country slug |
+| `scripts/sync-data.mjs` | One-shot local sync — run `npm run sync-data` to update JSON files directly |
+| `netlify/functions/sync-tournament.mjs` | Scheduled function (every 2 min) — fetches API, merges, writes Blob Store |
+| `netlify/functions/live-data.mjs` | HTTP endpoint `/api/live?type=` — reads Blob Store, serves with 30s cache |
+
+### Files updated
+
+| File | Change |
+|------|--------|
+| `js/data.js` | Added `#loadLive()` — tries `/api/live` on production, falls back to static files |
+| `package.json` | Added `@netlify/blobs ^8.1.0` dep, added `sync-data` npm script |
+| `netlify.toml` | Added `[functions] node_bundler = "esbuild"` and `[functions.sync-tournament] schedule = "*/2 * * * *"` |
+
+### Deployment requirement
+
+Add env var `FOOTBALL_DATA_API_KEY` in Netlify dashboard (Site settings → Environment variables). Value: the football-data.org API token. Mark as Secret.
+
+### Deviations from original plan
+
+| Plan item | Actual |
+|-----------|--------|
+| Functions as `.mts` TypeScript | Written as `.mjs` (plain ES modules) — no TypeScript setup needed |
+| `schedule` config needed a plugin | Native `[functions.{name}] schedule = "..."` syntax in `netlify.toml` — no plugin required |
+| DataManager feature-flagged behind env var | Used hostname check (`IS_LIVE`) instead — cleaner, no Vite required |
+| Staleness guard (don't overwrite on API error) | Function bails out on any API error via try/catch — same effect |
+| Knockout sync complex | Implemented: matches by (homeTeamId, awayTeamId) pair when both known; falls back to date-only matching for single-match days |
 
 ---
 

@@ -68,6 +68,7 @@
 | Sprint 22 — Manager Profiles | `managerTenure` + `managerFormerPosition` added to all 48 countries.json entries. `data/managers.json` created: 48 entries (object-keyed by countryId), each with `career[]` (managerial appointments), `playerClubs[]` (max 3 notable clubs), `honours[]` (major titles, role-labeled Manager/Player). `DataManager.loadManagers()` + `loadManager(countryId)` added. Accordion UI in overview-tab.js: tenure shown in accent colour below meta line; `<details>/<summary>` "Career & Honours" section with career timeline, player clubs, honour chips. player-photos.json reconciled after squad replacements: 200 orphaned keys removed, 200 new players gathered via gather-photos.js normal mode. Final state: 1,296 total keys (996 URLs + 300 null). | **COMPLETE** |
 | Sprint 23 | Desktop layout & information density. `max-width` lifted from 960px/1100px to `var(--max-content-width)` across Tournament Centre, League Explorer, Club Explorer, Countries. Compare Teams radar promoted to primary position (full-width, above cv-body). cv-body 2-col grid at ≥1280px. Statistics Dashboard `.sp-sections` 2-col grid at ≥1280px; scorers section gains squad goal totals column. Club Explorer and League Explorer 2-col item lists at ≥1280px. | **COMPLETE** |
 | Sprint 24 | Part A: Compare Teams consistency fix — `.cv-page` no longer overrides padding from `.page-content` (was `var(--space-4) 0 var(--space-8)`, zero horizontal padding was the root cause); `.cv-title` font-size corrected 2xl→3xl to match all other page titles. Part B: Tournament Centre fixture rail — Today's Matches tab removed; desktop gets a sticky ~240px rail (Live→Today→Recent→Coming Up sections); mobile gets a horizontal strip above the tabs. Default tab changed to Groups. Part C: Live data implementation plan written to `docs/LIVE_DATA_PLAN.md`. | **COMPLETE** |
+| Sprint 25 | Live data pipeline. `data/api-team-map.json` — 48-entry map of football-data.org numeric team IDs → internal country slugs. `scripts/sync-data.mjs` — one-shot Node script to pull current scores/standings from API and write directly to local JSON files (`npm run sync-data`); tested and synced 12 matchday 2 results. `netlify/functions/sync-tournament.mjs` — Netlify Scheduled Function (every 2 min) that fetches API, merges data preserving venues/IDs/qualificationStatus, writes to Netlify Blob Store. `netlify/functions/live-data.mjs` — HTTP endpoint `/api/live?type=fixtures|standings|knockout` serving from Blob Store with 30s CDN cache. `js/data.js` — `loadFixtures/loadStandings/loadKnockout` try `/api/live` first on production (Netlify), fall back to static files locally. `package.json` — `@netlify/blobs` dep + `sync-data` script. `netlify.toml` — `esbuild` bundler + `*/2 * * * *` schedule. Requires `FOOTBALL_DATA_API_KEY` set as Netlify env var. | **COMPLETE** |
 
 ---
 
@@ -79,7 +80,7 @@
 |------|--------|-------|
 | `app.js` | Complete | Entry point — ThemeManager, Nav, Router.init(), SearchOverlay.init() |
 | `router.js` | Complete | Hash routing, all current routes wired |
-| `data.js` | Complete | DataManager singleton, #cache Map, all loaders including `loadSearchIndex()`, `loadPlayerPhotos()` (returns Object not array — custom loader, not #load()), `loadAllPlayers()` (parallel fetch all 48 squads, annotates each player with `countryId`, caches under `'all-players'`), `loadManagers()` (returns Object keyed by countryId — custom loader, same pattern as loadPlayerPhotos), `loadManager(countryId)` (calls loadManagers(), returns single entry or null) |
+| `data.js` | Complete | DataManager singleton, #cache Map, all loaders. **Sprint 25:** `#loadLive(key, staticUrl, type)` tries `/api/live?type={type}` on production (IS_LIVE = hostname is not localhost/127.0.0.1), falls back to static file if that fails or is not yet populated. `loadFixtures/loadStandings/loadKnockout` now route through `#loadLive`. All other loaders (countries, groups, clubs, leagues etc.) continue to use `#load` against static files. `loadPlayerPhotos()` (returns Object not array — custom loader, not #load()), `loadAllPlayers()` (parallel fetch all 48 squads, annotates each player with `countryId`, caches under `'all-players'`), `loadManagers()` (returns Object keyed by countryId — custom loader, same pattern as loadPlayerPhotos), `loadManager(countryId)` (calls loadManagers(), returns single entry or null) |
 | `time.js` | Complete | `formatKickoff()`, `isToday()` |
 | `utils.js` | Complete | `escapeHtml()` |
 | `theme.js` | Complete | localStorage, data-theme attribute toggle |
@@ -128,6 +129,7 @@ All files exist and are fully implemented unless noted:
 
 | File | Status | Notes |
 |------|--------|-------|
+| `sync-data.mjs` | **Complete (Sprint 25)** | One-shot live data sync. Fetches `/v4/competitions/WC/matches` + `/v4/competitions/WC/standings` from football-data.org, maps API numeric team IDs via `data/api-team-map.json`, updates `data/fixtures.json` (group stage scores/statuses), `data/standings.json` (full table, preserves qualificationStatus), `data/knockout.json` (scores + teamIds when API populates them). Run: `npm run sync-data`. Requires Node 18+ (built-in fetch). API key read from `FOOTBALL_DATA_API_KEY` env or falls back to hardcoded token. |
 | `validate-data.js` | **Complete** | Checks all 48 squads: 26 players, shirts 1–26, 1 captain, valid positions (GK/DF/MF/FW), clubId in clubs.json, DOB 1984–2009, cross-squad duplicate IDs, `_verification` flag reporting. Run: `npm run validate` |
 | `generate-search-index.js` | **Complete** | Reads countries.json + clubs.json + all player files → writes data/search-index.json in envelope format. Run: `node scripts/generate-search-index.js` |
 | `download-flags.js` | **Complete** | Downloads 48 flag SVGs from `flagcdn.com/{code}.svg` to `assets/flags/{country-id}.svg`. Requires Node 18+. Non-obvious: Scotland→gb-sct, England→gb-eng, DR Congo→cd, Ivory Coast→ci, Curaçao→cw, Cape Verde→cv. Run: `node scripts/download-flags.js` |
@@ -139,10 +141,13 @@ All files exist and are fully implemented unless noted:
 
 **npm scripts** (`package.json`):
 ```
+npm run sync-data         → node scripts/sync-data.mjs         (Sprint 25 — pull live scores/standings from API)
 npm run validate          → node scripts/validate-data.js
 npm run pre-deploy        → validate && generate-bios && generate-rankings && build-search-index
 ```
 After any squad data change: `node scripts/generate-search-index.js` then `npm run validate`.
+
+**Dependencies** (`package.json`): `@netlify/blobs ^8.1.0` added (Sprint 25) — used by Netlify Functions only, not the SPA itself.
 
 ---
 
@@ -155,8 +160,9 @@ After any squad data change: `node scripts/generate-search-index.js` then `npm r
 | `groups.json` | Complete — all 12 groups A–L |
 | `leagues.json` | **86 entries** — covers all leagueIds referenced by the 48 squads. Expanded during Sprint 9/10. Note: validate-data.js does NOT check leagueId against leagues.json; it only validates clubId against clubs.json. |
 | `clubs.json` | **488 entries** — lookup file for all squads. ~452 currently referenced by the 48 squads; remainder are legacy entries from replaced squads retained for stability. |
-| `fixtures.json` | **72 group fixtures total. R1+R2 FT for Groups A–F (inc. ecu-cur 0-0 FT, tun-jpn FT June 21 early). Groups G–L R2 scheduled June 21–24. R3 all groups June 25–27.** |
-| `standings.json` | **R2 complete for Groups A–F.** Qualified: mexico, canada, switzerland, usa, germany. Eliminated: bosnia-herzegovina, qatar, haiti, turkey. Groups G–L at R1 only. All others null. |
+| `api-team-map.json` | **New (Sprint 25)** — maps football-data.org numeric team IDs to internal country slugs. 48 entries. Used by `scripts/sync-data.mjs` and `netlify/functions/sync-tournament.mjs`. Do not edit unless football-data.org changes its team IDs (unlikely). |
+| `fixtures.json` | **72 group fixtures total. R1+R2 FT for all 12 groups (last synced June 24 via sync-data.mjs). R3 (matchday 3) all groups scheduled June 25–27.** From Sprint 25, `lastUpdated` timestamp reflects last sync run, not last manual edit. |
+| `standings.json` | **R2 complete for all 12 groups (last synced June 24).** Qualified: mexico, canada, switzerland, usa, germany, netherlands. Eliminated: bosnia-herzegovina, qatar, haiti, turkey. qualificationStatus null for all other teams. From Sprint 25, standings are synced from API — do not manually edit the `played/won/drawn/lost/gf/ga/gd/points` fields as they will be overwritten on next sync. `qualificationStatus` is preserved through syncs and must still be set manually. |
 | `knockout.json` | R32 labels corrected against actual Wikipedia bracket (Sprint 13). All `homeTeamId`/`awayTeamId` null (R3 not complete). All 32 matches now have `kickoff` dates and `venue`. See Knockout Bracket section below for R32 structure. |
 | `rankings.json` | Empty stub |
 | `search-index.json` | **1,296 entries** — envelope format `{ version, lastUpdated, data }`. 48 team entries + 1,248 player entries. Regenerated by generate-search-index.js. |
@@ -716,31 +722,30 @@ npm run validate
 
 ### Operational (ongoing, not sprint work)
 
+**Live data pipeline is now active (Sprint 25).** The Netlify function `sync-tournament.mjs` runs every 2 minutes and automatically updates fixtures.json + standings.json in the Blob Store. The SPA reads from `/api/live` on production. Manual `npm run sync-data` is available for immediate one-shot sync or local updates.
+
+**Still requires manual action:**
+- `qualificationStatus` in standings.json — not derivable from raw scores alone for best-third teams (FIFA Annex C rules). Set manually after each round.
+- Knockout `homeTeamId`/`awayTeamId` slots — the automated sync will fill these as the API populates them, but the best-3rd assignment (8 slots with eligible-group labels) requires manual verification against FIFA Annex C after R3 completes.
+- Any corrections to `recentForm`, venues, or other non-score fields.
+
 **Pre-June 28 checklist (MUST complete before first knockout match):**
-- [ ] All 72 group fixtures FT with correct scores
-- [ ] All 48 teams have non-null qualificationStatus
-- [ ] All 16 R32 slots in knockout.json have homeTeamId/awayTeamId set
-- [ ] Best-3rd assignment confirmed from FIFA Annex C (8 slots)
+- [ ] All 72 group fixtures FT with correct scores (automated via sync-data.mjs)
+- [ ] All 48 teams have non-null qualificationStatus (MANUAL — check after R3)
+- [ ] All 16 R32 slots in knockout.json have homeTeamId/awayTeamId set (automated when API populates, or manual via sync-data.mjs)
+- [ ] Best-3rd assignment confirmed from FIFA Annex C (8 slots) (MANUAL)
 - [ ] `npm run validate` — zero errors
 - [ ] Snapshot shows "Remaining: 32"
 
-**R2 remaining windows:**
-
-| Date (UTC) | Fixture IDs |
-|-----------|-------------|
-| June 23 | `i-r2-nor-sen`, `j-r2-jor-alg`, `k-r2-por-uzb` |
-| June 24 | `k-r2-col-cod`, `l-r2-eng-gha`, `l-r2-pan-cro` |
-
-**R3:** All 12 groups play simultaneous pairs June 25–27.
+**R3:** All 12 groups play simultaneous pairs June 25–27. After R3, run `npm run sync-data` to confirm all results, then set `qualificationStatus` for remaining teams.
 
 **After R3:** Populate knockout.json R32 homeTeamId/awayTeamId. Use `scripts/update-knockout.js` for R32 onwards.
 
 ---
 
-### Sprint 25 — candidate feature sprints
+### Sprint 26 — candidate feature sprints
 
-**Live data implementation (from LIVE_DATA_PLAN.md)**
-Register football-data.org, write `data/api-team-map.json`, create `netlify/functions/sync-tournament.mts`, update DataManager to fetch from Blob Store. Estimated ~8–10h. Eliminates manual fixture/standings maintenance. See `docs/LIVE_DATA_PLAN.md` for full plan.
+~~**Live data implementation**~~ — **COMPLETE (Sprint 25).** See `docs/LIVE_DATA_PLAN.md` for implementation notes.
 
 **Photo Pass 3 — manager gap recovery + harder player nulls**
 3 managers still null (Migné/Haiti, Bubista/Cape Verde, Donis/Saudi Arabia). Set `GATHER_MANAGERS=true` + add Wikidata P18 fallback for managers. ~300 player nulls remain; a targeted pass with alternate qualifiers (birth year, nationality) may recover more.
@@ -771,7 +776,7 @@ Populate R32 results as they happen (June 28 – July 6), propagate winners to R
 - `scotland-gordon` age (43, DOB 1982-12-31) triggers a validator DOB-range warning — expected and benign (Craig Gordon is genuinely 43; the DOB_MIN=1984 bound is a soft warning, not fatal).
 - `jordan-zito` has `_verification: "caps/club uncertain"` — data confidence flag, no action needed.
 - ~~`uzbekistan.json` had two players named "Eldor Shomurodov"~~ — **Resolved Sprint 22 squad audit.** Full squad replaced from Wikipedia. Shirt 9 is now Odiljon Hamrobekov (`uzbekistan-hamrobekov`), shirt 14 is Eldor Shomurodov (`uzbekistan-shomurodov`, captain). No duplicates remain.
-- `scripts/update-standings.js`, `scripts/generate-player-bios.js`, `scripts/generate-rankings.js` are stubs. `update-knockout.js` and `gather-photos.js` are fully implemented.
+- `scripts/update-standings.js` and `scripts/generate-player-bios.js`, `scripts/generate-rankings.js` are stubs. `update-knockout.js`, `gather-photos.js`, and `sync-data.mjs` are fully implemented. `update-standings.js` is now superseded by `sync-data.mjs` for score/standings updates — the stub can remain as-is.
 
 ---
 
