@@ -10,7 +10,8 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 
-const API_KEY = process.env.FOOTBALL_DATA_API_KEY || '4a405675fdf84538959e59f7d2401b38';
+const API_KEY = process.env.FOOTBALL_DATA_API_KEY;
+if (!API_KEY) throw new Error('FOOTBALL_DATA_API_KEY env var is not set');
 const BASE    = 'https://api.football-data.org/v4';
 
 const STATUS_MAP = {
