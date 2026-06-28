@@ -10,9 +10,11 @@
  */
 import { getStore } from '@netlify/blobs';
 
-const API_KEY  = process.env.FOOTBALL_DATA_API_KEY;
-const SITE_URL = process.env.URL;
-const BASE     = 'https://api.football-data.org/v4';
+const API_KEY      = process.env.FOOTBALL_DATA_API_KEY;
+const SITE_URL     = process.env.URL;
+const NETLIFY_TOKEN = process.env.NETLIFY_API_TOKEN;
+const SITE_ID      = process.env.SITE_ID;
+const BASE         = 'https://api.football-data.org/v4';
 
 const STATUS_MAP = {
   FINISHED:  'FT',
@@ -157,8 +159,10 @@ function mergeKnockout(existing, apiMatches, teamMap) {
 // ── Main handler ──────────────────────────────────────────────────────────────
 
 export default async function () {
-  if (!API_KEY)  { console.error('sync-tournament: FOOTBALL_DATA_API_KEY not set'); return; }
-  if (!SITE_URL) { console.error('sync-tournament: URL env not set'); return; }
+  if (!API_KEY)       { console.error('sync-tournament: FOOTBALL_DATA_API_KEY not set'); return; }
+  if (!SITE_URL)      { console.error('sync-tournament: URL env not set'); return; }
+  if (!NETLIFY_TOKEN) { console.error('sync-tournament: NETLIFY_API_TOKEN not set'); return; }
+  if (!SITE_ID)       { console.error('sync-tournament: SITE_ID not set'); return; }
 
   try {
     const [matchesData, standingsData, teamMap, existingFx, existingSt, existingKo] =
@@ -175,7 +179,7 @@ export default async function () {
     const standings = mergeStandings(existingSt,  standingsData.standings, teamMap);
     const knockout  = mergeKnockout(existingKo,   matchesData.matches,    teamMap);
 
-    const store = getStore({ name: 'tournament', consistency: 'strong' });
+    const store = getStore({ name: 'tournament', siteID: SITE_ID, token: NETLIFY_TOKEN });
     await Promise.all([
       store.setJSON('fixtures',  fixtures),
       store.setJSON('standings', standings),
