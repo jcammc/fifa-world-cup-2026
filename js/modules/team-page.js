@@ -15,6 +15,7 @@ export class TeamPage {
   #clubs      = [];
   #leagues    = [];
   #photoMap   = {};
+  #fixtures   = [];
   #activeTab  = 'overview';
   #tabModule  = null;
   #tabEl      = null;
@@ -27,11 +28,13 @@ export class TeamPage {
   async render() {
     const { countryId, scrollToPlayer } = this.#params;
 
-    const [countries, clubs, leagues, photoMap] = await Promise.all([
+    const [countries, clubs, leagues, photoMap, groupFixtures, knockoutRounds] = await Promise.all([
       DataManager.loadCountries(),
       DataManager.loadClubs(),
       DataManager.loadLeagues(),
       DataManager.loadPlayerPhotos(),
+      DataManager.loadFixtures(),
+      DataManager.loadKnockout(),
     ]);
 
     const country = countries.find(c => c.id === countryId);
@@ -53,6 +56,10 @@ export class TeamPage {
     this.#clubs    = clubs;
     this.#leagues  = leagues;
     this.#photoMap = photoMap;
+    this.#fixtures = [
+      ...groupFixtures,
+      ...knockoutRounds.flatMap(r => r.matches ?? []),
+    ];
     this.#players  = await DataManager.loadPlayersForTeam(countryId);
 
     if (scrollToPlayer) this.#activeTab = 'squad';
@@ -141,6 +148,7 @@ export class TeamPage {
         this.#leagues,
         playerId => this.#navigateToPlayer(playerId),
         this.#photoMap,
+        this.#fixtures,
       );
     } else if (tab === 'squad') {
       this.#tabModule = new SquadTab(

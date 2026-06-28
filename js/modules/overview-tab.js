@@ -1,6 +1,7 @@
 import { escapeHtml, getInitials } from '../utils.js';
 import { Charts } from '../charts.js';
 import { DataManager } from '../data.js';
+import { deriveRecentForm } from '../tournament-state.js';
 
 const POSITION_GROUPS = ['GK', 'DF', 'MF', 'FW'];
 
@@ -12,8 +13,9 @@ export class OverviewTab {
   #leagueMap;
   #onHeroSelect;
   #photoMap;
+  #fixtures;
 
-  constructor(container, country, players, clubs, leagues, onHeroSelect, photoMap = {}) {
+  constructor(container, country, players, clubs, leagues, onHeroSelect, photoMap = {}, fixtures = []) {
     this.#container    = container;
     this.#country      = country;
     this.#players      = players;
@@ -21,6 +23,7 @@ export class OverviewTab {
     this.#leagueMap    = new Map(leagues.map(l => [l.id, l]));
     this.#onHeroSelect = onHeroSelect;
     this.#photoMap     = photoMap;
+    this.#fixtures     = fixtures;
   }
 
   async render() {
@@ -284,16 +287,17 @@ export class OverviewTab {
   // ─── Recent form ──────────────────────────────────────────────
 
   #renderRecentForm(country) {
-    if (!country.recentForm?.length) {
+    const form = deriveRecentForm(country.id, this.#fixtures);
+    if (!form.length) {
       return `
         <section class="tp-section">
           <h2 class="tp-section__title">Recent Form</h2>
           <div class="empty-state empty-state--compact">
-            <p class="empty-state__message">Match results not yet available.</p>
+            <p class="empty-state__message">No tournament matches played yet.</p>
           </div>
         </section>`;
     }
-    const bubbles = country.recentForm.map(result => {
+    const bubbles = form.map(result => {
       const cls   = result === 'W' ? 'tp-form-bubble--win'
                   : result === 'L' ? 'tp-form-bubble--loss'
                   : 'tp-form-bubble--draw';
