@@ -182,9 +182,11 @@ export default async function () {
       store.setJSON('knockout',  knockout),
     ]);
 
-    const finished = matchesData.matches.filter(m => m.status === 'FINISHED').length;
-    const live     = matchesData.matches.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED').length;
-    console.log(`sync-tournament: OK — ${finished} FT, ${live} live [${new Date().toISOString()}]`);
+    const finished  = matchesData.matches.filter(m => m.status === 'FINISHED').length;
+    const live      = matchesData.matches.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED').length;
+    const koSlots   = knockout.data.flatMap(r => r.matches ?? []).filter(m => m.status === 'FT').length;
+    const koSkipped = matchesData.matches.filter(m => m.stage !== 'GROUP_STAGE').length - koSlots;
+    console.log(`sync-tournament: OK — ${finished} FT, ${live} live, ${koSlots} KO slots updated, ${koSkipped} KO unmatched [${new Date().toISOString()}]`);
   } catch (err) {
     console.error('sync-tournament: failed —', err.message);
   }
