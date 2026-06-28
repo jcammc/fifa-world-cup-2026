@@ -27,6 +27,8 @@ export class OverviewTab {
   }
 
   async render() {
+    const countries   = await DataManager.loadCountries();
+    const countryMap  = new Map(countries.map(c => [c.id, c]));
     const country = this.#country;
     const players = this.#players;
 
@@ -80,7 +82,7 @@ export class OverviewTab {
           ${this.#renderSquadMakeup(byPos)}
           ${this.#renderDistribution('Clubs Represented', topClubs.map(({ club, count }) => ({ label: club?.name ?? '—', count })))}
           ${this.#renderDistribution('Leagues', topLeagues.map(({ league, count }) => ({ label: league?.name ?? '—', count })))}
-          ${this.#renderRecentForm(country)}
+          ${this.#renderRecentForm(country, countryMap)}
         </div>
       </div>`;
 
@@ -286,7 +288,7 @@ export class OverviewTab {
 
   // ─── Recent form ──────────────────────────────────────────────
 
-  #renderRecentForm(country) {
+  #renderRecentForm(country, countryMap) {
     const form = deriveRecentForm(country.id, this.#fixtures);
     if (!form.length) {
       return `
@@ -297,18 +299,29 @@ export class OverviewTab {
           </div>
         </section>`;
     }
-    const bubbles = form.map(result => {
-      const cls   = result === 'W' ? 'tp-form-bubble--win'
-                  : result === 'L' ? 'tp-form-bubble--loss'
-                  : 'tp-form-bubble--draw';
-      const label = result === 'W' ? 'Win' : result === 'L' ? 'Loss' : 'Draw';
-      return `<span class="tp-form-bubble ${cls}" aria-label="${label}">${escapeHtml(result)}</span>`;
+    const bubbles = form.map(item => {
+      const cls      = item.result === 'W' ? 'tp-form-bubble--win'
+                     : item.result === 'L' ? 'tp-form-bubble--loss'
+                     : 'tp-form-bubble--draw';
+      const label    = item.result === 'W' ? 'Win' : item.result === 'L' ? 'Loss' : 'Draw';
+      const opponent = countryMap?.get(item.opponentId)?.name ?? item.opponentId ?? '?';
+      const score    = `${item.scored}–${item.conceded}`;
+      const date     = item.kickoff ? this.#shortDate(item.kickoff) : '';
+      const tooltip  = `vs ${opponent} · ${score}${date ? ' · ' + date : ''}`;
+      return `<span class="tp-form-bubble ${cls}" data-tooltip="${escapeHtml(tooltip)}" aria-label="${label} vs ${escapeHtml(opponent)}">${escapeHtml(item.result)}</span>`;
     }).join('');
     return `
       <section class="tp-section">
         <h2 class="tp-section__title">Recent Form</h2>
         <div class="tp-form">${bubbles}</div>
       </section>`;
+  }
+
+  #shortDate(kickoff) {
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const parts  = kickoff.slice(0, 10).split('-');
+    if (parts.length < 3) return '';
+    return `${parseInt(parts[2], 10)} ${MONTHS[parseInt(parts[1], 10) - 1]}`;
   }
 
   init() {}

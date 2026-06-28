@@ -16,10 +16,12 @@ export function deriveRecentForm(teamId, fixtures, maxResults = 5) {
     .filter(f => f.status === 'FT' && (f.homeTeamId === teamId || f.awayTeamId === teamId))
     .sort((a, b) => new Date(a.kickoff) - new Date(b.kickoff));
   return completed.slice(-maxResults).map(f => {
-    const isHome  = f.homeTeamId === teamId;
-    const scored  = isHome ? f.homeScore : f.awayScore;
-    const conceded = isHome ? f.awayScore : f.homeScore;
-    return scored > conceded ? 'W' : scored < conceded ? 'L' : 'D';
+    const isHome     = f.homeTeamId === teamId;
+    const scored     = isHome ? f.homeScore : f.awayScore;
+    const conceded   = isHome ? f.awayScore : f.homeScore;
+    const result     = scored > conceded ? 'W' : scored < conceded ? 'L' : 'D';
+    const opponentId = isHome ? f.awayTeamId : f.homeTeamId;
+    return { result, opponentId, scored, conceded, kickoff: f.kickoff };
   });
 }
 

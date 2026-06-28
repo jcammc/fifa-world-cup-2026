@@ -99,6 +99,13 @@ export class MatchCentre {
     const homeId   = fixture.homeTeamId;
     const awayId   = fixture.awayTeamId;
 
+    const homeNameEl = homeId
+      ? `<a href="#${escapeHtml(homeId)}" class="mc-team__name mc-team__name--link">${homeName}</a>`
+      : `<span class="mc-team__name">${homeName}</span>`;
+    const awayNameEl = awayId
+      ? `<a href="#${escapeHtml(awayId)}" class="mc-team__name mc-team__name--link">${awayName}</a>`
+      : `<span class="mc-team__name">${awayName}</span>`;
+
     const stageLabel = isKnockout
       ? escapeHtml(roundLabel ?? 'Knockout Stage')
       : `Group ${escapeHtml(fixture.groupId ?? '')}${fixture.round ? ` · Matchday ${fixture.round}` : ''}`;
@@ -148,12 +155,12 @@ export class MatchCentre {
           <div class="mc-teams">
             <div class="mc-team">
               ${homeFlag}
-              <span class="mc-team__name">${homeName}</span>
+              ${homeNameEl}
             </div>
             <div class="mc-centre">${centreHtml}</div>
             <div class="mc-team">
               ${awayFlag}
-              <span class="mc-team__name">${awayName}</span>
+              ${awayNameEl}
             </div>
           </div>
         </div>
@@ -186,12 +193,23 @@ export class MatchCentre {
 
   #formDots(form) {
     if (!form?.length) return `<span class="mc-form__none">—</span>`;
-    return form.map(r => {
-      const cls = r === 'W' ? 'mc-form__dot--w'
-                : r === 'D' ? 'mc-form__dot--d'
-                : 'mc-form__dot--l';
-      return `<span class="mc-form__dot ${cls}">${escapeHtml(r)}</span>`;
+    return form.map(item => {
+      const cls      = item.result === 'W' ? 'mc-form__dot--w'
+                     : item.result === 'D' ? 'mc-form__dot--d'
+                     : 'mc-form__dot--l';
+      const opponent = this.#countryMap?.get(item.opponentId)?.name ?? item.opponentId ?? '?';
+      const score    = `${item.scored}–${item.conceded}`;
+      const date     = item.kickoff ? this.#shortDate(item.kickoff) : '';
+      const tooltip  = `vs ${opponent} · ${score}${date ? ' · ' + date : ''}`;
+      return `<span class="mc-form__dot ${cls}" data-tooltip="${escapeHtml(tooltip)}">${escapeHtml(item.result)}</span>`;
     }).join('');
+  }
+
+  #shortDate(kickoff) {
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const parts  = kickoff.slice(0, 10).split('-');
+    if (parts.length < 3) return '';
+    return `${parseInt(parts[2], 10)} ${MONTHS[parseInt(parts[1], 10) - 1]}`;
   }
 
   // ─── What's at stake ──────────────────────────────────────
