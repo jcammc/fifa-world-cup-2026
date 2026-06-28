@@ -20,7 +20,7 @@ export default async function (req) {
   }
 
   try {
-    const store = getStore({ name: 'tournament', consistency: 'eventual' });
+    const store = getStore({ name: 'tournament', consistency: 'strong' });
     const entry = await store.getWithMetadata(type, { type: 'json' });
 
     if (!entry?.value) {
@@ -33,7 +33,7 @@ export default async function (req) {
     return new Response(JSON.stringify(entry.value), {
       headers: {
         'Content-Type':                'application/json',
-        'Cache-Control':               'public, max-age=30, stale-while-revalidate=90',
+        'Cache-Control':               'no-store',
         'Access-Control-Allow-Origin': '*',
       },
     });
