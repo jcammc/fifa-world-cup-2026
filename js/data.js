@@ -9,10 +9,13 @@ const URLS = {
   leagues:     'data/leagues.json',
   rankings:    'data/rankings.json',
   knockout:    'data/knockout.json',
+  annexC:      'data/annex-c.json',
   searchIndex:   'data/search-index.json',
   players:       (id) => `data/players/${id}.json`,
   playerPhotos:  'data/player-photos.json',
 };
+
+const LIVE_KEYS = ['fixtures', 'standings', 'knockout'];
 
 // On production (not localhost) try the live Blob Store endpoint first.
 // Falls back to static files if the endpoint fails or isn't populated yet.
@@ -21,6 +24,21 @@ const LIVE_ENDPOINT = '/api/live';
 
 class _DataManager {
   #cache = new Map();
+
+  // Stores the full JSON object without unwrapping (for non-array data like annex-c).
+  async #loadRaw(key, url) {
+    if (this.#cache.has(key)) return this.#cache.get(key);
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
+      const json = await res.json();
+      this.#cache.set(key, json);
+      return json;
+    } catch (err) {
+      console.warn(`DataManager: failed to load "${url}"`, err.message);
+      return null;
+    }
+  }
 
   async #load(key, url) {
     if (this.#cache.has(key)) return this.#cache.get(key);
@@ -70,6 +88,7 @@ class _DataManager {
   async loadLeagues()              { return this.#load('leagues',   URLS.leagues); }
   async loadRankings()             { return this.#load('rankings',     URLS.rankings); }
   async loadSearchIndex()          { return this.#load('search-index', URLS.searchIndex); }
+  async loadAnnexC()               { return this.#loadRaw('annex-c',   URLS.annexC); }
 
   async loadPlayersForTeam(countryId) {
     return this.#load(`players-${countryId}`, URLS.players(countryId));
@@ -162,6 +181,11 @@ class _DataManager {
 
   invalidateCache(key) { this.#cache.delete(key); }
   clearCache()         { this.#cache.clear(); }
+
+  // Evicts only live-data keys so the next load fetches fresh data from the endpoint.
+  invalidateLive() {
+    for (const key of LIVE_KEYS) this.#cache.delete(key);
+  }
 }
 
 export const DataManager = new _DataManager();

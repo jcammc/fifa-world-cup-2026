@@ -243,6 +243,42 @@ export class GroupCarousel {
 
   // ─── Public API ──────────────────────────────────────────
 
+  /**
+   * Refresh standings and fixtures without losing the user's scroll position.
+   * Option B: controlled re-render that preserves position by restoring scrollLeft.
+   * Evolves naturally toward Option A (targeted DOM updates) per-card later.
+   */
+  update(standings, fixtures) {
+    if (!this.#carouselEl) return;
+    this.#standings = standings;
+    this.#fixtures  = fixtures;
+
+    const savedScroll = this.#carouselEl.scrollLeft;
+
+    const standingsMap = new Map(standings.map(s => [s.groupId, s.teams]));
+    const fixturesMap  = new Map();
+    for (const f of fixtures) {
+      if (!fixturesMap.has(f.groupId)) fixturesMap.set(f.groupId, []);
+      fixturesMap.get(f.groupId).push(f);
+    }
+
+    const cards = this.#carouselEl.querySelectorAll('.group-card');
+    for (const card of cards) {
+      const groupId = card.dataset.group;
+      const group   = this.#groups.find(g => g.id === groupId);
+      if (!group) continue;
+      const teams         = standingsMap.get(groupId);
+      const groupFixtures = fixturesMap.get(groupId) ?? [];
+      const hasData       = teams?.length > 0;
+      card.innerHTML = `
+        <h2 class="group-card__title">${escapeHtml(group.name)}</h2>
+        ${hasData ? this.#buildStandingsTable(teams) : this.#buildNoData()}
+        ${hasData ? this.#buildFixturesStrip(groupFixtures) : ''}`;
+    }
+
+    this.#carouselEl.scrollLeft = savedScroll;
+  }
+
   scrollToGroup(groupId) {
     const carousel = this.#carouselEl;
     if (!carousel) return;

@@ -7,6 +7,8 @@ import { ContinentsPage } from './modules/continents-page.js';
 import { StatisticsPage } from './modules/statistics-page.js';
 import { LeagueExplorer } from './modules/league-explorer.js';
 import { ClubExplorer } from './modules/club-explorer.js';
+import { MatchCentre } from './modules/match-centre.js';
+import { BestThirds } from './modules/best-thirds.js';
 import { escapeHtml } from './utils.js';
 
 // ─── Placeholder for unimplemented routes ──────────────────
@@ -157,6 +159,16 @@ class _Router {
       return { Module: CompareView, params: { teamA: parts[1] ?? null, teamB: parts[2] ?? null } };
     }
 
+    // Match Centre route: #match/{fixtureId} — must be before player deep-link loop
+    if (hash.startsWith('match/')) {
+      return { Module: MatchCentre, params: { fixtureId: hash.slice(6) } };
+    }
+
+    // Best-thirds race page
+    if (hash === 'best-thirds') {
+      return { Module: BestThirds, params: {} };
+    }
+
     // Player route: must check before country route (e.g. #france-mbappe)
     for (const id of (this.#countryIds ?? [])) {
       if (hash.startsWith(id + '-')) {
@@ -187,7 +199,8 @@ class _Router {
 
   #updateActiveLink(hash) {
     document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('nav-link--active'));
-    const isTc = !hash || hash === 'tournament' || hash === 'today' || hash === 'knockout' || /^group-[a-l]$/.test(hash);
+    const isTc = !hash || hash === 'tournament' || hash === 'today' || hash === 'knockout'
+      || /^group-[a-l]$/.test(hash) || hash.startsWith('match/') || hash === 'best-thirds';
     const href = isTc ? '#tournament'
       : hash.startsWith('compare/') ? '#compare'
       : `#${hash}`;

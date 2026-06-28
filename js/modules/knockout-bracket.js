@@ -1,23 +1,28 @@
 import { DataManager } from '../data.js';
 import { formatKickoff } from '../time.js';
 import { escapeHtml } from '../utils.js';
+import { buildBracketProjection } from '../tournament-state.js';
 
 export class KnockoutBracket {
   #container;
-  #rounds     = [];
-  #countryMap = new Map();
+  #rounds        = [];
+  #countryMap    = new Map();
+  #projectionMap = new Map();
 
   constructor(container, params = {}) {
     this.#container = container;
   }
 
   async render() {
-    const [rounds, countries] = await Promise.all([
+    const [rounds, countries, standings, annexC] = await Promise.all([
       DataManager.loadKnockout(),
       DataManager.loadCountries(),
+      DataManager.loadStandings(),
+      DataManager.loadAnnexC(),
     ]);
-    this.#rounds     = rounds;
-    this.#countryMap = new Map(countries.map(c => [c.id, c]));
+    this.#rounds        = rounds;
+    this.#countryMap    = new Map(countries.map(c => [c.id, c]));
+    this.#projectionMap = buildBracketProjection(standings, annexC ?? { combinations: {} });
 
     if (!this.#rounds.length) {
       this.#container.innerHTML = `
@@ -35,7 +40,31 @@ export class KnockoutBracket {
         <div class="bracket-scroll">
           <div class="bracket-rounds">${roundsHtml}</div>
         </div>
+        <div class="bracket-footer">
+          <a href="#best-thirds" class="bracket-footer__link">
+            Best third-place teams &#8594;
+          </a>
+        </div>
       </div>`;
+  }
+
+  // Re-fetch and update just the bracket rounds content, preserving scroll position.
+  async update() {
+    const scrollEl = this.#container.querySelector('.bracket-scroll');
+    const roundsEl = this.#container.querySelector('.bracket-rounds');
+    if (!roundsEl) { await this.render(); this.init(); return; }
+
+    const savedX = scrollEl?.scrollLeft ?? 0;
+    const [rounds, standings, annexC] = await Promise.all([
+      DataManager.loadKnockout(),
+      DataManager.loadStandings(),
+      DataManager.loadAnnexC(),
+    ]);
+    this.#rounds        = rounds;
+    this.#projectionMap = buildBracketProjection(standings, annexC ?? { combinations: {} });
+
+    roundsEl.innerHTML = this.#rounds.map(r => this.#buildRound(r)).join('');
+    if (scrollEl) scrollEl.scrollLeft = savedX;
   }
 
   // ─── Round column ─────────────────────────────────────────
@@ -60,11 +89,43 @@ export class KnockoutBracket {
       matchesHtml = pairs.join('');
     }
 
+    const dateRange = this.#roundDateRange(round.matches);
+
     return `
       <div class="bracket-round" data-round="${escapeHtml(round.id)}">
-        <div class="bracket-round__header">${escapeHtml(round.label)}</div>
+        <div class="bracket-round__header">
+          <span class="bracket-round__label">${escapeHtml(round.label)}</span>
+          ${dateRange ? `<span class="bracket-round__dates">${escapeHtml(dateRange)}</span>` : ''}
+        </div>
         <div class="bracket-round__matches">${matchesHtml}</div>
       </div>`;
+  }
+
+  // Formats a concise date range from match kickoffs: "28 Jun–3 Jul", "14–15 Jul", "18 Jul"
+  #roundDateRange(matches) {
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const kickoffs = matches.map(m => m.kickoff).filter(Boolean).sort();
+    if (!kickoffs.length) return '';
+
+    const parse = s => { const [, m, d] = s.split('-').map(Number); return { m, d }; };
+    const first = parse(kickoffs[0]);
+    const last  = parse(kickoffs[kickoffs.length - 1]);
+
+    if (first.m === last.m && first.d === last.d) return `${first.d} ${MONTHS[first.m - 1]}`;
+    if (first.m === last.m)  return `${first.d}–${last.d} ${MONTHS[first.m - 1]}`;
+    return `${first.d} ${MONTHS[first.m - 1]}–${last.d} ${MONTHS[last.m - 1]}`;
+  }
+
+  // ─── Slot label resolution ────────────────────────────────
+  // knockout.json uses compact labels: "1A", "2B", "3rd C/E/F/H/I".
+  // buildBracketProjection() keys: "Winner Group A", "Runner-up Group A", "best-third-r32-m7".
+
+  #projectionKey(label, matchId) {
+    if (!label) return null;
+    if (/^1[A-L]$/.test(label)) return `Winner Group ${label[1]}`;
+    if (/^2[A-L]$/.test(label)) return `Runner-up Group ${label[1]}`;
+    if (label.startsWith('3rd')) return `best-third-${matchId}`;
+    return null;
   }
 
   // ─── Match card ───────────────────────────────────────────
@@ -73,39 +134,68 @@ export class KnockoutBracket {
     const matchLabelHtml = match.matchLabel
       ? `<div class="bracket-match__label">${escapeHtml(match.matchLabel)}</div>`
       : '';
+    const homeKey  = this.#projectionKey(match.homeLabel, match.id);
+    const awayKey  = this.#projectionKey(match.awayLabel, match.id);
+    const homeProj = !match.homeTeamId ? (this.#projectionMap.get(homeKey) ?? null) : null;
+    const awayProj = !match.awayTeamId ? (this.#projectionMap.get(awayKey) ?? null) : null;
     const meta = this.#buildMeta(match);
     return `
-      <div class="bracket-match" data-match="${escapeHtml(match.id)}">
+      <a href="#match/${escapeHtml(match.id)}" class="bracket-match" data-match="${escapeHtml(match.id)}">
         ${matchLabelHtml}
-        ${this.#buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore)}
+        ${this.#buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj)}
         <div class="bracket-divider"></div>
-        ${this.#buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore)}
+        ${this.#buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj)}
         ${meta}
-      </div>`;
+      </a>`;
   }
 
-  #buildTeamSlot(teamId, label, score) {
-    const country   = teamId ? this.#countryMap.get(teamId) : null;
-    const name      = country
-      ? escapeHtml(country.name)
-      : (label ? escapeHtml(label) : 'TBD');
-    const isPending = !country;
-
-    const flagHtml = country
-      ? `<img src="assets/flags/${escapeHtml(teamId)}.svg" alt=""
+  #buildTeamSlot(teamId, label, score, projection = null) {
+    // Confirmed — real team locked into this bracket slot
+    if (teamId) {
+      const country   = this.#countryMap.get(teamId);
+      const name      = country ? escapeHtml(country.name) : escapeHtml(teamId);
+      const flagHtml  = `<img src="assets/flags/${escapeHtml(teamId)}.svg" alt=""
               width="20" height="14" class="bracket-team__flag" aria-hidden="true"
-              onerror="this.style.display='none'">`
-      : `<span class="bracket-team__flag-placeholder" aria-hidden="true"></span>`;
+              onerror="this.style.display='none'">`;
+      const hasScore  = score !== null && score !== undefined;
+      const scoreHtml = hasScore
+        ? `<span class="bracket-team__score">${score}</span>`
+        : `<span class="bracket-team__score bracket-team__score--confirmed">&#10003;</span>`;
+      return `
+        <div class="bracket-team bracket-team--confirmed">
+          ${flagHtml}
+          <span class="bracket-team__name">${name}</span>
+          ${scoreHtml}
+        </div>`;
+    }
 
-    const scoreHtml = score !== null && score !== undefined
-      ? `<span class="bracket-team__score">${score}</span>`
-      : `<span class="bracket-team__score bracket-team__score--empty">–</span>`;
+    // Projected — standings tell us who's currently in this slot
+    if (projection) {
+      const country   = this.#countryMap.get(projection.teamId);
+      const name      = country ? escapeHtml(country.name) : escapeHtml(projection.teamId);
+      const flagHtml  = `<img src="assets/flags/${escapeHtml(projection.teamId)}.svg" alt=""
+              width="20" height="14" class="bracket-team__flag" aria-hidden="true"
+              onerror="this.style.display='none'">`;
+      const c         = projection.confidence;
+      const confCls   = c === 'confirmed' ? 'bracket-conf--confirmed'
+                      : c === 'likely'    ? 'bracket-conf--likely'
+                      : 'bracket-conf--open';
+      const confLabel = c === 'confirmed' ? 'Confirmed' : c === 'likely' ? 'Likely' : 'Open';
+      return `
+        <div class="bracket-team bracket-team--projected">
+          ${flagHtml}
+          <span class="bracket-team__name">${name}</span>
+          <span class="bracket-conf ${confCls}">${confLabel}</span>
+        </div>`;
+    }
 
+    // Pending — no teamId and no projection (best-third slots, pre-tournament slots)
+    const name = label ? escapeHtml(label) : 'TBD';
     return `
-      <div class="bracket-team${isPending ? ' bracket-team--pending' : ''}">
-        ${flagHtml}
+      <div class="bracket-team bracket-team--pending">
+        <span class="bracket-team__flag-placeholder" aria-hidden="true"></span>
         <span class="bracket-team__name">${name}</span>
-        ${scoreHtml}
+        <span class="bracket-team__score bracket-team__score--empty">–</span>
       </div>`;
   }
 
@@ -128,7 +218,7 @@ export class KnockoutBracket {
     const scroll = this.#container.querySelector('.bracket-scroll');
     if (!scroll) return;
     scroll.addEventListener('wheel', e => {
-      if (e.deltaY !== 0 && e.deltaX === 0) {
+      if (e.deltaY !== 0 && e.deltaX === 0 && scroll.scrollWidth > scroll.clientWidth) {
         e.preventDefault();
         scroll.scrollLeft += e.deltaY;
       }

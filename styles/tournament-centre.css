@@ -110,10 +110,17 @@
 
 /* ─── Rail card ───────────────────────────────────────────── */
 .tc-rail-card {
+  display: block;
+  text-decoration: none;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-3);
+  transition: border-color var(--transition-fast);
+}
+
+.tc-rail-card:hover {
+  border-color: var(--color-border-focus);
 }
 
 .tc-rail-card--live {
@@ -121,43 +128,13 @@
   background: rgba(239, 68, 68, 0.05);
 }
 
-.tc-rail-card__teams {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-1);
-  margin-bottom: var(--space-1);
-}
-
-.tc-rail-card__team {
+.tc-rail-card__matchup {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
-  flex: 1;
+  margin: 0 0 var(--space-1);
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 0;
-}
-
-.tc-rail-card__team--away {
-  text-align: right;
-}
-
-.tc-rail-card__score {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-accent);
-  flex-shrink: 0;
-  padding: 0 var(--space-1);
-  white-space: nowrap;
-}
-
-.tc-rail-card__time {
-  font-size: var(--font-size-xs);
-  color: var(--color-text-muted);
-  flex-shrink: 0;
-  padding: 0 var(--space-1);
   white-space: nowrap;
 }
 
@@ -165,6 +142,44 @@
   font-size: 10px;
   color: var(--color-text-muted);
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tc-rail-card__venue {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  margin: var(--space-1) 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── Broadcaster badges (rail + strip) ───────────────────── */
+.tc-rail-card__broadcaster,
+.tc-strip-card__broadcaster {
+  display: inline-block;
+  margin-top: var(--space-1);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.tc-rail-card__broadcaster--bbc,
+.tc-strip-card__broadcaster--bbc {
+  background: #bb1919;
+  color: #fff;
+}
+
+.tc-rail-card__broadcaster--itv,
+.tc-strip-card__broadcaster--itv {
+  background: #111;
+  color: #fff;
 }
 
 /* ─── Mobile fixture strip ────────────────────────────────── */
@@ -190,6 +205,12 @@
   flex-direction: column;
   align-items: center;
   gap: 2px;
+  text-decoration: none;
+  transition: border-color var(--transition-fast);
+}
+
+.tc-strip-card:hover {
+  border-color: var(--color-border-focus);
 }
 
 .tc-strip-card--live {
@@ -221,6 +242,11 @@
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
   white-space: nowrap;
+}
+
+.tc-strip-card__vs {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
 }
 
 .tc-strip-card__badge {
@@ -298,6 +324,22 @@
   color: var(--color-text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* ─── Live poll indicator ─────────────────────────────────── */
+.tc-poll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: var(--space-5);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.tc-poll-indicator__dot {
+  color: var(--color-success);
+  font-size: 8px;
+  line-height: 1;
 }
 
 /* ─── Sections ───────────────────────────────────────────── */

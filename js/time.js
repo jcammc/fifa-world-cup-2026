@@ -10,6 +10,14 @@ export function timezoneLabel() {
 
 export function formatKickoff(utcString) {
   if (!utcString) return '—';
+  // Date-only strings (YYYY-MM-DD) have no time component. new Date("2026-06-28")
+  // is interpreted as UTC midnight, which shifts the date backwards in negative-UTC
+  // timezones (e.g. June 27 in the Americas). Parse by string-splitting instead.
+  if (/^\d{4}-\d{2}-\d{2}$/.test(utcString)) {
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const [, m, d] = utcString.split('-').map(Number);
+    return `${d} ${MONTHS[m - 1]}`;
+  }
   const date = new Date(utcString);
   const fmt = new Intl.DateTimeFormat('en-GB', {
     timeZone: LONDON_TZ,

@@ -34,16 +34,32 @@
 }
 
 .bracket-round__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+  padding: var(--space-2) 0 var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-3);
+}
+
+.bracket-round__label {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--color-text-muted);
-  text-align: center;
-  padding: var(--space-2) 0 var(--space-3);
-  border-bottom: 1px solid var(--color-border);
-  margin-bottom: var(--space-3);
   white-space: nowrap;
+}
+
+.bracket-round__dates {
+  font-size: 9px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  white-space: nowrap;
+  letter-spacing: 0;
 }
 
 /* ─── Match list inside a round ──────────────────────────── */
@@ -117,6 +133,9 @@
   gap: 0;
   box-shadow: var(--shadow-card);
   transition: border-color var(--transition-fast);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .bracket-match:hover {
@@ -196,6 +215,53 @@
   font-weight: var(--font-weight-normal);
 }
 
+/* ─── Confirmed team slot (teamId locked in) ─────────────── */
+.bracket-team--confirmed {
+  border-left: 3px solid var(--color-success);
+  padding-left: calc(var(--space-1) - 3px);
+  background: rgba(74, 222, 128, 0.04);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.bracket-team__score--confirmed {
+  color: var(--color-success);
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+}
+
+/* ─── Projected team state ───────────────────────────────── */
+.bracket-team--projected .bracket-team__name {
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.bracket-conf {
+  font-size: 9px;
+  font-weight: var(--font-weight-semibold);
+  padding: 1px 4px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+/* Group is complete — position locked but no teamId in knockout.json yet */
+.bracket-conf--confirmed {
+  background: rgba(74, 222, 128, 0.18);
+  color: var(--color-success);
+  border: 1px solid rgba(74, 222, 128, 0.35);
+}
+
+.bracket-conf--likely {
+  background: rgba(74, 222, 128, 0.10);
+  color: var(--color-success);
+}
+
+.bracket-conf--open {
+  background: rgba(251, 191, 36, 0.12);
+  color: var(--color-warning);
+}
+
 /* ─── Divider between teams ──────────────────────────────── */
 .bracket-divider {
   height: 1px;
@@ -219,6 +285,23 @@
 .bracket-round[data-round="sf"],
 .bracket-round[data-round="final"] {
   width: 200px;
+}
+
+/* ─── Bracket footer link ────────────────────────────────── */
+.bracket-footer {
+  padding: var(--space-4) 0 var(--space-2);
+  text-align: right;
+}
+
+.bracket-footer__link {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.bracket-footer__link:hover {
+  color: var(--color-accent-hover);
 }
 
 /* ─── Responsive ─────────────────────────────────────────── */

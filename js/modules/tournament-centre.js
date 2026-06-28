@@ -1,8 +1,10 @@
 import { DataManager } from '../data.js';
-import { formatKickoff, isToday } from '../time.js';
+import { formatKickoff, isToday, timezoneLabel } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { GroupCarousel } from './group-carousel.js';
 import { KnockoutBracket } from './knockout-bracket.js';
+
+const POLL_INTERVAL_MS = 50_000;
 
 export class TournamentCentre {
   #container;
@@ -16,6 +18,18 @@ export class TournamentCentre {
   #standings       = [];
   #groups          = [];
   #countryMap      = new Map();
+
+  // DOM refs for in-place updates
+  #snapshotEl      = null;
+  #stripEl         = null;
+  #railEl          = null;
+  #pollIndicatorEl = null;
+
+  // Polling
+  #pollTimer       = null;
+  #visibilityFn    = null;
+  #polling         = false;
+  #lastPollText    = '';
 
   constructor(container, params = {}) {
     this.#container = container;
@@ -42,7 +56,7 @@ export class TournamentCentre {
         ${this.#renderSnapshot()}
         <div class="tc-layout">
           <div class="tc-main">
-            ${this.#renderFixtureStrip()}
+            <div class="tc-fixture-strip-wrap">${this.#renderFixtureStripInner()}</div>
             <div class="tc-tabs" role="tablist">
               <button class="tc-tab tc-tab--active" data-tab="groups"
                       role="tab" aria-selected="true" type="button">Group Stage</button>
@@ -51,11 +65,15 @@ export class TournamentCentre {
             </div>
             <div class="tc-tab-content"></div>
           </div>
-          ${this.#renderRail()}
+          <aside class="tc-rail"><div class="tc-rail__inner">${this.#renderRailInner()}</div></aside>
         </div>
       </div>`;
 
-    this.#tabEl = this.#container.querySelector('.tc-tab-content');
+    this.#tabEl          = this.#container.querySelector('.tc-tab-content');
+    this.#snapshotEl     = this.#container.querySelector('.tc-snapshot');
+    this.#stripEl        = this.#container.querySelector('.tc-fixture-strip-wrap');
+    this.#railEl         = this.#container.querySelector('.tc-rail');
+    this.#pollIndicatorEl = this.#container.querySelector('.tc-poll-indicator__text');
 
     const validTabs = ['groups', 'knockout'];
     const initialTab = validTabs.includes(this.#params.initialTab)
@@ -114,7 +132,12 @@ export class TournamentCentre {
     const played         = playedGroup + playedKnockout;
     const total          = this.#fixtures.length + this.#knockoutMatches.length;
     const remaining      = total ? total - played : '—';
-    const teams          = this.#countries.length || 48;
+
+    const allTeams   = this.#standings.flatMap(g => g.teams);
+    const qualified  = allTeams.filter(t => t.qualificationStatus === 'qualified').length  || '—';
+    const eliminated = allTeams.filter(t => t.qualificationStatus === 'eliminated').length || '—';
+
+    const pollText = this.#lastPollText || 'Live';
 
     return `
       <section class="tc-snapshot">
@@ -122,8 +145,12 @@ export class TournamentCentre {
         <p class="tc-subtitle">48 teams &middot; 12 groups &middot; 104 matches</p>
         <div class="tc-snapshot__stats">
           <div class="tc-stat">
-            <span class="tc-stat__value">${teams}</span>
-            <span class="tc-stat__label">Teams</span>
+            <span class="tc-stat__value">${qualified}</span>
+            <span class="tc-stat__label">Qualified</span>
+          </div>
+          <div class="tc-stat">
+            <span class="tc-stat__value">${eliminated}</span>
+            <span class="tc-stat__label">Eliminated</span>
           </div>
           <div class="tc-stat">
             <span class="tc-stat__value">${played}</span>
@@ -134,12 +161,16 @@ export class TournamentCentre {
             <span class="tc-stat__label">Remaining</span>
           </div>
         </div>
+        <div class="tc-poll-indicator" aria-live="polite">
+          <span class="tc-poll-indicator__dot" aria-hidden="true">&#9679;</span>
+          <span class="tc-poll-indicator__text">${escapeHtml(pollText)}</span>
+        </div>
       </section>`;
   }
 
   // ─── Mobile fixture strip ──────────────────────────────────
 
-  #renderFixtureStrip() {
+  #renderFixtureStripInner() {
     const allFixtures = this.#allFixturesWithKickoff();
     const todayAll    = allFixtures.filter(f => isToday(f.kickoff));
     const displayFixtures = todayAll.length > 0
@@ -161,26 +192,33 @@ export class TournamentCentre {
     const awayAbbr = escapeHtml((away?.name ?? f.awayLabel ?? f.awayTeamId ?? 'TBD').slice(0, 3).toUpperCase());
     const isLive   = f.status === 'live';
     const isFT     = f.status === 'FT';
-    const middle   = (isFT || isLive)
+    const hasScore = isFT || isLive;
+
+    const middle = hasScore
       ? `<span class="tc-strip-card__score">${f.homeScore ?? 0}–${f.awayScore ?? 0}</span>`
+      : `<span class="tc-strip-card__vs">v</span>`;
+
+    const secondaryHtml = hasScore
+      ? `<span class="tc-strip-card__badge${isLive ? ' tc-strip-card__badge--live' : ''}">${isLive ? 'LIVE' : 'FT'}</span>`
       : `<span class="tc-strip-card__time">${escapeHtml(formatKickoff(f.kickoff))}</span>`;
-    const badge = isLive
-      ? `<span class="tc-strip-card__badge tc-strip-card__badge--live">LIVE</span>`
-      : isFT ? `<span class="tc-strip-card__badge">FT</span>` : '';
+
+    const broadcasterHtml = this.#broadcasterHtml(f.broadcaster, 'tc-strip-card__broadcaster');
+
     return `
-      <div class="tc-strip-card${isLive ? ' tc-strip-card--live' : ''}">
+      <a href="#match/${escapeHtml(f.id)}" class="tc-strip-card${isLive ? ' tc-strip-card--live' : ''}">
         <div class="tc-strip-card__row">
           <span class="tc-strip-card__team">${homeAbbr}</span>
           ${middle}
           <span class="tc-strip-card__team">${awayAbbr}</span>
         </div>
-        ${badge}
-      </div>`;
+        ${secondaryHtml}
+        ${broadcasterHtml}
+      </a>`;
   }
 
   // ─── Fixture rail (desktop) ────────────────────────────────
 
-  #renderRail() {
+  #renderRailInner() {
     const allFixtures = this.#allFixturesWithKickoff();
 
     const live         = allFixtures.filter(f => f.status === 'live');
@@ -203,8 +241,7 @@ export class TournamentCentre {
       nextScheduled.length ? this.#railSection('Coming Up', nextScheduled) : '',
     ].join('');
 
-    const inner = sections || `<p class="tc-rail__empty">No fixtures available</p>`;
-    return `<aside class="tc-rail"><div class="tc-rail__inner">${inner}</div></aside>`;
+    return sections || `<p class="tc-rail__empty">No fixtures available</p>`;
   }
 
   #railSection(label, fixtures, isLive = false) {
@@ -226,24 +263,39 @@ export class TournamentCentre {
     const isFT     = f.status === 'FT';
     const hasScore = isFT || isLive;
 
-    const middle = hasScore
-      ? `<span class="tc-rail-card__score">${f.homeScore ?? 0}–${f.awayScore ?? 0}</span>`
-      : `<span class="tc-rail-card__time">${escapeHtml(formatKickoff(f.kickoff))}</span>`;
+    const matchupLine = hasScore
+      ? `${homeName} ${f.homeScore ?? 0}–${f.awayScore ?? 0} ${awayName}`
+      : `${homeName} v ${awayName}`;
 
-    const metaParts = [];
-    if (isFT)        metaParts.push('FT');
-    else if (isLive) metaParts.push(`${f.minute ?? 'LIVE'}'`);
-    if (f.groupId)   metaParts.push(`Grp ${escapeHtml(f.groupId)}`);
+    const stagePart  = f.groupId ? `Group ${escapeHtml(f.groupId)}` : '';
+    const statusPart = isFT ? 'FT' : isLive ? `${f.minute ?? 'LIVE'}'` : escapeHtml(formatKickoff(f.kickoff));
+    const metaParts  = [stagePart, statusPart].filter(Boolean);
+
+    const venueHtml       = (!hasScore && f.venue)
+      ? `<p class="tc-rail-card__venue">${escapeHtml(f.venue)}</p>`
+      : '';
+    const broadcasterHtml = this.#broadcasterHtml(f.broadcaster, 'tc-rail-card__broadcaster');
 
     return `
-      <div class="tc-rail-card${isLive ? ' tc-rail-card--live' : ''}">
-        <div class="tc-rail-card__teams">
-          <span class="tc-rail-card__team">${homeName}</span>
-          ${middle}
-          <span class="tc-rail-card__team tc-rail-card__team--away">${awayName}</span>
-        </div>
+      <a href="#match/${escapeHtml(f.id)}" class="tc-rail-card${isLive ? ' tc-rail-card--live' : ''}">
+        <p class="tc-rail-card__matchup">${matchupLine}</p>
         ${metaParts.length ? `<p class="tc-rail-card__meta">${metaParts.join(' · ')}</p>` : ''}
-      </div>`;
+        ${venueHtml}
+        ${broadcasterHtml}
+      </a>`;
+  }
+
+  #broadcasterHtml(broadcaster, cls) {
+    if (!broadcaster) return '';
+    const BROADCASTERS = {
+      BBC: { href: 'https://www.bbc.co.uk/iplayer/live/bbcone', mod: 'bbc' },
+      ITV: { href: 'https://www.itv.com/watch?channel=itv',     mod: 'itv' },
+    };
+    const b = BROADCASTERS[broadcaster];
+    if (!b) return '';
+    return `<a href="${b.href}" target="_blank" rel="noopener noreferrer"
+               class="${escapeHtml(cls)} ${escapeHtml(cls)}--${b.mod}"
+               onclick="event.stopPropagation()">${escapeHtml(broadcaster)}</a>`;
   }
 
   // ─── Shared helpers ────────────────────────────────────────
@@ -255,10 +307,105 @@ export class TournamentCentre {
     ];
   }
 
-  init() {}
+  init() {
+    this.#startPolling();
+  }
 
   teardown() {
+    this.#stopPolling();
     this.#tabModule?.teardown?.();
     this.#tabModule = null;
+  }
+
+  // ─── Live polling ─────────────────────────────────────────
+
+  #startPolling() {
+    this.#visibilityFn = () => {
+      if (document.hidden) {
+        this.#stopPollTimer();
+      } else {
+        this.#poll();
+        this.#schedulePoll();
+      }
+    };
+    document.addEventListener('visibilitychange', this.#visibilityFn);
+    this.#schedulePoll();
+  }
+
+  #stopPolling() {
+    this.#stopPollTimer();
+    if (this.#visibilityFn) {
+      document.removeEventListener('visibilitychange', this.#visibilityFn);
+      this.#visibilityFn = null;
+    }
+  }
+
+  #schedulePoll() {
+    this.#stopPollTimer();
+    if (!document.hidden) {
+      this.#pollTimer = setTimeout(() => {
+        this.#poll();
+        this.#schedulePoll();
+      }, POLL_INTERVAL_MS);
+    }
+  }
+
+  #stopPollTimer() {
+    if (this.#pollTimer !== null) {
+      clearTimeout(this.#pollTimer);
+      this.#pollTimer = null;
+    }
+  }
+
+  async #poll() {
+    if (this.#polling) return;
+    this.#polling = true;
+    try {
+      DataManager.invalidateLive();
+      const [fixtures, standings, knockoutRounds] = await Promise.all([
+        DataManager.loadFixtures(),
+        DataManager.loadStandings(),
+        DataManager.loadKnockout(),
+      ]);
+      this.#fixtures        = fixtures;
+      this.#standings       = standings;
+      this.#knockoutMatches = knockoutRounds.flatMap(r => r.matches ?? []);
+
+      // Update snapshot stats in-place
+      this.#lastPollText = 'Updated just now';
+      if (this.#snapshotEl) {
+        this.#snapshotEl.outerHTML = this.#renderSnapshot();
+        this.#snapshotEl     = this.#container.querySelector('.tc-snapshot');
+        this.#pollIndicatorEl = this.#container.querySelector('.tc-poll-indicator__text');
+      }
+
+      // Settle indicator to timestamp after 3 s
+      setTimeout(() => {
+        const tz   = timezoneLabel();
+        const time = new Intl.DateTimeFormat('en-GB', {
+          timeZone: 'Europe/London',
+          hour: '2-digit', minute: '2-digit', hour12: false,
+        }).format(new Date());
+        this.#lastPollText = `Updated ${time} ${tz}`;
+        if (this.#pollIndicatorEl) this.#pollIndicatorEl.textContent = this.#lastPollText;
+      }, 3000);
+
+      // Update fixture strip
+      if (this.#stripEl) this.#stripEl.innerHTML = this.#renderFixtureStripInner();
+
+      // Update rail
+      if (this.#railEl) this.#railEl.querySelector('.tc-rail__inner').innerHTML = this.#renderRailInner();
+
+      // Dispatch to active tab module
+      if (this.#activeTab === 'groups') {
+        this.#tabModule?.update?.(this.#standings, this.#fixtures);
+      } else if (this.#activeTab === 'knockout') {
+        this.#tabModule?.update?.();
+      }
+    } catch (err) {
+      console.warn('TournamentCentre: poll failed', err);
+    } finally {
+      this.#polling = false;
+    }
   }
 }
