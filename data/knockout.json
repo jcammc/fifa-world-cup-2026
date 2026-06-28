@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-28T08:27:19.667Z",
+  "lastUpdated": "2026-06-28T19:58:37.738Z",
   "data": [
     {
       "id": "r32",
@@ -12,10 +12,10 @@
           "awayLabel": "2B",
           "homeTeamId": "south-africa",
           "awayTeamId": "canada",
-          "homeScore": null,
-          "awayScore": null,
-          "kickoff": "2026-06-28",
-          "status": "scheduled",
+          "homeScore": 0,
+          "awayScore": 0,
+          "kickoff": "2026-06-28T19:00:00Z",
+          "status": "live",
           "venue": "SoFi Stadium, Inglewood"
         },
         {
@@ -26,7 +26,7 @@
           "awayTeamId": "paraguay",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-06-29",
+          "kickoff": "2026-06-29T20:30:00Z",
           "status": "scheduled",
           "venue": "Gillette Stadium, Foxborough"
         },
@@ -38,7 +38,7 @@
           "awayTeamId": "morocco",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-06-29",
+          "kickoff": "2026-06-30T01:00:00Z",
           "status": "scheduled",
           "venue": "Estadio BBVA, Guadalupe"
         },
@@ -50,7 +50,7 @@
           "awayTeamId": "japan",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-06-29",
+          "kickoff": "2026-06-29T17:00:00Z",
           "status": "scheduled",
           "venue": "NRG Stadium, Houston"
         },
@@ -62,7 +62,7 @@
           "awayTeamId": "sweden",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-06-30",
+          "kickoff": "2026-06-30T21:00:00Z",
           "status": "scheduled",
           "venue": "MetLife Stadium, East Rutherford"
         },
@@ -74,7 +74,7 @@
           "awayTeamId": "norway",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-06-30",
+          "kickoff": "2026-06-30T17:00:00Z",
           "status": "scheduled",
           "venue": "AT&T Stadium, Arlington"
         },
@@ -86,7 +86,7 @@
           "awayTeamId": "ecuador",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-06-30",
+          "kickoff": "2026-07-01T01:00:00Z",
           "status": "scheduled",
           "venue": "Estadio Azteca, Mexico City"
         },
@@ -98,7 +98,7 @@
           "awayTeamId": "dr-congo",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-01",
+          "kickoff": "2026-07-01T16:00:00Z",
           "status": "scheduled",
           "venue": "Mercedes-Benz Stadium, Atlanta"
         },
@@ -110,7 +110,7 @@
           "awayTeamId": "bosnia-herzegovina",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-01",
+          "kickoff": "2026-07-02T00:00:00Z",
           "status": "scheduled",
           "venue": "Levi's Stadium, Santa Clara"
         },
@@ -122,7 +122,7 @@
           "awayTeamId": "senegal",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-01",
+          "kickoff": "2026-07-01T20:00:00Z",
           "status": "scheduled",
           "venue": "Lumen Field, Seattle"
         },
@@ -134,7 +134,7 @@
           "awayTeamId": "croatia",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-02",
+          "kickoff": "2026-07-02T23:00:00Z",
           "status": "scheduled",
           "venue": "BMO Field, Toronto"
         },
@@ -146,7 +146,7 @@
           "awayTeamId": "austria",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-02",
+          "kickoff": "2026-07-02T19:00:00Z",
           "status": "scheduled",
           "venue": "SoFi Stadium, Inglewood"
         },
@@ -158,7 +158,7 @@
           "awayTeamId": "algeria",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-02",
+          "kickoff": "2026-07-03T03:00:00Z",
           "status": "scheduled",
           "venue": "BC Place, Vancouver"
         },
@@ -170,7 +170,7 @@
           "awayTeamId": "cape-verde",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-03",
+          "kickoff": "2026-07-03T22:00:00Z",
           "status": "scheduled",
           "venue": "Hard Rock Stadium, Miami Gardens"
         },
@@ -182,7 +182,7 @@
           "awayTeamId": "ghana",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-03",
+          "kickoff": "2026-07-04T01:30:00Z",
           "status": "scheduled",
           "venue": "Arrowhead Stadium, Kansas City"
         },
@@ -194,7 +194,7 @@
           "awayTeamId": "egypt",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-03",
+          "kickoff": "2026-07-03T18:00:00Z",
           "status": "scheduled",
           "venue": "AT&T Stadium, Arlington"
         }

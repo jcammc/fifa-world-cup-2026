@@ -183,6 +183,10 @@ function syncKnockout(apiMatches, teamMap) {
     if (internal.status    !== newStatus) { internal.status    = newStatus; touched = true; }
     if (internal.homeScore !== newHome)   { internal.homeScore = newHome;   touched = true; }
     if (internal.awayScore !== newAway)   { internal.awayScore = newAway;   touched = true; }
+    // Write full UTC kickoff timestamp when API provides one and we only have a date-only string
+    if (m.utcDate?.includes('T') && !internal.kickoff?.includes('T')) {
+      internal.kickoff = m.utcDate; touched = true;
+    }
 
     if (touched) changed++;
   }

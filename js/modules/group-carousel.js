@@ -122,9 +122,9 @@ export class GroupCarousel {
   }
 
   #buildFixturesStrip(groupFixtures) {
-    const upcoming  = groupFixtures.filter(f => f.status === 'scheduled').slice(0, 2);
-    const completed = groupFixtures.filter(f => f.status === 'FT').slice(-2).reverse();
-    const toShow    = upcoming.length ? upcoming : completed;
+    const completed = groupFixtures.filter(f => f.status === 'FT');
+    const upcoming  = groupFixtures.filter(f => f.status !== 'FT').slice(0, 2);
+    const toShow    = completed.length ? [...completed, ...upcoming] : upcoming;
     if (!toShow.length) return '';
     return `<div class="group-card__fixtures">${toShow.map(f => this.#buildFixtureLine(f)).join('')}</div>`;
   }

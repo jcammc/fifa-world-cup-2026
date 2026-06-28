@@ -137,6 +137,10 @@ function mergeKnockout(existing, apiMatches, teamMap) {
     slot.status    = newStatus;
     slot.homeScore = newHome;
     slot.awayScore = newAway;
+    // Write full UTC kickoff timestamp when API provides one and we only have a date-only string
+    if (m.utcDate?.includes('T') && !slot.kickoff?.includes('T')) {
+      slot.kickoff = m.utcDate;
+    }
   }
 
   out.lastUpdated = new Date().toISOString();
