@@ -122,9 +122,14 @@ function mergeKnockout(existing, apiMatches, teamMap) {
     const newHome   = m.score?.fullTime?.home ?? null;
     const newAway   = m.score?.fullTime?.away ?? null;
 
-    let slot = null;
+    let slot    = null;
+    let swapped = false;
     if (homeId && awayId) {
       slot = byTeams.get(`${homeId}:${awayId}`);
+      if (!slot) {
+        slot = byTeams.get(`${awayId}:${homeId}`);
+        if (slot) swapped = true;
+      }
       if (!slot) {
         const candidates = byDate.get(m.utcDate.slice(0, 10)) ?? [];
         if (candidates.length === 1) slot = candidates[0];
@@ -132,11 +137,13 @@ function mergeKnockout(existing, apiMatches, teamMap) {
     }
     if (!slot) continue;
 
-    if (homeId) slot.homeTeamId = homeId;
-    if (awayId) slot.awayTeamId = awayId;
+    if (!swapped) {
+      if (homeId) slot.homeTeamId = homeId;
+      if (awayId) slot.awayTeamId = awayId;
+    }
     slot.status    = newStatus;
-    slot.homeScore = newHome;
-    slot.awayScore = newAway;
+    slot.homeScore = swapped ? newAway : newHome;
+    slot.awayScore = swapped ? newHome : newAway;
     // Write full UTC kickoff timestamp when API provides one and we only have a date-only string
     if (m.utcDate?.includes('T') && !slot.kickoff?.includes('T')) {
       slot.kickoff = m.utcDate;
