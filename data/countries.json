@@ -12,6 +12,7 @@
       "manager": "Javier Aguirre",
       "recentForm": [
         "W",
+        "W",
         "W"
       ],
       "teamStrength": {
@@ -123,7 +124,8 @@
       "manager": "Jesse Marsch",
       "recentForm": [
         "D",
-        "W"
+        "W",
+        "L"
       ],
       "teamStrength": {
         "attack": 74,
@@ -344,7 +346,8 @@
       "manager": "Mauricio Pochettino",
       "recentForm": [
         "W",
-        "W"
+        "W",
+        "L"
       ],
       "teamStrength": {
         "attack": 78,
@@ -397,7 +400,8 @@
       "manager": "Tony Popovic",
       "recentForm": [
         "W",
-        "L"
+        "L",
+        "D"
       ],
       "teamStrength": {
         "attack": 73,
@@ -589,9 +593,9 @@
       "groupId": "F",
       "manager": "Hajime Moriyasu",
       "recentForm": [
-        "W",
         "D",
-        "W"
+        "W",
+        "D"
       ],
       "teamStrength": {
         "attack": 78,
@@ -699,6 +703,8 @@
       "groupId": "G",
       "manager": "Hossam Hassan",
       "recentForm": [
+        "D",
+        "W",
         "D"
       ],
       "teamStrength": {
@@ -808,6 +814,8 @@
       "groupId": "H",
       "manager": "Bubista",
       "recentForm": [
+        "D",
+        "D",
         "D"
       ],
       "teamStrength": {
@@ -832,6 +840,8 @@
       "groupId": "H",
       "manager": "Georgios Donis",
       "recentForm": [
+        "D",
+        "L",
         "D"
       ],
       "teamStrength": {

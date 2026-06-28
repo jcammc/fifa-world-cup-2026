@@ -1,67 +1,421 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-21T00:00:00Z",
+  "lastUpdated": "2026-06-28T08:27:19.667Z",
   "data": [
     {
       "id": "r32",
       "label": "Round of 32",
       "matches": [
-        { "id": "r32-m1",  "homeLabel": "2A",            "awayLabel": "2B",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-06-28", "status": "scheduled", "venue": "SoFi Stadium, Inglewood" },
-        { "id": "r32-m2",  "homeLabel": "1E",            "awayLabel": "3rd A/B/C/D/F", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-06-29", "status": "scheduled", "venue": "Gillette Stadium, Foxborough" },
-        { "id": "r32-m3",  "homeLabel": "1F",            "awayLabel": "2C",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-06-29", "status": "scheduled", "venue": "Estadio BBVA, Guadalupe" },
-        { "id": "r32-m4",  "homeLabel": "1C",            "awayLabel": "2F",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-06-29", "status": "scheduled", "venue": "NRG Stadium, Houston" },
-        { "id": "r32-m5",  "homeLabel": "1I",            "awayLabel": "3rd C/D/F/G/H", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-06-30", "status": "scheduled", "venue": "MetLife Stadium, East Rutherford" },
-        { "id": "r32-m6",  "homeLabel": "2E",            "awayLabel": "2I",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-06-30", "status": "scheduled", "venue": "AT&T Stadium, Arlington" },
-        { "id": "r32-m7",  "homeLabel": "1A",            "awayLabel": "3rd C/E/F/H/I", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-06-30", "status": "scheduled", "venue": "Estadio Azteca, Mexico City" },
-        { "id": "r32-m8",  "homeLabel": "1L",            "awayLabel": "3rd E/H/I/J/K", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-01", "status": "scheduled", "venue": "Mercedes-Benz Stadium, Atlanta" },
-        { "id": "r32-m9",  "homeLabel": "1D",            "awayLabel": "3rd B/E/F/I/J", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-01", "status": "scheduled", "venue": "Levi's Stadium, Santa Clara" },
-        { "id": "r32-m10", "homeLabel": "1G",            "awayLabel": "3rd A/E/H/I/J", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-01", "status": "scheduled", "venue": "Lumen Field, Seattle" },
-        { "id": "r32-m11", "homeLabel": "2K",            "awayLabel": "2L",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-02", "status": "scheduled", "venue": "BMO Field, Toronto" },
-        { "id": "r32-m12", "homeLabel": "1H",            "awayLabel": "2J",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-02", "status": "scheduled", "venue": "SoFi Stadium, Inglewood" },
-        { "id": "r32-m13", "homeLabel": "1B",            "awayLabel": "3rd E/F/G/I/J", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-02", "status": "scheduled", "venue": "BC Place, Vancouver" },
-        { "id": "r32-m14", "homeLabel": "1J",            "awayLabel": "2H",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-03", "status": "scheduled", "venue": "Hard Rock Stadium, Miami Gardens" },
-        { "id": "r32-m15", "homeLabel": "1K",            "awayLabel": "3rd D/E/I/J/L", "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-03", "status": "scheduled", "venue": "Arrowhead Stadium, Kansas City" },
-        { "id": "r32-m16", "homeLabel": "2D",            "awayLabel": "2G",            "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-03", "status": "scheduled", "venue": "AT&T Stadium, Arlington" }
+        {
+          "id": "r32-m1",
+          "homeLabel": "2A",
+          "awayLabel": "2B",
+          "homeTeamId": "south-africa",
+          "awayTeamId": "canada",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-06-28",
+          "status": "scheduled",
+          "venue": "SoFi Stadium, Inglewood"
+        },
+        {
+          "id": "r32-m2",
+          "homeLabel": "1E",
+          "awayLabel": "3rd D",
+          "homeTeamId": "germany",
+          "awayTeamId": "paraguay",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-06-29",
+          "status": "scheduled",
+          "venue": "Gillette Stadium, Foxborough"
+        },
+        {
+          "id": "r32-m3",
+          "homeLabel": "1F",
+          "awayLabel": "2C",
+          "homeTeamId": "netherlands",
+          "awayTeamId": "morocco",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-06-29",
+          "status": "scheduled",
+          "venue": "Estadio BBVA, Guadalupe"
+        },
+        {
+          "id": "r32-m4",
+          "homeLabel": "1C",
+          "awayLabel": "2F",
+          "homeTeamId": "brazil",
+          "awayTeamId": "japan",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-06-29",
+          "status": "scheduled",
+          "venue": "NRG Stadium, Houston"
+        },
+        {
+          "id": "r32-m5",
+          "homeLabel": "1I",
+          "awayLabel": "3rd F",
+          "homeTeamId": "france",
+          "awayTeamId": "sweden",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-06-30",
+          "status": "scheduled",
+          "venue": "MetLife Stadium, East Rutherford"
+        },
+        {
+          "id": "r32-m6",
+          "homeLabel": "2E",
+          "awayLabel": "2I",
+          "homeTeamId": "ivory-coast",
+          "awayTeamId": "norway",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-06-30",
+          "status": "scheduled",
+          "venue": "AT&T Stadium, Arlington"
+        },
+        {
+          "id": "r32-m7",
+          "homeLabel": "1A",
+          "awayLabel": "3rd E",
+          "homeTeamId": "mexico",
+          "awayTeamId": "ecuador",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-06-30",
+          "status": "scheduled",
+          "venue": "Estadio Azteca, Mexico City"
+        },
+        {
+          "id": "r32-m8",
+          "homeLabel": "1L",
+          "awayLabel": "3rd K",
+          "homeTeamId": "england",
+          "awayTeamId": "dr-congo",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-01",
+          "status": "scheduled",
+          "venue": "Mercedes-Benz Stadium, Atlanta"
+        },
+        {
+          "id": "r32-m9",
+          "homeLabel": "1D",
+          "awayLabel": "3rd B",
+          "homeTeamId": "usa",
+          "awayTeamId": "bosnia-herzegovina",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-01",
+          "status": "scheduled",
+          "venue": "Levi's Stadium, Santa Clara"
+        },
+        {
+          "id": "r32-m10",
+          "homeLabel": "1G",
+          "awayLabel": "3rd I",
+          "homeTeamId": "belgium",
+          "awayTeamId": "senegal",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-01",
+          "status": "scheduled",
+          "venue": "Lumen Field, Seattle"
+        },
+        {
+          "id": "r32-m11",
+          "homeLabel": "2K",
+          "awayLabel": "2L",
+          "homeTeamId": "portugal",
+          "awayTeamId": "croatia",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-02",
+          "status": "scheduled",
+          "venue": "BMO Field, Toronto"
+        },
+        {
+          "id": "r32-m12",
+          "homeLabel": "1H",
+          "awayLabel": "2J",
+          "homeTeamId": "spain",
+          "awayTeamId": "austria",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-02",
+          "status": "scheduled",
+          "venue": "SoFi Stadium, Inglewood"
+        },
+        {
+          "id": "r32-m13",
+          "homeLabel": "1B",
+          "awayLabel": "3rd J",
+          "homeTeamId": "switzerland",
+          "awayTeamId": "algeria",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-02",
+          "status": "scheduled",
+          "venue": "BC Place, Vancouver"
+        },
+        {
+          "id": "r32-m14",
+          "homeLabel": "1J",
+          "awayLabel": "2H",
+          "homeTeamId": "argentina",
+          "awayTeamId": "cape-verde",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-03",
+          "status": "scheduled",
+          "venue": "Hard Rock Stadium, Miami Gardens"
+        },
+        {
+          "id": "r32-m15",
+          "homeLabel": "1K",
+          "awayLabel": "3rd L",
+          "homeTeamId": "colombia",
+          "awayTeamId": "ghana",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-03",
+          "status": "scheduled",
+          "venue": "Arrowhead Stadium, Kansas City"
+        },
+        {
+          "id": "r32-m16",
+          "homeLabel": "2D",
+          "awayLabel": "2G",
+          "homeTeamId": "australia",
+          "awayTeamId": "egypt",
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-03",
+          "status": "scheduled",
+          "venue": "AT&T Stadium, Arlington"
+        }
       ]
     },
     {
       "id": "r16",
       "label": "Round of 16",
       "matches": [
-        { "id": "r16-m1", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-04", "status": "scheduled", "venue": "Lincoln Financial Field, Philadelphia" },
-        { "id": "r16-m2", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-04", "status": "scheduled", "venue": "NRG Stadium, Houston" },
-        { "id": "r16-m3", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-05", "status": "scheduled", "venue": "MetLife Stadium, East Rutherford" },
-        { "id": "r16-m4", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-05", "status": "scheduled", "venue": "Estadio Azteca, Mexico City" },
-        { "id": "r16-m5", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-06", "status": "scheduled", "venue": "AT&T Stadium, Arlington" },
-        { "id": "r16-m6", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-06", "status": "scheduled", "venue": "Lumen Field, Seattle" },
-        { "id": "r16-m7", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-07", "status": "scheduled", "venue": "Mercedes-Benz Stadium, Atlanta" },
-        { "id": "r16-m8", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-07", "status": "scheduled", "venue": "BC Place, Vancouver" }
+        {
+          "id": "r16-m1",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-04",
+          "status": "scheduled",
+          "venue": "Lincoln Financial Field, Philadelphia"
+        },
+        {
+          "id": "r16-m2",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-04",
+          "status": "scheduled",
+          "venue": "NRG Stadium, Houston"
+        },
+        {
+          "id": "r16-m3",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-05",
+          "status": "scheduled",
+          "venue": "MetLife Stadium, East Rutherford"
+        },
+        {
+          "id": "r16-m4",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-05",
+          "status": "scheduled",
+          "venue": "Estadio Azteca, Mexico City"
+        },
+        {
+          "id": "r16-m5",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-06",
+          "status": "scheduled",
+          "venue": "AT&T Stadium, Arlington"
+        },
+        {
+          "id": "r16-m6",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-06",
+          "status": "scheduled",
+          "venue": "Lumen Field, Seattle"
+        },
+        {
+          "id": "r16-m7",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-07",
+          "status": "scheduled",
+          "venue": "Mercedes-Benz Stadium, Atlanta"
+        },
+        {
+          "id": "r16-m8",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-07",
+          "status": "scheduled",
+          "venue": "BC Place, Vancouver"
+        }
       ]
     },
     {
       "id": "qf",
       "label": "Quarter-finals",
       "matches": [
-        { "id": "qf-m1", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-09", "status": "scheduled", "venue": "Gillette Stadium, Foxborough" },
-        { "id": "qf-m2", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-10", "status": "scheduled", "venue": "SoFi Stadium, Inglewood" },
-        { "id": "qf-m3", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-11", "status": "scheduled", "venue": "Hard Rock Stadium, Miami Gardens" },
-        { "id": "qf-m4", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-11", "status": "scheduled", "venue": "Arrowhead Stadium, Kansas City" }
+        {
+          "id": "qf-m1",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-09",
+          "status": "scheduled",
+          "venue": "Gillette Stadium, Foxborough"
+        },
+        {
+          "id": "qf-m2",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-10",
+          "status": "scheduled",
+          "venue": "SoFi Stadium, Inglewood"
+        },
+        {
+          "id": "qf-m3",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-11",
+          "status": "scheduled",
+          "venue": "Hard Rock Stadium, Miami Gardens"
+        },
+        {
+          "id": "qf-m4",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-11",
+          "status": "scheduled",
+          "venue": "Arrowhead Stadium, Kansas City"
+        }
       ]
     },
     {
       "id": "sf",
       "label": "Semi-finals",
       "matches": [
-        { "id": "sf-m1", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-14", "status": "scheduled", "venue": "AT&T Stadium, Arlington" },
-        { "id": "sf-m2", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-15", "status": "scheduled", "venue": "Mercedes-Benz Stadium, Atlanta" }
+        {
+          "id": "sf-m1",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-14",
+          "status": "scheduled",
+          "venue": "AT&T Stadium, Arlington"
+        },
+        {
+          "id": "sf-m2",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-15",
+          "status": "scheduled",
+          "venue": "Mercedes-Benz Stadium, Atlanta"
+        }
       ]
     },
     {
       "id": "final",
       "label": "Final",
       "matches": [
-        { "id": "3rd-place", "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-18", "status": "scheduled", "venue": "Hard Rock Stadium, Miami Gardens", "matchLabel": "3rd Place" },
-        { "id": "final-m1",  "homeLabel": null, "awayLabel": null, "homeTeamId": null, "awayTeamId": null, "homeScore": null, "awayScore": null, "kickoff": "2026-07-19", "status": "scheduled", "venue": "MetLife Stadium, East Rutherford", "matchLabel": "Final" }
+        {
+          "id": "3rd-place",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-18",
+          "status": "scheduled",
+          "venue": "Hard Rock Stadium, Miami Gardens",
+          "matchLabel": "3rd Place"
+        },
+        {
+          "id": "final-m1",
+          "homeLabel": null,
+          "awayLabel": null,
+          "homeTeamId": null,
+          "awayTeamId": null,
+          "homeScore": null,
+          "awayScore": null,
+          "kickoff": "2026-07-19",
+          "status": "scheduled",
+          "venue": "MetLife Stadium, East Rutherford",
+          "matchLabel": "Final"
+        }
       ]
     }
   ]

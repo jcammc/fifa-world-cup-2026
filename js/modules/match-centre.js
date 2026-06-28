@@ -2,7 +2,7 @@ import { DataManager } from '../data.js';
 import { formatKickoff } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { Charts } from '../charts.js';
-import { getMatchImplication } from '../tournament-state.js';
+import { getMatchImplication, deriveRecentForm } from '../tournament-state.js';
 
 const BROADCASTERS = {
   BBC: { href: 'https://www.bbc.co.uk/iplayer/live/bbcone', mod: 'bbc' },
@@ -64,9 +64,15 @@ export class MatchCentre {
     const homeCaptain = homePlayers.find(p => p.captain) ?? null;
     const awayCaptain = awayPlayers.find(p => p.captain) ?? null;
 
+    // Merge group + knockout completed matches for form derivation
+    const allFixtures = [
+      ...fixtures,
+      ...knockoutRounds.flatMap(r => r.matches ?? []),
+    ];
+
     this.#container.innerHTML = this.#buildPage(
       fixture, home, away, isKnockout, roundLabel, groupStandings, countryMap,
-      homeCaptain, awayCaptain, playerPhotos
+      homeCaptain, awayCaptain, playerPhotos, allFixtures, standings
     );
 
     // Radar charts require real DOM elements — render after innerHTML
@@ -83,7 +89,7 @@ export class MatchCentre {
   // ─── Page template ────────────────────────────────────────
 
   #buildPage(fixture, home, away, isKnockout, roundLabel, groupStandings, countryMap,
-             homeCaptain, awayCaptain, playerPhotos) {
+             homeCaptain, awayCaptain, playerPhotos, allFixtures = [], allStandings = []) {
     const isLive   = fixture.status === 'live';
     const isFT     = fixture.status === 'FT';
     const hasScore = isLive || isFT;
@@ -122,9 +128,9 @@ export class MatchCentre {
 
     // V2 enrichment sections — only for confirmed teams
     const showEnrichment = !!(homeId && awayId);
-    const formHtml    = showEnrichment ? this.#buildFormRow(home, away) : '';
+    const formHtml    = showEnrichment ? this.#buildFormRow(home, away, allFixtures) : '';
     const stakeHtml   = (showEnrichment && groupStandings && !isFT)
-      ? this.#buildStakeRow(home, away, groupStandings) : '';
+      ? this.#buildStakeRow(home, away, groupStandings, allStandings) : '';
     const radarHtml   = showEnrichment ? this.#buildRadarSection(home, away) : '';
     const managerHtml = showEnrichment ? this.#buildManagerRow(home, away) : '';
     const captainHtml = (showEnrichment && (homeCaptain || awayCaptain))
@@ -163,10 +169,10 @@ export class MatchCentre {
 
   // ─── Form strips ──────────────────────────────────────────
 
-  #buildFormRow(home, away) {
-    const homeForm = home?.recentForm;
-    const awayForm = away?.recentForm;
-    if (!homeForm?.length && !awayForm?.length) return '';
+  #buildFormRow(home, away, allFixtures = []) {
+    const homeForm = deriveRecentForm(home?.id, allFixtures);
+    const awayForm = deriveRecentForm(away?.id, allFixtures);
+    if (!homeForm.length && !awayForm.length) return '';
 
     return `
       <div class="mc-section">
@@ -190,9 +196,9 @@ export class MatchCentre {
 
   // ─── What's at stake ──────────────────────────────────────
 
-  #buildStakeRow(home, away, groupStandings) {
-    const homeImpl = getMatchImplication(home, groupStandings);
-    const awayImpl = getMatchImplication(away, groupStandings);
+  #buildStakeRow(home, away, groupStandings, allStandings = []) {
+    const homeImpl = getMatchImplication(home, groupStandings, allStandings);
+    const awayImpl = getMatchImplication(away, groupStandings, allStandings);
     if (!homeImpl && !awayImpl) return '';
 
     const homeEntry = groupStandings.teams.find(t => t.teamId === home?.id) ?? null;
@@ -306,19 +312,19 @@ export class MatchCentre {
       <div class="mc-section">
         <h2 class="mc-section__title">Managers</h2>
         <div class="mc-manager-row">
-          ${this.#managerCard(home)}
-          ${this.#managerCard(away)}
+          ${this.#managerCard(home, true)}
+          ${this.#managerCard(away, false)}
         </div>
       </div>`;
   }
 
-  #managerCard(country) {
+  #managerCard(country, isHome = false) {
     if (!country?.manager) {
       return `<div class="mc-manager mc-manager--empty"><span class="mc-manager__name">—</span></div>`;
     }
     const metaParts = [country.managerNationality, country.managerTenure].filter(Boolean);
     return `
-      <div class="mc-manager">
+      <div class="mc-manager${isHome ? ' mc-manager--home' : ''}">
         <span class="mc-manager__name">${escapeHtml(country.manager)}</span>
         ${metaParts.length
           ? `<span class="mc-manager__meta">${escapeHtml(metaParts.join(' · '))}</span>`

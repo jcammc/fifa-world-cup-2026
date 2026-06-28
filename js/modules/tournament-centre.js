@@ -3,6 +3,7 @@ import { formatKickoff, isToday, timezoneLabel } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { GroupCarousel } from './group-carousel.js';
 import { KnockoutBracket } from './knockout-bracket.js';
+import { deriveQualificationStatus } from '../tournament-state.js';
 
 const POLL_INTERVAL_MS = 50_000;
 
@@ -134,8 +135,9 @@ export class TournamentCentre {
     const remaining      = total ? total - played : '—';
 
     const allTeams   = this.#standings.flatMap(g => g.teams);
-    const qualified  = allTeams.filter(t => t.qualificationStatus === 'qualified').length  || '—';
-    const eliminated = allTeams.filter(t => t.qualificationStatus === 'eliminated').length || '—';
+    const effectiveQs = t => t.qualificationStatus ?? deriveQualificationStatus(t, this.#standings);
+    const qualified  = allTeams.filter(t => effectiveQs(t) === 'qualified').length  || '—';
+    const eliminated = allTeams.filter(t => effectiveQs(t) === 'eliminated').length || '—';
 
     const pollText = this.#lastPollText || 'Live';
 

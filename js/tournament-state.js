@@ -3,6 +3,56 @@
  * No DOM, no fetching, no side effects.
  */
 
+// ─── Live-derived form + status ────────────────────────────
+
+/**
+ * Derives last-N results for a team from the live fixtures array.
+ * Replaces the static recentForm field in countries.json — updates automatically
+ * as the polling cycle fetches new match data.
+ */
+export function deriveRecentForm(teamId, fixtures, maxResults = 5) {
+  if (!teamId || !fixtures?.length) return [];
+  const completed = fixtures
+    .filter(f => f.status === 'FT' && (f.homeTeamId === teamId || f.awayTeamId === teamId))
+    .sort((a, b) => new Date(a.kickoff) - new Date(b.kickoff));
+  return completed.slice(-maxResults).map(f => {
+    const isHome  = f.homeTeamId === teamId;
+    const scored  = isHome ? f.homeScore : f.awayScore;
+    const conceded = isHome ? f.awayScore : f.homeScore;
+    return scored > conceded ? 'W' : scored < conceded ? 'L' : 'D';
+  });
+}
+
+/**
+ * Derives qualificationStatus from standings without reading the stored field.
+ * Used as a fallback when qualificationStatus is null in the live data.
+ * Returns 'qualified' | 'eliminated' | null.
+ */
+export function deriveQualificationStatus(entry, allGroupStandings) {
+  if (!entry || !allGroupStandings?.length) return null;
+
+  if (entry.played >= 3) {
+    if (entry.position <= 2) return 'qualified';
+    if (entry.position === 4) return 'eliminated';
+    // Position 3: qualified only if in top 8 advancing thirds
+    const thirds = rankBestThirds(allGroupStandings);
+    const advancing = thirds.slice(0, 8).map(t => t.teamId);
+    if (advancing.includes(entry.teamId)) return 'qualified';
+    const allGroupsDone = allGroupStandings.every(g => g.teams.every(t => t.played >= 3));
+    return allGroupsDone ? 'eliminated' : null;
+  }
+
+  // During group stage — early certainty only
+  const group   = allGroupStandings.find(g => g.teams.some(t => t.teamId === entry.teamId));
+  if (!group) return null;
+  const others    = group.teams.filter(t => t.teamId !== entry.teamId);
+  const gamesLeft = 3 - entry.played;
+  const maxPts    = entry.points + gamesLeft * 3;
+  if (others.filter(t => t.points > maxPts).length >= 2) return 'eliminated';
+  if (entry.points >= 6 && others.filter(t => t.points + (3 - t.played) * 3 >= entry.points).length <= 1) return 'qualified';
+  return null;
+}
+
 // ─── Best-third ranking ────────────────────────────────────
 
 /**
@@ -91,8 +141,9 @@ export function buildBracketProjection(standings, annexCData) {
     for (const team of group.teams) {
       if (team.position !== 1 && team.position !== 2) continue;
       const label      = `${team.position === 1 ? 'Winner' : 'Runner-up'} Group ${gid}`;
+      const qs         = team.qualificationStatus ?? deriveQualificationStatus(team, standings);
       const confidence = complete ? 'confirmed'
-        : team.qualificationStatus === 'qualified' ? 'likely'
+        : qs === 'qualified' ? 'likely'
         : 'open';
       map.set(label, { teamId: team.teamId, confidence });
     }
@@ -130,13 +181,15 @@ export function buildBracketProjection(standings, annexCData) {
  *
  * status: 'qualified' | 'eliminated' | 'leading' | 'contention' | 'danger'
  */
-export function getMatchImplication(team, groupStandings) {
+export function getMatchImplication(team, groupStandings, allGroupStandings = null) {
   if (!groupStandings || !team) return null;
   const t = groupStandings.teams.find(t => t.teamId === team.id);
   if (!t) return null;
 
-  if (t.qualificationStatus === 'qualified')  return { status: 'qualified',  text: 'Already qualified' };
-  if (t.qualificationStatus === 'eliminated') return { status: 'eliminated', text: 'Already eliminated' };
+  const ctx = allGroupStandings ?? [groupStandings];
+  const qs  = t.qualificationStatus ?? deriveQualificationStatus(t, ctx);
+  if (qs === 'qualified')  return { status: 'qualified',  text: 'Already qualified' };
+  if (qs === 'eliminated') return { status: 'eliminated', text: 'Already eliminated' };
 
   const pos2 = groupStandings.teams.find(tt => tt.position === 2);
   const pos3 = groupStandings.teams.find(tt => tt.position === 3);
