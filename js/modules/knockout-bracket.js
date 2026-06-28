@@ -70,26 +70,32 @@ export class KnockoutBracket {
   // ─── Round column ─────────────────────────────────────────
 
   #buildRound(round) {
-    // Wrap pairs of matches so CSS connector lines can link them visually.
-    // Single-match rounds (Final) skip pairing.
+    // When every match in the round has both teams confirmed, collapse the
+    // per-slot ✓ ticks into a single footer banner for a cleaner view.
+    const allTeamsSet = round.matches.length > 0 &&
+      round.matches.every(m => m.homeTeamId && m.awayTeamId);
+
     const isSingle = round.matches.length === 1;
     let matchesHtml;
 
     if (isSingle) {
-      matchesHtml = round.matches.map(m => this.#buildMatch(m)).join('');
+      matchesHtml = round.matches.map(m => this.#buildMatch(m, allTeamsSet)).join('');
     } else {
       const pairs = [];
       for (let i = 0; i < round.matches.length; i += 2) {
         const a = round.matches[i];
         const b = round.matches[i + 1];
         pairs.push(b
-          ? `<div class="bracket-pair">${this.#buildMatch(a)}${this.#buildMatch(b)}</div>`
-          : this.#buildMatch(a));
+          ? `<div class="bracket-pair">${this.#buildMatch(a, allTeamsSet)}${this.#buildMatch(b, allTeamsSet)}</div>`
+          : this.#buildMatch(a, allTeamsSet));
       }
       matchesHtml = pairs.join('');
     }
 
     const dateRange = this.#roundDateRange(round.matches);
+    const confirmedBanner = allTeamsSet
+      ? `<p class="bracket-round__confirmed">&#10003; All ${escapeHtml(round.label)} teams confirmed</p>`
+      : '';
 
     return `
       <div class="bracket-round" data-round="${escapeHtml(round.id)}">
@@ -98,6 +104,7 @@ export class KnockoutBracket {
           ${dateRange ? `<span class="bracket-round__dates">${escapeHtml(dateRange)}</span>` : ''}
         </div>
         <div class="bracket-round__matches">${matchesHtml}</div>
+        ${confirmedBanner}
       </div>`;
   }
 
@@ -130,7 +137,7 @@ export class KnockoutBracket {
 
   // ─── Match card ───────────────────────────────────────────
 
-  #buildMatch(match) {
+  #buildMatch(match, hideUnplayedTick = false) {
     const matchLabelHtml = match.matchLabel
       ? `<div class="bracket-match__label">${escapeHtml(match.matchLabel)}</div>`
       : '';
@@ -142,14 +149,14 @@ export class KnockoutBracket {
     return `
       <a href="#match/${escapeHtml(match.id)}" class="bracket-match" data-match="${escapeHtml(match.id)}">
         ${matchLabelHtml}
-        ${this.#buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj)}
+        ${this.#buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj, hideUnplayedTick)}
         <div class="bracket-divider"></div>
-        ${this.#buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj)}
+        ${this.#buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj, hideUnplayedTick)}
         ${meta}
       </a>`;
   }
 
-  #buildTeamSlot(teamId, label, score, projection = null) {
+  #buildTeamSlot(teamId, label, score, projection = null, hideUnplayedTick = false) {
     // Confirmed — real team locked into this bracket slot
     if (teamId) {
       const country   = this.#countryMap.get(teamId);
@@ -160,7 +167,9 @@ export class KnockoutBracket {
       const hasScore  = score !== null && score !== undefined;
       const scoreHtml = hasScore
         ? `<span class="bracket-team__score">${score}</span>`
-        : `<span class="bracket-team__score bracket-team__score--confirmed">&#10003;</span>`;
+        : hideUnplayedTick
+          ? ''
+          : `<span class="bracket-team__score bracket-team__score--confirmed">&#10003;</span>`;
       return `
         <div class="bracket-team bracket-team--confirmed">
           ${flagHtml}
@@ -204,7 +213,7 @@ export class KnockoutBracket {
       return `<div class="bracket-match__meta"><span class="badge badge--ft">FT</span></div>`;
     }
     if (match.status === 'live') {
-      return `<div class="bracket-match__meta"><span class="badge badge--live">&#128308; LIVE</span></div>`;
+      return `<div class="bracket-match__meta"><span class="badge badge--live"><span class="live-dot live-dot--sm" aria-hidden="true"></span> LIVE</span></div>`;
     }
     if (match.kickoff) {
       return `<div class="bracket-match__meta">${escapeHtml(formatKickoff(match.kickoff))}</div>`;

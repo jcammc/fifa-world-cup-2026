@@ -26,6 +26,9 @@ export class TournamentCentre {
   #railEl          = null;
   #pollIndicatorEl = null;
 
+  // Stat detail panel
+  #activeStatPanel = null; // 'qualified' | 'eliminated' | 'played' | 'remaining' | null
+
   // Polling
   #pollTimer       = null;
   #visibilityFn    = null;
@@ -75,6 +78,7 @@ export class TournamentCentre {
     this.#stripEl        = this.#container.querySelector('.tc-fixture-strip-wrap');
     this.#railEl         = this.#container.querySelector('.tc-rail');
     this.#pollIndicatorEl = this.#container.querySelector('.tc-poll-indicator__text');
+    this.#bindSnapshotClicks();
 
     const validTabs = ['groups', 'knockout'];
     const initialTab = validTabs.includes(this.#params.initialTab)
@@ -140,34 +144,193 @@ export class TournamentCentre {
     const eliminated = allTeams.filter(t => effectiveQs(t) === 'eliminated').length || '—';
 
     const pollText = this.#lastPollText || 'Live';
+    const ap = this.#activeStatPanel;
+    const statCls = p => `tc-stat tc-stat--clickable${ap === p ? ' tc-stat--active' : ''}`;
 
     return `
       <section class="tc-snapshot">
         <h1 class="tc-title">World Cup 2026</h1>
         <p class="tc-subtitle">48 teams &middot; 12 groups &middot; 104 matches</p>
         <div class="tc-snapshot__stats">
-          <div class="tc-stat">
+          <div class="${statCls('qualified')}" data-panel="qualified" role="button" tabindex="0" aria-expanded="${ap === 'qualified'}">
             <span class="tc-stat__value">${qualified}</span>
             <span class="tc-stat__label">Qualified</span>
           </div>
-          <div class="tc-stat">
+          <div class="${statCls('eliminated')}" data-panel="eliminated" role="button" tabindex="0" aria-expanded="${ap === 'eliminated'}">
             <span class="tc-stat__value">${eliminated}</span>
             <span class="tc-stat__label">Eliminated</span>
           </div>
-          <div class="tc-stat">
+          <div class="${statCls('played')}" data-panel="played" role="button" tabindex="0" aria-expanded="${ap === 'played'}">
             <span class="tc-stat__value">${played}</span>
             <span class="tc-stat__label">Played</span>
           </div>
-          <div class="tc-stat">
+          <div class="${statCls('remaining')}" data-panel="remaining" role="button" tabindex="0" aria-expanded="${ap === 'remaining'}">
             <span class="tc-stat__value">${remaining}</span>
             <span class="tc-stat__label">Remaining</span>
           </div>
         </div>
+        ${ap ? this.#buildStatPanel(ap) : ''}
         <div class="tc-poll-indicator" aria-live="polite">
           <span class="tc-poll-indicator__dot" aria-hidden="true">&#9679;</span>
           <span class="tc-poll-indicator__text">${escapeHtml(pollText)}</span>
         </div>
       </section>`;
+  }
+
+  // ─── Snapshot click binding ───────────────────────────────
+
+  #bindSnapshotClicks() {
+    this.#snapshotEl?.querySelectorAll('.tc-stat--clickable').forEach(el => {
+      const toggle = () => {
+        const panel = el.dataset.panel;
+        this.#activeStatPanel = (this.#activeStatPanel === panel) ? null : panel;
+        this.#snapshotEl.outerHTML = this.#renderSnapshot();
+        this.#snapshotEl      = this.#container.querySelector('.tc-snapshot');
+        this.#pollIndicatorEl = this.#container.querySelector('.tc-poll-indicator__text');
+        this.#bindSnapshotClicks();
+      };
+      el.addEventListener('click', toggle);
+      el.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    });
+  }
+
+  // ─── Stat detail panel ────────────────────────────────────
+
+  #buildStatPanel(type) {
+    const allTeams  = this.#standings.flatMap(g => g.teams.map(t => ({ ...t, groupId: g.groupId })));
+    const effectiveQs = t => t.qualificationStatus ?? deriveQualificationStatus(t, this.#standings);
+
+    if (type === 'qualified') {
+      const teams = allTeams
+        .filter(t => effectiveQs(t) === 'qualified')
+        .sort((a, b) => a.groupId.localeCompare(b.groupId) || a.position - b.position);
+
+      const rows = teams.map(t => {
+        const c    = this.#countryMap.get(t.teamId);
+        const name = escapeHtml(c?.name ?? t.teamId);
+        const id   = escapeHtml(t.teamId);
+        return `
+          <div class="tc-stat-panel__team">
+            <img src="assets/flags/${id}.svg" alt="" width="16" height="11"
+                 class="tc-stat-panel__flag" aria-hidden="true"
+                 onerror="this.style.display='none'">
+            <span class="tc-stat-panel__team-name">${name}</span>
+            <span class="tc-stat-panel__group">Grp ${escapeHtml(t.groupId)}</span>
+          </div>`;
+      }).join('');
+
+      return `
+        <div class="tc-stat-panel">
+          <p class="tc-stat-panel__title">Qualified — Advanced from Group Stage</p>
+          <div class="tc-stat-panel__grid">${rows || '<p class="tc-stat-panel__empty">None yet</p>'}</div>
+        </div>`;
+    }
+
+    if (type === 'eliminated') {
+      const teams = allTeams
+        .filter(t => effectiveQs(t) === 'eliminated')
+        .sort((a, b) => a.groupId.localeCompare(b.groupId) || a.position - b.position);
+
+      const rows = teams.map(t => {
+        const c    = this.#countryMap.get(t.teamId);
+        const name = escapeHtml(c?.name ?? t.teamId);
+        const id   = escapeHtml(t.teamId);
+        return `
+          <div class="tc-stat-panel__row">
+            <span class="tc-stat-panel__row-left">
+              <img src="assets/flags/${id}.svg" alt="" width="16" height="11"
+                   class="tc-stat-panel__flag" aria-hidden="true"
+                   onerror="this.style.display='none'">
+              ${name} <span class="tc-stat-panel__group">Grp&nbsp;${escapeHtml(t.groupId)}</span>
+            </span>
+            <span class="tc-stat-panel__record">${t.won}W ${t.drawn}D ${t.lost}L &middot; ${t.points}pts</span>
+          </div>`;
+      }).join('');
+
+      return `
+        <div class="tc-stat-panel">
+          <p class="tc-stat-panel__title">Eliminated — Group Stage</p>
+          <div class="tc-stat-panel__list">${rows || '<p class="tc-stat-panel__empty">None yet</p>'}</div>
+        </div>`;
+    }
+
+    if (type === 'played') {
+      const groupFT    = this.#fixtures.filter(f => f.status === 'FT').length;
+      const groupTotal = this.#fixtures.length;
+
+      const KO_ORDER  = ['r32', 'r16', 'qf', 'sf', 'final'];
+      const KO_LABELS = {
+        r32: 'Round of 32', r16: 'Round of 16',
+        qf: 'Quarter-finals', sf: 'Semi-finals', final: 'Final',
+      };
+      const koRounds = new Map();
+      for (const m of this.#knockoutMatches) {
+        const rid = m.id?.split('-')[0] ?? 'other';
+        if (!koRounds.has(rid)) koRounds.set(rid, { ft: 0, total: 0 });
+        const r = koRounds.get(rid);
+        r.total++;
+        if (m.status === 'FT') r.ft++;
+      }
+
+      const koRows = KO_ORDER
+        .filter(rid => koRounds.has(rid))
+        .map(rid => {
+          const r = koRounds.get(rid);
+          return `
+            <div class="tc-stat-panel__row">
+              <span>${KO_LABELS[rid] ?? rid}</span>
+              <span class="tc-stat-panel__row-right">${r.ft} / ${r.total}</span>
+            </div>`;
+        }).join('');
+
+      return `
+        <div class="tc-stat-panel">
+          <p class="tc-stat-panel__title">Matches Played</p>
+          <div class="tc-stat-panel__list">
+            <div class="tc-stat-panel__row">
+              <span>Group Stage</span>
+              <span class="tc-stat-panel__row-right">${groupFT} / ${groupTotal}</span>
+            </div>
+            ${koRows}
+          </div>
+        </div>`;
+    }
+
+    if (type === 'remaining') {
+      const upcoming = [
+        ...this.#fixtures.filter(f => f.status === 'scheduled' && f.kickoff),
+        ...this.#knockoutMatches.filter(m => m.status === 'scheduled' && m.kickoff),
+      ]
+        .sort((a, b) => new Date(a.kickoff) - new Date(b.kickoff))
+        .slice(0, 10);
+
+      if (!upcoming.length) {
+        return `<div class="tc-stat-panel"><p class="tc-stat-panel__empty">No upcoming matches</p></div>`;
+      }
+
+      const rows = upcoming.map(f => {
+        const home     = this.#countryMap.get(f.homeTeamId);
+        const away     = this.#countryMap.get(f.awayTeamId);
+        const homeName = escapeHtml(home?.name ?? f.homeLabel ?? f.homeTeamId ?? 'TBD');
+        const awayName = escapeHtml(away?.name ?? f.awayLabel ?? f.awayTeamId ?? 'TBD');
+        const kickoff  = escapeHtml(formatKickoff(f.kickoff));
+        return `
+          <div class="tc-stat-panel__row">
+            <span class="tc-stat-panel__row-left">${homeName} v ${awayName}</span>
+            <span class="tc-stat-panel__row-right">${kickoff}</span>
+          </div>`;
+      }).join('');
+
+      return `
+        <div class="tc-stat-panel">
+          <p class="tc-stat-panel__title">Upcoming Matches</p>
+          <div class="tc-stat-panel__list">${rows}</div>
+        </div>`;
+    }
+
+    return '';
   }
 
   // ─── Mobile fixture strip ──────────────────────────────────
@@ -201,7 +364,7 @@ export class TournamentCentre {
       : `<span class="tc-strip-card__vs">v</span>`;
 
     const secondaryHtml = hasScore
-      ? `<span class="tc-strip-card__badge${isLive ? ' tc-strip-card__badge--live' : ''}">${isLive ? 'LIVE' : 'FT'}</span>`
+      ? `<span class="tc-strip-card__badge${isLive ? ' tc-strip-card__badge--live' : ''}">${isLive ? '<span class="live-dot live-dot--sm" aria-hidden="true"></span> LIVE' : 'FT'}</span>`
       : `<span class="tc-strip-card__time">${escapeHtml(formatKickoff(f.kickoff))}</span>`;
 
     const broadcasterHtml = this.#broadcasterHtml(f.broadcaster, 'tc-strip-card__broadcaster');
@@ -239,8 +402,8 @@ export class TournamentCentre {
     const sections = [
       live.length          ? this.#railSection('Live', live, true) : '',
       todayUpcoming.length ? this.#railSection('Today', todayUpcoming) : '',
-      recentFT.length      ? this.#railSection('Recent', recentFT) : '',
       nextScheduled.length ? this.#railSection('Coming Up', nextScheduled) : '',
+      recentFT.length      ? this.#railSection('Recent', recentFT) : '',
     ].join('');
 
     return sections || `<p class="tc-rail__empty">No fixtures available</p>`;
@@ -248,10 +411,13 @@ export class TournamentCentre {
 
   #railSection(label, fixtures, isLive = false) {
     const labelClass = isLive ? 'tc-rail__label tc-rail__label--live' : 'tc-rail__label';
+    const labelHtml  = isLive
+      ? `<span class="live-dot" aria-hidden="true"></span>${escapeHtml(label)}`
+      : escapeHtml(label);
     const cards = fixtures.map(f => this.#railCard(f)).join('');
     return `
       <div class="tc-rail__section">
-        <p class="${labelClass}">${escapeHtml(label)}</p>
+        <p class="${labelClass}">${labelHtml}</p>
         ${cards}
       </div>`;
   }
@@ -270,7 +436,9 @@ export class TournamentCentre {
       : `${homeName} v ${awayName}`;
 
     const stagePart  = f.groupId ? `Group ${escapeHtml(f.groupId)}` : '';
-    const statusPart = isFT ? 'FT' : isLive ? `${f.minute ?? 'LIVE'}'` : escapeHtml(formatKickoff(f.kickoff));
+    const statusPart = isFT ? 'FT'
+      : isLive ? (f.minute != null ? `${f.minute}'` : '<span class="live-dot live-dot--sm" aria-hidden="true"></span> LIVE')
+      : escapeHtml(formatKickoff(f.kickoff));
     const metaParts  = [stagePart, statusPart].filter(Boolean);
 
     const venueHtml       = (!hasScore && f.venue)
@@ -377,8 +545,9 @@ export class TournamentCentre {
       this.#lastPollText = 'Updated just now';
       if (this.#snapshotEl) {
         this.#snapshotEl.outerHTML = this.#renderSnapshot();
-        this.#snapshotEl     = this.#container.querySelector('.tc-snapshot');
+        this.#snapshotEl      = this.#container.querySelector('.tc-snapshot');
         this.#pollIndicatorEl = this.#container.querySelector('.tc-poll-indicator__text');
+        this.#bindSnapshotClicks();
       }
 
       // Settle indicator to timestamp after 3 s

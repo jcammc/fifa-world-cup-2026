@@ -66,8 +66,29 @@
 }
 
 .badge--live {
-  background: rgba(248, 113, 113, 0.15);
-  color: var(--color-danger);
+  background: rgba(74, 222, 128, 0.15);
+  color: var(--color-success);
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.75); }
+}
+
+.live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-success);
+  animation: live-pulse 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.live-dot--sm {
+  width: 5px;
+  height: 5px;
 }
 
 .badge--ft {
