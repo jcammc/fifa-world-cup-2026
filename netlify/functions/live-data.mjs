@@ -20,15 +20,21 @@ export default async function (req) {
   }
 
   try {
-    const store = getStore({ name: 'tournament', consistency: 'strong' });
+    const store = getStore({ name: 'tournament', consistency: 'eventual' });
     const entry = await store.getWithMetadata(type, { type: 'json' });
 
     if (!entry?.value) {
+      console.warn(`live-data: no blob for type="${type}" — returning 503`);
       return new Response(JSON.stringify({ error: 'Not yet available' }), {
         status: 503,
         headers: { 'Content-Type': 'application/json' },
       });
     }
+
+    const koStatus = type === 'knockout'
+      ? entry.value?.data?.flatMap(r => r.matches ?? []).find(m => m.id === 'r32-m1')?.status
+      : undefined;
+    if (koStatus !== undefined) console.log(`live-data: r32-m1 status="${koStatus}"`);
 
     return new Response(JSON.stringify(entry.value), {
       headers: {
