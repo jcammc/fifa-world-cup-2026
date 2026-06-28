@@ -135,7 +135,7 @@ export class MatchCentre {
 
     // V2 enrichment sections — only for confirmed teams
     const showEnrichment = !!(homeId && awayId);
-    const formHtml    = showEnrichment ? this.#buildFormRow(home, away, allFixtures) : '';
+    const formHtml    = showEnrichment ? this.#buildFormRow(home, away, allFixtures, countryMap) : '';
     const stakeHtml   = (showEnrichment && groupStandings && !isFT)
       ? this.#buildStakeRow(home, away, groupStandings, allStandings) : '';
     const radarHtml   = showEnrichment ? this.#buildRadarSection(home, away) : '';
@@ -176,7 +176,7 @@ export class MatchCentre {
 
   // ─── Form strips ──────────────────────────────────────────
 
-  #buildFormRow(home, away, allFixtures = []) {
+  #buildFormRow(home, away, allFixtures = [], countryMap = null) {
     const homeForm = deriveRecentForm(home?.id, allFixtures);
     const awayForm = deriveRecentForm(away?.id, allFixtures);
     if (!homeForm.length && !awayForm.length) return '';
@@ -185,19 +185,19 @@ export class MatchCentre {
       <div class="mc-section">
         <h2 class="mc-section__title">Recent Form</h2>
         <div class="mc-form-row">
-          <div class="mc-form mc-form--home">${this.#formDots(homeForm)}</div>
-          <div class="mc-form mc-form--away">${this.#formDots(awayForm)}</div>
+          <div class="mc-form mc-form--home">${this.#formDots(homeForm, countryMap)}</div>
+          <div class="mc-form mc-form--away">${this.#formDots(awayForm, countryMap)}</div>
         </div>
       </div>`;
   }
 
-  #formDots(form) {
+  #formDots(form, countryMap = null) {
     if (!form?.length) return `<span class="mc-form__none">—</span>`;
     return form.map(item => {
       const cls      = item.result === 'W' ? 'mc-form__dot--w'
                      : item.result === 'D' ? 'mc-form__dot--d'
                      : 'mc-form__dot--l';
-      const opponent = this.#countryMap?.get(item.opponentId)?.name ?? item.opponentId ?? '?';
+      const opponent = countryMap?.get(item.opponentId)?.name ?? item.opponentId ?? '?';
       const score    = `${item.scored}–${item.conceded}`;
       const date     = item.kickoff ? this.#shortDate(item.kickoff) : '';
       const tooltip  = `vs ${opponent} · ${score}${date ? ' · ' + date : ''}`;
