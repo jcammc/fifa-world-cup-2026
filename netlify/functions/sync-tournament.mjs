@@ -12,7 +12,7 @@ import { getStore } from '@netlify/blobs';
 
 const API_KEY      = process.env.FOOTBALL_DATA_API_KEY;
 const SITE_URL     = process.env.URL;
-const NETLIFY_TOKEN = process.env.NETLIFY_API_TOKEN;
+const NETLIFY_TOKEN = process.env.BLOBS_TOKEN;
 const SITE_ID      = process.env.SITE_ID;
 const BASE         = 'https://api.football-data.org/v4';
 
@@ -161,7 +161,7 @@ function mergeKnockout(existing, apiMatches, teamMap) {
 export default async function () {
   if (!API_KEY)       { console.error('sync-tournament: FOOTBALL_DATA_API_KEY not set'); return; }
   if (!SITE_URL)      { console.error('sync-tournament: URL env not set'); return; }
-  if (!NETLIFY_TOKEN) { console.error('sync-tournament: NETLIFY_API_TOKEN not set'); return; }
+  if (!NETLIFY_TOKEN) { console.error('sync-tournament: BLOBS_TOKEN not set'); return; }
   if (!SITE_ID)       { console.error('sync-tournament: SITE_ID not set'); return; }
 
   try {
