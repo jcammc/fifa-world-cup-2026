@@ -21,26 +21,38 @@ export const BROADCASTERS = {
 };
 
 /**
+ * Non-interactive icon for use INSIDE clickable cards (rail, strip, carousel).
+ * Returns a <span><img></span> — valid HTML inside an <a>.
+ * Use broadcasterBadge() instead when the icon itself should be a link.
+ */
+export function broadcasterIcon(broadcaster, status) {
+  if (!broadcaster || status === 'FT') return '';
+  const b = BROADCASTERS[broadcaster];
+  if (!b) return '';
+  return `<span class="bc-icon bc-icon--${b.mod}" aria-label="${b.label}" title="${b.label}"><img src="${b.logo}" alt="${b.label}" class="bc-icon__logo"></span>`;
+}
+
+/**
+ * Clickable badge — use only when NOT inside another <a>.
+ * (Match Centre header is the only current use-site.)
+ *
  * @param {string|null} broadcaster
  * @param {string}      status      - "FT" | "live" | "NS" | etc.
  * @param {object}      [opts]
  * @param {string}      [opts.extraClass]  - Additional CSS class for the <a>
- * @param {boolean}     [opts.stopProp]    - Add stopPropagation — needed when
- *                                          badge sits inside another <a> (cards)
  */
 export function broadcasterBadge(broadcaster, status, opts = {}) {
   if (!broadcaster || status === 'FT') return '';
   const b = BROADCASTERS[broadcaster];
   if (!b) return '';
 
-  const { extraClass = '', stopProp = false } = opts;
+  const { extraClass = '' } = opts;
   const isLive    = status === 'live';
   const href      = isLive ? b.liveHref : b.href;
   const ariaLabel = isLive ? `Watch live on ${b.label}` : `Available on ${b.label}`;
   const liveChip  = isLive ? `<span class="bc-badge__live">Watch Live</span>` : '';
-  const stopAttr  = stopProp ? ' onclick="event.stopPropagation()"' : '';
 
-  return `<a href="${href}" target="_blank" rel="noopener noreferrer"${stopAttr}
+  return `<a href="${href}" target="_blank" rel="noopener noreferrer"
              class="bc-badge bc-badge--${b.mod}${isLive ? ' bc-badge--live' : ''}${extraClass ? ' ' + extraClass : ''}"
              aria-label="${ariaLabel}" title="${ariaLabel}"><img src="${b.logo}" alt="${b.label}" class="bc-badge__logo">${liveChip}</a>`;
 }

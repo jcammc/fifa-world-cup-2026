@@ -72,29 +72,42 @@
   50%       { opacity: 0.7; }
 }
 
-/* ─── Context-specific sizing overrides ─────────────────────
-   Rail card: 28px square sits comfortably on the right edge
-   Strip card (compact mobile): smaller icon inside the row
-   Group carousel row: matches the badge height
-   Match Centre header: larger, with room for "Watch Live" chip
+/* ─── bc-icon — non-interactive, for use inside <a> cards ───
+   Rail card, strip card, group carousel fixture lines.
+   A <span><img></span> — valid HTML inside another <a>.
    ─────────────────────────────────────────────────────────── */
 
-.tc-rail-card .bc-badge__logo {
+.bc-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bc-icon__logo {
+  display: block;
+  height: 26px;
+  width: 26px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Rail card: slightly larger — more visual weight in the sidebar */
+.tc-rail-card .bc-icon__logo {
   height: 28px;
   width: 28px;
 }
 
-.tc-strip-card .bc-badge__logo {
+/* Strip card + carousel: compact */
+.tc-strip-card .bc-icon__logo,
+.gc-fixture .bc-icon__logo {
   height: 18px;
   width: 18px;
   border-radius: 4px;
 }
 
-.gc-fixture .bc-badge__logo {
-  height: 18px;
-  width: 18px;
-  border-radius: 4px;
-}
+/* ─── bc-badge (clickable link) — Match Centre header only ──
+   Larger with room for "Watch Live" chip.
+   ─────────────────────────────────────────────────────────── */
 
 .mc-meta .bc-badge__logo {
   height: 32px;

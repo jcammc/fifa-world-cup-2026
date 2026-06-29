@@ -4,7 +4,7 @@ import { escapeHtml } from '../utils.js';
 import { GroupCarousel } from './group-carousel.js';
 import { KnockoutBracket } from './knockout-bracket.js';
 import { deriveQualificationStatus } from '../tournament-state.js';
-import { broadcasterBadge } from '../broadcasters.js';
+import { broadcasterBadge, broadcasterIcon } from '../broadcasters.js';
 
 const POLL_INTERVAL_MS = 50_000;
 
@@ -368,7 +368,7 @@ export class TournamentCentre {
       ? `<span class="tc-strip-card__badge${isLive ? ' tc-strip-card__badge--live' : ''}">${isLive ? '<span class="live-dot live-dot--sm" aria-hidden="true"></span> LIVE' : 'FT'}</span>`
       : `<span class="tc-strip-card__time">${escapeHtml(formatKickoff(f.kickoff))}</span>`;
 
-    const broadcasterHtml = broadcasterBadge(f.broadcaster, f.status, { extraClass: 'tc-strip-card__broadcaster', stopProp: true });
+    const broadcasterHtml = broadcasterIcon(f.broadcaster, f.status);
 
     return `
       <a href="#match/${escapeHtml(f.id)}" class="tc-strip-card${isLive ? ' tc-strip-card--live' : ''}">
@@ -445,7 +445,7 @@ export class TournamentCentre {
     const venueHtml       = (!hasScore && f.venue)
       ? `<p class="tc-rail-card__venue">${escapeHtml(f.venue)}</p>`
       : '';
-    const broadcasterHtml = broadcasterBadge(f.broadcaster, f.status, { extraClass: 'tc-rail-card__broadcaster', stopProp: true });
+    const broadcasterHtml = broadcasterIcon(f.broadcaster, f.status);
 
     return `
       <a href="#match/${escapeHtml(f.id)}" class="tc-rail-card${isLive ? ' tc-rail-card--live' : ''}">
