@@ -376,9 +376,9 @@ export class TournamentCentre {
           <span class="tc-strip-card__team">${homeAbbr}</span>
           ${middle}
           <span class="tc-strip-card__team">${awayAbbr}</span>
+          ${broadcasterHtml}
         </div>
         ${secondaryHtml}
-        ${broadcasterHtml}
       </a>`;
   }
 
@@ -449,10 +449,14 @@ export class TournamentCentre {
 
     return `
       <a href="#match/${escapeHtml(f.id)}" class="tc-rail-card${isLive ? ' tc-rail-card--live' : ''}">
-        <p class="tc-rail-card__matchup">${matchupLine}</p>
-        ${metaParts.length ? `<p class="tc-rail-card__meta">${metaParts.join(' · ')}</p>` : ''}
-        ${venueHtml}
-        ${broadcasterHtml}
+        <div class="tc-rail-card__body">
+          <div class="tc-rail-card__text">
+            <p class="tc-rail-card__matchup">${matchupLine}</p>
+            ${metaParts.length ? `<p class="tc-rail-card__meta">${metaParts.join(' · ')}</p>` : ''}
+            ${venueHtml}
+          </div>
+          ${broadcasterHtml}
+        </div>
       </a>`;
   }
 

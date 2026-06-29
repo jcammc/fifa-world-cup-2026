@@ -8,14 +8,14 @@ export const BROADCASTERS = {
     label:    'BBC iPlayer',
     href:     'https://www.bbc.co.uk/iplayer/live/bbcone',
     liveHref: 'https://www.bbc.co.uk/iplayer/live/bbcone',
-    logo:     'assets/broadcasters/bbc-iplayer.svg',
+    logo:     'assets/broadcasters/bbc-iplayer.png',
     mod:      'bbc',
   },
   ITV: {
     label:    'ITVX',
     href:     'https://www.itv.com/watch?channel=itv',
     liveHref: 'https://www.itv.com/watch?channel=itv',
-    logo:     'assets/broadcasters/itvx.svg',
+    logo:     'assets/broadcasters/itvx.png',
     mod:      'itv',
   },
 };

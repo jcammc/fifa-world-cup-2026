@@ -27,12 +27,14 @@
   outline-offset: 2px;
 }
 
-/* Logo image — fixed height, width follows aspect ratio */
+/* Logo image — square app icon */
 .bc-badge__logo {
   display: block;
-  height: 22px;
-  width: auto;
-  border-radius: 3px;
+  height: 26px;
+  width: 26px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* "Watch Live" chip — only on bc-badge--live */
@@ -71,17 +73,33 @@
 }
 
 /* ─── Context-specific sizing overrides ─────────────────────
-   Rail cards (small fixture cards): keep logo compact
-   Match Centre header: slightly larger
+   Rail card: 28px square sits comfortably on the right edge
+   Strip card (compact mobile): smaller icon inside the row
+   Group carousel row: matches the badge height
+   Match Centre header: larger, with room for "Watch Live" chip
    ─────────────────────────────────────────────────────────── */
 
-.tc-rail-card .bc-badge__logo,
+.tc-rail-card .bc-badge__logo {
+  height: 28px;
+  width: 28px;
+}
+
 .tc-strip-card .bc-badge__logo {
   height: 18px;
+  width: 18px;
+  border-radius: 4px;
+}
+
+.gc-fixture .bc-badge__logo {
+  height: 18px;
+  width: 18px;
+  border-radius: 4px;
 }
 
 .mc-meta .bc-badge__logo {
-  height: 26px;
+  height: 32px;
+  width: 32px;
+  border-radius: 7px;
 }
 
 /* ─── Legacy text badge classes (still in CSS for carousel) ─

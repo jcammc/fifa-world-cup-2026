@@ -1,5 +1,6 @@
 import { escapeHtml } from '../utils.js';
 import { formatKickoff } from '../time.js';
+import { broadcasterBadge } from '../broadcasters.js';
 
 export class GroupCarousel {
   #container;
@@ -143,9 +144,7 @@ export class GroupCarousel {
 
     const extras = [
       f.status === 'FT' ? `<span class="badge badge--ft gc-fixture__badge">FT</span>` : '',
-      f.broadcaster
-        ? `<span class="badge badge--broadcaster badge--${escapeHtml(f.broadcaster.toLowerCase())}">${escapeHtml(f.broadcaster)}</span>`
-        : '',
+      broadcasterBadge(f.broadcaster, f.status, { extraClass: 'gc-fixture__broadcaster', stopProp: true }),
     ].filter(Boolean).join('');
 
     return `
