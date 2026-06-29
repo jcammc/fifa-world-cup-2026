@@ -81,6 +81,7 @@
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .bc-icon__logo {

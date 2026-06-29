@@ -29,7 +29,8 @@ export function broadcasterIcon(broadcaster, status) {
   if (!broadcaster || status === 'FT') return '';
   const b = BROADCASTERS[broadcaster];
   if (!b) return '';
-  return `<span class="bc-icon bc-icon--${b.mod}" aria-label="${b.label}" title="${b.label}"><img src="${b.logo}" alt="${b.label}" class="bc-icon__logo"></span>`;
+  const href = status === 'live' ? b.liveHref : b.href;
+  return `<span class="bc-icon bc-icon--${b.mod}" role="link" tabindex="0" aria-label="Watch on ${b.label}" title="Watch on ${b.label}" onclick="event.stopPropagation();window.open('${href}','_blank','noopener,noreferrer')"><img src="${b.logo}" alt="${b.label}" class="bc-icon__logo"></span>`;
 }
 
 /**
