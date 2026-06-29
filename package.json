@@ -10,7 +10,7 @@
     "update-standings": "node scripts/update-standings.js",
     "update-knockout": "node scripts/update-knockout.js",
     "validate": "node scripts/validate-data.js",
-    "build-search-index": "node scripts/build-search-index.js",
+    "build-search-index": "node scripts/generate-search-index.js",
     "gather-photos": "node scripts/gather-photos.js",
     "pre-deploy": "npm run validate && npm run generate-bios && npm run generate-rankings && npm run build-search-index"
   },

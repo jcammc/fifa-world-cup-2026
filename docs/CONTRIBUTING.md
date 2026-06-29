@@ -15,13 +15,27 @@ No build step, no npm install required for the frontend.
 Scripts require Node.js 18+.
 
 ```bash
-npm run validate          # Check all JSON files for schema errors
-npm run generate-bios     # Fill null player bios (idempotent)
-npm run generate-rankings # Compute consensus rankings
-npm run build-search-index # Rebuild search-index.json
-npm run gather-photos     # Download player photos (idempotent)
-npm run pre-deploy        # Run validate + generate-bios + generate-rankings + build-search-index
+# Data maintenance (use these regularly)
+npm run sync-data          # Pull live scores/standings from football-data.org into local JSON files
+npm run update-knockout    # Record a knockout result and propagate winner (see script --help)
+npm run validate           # Check all JSON files for schema errors
+
+# Search index (run after any squad change)
+npm run build-search-index # Rebuild data/search-index.json
+
+# Photo gathering (run when adding new players)
+npm run gather-photos      # Download player/manager photos (configure flags inside script)
+
+# Stubs (not yet implemented — safe to ignore)
+npm run generate-bios      # Fill null player bios (stub — no-op)
+npm run generate-rankings  # Compute consensus rankings (stub — no-op)
+npm run update-standings   # Update standings (superseded by sync-data)
+
+# Deploy gate
+npm run pre-deploy         # Run validate + generate-bios + generate-rankings + build-search-index
 ```
+
+**Note:** `npm run sync-data` updates local JSON files directly. On production, scores are updated automatically by `netlify/functions/live-data.mjs` whenever the SPA polls `/api/live`. Run `sync-data` locally to pull the latest results before doing any data entry work.
 
 ## Adding a New Team's Data
 

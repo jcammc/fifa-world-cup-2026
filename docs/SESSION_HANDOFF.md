@@ -47,7 +47,7 @@
 | Sprint 5A | Nav active-state fix for all TC deep-link routes; fixtures.json + standings.json populated for all 12 groups R1; qualificationStatus set where certain after R1 | **COMPLETE** |
 | Sprint 5B | Fix leagueId bug in getPlayerResolved(); qualification badges in carousel; Team Fixtures Tab; knockout bracket connector lines; all 48 manager fields; Group C + D R2 results | **COMPLETE** |
 | Sprint 5C | Data model decisions (recentForm → country level; teamStrength deferred); squad files for Germany/Spain/Argentina/Portugal/Netherlands; leagues.json + clubs.json expanded | **COMPLETE** |
-| Sprint 6 | Tournament data maintenance (rolling). All 48 matchday 1+2 results synced via `sync-data.mjs` (June 24). R3 (matchday 3) all groups June 25–27. After R3: set qualificationStatus for remaining 36 teams, populate R32 knockout slots. | **IN PROGRESS** |
+| Sprint 6 | Tournament data maintenance (rolling). All 48 matchday 1+2 results synced via `sync-data.mjs` (June 24). R3 completed June 25–27. R32 began June 28. qualificationStatus set for all 48 teams; R32 homeTeamId/awayTeamId populated via live pipeline. | **COMPLETE** |
 | Sprint 7 | Search overlay — Ctrl+K trigger, 1,296-entry index, diacritic normalisation, player deep-link `#player-id` | **COMPLETE** |
 | Sprint 8 | Squad population for Norway, Belgium, USA, Japan, Morocco (5 squads × 26 players) | **COMPLETE** |
 | Sprint 9 | Squad population for all remaining 23 teams — all 48 squads now complete (1,248 players). validate-data.js tooling. generate-search-index.js script. clubs.json grown to 456 entries. | **COMPLETE** |
@@ -68,7 +68,8 @@
 | Sprint 22 — Manager Profiles | `managerTenure` + `managerFormerPosition` added to all 48 countries.json entries. `data/managers.json` created: 48 entries (object-keyed by countryId), each with `career[]` (managerial appointments), `playerClubs[]` (max 3 notable clubs), `honours[]` (major titles, role-labeled Manager/Player). `DataManager.loadManagers()` + `loadManager(countryId)` added. Accordion UI in overview-tab.js: tenure shown in accent colour below meta line; `<details>/<summary>` "Career & Honours" section with career timeline, player clubs, honour chips. player-photos.json reconciled after squad replacements: 200 orphaned keys removed, 200 new players gathered via gather-photos.js normal mode. Final state: 1,296 total keys (996 URLs + 300 null). | **COMPLETE** |
 | Sprint 23 | Desktop layout & information density. `max-width` lifted from 960px/1100px to `var(--max-content-width)` across Tournament Centre, League Explorer, Club Explorer, Countries. Compare Teams radar promoted to primary position (full-width, above cv-body). cv-body 2-col grid at ≥1280px. Statistics Dashboard `.sp-sections` 2-col grid at ≥1280px; scorers section gains squad goal totals column. Club Explorer and League Explorer 2-col item lists at ≥1280px. | **COMPLETE** |
 | Sprint 24 | Part A: Compare Teams consistency fix — `.cv-page` no longer overrides padding from `.page-content` (was `var(--space-4) 0 var(--space-8)`, zero horizontal padding was the root cause); `.cv-title` font-size corrected 2xl→3xl to match all other page titles. Part B: Tournament Centre fixture rail — Today's Matches tab removed; desktop gets a sticky ~240px rail (Live→Today→Recent→Coming Up sections); mobile gets a horizontal strip above the tabs. Default tab changed to Groups. Part C: Live data implementation plan written to `docs/LIVE_DATA_PLAN.md`. | **COMPLETE** |
-| Sprint 25 | Live data pipeline. `data/api-team-map.json` — 48-entry map of football-data.org numeric team IDs → internal country slugs. `scripts/sync-data.mjs` — one-shot Node script to pull current scores/standings from API and write directly to local JSON files (`npm run sync-data`); tested and synced 12 matchday 2 results. `netlify/functions/sync-tournament.mjs` — Netlify Scheduled Function (every 2 min) that fetches API, merges data preserving venues/IDs/qualificationStatus, writes to Netlify Blob Store. `netlify/functions/live-data.mjs` — HTTP endpoint `/api/live?type=fixtures|standings|knockout` serving from Blob Store with 30s CDN cache. `js/data.js` — `loadFixtures/loadStandings/loadKnockout` try `/api/live` first on production (Netlify), fall back to static files locally. `package.json` — `@netlify/blobs` dep + `sync-data` script. `netlify.toml` — `esbuild` bundler + `*/2 * * * *` schedule. Requires `FOOTBALL_DATA_API_KEY` set as Netlify env var. | **COMPLETE** |
+| Sprint 25 | Live data pipeline (initial implementation). `data/api-team-map.json` — 48-entry map of football-data.org numeric team IDs → internal country slugs. `scripts/sync-data.mjs` — one-shot Node script to pull current scores/standings from API and write directly to local JSON files (`npm run sync-data`); tested and synced 12 matchday 2 results. `netlify/functions/sync-tournament.mjs` — Netlify Scheduled Function (every 2 min) + `netlify/functions/live-data.mjs` — HTTP read endpoint. `js/data.js` — `loadFixtures/loadStandings/loadKnockout` try `/api/live` first on production, fall back to static files locally. `package.json` — `@netlify/blobs` dep + `sync-data` script. `netlify.toml` — `esbuild` bundler + schedule. | **COMPLETE** |
+| Sprint 25+ | **Live data pipeline redesign** (post-R32 debugging, 2026-06-28). Root cause found: Netlify scheduled functions do not receive `NETLIFY_BLOBS_CONTEXT`, so `getStore()` was a silent no-op — the Blob Store had never been written to; the app had always been serving static files. Fix: `live-data.mjs` completely rewritten as a cache-aside pipeline — it now owns both the API fetch and the Blob Store write. `sync-tournament.mjs` effectively disabled (BLOBS_TOKEN not set). Also fixed: `mergeKnockout()` reversed home/away key lookup fallback (API and static knockout.json could disagree on home/away team order, causing silent slot skips). CDN caching removed (`no-store`). See `docs/LIVE_DATA_PLAN.md` §9 and `docs/ENGINEERING_PRINCIPLES.md` for full post-mortem. | **COMPLETE** |
 | Sprint 26 | Match Centre page and bracket wiring. `js/modules/match-centre.js` — new `#match/{fixtureId}` route resolving group fixtures and knockout rounds; header (flag, team name, score/time, venue, broadcaster), group standings snapshot with participating teams highlighted. `js/router.js` — `match/` route registered before the player deep-link loop. Knockout bracket cards converted from `<div>` to `<a href="#match/{id}">` links. `#projectionKey()` translation helper added to KnockoutBracket — bridges knockout.json compact labels (`"1A"`, `"3rd C/E/F/H/I"`) to buildBracketProjection() map keys (`"Winner Group A"`, `"best-third-r32-m7"`). **Bug fixed:** without this translator, bracket projection silently returned null for every slot. `styles/match-centre.css` created (`mc-` namespace). | **COMPLETE** |
 | Sprint 27 | Tournament Intelligence. `data/annex-c.json` — 246 FIFA Annex C combinations (one-shot generated by `scripts/gen-annex-c.mjs`). `js/tournament-state.js` — new pure utility module (no DOM, no fetching): `rankBestThirds()`, `getAdvancingThirdGroups()`, `lookupAnnexC()`, `getGroupProjection()`, `buildBracketProjection()`, `getMatchImplication()`. DataManager: `#loadRaw()` for object-valued JSON, `loadAnnexC()`, `invalidateLive()`, `LIVE_KEYS`. TournamentCentre: 50s `setTimeout` polling loop, Page Visibility API pause, in-place DOM updates for snapshot/strip/rail; snapshot 4 stats (Qualified/Eliminated/Played/Remaining); `● Live / Updated HH:MM BST` indicator. GroupCarousel `update(standings, fixtures)` API (saves/restores scrollLeft). KnockoutBracket `update()` API + full Annex C projected bracket + confirmed slot styling (green border + ✓) + round date ranges + split confidence badges (confirmed/likely/open). `js/modules/best-thirds.js` + `styles/best-thirds.css` — `#best-thirds` page: ranked table, position-9 cutline, tiebreaker note, 8 slot assignment cards linking to Match Centre. Match Centre V2 — 7 enrichment sections: form strips, What's at stake (chip + position line + W/D/L scenario rows), group standings, managers, captains, radars (post-innerHTML pattern). `getMatchImplication()` upgraded to `{status, text}` return. | **COMPLETE** |
 
@@ -83,7 +84,7 @@
 | `app.js` | Complete | Entry point — ThemeManager, Nav, Router.init(), SearchOverlay.init() |
 | `router.js` | Complete | Hash routing, all current routes wired. **Sprint 26:** `match/` route added (before player deep-link loop). **Sprint 27:** `best-thirds` route added. Nav active state now treats `match/*` and `best-thirds` as Tournament Centre (highlights `#tournament` nav link). |
 | `data.js` | Complete | DataManager singleton, #cache Map, all loaders. **Sprint 25:** `#loadLive(key, staticUrl, type)` tries `/api/live?type={type}` on production (IS_LIVE = hostname is not localhost/127.0.0.1), falls back to static file if that fails or is not yet populated. `loadFixtures/loadStandings/loadKnockout` now route through `#loadLive`. All other loaders (countries, groups, clubs, leagues etc.) continue to use `#load` against static files. `loadPlayerPhotos()` (returns Object not array — custom loader, not #load()), `loadAllPlayers()` (parallel fetch all 48 squads, annotates each player with `countryId`, caches under `'all-players'`), `loadManagers()` (returns Object keyed by countryId — custom loader, same pattern as loadPlayerPhotos), `loadManager(countryId)` (calls loadManagers(), returns single entry or null). **Sprint 27:** `#loadRaw(key, url)` — stores full JSON object without `data ?? []` unwrapping (used for object-valued files like annex-c.json). `loadAnnexC()` uses `#loadRaw`. `invalidateLive()` evicts `LIVE_KEYS = ['fixtures','standings','knockout']` from cache — called by TournamentCentre poll cycle. |
-| `tournament-state.js` | **New (Sprint 27)** | Pure utility module — no DOM, no fetching. `rankBestThirds(standings)` — returns 3rd-place entries sorted by points → GD → GF. `getAdvancingThirdGroups(standings)` — top 8 group letters. `lookupAnnexC(annexCData, advancingGroups)` — key is 8 sorted group letters joined (e.g. `"ABCDFGIL"`), returns `{ [matchId]: groupLetter }` or null. `getGroupProjection(groupStandings)` — `{ winner, runnerUp, complete }`. `buildBracketProjection(standings, annexCData)` — returns Map of slot label → `{ teamId, confidence }` for all R32 slots. `getMatchImplication(team, groupStandings)` — returns `{ status, text } | null`; status: `'qualified' | 'eliminated' | 'leading' | 'contention' | 'danger'`. |
+| `tournament-state.js` | **New (Sprint 27)** | Pure utility module — no DOM, no fetching. Full function list: `deriveRecentForm(teamId, fixtures, maxResults=5)` — derives W/D/L form from live fixtures array (each result includes `{ result, opponentId, scored, conceded, kickoff }`); replaces the static `recentForm` field in countries.json for match-centre display. `deriveQualificationStatus(entry, allGroupStandings)` — rule-based derivation of `'qualified' | 'eliminated' | null` when the stored field is null (used by TournamentCentre snapshot, buildBracketProjection). `rankBestThirds(standings)` — returns 3rd-place entries sorted by points → GD → GF. `getAdvancingThirdGroups(standings)` — top 8 group letters. `lookupAnnexC(annexCData, advancingGroups)` — key is 8 sorted group letters joined (e.g. `"ABCDFGIL"`), returns `{ [matchId]: groupLetter }` or null. `getGroupProjection(groupStandings)` — `{ winner, runnerUp, complete }`. `buildBracketProjection(standings, annexCData)` — returns Map of slot label → `{ teamId, confidence }` for all R32 slots. `getMatchImplication(team, groupStandings, allGroupStandings?)` — returns `{ status, text } | null`; status: `'qualified' | 'eliminated' | 'leading' | 'contention' | 'danger'`; optional third arg provides cross-group context for deriveQualificationStatus. |
 | `time.js` | Complete | `formatKickoff()`, `isToday()` |
 | `utils.js` | Complete | `escapeHtml()` |
 | `theme.js` | Complete | localStorage, data-theme attribute toggle |
@@ -113,8 +114,8 @@
 
 | File | Role |
 |------|------|
-| `sync-tournament.mjs` | Scheduled Function — runs every 2 min (`*/2 * * * *` cron). Fetches `/v4/competitions/WC/matches` + `/v4/competitions/WC/standings` from football-data.org. Merges results into existing structure fetched from the live site (preserves venues, IDs, qualificationStatus). Writes three blobs to Netlify Blob Store: `tournament/fixtures`, `tournament/standings`, `tournament/knockout`. Requires `FOOTBALL_DATA_API_KEY` env var. Logs count of FINISHED + IN_PLAY matches on each run. |
-| `live-data.mjs` | On-demand HTTP endpoint at `/api/live?type=fixtures\|standings\|knockout`. Reads from Netlify Blob Store (`consistency: 'eventual'`), returns JSON. Response headers: `Cache-Control: public, max-age=30, stale-while-revalidate=90`. Returns HTTP 503 if Blob Store not yet populated (SPA DataManager treats 503 as a fallback signal). |
+| `live-data.mjs` | On-demand HTTP endpoint at `/api/live?type=fixtures\|standings\|knockout`. **Primary data pipeline — cache-aside pattern.** On each request: (1) reads Blob Store for the requested type; (2) returns immediately if cached data is < 90 s old (based on `lastUpdated`); (3) if stale or missing, fetches from football-data.org API (`/competitions/WC/matches` + `/standings`), fetches static base files from the live site, merges all three data types using inline merge functions, writes all three to Blob Store, then returns the requested type. Cache-Control: `no-store`. Falls back to stale Blob data if the API call fails; returns 503 only when Blob Store is empty AND the API is unavailable. Requires `FOOTBALL_DATA_API_KEY` + `URL` env vars. Logs `"live-data: refreshed — N FT, N live, N KO completed"` on each refresh. |
+| `sync-tournament.mjs` | Scheduled Function — runs every 2 min (`*/2 * * * *` cron). **Currently effectively disabled.** Fails early in its guard checks because `BLOBS_TOKEN` env var is intentionally not set. Makes no API calls and writes nothing. Left in the codebase as a reference and in case explicit-credential Blob writes become necessary in future. **Root cause of disablement:** Netlify does not inject `NETLIFY_BLOBS_CONTEXT` into scheduled functions (only HTTP-triggered functions receive it), so `getStore()` calls from a scheduled function are silent no-ops that write nothing to the real Blob Store without throwing errors. All live data work is handled by `live-data.mjs`. |
 
 ### CSS files (`styles/`)
 
@@ -638,9 +639,10 @@ This is the same pattern as `loadPlayerPhotos()` — the two files that use obje
 
 `js/data.js` uses `IS_LIVE = !['localhost', '127.0.0.1'].includes(window.location.hostname)` to decide whether to try the Netlify live endpoint.
 
-- **On production (Netlify):** `loadFixtures/loadStandings/loadKnockout` call `#loadLive()`, which fetches `/api/live?type=fixtures` etc. If the Blob Store is populated and the request succeeds, that data is used and cached. On failure or 503, it silently falls through to `#load(staticUrl)`.
-- **On localhost:** `IS_LIVE` is false, `#loadLive()` skips the network attempt entirely and goes straight to the static file. There is no failing request on localhost.
-- **Cache invalidation:** The DataManager cache is a plain Map that persists for the lifetime of the page. Live data is fetched at most once per page load. No polling or refresh — the SPA reads fresh data on each page navigation (new render cycle).
+- **On production (Netlify):** `loadFixtures/loadStandings/loadKnockout` call `#loadLive()`, which fetches `/api/live?type=fixtures` etc. The live-data function handles freshness internally (cache-aside, 90s TTL in Blob Store). On any failure or error response, `#loadLive()` silently falls through to `#load(staticUrl)`. The fall-through is intentional — it means locally-cached static data is always available as a last resort.
+- **On localhost:** `IS_LIVE` is false, `#loadLive()` skips the network attempt entirely and goes straight to the static file. No failing request on localhost.
+- **DataManager cache:** A plain Map that persists for the page lifetime. Live data is fetched at most once per page load under normal navigation. The exception is `TournamentCentre`, which runs a 50-second polling loop (via `setTimeout`) that calls `DataManager.invalidateLive()` to evict the three live keys, then re-fetches to trigger an in-place DOM update. Outside of `TournamentCentre`, no other module polls or refreshes live data — the SPA reads fresh data on each page navigation.
+- **invalidateLive():** Evicts only `LIVE_KEYS = ['fixtures', 'standings', 'knockout']` from the cache. All other loaders (countries, players, clubs, etc.) are unaffected.
 - **Do not add** `IS_LIVE` checks to loaders for static data (countries, squads, clubs, etc.) — those files don't change at runtime.
 
 ### 13. Player ID disambiguation
@@ -788,56 +790,44 @@ npm run validate
 
 ### Operational (ongoing, not sprint work)
 
-**Live data pipeline is now active (Sprint 25).** The Netlify function `sync-tournament.mjs` runs every 2 minutes and automatically updates fixtures.json + standings.json in the Blob Store. The SPA reads from `/api/live` on production. Manual `npm run sync-data` is available for immediate one-shot sync or local updates.
+**Live data pipeline is now active and redesigned (Sprint 25+).** `live-data.mjs` is the primary pipeline — it fetches from football-data.org, merges all three data types, writes to Blob Store, and returns data in a single cache-aside request. `sync-tournament.mjs` is effectively disabled (BLOBS_TOKEN not set). Manual `npm run sync-data` is available for immediate one-shot updates to local JSON files.
+
+**Current phase: Round of 32 (began June 28).** R32 matches run June 28 – July 6. Scores and team IDs update automatically via `live-data.mjs`.
 
 **Still requires manual action:**
-- `qualificationStatus` in standings.json — not derivable from raw scores alone for best-third teams (FIFA Annex C rules). Set manually after each round.
-- Knockout `homeTeamId`/`awayTeamId` slots — the automated sync will fill these as the API populates them, but the best-3rd assignment (8 slots with eligible-group labels) requires manual verification against FIFA Annex C after R3 completes.
-- Any corrections to `recentForm`, venues, or other non-score fields.
+- Knockout result propagation — run `scripts/update-knockout.js --match <id> --home N --away N` after each R32–Final result to propagate winners to the next round.
+- Any corrections to venues or non-score fields.
 
-**Pre-June 28 checklist (MUST complete before first knockout match — first R32 match June 28):**
-- [ ] All 72 group fixtures FT with correct scores (automated via sync-data.mjs)
-- [ ] All 48 teams have non-null qualificationStatus (MANUAL — top 2 per group → qualified, bottom 2 → eliminated, 3rd advancing → qualified, 3rd eliminated → eliminated)
-- [ ] All 16 R32 slots in knockout.json have homeTeamId/awayTeamId set (automated when API populates; best-3rd slots require Annex C verification)
-- [ ] Best-3rd assignment confirmed from FIFA Annex C (8 slots) — verify `lookupAnnexC()` resolves correctly against actual advancing groups, update homeLabel/awayLabel in knockout.json from `"3rd A/B/C/D/F"` to specific `"3rd X"` seeds
-- [ ] Refresh `recentForm` for all 48 teams in countries.json — add R3 result for each team (5-entry rolling window, WC 2026 matches only)
-- [ ] `npm run validate` — zero errors
-- [ ] Snapshot shows "Remaining: 32"
+**Pre-June 28 checklist (HISTORICAL — all completed as of 2026-06-28):**
+- [x] All 72 group fixtures FT with correct scores
+- [x] All 48 teams have non-null qualificationStatus
+- [x] All 16 R32 slots homeTeamId/awayTeamId populated
+- [x] Best-3rd assignment confirmed (Annex C lookupAnnexC() verified)
+- [x] `npm run validate` — zero errors; Snapshot shows "Remaining: 32"
 
-**R3 status:** All 12 groups playing simultaneous pairs June 25–27. After R3 completes (~June 27 evening), run `npm run sync-data` to pull all results, then complete remaining manual steps above.
-
-**After R3:** Populate knockout.json R32 homeTeamId/awayTeamId. Use `scripts/update-knockout.js` for R32 onwards once results arrive (June 28–July 6).
+**Ongoing knockout maintenance (June 28 – July 19):**
+Populate R32–Final results as they happen, propagate winners. Use `scripts/update-knockout.js --match <id> --home N --away N`. SF losers auto-propagate to third-place match.
 
 ---
 
-### Sprint 28 — candidate next sprint
+### Sprint 28 — complete
 
-**Sprint 28 – Operational Readiness (Pre-Round of 32)** — immediate priority. Two phases:
+**Sprint 28 – Completed 2026-06-28/29:**
+- [DONE] Live data pipeline redesign (cache-aside architecture in live-data.mjs)
+- [DONE] mergeKnockout reversed home/away key lookup fix
+- [DONE] Sprint 6 tournament operations (R3 results, qualificationStatus, R32 bracket population)
+- [DONE] Documentation audit (SESSION_HANDOFF, LIVE_DATA_PLAN, DECISIONS, ENGINEERING_PRINCIPLES)
 
-**Phase 1 (engineering — complete now):**
-- [DONE] Fix `formatKickoff()` for date-only YYYY-MM-DD strings (timezone bug in negative-UTC zones)
-- [DONE] Nav active state for `#match/{id}` and `#best-thirds` routes
-- [DONE] SESSION_HANDOFF.md updated for Sprints 26 and 27 (routes, modules, CSS, patterns, architecture)
-- [DONE] Sprint 27 tasks marked complete
-
-**Phase 2 (tournament operations — after all R3 matches complete, ~June 27 evening):**
-- Run `npm run sync-data` — confirm all 72 group results
-- Set `qualificationStatus` for all 48 teams in standings.json (manual)
-- Verify Annex C assignments and confirm bracket transitions
-- Confirm all 16 R32 homeTeamId/awayTeamId populated
-- Refresh `recentForm` for all 48 teams (add R3 result — rolling 5-entry window)
-- Run `npm run validate` — zero errors; snapshot "Remaining: 32"
-
-**Candidate feature sprints (post-Sprint 28):**
+**Candidate feature sprints (next):**
 
 **Photo Pass 3 — manager gap recovery + harder player nulls**
 3 managers still null (Migné/Haiti, Bubista/Cape Verde, Donis/Saudi Arabia). ~300 player nulls remain.
 
 **Knockout bracket live updates**
-As R32/R16/QF/SF results land, the bracket updates — but there's no visual "just updated" indicator or animation.
+As R32/R16/QF/SF results land, the bracket updates — but there's no visual "just updated" indicator or animation for the user.
 
-**Post-June 28 — Knockout maintenance (rolling)**
-Populate R32 results as they happen (June 28 – July 6), propagate winners to R16. Use `scripts/update-knockout.js --match <id> --home N --away N`. Maintain R16 → QF → SF → Final through July 19.
+**Knockout maintenance (rolling, now active)**
+Populate R32–Final results as they happen (June 28 – July 19). Use `scripts/update-knockout.js --match <id> --home N --away N`. Maintain bracket through Final.
 
 ---
 

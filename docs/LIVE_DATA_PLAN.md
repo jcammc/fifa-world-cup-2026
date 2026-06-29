@@ -212,3 +212,69 @@ Add env var `FOOTBALL_DATA_API_KEY` in Netlify dashboard (Site settings → Envi
 | Blob Store write fails silently | Medium | Log errors to Netlify Function logs; client falls back to last-good cached response |
 | `qualificationStatus` for best-third wrong | Medium (if automated) | Skip automation; keep manual — 2 min job, only happens once after R3 |
 | WC 2026 not in football-data.org free tier | Low | Verify at registration; paid tier is £10/mo if needed |
+
+---
+
+## 11. Architecture Redesign — Cache-Aside Pipeline (2026-06-28)
+
+**Status:** Implemented. This section supersedes §2 and §8 for the live production architecture.
+
+### Root cause of original failure
+
+The Sprint 25 implementation assumed that `netlify/functions/sync-tournament.mjs` (a scheduled function) could write to Netlify Blob Store using `getStore({ name: 'tournament' })`. This assumption was incorrect.
+
+**Netlify only injects `NETLIFY_BLOBS_CONTEXT` into HTTP-triggered (on-demand) functions.** Scheduled functions do not receive a request object and therefore do not receive the blob context. In `@netlify/blobs` v8, calling `getStore()` without a valid context returns a no-op store — all `set()` and `setJSON()` calls appear to succeed (no error is thrown), but nothing is written to the real Blob Store.
+
+The result: the Blob Store was never populated. The SPA always fell back to static files. Users were never seeing live data, even though the sync function logs said `"OK"`.
+
+**Diagnostic signal that revealed this:** `live-data.mjs` began returning `"live-data: no blob for type='knockout' — returning 503"` for all three data types — proving the Blob Store was empty. This came after adding explicit read-back diagnostics to the live-data function, not from the sync function logs.
+
+### The fix — cache-aside pattern
+
+`live-data.mjs` was completely rewritten as a **cache-aside** function. On-demand (HTTP-triggered) functions always receive `NETLIFY_BLOBS_CONTEXT`, so `getStore()` works correctly for both reads and writes.
+
+**Request flow:**
+```
+Browser → GET /api/live?type=knockout
+            │
+            ▼
+    live-data.mjs (on-demand HTTP function)
+            │
+            ├─ Read Blob Store for 'knockout'
+            │
+            ├─ age < 90s? → return cached data immediately
+            │
+            └─ stale / missing?
+                │
+                ├─ Fetch /competitions/WC/matches from football-data.org
+                ├─ Fetch /competitions/WC/standings from football-data.org
+                ├─ Fetch static base files (fixtures.json, standings.json, knockout.json)
+                │   from the live site URL
+                ├─ mergeFixtures() + mergeStandings() + mergeKnockout()
+                ├─ Write all three to Blob Store
+                └─ Return requested type
+```
+
+**Key properties of the new architecture:**
+- A single request pays the API cost (~500ms), all subsequent requests within 90s serve cached data
+- `sync-tournament.mjs` is now effectively disabled — `BLOBS_TOKEN` env var is intentionally not set so it fails early in its guard checks without making API calls
+- Cache-Control is `no-store` — the CDN does not cache responses; the Blob Store (90s TTL) is the only cache layer
+- `consistency: 'strong'` on Blob Store reads — always reads from the primary store rather than a replica
+- Falls back to stale Blob data if the football-data.org API call fails; returns 503 only when Blob Store is completely empty AND the API is unavailable
+
+### Additional fix applied during this session
+
+**mergeKnockout home/away order mismatch:** The static `knockout.json` assigns home/away independently of the football-data.org API. When the API returns teams in the opposite order to what knockout.json expects, the slot lookup (`byTeams.get('home:away')`) finds nothing and silently skips the match — scores are never written.
+
+**Fix:** Reversed-key fallback. After a failed lookup, attempt `byTeams.get('away:home')`. If found, set `swapped = true` and invert score assignment:
+```javascript
+slot.homeScore = swapped ? newAway : newHome;
+slot.awayScore = swapped ? newHome : newAway;
+```
+This fix is applied in both `live-data.mjs` (active) and `sync-tournament.mjs` (disabled but kept in sync).
+
+### Architectural lesson
+
+**Netlify Blobs context is injected only for HTTP-triggered functions.** Any function that needs to write to Netlify Blob Store must be an on-demand function (triggered by an HTTP request). If a scheduled function needs to write to Blob Store, it must either: (a) use explicit credentials (`siteID` + `token`) obtained from a non-`NETLIFY_`-prefixed environment variable, or (b) trigger an HTTP function that writes on its behalf.
+
+See `docs/ENGINEERING_PRINCIPLES.md` for the full debugging methodology that uncovered this.
