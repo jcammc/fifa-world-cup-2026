@@ -149,12 +149,12 @@ export class GroupCarousel {
     ].filter(Boolean).join('');
 
     return `
-      <div class="gc-fixture">
-        <a href="#${homeId}" class="gc-fixture__team gc-fixture__team--home">${homeName}</a>
+      <a href="#match/${escapeHtml(f.id)}" class="gc-fixture">
+        <span class="gc-fixture__team gc-fixture__team--home">${homeName}</span>
         ${middle}
-        <a href="#${awayId}" class="gc-fixture__team gc-fixture__team--away">${awayName}</a>
+        <span class="gc-fixture__team gc-fixture__team--away">${awayName}</span>
         ${extras ? `<span class="gc-fixture__extras">${extras}</span>` : ''}
-      </div>`;
+      </a>`;
   }
 
   #buildNoData() {

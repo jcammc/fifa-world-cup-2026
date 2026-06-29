@@ -11,31 +11,17 @@ export class CountriesPage {
   async render() {
     const countries = await DataManager.loadCountries();
 
-    // Group by groupId, order A → L
-    const byGroup = new Map();
-    for (const c of countries) {
-      const g = c.groupId ?? 'Other';
-      if (!byGroup.has(g)) byGroup.set(g, []);
-      byGroup.get(g).push(c);
-    }
-
-    const sortedGroups = [...byGroup.entries()].sort(([a], [b]) => a.localeCompare(b));
-
-    const groupsHtml = sortedGroups.map(([groupId, teams]) => `
-      <section class="cp-group">
-        <h2 class="cp-group__title">Group ${escapeHtml(groupId)}</h2>
-        <div class="cp-grid">
-          ${teams.map(c => this.#renderCard(c)).join('')}
-        </div>
-      </section>`).join('');
+    const sorted = [...countries].sort((a, b) => a.name.localeCompare(b.name));
 
     const confCount = new Set(countries.map(c => c.confederation).filter(Boolean)).size;
 
     this.#container.innerHTML = `
       <div class="cp-page">
         <h1 class="cp-page__title">All Nations</h1>
-        <p class="cp-page__subtitle">${countries.length} teams · ${confCount} confederations · 12 groups</p>
-        <div class="cp-groups">${groupsHtml}</div>
+        <p class="cp-page__subtitle">${countries.length} teams · ${confCount} confederations · alphabetical</p>
+        <div class="cp-grid">
+          ${sorted.map(c => this.#renderCard(c)).join('')}
+        </div>
       </div>`;
   }
 

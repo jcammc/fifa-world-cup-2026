@@ -197,6 +197,50 @@ a.sp-player-row:hover {
   flex-shrink: 0;
 }
 
+/* ─── Tournament top scorers list ────────────────────────── */
+
+.sp-scorer-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-3);
+}
+
+.sp-scorer-row {
+  display: grid;
+  grid-template-columns: 28px 22px 1fr auto auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 1px solid var(--color-border-subtle);
+  font-size: var(--font-size-sm);
+}
+
+.sp-scorer-row:last-child { border-bottom: none; }
+
+.sp-scorer-row__name {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sp-scorer-row__team {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.sp-scorer-row__goals {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  min-width: 20px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ─── Desktop: 2-col section grid ────────────────────────── */
 
 @media (min-width: 1280px) {

@@ -12,6 +12,7 @@
     "validate": "node scripts/validate-data.js",
     "build-search-index": "node scripts/generate-search-index.js",
     "gather-photos": "node scripts/gather-photos.js",
+    "gather-match-events": "node scripts/gather-match-events.mjs",
     "pre-deploy": "npm run validate && npm run generate-bios && npm run generate-rankings && npm run build-search-index"
   },
   "devDependencies": {},

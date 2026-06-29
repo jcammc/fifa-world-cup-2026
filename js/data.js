@@ -9,7 +9,8 @@ const URLS = {
   leagues:     'data/leagues.json',
   rankings:    'data/rankings.json',
   knockout:    'data/knockout.json',
-  annexC:      'data/annex-c.json',
+  annexC:        'data/annex-c.json',
+  matchEvents:   'data/match-events.json',
   searchIndex:   'data/search-index.json',
   players:       (id) => `data/players/${id}.json`,
   playerPhotos:  'data/player-photos.json',
@@ -88,7 +89,8 @@ class _DataManager {
   async loadLeagues()              { return this.#load('leagues',   URLS.leagues); }
   async loadRankings()             { return this.#load('rankings',     URLS.rankings); }
   async loadSearchIndex()          { return this.#load('search-index', URLS.searchIndex); }
-  async loadAnnexC()               { return this.#loadRaw('annex-c',   URLS.annexC); }
+  async loadAnnexC()               { return this.#loadRaw('annex-c',     URLS.annexC); }
+  async loadMatchEvents()          { return this.#loadRaw('match-events', URLS.matchEvents); }
 
   async loadPlayersForTeam(countryId) {
     return this.#load(`players-${countryId}`, URLS.players(countryId));

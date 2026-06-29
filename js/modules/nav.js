@@ -5,7 +5,6 @@ const NAV_SECTIONS = [
     title: 'Browse',
     links: [
       { href: '#countries',   icon: '🌍', label: 'Countries' },
-      { href: '#groups',      icon: '🏟️', label: 'Groups' },
       { href: '#continents',  icon: '🗺️', label: 'Continents' },
     ],
   },

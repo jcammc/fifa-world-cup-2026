@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 26" role="img" aria-label="ITVX">
+  <title>ITVX</title>
+  <!-- Navy background matching ITVX brand (#0d1f3c) -->
+  <rect width="72" height="26" rx="3" fill="#0d1f3c"/>
+  <!-- "itvX" in white — lowercase itv, uppercase X, matching the favicon proportions -->
+  <text x="36" y="19"
+        font-family="'Arial Narrow','Arial',sans-serif"
+        font-weight="800"
+        font-size="17"
+        font-style="italic"
+        text-anchor="middle"
+        fill="#fff"
+        letter-spacing="-0.5">itvX</text>
+</svg>

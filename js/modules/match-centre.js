@@ -3,11 +3,7 @@ import { formatKickoff } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { Charts } from '../charts.js';
 import { getMatchImplication, deriveRecentForm } from '../tournament-state.js';
-
-const BROADCASTERS = {
-  BBC: { href: 'https://www.bbc.co.uk/iplayer/live/bbcone', mod: 'bbc' },
-  ITV: { href: 'https://www.itv.com/watch?channel=itv',     mod: 'itv' },
-};
+import { broadcasterBadge } from '../broadcasters.js';
 
 export class MatchCentre {
   #container;
@@ -22,11 +18,12 @@ export class MatchCentre {
     const fixtureId = this.#params.fixtureId;
     if (!fixtureId) { this.#renderNotFound(); return; }
 
-    const [fixtures, knockoutRounds, countries, standings] = await Promise.all([
+    const [fixtures, knockoutRounds, countries, standings, matchEvents] = await Promise.all([
       DataManager.loadFixtures(),
       DataManager.loadKnockout(),
       DataManager.loadCountries(),
       DataManager.loadStandings(),
+      DataManager.loadMatchEvents(),
     ]);
 
     let fixture    = fixtures.find(f => f.id === fixtureId) ?? null;
@@ -72,7 +69,7 @@ export class MatchCentre {
 
     this.#container.innerHTML = this.#buildPage(
       fixture, home, away, isKnockout, roundLabel, groupStandings, countryMap,
-      homeCaptain, awayCaptain, playerPhotos, allFixtures, standings
+      homeCaptain, awayCaptain, playerPhotos, allFixtures, standings, matchEvents
     );
 
     // Radar charts require real DOM elements — render after innerHTML
@@ -89,7 +86,8 @@ export class MatchCentre {
   // ─── Page template ────────────────────────────────────────
 
   #buildPage(fixture, home, away, isKnockout, roundLabel, groupStandings, countryMap,
-             homeCaptain, awayCaptain, playerPhotos, allFixtures = [], allStandings = []) {
+             homeCaptain, awayCaptain, playerPhotos, allFixtures = [], allStandings = [],
+             matchEvents = null) {
     const isLive   = fixture.status === 'live';
     const isFT     = fixture.status === 'FT';
     const hasScore = isLive || isFT;
@@ -128,7 +126,7 @@ export class MatchCentre {
       : `<span class="mc-team__flag-placeholder"></span>`;
 
     const venuePart       = fixture.venue ? `<span class="mc-venue">${escapeHtml(fixture.venue)}</span>` : '';
-    const broadcasterPart = this.#broadcasterHtml(fixture.broadcaster);
+    const broadcasterPart = broadcasterBadge(fixture.broadcaster, fixture.status);
     const metaHtml        = (venuePart || broadcasterPart)
       ? `<div class="mc-meta">${venuePart}${broadcasterPart}</div>`
       : '';
@@ -146,6 +144,12 @@ export class MatchCentre {
     const standingsHtml = groupStandings
       ? this.#buildStandings(groupStandings, homeId, awayId, countryMap)
       : '';
+
+    // V3 — goals timeline and MOTM for completed matches
+    const goalsHtml = isFT
+      ? this.#buildGoalsSection(fixture.id, matchEvents, home, away) : '';
+    const motmHtml  = isFT
+      ? this.#buildMotmSection(fixture.id, matchEvents, countryMap) : '';
 
     return `
       <div class="page-content mc-page">
@@ -165,6 +169,8 @@ export class MatchCentre {
           </div>
         </div>
         ${metaHtml}
+        ${goalsHtml}
+        ${motmHtml}
         ${formHtml}
         ${stakeHtml}
         ${standingsHtml}
@@ -427,14 +433,50 @@ export class MatchCentre {
       </section>`;
   }
 
-  // ─── Broadcaster link ─────────────────────────────────────
+  // ─── V3: Goals timeline ───────────────────────────────────
 
-  #broadcasterHtml(broadcaster) {
-    if (!broadcaster) return '';
-    const b = BROADCASTERS[broadcaster];
-    if (!b) return '';
-    return `<a href="${b.href}" target="_blank" rel="noopener noreferrer"
-               class="mc-broadcaster mc-broadcaster--${b.mod}">${escapeHtml(broadcaster)}</a>`;
+  #buildGoalsSection(fixtureId, matchEvents, home, away) {
+    const entry = matchEvents?.data?.[fixtureId];
+    if (!entry) return '';
+
+    const goals = (entry.events ?? []).filter(e => e.type === 'goal');
+
+    const rowsHtml = goals.length === 0
+      ? `<p class="mc-goals__none">No goals scored</p>`
+      : goals.map(e => this.#buildGoalRow(e, home, away)).join('');
+
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Goals</h2>
+        <div class="mc-goals">${rowsHtml}</div>
+      </div>`;
+  }
+
+  #buildGoalRow(event, home, away) {
+    const isHome = event.teamId === home?.id;
+    const scorer = escapeHtml(event.scorer ?? '');
+    const minute = escapeHtml(event.minute ?? '');
+    const assist = event.assistBy
+      ? ` <span class="mc-goal__assist">(${escapeHtml(event.assistBy)})</span>` : '';
+
+    const cell = `&#9917; ${minute}' ${scorer}${assist}`;
+
+    return `
+      <div class="mc-goal-row">
+        <div class="mc-goal-row__home">${isHome ? cell : ''}</div>
+        <div class="mc-goal-row__away">${isHome ? '' : cell}</div>
+      </div>`;
+  }
+
+  #buildMotmSection(fixtureId, matchEvents, countryMap) {
+    const entry = matchEvents?.data?.[fixtureId];
+    if (!entry?.motm) return '';
+
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Man of the Match</h2>
+        <p class="mc-motm">${escapeHtml(entry.motm)}</p>
+      </div>`;
   }
 
   #renderNotFound() {

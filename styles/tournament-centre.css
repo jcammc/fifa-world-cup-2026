@@ -159,30 +159,11 @@
   white-space: nowrap;
 }
 
-/* ─── Broadcaster badges (rail + strip) ───────────────────── */
+/* ─── Broadcaster logo badges (rail + strip) ──────────────── */
 .tc-rail-card__broadcaster,
 .tc-strip-card__broadcaster {
-  display: inline-block;
-  margin-top: var(--space-1);
-  padding: 1px 5px;
-  border-radius: 3px;
-  font-size: 9px;
-  font-weight: var(--font-weight-bold);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-}
-
-.tc-rail-card__broadcaster--bbc,
-.tc-strip-card__broadcaster--bbc {
-  background: #bb1919;
-  color: #fff;
-}
-
-.tc-rail-card__broadcaster--itv,
-.tc-strip-card__broadcaster--itv {
-  background: #111;
-  color: #fff;
+  display: block;
+  margin-top: var(--space-2);
 }
 
 /* ─── Mobile fixture strip ────────────────────────────────── */

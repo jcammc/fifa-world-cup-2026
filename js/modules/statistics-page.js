@@ -16,11 +16,12 @@ export class StatisticsPage {
         </div>
       </div>`;
 
-    const [countries, clubs, leagues, allPlayers] = await Promise.all([
+    const [countries, clubs, leagues, allPlayers, matchEvents] = await Promise.all([
       DataManager.loadCountries(),
       DataManager.loadClubs(),
       DataManager.loadLeagues(),
       DataManager.loadAllPlayers(),
+      DataManager.loadMatchEvents(),
     ]);
 
     const countryMap = new Map(countries.map(c => [c.id, c]));
@@ -34,12 +35,67 @@ export class StatisticsPage {
           <p class="sp-header__sub">World Cup 2026 · ${allPlayers.length.toLocaleString()} players · 48 nations</p>
         </div>
         <div class="sp-sections">
+          ${this.#renderTournamentScorers(matchEvents, countryMap)}
           ${this.#renderExperience(allPlayers, countries)}
           ${this.#renderScorers(allPlayers, countryMap)}
           ${this.#renderDemographics(allPlayers, countryMap)}
           ${this.#renderRepresentation(allPlayers, clubMap, leagueMap)}
         </div>
       </div>`;
+  }
+
+  // ─── Section 0: Tournament Top Scorers ────────────────────
+
+  #renderTournamentScorers(matchEvents, countryMap) {
+    if (!matchEvents?.data) return '';
+
+    const scorerMap = new Map();
+    for (const match of Object.values(matchEvents.data)) {
+      for (const event of (match.events ?? [])) {
+        if (event.type !== 'goal' || !event.scorer) continue;
+        const key = `${event.scorer}::${event.teamId ?? ''}`;
+        const entry = scorerMap.get(key)
+          ?? { scorer: event.scorer, teamId: event.teamId ?? null, goals: 0 };
+        entry.goals++;
+        scorerMap.set(key, entry);
+      }
+    }
+
+    const sorted = [...scorerMap.values()].sort((a, b) => b.goals - a.goals).slice(0, 20);
+    if (!sorted.length) return '';
+
+    const totalGoals = [...scorerMap.values()].reduce((s, e) => s + e.goals, 0);
+    const topGoals   = sorted[0].goals;
+
+    const rows = sorted.map((s, i) => {
+      const country = countryMap.get(s.teamId);
+      const flagHtml = country
+        ? `<img src="assets/flags/${escapeHtml(country.id)}.svg" alt="" class="sp-row__flag"
+                width="20" height="14" onerror="this.style.display='none'">`
+        : `<span class="sp-row__flag-ph"></span>`;
+      const teamName = country ? escapeHtml(country.name) : escapeHtml(s.teamId ?? '');
+      const bars = '⚽'.repeat(Math.min(s.goals, 8));
+      return `
+        <div class="sp-scorer-row">
+          <span class="ts-player-row__rank">${i + 1}</span>
+          ${flagHtml}
+          <span class="sp-scorer-row__name">${escapeHtml(s.scorer)}</span>
+          <span class="sp-scorer-row__team">${teamName}</span>
+          <span class="sp-scorer-row__goals">${s.goals}</span>
+        </div>`;
+    }).join('');
+
+    return `
+      <section class="tp-section">
+        <h2 class="tp-section__title">Tournament Top Scorers</h2>
+        <div class="ts-headlines">
+          ${this.#statCard(totalGoals.toLocaleString(), 'Goals scored')}
+          ${this.#statCard(topGoals.toLocaleString(), 'Most by one player')}
+          ${this.#statCard(scorerMap.size.toLocaleString(), 'Different scorers')}
+        </div>
+        <p class="sp-caveat">Goals from completed group &amp; knockout matches · updated after each round</p>
+        <div class="sp-scorer-list">${rows}</div>
+      </section>`;
   }
 
   // ─── Section 1: Squad Experience ──────────────────────────

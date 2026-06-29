@@ -4,6 +4,7 @@ import { escapeHtml } from '../utils.js';
 import { GroupCarousel } from './group-carousel.js';
 import { KnockoutBracket } from './knockout-bracket.js';
 import { deriveQualificationStatus } from '../tournament-state.js';
+import { broadcasterBadge } from '../broadcasters.js';
 
 const POLL_INTERVAL_MS = 50_000;
 
@@ -367,7 +368,7 @@ export class TournamentCentre {
       ? `<span class="tc-strip-card__badge${isLive ? ' tc-strip-card__badge--live' : ''}">${isLive ? '<span class="live-dot live-dot--sm" aria-hidden="true"></span> LIVE' : 'FT'}</span>`
       : `<span class="tc-strip-card__time">${escapeHtml(formatKickoff(f.kickoff))}</span>`;
 
-    const broadcasterHtml = this.#broadcasterHtml(f.broadcaster, 'tc-strip-card__broadcaster');
+    const broadcasterHtml = broadcasterBadge(f.broadcaster, f.status, { extraClass: 'tc-strip-card__broadcaster', stopProp: true });
 
     return `
       <a href="#match/${escapeHtml(f.id)}" class="tc-strip-card${isLive ? ' tc-strip-card--live' : ''}">
@@ -444,7 +445,7 @@ export class TournamentCentre {
     const venueHtml       = (!hasScore && f.venue)
       ? `<p class="tc-rail-card__venue">${escapeHtml(f.venue)}</p>`
       : '';
-    const broadcasterHtml = this.#broadcasterHtml(f.broadcaster, 'tc-rail-card__broadcaster');
+    const broadcasterHtml = broadcasterBadge(f.broadcaster, f.status, { extraClass: 'tc-rail-card__broadcaster', stopProp: true });
 
     return `
       <a href="#match/${escapeHtml(f.id)}" class="tc-rail-card${isLive ? ' tc-rail-card--live' : ''}">
@@ -455,18 +456,6 @@ export class TournamentCentre {
       </a>`;
   }
 
-  #broadcasterHtml(broadcaster, cls) {
-    if (!broadcaster) return '';
-    const BROADCASTERS = {
-      BBC: { href: 'https://www.bbc.co.uk/iplayer/live/bbcone', mod: 'bbc' },
-      ITV: { href: 'https://www.itv.com/watch?channel=itv',     mod: 'itv' },
-    };
-    const b = BROADCASTERS[broadcaster];
-    if (!b) return '';
-    return `<a href="${b.href}" target="_blank" rel="noopener noreferrer"
-               class="${escapeHtml(cls)} ${escapeHtml(cls)}--${b.mod}"
-               onclick="event.stopPropagation()">${escapeHtml(broadcaster)}</a>`;
-  }
 
   // ─── Shared helpers ────────────────────────────────────────
 

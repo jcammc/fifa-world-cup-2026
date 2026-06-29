@@ -1,0 +1,2007 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-06-29T16:15:10.303Z",
+  "data": {
+    "a-r1-mex-rsa": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "9",
+          "teamId": "mexico",
+          "scorer": "Quiñones",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "67",
+          "teamId": "mexico",
+          "scorer": "Jiménez",
+          "assistBy": null
+        }
+      ],
+      "motm": "Julián Quiñones",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "a-r2-mex-kor": {
+      "events": [],
+      "motm": "Luis Romo",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "a-r3-rsa-kor": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "63",
+          "teamId": "south-africa",
+          "scorer": "Maseko",
+          "assistBy": null
+        }
+      ],
+      "motm": "Thapelo Maseko",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "b-r1-can-bih": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "21",
+          "teamId": "bosnia-herzegovina",
+          "scorer": "Lukić",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "78",
+          "teamId": "canada",
+          "scorer": "Larin",
+          "assistBy": null
+        }
+      ],
+      "motm": "Ismaël Koné",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "b-r1-qat-sui": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "17",
+          "teamId": "switzerland",
+          "scorer": "Embolo",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+4",
+          "teamId": "qatar",
+          "scorer": "Muheim",
+          "assistBy": null
+        }
+      ],
+      "motm": "Mahmud Abunada",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "b-r2-sui-bih": {
+      "events": [],
+      "motm": "Johan Manzambi",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "b-r2-can-qat": {
+      "events": [],
+      "motm": "Jonathan David",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "b-r3-sui-can": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "46",
+          "teamId": "switzerland",
+          "scorer": "Vargas",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "57",
+          "teamId": "switzerland",
+          "scorer": "Manzambi",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "76",
+          "teamId": "canada",
+          "scorer": "P. David",
+          "assistBy": null
+        }
+      ],
+      "motm": "Johan Manzambi",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "b-r3-bih-qat": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "29",
+          "teamId": "bosnia-herzegovina",
+          "scorer": "Alajbegović",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "34",
+          "teamId": "bosnia-herzegovina",
+          "scorer": "Abunada",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "42",
+          "teamId": "qatar",
+          "scorer": "Al-Haydos",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "80",
+          "teamId": "bosnia-herzegovina",
+          "scorer": "Mahmić",
+          "assistBy": null
+        }
+      ],
+      "motm": "Kerim Alajbegović",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "c-r1-bra-mor": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "21",
+          "teamId": "morocco",
+          "scorer": "Saibari",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "32",
+          "teamId": "brazil",
+          "scorer": "Vinícius",
+          "assistBy": null
+        }
+      ],
+      "motm": "Vinícius Júnior",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "c-r1-hai-sco": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "28",
+          "teamId": "scotland",
+          "scorer": "McGinn",
+          "assistBy": null
+        }
+      ],
+      "motm": "John McGinn",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "c-r2-sco-mor": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "2",
+          "teamId": "morocco",
+          "scorer": "Saibari",
+          "assistBy": null
+        }
+      ],
+      "motm": "Ismael Saibari",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "c-r2-bra-hai": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "23",
+          "teamId": "brazil",
+          "scorer": "Cunha",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "36",
+          "teamId": "brazil",
+          "scorer": "Cunha",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+3",
+          "teamId": "brazil",
+          "scorer": "Vinícius",
+          "assistBy": null
+        }
+      ],
+      "motm": "Vinícius Júnior",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "c-r3-sco-bra": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "brazil",
+          "scorer": "Vinícius",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+3",
+          "teamId": "brazil",
+          "scorer": "Vinícius",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "60",
+          "teamId": "brazil",
+          "scorer": "Cunha",
+          "assistBy": null
+        }
+      ],
+      "motm": "Vinícius Júnior",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "c-r3-mor-hai": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "10",
+          "teamId": "haiti",
+          "scorer": "Bounou",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "39",
+          "teamId": "morocco",
+          "scorer": "Hakimi",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "43",
+          "teamId": "haiti",
+          "scorer": "Isidor",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+1",
+          "teamId": "morocco",
+          "scorer": "Saibari",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "78",
+          "teamId": "morocco",
+          "scorer": "Rahimi",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "89",
+          "teamId": "morocco",
+          "scorer": "Yassine",
+          "assistBy": null
+        }
+      ],
+      "motm": "Achraf Hakimi",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "d-r1-usa-par": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "usa",
+          "scorer": "Bobadilla",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "31",
+          "teamId": "usa",
+          "scorer": "Balogun",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+5",
+          "teamId": "usa",
+          "scorer": "Balogun",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "73",
+          "teamId": "paraguay",
+          "scorer": "Maurício",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+8",
+          "teamId": "usa",
+          "scorer": "Reyna",
+          "assistBy": null
+        }
+      ],
+      "motm": "Folarin Balogun",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "d-r1-aus-tur": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "27",
+          "teamId": "australia",
+          "scorer": "Irankunda",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "75",
+          "teamId": "australia",
+          "scorer": "Metcalfe",
+          "assistBy": null
+        }
+      ],
+      "motm": "Nestory Irankunda",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "e-r1-civ-ecu": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "90",
+          "teamId": "ivory-coast",
+          "scorer": "Diallo",
+          "assistBy": null
+        }
+      ],
+      "motm": "Yan Diomande",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "e-r2-ger-civ": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "30",
+          "teamId": "ivory-coast",
+          "scorer": "Kessié",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "68",
+          "teamId": "germany",
+          "scorer": "Undav",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+4",
+          "teamId": "germany",
+          "scorer": "Undav",
+          "assistBy": null
+        }
+      ],
+      "motm": "Deniz Undav",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "e-r3-ecu-ger": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "2",
+          "teamId": "germany",
+          "scorer": "Sané",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "9",
+          "teamId": "ecuador",
+          "scorer": "Angulo",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "77",
+          "teamId": "ecuador",
+          "scorer": "Plata",
+          "assistBy": null
+        }
+      ],
+      "motm": "Nilson Angulo",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "f-r1-ned-jpn": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "51",
+          "teamId": "netherlands",
+          "scorer": "Van Dijk",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "57",
+          "teamId": "japan",
+          "scorer": "Nakamura",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "64",
+          "teamId": "netherlands",
+          "scorer": "Summerville",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "88",
+          "teamId": "japan",
+          "scorer": "Kamada",
+          "assistBy": null
+        }
+      ],
+      "motm": "Virgil van Dijk",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "f-r1-swe-tun": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "sweden",
+          "scorer": "Ayari",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "30",
+          "teamId": "sweden",
+          "scorer": "Isak",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "43",
+          "teamId": "tunisia",
+          "scorer": "Rekik",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "59",
+          "teamId": "sweden",
+          "scorer": "Gyökeres",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "84",
+          "teamId": "sweden",
+          "scorer": "Svanberg",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+6",
+          "teamId": "sweden",
+          "scorer": "Ayari",
+          "assistBy": null
+        }
+      ],
+      "motm": "Alexander Isak",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "f-r2-ned-swe": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "5",
+          "teamId": "netherlands",
+          "scorer": "Brobbey",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "17",
+          "teamId": "netherlands",
+          "scorer": "Brobbey",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "47",
+          "teamId": "netherlands",
+          "scorer": "Gakpo",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "54",
+          "teamId": "netherlands",
+          "scorer": "Gakpo",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "59",
+          "teamId": "sweden",
+          "scorer": "Elanga",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "89",
+          "teamId": "netherlands",
+          "scorer": "Summerville",
+          "assistBy": null
+        }
+      ],
+      "motm": "Cody Gakpo",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "f-r2-tun-jpn": {
+      "events": [],
+      "motm": "Ayase Ueda",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "f-r3-jpn-swe": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "56",
+          "teamId": "japan",
+          "scorer": "Maeda",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "62",
+          "teamId": "sweden",
+          "scorer": "Elanga",
+          "assistBy": null
+        }
+      ],
+      "motm": "Anthony Elanga",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "f-r3-tun-ned": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "3",
+          "teamId": "netherlands",
+          "scorer": "Skhiri",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "netherlands",
+          "scorer": "Brobbey",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "54",
+          "teamId": "tunisia",
+          "scorer": "Mastouri",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "62",
+          "teamId": "netherlands",
+          "scorer": "Van Hecke",
+          "assistBy": null
+        }
+      ],
+      "motm": "Brian Brobbey",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "g-r1-bel-egy": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "19",
+          "teamId": "egypt",
+          "scorer": "Ashour",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "66",
+          "teamId": "belgium",
+          "scorer": "Hany",
+          "assistBy": null
+        }
+      ],
+      "motm": "Emam Ashour",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "g-r1-irn-nzl": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "new-zealand",
+          "scorer": "Just",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "32",
+          "teamId": "iran",
+          "scorer": "Rezaeian",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "54",
+          "teamId": "new-zealand",
+          "scorer": "Just",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "64",
+          "teamId": "iran",
+          "scorer": "Mohebi",
+          "assistBy": null
+        }
+      ],
+      "motm": "Ramin Rezaeian",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "g-r2-bel-irn": {
+      "events": [],
+      "motm": "Alireza Beiranvand",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "g-r2-nzl-egy": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "15",
+          "teamId": "new-zealand",
+          "scorer": "Surman",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "58",
+          "teamId": "egypt",
+          "scorer": "Ziko",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "67",
+          "teamId": "egypt",
+          "scorer": "Salah",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "82",
+          "teamId": "egypt",
+          "scorer": "Trézéguet",
+          "assistBy": null
+        }
+      ],
+      "motm": "Mohamed Salah",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "g-r3-egy-irn": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "5",
+          "teamId": "egypt",
+          "scorer": "Saber",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "14",
+          "teamId": "iran",
+          "scorer": "Rezaeian",
+          "assistBy": null
+        }
+      ],
+      "motm": "Ramin Rezaeian",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "g-r3-nzl-bel": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "28",
+          "teamId": "belgium",
+          "scorer": "Trossard",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "50",
+          "teamId": "belgium",
+          "scorer": "Trossard",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "66",
+          "teamId": "belgium",
+          "scorer": "De Bruyne",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "84",
+          "teamId": "new-zealand",
+          "scorer": "Just",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "86",
+          "teamId": "belgium",
+          "scorer": "Lukaku",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+4",
+          "teamId": "belgium",
+          "scorer": "Saelemaekers",
+          "assistBy": null
+        }
+      ],
+      "motm": "Leandro Trossard",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "h-r1-esp-cpv": {
+      "events": [],
+      "motm": "Vozinha",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "h-r1-ksa-uru": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "41",
+          "teamId": "saudi-arabia",
+          "scorer": "Al-Amri",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "80",
+          "teamId": "uruguay",
+          "scorer": "M. Araújo",
+          "assistBy": null
+        }
+      ],
+      "motm": "Federico Valverde",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "h-r2-esp-ksa": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "10",
+          "teamId": "spain",
+          "scorer": "Yamal",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "21",
+          "teamId": "spain",
+          "scorer": "Oyarzabal",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "24",
+          "teamId": "spain",
+          "scorer": "Oyarzabal",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "49",
+          "teamId": "spain",
+          "scorer": "Al-Tambakti",
+          "assistBy": null
+        }
+      ],
+      "motm": "Mikel Oyarzabal",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "h-r2-uru-cpv": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "21",
+          "teamId": "cape-verde",
+          "scorer": "K. Pina",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "44",
+          "teamId": "uruguay",
+          "scorer": "M. Araújo",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+6",
+          "teamId": "uruguay",
+          "scorer": "Canobbio",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "61",
+          "teamId": "cape-verde",
+          "scorer": "Varela",
+          "assistBy": null
+        }
+      ],
+      "motm": "Kevin Pina",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "h-r3-cpv-ksa": {
+      "events": [],
+      "motm": "Deroy Duarte",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "h-r3-uru-esp": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "42",
+          "teamId": "spain",
+          "scorer": "Baena",
+          "assistBy": null
+        }
+      ],
+      "motm": "Álex Baena",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "i-r1-fra-sen": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "66",
+          "teamId": "france",
+          "scorer": "Mbappé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "82",
+          "teamId": "france",
+          "scorer": "Barcola",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+5",
+          "teamId": "senegal",
+          "scorer": "Mbaye",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+6",
+          "teamId": "france",
+          "scorer": "Mbappé",
+          "assistBy": null
+        }
+      ],
+      "motm": "Michael Olise",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "i-r1-irq-nor": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "29",
+          "teamId": "norway",
+          "scorer": "Haaland",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "39",
+          "teamId": "iraq",
+          "scorer": "Hussein",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "43",
+          "teamId": "norway",
+          "scorer": "Haaland",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "76",
+          "teamId": "norway",
+          "scorer": "Østigård",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+6",
+          "teamId": "norway",
+          "scorer": "Hussein",
+          "assistBy": null
+        }
+      ],
+      "motm": "Erling Haaland",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "i-r2-fra-irq": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "14",
+          "teamId": "france",
+          "scorer": "Mbappé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "54",
+          "teamId": "france",
+          "scorer": "Mbappé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "66",
+          "teamId": "france",
+          "scorer": "Dembélé",
+          "assistBy": null
+        }
+      ],
+      "motm": "Kylian Mbappé",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "i-r2-nor-sen": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "43",
+          "teamId": "norway",
+          "scorer": "Pedersen",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "48",
+          "teamId": "norway",
+          "scorer": "Haaland",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "53",
+          "teamId": "senegal",
+          "scorer": "I. Sarr",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "58",
+          "teamId": "norway",
+          "scorer": "Haaland",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+3",
+          "teamId": "senegal",
+          "scorer": "I. Sarr",
+          "assistBy": null
+        }
+      ],
+      "motm": "Erling Haaland",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "i-r3-nor-fra": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "france",
+          "scorer": "Dembélé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "20",
+          "teamId": "france",
+          "scorer": "Dembélé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "21",
+          "teamId": "norway",
+          "scorer": "Aasgaard",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "32",
+          "teamId": "france",
+          "scorer": "Dembélé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+4",
+          "teamId": "france",
+          "scorer": "Doué",
+          "assistBy": null
+        }
+      ],
+      "motm": "Ousmane Dembélé",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "i-r3-sen-irq": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "4",
+          "teamId": "senegal",
+          "scorer": "Diarra",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "56",
+          "teamId": "senegal",
+          "scorer": "I. Sarr",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "59",
+          "teamId": "senegal",
+          "scorer": "P. Gueye",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "71",
+          "teamId": "senegal",
+          "scorer": "P. Gueye",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "82",
+          "teamId": "senegal",
+          "scorer": "I. Ndiaye",
+          "assistBy": null
+        }
+      ],
+      "motm": "Pape Gueye",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "j-r1-arg-alg": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "17",
+          "teamId": "argentina",
+          "scorer": "Messi",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "60",
+          "teamId": "argentina",
+          "scorer": "Messi",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "76",
+          "teamId": "argentina",
+          "scorer": "Messi",
+          "assistBy": null
+        }
+      ],
+      "motm": "Lionel Messi",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "j-r2-arg-aut": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "38",
+          "teamId": "argentina",
+          "scorer": "Messi",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+5",
+          "teamId": "argentina",
+          "scorer": "Messi",
+          "assistBy": null
+        }
+      ],
+      "motm": "Lionel Messi",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "j-r3-alg-aut": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "28",
+          "teamId": "austria",
+          "scorer": "Arnautović",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45",
+          "teamId": "algeria",
+          "scorer": "Belghali",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "55",
+          "teamId": "austria",
+          "scorer": "Sabitzer",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "60",
+          "teamId": "algeria",
+          "scorer": "Mahrez",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+3",
+          "teamId": "algeria",
+          "scorer": "Mahrez",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+6",
+          "teamId": "austria",
+          "scorer": "Kalajdžić",
+          "assistBy": null
+        }
+      ],
+      "motm": "Riyad Mahrez",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "a-r1-kor-cze": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "59",
+          "teamId": "czech-republic",
+          "scorer": "Krejčí",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "67",
+          "teamId": "south-korea",
+          "scorer": "Hwang In-beom",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "80",
+          "teamId": "south-korea",
+          "scorer": "Oh Hyeon-gyu",
+          "assistBy": null
+        }
+      ],
+      "motm": "Hwang In-beom",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "a-r2-cze-rsa": {
+      "events": [],
+      "motm": "Ladislav Krejčí",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "a-r3-cze-mex": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "55",
+          "teamId": "mexico",
+          "scorer": "M. Chávez",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "61",
+          "teamId": "mexico",
+          "scorer": "Quiñones",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+4",
+          "teamId": "mexico",
+          "scorer": "Fidalgo",
+          "assistBy": null
+        }
+      ],
+      "motm": "Mateo Chávez",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "e-r1-ger-cur": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "6",
+          "teamId": "germany",
+          "scorer": "Nmecha",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "21",
+          "teamId": "curacao",
+          "scorer": "Comenencia",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "38",
+          "teamId": "germany",
+          "scorer": "Schlotterbeck",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+5",
+          "teamId": "germany",
+          "scorer": "Havertz",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "47",
+          "teamId": "germany",
+          "scorer": "Musiala",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "68",
+          "teamId": "germany",
+          "scorer": "Brown",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "78",
+          "teamId": "germany",
+          "scorer": "Undav",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "88",
+          "teamId": "germany",
+          "scorer": "Havertz",
+          "assistBy": null
+        }
+      ],
+      "motm": "Kai Havertz",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "e-r2-ecu-cur": {
+      "events": [],
+      "motm": "Eloy Room",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "e-r3-cur-civ": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "ivory-coast",
+          "scorer": "Pépé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "64",
+          "teamId": "ivory-coast",
+          "scorer": "Pépé",
+          "assistBy": null
+        }
+      ],
+      "motm": "Nicolas Pépé",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "j-r1-aut-jor": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "20",
+          "teamId": "austria",
+          "scorer": "Schmid",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "50",
+          "teamId": "jordan",
+          "scorer": "Olwan",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "76",
+          "teamId": "austria",
+          "scorer": "Al-Arab",
+          "assistBy": null
+        }
+      ],
+      "motm": "Ali Olwan",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "j-r2-jor-alg": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "36",
+          "teamId": "jordan",
+          "scorer": "Al-Rashdan",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "69",
+          "teamId": "algeria",
+          "scorer": "Benbouali",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "82",
+          "teamId": "algeria",
+          "scorer": "Gouiri",
+          "assistBy": null
+        }
+      ],
+      "motm": "Ibrahim Maza",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "j-r3-jor-arg": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "19",
+          "teamId": "argentina",
+          "scorer": "Lo Celso",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "31",
+          "teamId": "argentina",
+          "scorer": "La. Martínez",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "55",
+          "teamId": "jordan",
+          "scorer": "Al-Taamari",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "80",
+          "teamId": "argentina",
+          "scorer": "Messi",
+          "assistBy": null
+        }
+      ],
+      "motm": "Giovani Lo Celso",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "l-r1-eng-cro": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "12",
+          "teamId": "england",
+          "scorer": "Kane",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "36",
+          "teamId": "croatia",
+          "scorer": "Baturina",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "42",
+          "teamId": "england",
+          "scorer": "Kane",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+5",
+          "teamId": "croatia",
+          "scorer": "Musa",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "47",
+          "teamId": "england",
+          "scorer": "Bellingham",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "85",
+          "teamId": "england",
+          "scorer": "Rashford",
+          "assistBy": null
+        }
+      ],
+      "motm": "Harry Kane",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "l-r1-gha-pan": {
+      "events": [],
+      "motm": "Antoine Semenyo",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "l-r2-eng-gha": {
+      "events": [],
+      "motm": "Jude Bellingham",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "l-r2-pan-cro": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "54",
+          "teamId": "croatia",
+          "scorer": "Budimir",
+          "assistBy": null
+        }
+      ],
+      "motm": "Cristian Martínez",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "l-r3-pan-eng": {
+      "events": [],
+      "motm": "Jude Bellingham",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "l-r3-cro-gha": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "31",
+          "teamId": "croatia",
+          "scorer": "P. Sučić",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "73",
+          "teamId": "ghana",
+          "scorer": "Luckassen",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "83",
+          "teamId": "croatia",
+          "scorer": "Vlašić",
+          "assistBy": null
+        }
+      ],
+      "motm": "Petar Sučić",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m1": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "90+2",
+          "teamId": "canada",
+          "scorer": "Eustáquio",
+          "assistBy": null
+        }
+      ],
+      "motm": "Stephen Eustáquio",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m4": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m2": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m3": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m6": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m5": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m7": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m8": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m10": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m9": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m12": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m11": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m13": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m16": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m14": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "r32-m15": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "k-r1-por-cod": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "6",
+          "teamId": "portugal",
+          "scorer": "J. Neves",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "45+5",
+          "teamId": "dr-congo",
+          "scorer": "Wissa",
+          "assistBy": null
+        }
+      ],
+      "motm": "João Neves",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "k-r1-uzb-col": {
+      "events": [],
+      "motm": "Luis Díaz",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "k-r2-por-uzb": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "6",
+          "teamId": "portugal",
+          "scorer": "Ronaldo",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "17",
+          "teamId": "portugal",
+          "scorer": "Mendes",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "39",
+          "teamId": "portugal",
+          "scorer": "Ronaldo",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "60",
+          "teamId": "portugal",
+          "scorer": "Nematov",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "87",
+          "teamId": "portugal",
+          "scorer": "Leão",
+          "assistBy": null
+        }
+      ],
+      "motm": "Cristiano Ronaldo",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "k-r2-col-cod": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "76",
+          "teamId": "colombia",
+          "scorer": "Muñoz",
+          "assistBy": null
+        }
+      ],
+      "motm": "Daniel Muñoz",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "k-r3-col-por": {
+      "events": [],
+      "motm": "Diogo Costa",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    },
+    "k-r3-cod-uzb": {
+      "events": [
+        {
+          "type": "goal",
+          "minute": "10",
+          "teamId": "uzbekistan",
+          "scorer": "Shomurodov",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "68",
+          "teamId": "dr-congo",
+          "scorer": "Wissa",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "78",
+          "teamId": "dr-congo",
+          "scorer": "Mayele",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+1",
+          "teamId": "dr-congo",
+          "scorer": "Wissa",
+          "assistBy": null
+        }
+      ],
+      "motm": "Yoane Wissa",
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": []
+    }
+  }
+}

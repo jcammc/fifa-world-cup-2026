@@ -20,7 +20,7 @@
 /* ─── Round columns row ──────────────────────────────────── */
 .bracket-rounds {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-8);
   align-items: stretch;
   min-width: max-content;
 }
@@ -29,7 +29,7 @@
 .bracket-round {
   display: flex;
   flex-direction: column;
-  width: 180px;
+  width: 220px;
   flex-shrink: 0;
 }
 
@@ -90,9 +90,9 @@
 .bracket-pair .bracket-match::after {
   content: '';
   position: absolute;
-  right: -6px;
+  right: -16px;
   top: 50%;
-  width: 6px;
+  width: 16px;
   height: 1px;
   background: var(--color-border);
   pointer-events: none;
@@ -102,7 +102,7 @@
 .bracket-pair::after {
   content: '';
   position: absolute;
-  right: -6px;
+  right: -16px;
   top: 24%;
   height: 52%;
   width: 1px;
@@ -114,9 +114,9 @@
 .bracket-rounds .bracket-round:not(:first-child) .bracket-match::before {
   content: '';
   position: absolute;
-  left: -6px;
+  left: -16px;
   top: 50%;
-  width: 6px;
+  width: 16px;
   height: 1px;
   background: var(--color-border);
   pointer-events: none;
@@ -319,12 +319,12 @@
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 640px) {
   .bracket-round {
-    width: 160px;
+    width: 190px;
   }
   .bracket-round[data-round="qf"],
   .bracket-round[data-round="sf"],
   .bracket-round[data-round="final"] {
-    width: 175px;
+    width: 200px;
   }
   .bracket-team__name {
     font-size: 10px;

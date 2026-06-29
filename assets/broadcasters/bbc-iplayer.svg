@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 26" role="img" aria-label="BBC iPlayer">
+  <title>BBC iPlayer</title>
+  <!-- Black background, matching bbc.co.uk favicon -->
+  <rect width="72" height="26" rx="3" fill="#000"/>
+  <!-- Three white blocks -->
+  <rect x="2"  y="2" width="22" height="22" rx="1" fill="#fff"/>
+  <rect x="26" y="2" width="22" height="22" rx="1" fill="#fff"/>
+  <rect x="50" y="2" width="22" height="22" rx="1" fill="#fff"/>
+  <!-- BBC letters -->
+  <text x="13"  y="18" font-family="'Arial Black','Arial',sans-serif" font-weight="900" font-size="15" text-anchor="middle" fill="#000">B</text>
+  <text x="37"  y="18" font-family="'Arial Black','Arial',sans-serif" font-weight="900" font-size="15" text-anchor="middle" fill="#000">B</text>
+  <text x="61"  y="18" font-family="'Arial Black','Arial',sans-serif" font-weight="900" font-size="15" text-anchor="middle" fill="#000">C</text>
+</svg>

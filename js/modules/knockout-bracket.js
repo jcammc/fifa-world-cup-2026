@@ -171,7 +171,7 @@ export class KnockoutBracket {
           ? ''
           : `<span class="bracket-team__score bracket-team__score--confirmed">&#10003;</span>`;
       return `
-        <div class="bracket-team bracket-team--confirmed">
+        <div class="bracket-team ${hideUnplayedTick ? '' : 'bracket-team--confirmed'}">
           ${flagHtml}
           <span class="bracket-team__name">${name}</span>
           ${scoreHtml}

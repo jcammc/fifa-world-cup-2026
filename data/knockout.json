@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-28T19:58:37.738Z",
+  "lastUpdated": "2026-06-29T00:00:00.000Z",
   "data": [
     {
       "id": "r32",
@@ -16,7 +16,8 @@
           "awayScore": 0,
           "kickoff": "2026-06-28T19:00:00Z",
           "status": "live",
-          "venue": "SoFi Stadium, Inglewood"
+          "venue": "SoFi Stadium, Inglewood",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m2",
@@ -28,7 +29,8 @@
           "awayScore": null,
           "kickoff": "2026-06-29T20:30:00Z",
           "status": "scheduled",
-          "venue": "Gillette Stadium, Foxborough"
+          "venue": "Gillette Stadium, Foxborough",
+          "broadcaster": "BBC"
         },
         {
           "id": "r32-m3",
@@ -40,7 +42,8 @@
           "awayScore": null,
           "kickoff": "2026-06-30T01:00:00Z",
           "status": "scheduled",
-          "venue": "Estadio BBVA, Guadalupe"
+          "venue": "Estadio BBVA, Guadalupe",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m4",
@@ -52,7 +55,8 @@
           "awayScore": null,
           "kickoff": "2026-06-29T17:00:00Z",
           "status": "scheduled",
-          "venue": "NRG Stadium, Houston"
+          "venue": "NRG Stadium, Houston",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m5",
@@ -64,7 +68,8 @@
           "awayScore": null,
           "kickoff": "2026-06-30T21:00:00Z",
           "status": "scheduled",
-          "venue": "MetLife Stadium, East Rutherford"
+          "venue": "MetLife Stadium, East Rutherford",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m6",
@@ -76,7 +81,8 @@
           "awayScore": null,
           "kickoff": "2026-06-30T17:00:00Z",
           "status": "scheduled",
-          "venue": "AT&T Stadium, Arlington"
+          "venue": "AT&T Stadium, Arlington",
+          "broadcaster": "BBC"
         },
         {
           "id": "r32-m7",
@@ -88,7 +94,8 @@
           "awayScore": null,
           "kickoff": "2026-07-01T01:00:00Z",
           "status": "scheduled",
-          "venue": "Estadio Azteca, Mexico City"
+          "venue": "Estadio Azteca, Mexico City",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m8",
@@ -100,7 +107,8 @@
           "awayScore": null,
           "kickoff": "2026-07-01T16:00:00Z",
           "status": "scheduled",
-          "venue": "Mercedes-Benz Stadium, Atlanta"
+          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "broadcaster": "BBC"
         },
         {
           "id": "r32-m9",
@@ -112,7 +120,8 @@
           "awayScore": null,
           "kickoff": "2026-07-02T00:00:00Z",
           "status": "scheduled",
-          "venue": "Levi's Stadium, Santa Clara"
+          "venue": "Levi's Stadium, Santa Clara",
+          "broadcaster": "BBC"
         },
         {
           "id": "r32-m10",
@@ -124,7 +133,8 @@
           "awayScore": null,
           "kickoff": "2026-07-01T20:00:00Z",
           "status": "scheduled",
-          "venue": "Lumen Field, Seattle"
+          "venue": "Lumen Field, Seattle",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m11",
@@ -136,7 +146,8 @@
           "awayScore": null,
           "kickoff": "2026-07-02T23:00:00Z",
           "status": "scheduled",
-          "venue": "BMO Field, Toronto"
+          "venue": "BMO Field, Toronto",
+          "broadcaster": "BBC"
         },
         {
           "id": "r32-m12",
@@ -148,7 +159,8 @@
           "awayScore": null,
           "kickoff": "2026-07-02T19:00:00Z",
           "status": "scheduled",
-          "venue": "SoFi Stadium, Inglewood"
+          "venue": "SoFi Stadium, Inglewood",
+          "broadcaster": "BBC"
         },
         {
           "id": "r32-m13",
@@ -160,7 +172,8 @@
           "awayScore": null,
           "kickoff": "2026-07-03T03:00:00Z",
           "status": "scheduled",
-          "venue": "BC Place, Vancouver"
+          "venue": "BC Place, Vancouver",
+          "broadcaster": "BBC"
         },
         {
           "id": "r32-m14",
@@ -172,7 +185,8 @@
           "awayScore": null,
           "kickoff": "2026-07-03T22:00:00Z",
           "status": "scheduled",
-          "venue": "Hard Rock Stadium, Miami Gardens"
+          "venue": "Hard Rock Stadium, Miami Gardens",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m15",
@@ -184,7 +198,8 @@
           "awayScore": null,
           "kickoff": "2026-07-04T01:30:00Z",
           "status": "scheduled",
-          "venue": "Arrowhead Stadium, Kansas City"
+          "venue": "Arrowhead Stadium, Kansas City",
+          "broadcaster": "ITV"
         },
         {
           "id": "r32-m16",
@@ -196,7 +211,8 @@
           "awayScore": null,
           "kickoff": "2026-07-03T18:00:00Z",
           "status": "scheduled",
-          "venue": "AT&T Stadium, Arlington"
+          "venue": "AT&T Stadium, Arlington",
+          "broadcaster": "BBC"
         }
       ]
     },
@@ -214,7 +230,8 @@
           "awayScore": null,
           "kickoff": "2026-07-04",
           "status": "scheduled",
-          "venue": "Lincoln Financial Field, Philadelphia"
+          "venue": "Lincoln Financial Field, Philadelphia",
+          "broadcaster": null
         },
         {
           "id": "r16-m2",
@@ -226,7 +243,8 @@
           "awayScore": null,
           "kickoff": "2026-07-04",
           "status": "scheduled",
-          "venue": "NRG Stadium, Houston"
+          "venue": "NRG Stadium, Houston",
+          "broadcaster": null
         },
         {
           "id": "r16-m3",
@@ -238,7 +256,8 @@
           "awayScore": null,
           "kickoff": "2026-07-05",
           "status": "scheduled",
-          "venue": "MetLife Stadium, East Rutherford"
+          "venue": "MetLife Stadium, East Rutherford",
+          "broadcaster": null
         },
         {
           "id": "r16-m4",
@@ -250,7 +269,8 @@
           "awayScore": null,
           "kickoff": "2026-07-05",
           "status": "scheduled",
-          "venue": "Estadio Azteca, Mexico City"
+          "venue": "Estadio Azteca, Mexico City",
+          "broadcaster": null
         },
         {
           "id": "r16-m5",
@@ -262,7 +282,8 @@
           "awayScore": null,
           "kickoff": "2026-07-06",
           "status": "scheduled",
-          "venue": "AT&T Stadium, Arlington"
+          "venue": "AT&T Stadium, Arlington",
+          "broadcaster": null
         },
         {
           "id": "r16-m6",
@@ -274,7 +295,8 @@
           "awayScore": null,
           "kickoff": "2026-07-06",
           "status": "scheduled",
-          "venue": "Lumen Field, Seattle"
+          "venue": "Lumen Field, Seattle",
+          "broadcaster": null
         },
         {
           "id": "r16-m7",
@@ -286,7 +308,8 @@
           "awayScore": null,
           "kickoff": "2026-07-07",
           "status": "scheduled",
-          "venue": "Mercedes-Benz Stadium, Atlanta"
+          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "broadcaster": null
         },
         {
           "id": "r16-m8",
@@ -298,7 +321,8 @@
           "awayScore": null,
           "kickoff": "2026-07-07",
           "status": "scheduled",
-          "venue": "BC Place, Vancouver"
+          "venue": "BC Place, Vancouver",
+          "broadcaster": null
         }
       ]
     },
@@ -316,7 +340,8 @@
           "awayScore": null,
           "kickoff": "2026-07-09",
           "status": "scheduled",
-          "venue": "Gillette Stadium, Foxborough"
+          "venue": "Gillette Stadium, Foxborough",
+          "broadcaster": null
         },
         {
           "id": "qf-m2",
@@ -328,7 +353,8 @@
           "awayScore": null,
           "kickoff": "2026-07-10",
           "status": "scheduled",
-          "venue": "SoFi Stadium, Inglewood"
+          "venue": "SoFi Stadium, Inglewood",
+          "broadcaster": null
         },
         {
           "id": "qf-m3",
@@ -340,7 +366,8 @@
           "awayScore": null,
           "kickoff": "2026-07-11",
           "status": "scheduled",
-          "venue": "Hard Rock Stadium, Miami Gardens"
+          "venue": "Hard Rock Stadium, Miami Gardens",
+          "broadcaster": null
         },
         {
           "id": "qf-m4",
@@ -352,7 +379,8 @@
           "awayScore": null,
           "kickoff": "2026-07-11",
           "status": "scheduled",
-          "venue": "Arrowhead Stadium, Kansas City"
+          "venue": "Arrowhead Stadium, Kansas City",
+          "broadcaster": null
         }
       ]
     },
@@ -370,7 +398,8 @@
           "awayScore": null,
           "kickoff": "2026-07-14",
           "status": "scheduled",
-          "venue": "AT&T Stadium, Arlington"
+          "venue": "AT&T Stadium, Arlington",
+          "broadcaster": null
         },
         {
           "id": "sf-m2",
@@ -382,7 +411,8 @@
           "awayScore": null,
           "kickoff": "2026-07-15",
           "status": "scheduled",
-          "venue": "Mercedes-Benz Stadium, Atlanta"
+          "venue": "Mercedes-Benz Stadium, Atlanta",
+          "broadcaster": null
         }
       ]
     },
@@ -401,7 +431,8 @@
           "kickoff": "2026-07-18",
           "status": "scheduled",
           "venue": "Hard Rock Stadium, Miami Gardens",
-          "matchLabel": "3rd Place"
+          "matchLabel": "3rd Place",
+          "broadcaster": null
         },
         {
           "id": "final-m1",
@@ -414,7 +445,8 @@
           "kickoff": "2026-07-19",
           "status": "scheduled",
           "venue": "MetLife Stadium, East Rutherford",
-          "matchLabel": "Final"
+          "matchLabel": "Final",
+          "broadcaster": null
         }
       ]
     }

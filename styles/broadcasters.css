@@ -1,0 +1,103 @@
+/* ─── Broadcaster badge — shared across all contexts ─────────
+   Used in: Tournament Centre rail/strip, Match Centre header.
+   The badge is always an <a> wrapping a logo <img>.
+   bc-badge--live adds "Watch Live" chip for in-progress matches.
+   ─────────────────────────────────────────────────────────── */
+
+.bc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  opacity: 0.92;
+  transition: opacity 0.15s ease, filter 0.15s ease;
+  vertical-align: middle;
+}
+
+.bc-badge:hover {
+  opacity: 1;
+  filter: brightness(1.08);
+}
+
+.bc-badge:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Logo image — fixed height, width follows aspect ratio */
+.bc-badge__logo {
+  display: block;
+  height: 22px;
+  width: auto;
+  border-radius: 3px;
+}
+
+/* "Watch Live" chip — only on bc-badge--live */
+.bc-badge__live {
+  display: none;
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+.bc-badge--live .bc-badge__live {
+  display: inline;
+}
+
+/* BBC live chip: red text to match brand */
+.bc-badge--bbc.bc-badge--live .bc-badge__live {
+  color: #e02020;
+}
+
+/* ITV live chip: ITV blue-ish accent */
+.bc-badge--itv.bc-badge--live .bc-badge__live {
+  color: #7ecbff;
+}
+
+/* Pulse animation on live badge — subtle, not distracting */
+.bc-badge--live .bc-badge__logo {
+  animation: bc-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes bc-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
+}
+
+/* ─── Context-specific sizing overrides ─────────────────────
+   Rail cards (small fixture cards): keep logo compact
+   Match Centre header: slightly larger
+   ─────────────────────────────────────────────────────────── */
+
+.tc-rail-card .bc-badge__logo,
+.tc-strip-card .bc-badge__logo {
+  height: 18px;
+}
+
+.mc-meta .bc-badge__logo {
+  height: 26px;
+}
+
+/* ─── Legacy text badge classes (still in CSS for carousel) ─
+   .badge--broadcaster, .badge--bbc, .badge--itv
+   These remain for any context not yet migrated.
+   ─────────────────────────────────────────────────────────── */
+
+.badge--broadcaster {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  padding: 1px 5px;
+  border-radius: 3px;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.badge--bbc { background: #bb1919; color: #fff; }
+.badge--itv { background: #181818; color: #fff; }

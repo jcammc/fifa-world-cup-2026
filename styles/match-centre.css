@@ -133,26 +133,7 @@
   color: var(--color-text-secondary);
 }
 
-.mc-broadcaster {
-  display: inline-block;
-  padding: 2px var(--space-2);
-  border-radius: var(--radius-sm);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  line-height: 1.5;
-}
-
-.mc-broadcaster--bbc {
-  background: #bb1919;
-  color: #fff;
-}
-
-.mc-broadcaster--itv {
-  background: #111;
-  color: #fff;
-}
+/* broadcaster badge in match centre uses .bc-badge from broadcasters.css */
 
 /* ─── V2 sections ─────────────────────────────────────────── */
 
@@ -510,6 +491,62 @@
 
 .mc-standings__row--highlight .mc-standings__team {
   color: var(--color-text-primary) !important;
+}
+
+/* ─── V3: Goals timeline ──────────────────────────────────── */
+
+.mc-goals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mc-goals__none {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+  text-align: center;
+  padding: var(--space-3) 0;
+}
+
+.mc-goal-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.mc-goal-row__home {
+  text-align: right;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.mc-goal-row__away {
+  text-align: left;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.mc-goal__min {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+.mc-goal__assist {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-normal);
+}
+
+/* ─── V3: Man of the Match ────────────────────────────────── */
+
+.mc-motm {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+  margin: 0;
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */
