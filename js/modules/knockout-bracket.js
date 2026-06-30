@@ -5,9 +5,10 @@ import { buildBracketProjection } from '../tournament-state.js';
 
 export class KnockoutBracket {
   #container;
-  #rounds        = [];
-  #countryMap    = new Map();
-  #projectionMap = new Map();
+  #rounds         = [];
+  #countryMap     = new Map();
+  #projectionMap  = new Map();
+  #resizeObserver = null;
 
   constructor(container, params = {}) {
     this.#container = container;
@@ -48,7 +49,6 @@ export class KnockoutBracket {
       </div>`;
   }
 
-  // Re-fetch and update just the bracket rounds content, preserving scroll position.
   async update() {
     const scrollEl = this.#container.querySelector('.bracket-scroll');
     const roundsEl = this.#container.querySelector('.bracket-rounds');
@@ -65,32 +65,18 @@ export class KnockoutBracket {
 
     roundsEl.innerHTML = this.#rounds.map(r => this.#buildRound(r)).join('');
     if (scrollEl) scrollEl.scrollLeft = savedX;
+    requestAnimationFrame(() => this.#positionBracket());
   }
 
   // ─── Round column ─────────────────────────────────────────
 
   #buildRound(round) {
-    // When every match in the round has both teams confirmed, collapse the
-    // per-slot ✓ ticks into a single footer banner for a cleaner view.
     const allTeamsSet = round.matches.length > 0 &&
       round.matches.every(m => m.homeTeamId && m.awayTeamId);
 
-    const isSingle = round.matches.length === 1;
-    let matchesHtml;
-
-    if (isSingle) {
-      matchesHtml = round.matches.map(m => this.#buildMatch(m, allTeamsSet)).join('');
-    } else {
-      const pairs = [];
-      for (let i = 0; i < round.matches.length; i += 2) {
-        const a = round.matches[i];
-        const b = round.matches[i + 1];
-        pairs.push(b
-          ? `<div class="bracket-pair">${this.#buildMatch(a, allTeamsSet)}${this.#buildMatch(b, allTeamsSet)}</div>`
-          : this.#buildMatch(a, allTeamsSet));
-      }
-      matchesHtml = pairs.join('');
-    }
+    const matchesHtml = round.matches
+      .map(m => this.#buildMatch(m, allTeamsSet))
+      .join('');
 
     const dateRange = this.#roundDateRange(round.matches);
     const confirmedBanner = allTeamsSet
@@ -108,7 +94,6 @@ export class KnockoutBracket {
       </div>`;
   }
 
-  // Formats a concise date range from match kickoffs: "28 Jun–3 Jul", "14–15 Jul", "18 Jul"
   #roundDateRange(matches) {
     const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const kickoffs = matches.map(m => m.kickoff).filter(Boolean).sort();
@@ -124,8 +109,6 @@ export class KnockoutBracket {
   }
 
   // ─── Slot label resolution ────────────────────────────────
-  // knockout.json uses compact labels: "1A", "2B", "3rd C/E/F/H/I".
-  // buildBracketProjection() keys: "Winner Group A", "Runner-up Group A", "best-third-r32-m7".
 
   #projectionKey(label, matchId) {
     if (!label) return null;
@@ -157,7 +140,6 @@ export class KnockoutBracket {
   }
 
   #buildTeamSlot(teamId, label, score, projection = null, hideUnplayedTick = false) {
-    // Confirmed — real team locked into this bracket slot
     if (teamId) {
       const country   = this.#countryMap.get(teamId);
       const name      = country ? escapeHtml(country.name) : escapeHtml(teamId);
@@ -178,7 +160,6 @@ export class KnockoutBracket {
         </div>`;
     }
 
-    // Projected — standings tell us who's currently in this slot
     if (projection) {
       const country   = this.#countryMap.get(projection.teamId);
       const name      = country ? escapeHtml(country.name) : escapeHtml(projection.teamId);
@@ -198,7 +179,6 @@ export class KnockoutBracket {
         </div>`;
     }
 
-    // Pending — no teamId and no projection (best-third slots, pre-tournament slots)
     const name = label ? escapeHtml(label) : 'TBD';
     return `
       <div class="bracket-team bracket-team--pending">
@@ -226,13 +206,184 @@ export class KnockoutBracket {
   init() {
     const scroll = this.#container.querySelector('.bracket-scroll');
     if (!scroll) return;
+
     scroll.addEventListener('wheel', e => {
       if (e.deltaY !== 0 && e.deltaX === 0 && scroll.scrollWidth > scroll.clientWidth) {
         e.preventDefault();
         scroll.scrollLeft += e.deltaY;
       }
     }, { passive: false });
+
+    requestAnimationFrame(() => this.#positionBracket());
+
+    this.#resizeObserver = new ResizeObserver(() => {
+      requestAnimationFrame(() => this.#positionBracket());
+    });
+    this.#resizeObserver.observe(scroll);
   }
 
-  teardown() {}
+  teardown() {
+    this.#resizeObserver?.disconnect();
+    this.#resizeObserver = null;
+  }
+
+  // ─── Algorithmic bracket positioning ──────────────────────
+  //
+  // Each later-round card is positioned at the exact vertical midpoint
+  // of the two cards that feed into it, derived by traversing the
+  // tournament tree from R32 outward. Connector lines are drawn as SVG
+  // elements spanning each inter-round gap.
+
+  #positionBracket() {
+    const bracketEl = this.#container.querySelector('.bracket-rounds');
+    if (!bracketEl) return;
+
+    const roundEls = Array.from(bracketEl.querySelectorAll(':scope > .bracket-round'));
+    if (!roundEls.length) return;
+
+    const gapPx = parseFloat(getComputedStyle(bracketEl).columnGap) || 32;
+
+    const roundData = roundEls.map(el => ({
+      el,
+      matchesEl: el.querySelector('.bracket-round__matches'),
+      cards:     Array.from(el.querySelectorAll('.bracket-match')),
+    }));
+
+    if (!roundData[0].cards.length) return;
+
+    // All cards have the same height — measure from the first R32 card.
+    const cardH = roundData[0].cards[0].getBoundingClientRect().height;
+    if (!cardH) return;
+
+    // One "slot" = card + gap below it. Total bracket height = N slots minus the
+    // trailing gap of the last slot.
+    const CARD_GAP = 8;
+    const slotH    = cardH + CARD_GAP;
+    const firstN   = roundData[0].cards.length;
+    const totalH   = firstN * slotH - CARD_GAP;
+
+    const centersPerRound = [];
+
+    for (let r = 0; r < roundData.length; r++) {
+      const { matchesEl, cards } = roundData[r];
+      let centers;
+
+      if (r === 0) {
+        // First round: evenly spaced from the top.
+        centers = cards.map((_, i) => i * slotH + cardH / 2);
+      } else {
+        const prev = centersPerRound[r - 1];
+
+        // Final column (round.id "final") has 2 entries:
+        //   index 0 = 3rd-place, index 1 = final-m1 (from knockout.json order).
+        // Both cards have a matchLabel div that makes them taller than a plain card.
+        // Position the Final at the SF midpoint and derive 3rd Place from the Final
+        // card's actual rendered height so there is exactly CARD_GAP between them.
+        const isFinalRound = r === roundData.length - 1 && cards.length === 2;
+
+        if (isFinalRound) {
+          const sfMid = (prev[0] + prev[1]) / 2;
+          const fi = cards.findIndex(c => c.dataset.match?.startsWith('final'));
+          const validFi = fi >= 0 ? fi : 1;
+          const validTi = 1 - validFi;
+          const finalH = cards[validFi].getBoundingClientRect().height || cardH;
+          const thirdH = cards[validTi].getBoundingClientRect().height || cardH;
+          centers = new Array(2);
+          centers[validFi] = sfMid;
+          centers[validTi] = sfMid + finalH / 2 + CARD_GAP + thirdH / 2;
+        } else {
+          // Each card sits exactly halfway between its two feeder cards.
+          centers = cards.map((_, i) => (prev[i * 2] + prev[i * 2 + 1]) / 2);
+        }
+      }
+
+      centersPerRound.push(centers);
+
+      // All columns share the same total height so connectors align correctly.
+      matchesEl.style.height = totalH + 'px';
+
+      // Use each card's actual rendered height so the computed center Y maps to
+      // the visual centre of the card regardless of whether a matchLabel is present.
+      cards.forEach((card, i) => {
+        const h = card.getBoundingClientRect().height || cardH;
+        card.style.position = 'absolute';
+        card.style.top      = Math.round(centers[i] - h / 2) + 'px';
+        card.style.left     = '0';
+        card.style.right    = '0';
+      });
+    }
+
+    const color = getComputedStyle(this.#container)
+      .getPropertyValue('--color-border').trim() || '#444';
+
+    for (let r = 0; r < roundData.length - 1; r++) {
+      const isFinalTransition = r === roundData.length - 2;
+
+      if (isFinalTransition) {
+        // SF → Final column: only draw the winning path (SF → Final match).
+        // The 3rd-place match has no bracket connector — it is positioned below
+        // the Final as a losers' branch and labelled accordingly.
+        const toCards = roundData[r + 1].cards;
+        const fi = toCards.findIndex(c => c.dataset.match?.startsWith('final'));
+        if (fi >= 0) {
+          this.#drawConnectors(
+            roundData[r].matchesEl,
+            centersPerRound[r],
+            [centersPerRound[r + 1][fi]],
+            [toCards[fi]],
+            totalH, gapPx, color
+          );
+        }
+      } else {
+        this.#drawConnectors(
+          roundData[r].matchesEl,
+          centersPerRound[r],
+          centersPerRound[r + 1],
+          roundData[r + 1].cards,
+          totalH, gapPx, color
+        );
+      }
+    }
+  }
+
+  // Draws one SVG element per round, attached to that round's .bracket-round__matches
+  // and positioned at left: 100% (spanning the gap to the next column).
+  // Lines: right stub from feeder A → midpoint → right stub from feeder B → vertical
+  // spine → outgoing stub to the child card in the next round.
+  #drawConnectors(matchesEl, fromCenters, toCenters, toCards, totalH, gapPx, color) {
+    matchesEl.querySelectorAll('.bracket-svg-connector').forEach(s => s.remove());
+
+    const ns  = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.classList.add('bracket-svg-connector');
+    svg.setAttribute('width',   String(gapPx));
+    svg.setAttribute('height',  String(totalH));
+    svg.setAttribute('viewBox', `0 0 ${gapPx} ${totalH}`);
+    svg.style.cssText =
+      'position:absolute;left:100%;top:0;pointer-events:none;overflow:visible';
+
+    const midX = gapPx / 2;
+
+    const addLine = (x1, y1, x2, y2) => {
+      const el = document.createElementNS(ns, 'line');
+      el.setAttribute('x1', String(x1)); el.setAttribute('y1', String(y1));
+      el.setAttribute('x2', String(x2)); el.setAttribute('y2', String(y2));
+      el.setAttribute('stroke', color);
+      el.setAttribute('stroke-width', '1.5');
+      svg.appendChild(el);
+    };
+
+    toCenters.forEach((toY, i) => {
+      const fromA = fromCenters[i * 2];
+      const fromB = fromCenters[i * 2 + 1];
+      if (fromA == null || fromB == null) return;
+
+      addLine(0,    fromA, midX,  fromA); // right stub from feeder A
+      addLine(0,    fromB, midX,  fromB); // right stub from feeder B
+      addLine(midX, fromA, midX,  fromB); // vertical spine
+      addLine(midX, toY,   gapPx, toY);  // outgoing stub to child
+    });
+
+    matchesEl.appendChild(svg);
+  }
 }

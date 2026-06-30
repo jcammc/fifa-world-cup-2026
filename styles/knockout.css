@@ -21,7 +21,7 @@
 .bracket-rounds {
   display: flex;
   gap: var(--space-8);
-  align-items: stretch;
+  align-items: flex-start;
   min-width: max-content;
 }
 
@@ -63,66 +63,15 @@
 }
 
 /* ─── Match list inside a round ──────────────────────────── */
+/* Height is set by JS. Cards are position: absolute within this container.
+   overflow: visible allows the SVG connector to extend into the inter-round gap. */
 .bracket-round__matches {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: var(--space-2);
-}
-
-/* ─── Bracket connector lines ────────────────────────────── */
-
-/* Anchor for connector pseudo-elements */
-.bracket-match {
   position: relative;
-}
-
-/* Two matches that feed into one next-round match */
-.bracket-pair {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-/* Horizontal right stub from each match in a pair */
-.bracket-pair .bracket-match::after {
-  content: '';
-  position: absolute;
-  right: -16px;
-  top: 50%;
-  width: 16px;
-  height: 1px;
-  background: var(--color-border);
-  pointer-events: none;
-}
-
-/* Vertical spine connecting the two right stubs */
-.bracket-pair::after {
-  content: '';
-  position: absolute;
-  right: -16px;
-  top: 24%;
-  height: 52%;
-  width: 1px;
-  background: var(--color-border);
-  pointer-events: none;
-}
-
-/* Horizontal left stub on all non-first-round matches (incoming connector) */
-.bracket-rounds .bracket-round:not(:first-child) .bracket-match::before {
-  content: '';
-  position: absolute;
-  left: -16px;
-  top: 50%;
-  width: 16px;
-  height: 1px;
-  background: var(--color-border);
-  pointer-events: none;
+  overflow: visible;
 }
 
 /* ─── Individual match card ──────────────────────────────── */
+/* position: absolute and top are set by #positionBracket(). */
 .bracket-match {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
