@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-30T14:41:08.384Z",
+  "lastUpdated": "2026-06-30T17:17:07.437Z",
   "data": {
     "a-r1-mex-rsa": {
       "events": [
@@ -18641,10 +18641,122 @@
     "r32-m6": {
       "events": [],
       "motm": null,
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": [],
+      "homeFormation": "4-3-3",
+      "awayFormation": "4-3-3",
+      "homeStarting": [
+        {
+          "name": "Yahia Fofana",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Guéla Doué",
+          "pos": "RB",
+          "shirt": 17
+        },
+        {
+          "name": "Odilon Kossounou",
+          "pos": "CB",
+          "shirt": 7
+        },
+        {
+          "name": "Emmanuel Agbadou",
+          "pos": "CB",
+          "shirt": 20
+        },
+        {
+          "name": "Ghislain Konan",
+          "pos": "LB",
+          "shirt": 3
+        },
+        {
+          "name": "Ibrahim Sangaré",
+          "pos": "DM",
+          "shirt": 18
+        },
+        {
+          "name": "Christ Inao Oulaï",
+          "pos": "CM",
+          "shirt": 26
+        },
+        {
+          "name": "Franck Kessié",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Nicolas Pépé",
+          "pos": "RF",
+          "shirt": 19
+        },
+        {
+          "name": "Ange-Yoan Bonny",
+          "pos": "CF",
+          "shirt": 9
+        },
+        {
+          "name": "Yan Diomande",
+          "pos": "LF",
+          "shirt": 11
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Ørjan Nyland",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Marcus Holmgren Pedersen",
+          "pos": "RB",
+          "shirt": 16
+        },
+        {
+          "name": "Kristoffer Ajer",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Torbjørn Heggem",
+          "pos": "CB",
+          "shirt": 17
+        },
+        {
+          "name": "David Møller Wolfe",
+          "pos": "LB",
+          "shirt": 5
+        },
+        {
+          "name": "Patrick Berg",
+          "pos": "CM",
+          "shirt": 6
+        },
+        {
+          "name": "Sander Berge",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Martin Ødegaard",
+          "pos": "AM",
+          "shirt": 10
+        },
+        {
+          "name": "Alexander Sørloth",
+          "pos": "RF",
+          "shirt": 7
+        },
+        {
+          "name": "Erling Haaland",
+          "pos": "CF",
+          "shirt": 9
+        },
+        {
+          "name": "Antonio Nusa",
+          "pos": "LF",
+          "shirt": 20
+        }
+      ],
       "homeSubs": [],
       "awaySubs": []
     },
@@ -18768,26 +18880,542 @@
           "assistBy": null
         },
         {
+          "type": "yellow_card",
+          "minute": "13",
+          "teamId": "portugal",
+          "player": "Bernardo Silva"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "32",
+          "teamId": "dr-congo",
+          "player": "Chancel Mbemba"
+        },
+        {
           "type": "goal",
           "minute": "45+5",
           "teamId": "dr-congo",
           "scorer": "Wissa",
           "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "portugal",
+          "offPlayer": "Bernardo Silva",
+          "onPlayer": "Francisco Conceição"
+        },
+        {
+          "type": "substitution",
+          "minute": "57",
+          "teamId": "dr-congo",
+          "offPlayer": "Ngal'ayel Mukau",
+          "onPlayer": "Noah Sadiki"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "portugal",
+          "offPlayer": "Nuno Mendes",
+          "onPlayer": "Rafael Leão"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "portugal",
+          "offPlayer": "Pedro Neto",
+          "onPlayer": "Nélson Semedo"
+        },
+        {
+          "type": "substitution",
+          "minute": "74",
+          "teamId": "dr-congo",
+          "offPlayer": "Arthur Masuaku",
+          "onPlayer": "Charles Pickel"
+        },
+        {
+          "type": "substitution",
+          "minute": "74",
+          "teamId": "dr-congo",
+          "offPlayer": "Edo Kayembe",
+          "onPlayer": "Joris Kayembe"
+        },
+        {
+          "type": "substitution",
+          "minute": "83",
+          "teamId": "portugal",
+          "offPlayer": "Vitinha",
+          "onPlayer": "Gonçalo Ramos"
+        },
+        {
+          "type": "substitution",
+          "minute": "85",
+          "teamId": "dr-congo",
+          "offPlayer": "Aaron Wan-Bissaka",
+          "onPlayer": "Gédéon Kalulu"
+        },
+        {
+          "type": "substitution",
+          "minute": "85",
+          "teamId": "dr-congo",
+          "offPlayer": "Cédric Bakambu",
+          "onPlayer": "Simon Banza"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "88",
+          "teamId": "portugal",
+          "player": "Nélson Semedo"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "90+2",
+          "teamId": "portugal",
+          "player": "Tomás Araújo"
         }
       ],
       "motm": "João Neves",
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": []
+      "homeFormation": "4-3-3",
+      "awayFormation": "5-3-2",
+      "homeStarting": [
+        {
+          "name": "Diogo Costa",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "João Cancelo",
+          "pos": "RB",
+          "shirt": 20
+        },
+        {
+          "name": "Tomás Araújo",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Renato Veiga",
+          "pos": "CB",
+          "shirt": 13
+        },
+        {
+          "name": "Nuno Mendes",
+          "pos": "LB",
+          "shirt": 25
+        },
+        {
+          "name": "João Neves",
+          "pos": "CM",
+          "shirt": 15
+        },
+        {
+          "name": "Vitinha",
+          "pos": "CM",
+          "shirt": 23
+        },
+        {
+          "name": "Bernardo Silva",
+          "pos": "RW",
+          "shirt": 10
+        },
+        {
+          "name": "Bruno Fernandes",
+          "pos": "AM",
+          "shirt": 8
+        },
+        {
+          "name": "Pedro Neto",
+          "pos": "LW",
+          "shirt": 18
+        },
+        {
+          "name": "Cristiano Ronaldo",
+          "pos": "CF",
+          "shirt": 7
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Lionel Mpasi",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Chancel Mbemba",
+          "pos": "CB",
+          "shirt": 22
+        },
+        {
+          "name": "Axel Tuanzebe",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Steve Kapuadi",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Aaron Wan-Bissaka",
+          "pos": "RWB",
+          "shirt": 2
+        },
+        {
+          "name": "Arthur Masuaku",
+          "pos": "LWB",
+          "shirt": 26
+        },
+        {
+          "name": "Ngal'ayel Mukau",
+          "pos": "CM",
+          "shirt": 6
+        },
+        {
+          "name": "Samuel Moutoussamy",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Edo Kayembe",
+          "pos": "CM",
+          "shirt": 25
+        },
+        {
+          "name": "Cédric Bakambu",
+          "pos": "CF",
+          "shirt": 17
+        },
+        {
+          "name": "Yoane Wissa",
+          "pos": "CF",
+          "shirt": 20
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Francisco Conceição",
+          "pos": "FW",
+          "shirt": 26,
+          "onMinute": "46"
+        },
+        {
+          "name": "Rafael Leão",
+          "pos": "FW",
+          "shirt": 17,
+          "onMinute": "72"
+        },
+        {
+          "name": "Nélson Semedo",
+          "pos": "DF",
+          "shirt": 2,
+          "onMinute": "72"
+        },
+        {
+          "name": "Gonçalo Ramos",
+          "pos": "FW",
+          "shirt": 9,
+          "onMinute": "83"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Noah Sadiki",
+          "pos": "MF",
+          "shirt": 14,
+          "onMinute": "57"
+        },
+        {
+          "name": "Charles Pickel",
+          "pos": "MF",
+          "shirt": 18,
+          "onMinute": "74"
+        },
+        {
+          "name": "Joris Kayembe",
+          "pos": "DF",
+          "shirt": 12,
+          "onMinute": "74"
+        },
+        {
+          "name": "Gédéon Kalulu",
+          "pos": "DF",
+          "shirt": 24,
+          "onMinute": "85"
+        },
+        {
+          "name": "Simon Banza",
+          "pos": "FW",
+          "shirt": 23,
+          "onMinute": "85"
+        }
+      ]
     },
     "k-r1-uzb-col": {
-      "events": [],
+      "events": [
+        {
+          "type": "yellow_card",
+          "minute": "7",
+          "teamId": "colombia",
+          "player": "Johan Mojica"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "34",
+          "teamId": "uzbekistan",
+          "player": "Abdukodir Khusanov"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "uzbekistan",
+          "offPlayer": "Sherzod Nasrullaev",
+          "onPlayer": "Farrukh Sayfiev"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "uzbekistan",
+          "offPlayer": "Oston Urunov",
+          "onPlayer": "Dostonbek Khamdamov"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "colombia",
+          "offPlayer": "James Rodríguez",
+          "onPlayer": "Jaminton Campaz"
+        },
+        {
+          "type": "substitution",
+          "minute": "77",
+          "teamId": "uzbekistan",
+          "offPlayer": "Rustam Ashurmatov",
+          "onPlayer": "Jakhongir Urozov"
+        },
+        {
+          "type": "substitution",
+          "minute": "77",
+          "teamId": "uzbekistan",
+          "offPlayer": "Abbosbek Fayzullaev",
+          "onPlayer": "Azizbek Amonov"
+        },
+        {
+          "type": "substitution",
+          "minute": "80",
+          "teamId": "colombia",
+          "offPlayer": "Gustavo Puerta",
+          "onPlayer": "Cucho Hernández"
+        },
+        {
+          "type": "substitution",
+          "minute": "80",
+          "teamId": "colombia",
+          "offPlayer": "Luis Suárez",
+          "onPlayer": "Richard Ríos"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+3",
+          "teamId": "uzbekistan",
+          "offPlayer": "Eldor Shomurodov",
+          "onPlayer": "Igor Sergeev"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+3",
+          "teamId": "colombia",
+          "offPlayer": "Jhon Arias",
+          "onPlayer": "Andrés Gómez"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+3",
+          "teamId": "colombia",
+          "offPlayer": "Luis Díaz",
+          "onPlayer": "Kevin Castaño"
+        }
+      ],
       "motm": "Luis Díaz",
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": []
+      "homeFormation": "3-4-3",
+      "awayFormation": "4-3-3",
+      "homeStarting": [
+        {
+          "name": "Utkir Yusupov",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Abdukodir Khusanov",
+          "pos": "CB",
+          "shirt": 2
+        },
+        {
+          "name": "Abdulla Abdullaev",
+          "pos": "CB",
+          "shirt": 18
+        },
+        {
+          "name": "Rustam Ashurmatov",
+          "pos": "CB",
+          "shirt": 5
+        },
+        {
+          "name": "Bekhruz Karimov",
+          "pos": "RM",
+          "shirt": 24
+        },
+        {
+          "name": "Otabek Shukurov",
+          "pos": "CM",
+          "shirt": 7
+        },
+        {
+          "name": "Akmal Mozgovoy",
+          "pos": "CM",
+          "shirt": 6
+        },
+        {
+          "name": "Sherzod Nasrullaev",
+          "pos": "LM",
+          "shirt": 13
+        },
+        {
+          "name": "Abbosbek Fayzullaev",
+          "pos": "RF",
+          "shirt": 22
+        },
+        {
+          "name": "Eldor Shomurodov",
+          "pos": "CF",
+          "shirt": 14
+        },
+        {
+          "name": "Oston Urunov",
+          "pos": "LF",
+          "shirt": 11
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Camilo Vargas",
+          "pos": "GK",
+          "shirt": 12
+        },
+        {
+          "name": "Daniel Muñoz",
+          "pos": "RB",
+          "shirt": 2
+        },
+        {
+          "name": "Davinson Sánchez",
+          "pos": "CB",
+          "shirt": 23
+        },
+        {
+          "name": "Jhon Lucumí",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Johan Mojica",
+          "pos": "LB",
+          "shirt": 17
+        },
+        {
+          "name": "Jefferson Lerma",
+          "pos": "DM",
+          "shirt": 16
+        },
+        {
+          "name": "Gustavo Puerta",
+          "pos": "CM",
+          "shirt": 14
+        },
+        {
+          "name": "Jhon Arias",
+          "pos": "CM",
+          "shirt": 11
+        },
+        {
+          "name": "James Rodríguez",
+          "pos": "RF",
+          "shirt": 10
+        },
+        {
+          "name": "Luis Suárez",
+          "pos": "CF",
+          "shirt": 25
+        },
+        {
+          "name": "Luis Díaz",
+          "pos": "LF",
+          "shirt": 7
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Farrukh Sayfiev",
+          "pos": "DF",
+          "shirt": 4,
+          "onMinute": "46"
+        },
+        {
+          "name": "Dostonbek Khamdamov",
+          "pos": "MF",
+          "shirt": 17,
+          "onMinute": "46"
+        },
+        {
+          "name": "Jakhongir Urozov",
+          "pos": "DF",
+          "shirt": 26,
+          "onMinute": "77"
+        },
+        {
+          "name": "Azizbek Amonov",
+          "pos": "FW",
+          "shirt": 20,
+          "onMinute": "77"
+        },
+        {
+          "name": "Igor Sergeev",
+          "pos": "FW",
+          "shirt": 21,
+          "onMinute": "90+3"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Jaminton Campaz",
+          "pos": "MF",
+          "shirt": 21,
+          "onMinute": "72"
+        },
+        {
+          "name": "Cucho Hernández",
+          "pos": "FW",
+          "shirt": 19,
+          "onMinute": "80"
+        },
+        {
+          "name": "Richard Ríos",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "80"
+        },
+        {
+          "name": "Andrés Gómez",
+          "pos": "FW",
+          "shirt": 26,
+          "onMinute": "90+3"
+        },
+        {
+          "name": "Kevin Castaño",
+          "pos": "MF",
+          "shirt": 5,
+          "onMinute": "90+3"
+        }
+      ]
     },
     "k-r2-por-uzb": {
       "events": [
@@ -18797,6 +19425,12 @@
           "teamId": "portugal",
           "scorer": "Ronaldo",
           "assistBy": null
+        },
+        {
+          "type": "yellow_card",
+          "minute": "14",
+          "teamId": "uzbekistan",
+          "player": "Odiljon Hamrobekov"
         },
         {
           "type": "goal",
@@ -18813,6 +19447,34 @@
           "assistBy": null
         },
         {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "portugal",
+          "offPlayer": "João Cancelo",
+          "onPlayer": "Nélson Semedo"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "portugal",
+          "offPlayer": "Pedro Neto",
+          "onPlayer": "Francisco Conceição"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "uzbekistan",
+          "offPlayer": "Odiljon Hamrobekov",
+          "onPlayer": "Khojiakbar Alijonov"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "uzbekistan",
+          "offPlayer": "Sherzod Nasrullaev",
+          "onPlayer": "Akmal Mozgovoy"
+        },
+        {
           "type": "goal",
           "minute": "60",
           "teamId": "portugal",
@@ -18820,42 +19482,757 @@
           "assistBy": null
         },
         {
+          "type": "substitution",
+          "minute": "63",
+          "teamId": "portugal",
+          "offPlayer": "João Félix",
+          "onPlayer": "Francisco Trincão"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "68",
+          "teamId": "portugal",
+          "player": "Renato Veiga"
+        },
+        {
+          "type": "substitution",
+          "minute": "73",
+          "teamId": "uzbekistan",
+          "offPlayer": "Abbosbek Fayzullaev",
+          "onPlayer": "Igor Sergeev"
+        },
+        {
+          "type": "substitution",
+          "minute": "76",
+          "teamId": "portugal",
+          "offPlayer": "João Neves",
+          "onPlayer": "Bernardo Silva"
+        },
+        {
+          "type": "substitution",
+          "minute": "83",
+          "teamId": "portugal",
+          "offPlayer": "Vitinha",
+          "onPlayer": "Rafael Leão"
+        },
+        {
           "type": "goal",
           "minute": "87",
           "teamId": "portugal",
           "scorer": "Leão",
           "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "90+2",
+          "teamId": "uzbekistan",
+          "offPlayer": "Bekhruz Karimov",
+          "onPlayer": "Ruslanbek Jiyanov"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+2",
+          "teamId": "uzbekistan",
+          "offPlayer": "Otabek Shukurov",
+          "onPlayer": "Sherzod Esanov"
         }
       ],
       "motm": "Cristiano Ronaldo",
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": []
+      "homeFormation": "4-3-3",
+      "awayFormation": "3-4-3",
+      "homeStarting": [
+        {
+          "name": "Diogo Costa",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "João Cancelo",
+          "pos": "RB",
+          "shirt": 20
+        },
+        {
+          "name": "Rúben Dias",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Renato Veiga",
+          "pos": "CB",
+          "shirt": 13
+        },
+        {
+          "name": "Nuno Mendes",
+          "pos": "LB",
+          "shirt": 25
+        },
+        {
+          "name": "Vitinha",
+          "pos": "CM",
+          "shirt": 23
+        },
+        {
+          "name": "João Neves",
+          "pos": "CM",
+          "shirt": 15
+        },
+        {
+          "name": "Pedro Neto",
+          "pos": "RW",
+          "shirt": 18
+        },
+        {
+          "name": "Bruno Fernandes",
+          "pos": "AM",
+          "shirt": 8
+        },
+        {
+          "name": "João Félix",
+          "pos": "LW",
+          "shirt": 11
+        },
+        {
+          "name": "Cristiano Ronaldo",
+          "pos": "CF",
+          "shirt": 7
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Abduvohid Nematov",
+          "pos": "GK",
+          "shirt": 12
+        },
+        {
+          "name": "Abdukodir Khusanov",
+          "pos": "CB",
+          "shirt": 2
+        },
+        {
+          "name": "Abdulla Abdullaev",
+          "pos": "CB",
+          "shirt": 18
+        },
+        {
+          "name": "Rustam Ashurmatov",
+          "pos": "CB",
+          "shirt": 5
+        },
+        {
+          "name": "Bekhruz Karimov",
+          "pos": "RM",
+          "shirt": 24
+        },
+        {
+          "name": "Odiljon Hamrobekov",
+          "pos": "CM",
+          "shirt": 9
+        },
+        {
+          "name": "Otabek Shukurov",
+          "pos": "CM",
+          "shirt": 7
+        },
+        {
+          "name": "Sherzod Nasrullaev",
+          "pos": "LM",
+          "shirt": 13
+        },
+        {
+          "name": "Azizjon Ganiev",
+          "pos": "RF",
+          "shirt": 19
+        },
+        {
+          "name": "Eldor Shomurodov",
+          "pos": "CF",
+          "shirt": 14
+        },
+        {
+          "name": "Abbosbek Fayzullaev",
+          "pos": "LF",
+          "shirt": 22
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Nélson Semedo",
+          "pos": "DF",
+          "shirt": 2,
+          "onMinute": "46"
+        },
+        {
+          "name": "Francisco Conceição",
+          "pos": "FW",
+          "shirt": 26,
+          "onMinute": "46"
+        },
+        {
+          "name": "Francisco Trincão",
+          "pos": "FW",
+          "shirt": 16,
+          "onMinute": "63"
+        },
+        {
+          "name": "Bernardo Silva",
+          "pos": "MF",
+          "shirt": 10,
+          "onMinute": "76"
+        },
+        {
+          "name": "Rafael Leão",
+          "pos": "FW",
+          "shirt": 17,
+          "onMinute": "83"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Khojiakbar Alijonov",
+          "pos": "DF",
+          "shirt": 3,
+          "onMinute": "46"
+        },
+        {
+          "name": "Akmal Mozgovoy",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "46"
+        },
+        {
+          "name": "Igor Sergeev",
+          "pos": "FW",
+          "shirt": 21,
+          "onMinute": "73"
+        },
+        {
+          "name": "Ruslanbek Jiyanov",
+          "pos": "FW",
+          "shirt": 10,
+          "onMinute": "90+2"
+        },
+        {
+          "name": "Sherzod Esanov",
+          "pos": "MF",
+          "shirt": 23,
+          "onMinute": "90+2"
+        }
+      ]
     },
     "k-r2-col-cod": {
       "events": [
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "dr-congo",
+          "offPlayer": "Ngal'ayel Mukau",
+          "onPlayer": "Noah Sadiki"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "56",
+          "teamId": "colombia",
+          "player": "Jhon Lucumí"
+        },
+        {
+          "type": "substitution",
+          "minute": "57",
+          "teamId": "dr-congo",
+          "offPlayer": "Cédric Bakambu",
+          "onPlayer": "Simon Banza"
+        },
+        {
+          "type": "substitution",
+          "minute": "58",
+          "teamId": "colombia",
+          "offPlayer": "James Rodríguez",
+          "onPlayer": "Juan Fernando Quintero"
+        },
+        {
+          "type": "substitution",
+          "minute": "58",
+          "teamId": "colombia",
+          "offPlayer": "Luis Suárez",
+          "onPlayer": "Jhon Córdoba"
+        },
+        {
+          "type": "substitution",
+          "minute": "71",
+          "teamId": "dr-congo",
+          "offPlayer": "Arthur Masuaku",
+          "onPlayer": "Joris Kayembe"
+        },
+        {
+          "type": "substitution",
+          "minute": "71",
+          "teamId": "dr-congo",
+          "offPlayer": "Edo Kayembe",
+          "onPlayer": "Charles Pickel"
+        },
         {
           "type": "goal",
           "minute": "76",
           "teamId": "colombia",
           "scorer": "Muñoz",
           "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "77",
+          "teamId": "colombia",
+          "offPlayer": "Jhon Arias",
+          "onPlayer": "Richard Ríos"
+        },
+        {
+          "type": "substitution",
+          "minute": "82",
+          "teamId": "dr-congo",
+          "offPlayer": "Samuel Moutoussamy",
+          "onPlayer": "Nathanaël Mbuku"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "90+3",
+          "teamId": "dr-congo",
+          "player": "Charles Pickel"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "90+4",
+          "teamId": "colombia",
+          "player": "Jefferson Lerma"
         }
       ],
       "motm": "Daniel Muñoz",
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": []
+      "homeFormation": "4-3-3",
+      "awayFormation": "5-3-2",
+      "homeStarting": [
+        {
+          "name": "Camilo Vargas",
+          "pos": "GK",
+          "shirt": 12
+        },
+        {
+          "name": "Daniel Muñoz",
+          "pos": "RB",
+          "shirt": 2
+        },
+        {
+          "name": "Davinson Sánchez",
+          "pos": "CB",
+          "shirt": 23
+        },
+        {
+          "name": "Jhon Lucumí",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Johan Mojica",
+          "pos": "LB",
+          "shirt": 17
+        },
+        {
+          "name": "Jefferson Lerma",
+          "pos": "DM",
+          "shirt": 16
+        },
+        {
+          "name": "Gustavo Puerta",
+          "pos": "CM",
+          "shirt": 14
+        },
+        {
+          "name": "Jhon Arias",
+          "pos": "CM",
+          "shirt": 11
+        },
+        {
+          "name": "James Rodríguez",
+          "pos": "RF",
+          "shirt": 10
+        },
+        {
+          "name": "Luis Suárez",
+          "pos": "CF",
+          "shirt": 25
+        },
+        {
+          "name": "Luis Díaz",
+          "pos": "LF",
+          "shirt": 7
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Lionel Mpasi",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Chancel Mbemba",
+          "pos": "CB",
+          "shirt": 22
+        },
+        {
+          "name": "Axel Tuanzebe",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Steve Kapuadi",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Aaron Wan-Bissaka",
+          "pos": "RWB",
+          "shirt": 2
+        },
+        {
+          "name": "Arthur Masuaku",
+          "pos": "LWB",
+          "shirt": 26
+        },
+        {
+          "name": "Ngal'ayel Mukau",
+          "pos": "CM",
+          "shirt": 6
+        },
+        {
+          "name": "Samuel Moutoussamy",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Edo Kayembe",
+          "pos": "CM",
+          "shirt": 25
+        },
+        {
+          "name": "Cédric Bakambu",
+          "pos": "CF",
+          "shirt": 17
+        },
+        {
+          "name": "Yoane Wissa",
+          "pos": "CF",
+          "shirt": 20
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Juan Fernando Quintero",
+          "pos": "MF",
+          "shirt": 20,
+          "onMinute": "58"
+        },
+        {
+          "name": "Jhon Córdoba",
+          "pos": "FW",
+          "shirt": 9,
+          "onMinute": "58"
+        },
+        {
+          "name": "Richard Ríos",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "77"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Noah Sadiki",
+          "pos": "MF",
+          "shirt": 14,
+          "onMinute": "46"
+        },
+        {
+          "name": "Simon Banza",
+          "pos": "FW",
+          "shirt": 23,
+          "onMinute": "57"
+        },
+        {
+          "name": "Joris Kayembe",
+          "pos": "DF",
+          "shirt": 12,
+          "onMinute": "71"
+        },
+        {
+          "name": "Charles Pickel",
+          "pos": "MF",
+          "shirt": 18,
+          "onMinute": "71"
+        },
+        {
+          "name": "Nathanaël Mbuku",
+          "pos": "MF",
+          "shirt": 7,
+          "onMinute": "82"
+        }
+      ]
     },
     "k-r3-col-por": {
-      "events": [],
+      "events": [
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "portugal",
+          "offPlayer": "João Cancelo",
+          "onPlayer": "João Neves"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "portugal",
+          "offPlayer": "Rúben Neves",
+          "onPlayer": "Diogo Dalot"
+        },
+        {
+          "type": "substitution",
+          "minute": "60",
+          "teamId": "colombia",
+          "offPlayer": "Jefferson Lerma",
+          "onPlayer": "Luis Suárez"
+        },
+        {
+          "type": "substitution",
+          "minute": "60",
+          "teamId": "colombia",
+          "offPlayer": "Jhon Córdoba",
+          "onPlayer": "Richard Ríos"
+        },
+        {
+          "type": "substitution",
+          "minute": "70",
+          "teamId": "portugal",
+          "offPlayer": "Vitinha",
+          "onPlayer": "Rafael Leão"
+        },
+        {
+          "type": "substitution",
+          "minute": "70",
+          "teamId": "portugal",
+          "offPlayer": "João Félix",
+          "onPlayer": "Samú Costa"
+        },
+        {
+          "type": "substitution",
+          "minute": "76",
+          "teamId": "colombia",
+          "offPlayer": "Jhon Arias",
+          "onPlayer": "Juan Fernando Quintero"
+        },
+        {
+          "type": "substitution",
+          "minute": "76",
+          "teamId": "colombia",
+          "offPlayer": "James Rodríguez",
+          "onPlayer": "Kevin Castaño"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "86",
+          "teamId": "colombia",
+          "player": "Gustavo Puerta"
+        },
+        {
+          "type": "substitution",
+          "minute": "87",
+          "teamId": "colombia",
+          "offPlayer": "Santiago Arias",
+          "onPlayer": "Daniel Muñoz"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+2",
+          "teamId": "portugal",
+          "offPlayer": "Nuno Mendes",
+          "onPlayer": "Matheus Nunes"
+        }
+      ],
       "motm": "Diogo Costa",
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": []
+      "homeFormation": "4-3-3",
+      "awayFormation": "4-3-3",
+      "homeStarting": [
+        {
+          "name": "Camilo Vargas",
+          "pos": "GK",
+          "shirt": 12
+        },
+        {
+          "name": "Santiago Arias",
+          "pos": "RB",
+          "shirt": 4
+        },
+        {
+          "name": "Davinson Sánchez",
+          "pos": "CB",
+          "shirt": 23
+        },
+        {
+          "name": "Jhon Lucumí",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Deiver Machado",
+          "pos": "LB",
+          "shirt": 22
+        },
+        {
+          "name": "Jefferson Lerma",
+          "pos": "DM",
+          "shirt": 16
+        },
+        {
+          "name": "Gustavo Puerta",
+          "pos": "CM",
+          "shirt": 14
+        },
+        {
+          "name": "Jhon Arias",
+          "pos": "CM",
+          "shirt": 11
+        },
+        {
+          "name": "James Rodríguez",
+          "pos": "RF",
+          "shirt": 10
+        },
+        {
+          "name": "Jhon Córdoba",
+          "pos": "CF",
+          "shirt": 9
+        },
+        {
+          "name": "Luis Díaz",
+          "pos": "LF",
+          "shirt": 7
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Diogo Costa",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "João Cancelo",
+          "pos": "RB",
+          "shirt": 20
+        },
+        {
+          "name": "Rúben Dias",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Renato Veiga",
+          "pos": "CB",
+          "shirt": 13
+        },
+        {
+          "name": "Nuno Mendes",
+          "pos": "LB",
+          "shirt": 25
+        },
+        {
+          "name": "Rúben Neves",
+          "pos": "CM",
+          "shirt": 21
+        },
+        {
+          "name": "Vitinha",
+          "pos": "CM",
+          "shirt": 23
+        },
+        {
+          "name": "Pedro Neto",
+          "pos": "RW",
+          "shirt": 18
+        },
+        {
+          "name": "Bruno Fernandes",
+          "pos": "AM",
+          "shirt": 8
+        },
+        {
+          "name": "João Félix",
+          "pos": "LW",
+          "shirt": 11
+        },
+        {
+          "name": "Cristiano Ronaldo",
+          "pos": "CF",
+          "shirt": 7
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Luis Suárez",
+          "pos": "FW",
+          "shirt": 25,
+          "onMinute": "60"
+        },
+        {
+          "name": "Richard Ríos",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "60"
+        },
+        {
+          "name": "Juan Fernando Quintero",
+          "pos": "MF",
+          "shirt": 20,
+          "onMinute": "76"
+        },
+        {
+          "name": "Kevin Castaño",
+          "pos": "MF",
+          "shirt": 5,
+          "onMinute": "76"
+        },
+        {
+          "name": "Daniel Muñoz",
+          "pos": "DF",
+          "shirt": 2,
+          "onMinute": "87"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "João Neves",
+          "pos": "MF",
+          "shirt": 15,
+          "onMinute": "46"
+        },
+        {
+          "name": "Diogo Dalot",
+          "pos": "DF",
+          "shirt": 5,
+          "onMinute": "46"
+        },
+        {
+          "name": "Rafael Leão",
+          "pos": "FW",
+          "shirt": 17,
+          "onMinute": "70"
+        },
+        {
+          "name": "Samú Costa",
+          "pos": "MF",
+          "shirt": 24,
+          "onMinute": "70"
+        },
+        {
+          "name": "Matheus Nunes",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "90+2"
+        }
+      ]
     },
     "k-r3-cod-uzb": {
       "events": [
@@ -18867,6 +20244,57 @@
           "assistBy": null
         },
         {
+          "type": "yellow_card",
+          "minute": "21",
+          "teamId": "dr-congo",
+          "player": "Noah Sadiki"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "43",
+          "teamId": "uzbekistan",
+          "player": "Abdukodir Khusanov"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "45+4",
+          "teamId": "dr-congo",
+          "player": "Nathanaël Mbuku"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "47",
+          "teamId": "uzbekistan",
+          "player": "Sherzod Nasrullaev"
+        },
+        {
+          "type": "substitution",
+          "minute": "51",
+          "teamId": "dr-congo",
+          "offPlayer": "Cédric Bakambu",
+          "onPlayer": "Fiston Mayele"
+        },
+        {
+          "type": "substitution",
+          "minute": "58",
+          "teamId": "uzbekistan",
+          "offPlayer": "Otabek Shukurov",
+          "onPlayer": "Odiljon Hamrobekov"
+        },
+        {
+          "type": "substitution",
+          "minute": "58",
+          "teamId": "uzbekistan",
+          "offPlayer": "Dostonbek Khamdamov",
+          "onPlayer": "Azizjon Ganiev"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "62",
+          "teamId": "dr-congo",
+          "player": "Samuel Moutoussamy"
+        },
+        {
           "type": "goal",
           "minute": "68",
           "teamId": "dr-congo",
@@ -18874,11 +20302,60 @@
           "assistBy": null
         },
         {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "dr-congo",
+          "offPlayer": "Brian Cipenga",
+          "onPlayer": "Meschak Elia"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "dr-congo",
+          "offPlayer": "Samuel Moutoussamy",
+          "onPlayer": "Théo Bongonda"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "dr-congo",
+          "offPlayer": "Nathanaël Mbuku",
+          "onPlayer": "Ngal'ayel Mukau"
+        },
+        {
+          "type": "substitution",
+          "minute": "73",
+          "teamId": "uzbekistan",
+          "offPlayer": "Abbosbek Fayzullaev",
+          "onPlayer": "Oston Urunov"
+        },
+        {
           "type": "goal",
           "minute": "78",
           "teamId": "dr-congo",
           "scorer": "Mayele",
           "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "82",
+          "teamId": "uzbekistan",
+          "offPlayer": "Jakhongir Urozov",
+          "onPlayer": "Jamshid Iskanderov"
+        },
+        {
+          "type": "substitution",
+          "minute": "82",
+          "teamId": "uzbekistan",
+          "offPlayer": "Akmal Mozgovoy",
+          "onPlayer": "Igor Sergeev"
+        },
+        {
+          "type": "substitution",
+          "minute": "83",
+          "teamId": "dr-congo",
+          "offPlayer": "Arthur Masuaku",
+          "onPlayer": "Joris Kayembe"
         },
         {
           "type": "goal",
@@ -18889,10 +20366,186 @@
         }
       ],
       "motm": "Yoane Wissa",
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": []
+      "homeFormation": "4-4-2",
+      "awayFormation": "3-4-3",
+      "homeStarting": [
+        {
+          "name": "Lionel Mpasi",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Aaron Wan-Bissaka",
+          "pos": "RB",
+          "shirt": 2
+        },
+        {
+          "name": "Chancel Mbemba",
+          "pos": "CB",
+          "shirt": 22
+        },
+        {
+          "name": "Axel Tuanzebe",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Arthur Masuaku",
+          "pos": "LB",
+          "shirt": 26
+        },
+        {
+          "name": "Brian Cipenga",
+          "pos": "RM",
+          "shirt": 9
+        },
+        {
+          "name": "Samuel Moutoussamy",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Noah Sadiki",
+          "pos": "CM",
+          "shirt": 14
+        },
+        {
+          "name": "Nathanaël Mbuku",
+          "pos": "LM",
+          "shirt": 7
+        },
+        {
+          "name": "Cédric Bakambu",
+          "pos": "CF",
+          "shirt": 17
+        },
+        {
+          "name": "Yoane Wissa",
+          "pos": "CF",
+          "shirt": 20
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Abduvohid Nematov",
+          "pos": "GK",
+          "shirt": 12
+        },
+        {
+          "name": "Abdukodir Khusanov",
+          "pos": "CB",
+          "shirt": 2
+        },
+        {
+          "name": "Rustam Ashurmatov",
+          "pos": "CB",
+          "shirt": 5
+        },
+        {
+          "name": "Jakhongir Urozov",
+          "pos": "CB",
+          "shirt": 26
+        },
+        {
+          "name": "Khojiakbar Alijonov",
+          "pos": "RM",
+          "shirt": 3
+        },
+        {
+          "name": "Otabek Shukurov",
+          "pos": "CM",
+          "shirt": 7
+        },
+        {
+          "name": "Akmal Mozgovoy",
+          "pos": "CM",
+          "shirt": 6
+        },
+        {
+          "name": "Sherzod Nasrullaev",
+          "pos": "LM",
+          "shirt": 13
+        },
+        {
+          "name": "Abbosbek Fayzullaev",
+          "pos": "RF",
+          "shirt": 22
+        },
+        {
+          "name": "Eldor Shomurodov",
+          "pos": "CF",
+          "shirt": 14
+        },
+        {
+          "name": "Dostonbek Khamdamov",
+          "pos": "LF",
+          "shirt": 17
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Fiston Mayele",
+          "pos": "FW",
+          "shirt": 19,
+          "onMinute": "51"
+        },
+        {
+          "name": "Meschak Elia",
+          "pos": "FW",
+          "shirt": 13,
+          "onMinute": "72"
+        },
+        {
+          "name": "Théo Bongonda",
+          "pos": "MF",
+          "shirt": 10,
+          "onMinute": "72"
+        },
+        {
+          "name": "Ngal'ayel Mukau",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "72"
+        },
+        {
+          "name": "Joris Kayembe",
+          "pos": "DF",
+          "shirt": 12,
+          "onMinute": "83"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Odiljon Hamrobekov",
+          "pos": "MF",
+          "shirt": 9,
+          "onMinute": "58"
+        },
+        {
+          "name": "Azizjon Ganiev",
+          "pos": "MF",
+          "shirt": 19,
+          "onMinute": "58"
+        },
+        {
+          "name": "Oston Urunov",
+          "pos": "MF",
+          "shirt": 11,
+          "onMinute": "73"
+        },
+        {
+          "name": "Jamshid Iskanderov",
+          "pos": "MF",
+          "shirt": 8,
+          "onMinute": "82"
+        },
+        {
+          "name": "Igor Sergeev",
+          "pos": "FW",
+          "shirt": 21,
+          "onMinute": "82"
+        }
+      ]
     }
   }
 }
