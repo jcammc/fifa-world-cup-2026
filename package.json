@@ -13,6 +13,8 @@
     "build-search-index": "node scripts/generate-search-index.js",
     "gather-photos": "node scripts/gather-photos.js",
     "gather-match-events": "node scripts/gather-match-events.mjs",
+    "gather-head-to-head": "node scripts/gather-head-to-head.mjs",
+    "gather-guardian-bios": "node scripts/gather-guardian-bios.mjs",
     "pre-deploy": "npm run validate && npm run generate-bios && npm run generate-rankings && npm run build-search-index"
   },
   "devDependencies": {},

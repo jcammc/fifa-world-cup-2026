@@ -18,12 +18,13 @@ export class MatchCentre {
     const fixtureId = this.#params.fixtureId;
     if (!fixtureId) { this.#renderNotFound(); return; }
 
-    const [fixtures, knockoutRounds, countries, standings, matchEvents] = await Promise.all([
+    const [fixtures, knockoutRounds, countries, standings, matchEvents, matchPreviews] = await Promise.all([
       DataManager.loadFixtures(),
       DataManager.loadKnockout(),
       DataManager.loadCountries(),
       DataManager.loadStandings(),
       DataManager.loadMatchEvents(),
+      DataManager.loadMatchPreviews(),
     ]);
 
     let fixture    = fixtures.find(f => f.id === fixtureId) ?? null;
@@ -46,7 +47,6 @@ export class MatchCentre {
       ? (standings.find(g => g.groupId === fixture.groupId) ?? null)
       : null;
 
-    // Only load enrichment data when both teams are confirmed
     const homeId = fixture.homeTeamId ?? null;
     const awayId = fixture.awayTeamId ?? null;
 
@@ -61,7 +61,6 @@ export class MatchCentre {
     const homeCaptain = homePlayers.find(p => p.captain) ?? null;
     const awayCaptain = awayPlayers.find(p => p.captain) ?? null;
 
-    // Merge group + knockout completed matches for form derivation
     const allFixtures = [
       ...fixtures,
       ...knockoutRounds.flatMap(r => r.matches ?? []),
@@ -69,10 +68,9 @@ export class MatchCentre {
 
     this.#container.innerHTML = this.#buildPage(
       fixture, home, away, isKnockout, roundLabel, groupStandings, countryMap,
-      homeCaptain, awayCaptain, playerPhotos, allFixtures, standings, matchEvents
+      homeCaptain, awayCaptain, playerPhotos, allFixtures, standings, matchEvents, matchPreviews
     );
 
-    // Radar charts require real DOM elements — render after innerHTML
     if (home?.teamStrength) {
       const el = this.#container.querySelector('.mc-radar--home');
       if (el) Charts.renderRadar(el, home.teamStrength);
@@ -87,10 +85,11 @@ export class MatchCentre {
 
   #buildPage(fixture, home, away, isKnockout, roundLabel, groupStandings, countryMap,
              homeCaptain, awayCaptain, playerPhotos, allFixtures = [], allStandings = [],
-             matchEvents = null) {
+             matchEvents = null, matchPreviews = null) {
     const isLive   = fixture.status === 'live';
     const isFT     = fixture.status === 'FT';
     const hasScore = isLive || isFT;
+    const isUpcoming = !isFT && !isLive;
 
     const homeName = escapeHtml(home?.name ?? fixture.homeLabel ?? 'TBD');
     const awayName = escapeHtml(away?.name ?? fixture.awayLabel ?? 'TBD');
@@ -131,8 +130,33 @@ export class MatchCentre {
       ? `<div class="mc-meta">${venuePart}${broadcasterPart}</div>`
       : '';
 
-    // V2 enrichment sections — only for confirmed teams
     const showEnrichment = !!(homeId && awayId);
+
+    // Determine whether this match is in the yellow card accumulation phase
+    // (Group stage + R32 + R16). Cards reset before QF.
+    const inAccumulationPhase = !!(
+      fixture.groupId ||
+      roundLabel === 'Round of 32' ||
+      roundLabel === 'Round of 16'
+    );
+
+    // ── Completed match sections ──────────────────────────────
+    const eventsHtml = (isFT || isLive)
+      ? this.#buildEventsSection(fixture.id, matchEvents, home, away) : '';
+    const motmHtml   = isFT
+      ? this.#buildMotmSection(fixture.id, matchEvents, countryMap) : '';
+
+    // ── Head-to-head (all matches) ────────────────────────────
+    const hthHtml = showEnrichment
+      ? this.#buildHeadToHeadSection(fixture.id, matchPreviews) : '';
+
+    // ── Upcoming match sections ───────────────────────────────
+    const prevLineupHtml = (isUpcoming && showEnrichment)
+      ? this.#buildPreviousLineupSection(homeId, awayId, home, away, fixture, allFixtures, matchEvents) : '';
+    const suspensionHtml = (isUpcoming && showEnrichment && inAccumulationPhase)
+      ? this.#buildSuspensionSection(homeId, awayId, home, away, allFixtures, matchEvents) : '';
+
+    // ── Shared enrichment sections ────────────────────────────
     const formHtml    = showEnrichment ? this.#buildFormRow(home, away, allFixtures, countryMap) : '';
     const stakeHtml   = (showEnrichment && groupStandings && !isFT)
       ? this.#buildStakeRow(home, away, groupStandings, allStandings) : '';
@@ -140,16 +164,9 @@ export class MatchCentre {
     const managerHtml = showEnrichment ? this.#buildManagerRow(home, away) : '';
     const captainHtml = (showEnrichment && (homeCaptain || awayCaptain))
       ? this.#buildCaptainRow(homeCaptain, awayCaptain, home, away, playerPhotos) : '';
-
     const standingsHtml = groupStandings
       ? this.#buildStandings(groupStandings, homeId, awayId, countryMap)
       : '';
-
-    // V3 — goals timeline and MOTM for completed matches
-    const goalsHtml = isFT
-      ? this.#buildGoalsSection(fixture.id, matchEvents, home, away) : '';
-    const motmHtml  = isFT
-      ? this.#buildMotmSection(fixture.id, matchEvents, countryMap) : '';
 
     return `
       <div class="page-content mc-page">
@@ -169,8 +186,11 @@ export class MatchCentre {
           </div>
         </div>
         ${metaHtml}
-        ${goalsHtml}
+        ${eventsHtml}
         ${motmHtml}
+        ${hthHtml}
+        ${prevLineupHtml}
+        ${suspensionHtml}
         ${formHtml}
         ${stakeHtml}
         ${standingsHtml}
@@ -178,6 +198,240 @@ export class MatchCentre {
         ${captainHtml}
         ${radarHtml}
       </div>`;
+  }
+
+  // ─── Events timeline ──────────────────────────────────────
+  // Unified chronological timeline: goals, yellow/red cards, substitutions.
+
+  #buildEventsSection(fixtureId, matchEvents, home, away) {
+    const entry = matchEvents?.data?.[fixtureId];
+    if (!entry) return '';
+
+    const events = entry.events ?? [];
+    if (events.length === 0) {
+      // Show empty state only for FT matches with no events — not for live
+      return '';
+    }
+
+    const sortMin = m => {
+      const p = String(m).split('+');
+      return parseInt(p[0], 10) * 100 + parseInt(p[1] || 0, 10);
+    };
+    const sorted = [...events].sort((a, b) => sortMin(a.minute) - sortMin(b.minute));
+
+    const rowsHtml = sorted.map(e => this.#buildEventRow(e, home, away)).join('');
+
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Match Events</h2>
+        <div class="mc-events">${rowsHtml}</div>
+      </div>`;
+  }
+
+  #buildEventRow(event, home, away) {
+    const isHome = event.teamId === home?.id;
+    const minute = escapeHtml(String(event.minute ?? ''));
+
+    let cell = '';
+    switch (event.type) {
+      case 'goal': {
+        const scorer = escapeHtml(event.scorer ?? '');
+        const assist = event.assistBy
+          ? ` <span class="mc-event__assist">(${escapeHtml(event.assistBy)})</span>` : '';
+        cell = `&#9917; <span class="mc-event__name">${scorer}</span>${assist}`;
+        break;
+      }
+      case 'yellow_card': {
+        const player = escapeHtml(event.player ?? '');
+        cell = `<span class="mc-event__yc" aria-label="Yellow card"></span><span class="mc-event__name">${player}</span>`;
+        break;
+      }
+      case 'red_card': {
+        const player = escapeHtml(event.player ?? '');
+        cell = `<span class="mc-event__rc" aria-label="Red card"></span><span class="mc-event__name">${player}</span>`;
+        break;
+      }
+      case 'substitution': {
+        const on  = escapeHtml(event.onPlayer ?? '');
+        const off = escapeHtml(event.offPlayer ?? '');
+        cell = `<span class="mc-event__sub-on">&#8593;</span><span class="mc-event__name">${on}</span>`
+             + (off ? ` <span class="mc-event__sub-off">&#8595;${escapeHtml(off)}</span>` : '');
+        break;
+      }
+      default:
+        return '';
+    }
+
+    return `
+      <div class="mc-event-row mc-event-row--${event.type.replace('_', '-')}">
+        <div class="mc-event-row__home">${isHome ? cell : ''}</div>
+        <div class="mc-event-row__min">${minute}'</div>
+        <div class="mc-event-row__away">${isHome ? '' : cell}</div>
+      </div>`;
+  }
+
+  #buildMotmSection(fixtureId, matchEvents, countryMap) {
+    const entry = matchEvents?.data?.[fixtureId];
+    if (!entry?.motm) return '';
+
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Man of the Match</h2>
+        <p class="mc-motm">${escapeHtml(entry.motm)}</p>
+      </div>`;
+  }
+
+  // ─── Head-to-head World Cup history ───────────────────────
+
+  #buildHeadToHeadSection(fixtureId, matchPreviews) {
+    const text = matchPreviews?.data?.[fixtureId]?.headToHead;
+    if (!text) return '';
+
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">World Cup History</h2>
+        <blockquote class="mc-hth">${escapeHtml(text)}</blockquote>
+      </div>`;
+  }
+
+  // ─── Previous starting XI ─────────────────────────────────
+
+  #buildPreviousLineupSection(homeId, awayId, home, away, fixture, allFixtures, matchEvents) {
+    const homeLineup = this.#findPreviousLineup(homeId, fixture, allFixtures, matchEvents);
+    const awayLineup = this.#findPreviousLineup(awayId, fixture, allFixtures, matchEvents);
+
+    if (!homeLineup && !awayLineup) return '';
+
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Previous Starting XI</h2>
+        <div class="mc-lineups">
+          ${this.#buildLineupColumn(homeLineup, home?.name ?? homeId, true)}
+          ${this.#buildLineupColumn(awayLineup, away?.name ?? awayId, false)}
+        </div>
+      </div>`;
+  }
+
+  #findPreviousLineup(teamId, currentFixture, allFixtures, matchEvents) {
+    const teamFixtures = allFixtures
+      .filter(f =>
+        f.id !== currentFixture.id &&
+        f.status === 'FT' &&
+        (f.homeTeamId === teamId || f.awayTeamId === teamId)
+      )
+      .sort((a, b) => new Date(b.kickoff) - new Date(a.kickoff));
+
+    for (const f of teamFixtures) {
+      const entry   = matchEvents?.data?.[f.id];
+      if (!entry) continue;
+      const isHome  = f.homeTeamId === teamId;
+      const starters = isHome ? entry.homeStarting : entry.awayStarting;
+      const formation = isHome ? entry.homeFormation : entry.awayFormation;
+      const subs      = isHome ? (entry.homeSubs ?? []) : (entry.awaySubs ?? []);
+      if (starters?.length > 0) {
+        return { formation, starters, subs, fromFixtureId: f.id };
+      }
+    }
+    return null;
+  }
+
+  #buildLineupColumn(lineup, teamName, isHome) {
+    if (!lineup) {
+      return `<div class="mc-lineup mc-lineup--empty"><p class="mc-lineup__none">No data</p></div>`;
+    }
+
+    const { formation, starters } = lineup;
+
+    const tierOrder = ['gk', 'def', 'mid', 'fwd'];
+    const tierLabel = { gk: 'GK', def: 'DEF', mid: 'MID', fwd: 'FWD' };
+    const POS_TIER = {
+      GK: 'gk',
+      CB: 'def', CD: 'def', SW: 'def', LB: 'def', RB: 'def', LWB: 'def', RWB: 'def', WB: 'def',
+      DM: 'mid', CDM: 'mid', CM: 'mid', MF: 'mid', LM: 'mid', RM: 'mid', AM: 'mid', CAM: 'mid', OM: 'mid',
+      CF: 'fwd', ST: 'fwd', SS: 'fwd', FW: 'fwd', LW: 'fwd', RW: 'fwd', LF: 'fwd', RF: 'fwd', WF: 'fwd',
+    };
+
+    const byTier = { gk: [], def: [], mid: [], fwd: [] };
+    for (const p of (starters ?? [])) {
+      const tier = POS_TIER[p.pos] ?? 'mid';
+      byTier[tier].push(p);
+    }
+
+    const groupsHtml = tierOrder
+      .filter(t => byTier[t].length > 0)
+      .map(t => {
+        const players = byTier[t].map(p =>
+          `<span class="mc-lineup__player">${escapeHtml(p.name)}<span class="mc-lineup__shirt">${p.shirt}</span></span>`
+        ).join('');
+        return `<div class="mc-lineup__group">
+          <span class="mc-lineup__tier">${tierLabel[t]}</span>
+          <div class="mc-lineup__players">${players}</div>
+        </div>`;
+      }).join('');
+
+    return `
+      <div class="mc-lineup${isHome ? ' mc-lineup--home' : ''}">
+        <div class="mc-lineup__header">
+          <span class="mc-lineup__team">${escapeHtml(teamName)}</span>
+          ${formation ? `<span class="mc-lineup__formation">${escapeHtml(formation)}</span>` : ''}
+        </div>
+        ${groupsHtml}
+      </div>`;
+  }
+
+  // ─── Suspension / yellow card tracker ────────────────────
+
+  #buildSuspensionSection(homeId, awayId, home, away, allFixtures, matchEvents) {
+    const homeCards = this.#aggregateYellowCards(homeId, allFixtures, matchEvents);
+    const awayCards = this.#aggregateYellowCards(awayId, allFixtures, matchEvents);
+
+    const homeAtRisk    = [...homeCards.entries()].filter(([, n]) => n === 1);
+    const homeSuspended = [...homeCards.entries()].filter(([, n]) => n >= 2);
+    const awayAtRisk    = [...awayCards.entries()].filter(([, n]) => n === 1);
+    const awaySuspended = [...awayCards.entries()].filter(([, n]) => n >= 2);
+
+    if (!homeAtRisk.length && !homeSuspended.length && !awayAtRisk.length && !awaySuspended.length) {
+      return '';
+    }
+
+    const colHtml = (players, suspended, teamName) => {
+      const items = [
+        ...suspended.map(([n]) => `<li class="mc-susp__item mc-susp__item--suspended"><span class="mc-susp__icon mc-susp__icon--suspended" aria-label="Suspended"></span> ${escapeHtml(n)}</li>`),
+        ...players.map(([n])   => `<li class="mc-susp__item mc-susp__item--risk"><span class="mc-susp__icon mc-susp__icon--risk" aria-label="Yellow card"></span> ${escapeHtml(n)}</li>`),
+      ];
+      if (!items.length) return `<div class="mc-susp__col"><span class="mc-susp__team">${escapeHtml(teamName)}</span><p class="mc-susp__none">None</p></div>`;
+      return `
+        <div class="mc-susp__col">
+          <span class="mc-susp__team">${escapeHtml(teamName)}</span>
+          <ul class="mc-susp__list">${items.join('')}</ul>
+        </div>`;
+    };
+
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Card Risk</h2>
+        <p class="mc-susp__note">2 yellow cards = 1-match ban (resets before QF)</p>
+        <div class="mc-susp">
+          ${colHtml(homeAtRisk, homeSuspended, home?.name ?? homeId)}
+          ${colHtml(awayAtRisk, awaySuspended, away?.name ?? awayId)}
+        </div>
+      </div>`;
+  }
+
+  #aggregateYellowCards(teamId, allFixtures, matchEvents) {
+    const counts = new Map();
+    for (const f of allFixtures) {
+      if (f.homeTeamId !== teamId && f.awayTeamId !== teamId) continue;
+      if (f.status !== 'FT') continue;
+      const entry = matchEvents?.data?.[f.id];
+      if (!entry) continue;
+      for (const ev of entry.events ?? []) {
+        if (ev.type !== 'yellow_card' || ev.teamId !== teamId) continue;
+        if (!ev.player) continue;
+        counts.set(ev.player, (counts.get(ev.player) ?? 0) + 1);
+      }
+    }
+    return counts;
   }
 
   // ─── Form strips ──────────────────────────────────────────
@@ -268,7 +522,6 @@ export class MatchCentre {
     const drawPts = entry.points + 1;
     const lossPts = entry.points;
 
-    // On the final group game (played >= 2), add a qualification note
     const isFinal = entry.played >= 2;
     const others  = isFinal
       ? groupStandings.teams.filter(t => t.teamId !== entry.teamId && t.teamId !== opponentEntry?.teamId)
@@ -293,7 +546,6 @@ export class MatchCentre {
 
   #qualNote(pts, others) {
     if (!others.length) return '';
-    // Conservative: assume the best the other two teams can achieve
     const maxOther = Math.max(...others.map(t => t.points + 3));
     if (pts > maxOther) return 'guaranteed qualification';
     if (pts >= 6)       return 'likely qualifies';
@@ -378,6 +630,10 @@ export class MatchCentre {
                onerror="this.style.display='none'">`
       : `<span class="mc-captain__photo-placeholder"></span>`;
 
+    const bioHtml = captain.bio
+      ? `<p class="mc-captain__bio">${escapeHtml(captain.bio.slice(0, 160))}${captain.bio.length > 160 ? '…' : ''}</p>`
+      : '';
+
     return `
       <div class="mc-captain">
         ${photoHtml}
@@ -387,6 +643,7 @@ export class MatchCentre {
             ? `<span class="mc-captain__pos">${escapeHtml(captain.position)}</span>`
             : ''}
           <span class="mc-captain__badge">C</span>
+          ${bioHtml}
         </div>
       </div>`;
   }
@@ -431,52 +688,6 @@ export class MatchCentre {
           <tbody>${rows}</tbody>
         </table>
       </section>`;
-  }
-
-  // ─── V3: Goals timeline ───────────────────────────────────
-
-  #buildGoalsSection(fixtureId, matchEvents, home, away) {
-    const entry = matchEvents?.data?.[fixtureId];
-    if (!entry) return '';
-
-    const goals = (entry.events ?? []).filter(e => e.type === 'goal');
-
-    const rowsHtml = goals.length === 0
-      ? `<p class="mc-goals__none">No goals scored</p>`
-      : goals.map(e => this.#buildGoalRow(e, home, away)).join('');
-
-    return `
-      <div class="mc-section">
-        <h2 class="mc-section__title">Goals</h2>
-        <div class="mc-goals">${rowsHtml}</div>
-      </div>`;
-  }
-
-  #buildGoalRow(event, home, away) {
-    const isHome = event.teamId === home?.id;
-    const scorer = escapeHtml(event.scorer ?? '');
-    const minute = escapeHtml(event.minute ?? '');
-    const assist = event.assistBy
-      ? ` <span class="mc-goal__assist">(${escapeHtml(event.assistBy)})</span>` : '';
-
-    const cell = `&#9917; ${minute}' ${scorer}${assist}`;
-
-    return `
-      <div class="mc-goal-row">
-        <div class="mc-goal-row__home">${isHome ? cell : ''}</div>
-        <div class="mc-goal-row__away">${isHome ? '' : cell}</div>
-      </div>`;
-  }
-
-  #buildMotmSection(fixtureId, matchEvents, countryMap) {
-    const entry = matchEvents?.data?.[fixtureId];
-    if (!entry?.motm) return '';
-
-    return `
-      <div class="mc-section">
-        <h2 class="mc-section__title">Man of the Match</h2>
-        <p class="mc-motm">${escapeHtml(entry.motm)}</p>
-      </div>`;
   }
 
   #renderNotFound() {

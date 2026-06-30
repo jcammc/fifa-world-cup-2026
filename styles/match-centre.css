@@ -493,60 +493,298 @@
   color: var(--color-text-primary) !important;
 }
 
-/* ─── V3: Goals timeline ──────────────────────────────────── */
+/* ─── Events timeline ─────────────────────────────────────── */
 
-.mc-goals {
+.mc-events {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: 2px;
 }
 
-.mc-goals__none {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  margin: 0;
-  text-align: center;
-  padding: var(--space-3) 0;
-}
-
-.mc-goal-row {
+/* Three-column layout: Home | Minute | Away */
+.mc-event-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 40px 1fr;
   gap: var(--space-2);
   font-size: var(--font-size-sm);
+  align-items: center;
+  padding: 3px 0;
 }
 
-.mc-goal-row__home {
+.mc-event-row__home {
   text-align: right;
   color: var(--color-text-primary);
   font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
 }
 
-.mc-goal-row__away {
+.mc-event-row__away {
   text-align: left;
   color: var(--color-text-primary);
   font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.mc-goal__min {
+.mc-event-row__min {
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* Yellow / red card icons (CSS squares, no emoji dependency) */
+.mc-event__yc,
+.mc-event__rc {
+  display: inline-block;
+  width: 10px;
+  height: 13px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.mc-event__yc { background: #f59e0b; }
+.mc-event__rc { background: #ef4444; }
+
+.mc-event__name {
+  /* inherits parent weight/color */
+}
+
+.mc-event__assist {
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
   font-weight: var(--font-weight-normal);
 }
 
-.mc-goal__assist {
+.mc-event__sub-on {
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+}
+
+.mc-event__sub-off {
   font-size: var(--font-size-xs);
   color: var(--color-text-muted);
+}
+
+/* Dim substitution rows slightly */
+.mc-event-row--substitution .mc-event-row__home,
+.mc-event-row--substitution .mc-event-row__away {
+  color: var(--color-text-secondary);
   font-weight: var(--font-weight-normal);
 }
 
-/* ─── V3: Man of the Match ────────────────────────────────── */
+/* ─── Man of the Match ────────────────────────────────────── */
 
 .mc-motm {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   color: var(--color-text-primary);
   margin: 0;
+}
+
+/* ─── Head-to-head history ────────────────────────────────── */
+
+.mc-hth {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* ─── Previous starting XI ────────────────────────────────── */
+
+.mc-lineups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.mc-lineup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mc-lineup--empty {
+  opacity: 0.5;
+}
+
+.mc-lineup__none {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.mc-lineup__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.mc-lineup--home .mc-lineup__header {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.mc-lineup__team {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mc-lineup__formation {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.mc-lineup__group {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  font-size: var(--font-size-xs);
+}
+
+.mc-lineup--home .mc-lineup__group {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.mc-lineup__tier {
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  min-width: 24px;
+  padding-top: 1px;
+}
+
+.mc-lineup__players {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.mc-lineup--home .mc-lineup__players {
+  align-items: flex-end;
+}
+
+.mc-lineup__player {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.mc-lineup--home .mc-lineup__player {
+  flex-direction: row-reverse;
+}
+
+.mc-lineup__shirt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px;
+  height: 16px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  font-size: 9px;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+/* ─── Card risk / suspension tracker ─────────────────────── */
+
+.mc-susp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.mc-susp__note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-3);
+}
+
+.mc-susp__col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mc-susp__team {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.mc-susp__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mc-susp__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.mc-susp__icon {
+  display: inline-block;
+  width: 10px;
+  height: 13px;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.mc-susp__icon--risk       { background: #f59e0b; }
+.mc-susp__icon--suspended  { background: #ef4444; }
+
+.mc-susp__item--suspended {
+  color: var(--color-danger);
+  font-weight: var(--font-weight-medium);
+}
+
+.mc-susp__none {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ─── Captain bio ─────────────────────────────────────────── */
+
+.mc-captain__bio {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin: var(--space-1) 0 0;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 /* ─── Responsive ──────────────────────────────────────────── */

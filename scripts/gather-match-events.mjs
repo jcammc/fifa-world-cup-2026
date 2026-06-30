@@ -1,13 +1,13 @@
 /**
- * Gathers match events (goals, MOTM, formations) from Wikipedia WC 2026 group pages.
+ * Gathers match events (goals, cards, subs, formations, lineups, MOTM) from Wikipedia WC 2026.
  * Writes to data/match-events.json.
  *
  * Run: npm run gather-match-events
- * Idempotent: skips matches already in match-events.json.
+ * Idempotent: skips matches where both MOTM and lineup are already populated.
  *
- * Data source: Wikipedia {{#invoke:football box|main}} templates on group/round pages.
- * Each template contains: goals (scorer + minute), teams, date, score.
- * Lineup, formation, subs may be absent — gracefully skipped.
+ * Data sources:
+ *   - {{#invoke:football box|main}} template: goals, MOTM
+ *   - {| width="100%" lineup table: starting XI, formations, yellow/red cards, substitutions
  *
  * Minute format: preserved as string ("45+2", "90+6") — never flattened.
  */
@@ -20,9 +20,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT      = resolve(__dirname, '..');
 
 const WIKI_API  = 'https://en.wikipedia.org/w/api.php';
-const DELAY_MS  = 1500; // Be polite to Wikipedia
+const DELAY_MS  = 1500;
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────────────────────────────
 
 function readJson(rel)       { return JSON.parse(readFileSync(resolve(ROOT, rel), 'utf8')); }
 function writeJson(rel, obj) { writeFileSync(resolve(ROOT, rel), JSON.stringify(obj, null, 2) + '\n', 'utf8'); }
@@ -57,8 +57,8 @@ async function fetchWikitext(page, retries = 3) {
 // ── Template extraction ───────────────────────────────────────────────────────
 
 // Find all {{#invoke:football box|main ...}} blocks in wikitext, brace-tracking.
-// Returns array of { box: string, afterText: string } where afterText is the wikitext
-// between this box's end and the next box's start (used to extract MOTM).
+// Returns array of { box, afterText } where afterText is between this box's end
+// and the next box's start (used for MOTM extraction and lineup table parsing).
 function extractFootballBoxes(wikitext) {
   const spans = [];
   let   pos   = 0;
@@ -89,11 +89,9 @@ function extractFootballBoxes(wikitext) {
 }
 
 // Extract Man of the Match name from the inter-box text.
-// Wikipedia format: '''Man of the Match:'''\n<br />[[Player Name|Display]] (Country)
 function extractMotm(afterText) {
   const m = afterText.match(/Man of the Match['']{0,3}:?['']{0,3}\s*<br\s*\/?>\s*\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/i);
   if (!m) return null;
-  // m[2] is the display name (if piped link), m[1] is the page name
   return (m[2] || m[1]).trim();
 }
 
@@ -117,7 +115,6 @@ function splitTopLevel(str, sep = '|') {
 // Parse a football box block into a key→value map.
 function parseBox(box) {
   const params  = {};
-  // Everything after the first newline
   const inner   = box.slice(box.indexOf('\n'));
   const parts   = splitTopLevel(inner);
 
@@ -133,67 +130,47 @@ function parseBox(box) {
 
 // ── Parsing helpers ───────────────────────────────────────────────────────────
 
-// Strip [[Link|Display]] → Display, [[Link]] → Link, and other wiki markup.
 function stripLinks(text) {
   return text
-    .replace(/\[\[(?:[^\]|]+)\|([^\]]+)\]\]/g, '$1') // [[Link|Display]] → Display
-    .replace(/\[\[([^\]]+)\]\]/g, '$1')               // [[Link]] → Link
-    .replace(/\{\{[^}]*\}\}/g, '')                    // {{template}} → ''
-    .replace(/'{2,}/g, '')                            // bold/italic markup
+    .replace(/\[\[(?:[^\]|]+)\|([^\]]+)\]\]/g, '$1')
+    .replace(/\[\[([^\]]+)\]\]/g, '$1')
+    .replace(/\{\{[^}]*\}\}/g, '')
+    .replace(/'{2,}/g, '')
     .trim();
 }
 
-// Parse a goals parameter value into event objects.
-// Wikipedia format: lines starting with * then player name then minute'
-// e.g. "*[[Julián Quiñones|Quiñones]] 9'\n*[[Raúl Jiménez|Jiménez]] 67'"
-// Minute may be "45+2'" or "90+6'" — preserved as string.
 function parseGoals(goalsParam, teamId) {
   if (!goalsParam || !goalsParam.trim()) return [];
   const events = [];
 
-  // Split on list items (* or newlines) and <br> tags
   const lines = goalsParam
     .split(/\n|<br\s*\/?>/gi)
     .map(l => l.trim())
     .filter(l => l.startsWith('*') || /\d+[\+\d]*['′]/.test(l));
 
   for (const line of lines) {
-    // Remove leading * and wiki list markup
     const text = line.replace(/^\*+/, '').trim();
     if (!text) continue;
 
-    // Extract minute: a number (with optional +extras) followed by ' or ′ (prime)
-    // Must be the LAST occurrence in the line (final goal time)
     const minuteMatches = [...text.matchAll(/(\d+(?:\+\d+)?)['′]/g)];
-
     if (minuteMatches.length === 0) continue;
 
-    // If multiple goals by same player on one line (e.g. "Mbappé 14' 78'"), emit each
-    // Otherwise single goal
     const nameText = text.slice(0, minuteMatches[0].index).trim();
     const scorer   = stripLinks(nameText) || null;
 
     for (const m of minuteMatches) {
-      events.push({
-        type:     'goal',
-        minute:   m[1],         // string, e.g. "45+2"
-        teamId,
-        scorer,
-        assistBy: null,
-      });
+      events.push({ type: 'goal', minute: m[1], teamId, scorer, assistBy: null });
     }
   }
 
   return events;
 }
 
-// Extract the 3-letter FIFA code from {{#invoke:flag|fb-rt|MEX}} or {{#invoke:flag|fb|RSA}}.
 function extractFIFACode(teamParam) {
   const m = teamParam.match(/\{\{#invoke:flag\|fb(?:-rt)?\|([A-Z]{2,3})\}\}/i);
   return m ? m[1].toUpperCase() : null;
 }
 
-// Extract date string "YYYY-MM-DD" from {{Start date|2026|6|11}}.
 function extractDate(dateParam) {
   const m = dateParam.match(/\{\{Start date\|(\d{4})\|(\d{1,2})\|(\d{1,2})/i);
   if (!m) return null;
@@ -201,8 +178,176 @@ function extractDate(dateParam) {
   return `${y}-${mo}-${d}`;
 }
 
-// ── FIFA code → internal team ID ─────────────────────────────────────────────
-// Full 48-team WC 2026 mapping using FIFA 3-letter codes.
+// ── Lineup table parsing ──────────────────────────────────────────────────────
+
+// Position tier mapping for formation derivation.
+const POS_TIER = {
+  GK: 'gk',
+  // Defenders
+  CB: 'def', CD: 'def', SW: 'def',
+  LB: 'def', RB: 'def', LWB: 'def', RWB: 'def', WB: 'def',
+  // Midfielders
+  DM: 'mid', CDM: 'mid', CM: 'mid', MF: 'mid',
+  LM: 'mid', RM: 'mid', AM: 'mid', CAM: 'mid', OM: 'mid',
+  // Forwards
+  CF: 'fwd', ST: 'fwd', SS: 'fwd', FW: 'fwd',
+  LW: 'fwd', RW: 'fwd', LF: 'fwd', RF: 'fwd', WF: 'fwd',
+};
+
+function deriveFormation(starters) {
+  let def = 0, mid = 0, fwd = 0;
+  for (const p of starters) {
+    const tier = POS_TIER[p.pos];
+    if (tier === 'def') def++;
+    else if (tier === 'mid') mid++;
+    else if (tier === 'fwd') fwd++;
+  }
+  if (def + mid + fwd === 0) return null;
+  return `${def}-${mid}-${fwd}`;
+}
+
+// Parse one side (home or away) of the lineup table inner wiki table.
+function parseLineupSide(tableText, teamId) {
+  const starters = [];
+  const subs     = [];
+  const events   = [];
+  let   inSubs   = false;
+
+  for (const rawLine of tableText.split('\n')) {
+    const line = rawLine.trim();
+
+    if (/'''Substitutions:?'''/.test(line) || /colspan[^|]*\|.*Substitution/.test(line)) {
+      inSubs = true;
+      continue;
+    }
+    if (/'''Manager:?'''/.test(line) || /colspan[^|]*\|.*Manager/.test(line)) break;
+
+    // Player row: |POS ||'''N'''||[[Name...]] || ... events ...
+    const playerMatch = line.match(/^\|([A-Z]+)\s*\|\|'''(\d+)'''\s*\|\|(.*)/);
+    if (!playerMatch) continue;
+
+    const pos   = playerMatch[1].toUpperCase();
+    const shirt = parseInt(playerMatch[2], 10);
+    const rest  = playerMatch[3];
+
+    // Extract player name from wiki link
+    const linkMatch = rest.match(/\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/);
+    if (!linkMatch) continue;
+
+    let name = linkMatch[2] || linkMatch[1];
+    // Strip disambiguation suffix from page titles that have no display text
+    if (!linkMatch[2]) name = name.replace(/\s*\([^)]+\)$/, '');
+    name = name.replace(/_/g, ' ').trim();
+    if (!name) continue;
+
+    // Extract event templates from the line
+    const yelMatch    = rest.match(/\{\{yel\|(\d+(?:\+\d+)?)\}\}/i);
+    const redMatch    = rest.match(/\{\{sent off\|[^|]*\|(\d+(?:\+\d+)?)\}\}/i);
+    const subOffMatch = rest.match(/\{\{suboff\|(\d+(?:\+\d+)?)\}\}/i);
+    const subOnMatch  = rest.match(/\{\{subon\|(\d+(?:\+\d+)?)\}\}/i);
+
+    if (yelMatch) {
+      events.push({ type: 'yellow_card', minute: yelMatch[1], teamId, player: name });
+    }
+    if (redMatch) {
+      events.push({ type: 'red_card', minute: redMatch[1], teamId, player: name });
+    }
+
+    if (!inSubs) {
+      const player = { name, pos, shirt };
+      if (subOffMatch) player.subOffMinute = subOffMatch[1];
+      starters.push(player);
+    } else {
+      const player = { name, pos, shirt };
+      if (subOnMatch) player.onMinute = subOnMatch[1];
+      subs.push(player);
+    }
+  }
+
+  return { starters, subs, events };
+}
+
+// Pair subbed-off starters with subbed-on players by minute and order.
+function buildSubstitutionEvents(starters, subs, teamId) {
+  const events  = [];
+  const offByMin = new Map();
+  const onByMin  = new Map();
+
+  for (const p of starters) {
+    if (!p.subOffMinute) continue;
+    if (!offByMin.has(p.subOffMinute)) offByMin.set(p.subOffMinute, []);
+    offByMin.get(p.subOffMinute).push(p.name);
+  }
+  for (const p of subs) {
+    if (!p.onMinute) continue;
+    if (!onByMin.has(p.onMinute)) onByMin.set(p.onMinute, []);
+    onByMin.get(p.onMinute).push(p.name);
+  }
+
+  for (const [minute, offPlayers] of offByMin) {
+    const onPlayers = onByMin.get(minute) ?? [];
+    for (let i = 0; i < offPlayers.length; i++) {
+      events.push({
+        type:      'substitution',
+        minute,
+        teamId,
+        offPlayer: offPlayers[i],
+        onPlayer:  onPlayers[i] ?? null,
+      });
+    }
+  }
+
+  return events;
+}
+
+// Use brace-tracking to find the closing |} of a wiki table starting at `start`.
+function findTableEnd(text, start) {
+  let depth = 0;
+  let i     = start;
+  while (i < text.length) {
+    if (text[i] === '{' && text[i + 1] === '|') { depth++; i += 2; }
+    else if (text[i] === '|' && text[i + 1] === '}') {
+      depth--;
+      i += 2;
+      if (depth === 0) return i;
+    } else { i++; }
+  }
+  return text.length;
+}
+
+// Find and parse the {| width="100%" lineup table in the afterText.
+// Returns { home, away } where each is { starters, subs, events }, or null.
+function parseLineupTable(afterText, homeTeamId, awayTeamId) {
+  const outerStart = afterText.indexOf('{| width="100%"');
+  if (outerStart === -1) return null;
+
+  const segment = afterText.slice(outerStart);
+
+  // Find the two inner lineup tables (font-size:90%) — first is home, second is away.
+  const innerMarker = '{| style="font-size:90%';
+  const innerStarts = [];
+  let   search      = 0;
+
+  while (innerStarts.length < 2) {
+    const idx = segment.indexOf(innerMarker, search);
+    if (idx === -1) break;
+    innerStarts.push(idx);
+    search = idx + 1;
+  }
+
+  if (innerStarts.length < 2) return null;
+
+  const homeTableText = segment.slice(innerStarts[0], findTableEnd(segment, innerStarts[0]));
+  const awayTableText = segment.slice(innerStarts[1], findTableEnd(segment, innerStarts[1]));
+
+  const home = parseLineupSide(homeTableText, homeTeamId);
+  const away = parseLineupSide(awayTableText, awayTeamId);
+
+  return { home, away };
+}
+
+// ── FIFA code → internal team ID ──────────────────────────────────────────────
+
 const FIFA_TO_ID = {
   MEX: 'mexico',        CAN: 'canada',        USA: 'usa',
   ARG: 'argentina',     BRA: 'brazil',        URU: 'uruguay',
@@ -223,7 +368,6 @@ const FIFA_TO_ID = {
   AUS: 'australia',     NZL: 'new-zealand',   COD: 'dr-congo',
   KSA: 'saudi-arabia',  IRQ: 'iraq',          UAE: 'uae',
   UZB: 'uzbekistan',    CPV: 'cape-verde',    BIH: 'bosnia-herzegovina',
-  // Additional codes that may appear
   DRC: 'dr-congo',      CRC: 'costa-rica',    JAM: 'jamaica',
   HON: 'honduras',      HAI: 'haiti',         PAN: 'panama',
   CZE: 'czech-republic', CUW: 'curacao',      JOR: 'jordan',
@@ -231,11 +375,8 @@ const FIFA_TO_ID = {
 
 // ── Fixture index ─────────────────────────────────────────────────────────────
 
-function buildFixtureIndex(fixtures, countries) {
-  const countryMap = new Map(countries.map(c => [c.id, c]));
-  // Key: YYYY-MM-DD:teamId:teamId (sorted alphabetically)
+function buildFixtureIndex(fixtures) {
   const byDateTeams = new Map();
-  // Key: YYYY-MM-DD (for fallback when only 1 match on a date)
   const byDate      = new Map();
 
   for (const f of fixtures) {
@@ -259,26 +400,22 @@ function findFixtureId(date, code1, code2, index) {
 
   const sorted = [id1, id2].sort().join(':');
 
-  // Try exact date first (Wikipedia local date matches UTC kickoff date)
   let key = `${date}:${sorted}`;
   if (index.byDateTeams.has(key)) return index.byDateTeams.get(key);
 
-  // Wikipedia uses US local dates; late-night kickoffs (after ~20:00 UTC)
-  // fall into the next UTC day. Try date + 1.
   const next = new Date(`${date}T12:00:00Z`);
   next.setUTCDate(next.getUTCDate() + 1);
   const nextStr = next.toISOString().slice(0, 10);
   key = `${nextStr}:${sorted}`;
   if (index.byDateTeams.has(key)) return index.byDateTeams.get(key);
 
-  // Fallback: single match on either date
   const same = [...(index.byDate.get(date) || []), ...(index.byDate.get(nextStr) || [])];
   if (same.length === 1) return same[0];
 
   return null;
 }
 
-// ── Pages to scrape ──────────────────────────────────────────────────────────
+// ── Pages to scrape ───────────────────────────────────────────────────────────
 
 const GROUP_PAGES = [
   '2026_FIFA_World_Cup_Group_A', '2026_FIFA_World_Cup_Group_B',
@@ -291,33 +428,35 @@ const GROUP_PAGES = [
 
 const KNOCKOUT_PAGES = [
   '2026_FIFA_World_Cup_round_of_32',
+  '2026_FIFA_World_Cup_round_of_16',
+  '2026_FIFA_World_Cup_quarter-finals',
+  '2026_FIFA_World_Cup_semi-finals',
+  '2026_FIFA_World_Cup_Final',
 ];
 
 // ── Result categories ─────────────────────────────────────────────────────────
+
 const RESULT = {
-  POPULATED:            'populated',           // successfully written to JSON
-  SKIPPED:              'skipped',             // already present, not re-fetched
-  RATE_LIMITED:         'rate_limited',        // Wikipedia 429, gave up after retries
-  PAGE_MISSING:         'page_missing',        // Wikipedia page not found / error
-  FETCH_ERROR:          'fetch_error',         // other HTTP / network error
-  INCOMPLETE_TEMPLATE:  'incomplete_template', // box parsed but missing team1/team2
-  NO_FIXTURE_MATCH:     'no_fixture_match',    // teams found but no fixture in our data
-  UNKNOWN_FIFA_CODE:    'unknown_fifa_code',   // FIFA code not in FIFA_TO_ID map
+  POPULATED:            'populated',
+  SKIPPED:              'skipped',
+  RATE_LIMITED:         'rate_limited',
+  PAGE_MISSING:         'page_missing',
+  FETCH_ERROR:          'fetch_error',
+  INCOMPLETE_TEMPLATE:  'incomplete_template',
+  NO_FIXTURE_MATCH:     'no_fixture_match',
+  UNKNOWN_FIFA_CODE:    'unknown_fifa_code',
 };
 
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 async function main() {
   const fixtures  = readJson('data/fixtures.json').data;
-  const knockout  = readJson('data/knockout.json').data
-    .flatMap(r => r.matches);
-  const countries = readJson('data/countries.json').data;
+  const knockout  = readJson('data/knockout.json').data.flatMap(r => r.matches);
   const existing  = readJson('data/match-events.json');
 
   const allFixtures = [...fixtures, ...knockout];
-  const index       = buildFixtureIndex(allFixtures, countries);
+  const index       = buildFixtureIndex(allFixtures);
 
-  // Per-page result log: { page, results: Map<RESULT, string[]> }
   const pageLog = [];
 
   async function processPage(page) {
@@ -349,23 +488,16 @@ async function main() {
       const code1   = params['team1'] ? extractFIFACode(params['team1']) : null;
       const code2   = params['team2'] ? extractFIFACode(params['team2']) : null;
 
-      // Detect incomplete template (section-transcluded content on page)
       if (!code1 || !code2) {
         if (!params['team1'] && !params['team2']) {
-          log(RESULT.INCOMPLETE_TEMPLATE, `date=${dateStr ?? 'none'} — team params absent (section transclusion?)`);
+          log(RESULT.INCOMPLETE_TEMPLATE, `date=${dateStr ?? 'none'} — team params absent`);
           console.warn(`  ⚠ incomplete template (date=${dateStr}, no team1/team2)`);
         } else {
-          // Team params exist but FIFA code extraction failed
           const raw1 = params['team1'] ?? 'none';
           const raw2 = params['team2'] ?? 'none';
-          if (raw1 && !code1) {
-            log(RESULT.UNKNOWN_FIFA_CODE, `team1="${raw1.slice(0, 60)}"`);
-            console.warn(`  ⚠ unknown FIFA code: team1="${raw1.slice(0, 60)}"`);
-          }
-          if (raw2 && !code2) {
-            log(RESULT.UNKNOWN_FIFA_CODE, `team2="${raw2.slice(0, 60)}"`);
-            console.warn(`  ⚠ unknown FIFA code: team2="${raw2.slice(0, 60)}"`);
-          }
+          if (raw1 && !code1) { log(RESULT.UNKNOWN_FIFA_CODE, `team1="${raw1.slice(0, 60)}"`); }
+          if (raw2 && !code2) { log(RESULT.UNKNOWN_FIFA_CODE, `team2="${raw2.slice(0, 60)}"`); }
+          console.warn(`  ⚠ unknown FIFA code`);
         }
         continue;
       }
@@ -384,10 +516,9 @@ async function main() {
         continue;
       }
 
-      // Skip only when both events and MOTM are already populated.
-      // Re-process if MOTM is still null so a re-run can fill it in.
+      // Skip only when MOTM and lineup are both already populated.
       const prev = existing.data[fixtureId];
-      if (prev && prev.motm !== null) {
+      if (prev && prev.motm !== null && (prev.homeStarting?.length ?? 0) > 0) {
         log(RESULT.SKIPPED, fixtureId);
         continue;
       }
@@ -395,36 +526,66 @@ async function main() {
       const teamId1 = FIFA_TO_ID[code1];
       const teamId2 = FIFA_TO_ID[code2];
 
+      // Parse goals from football box
       const goals1 = parseGoals(params['goals1'] || '', teamId1);
       const goals2 = parseGoals(params['goals2'] || '', teamId2);
+
+      // MOTM: box param first, then inter-box text
+      const motm = params['motom']
+        ? stripLinks(params['motom'])
+        : extractMotm(afterText);
+
+      // Parse lineup table from the text after the football box
+      const lineup = parseLineupTable(afterText, teamId1, teamId2);
+
+      const lineupFound = !!(lineup?.home?.starters?.length || lineup?.away?.starters?.length);
+      if (!lineupFound) {
+        console.log(`  ⚠ no lineup table found for ${fixtureId}`);
+      }
+
+      // Card and substitution events from lineups
+      const cardSubEvents = lineup ? [
+        ...lineup.home.events,
+        ...lineup.away.events,
+        ...buildSubstitutionEvents(lineup.home.starters, lineup.home.subs, teamId1),
+        ...buildSubstitutionEvents(lineup.away.starters, lineup.away.subs, teamId2),
+      ] : [];
 
       const sortMin = m => {
         const p = String(m).split('+');
         return parseInt(p[0], 10) * 100 + parseInt(p[1] || 0, 10);
       };
-      const allEvents = [...goals1, ...goals2].sort((a, b) => sortMin(a.minute) - sortMin(b.minute));
 
-      // MOTM: try box param first (older Wikipedia format), then inter-box text pattern
-      const motm = params['motom']
-        ? stripLinks(params['motom'])
-        : extractMotm(afterText);
+      // Preserve existing goals if re-processing for lineup data and goal parse is empty
+      const existingGoals = (prev?.events ?? []).filter(e => e.type === 'goal');
+      const goalEvents    = goals1.length + goals2.length > 0
+        ? [...goals1, ...goals2]
+        : existingGoals;
 
-      // Preserve existing events if re-processing for MOTM-only update
-      const existingEvents = prev?.events ?? [];
-      const newEvents = allEvents.length > 0 ? allEvents : existingEvents;
+      const allEvents = [...goalEvents, ...cardSubEvents]
+        .sort((a, b) => sortMin(a.minute) - sortMin(b.minute));
 
       existing.data[fixtureId] = {
-        events:        newEvents,
+        events:        allEvents,
         motm,
-        homeFormation: params['formation1'] ? params['formation1'].trim() : null,
-        awayFormation: params['formation2'] ? params['formation2'].trim() : null,
-        homeStarting:  [],
-        awayStarting:  [],
+        homeFormation: lineup ? (deriveFormation(lineup.home.starters) ?? prev?.homeFormation ?? null)
+                               : (prev?.homeFormation ?? null),
+        awayFormation: lineup ? (deriveFormation(lineup.away.starters) ?? prev?.awayFormation ?? null)
+                               : (prev?.awayFormation ?? null),
+        homeStarting:  lineup ? lineup.home.starters.map(p => ({ name: p.name, pos: p.pos, shirt: p.shirt }))
+                               : (prev?.homeStarting ?? []),
+        awayStarting:  lineup ? lineup.away.starters.map(p => ({ name: p.name, pos: p.pos, shirt: p.shirt }))
+                               : (prev?.awayStarting ?? []),
+        homeSubs:      lineup ? lineup.home.subs.map(p => ({ name: p.name, pos: p.pos, shirt: p.shirt, onMinute: p.onMinute ?? null }))
+                               : (prev?.homeSubs ?? []),
+        awaySubs:      lineup ? lineup.away.subs.map(p => ({ name: p.name, pos: p.pos, shirt: p.shirt, onMinute: p.onMinute ?? null }))
+                               : (prev?.awaySubs ?? []),
       };
 
       const isUpdate = prev !== undefined;
-      log(RESULT.POPULATED, `${fixtureId} (${newEvents.length} goals${motm ? ', MOTM: ' + motm : ''}${isUpdate ? ' [update]' : ''})`);
-      console.log(`  ✓ ${fixtureId} (${newEvents.length} goals${motm ? ', MOTM' : ''}${isUpdate ? ' [update]' : ''})`);
+      const lineupNote = lineupFound ? `, lineup (${lineup.home.starters.length}+${lineup.away.starters.length})` : '';
+      log(RESULT.POPULATED, `${fixtureId} (${goalEvents.length} goals${motm ? ', MOTM' : ''}${lineupNote}${isUpdate ? ' [update]' : ''})`);
+      console.log(`  ✓ ${fixtureId} (${goalEvents.length} goals, ${cardSubEvents.length} card/sub events${motm ? ', MOTM' : ''}${lineupNote}${isUpdate ? ' [update]' : ''})`);
     }
 
     pageLog.push({ page, results });
@@ -439,6 +600,7 @@ async function main() {
   writeJson('data/match-events.json', existing);
 
   // ── Summary report ────────────────────────────────────────────────────────
+
   const totals = new Map(Object.values(RESULT).map(r => [r, 0]));
   for (const { results } of pageLog) {
     for (const [cat, items] of results) {
@@ -469,7 +631,6 @@ async function main() {
     if (count > 0) console.log(`${labels[cat]} : ${count}`);
   }
 
-  // Detail lines for anything that needs attention
   const attention = [
     RESULT.RATE_LIMITED, RESULT.PAGE_MISSING, RESULT.FETCH_ERROR,
     RESULT.INCOMPLETE_TEMPLATE, RESULT.NO_FIXTURE_MATCH, RESULT.UNKNOWN_FIFA_CODE,
