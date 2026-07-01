@@ -272,14 +272,6 @@
 }
 .mgr-wiki a:hover { text-decoration: underline; }
 
-/* ─── Match Centre manager name link ────────────────────────── */
-
-.mc-manager__name--link {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-.mc-manager__name--link:hover { text-decoration: underline; }
-
 /* ─── Overview tab Full profile link ────────────────────────── */
 
 .tp-manager__profile-link {

@@ -8,6 +8,7 @@ import { broadcasterBadge } from '../broadcasters.js';
 export class MatchCentre {
   #container;
   #params;
+  #tabObserver = null;
 
   constructor(container, params = {}) {
     this.#container = container;
@@ -168,6 +169,45 @@ export class MatchCentre {
       ? this.#buildStandings(groupStandings, homeId, awayId, countryMap)
       : '';
 
+    // ── Tab groups depend on match state ─────────────────────
+    const isPostMatch = isFT || isLive;
+
+    const tabStrip = showEnrichment ? (isPostMatch
+      ? `<nav class="mc-tab-strip" aria-label="Match sections">
+          <a class="mc-tab mc-tab--active" href="#mc-group-match">Match</a>
+          <a class="mc-tab" href="#mc-group-context">Context</a>
+          <a class="mc-tab" href="#mc-group-teams">Teams</a>
+        </nav>`
+      : `<nav class="mc-tab-strip" aria-label="Match sections">
+          <a class="mc-tab mc-tab--active" href="#mc-group-preview">Preview</a>
+          ${(prevLineupHtml || suspensionHtml) ? '<a class="mc-tab" href="#mc-group-lineups">Lineups</a>' : ''}
+          <a class="mc-tab" href="#mc-group-teams">Teams</a>
+        </nav>`)
+      : '';
+
+    const groupsHtml = showEnrichment ? (isPostMatch
+      ? `<section id="mc-group-match" class="mc-tab-group">
+          ${eventsHtml}${motmHtml}${hthHtml}
+        </section>
+        <section id="mc-group-context" class="mc-tab-group">
+          ${formHtml}${stakeHtml}${standingsHtml}
+        </section>
+        <section id="mc-group-teams" class="mc-tab-group">
+          ${managerHtml}${captainHtml}${radarHtml}
+        </section>`
+      : `<section id="mc-group-preview" class="mc-tab-group">
+          ${hthHtml}${formHtml}${stakeHtml}${standingsHtml}
+        </section>
+        ${(prevLineupHtml || suspensionHtml)
+          ? `<section id="mc-group-lineups" class="mc-tab-group">
+              ${prevLineupHtml}${suspensionHtml}
+            </section>`
+          : ''}
+        <section id="mc-group-teams" class="mc-tab-group">
+          ${managerHtml}${captainHtml}${radarHtml}
+        </section>`)
+      : `${eventsHtml}${motmHtml}${hthHtml}${prevLineupHtml}${suspensionHtml}${formHtml}${stakeHtml}${standingsHtml}${managerHtml}${captainHtml}${radarHtml}`;
+
     return `
       <div class="page-content mc-page">
         <a href="#tournament" class="mc-back">&#8592; Tournament</a>
@@ -186,17 +226,8 @@ export class MatchCentre {
           </div>
         </div>
         ${metaHtml}
-        ${eventsHtml}
-        ${motmHtml}
-        ${hthHtml}
-        ${prevLineupHtml}
-        ${suspensionHtml}
-        ${formHtml}
-        ${stakeHtml}
-        ${standingsHtml}
-        ${managerHtml}
-        ${captainHtml}
-        ${radarHtml}
+        ${tabStrip}
+        ${groupsHtml}
       </div>`;
   }
 
@@ -702,7 +733,28 @@ export class MatchCentre {
       </div>`;
   }
 
-  init() {}
+  init() {
+    const groups = this.#container.querySelectorAll('.mc-tab-group');
+    const tabs   = this.#container.querySelectorAll('.mc-tab');
+    if (!groups.length || !tabs.length) return;
 
-  teardown() {}
+    const tabMap = new Map();
+    tabs.forEach(t => tabMap.set(t.getAttribute('href')?.slice(1), t));
+
+    this.#tabObserver = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          tabs.forEach(t => t.classList.remove('mc-tab--active'));
+          tabMap.get(entry.target.id)?.classList.add('mc-tab--active');
+        }
+      }
+    }, { threshold: 0.3 });
+
+    groups.forEach(g => this.#tabObserver.observe(g));
+  }
+
+  teardown() {
+    this.#tabObserver?.disconnect();
+    this.#tabObserver = null;
+  }
 }
