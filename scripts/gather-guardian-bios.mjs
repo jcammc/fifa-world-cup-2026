@@ -177,7 +177,7 @@ function writeBiosToFiles(matches) {
     const fileData = JSON.parse(readFileSync(filePath, 'utf8'));
     for (const { player: matchedPlayer, bio } of updates) {
       const p = fileData.data?.find(p => p.id === matchedPlayer.id);
-      if (p) p.bio = bio;
+      if (p) p.description = bio;
     }
     writeFileSync(filePath, JSON.stringify(fileData, null, 2) + '\n', 'utf8');
   }

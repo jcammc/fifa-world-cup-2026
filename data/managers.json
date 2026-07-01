@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-22T00:00:00Z",
+  "lastUpdated": "2026-07-01T00:00:00Z",
   "data": {
     "mexico": {
       "career": [
@@ -30,10 +30,10 @@
       ],
       "playerClubs": ["Pohang Steelers", "Kashiwa Reysol", "LA Galaxy"],
       "honours": [
-        { "title": "K League 1", "year": "2017", "role": "Manager" },
-        { "title": "K League 1", "year": "2018", "role": "Manager" },
-        { "title": "K League 1", "year": "2019", "role": "Manager" },
-        { "title": "K League 1", "year": "2020", "role": "Manager" }
+        { "title": "K League 1", "year": "2017", "role": "Manager", "club": "Ulsan Hyundai" },
+        { "title": "K League 1", "year": "2018", "role": "Manager", "club": "Ulsan Hyundai" },
+        { "title": "K League 1", "year": "2019", "role": "Manager", "club": "Ulsan Hyundai" },
+        { "title": "K League 1", "year": "2020", "role": "Manager", "club": "Ulsan Hyundai" }
       ]
     },
     "south-africa": {
@@ -45,7 +45,9 @@
       ],
       "playerClubs": ["Club Brugge", "KV Mechelen"],
       "honours": [
-        { "title": "Africa Cup of Nations", "year": "2017", "role": "Manager" }
+        { "title": "Belgian Pro League", "year": "1998", "role": "Manager", "club": "Club Brugge" },
+        { "title": "Belgian Pro League", "year": "2003", "role": "Manager", "club": "Club Brugge" },
+        { "title": "Africa Cup of Nations", "year": "2017", "role": "Manager", "club": "Cameroon" }
       ]
     },
     "czech-republic": {
@@ -58,7 +60,12 @@
         { "role": "Manager", "club": "Czechia", "years": "2023–present" }
       ],
       "playerClubs": ["Sparta Prague", "Dukla Prague"],
-      "honours": []
+      "honours": [
+        { "title": "Czech First League", "year": "1998", "role": "Manager", "club": "Sparta Prague" },
+        { "title": "Czech First League", "year": "1999", "role": "Manager", "club": "Sparta Prague" },
+        { "title": "Czech First League", "year": "2011", "role": "Manager", "club": "Viktoria Plzeň" },
+        { "title": "Czech First League", "year": "2018", "role": "Manager", "club": "Viktoria Plzeň" }
+      ]
     },
     "canada": {
       "career": [
@@ -71,7 +78,8 @@
       ],
       "playerClubs": ["DC United", "Red Bull New York", "Chicago Fire"],
       "honours": [
-        { "title": "Austrian Bundesliga", "year": "2020", "role": "Manager" }
+        { "title": "Austrian Bundesliga", "year": "2020", "role": "Manager", "club": "RB Salzburg" },
+        { "title": "Austrian Bundesliga", "year": "2021", "role": "Manager", "club": "RB Salzburg" }
       ]
     },
     "bosnia-herzegovina": {
@@ -98,7 +106,7 @@
       ],
       "playerClubs": ["Real Madrid", "Barcelona", "Logroñés"],
       "honours": [
-        { "title": "UEFA Europa League", "year": "2020", "role": "Manager" }
+        { "title": "UEFA Europa League", "year": "2020", "role": "Manager", "club": "Sevilla" }
       ]
     },
     "switzerland": {
@@ -111,7 +119,7 @@
       ],
       "playerClubs": ["FC Basel", "Galatasaray", "VfB Stuttgart"],
       "honours": [
-        { "title": "Swiss Super League", "year": "2014", "role": "Manager" }
+        { "title": "Swiss Super League", "year": "2014", "role": "Manager", "club": "FC Basel" }
       ]
     },
     "brazil": {
@@ -131,13 +139,24 @@
       ],
       "playerClubs": ["Parma", "Roma", "AC Milan"],
       "honours": [
-        { "title": "UEFA Champions League", "year": "2003", "role": "Manager" },
-        { "title": "UEFA Champions League", "year": "2007", "role": "Manager" },
-        { "title": "UEFA Champions League", "year": "2014", "role": "Manager" },
-        { "title": "UEFA Champions League", "year": "2022", "role": "Manager" },
-        { "title": "UEFA Champions League", "year": "2024", "role": "Manager" },
-        { "title": "Serie A", "year": "2004", "role": "Manager" },
-        { "title": "La Liga", "year": "2022", "role": "Manager" }
+        { "title": "Serie A", "year": "1983", "role": "Player", "club": "Roma" },
+        { "title": "Serie A", "year": "1988", "role": "Player", "club": "AC Milan" },
+        { "title": "European Cup", "year": "1989", "role": "Player", "club": "AC Milan" },
+        { "title": "European Cup", "year": "1990", "role": "Player", "club": "AC Milan" },
+        { "title": "Serie A", "year": "1992", "role": "Player", "club": "AC Milan" },
+        { "title": "UEFA Champions League", "year": "2003", "role": "Manager", "club": "AC Milan" },
+        { "title": "UEFA Champions League", "year": "2007", "role": "Manager", "club": "AC Milan" },
+        { "title": "Serie A", "year": "2004", "role": "Manager", "club": "AC Milan" },
+        { "title": "Premier League", "year": "2010", "role": "Manager", "club": "Chelsea" },
+        { "title": "FA Cup", "year": "2010", "role": "Manager", "club": "Chelsea" },
+        { "title": "Ligue 1", "year": "2013", "role": "Manager", "club": "Paris Saint-Germain" },
+        { "title": "UEFA Champions League", "year": "2014", "role": "Manager", "club": "Real Madrid" },
+        { "title": "Copa del Rey", "year": "2014", "role": "Manager", "club": "Real Madrid" },
+        { "title": "Bundesliga", "year": "2017", "role": "Manager", "club": "Bayern Munich" },
+        { "title": "UEFA Champions League", "year": "2022", "role": "Manager", "club": "Real Madrid" },
+        { "title": "La Liga", "year": "2022", "role": "Manager", "club": "Real Madrid" },
+        { "title": "UEFA Champions League", "year": "2024", "role": "Manager", "club": "Real Madrid" },
+        { "title": "La Liga", "year": "2024", "role": "Manager", "club": "Real Madrid" }
       ]
     },
     "morocco": {
@@ -175,7 +194,9 @@
         { "role": "Manager", "club": "United States", "years": "2024–present" }
       ],
       "playerClubs": ["Newell's Old Boys", "Espanyol", "Paris Saint-Germain"],
-      "honours": []
+      "honours": [
+        { "title": "Ligue 1", "year": "2022", "role": "Manager", "club": "Paris Saint-Germain" }
+      ]
     },
     "paraguay": {
       "career": [
@@ -190,13 +211,16 @@
     },
     "australia": {
       "career": [
-        { "role": "Manager", "club": "Western Sydney Wanderers", "years": "2012" },
+        { "role": "Manager", "club": "Western Sydney Wanderers", "years": "2012–2017" },
         { "role": "Manager", "club": "Perth Glory", "years": "2018–2020" },
         { "role": "Manager", "club": "Melbourne Victory", "years": "2022–2024" },
         { "role": "Manager", "club": "Australia", "years": "2024–present" }
       ],
       "playerClubs": ["Crystal Palace", "Sanfrecce Hiroshima", "Yokohama F. Marinos"],
-      "honours": []
+      "honours": [
+        { "title": "A-League Championship", "year": "2014", "role": "Manager", "club": "Western Sydney Wanderers" },
+        { "title": "AFC Champions League", "year": "2014", "role": "Manager", "club": "Western Sydney Wanderers" }
+      ]
     },
     "turkey": {
       "career": [
@@ -223,7 +247,9 @@
         { "role": "Manager", "club": "Germany", "years": "2023–present" }
       ],
       "playerClubs": [],
-      "honours": []
+      "honours": [
+        { "title": "Bundesliga", "year": "2022", "role": "Manager", "club": "Bayern Munich" }
+      ]
     },
     "curacao": {
       "career": [
@@ -240,9 +266,10 @@
       ],
       "playerClubs": ["ADO Den Haag", "Brentford"],
       "honours": [
-        { "title": "Eredivisie", "year": "1997", "role": "Manager" },
-        { "title": "Eredivisie", "year": "2000", "role": "Manager" },
-        { "title": "Scottish Premier League", "year": "2003", "role": "Manager" }
+        { "title": "Eredivisie", "year": "1997", "role": "Manager", "club": "PSV Eindhoven" },
+        { "title": "Eredivisie", "year": "2000", "role": "Manager", "club": "PSV Eindhoven" },
+        { "title": "Scottish Premier League", "year": "2003", "role": "Manager", "club": "Rangers" },
+        { "title": "UEFA Cup", "year": "2008", "role": "Manager", "club": "Zenit Saint Petersburg" }
       ]
     },
     "ivory-coast": {
@@ -253,7 +280,7 @@
       ],
       "playerClubs": ["Nice", "Nantes", "Reading"],
       "honours": [
-        { "title": "Africa Cup of Nations", "year": "2023", "role": "Manager" }
+        { "title": "Africa Cup of Nations", "year": "2023", "role": "Manager", "club": "Ivory Coast" }
       ]
     },
     "ecuador": {
@@ -267,7 +294,7 @@
       ],
       "playerClubs": [],
       "honours": [
-        { "title": "Copa Sudamericana", "year": "2020", "role": "Manager" }
+        { "title": "Copa Sudamericana", "year": "2020", "role": "Manager", "club": "Defensa y Justicia" }
       ]
     },
     "netherlands": {
@@ -285,12 +312,13 @@
       ],
       "playerClubs": ["Ajax", "PSV Eindhoven", "Barcelona"],
       "honours": [
-        { "title": "UEFA Champions League", "year": "1995", "role": "Player" },
-        { "title": "Eredivisie", "year": "1985", "role": "Player" },
-        { "title": "La Liga", "year": "1991", "role": "Player" },
-        { "title": "La Liga", "year": "1992", "role": "Player" },
-        { "title": "La Liga", "year": "1993", "role": "Player" },
-        { "title": "La Liga", "year": "1994", "role": "Player" }
+        { "title": "Eredivisie", "year": "1985", "role": "Player", "club": "Ajax" },
+        { "title": "European Cup", "year": "1988", "role": "Player", "club": "PSV Eindhoven" },
+        { "title": "UEFA Champions League", "year": "1992", "role": "Player", "club": "Barcelona" },
+        { "title": "La Liga", "year": "1991", "role": "Player", "club": "Barcelona" },
+        { "title": "La Liga", "year": "1992", "role": "Player", "club": "Barcelona" },
+        { "title": "La Liga", "year": "1993", "role": "Player", "club": "Barcelona" },
+        { "title": "La Liga", "year": "1994", "role": "Player", "club": "Barcelona" }
       ]
     },
     "japan": {
@@ -301,9 +329,9 @@
       ],
       "playerClubs": ["Sanfrecce Hiroshima"],
       "honours": [
-        { "title": "J1 League", "year": "2012", "role": "Manager" },
-        { "title": "J1 League", "year": "2013", "role": "Manager" },
-        { "title": "J1 League", "year": "2015", "role": "Manager" }
+        { "title": "J1 League", "year": "2012", "role": "Manager", "club": "Sanfrecce Hiroshima" },
+        { "title": "J1 League", "year": "2013", "role": "Manager", "club": "Sanfrecce Hiroshima" },
+        { "title": "J1 League", "year": "2015", "role": "Manager", "club": "Sanfrecce Hiroshima" }
       ]
     },
     "sweden": {
@@ -342,7 +370,7 @@
       ],
       "playerClubs": [],
       "honours": [
-        { "title": "Ligue 1", "year": "2011", "role": "Manager" }
+        { "title": "Ligue 1", "year": "2011", "role": "Manager", "club": "Lille" }
       ]
     },
     "egypt": {
@@ -353,9 +381,9 @@
       ],
       "playerClubs": ["Zamalek", "PAOK", "Al-Ain"],
       "honours": [
-        { "title": "Africa Cup of Nations", "year": "1998", "role": "Player" },
-        { "title": "Africa Cup of Nations", "year": "2006", "role": "Player" },
-        { "title": "Africa Cup of Nations", "year": "2008", "role": "Player" }
+        { "title": "Africa Cup of Nations", "year": "1998", "role": "Player", "club": "Egypt" },
+        { "title": "Africa Cup of Nations", "year": "2006", "role": "Player", "club": "Egypt" },
+        { "title": "Africa Cup of Nations", "year": "2008", "role": "Player", "club": "Egypt" }
       ]
     },
     "iran": {
@@ -387,9 +415,9 @@
       ],
       "playerClubs": ["Athletic Club", "Real Sociedad", "Logroñés"],
       "honours": [
-        { "title": "UEFA European U-21 Championship", "year": "2019", "role": "Manager" },
-        { "title": "UEFA European U-21 Championship", "year": "2021", "role": "Manager" },
-        { "title": "UEFA European Championship", "year": "2024", "role": "Manager" }
+        { "title": "UEFA European U-21 Championship", "year": "2019", "role": "Manager", "club": "Spain U21" },
+        { "title": "UEFA European U-21 Championship", "year": "2021", "role": "Manager", "club": "Spain U21" },
+        { "title": "UEFA European Championship", "year": "2024", "role": "Manager", "club": "Spain" }
       ]
     },
     "cape-verde": {
@@ -433,10 +461,16 @@
       ],
       "playerClubs": ["Marseille", "Juventus", "Chelsea"],
       "honours": [
-        { "title": "UEFA Champions League", "year": "1993", "role": "Player" },
-        { "title": "UEFA Champions League", "year": "1996", "role": "Player" },
-        { "title": "FIFA World Cup", "year": "1998", "role": "Player" },
-        { "title": "FIFA World Cup", "year": "2018", "role": "Manager" }
+        { "title": "UEFA Champions League", "year": "1993", "role": "Player", "club": "Marseille" },
+        { "title": "UEFA Champions League", "year": "1996", "role": "Player", "club": "Juventus" },
+        { "title": "Serie A", "year": "1995", "role": "Player", "club": "Juventus" },
+        { "title": "Serie A", "year": "1996", "role": "Player", "club": "Juventus" },
+        { "title": "Serie A", "year": "1997", "role": "Player", "club": "Juventus" },
+        { "title": "Serie A", "year": "1998", "role": "Player", "club": "Juventus" },
+        { "title": "UEFA European Championship", "year": "2000", "role": "Player", "club": "France" },
+        { "title": "FIFA World Cup", "year": "1998", "role": "Player", "club": "France" },
+        { "title": "FIFA World Cup", "year": "2018", "role": "Manager", "club": "France" },
+        { "title": "UEFA Nations League", "year": "2021", "role": "Manager", "club": "France" }
       ]
     },
     "senegal": {
@@ -470,9 +504,13 @@
       ],
       "playerClubs": ["Lillestrøm SK", "FK Kongsvinger", "FC Copenhagen"],
       "honours": [
-        { "title": "Danish Superliga", "year": "2006", "role": "Manager" },
-        { "title": "Danish Superliga", "year": "2009", "role": "Manager" },
-        { "title": "Danish Superliga", "year": "2010", "role": "Manager" }
+        { "title": "Danish Superliga", "year": "2003", "role": "Manager", "club": "FC Copenhagen" },
+        { "title": "Danish Superliga", "year": "2004", "role": "Manager", "club": "FC Copenhagen" },
+        { "title": "Danish Superliga", "year": "2006", "role": "Manager", "club": "FC Copenhagen" },
+        { "title": "Danish Superliga", "year": "2009", "role": "Manager", "club": "FC Copenhagen" },
+        { "title": "Danish Superliga", "year": "2010", "role": "Manager", "club": "FC Copenhagen" },
+        { "title": "Danish Superliga", "year": "2011", "role": "Manager", "club": "FC Copenhagen" },
+        { "title": "Danish Superliga", "year": "2013", "role": "Manager", "club": "FC Copenhagen" }
       ]
     },
     "argentina": {
@@ -483,9 +521,9 @@
       ],
       "playerClubs": ["Deportivo La Coruña", "Lazio", "West Ham United"],
       "honours": [
-        { "title": "Copa América", "year": "2021", "role": "Manager" },
-        { "title": "FIFA World Cup", "year": "2022", "role": "Manager" },
-        { "title": "Copa América", "year": "2024", "role": "Manager" }
+        { "title": "Copa América", "year": "2021", "role": "Manager", "club": "Argentina" },
+        { "title": "FIFA World Cup", "year": "2022", "role": "Manager", "club": "Argentina" },
+        { "title": "Copa América", "year": "2024", "role": "Manager", "club": "Argentina" }
       ]
     },
     "algeria": {
@@ -514,7 +552,10 @@
         { "role": "Manager", "club": "Austria", "years": "2022–present" }
       ],
       "playerClubs": [],
-      "honours": []
+      "honours": [
+        { "title": "DFB-Pokal", "year": "2001", "role": "Manager", "club": "Schalke 04" },
+        { "title": "DFB-Pokal", "year": "2002", "role": "Manager", "club": "Schalke 04" }
+      ]
     },
     "jordan": {
       "career": [
@@ -534,7 +575,7 @@
       ],
       "playerClubs": ["Real Zaragoza", "Wigan Athletic", "Motherwell"],
       "honours": [
-        { "title": "FA Cup", "year": "2013", "role": "Manager" }
+        { "title": "FA Cup", "year": "2013", "role": "Manager", "club": "Wigan Athletic" }
       ]
     },
     "dr-congo": {
@@ -558,11 +599,11 @@
       ],
       "playerClubs": ["Napoli", "Parma", "Juventus"],
       "honours": [
-        { "title": "FIFA World Cup", "year": "2006", "role": "Player" },
-        { "title": "Serie A", "year": "2002", "role": "Player" },
-        { "title": "Serie A", "year": "2003", "role": "Player" },
-        { "title": "Serie A", "year": "2004", "role": "Player" },
-        { "title": "La Liga", "year": "2007", "role": "Player" }
+        { "title": "FIFA World Cup", "year": "2006", "role": "Player", "club": "Italy" },
+        { "title": "Serie A", "year": "2002", "role": "Player", "club": "Parma" },
+        { "title": "Serie A", "year": "2003", "role": "Player", "club": "Internazionale" },
+        { "title": "Serie A", "year": "2004", "role": "Player", "club": "Juventus" },
+        { "title": "La Liga", "year": "2007", "role": "Player", "club": "Real Madrid" }
       ]
     },
     "colombia": {
@@ -586,8 +627,10 @@
       ],
       "playerClubs": [],
       "honours": [
-        { "title": "UEFA Champions League", "year": "2021", "role": "Manager" },
-        { "title": "DFB-Pokal", "year": "2017", "role": "Manager" }
+        { "title": "DFB-Pokal", "year": "2017", "role": "Manager", "club": "Borussia Dortmund" },
+        { "title": "Ligue 1", "year": "2019", "role": "Manager", "club": "Paris Saint-Germain" },
+        { "title": "Ligue 1", "year": "2020", "role": "Manager", "club": "Paris Saint-Germain" },
+        { "title": "UEFA Champions League", "year": "2021", "role": "Manager", "club": "Chelsea" }
       ]
     },
     "croatia": {

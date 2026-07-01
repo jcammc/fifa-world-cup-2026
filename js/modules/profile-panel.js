@@ -41,7 +41,8 @@ export class ProfilePanel {
     const age      = player.age ?? '—';
     const caps     = player.caps ?? 0;
     const goals    = player.goals ?? 0;
-    const bio      = escapeHtml(player.bio || generateFallbackBio(player, club));
+    const description = escapeHtml(player.description || player.bio || generateFallbackBio(player, club));
+    const fullBio     = (player.bio && player.bio !== player.description) ? escapeHtml(player.bio) : '';
     const captain  = player.captain
       ? `<span class="pp-captain" title="Captain">C</span>`
       : '';
@@ -78,7 +79,8 @@ export class ProfilePanel {
               <span class="pp-stat__lbl">Goals</span>
             </div>
           </div>
-          <p class="pp-bio">${bio}</p>
+          <p class="pp-bio">${description}</p>
+          ${fullBio ? `<details class="pp-bio-details"><summary>Full biography</summary><p>${fullBio}</p></details>` : ''}
         </div>
       </div>`;
   }

@@ -1,0 +1,323 @@
+/* ─── Manager Profile Page ──────────────────────────────────── */
+
+.mgr-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-3);
+}
+
+.mgr-back {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+  margin-bottom: var(--space-4);
+}
+.mgr-back:hover { text-decoration: underline; }
+
+/* ─── Header ─────────────────────────────────────────────────── */
+
+.mgr-header {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  margin-bottom: var(--space-5);
+}
+
+.mgr-photo {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--color-surface-alt);
+  position: relative;
+}
+
+.mgr-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mgr-photo__initials {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.mgr-header__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mgr-name {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin: 0 0 var(--space-1);
+}
+
+.mgr-meta,
+.mgr-former-pos,
+.mgr-tenure {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+
+.mgr-team-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.mgr-team-link:hover { text-decoration: underline; }
+
+.mgr-team-flag {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* ─── Sections ────────────────────────────────────────────────── */
+
+.mgr-section {
+  margin-bottom: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.mgr-section__title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-3);
+}
+
+.mgr-bio {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ─── WC 2026 Record ────────────────────────────────────────── */
+
+.mgr-record {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.mgr-record__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 48px;
+}
+
+.mgr-record__val {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mgr-record__lbl {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+/* ─── Honours ────────────────────────────────────────────────── */
+
+.mgr-honours {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mgr-honour {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.mgr-honour:last-child { border-bottom: none; }
+
+.mgr-honour__main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.mgr-honour__title {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+}
+
+.mgr-honour__year {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.mgr-honour__role {
+  font-size: var(--font-size-xs);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.mgr-honour__role--manager {
+  background: #e8f4fd;
+  color: #1a6ea8;
+}
+
+.mgr-honour__role--player {
+  background: #e8fdf0;
+  color: #1a7a45;
+}
+
+.mgr-honour__club {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ─── Accordions (Career / Playing Career) ──────────────────── */
+
+.mgr-accordion {
+  border-top: 1px solid var(--color-border-subtle);
+  margin-bottom: var(--space-2);
+}
+
+.mgr-accordion__toggle {
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  padding: var(--space-3) 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.mgr-accordion__toggle::after {
+  content: '›';
+  font-size: 1.1em;
+  transition: transform 0.2s;
+}
+
+.mgr-accordion[open] > .mgr-accordion__toggle::after {
+  transform: rotate(90deg);
+}
+
+.mgr-career {
+  list-style: none;
+  margin: 0 0 var(--space-3);
+  padding: 0;
+}
+
+.mgr-career__item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+  font-size: var(--font-size-sm);
+}
+.mgr-career__item:last-child { border-bottom: none; }
+
+.mgr-career__years {
+  color: var(--color-text-muted);
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.mgr-player-clubs {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-3);
+}
+
+/* ─── Wikipedia link ──────────────────────────────────────────── */
+
+.mgr-wiki {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+}
+
+.mgr-wiki a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.mgr-wiki a:hover { text-decoration: underline; }
+
+/* ─── Match Centre manager name link ────────────────────────── */
+
+.mc-manager__name--link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.mc-manager__name--link:hover { text-decoration: underline; }
+
+/* ─── Overview tab Full profile link ────────────────────────── */
+
+.tp-manager__profile-link {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.tp-manager__profile-link:hover { text-decoration: underline; }
+
+/* ─── Dark mode role badges ──────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  .mgr-honour__role--manager {
+    background: #1a3a52;
+    color: #7bbfe8;
+  }
+  .mgr-honour__role--player {
+    background: #1a3a25;
+    color: #7bdfa0;
+  }
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .mgr-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mgr-team-link {
+    justify-content: center;
+  }
+
+  .mgr-record {
+    justify-content: center;
+  }
+}

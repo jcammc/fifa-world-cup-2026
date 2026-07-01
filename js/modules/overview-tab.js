@@ -125,6 +125,7 @@ export class OverviewTab {
             ${p.captain ? '<span class="tp-hero-card__captain">Captain</span>' : ''}
             ${clubName ? `<span class="tp-hero-card__club">${clubName}</span>` : ''}
             <span class="tp-hero-card__stat">${p.caps ?? 0} caps</span>
+            ${p.description ? `<span class="tp-hero-card__desc">${escapeHtml(p.description)}</span>` : ''}
           </div>
         </button>`;
     }).join('');
@@ -213,6 +214,7 @@ export class OverviewTab {
       const items = data.honours.map(h => `
         <li class="tp-mgr-honour">
           <span class="tp-mgr-honour__title">${escapeHtml(h.title)}</span>
+          ${h.club ? `<span class="tp-mgr-honour__club">${escapeHtml(h.club)}</span>` : ''}
           <span class="tp-mgr-honour__year">${escapeHtml(String(h.year))}</span>
           <span class="tp-mgr-honour__role tp-mgr-honour__role--${escapeHtml(h.role.toLowerCase())}">${escapeHtml(h.role)}</span>
         </li>`).join('');
@@ -229,7 +231,8 @@ export class OverviewTab {
       <details class="tp-manager__details">
         <summary class="tp-manager__toggle">Career &amp; Honours</summary>
         <div class="tp-manager__expanded">${parts.join('')}</div>
-      </details>`;
+      </details>`
+      + `\n      <a href="#manager/${escapeHtml(this.#country?.id ?? '')}" class="tp-manager__profile-link">Full profile →</a>`;
   }
 
   // ─── Radar chart ─────────────────────────────────────────────

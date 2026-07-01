@@ -9,6 +9,7 @@ import { LeagueExplorer } from './modules/league-explorer.js';
 import { ClubExplorer } from './modules/club-explorer.js';
 import { MatchCentre } from './modules/match-centre.js';
 import { BestThirds } from './modules/best-thirds.js';
+import { ManagerPage } from './modules/manager-page.js';
 import { escapeHtml } from './utils.js';
 
 // ─── Placeholder for unimplemented routes ──────────────────
@@ -169,6 +170,11 @@ class _Router {
       return { Module: BestThirds, params: {} };
     }
 
+    // Manager profile route: #manager/{countryId}
+    if (hash.startsWith('manager/')) {
+      return { Module: ManagerPage, params: { countryId: hash.slice(8) } };
+    }
+
     // Player route: must check before country route (e.g. #france-mbappe)
     for (const id of (this.#countryIds ?? [])) {
       if (hash.startsWith(id + '-')) {
@@ -203,6 +209,7 @@ class _Router {
       || /^group-[a-l]$/.test(hash) || hash.startsWith('match/') || hash === 'best-thirds';
     const href = isTc ? '#tournament'
       : hash.startsWith('compare/') ? '#compare'
+      : hash.startsWith('manager/') ? `#${hash.slice(8)}`
       : `#${hash}`;
     document.querySelector(`.nav-link[href="${href}"]`)?.classList.add('nav-link--active');
   }

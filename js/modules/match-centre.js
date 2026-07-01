@@ -601,7 +601,7 @@ export class MatchCentre {
     const metaParts = [country.managerNationality, country.managerTenure].filter(Boolean);
     return `
       <div class="mc-manager${isHome ? ' mc-manager--home' : ''}">
-        <span class="mc-manager__name">${escapeHtml(country.manager)}</span>
+        <a href="#manager/${escapeHtml(country.id)}" class="mc-manager__name mc-manager__name--link">${escapeHtml(country.manager)}</a>
         ${metaParts.length
           ? `<span class="mc-manager__meta">${escapeHtml(metaParts.join(' · '))}</span>`
           : ''}
@@ -630,8 +630,9 @@ export class MatchCentre {
                onerror="this.style.display='none'">`
       : `<span class="mc-captain__photo-placeholder"></span>`;
 
-    const bioHtml = captain.bio
-      ? `<p class="mc-captain__bio">${escapeHtml(captain.bio.slice(0, 160))}${captain.bio.length > 160 ? '…' : ''}</p>`
+    const captionText = captain.description || captain.bio || '';
+    const bioHtml = captionText
+      ? `<p class="mc-captain__bio">${escapeHtml(captionText)}</p>`
       : '';
 
     return `
