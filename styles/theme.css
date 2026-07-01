@@ -31,6 +31,8 @@
   --color-skeleton-shimmer: #f0f0f0;
   --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.08);
   --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --color-lineup-pitch: #2d5a27;
+  --color-lineup-pitch-bg: #3d7a30;
 }
 
 /* Dark theme */
@@ -65,4 +67,6 @@
   --color-skeleton-shimmer: #2a2a2a;
   --shadow-card: 0 1px 4px rgba(0, 0, 0, 0.4);
   --shadow-elevated: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --color-lineup-pitch: #2d5a27;
+  --color-lineup-pitch-bg: #2a5225;
 }

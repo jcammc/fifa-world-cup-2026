@@ -8,7 +8,9 @@ import { broadcasterBadge } from '../broadcasters.js';
 export class MatchCentre {
   #container;
   #params;
-  #tabObserver = null;
+  #tabObserver   = null;
+  #homeLineup    = null;
+  #awayLineup    = null;
 
   constructor(container, params = {}) {
     this.#container = container;
@@ -79,6 +81,15 @@ export class MatchCentre {
     if (away?.teamStrength) {
       const el = this.#container.querySelector('.mc-radar--away');
       if (el) Charts.renderRadar(el, away.teamStrength);
+    }
+
+    const homeLineupEl = this.#container.querySelector('.mc-lineup-canvas--home');
+    if (homeLineupEl && this.#homeLineup?.formation && this.#homeLineup?.starters?.length) {
+      Charts.renderLineup(homeLineupEl, this.#homeLineup.formation, this.#homeLineup.starters);
+    }
+    const awayLineupEl = this.#container.querySelector('.mc-lineup-canvas--away');
+    if (awayLineupEl && this.#awayLineup?.formation && this.#awayLineup?.starters?.length) {
+      Charts.renderLineup(awayLineupEl, this.#awayLineup.formation, this.#awayLineup.starters);
     }
   }
 
@@ -330,6 +341,8 @@ export class MatchCentre {
   #buildPreviousLineupSection(homeId, awayId, home, away, fixture, allFixtures, matchEvents) {
     const homeLineup = this.#findPreviousLineup(homeId, fixture, allFixtures, matchEvents);
     const awayLineup = this.#findPreviousLineup(awayId, fixture, allFixtures, matchEvents);
+    this.#homeLineup = homeLineup;
+    this.#awayLineup = awayLineup;
 
     if (!homeLineup && !awayLineup) return '';
 
@@ -337,8 +350,22 @@ export class MatchCentre {
       <div class="mc-section">
         <h2 class="mc-section__title">Previous Starting XI</h2>
         <div class="mc-lineups">
-          ${this.#buildLineupColumn(homeLineup, home?.name ?? homeId, true)}
-          ${this.#buildLineupColumn(awayLineup, away?.name ?? awayId, false)}
+          <div class="mc-lineup-panel">
+            <div class="mc-lineup__header">
+              <span class="mc-lineup__team">${escapeHtml(home?.name ?? homeId)}</span>
+              ${homeLineup?.formation ? `<span class="mc-lineup__formation">${escapeHtml(homeLineup.formation)}</span>` : ''}
+            </div>
+            <div class="mc-lineup-canvas mc-lineup-canvas--home"></div>
+            <div aria-hidden="true">${this.#buildLineupColumn(homeLineup, home?.name ?? homeId, true)}</div>
+          </div>
+          <div class="mc-lineup-panel">
+            <div class="mc-lineup__header">
+              <span class="mc-lineup__team">${escapeHtml(away?.name ?? awayId)}</span>
+              ${awayLineup?.formation ? `<span class="mc-lineup__formation">${escapeHtml(awayLineup.formation)}</span>` : ''}
+            </div>
+            <div class="mc-lineup-canvas mc-lineup-canvas--away"></div>
+            <div aria-hidden="true">${this.#buildLineupColumn(awayLineup, away?.name ?? awayId, false)}</div>
+          </div>
         </div>
       </div>`;
   }

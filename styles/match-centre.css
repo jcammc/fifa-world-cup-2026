@@ -655,6 +655,22 @@
   gap: var(--space-4);
 }
 
+.mc-lineup-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.mc-lineup-canvas {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mc-lineup-canvas svg {
+  display: block;
+}
+
 .mc-lineup {
   display: flex;
   flex-direction: column;
