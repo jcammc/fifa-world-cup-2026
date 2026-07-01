@@ -633,7 +633,7 @@
   margin: 0;
 }
 
-/* ─── Head-to-head history ────────────────────────────────── */
+/* ─── Head-to-head / Match Story ─────────────────────────── */
 
 .mc-hth {
   margin: 0;
@@ -645,6 +645,66 @@
   color: var(--color-text-secondary);
   line-height: 1.6;
   font-style: italic;
+}
+
+.mc-hth-prose {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: var(--space-3) 0 0;
+}
+
+.mc-hth-details {
+  margin-top: var(--space-3);
+}
+
+.mc-hth-details__toggle {
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  list-style: none;
+  padding: var(--space-2) 0;
+  user-select: none;
+}
+
+.mc-hth-details[open] > .mc-hth-details__toggle {
+  color: var(--color-text);
+}
+
+/* ─── H2H stats grid ─────────────────────────────────────── */
+
+.mc-h2h-stats {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.mc-h2h-row {
+  display: contents;
+}
+
+.mc-h2h-row > * {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-sm);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.mc-h2h-row:last-child > * {
+  border-bottom: none;
+}
+
+.mc-h2h-label {
+  color: var(--color-text-secondary);
+}
+
+.mc-h2h-val {
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* ─── Previous starting XI ────────────────────────────────── */

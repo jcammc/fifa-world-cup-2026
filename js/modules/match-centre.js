@@ -160,7 +160,7 @@ export class MatchCentre {
 
     // ── Head-to-head (all matches) ────────────────────────────
     const hthHtml = showEnrichment
-      ? this.#buildHeadToHeadSection(fixture.id, matchPreviews) : '';
+      ? this.#buildHeadToHeadSection(fixture.id, matchPreviews, isFT, home) : '';
 
     // ── Upcoming match sections ───────────────────────────────
     const prevLineupHtml = (isUpcoming && showEnrichment)
@@ -323,17 +323,71 @@ export class MatchCentre {
       </div>`;
   }
 
-  // ─── Head-to-head World Cup history ───────────────────────
+  // ─── Head-to-head / Match Story ───────────────────────────
 
-  #buildHeadToHeadSection(fixtureId, matchPreviews) {
-    const text = matchPreviews?.data?.[fixtureId]?.headToHead;
-    if (!text) return '';
+  #buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, home = null) {
+    const entry = matchPreviews?.data?.[fixtureId];
+    if (!entry) return '';
 
-    return `
-      <div class="mc-section">
-        <h2 class="mc-section__title">World Cup History</h2>
-        <blockquote class="mc-hth">${escapeHtml(text)}</blockquote>
-      </div>`;
+    const stats    = entry.headToHeadStats ?? null;
+    const story    = entry.matchStory ?? '';
+    const h2hProse = entry.headToHead ?? '';
+
+    // Stats grid
+    const statsHtml = stats ? this.#buildH2HStatsGrid(stats, home) : '';
+
+    if (isFT) {
+      // Completed match: "Match Story" section
+      if (!story && !statsHtml) return '';
+      const proseHtml = story
+        ? `<blockquote class="mc-hth">${escapeHtml(story)}</blockquote>` : '';
+      const historyDetails = (statsHtml || h2hProse)
+        ? `<details class="mc-hth-details">
+            <summary class="mc-hth-details__toggle">World Cup History</summary>
+            ${statsHtml}
+            ${h2hProse ? `<p class="mc-hth-prose">${escapeHtml(h2hProse)}</p>` : ''}
+          </details>`
+        : '';
+      return `
+        <div class="mc-section">
+          <h2 class="mc-section__title">Match Story</h2>
+          ${proseHtml}
+          ${historyDetails}
+        </div>`;
+    } else {
+      // Upcoming match: "World Cup History" section
+      if (!statsHtml && !h2hProse) return '';
+      const proseDetails = h2hProse
+        ? `<details class="mc-hth-details">
+            <summary class="mc-hth-details__toggle">History notes</summary>
+            <p class="mc-hth-prose">${escapeHtml(h2hProse)}</p>
+          </details>`
+        : '';
+      return `
+        <div class="mc-section">
+          <h2 class="mc-section__title">World Cup History</h2>
+          ${statsHtml}
+          ${proseDetails}
+        </div>`;
+    }
+  }
+
+  #buildH2HStatsGrid(stats, home) {
+    const homeName = escapeHtml(home?.name ?? 'Home');
+    const rows = [
+      ['World Cup meetings',   stats.worldCupMeetings ?? stats.totalMeetings ?? '—'],
+      [`${homeName} wins`,     stats.wins ?? '—'],
+      ['Draws',                stats.draws ?? '—'],
+      ['Goals',                stats.goalsFor != null ? `${stats.goalsFor} – ${stats.goalsAgainst}` : '—'],
+      ['Last World Cup',       stats.lastWorldCupMeeting ?? stats.lastMeeting ?? '—'],
+      ['Knockout meetings',    stats.knockoutMeetings ?? '—'],
+    ].map(([label, val]) => `
+      <div class="mc-h2h-row">
+        <span class="mc-h2h-label">${label}</span>
+        <span class="mc-h2h-val">${typeof val === 'number' ? val : escapeHtml(String(val))}</span>
+      </div>`).join('');
+
+    return `<div class="mc-h2h-stats">${rows}</div>`;
   }
 
   // ─── Previous starting XI ─────────────────────────────────

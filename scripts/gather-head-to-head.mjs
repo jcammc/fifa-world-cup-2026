@@ -243,12 +243,24 @@ async function main() {
 
   const allFixtures = [...fixtures, ...knockout];
   const pairIndex   = buildTeamPairIndex(allFixtures, countries);
+  const statusMap   = new Map(allFixtures.map(f => [f.id, f.status]));
 
   // Load or initialise the output file
   const outputPath = 'data/match-previews.json';
   const existing   = existsSync(resolve(ROOT, outputPath))
     ? readJson(outputPath)
     : { version: '1.0', lastUpdated: '', data: {} };
+
+  // Migrate: move headToHead → matchStory for any FT fixtures already in the file
+  let migrated = 0;
+  for (const [id, entry] of Object.entries(existing.data)) {
+    if (entry.headToHead && statusMap.get(id) === 'FT') {
+      entry.matchStory  = entry.headToHead;
+      entry.headToHead  = '';
+      migrated++;
+    }
+  }
+  if (migrated > 0) console.log(`Migrated ${migrated} headToHead → matchStory entries`);
 
   let populated = 0, skipped = 0, noText = 0, noMatch = 0;
 
@@ -280,8 +292,13 @@ async function main() {
         continue;
       }
 
-      // Skip already-populated entries
-      if (existing.data[fixtureId]?.headToHead) {
+      const status    = statusMap.get(fixtureId) ?? 'scheduled';
+      const isFT      = status === 'FT';
+      const targetKey = isFT ? 'matchStory' : 'headToHead';
+      const entry     = existing.data[fixtureId] ?? {};
+
+      // Skip if target field already populated (idempotent)
+      if (entry[targetKey]) {
         skipped++;
         continue;
       }
@@ -293,8 +310,8 @@ async function main() {
         continue;
       }
 
-      existing.data[fixtureId] = { headToHead: text, source: 'Wikipedia' };
-      console.log(`  ✓ ${fixtureId}: "${text.slice(0, 80)}..."`);
+      existing.data[fixtureId] = { ...entry, [targetKey]: text, source: 'Wikipedia' };
+      console.log(`  ✓ ${fixtureId} [${targetKey}]: "${text.slice(0, 80)}..."`);
       populated++;
     }
 
