@@ -2929,6 +2929,12 @@
       "name": "FC Schalke 04",
       "leagueId": "bundesliga-2",
       "country": "Germany"
+    },
+    {
+      "id": "al-shabab-riyadh",
+      "name": "Al-Shabab",
+      "leagueId": "saudi-pro-league",
+      "country": "Saudi Arabia"
     }
   ]
 }

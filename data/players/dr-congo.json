@@ -13,7 +13,8 @@
       "goals": 0,
       "clubId": "le-havre",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Mpasi is a curious paradox: a backup goalkeeper at a Ligue 1 club fighting for survival yet an undisputed starter – and often outstanding – for the Democratic Republic of the Congo. A late bloomer, Mpasi came through at Paris Saint-Germain, but he did not truly emerge until he played in France’s second division with Rodez. French-born, he had to wait until his mid-20s to establish himself as a starter. His defining moment came at the 2024 Africa Cup of Nations when he converted a decisive penalty against Egypt, smiling as he walked up, a moment that elevated him to cult status among Congolese fans. \"My parents are from the DRC, and I still have family there. I've never had the chance to visit, but I'd love to,\" he told Leopardsfoot in 2021 before his first cap. Like a few dual nationals, he discovered his connection to the country through football and has since become one of its most beloved figures."
     },
     {
       "id": "dr-congo-wan-bissaka",
@@ -26,7 +27,8 @@
       "goals": 0,
       "clubId": "west-ham",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "For Congolese fans, the return of \"the Spider” was a decade in the making. Initially called up by the Democratic Republic of the Congo at youth level in 2015 while still a winger, he experienced a heavy 8-0 defeat against England. That – and the lack of structure at the time – pushed him toward switching allegiance to the country he grew up in. As his career took off with Crystal Palace and Manchester United, he repeatedly turned down the DRC, hoping for a call from Gareth Southgate that never came. With the national project improving and England’s depth at right-back growing, Wan-Bissaka eventually made the switch. \"I wanted to join the national team when I was ready,” he told BBC Africa. “Only I know when I am ready and not when others decide.” Since earning his first cap in September 2025, his performances have quickly silenced those who once questioned his late commitment."
     },
     {
       "id": "dr-congo-kapuadi",
@@ -39,7 +41,8 @@
       "goals": 0,
       "clubId": "widzew-lodz",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Born in France, developed in Belgium, launched in Slovakia, revealed in Poland and eventually capped by the Democratic Republic of the Congo – Kapuadi has taken the long road. The towering centre-back established himself at Legia Warsaw, where strong performances in the Conference League helped him achieve a personal goal: representing his father’s country. But it was back in 2015,  during the Africa Cup of Nations, that the dream truly began. Watching the Leopards, led by Yannick Bolasie, return to Kinshasa with a bronze medal left a lasting impression on him. “That’s when something clicked,” he told Leopardsfoot. “Seeing the players come back to Kinshasa with the medal was inspiring and beautiful to watch.” At 1.96m (6ft 5in), Kapuadi brings size, aggression and aerial dominance to the squad. Though only fourth-choice at centre-back, his left-footedness offers variety while his cheerful personality has made him popular within the group."
     },
     {
       "id": "dr-congo-tuanzebe",
@@ -52,7 +55,8 @@
       "goals": 1,
       "clubId": "burnley",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "One unconventional goal in the 99th minute against Jamaica was enough to end 52 years of waiting for an entire nation. “Chancel told me to attack the ball on the corner,” Tuanzebe said with a smile afterwards. “I scored with my stomach, but that’s not my problem. The game is over and we’re qualified.” Born in Ituri, the defender instantly became a symbol of pride in his conflict-scarred home region after sending the Democratic Republic of the Congo to the World Cup. A former Manchester United academy captain, Tuanzebe once looked destined for a Premier League career but recurring injuries stalled his progress. Elegant on the ball, modern in his defensive approach and naturally charismatic, he hesitated for years before committing to the DRC. Since making the switch, however, he has become indispensable. In his first 11 caps, the DRC lost only once: against Algeria at the Africa Cup of Nations. Nearly lost a thumb in 2024 after a freak accident in the kitchen while doing the washing-up."
     },
     {
       "id": "dr-congo-batubinsika",
@@ -65,7 +69,8 @@
       "goals": 1,
       "clubId": "ael-limassol",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Unapologetically old-school, Batubinsika provides depth behind the preferred defensive pairing of Chancel Mbemba and Axel Tuanzebe. Trained at Paris Saint-Germain and a former France youth international, Batubinsika long kept the idea of representing the Democratic Republic of the Congo in the back of his mind before finally committing in 2023. “I always thought about it, but the call from the coach, Sébastien Desabre, at the beginning of 2023 was decisive,” he explained. “He has played a huge role in the team’s recent progress. Everything felt structured, so I knew it was the right moment to begin my international career.” Over a dozen caps later, he has become a regular in Desabre’s squad. Comfortable in physical battles and dominant in the air, Batubinsika may not be the flashiest defender in the group, but his reliability and experience make him an important option."
     },
     {
       "id": "dr-congo-mukau",
@@ -78,7 +83,8 @@
       "goals": 0,
       "clubId": "lille",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Like his close friend Noah Sadiki, the Antwerp-born Mukau chose to represent the land of his ancestors long before reaching senior level, committing to the Democratic Republic of the Congo as early as the under-21s. “It’s a source of pride for me and my family,” he said after his first youth appearances. “Wearing this jersey means a lot to me, and I want to keep wearing it in the future.” For Belgian football, his decision hurt even more because, in terms of pure talent, Mukau may already be one of the most gifted players in the Leopards squad. Tall yet elegant, blessed with a refined left foot and natural flair, he belongs to the category of players people simply enjoy watching. A modern box-to-box midfielder capable of recovering possession, progressing with the ball and eliminating opponents, he has reportedly attracted interest from Barcelona. Reserved in French – his first language is Flemish – Mukau remains a fan favourite among Congolese supporters."
     },
     {
       "id": "dr-congo-mbuku",
@@ -91,7 +97,8 @@
       "goals": 2,
       "clubId": "montpellier",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "His youthful face, infectious energy and deep love for Congolese music have made Mbuku a fan favourite. Despite his small frame, his excellent balance and low centre of gravity make him extremely difficult for defenders to contain. “My role is to bring freshness, youth and enthusiasm – and to help the team keep progressing,” he said before the playoff against Jamaica. Still only 24, Mbuku has yet to fully translate his potential into consistency at club level. But the former France youth international has found a real place within the national setup, whether as a starter or an impact substitute. Blessed with a dangerous left foot and natural unpredictability, he is often given freedom by Sébastien Desabre to drift between the lines."
     },
     {
       "id": "dr-congo-moutoussamy",
@@ -104,7 +111,8 @@
       "goals": 0,
       "clubId": "atromitos",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "He never scores, never assists, and yet few players are more essential to the Democratic Republic of the Congo than Moutoussamy. The most-used outfield player under Sébastien Desabre, the 29-year-old is the foundation of the Leopards’ midfield. Tireless and disciplined, he presses, harasses, intercepts and recycles possession for 90 minutes – or longer if needed. Not always spectacular, but consistently reliable, Moutoussamy’s work rate and fighting spirit set the tone for the entire team. Born to a Caribbean father and a Congolese mother, he has become one of the symbols of a generation that experienced repeated heartbreak before finally reaching the World Cup. “We’ll leave our souls on the pitch to get the win,” he told Leopardsfoot before the playoff against Jamaica. “We can’t play with fear. We have to attack, take risks and give everything we have.” That warrior mentality is exactly what the DRC hope to carry into the World Cup."
     },
     {
       "id": "dr-congo-cipenga",
@@ -117,7 +125,8 @@
       "goals": 0,
       "clubId": "castellon",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A year ago, very few Congolese supporters even knew who Cipenga was. Some openly complained when Sébastien Desabre surprisingly called up the little-known winger from Spain’s second tier for the World Cup playoffs. Without him, however, the Democratic Republic of the Congo might never have qualified. Introduced against Cameroon, Cipenga immediately changed the game, exhausting defenders with his quick feet before delivering the corner that led to Chancel Mbemba’s decisive goal. He repeated the same trick against Jamaica, this time assisting Axel Tuanzebe’s historic winner. “My country also has a right to happiness,” he posted on Instagram after qualification. “After 52 years, God has blessed us to go to the World Cup.” Born and raised in Kinshasa to a family originally from Kisangani in the north of the country, he now looks set to become the DRC’s luxury supersub."
     },
     {
       "id": "dr-congo-bongonda",
@@ -130,7 +139,8 @@
       "goals": 7,
       "clubId": "spartak-moscow",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Once considered a future Belgian international, Bongonda finally became a Leopard in 2022 – and Congolese fans embraced him immediately. “I came through the Belgian system, but when I saw that Congo was more concrete than Belgium, and showed more love and desire to have me, I told myself: 'You should always go where people truly want you,'” he said. Technically gifted, explosive in one-on-one situations and capable of slicing through defences with his left foot, Bongonda quickly became one of the most exciting players in the squad. His dribbling ability and low centre of gravity have earned him an inevitable comparison among Congolese supporters: “Théo Messi”. It is a nickname likely to echo loudly again this summer if he produces moments of magic on the World Cup stage."
     },
     {
       "id": "dr-congo-kakuta",
@@ -143,7 +153,8 @@
       "goals": 5,
       "clubId": "ael-limassol",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Some Chelsea supporters may remember Kakuta as one of the club’s lost wonderkids. Kakuta, who made his Chelsea debut under Carlo Ancelotti in 2009, was viewed as one of the brightest talents of his generation – a gifted playmaker whose career never quite reached the heights many predicted. “Hatem Ben Arfa and Gaël Kakuta are the two greatest dribblers I’ve seen play, apart from Messi and Neymar,” Eden Hazard once said. “Maybe they didn’t always make the right career choices, maybe there are regrets somewhere, but they are players who made me dream.” Now at the 15th club of his career, Kakuta never truly found stability. The explosive legs of his early 20s are gone, but his left foot still carries magic. Not a guaranteed starter any more, he remains capable of producing moments nobody else in the squad can see."
     },
     {
       "id": "dr-congo-kayembe",
@@ -156,7 +167,8 @@
       "goals": 1,
       "clubId": "genk",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "An attack-minded left-back, Kayembe plays with flair, risk and a clear taste for dribbling. His adventurous style can sometimes leave space behind him, but Congolese fans appreciate the excitement he brings. Called up relatively late at international level at 29, he has mostly operated as Masuaku’s understudy. Yet thanks to the latter’s recurring physical problems, Kayembe has accumulated more than 20 caps in just two years. “I chose Congo with my heart, not for sporting reasons,” he said after joining the Leopards setup. “The coach called me at the right moment. Congolese football is restructuring, the working environment is good and competition for places is strong.” A deeply religious Christian, Kayembe often speaks about putting God at the centre of his life – something he says helped him overcome the serious injuries that slowed parts of his career."
     },
     {
       "id": "dr-congo-elia",
@@ -169,7 +181,8 @@
       "goals": 12,
       "clubId": "alanyaspor",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Elia developed the explosive pace that now terrifies defenders on the dusty pitches of Nsele, a semi-rural commune located nearly 90 minutes from central Kinshasa. His rise began during the 2016 African Nations Championship (played for by teams drawn from countries' domestic leagues), which the Democratic Republic of the Congo won, before spells with TP Mazembe and eventually a move to Switzerland in 2020. At Young Boys, Elia won four league titles and was named the best player in the Swiss league in 2023. Despite his achievements, he has often been unfairly criticised by sections of the Congolese public – something that still fuels him. “I was too emotional,” he admitted after qualification. “We were insulted too much after failing to qualify in 2022. But I always said that before retiring, I had to play in a World Cup.” His story took a tragic turn a year and a half ago with the death of his four-year-old son, news that deeply affected the entire country."
     },
     {
       "id": "dr-congo-sadiki",
@@ -182,7 +195,8 @@
       "goals": 0,
       "clubId": "sunderland",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "By choosing the Democratic Republic of the Congo before the age of 20, Sadiki sent a strong message to a generation of dual nationals still hesitating. Had he opted differently, the midfielder – who grew up in Belgium – would likely have been part of the World Cup with the Red Devils anyway. But his early commitment to the DRC has made him a fan favourite. Nicknamed the National Cadet by supporters, he is already seen as a future captain, admired for his maturity and leadership despite his young age. A versatile midfielder, Sadiki operates as a dynamic box-to-box presence for club and country. After a promising breakthrough season in the Premier League with Sunderland, the World Cup offers him the perfect stage to further elevate his profile."
     },
     {
       "id": "dr-congo-tshibola",
@@ -195,7 +209,8 @@
       "goals": 1,
       "clubId": "kilmarnock",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Persistence defines Tshibola’s international career. Four years passed between his decision to represent the Democratic Republic of the Congo in 2018 and his first cap, largely because of administrative chaos at a time. Never the most glamorous name in the squad, the Reading academy graduate has rarely disappointed in 16 caps. His most important contribution came with the goal against Gabon in 2023 that secured the DRC’s qualification for the Africa Cup of Nations. Now further down the pecking order, Tshibola remained part of Sébastien Desabre’s plans and, after Rocky Bushiri’s injury, the door to the World Cup opened. A true journeyman who has played in eight different countries, Tshibola is also part of the growing contingent of British-Congolese players within the squad. Raised in Newham, east London, he once described football as his escape from the violence surrounding him growing up. “Football was my getaway,” he said. “I could easily have been another victim to a killing.”"
     },
     {
       "id": "dr-congo-fayulu",
@@ -208,7 +223,8 @@
       "goals": 0,
       "clubId": "fc-noah",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "First called up in 2019 while emerging as one of the most promising goalkeepers in Switzerland, Fayulu was initially seen as the future of the Democratic Republic of the Congo. But he suddenly turned his back on the Leopards after accepting a Switzerland Under-20s call-up instead. He even went live on Instagram to defend his decision. Humiliated, DRC fans branded him a traitor. As Fayulu's international prospects with Switzerland faded, Sébastien Desabre surprisingly recalled him four years later as a third-choice goalkeeper despite lingering hostility from supporters. Then came November’s African playoff against Nigeria. Thrown on specifically for the penalty shootout, he produced two decisive saves to send the DRC to the intercontinental playoffs. Carried by his teammates after the match, the goalkeeper – who spent last season on loan in Armenia – completed one of the most unexpected redemption arcs. “Whether I play or not, when my country calls me, I’m always ready,” he said during the Africa Cup of Nations."
     },
     {
       "id": "dr-congo-bakambu",
@@ -221,7 +237,8 @@
       "goals": 21,
       "clubId": "real-betis",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Few players looked more emotional than Bakambu after the final whistle against Jamaica. When he chose to represent the Democratic Republic of the Congo in 2015 – during his peak years at Villarreal – he instantly became one of the country’s biggest stars. “Through football, I was able to reconnect with my roots,” he said. “When I arrived for my first call-up, I already knew there was excitement around the national team on social media. But the emotions I experienced in Kinshasa were on another level.” Since then, Bakambu has become far more than just the leader of the attack. He evolved into one of the main faces and ambassadors of the Leopards project. Behind the scenes, he also played a key role in convincing dual-national players to join the DRC. After a decade marked by goals, heartbreak and near misses, Bakambu will finally play in his first World Cup at the age of 35 – and likely as a starter."
     },
     {
       "id": "dr-congo-pickel",
@@ -234,7 +251,8 @@
       "goals": 1,
       "clubId": "espanyol",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Born and raised in Switzerland’s highly structured environment, Pickel was initially shocked by the organisational chaos during his first Democratic Republic of the Congo call-up in 2021. For a while, it genuinely made him reconsider his international future. Two years later, however, he returned – and established himself as one of the most important figures in the Leopards midfield. “I almost never came back,” he joked upon his return. An energetic box-to-box midfielder with relentless stamina, Pickel lives with two very different personalities. Off the pitch, he is calm, friendly and constantly smiling. On it, he transforms into an aggressive, confrontational competitor who never backs down from a duel – the type of player who will happily go forehead-to-forehead with an opponent if needed."
     },
     {
       "id": "dr-congo-mayele",
@@ -247,7 +265,8 @@
       "goals": 6,
       "clubId": "pyramids",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Born in Mbuji-Mayi, a diamond-rich city in south-central Democratic Republic of the Congo, Mayele is one of the rare representatives of what Congolese people often call the “deep Congo” within the national team: players who were developed locally rather than abroad. Aggressive and blessed with a striker’s instinct, Mayele combines precise finishing with strong ball control and relentless intensity. After breaking through in the DRC, he dominated the Tanzanian league to such an extent that he still enjoys cult status there. His move to Egypt with Pyramids elevated him further, culminating in the club’s historic African Champions League triumph in 2025, when he was named player of the year in the continent's club football. Despite the growing recognition, Mayele remains known for his humility and work ethic. “When you start rising, people naturally talk about you,” he says. “What matters is staying focused, continuing to improve, and showing more every time. I remain who I am – humble and simple.”"
     },
     {
       "id": "dr-congo-wissa",
@@ -260,7 +279,8 @@
       "goals": 9,
       "clubId": "newcastle-united",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "While at Châtearoux’s academy in France, a 16-year-old Wissa sent a cover letter to the Congolese federation on Facebook hoping for one thing: a chance to play for his country. Thirteen years later, his success in the Premier League has made him one of the greatest ambassadors of Congolese football. He is accessible, humble and down-to-earth, and Wissa’s journey has been anything but conventional. Before becoming a striker, he was a goalkeeper. His first season at Newcastle was disrupted by an injury suffered on international duty, preventing him from reaching the heights many expected after his form at Brentford, where he became the first Democratic Republic of the Congo player to score more than 10 goals in a Premier League season. “The truth is, I’m not the most talented guy,” he once admitted. “What pushes me forward is that I love working hard – and I guess I’m not doing too badly.” Loved by Congolese supporters, who affectionately nickname him Kovo (the Bald One), Wissa will carry huge expectations heading into the World Cup."
     },
     {
       "id": "dr-congo-epolo",
@@ -273,7 +293,8 @@
       "goals": 0,
       "clubId": "standard-liege",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Being a starting goalkeeper in a top division at 19 is already rare. Being captain at that age says even more. Epolo’s rise at Standard Liège has been remarkably fast. Blessed with sharp reflexes, strong anticipation and unusual maturity for his age, Epolo represents a new generation of Belgian-Congolese dual nationals who chose the Democratic Republic of the Congo early rather than waiting for Belgium. “From the beginning, I knew I would choose Congo,” he told the Belgian newspaper Le Soir. “I just had questions because, unlike the rest of my family, I had never been there.” One of the people who helped convince him was his childhood friend Noah Sadiki. If he fulfills his potential, Epolo is expected to become the DRC’s long-term No 1. His main area for improvement remains his distribution – one of the few weaknesses in an otherwise promising profile."
     },
     {
       "id": "dr-congo-mbemba",
@@ -286,7 +307,8 @@
       "goals": 7,
       "clubId": "lille",
       "captain": true,
-      "bio": ""
+      "bio": "",
+      "description": "“Boulot, palais” (‘’Work, house’’ in Congolese-French slang), the phrase Mbemba used in an interview to describe his lifestyle has since become his nickname in the Democratic Republic of the Congo. It reflects the discipline that defines him. Previously dubbed the Chancellor or even Demi-God by supporters, Mbemba commands immense respect in his country. With more than 100 caps and the captain’s armband, he is the undisputed leader of the Leopards. Strong in one-on-one situations, comfortable on the ball and quite effective in front of goal – a reminder of his early days as a striker – he is the backbone of the team. Born into a poor family of eight children in Kinshasa, Mbemba is a rare success story in a country where thousands of talents go unnoticed every year owing to a lack of structure. Trained in the country, then developed at Anderlecht, he built a solid European career, including a spell with Newcastle. His journey could have reached even greater heights were it not for longstanding doubts surrounding his age – a controversy that has followed him despite his consistency at the highest level."
     },
     {
       "id": "dr-congo-banza",
@@ -299,7 +321,8 @@
       "goals": 2,
       "clubId": "al-jazira",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Twenty-three goals in Portugal. Twenty-two in Turkey the following season. Banza’s scoring record suggests he probably deserved a bigger spotlight. Instead, the former Lens academy striker is now in the United Arab Emirates, quietly turning chances into goals wherever he goes. A hard-working centre-forward with intelligent movement and strong hold-up play, Banza has built his reputation on consistency at club level. Yet with the Democratic Republic of the Congo, things have been more complicated. Despite regular call-ups, he has scored only twice at the time of writing. He is also known for celebrating goals with the famous smile of the Joker – a direct reference to Joaquin Phoenix’s character. “It’s a film with a really beautiful and intelligent message,” he has said."
     },
     {
       "id": "dr-congo-kalulu",
@@ -312,7 +335,8 @@
       "goals": 0,
       "clubId": "aris-limassol",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Before Aaron Wan-Bissaka’s arrival, Kalulu had established himself as one of the Democratic Republic of the Congo’s most reliable right-backs. Kalulu has since stepped aside without complaint – and has continued to deliver whenever called upon. A product of Lyon’s academy, he comes from a football-mad family. He is the younger brother of Aldo Kalulu (formerly of Swansea), the older brother of Pierre Kalulu (Juventus) and Joseph Kalulu (Pau FC). Four professional footballers from the same household. “It’s always a pleasure to talk about my brothers,” he said in 2022. “It’s rare in football, so naturally people speak about it.” Technically very adept, Kalulu has just returned from a serious knee injury."
     },
     {
       "id": "dr-congo-edo-kayembe",
@@ -325,7 +349,8 @@
       "goals": 2,
       "clubId": "watford",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "No relation to Joris Kayembe, Edo was born in the Kasai region of central Democratic Republic of the Congo, where the surname is common. One of the few genuinely homegrown players in a squad largely built around the diaspora, Kayembe’s journey carries particular symbolic weight for Congolese supporters. “I’m very happy to have gone from my country to the Premier League in just five years. It’s a great challenge,” he said when signing for Watford in 2022. Quiet and reserved off the pitch, Kayembe transforms once the game starts. Hard-working and equipped with a fierce long shot, he has become one of Sébastien Desabre’s trusted midfield options. He may not be the most gifted player in the squad but his versatility, physical commitment and rise from the Congolese league to English football have earned widespread admiration."
     },
     {
       "id": "dr-congo-masuaku",
@@ -338,7 +363,8 @@
       "goals": 4,
       "clubId": "lens",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Congolese fans have a very particular relationship with Masuaku, nicknamed Le Têtu National – roughly, the Nation’s Stubborn Man. The former West Ham defender rarely smiles and his strong personality has long divided opinion. But behind the stern expression lies one of the most technically gifted players in the squad. Tricks, composure, unexpected passes and occasionally moments of brilliance, such as the outrageous free-kick he scored at the 2023 Africa Cup of Nations. In 2018, Masuaku famously walked out of a Democratic Republic of the Congo camp alongside Gaël Kakuta, frustrated by poor organisation around the team. “I have a problem with people who justify these issues by saying: ‘That’s just how Congo is.’ Are we forced to stay mediocre?” he later said. Years later, he acknowledged the progress made around the Leopards setup: “Today, it feels good that people finally see us as a serious nation.”"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-22T11:31:20Z",
+  "lastUpdated": "2026-07-02T18:04:07Z",
   "data": [
     {
       "type": "team",
@@ -4890,129 +4890,129 @@
     },
     {
       "type": "player",
-      "id": "jordan-mossa",
-      "label": "Yazeed Mossa",
-      "meta": "Jordan · GK · Al-Faisaly FC",
-      "href": "#jordan-mossa"
+      "id": "jordan-abulaila",
+      "label": "Yazeed Abulaila",
+      "meta": "Jordan · GK · Al-Hussein SC",
+      "href": "#jordan-abulaila"
     },
     {
       "type": "player",
-      "id": "jordan-al-tamari",
-      "label": "Musa Al-Tamari",
-      "meta": "Jordan · MF · FC Seoul",
-      "href": "#jordan-al-tamari"
+      "id": "jordan-abu-hashish",
+      "label": "Mohammad Abu Hashish",
+      "meta": "Jordan · DF · Al-Karma SC",
+      "href": "#jordan-abu-hashish"
+    },
+    {
+      "type": "player",
+      "id": "jordan-nasib",
+      "label": "Abdallah Nasib",
+      "meta": "Jordan · DF · Al-Zawraa SC",
+      "href": "#jordan-nasib"
+    },
+    {
+      "type": "player",
+      "id": "jordan-abu-dahab",
+      "label": "Husam Abu Dahab",
+      "meta": "Jordan · DF · Al-Faisaly FC",
+      "href": "#jordan-abu-dahab"
+    },
+    {
+      "type": "player",
+      "id": "jordan-al-arab",
+      "label": "Yazan Al-Arab",
+      "meta": "Jordan · DF · FC Seoul",
+      "href": "#jordan-al-arab"
+    },
+    {
+      "type": "player",
+      "id": "jordan-jamous",
+      "label": "Amer Jamous",
+      "meta": "Jordan · MF · Al-Zawraa SC",
+      "href": "#jordan-jamous"
+    },
+    {
+      "type": "player",
+      "id": "jordan-abu-zrayq",
+      "label": "Mohammad Abu Zrayq",
+      "meta": "Jordan · FW · Raja Club Athletic",
+      "href": "#jordan-abu-zrayq"
     },
     {
       "type": "player",
       "id": "jordan-al-rawabdeh",
-      "label": "Mohammad Al-Rawabdeh",
-      "meta": "Jordan · DF · Al-Hussein SC",
+      "label": "Noor Al-Rawabdeh",
+      "meta": "Jordan · MF · Selangor FC",
       "href": "#jordan-al-rawabdeh"
     },
     {
       "type": "player",
-      "id": "jordan-al-shatarat",
-      "label": "Baher Al-Shatarat",
-      "meta": "Jordan · DF · Raja Club Athletic",
-      "href": "#jordan-al-shatarat"
+      "id": "jordan-olwan",
+      "label": "Ali Olwan",
+      "meta": "Jordan · FW · Al-Sailiya SC",
+      "href": "#jordan-olwan"
     },
     {
       "type": "player",
-      "id": "jordan-almomani",
-      "label": "Raed Almomani",
-      "meta": "Jordan · DF · Al-Hussein SC",
-      "href": "#jordan-almomani"
+      "id": "jordan-al-taamari",
+      "label": "Musa Al-Taamari",
+      "meta": "Jordan · FW · Stade Rennais",
+      "href": "#jordan-al-taamari"
     },
     {
       "type": "player",
-      "id": "jordan-al-zyadat",
-      "label": "Nour Al-Zyadat",
-      "meta": "Jordan · DF · Al-Sailiya SC",
-      "href": "#jordan-al-zyadat"
+      "id": "jordan-al-fakhouri-o",
+      "label": "Odeh Al-Fakhouri",
+      "meta": "Jordan · FW · Pyramids FC",
+      "href": "#jordan-al-fakhouri-o"
     },
     {
       "type": "player",
-      "id": "jordan-bani-yaseen",
-      "label": "Abdallah Bani Yaseen",
-      "meta": "Jordan · MF · Al-Quwa Al-Jawiya",
-      "href": "#jordan-bani-yaseen"
-    },
-    {
-      "type": "player",
-      "id": "jordan-al-naimat",
-      "label": "Hamza Al-Naimat",
-      "meta": "Jordan · MF · Al-Faisaly FC",
-      "href": "#jordan-al-naimat"
-    },
-    {
-      "type": "player",
-      "id": "jordan-al-zyoud",
-      "label": "Yazan Al-Zyoud",
-      "meta": "Jordan · FW · Selangor FC",
-      "href": "#jordan-al-zyoud"
-    },
-    {
-      "type": "player",
-      "id": "jordan-al-dardour",
-      "label": "Ahmad Al-Dardour",
-      "meta": "Jordan · FW · Al-Salt SC",
-      "href": "#jordan-al-dardour"
-    },
-    {
-      "type": "player",
-      "id": "jordan-al-bawab",
-      "label": "Salem Al-Bawab",
-      "meta": "Jordan · FW · Al-Hussein SC",
-      "href": "#jordan-al-bawab"
-    },
-    {
-      "type": "player",
-      "id": "jordan-shafi",
-      "label": "Mohammad Shafi",
+      "id": "jordan-bani-attiah",
+      "label": "Nour Bani Attiah",
       "meta": "Jordan · GK · Al-Faisaly FC",
-      "href": "#jordan-shafi"
+      "href": "#jordan-bani-attiah"
     },
     {
       "type": "player",
-      "id": "jordan-al-hajahreh",
-      "label": "Abdullah Al-Hajahreh",
-      "meta": "Jordan · MF · Qatar SC",
-      "href": "#jordan-al-hajahreh"
+      "id": "jordan-al-mardi",
+      "label": "Mahmoud Al-Mardi",
+      "meta": "Jordan · FW · Al-Hussein SC",
+      "href": "#jordan-al-mardi"
     },
     {
       "type": "player",
-      "id": "jordan-al-jaber",
-      "label": "Osama Al-Jaber",
-      "meta": "Jordan · DF · Al-Wehdat SC",
-      "href": "#jordan-al-jaber"
+      "id": "jordan-ayed",
+      "label": "Rajaei Ayed",
+      "meta": "Jordan · MF · Al-Hussein SC",
+      "href": "#jordan-ayed"
     },
     {
       "type": "player",
-      "id": "jordan-al-obeidat",
-      "label": "Ahmad Al-Obeidat",
-      "meta": "Jordan · MF · Al-Shabab FC",
-      "href": "#jordan-al-obeidat"
+      "id": "jordan-sadeh",
+      "label": "Ibrahim Sadeh",
+      "meta": "Jordan · MF · Al-Karma SC",
+      "href": "#jordan-sadeh"
     },
     {
       "type": "player",
-      "id": "jordan-al-masatfa",
-      "label": "Firas Al-Masatfa",
-      "meta": "Jordan · DF · Al-Wehdat SC",
-      "href": "#jordan-al-masatfa"
+      "id": "jordan-abualnadi",
+      "label": "Mohammad Abualnadi",
+      "meta": "Jordan · DF · Selangor FC",
+      "href": "#jordan-abualnadi"
     },
     {
       "type": "player",
-      "id": "jordan-al-omari-a",
-      "label": "Ahmed Al-Omari",
-      "meta": "Jordan · MF · Pyramids FC",
-      "href": "#jordan-al-omari-a"
+      "id": "jordan-obaid",
+      "label": "Salim Obaid",
+      "meta": "Jordan · DF · Al-Hussein SC",
+      "href": "#jordan-obaid"
     },
     {
       "type": "player",
-      "id": "jordan-al-qasem",
-      "label": "Majd Al-Qasem",
-      "meta": "Jordan · FW · Al-Faisaly FC",
-      "href": "#jordan-al-qasem"
+      "id": "jordan-taha",
+      "label": "Mohammad Taha",
+      "meta": "Jordan · MF · Al-Hussein SC",
+      "href": "#jordan-taha"
     },
     {
       "type": "player",
@@ -5023,52 +5023,52 @@
     },
     {
       "type": "player",
-      "id": "jordan-al-nakhaleh",
-      "label": "Laith Al-Nakhaleh",
-      "meta": "Jordan · DF · Al-Hussein SC",
-      "href": "#jordan-al-nakhaleh"
+      "id": "jordan-abu-taha",
+      "label": "Mohannad Abu Taha",
+      "meta": "Jordan · MF · Al-Quwa Al-Jawiya",
+      "href": "#jordan-abu-taha"
     },
     {
       "type": "player",
-      "id": "jordan-al-siyabi",
-      "label": "Suhail Al-Siyabi",
-      "meta": "Jordan · GK · Al-Salt SC",
-      "href": "#jordan-al-siyabi"
+      "id": "jordan-al-rashdan",
+      "label": "Nizar Al-Rashdan",
+      "meta": "Jordan · MF · Qatar SC",
+      "href": "#jordan-al-rashdan"
     },
     {
       "type": "player",
-      "id": "jordan-al-badaineh",
-      "label": "Younes Al-Badaineh",
-      "meta": "Jordan · FW · Al-Hussein SC",
-      "href": "#jordan-al-badaineh"
+      "id": "jordan-al-fakhouri-a",
+      "label": "Abdallah Al-Fakhouri",
+      "meta": "Jordan · GK · Al-Wehdat SC",
+      "href": "#jordan-al-fakhouri-a"
     },
     {
       "type": "player",
       "id": "jordan-haddad",
-      "label": "Ahmad Haddad",
+      "label": "Ihsan Haddad",
       "meta": "Jordan · DF · Al-Hussein SC",
       "href": "#jordan-haddad"
     },
     {
       "type": "player",
-      "id": "jordan-al-zoubi",
-      "label": "Ehab Al-Zoubi",
+      "id": "jordan-azaizeh",
+      "label": "Ali Azaizeh",
+      "meta": "Jordan · FW · Al-Shabab",
+      "href": "#jordan-azaizeh"
+    },
+    {
+      "type": "player",
+      "id": "jordan-al-dawoud",
+      "label": "Mohammad Al-Dawoud",
       "meta": "Jordan · MF · Al-Wehdat SC",
-      "href": "#jordan-al-zoubi"
+      "href": "#jordan-al-dawoud"
     },
     {
       "type": "player",
-      "id": "jordan-al-drdour-k",
-      "label": "Khalil Al-Dardour",
-      "meta": "Jordan · MF · Al-Faisaly FC",
-      "href": "#jordan-al-drdour-k"
-    },
-    {
-      "type": "player",
-      "id": "jordan-al-hamad",
-      "label": "Bader Al-Hamad",
-      "meta": "Jordan · DF · Al-Salt SC",
-      "href": "#jordan-al-hamad"
+      "id": "jordan-badawi",
+      "label": "Anas Badawi",
+      "meta": "Jordan · DF · Al-Faisaly FC",
+      "href": "#jordan-badawi"
     },
     {
       "type": "player",

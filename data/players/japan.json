@@ -13,7 +13,8 @@
       "goals": 0,
       "clubId": "parma",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The first Japanese goalkeeper to establish himself as a Serie A regular, Suzuki is athletic, a solid shot-stopper, and has strong distribution, too – capable of reaching deep into the opposition half. Since joining Parma in 2024 from Belgium’s Sint-Truiden, he has dedicated himself to learning Italian and now speaks it fluently. He also speaks openly about his ambitions: “I want to become one of the best keepers in the world and win the Champions League … That might sound unrealistic, like something out of an anime, but you never know what could happen.” His determination and rapid development continue to fuel high expectations. Off the pitch he is a big coffee fan: he has embraced Italy’s espresso culture, but also bought a grinder to grind his own beans at home."
     },
     {
       "id": "japan-sugawara",
@@ -26,7 +27,8 @@
       "goals": 2,
       "clubId": "werder-bremen",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Sugawara’s big asset is his explosive running down the right flank, making him a real attacking threat. But he is solid at the back, too, able to switch gears to deliver aggressive one-on-one defending. At 18, when he moved to AZ Alkmaar in the Netherlands, he reached out to his international teammate Yuto Nagatomo’s personal chef to learn about diet and nutrition from scratch. “I just felt a huge gap between Dutch and Japanese food,” he said, “and I had a sense that I might get injured if I didn’t address it.” Living with a host family meant he had limited access to the kitchen, but he made the most of it. He moved from there to England with Southampton in 2024, and joined Werder Bremen on loan last season."
     },
     {
       "id": "japan-taniguchi",
@@ -39,7 +41,8 @@
       "goals": 1,
       "clubId": "sint-truiden",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A versatile defender capable of playing anywhere across the backline, Taniguchi’s football intelligence and distribution set him apart. He places particular importance on his field of vision, being aware of everything around him, partly because his eyesight deteriorated during his student years. Since then he has been meticulous about preparing contact lenses and taking proper care of his eyes. His high-school coach once described him as someone who “demonstrates dedication and leadership for the team even off the pitch … There isn’t a single person who would speak ill of Shogo.” His character and leadership have long been widely respected. He has played his club football in Belgium since 2024 and, in the national team, continues to show his reliability as a defensive leader."
     },
     {
       "id": "japan-itakura",
@@ -52,7 +55,8 @@
       "goals": 2,
       "clubId": "ajax",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "After spending three seasons at Borussia Mönchengladbach, Itakura joined the Dutch giants Ajax last year, becoming the first Japanese player in the club’s history. A solid, experienced defender who was on Manchester City’s books from 2019 to 2022 without breaking through, he excels in one-on-one defending, but also brings real versatility. He played as a defensive midfielder during his academy years, so has the composure and technique to turn under pressure and contribute to the build-up from the back. He is also known for his cheerful and open personality. His mother believes his remarkable ability to adapt quickly and fit in may stem from his early childhood when he spent the first six and a half years of his life living in company housing shared by about 60 families."
     },
     {
       "id": "japan-nagatomo",
@@ -65,7 +69,8 @@
       "goals": 4,
       "clubId": "fc-tokyo",
       "captain": true,
-      "bio": ""
+      "bio": "",
+      "description": "As the oldest member of the squad, Nagatomo brings famously passionate leadership backed by a long and distinguished career. His repeated cries of “Bravo!” in post-match interviews after Japan’s victories over Germany and Spain at the Qatar World Cup have since become his trademark. Turning 40 this September, and second only to Yasuhito Endo in Japan’s most-capped rankings, he shows no signs of slowing down. “My cells are exploding,” he jokes. “If anything, you should be worried about me improving.” With relentless work rate, exceptional physical conditioning and an uncompromising attitude, he continues to set the standard for younger players, and brings broad European club football experience, having played for Inter, Galatasaray and Marseille before signing for FC Tokyo in 2021. With a fifth World Cup appearance coming up, his passion and obsession with performing on the biggest stage continue to burn as fiercely as ever."
     },
     {
       "id": "japan-machino",
@@ -78,7 +83,8 @@
       "goals": 5,
       "clubId": "gladbach",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Machino had a tough start to his career, failing to make a single appearance in his first professional season at J1 club Yokohama F Marinos – a spell he called later “the most difficult year of my life”. The following year, he moved to Giravanz Kitakyushu in J3. “I couldn’t afford to worry about pride. I knew I had to give everything, or I’d never make it back,” he says. From there, he worked his way up, rewarded with a move to the Bundesliga last year, joining Borussia Mönchengladbach on a four-year deal. He’s known for precise finishing with both feet, being strong in the air and for doing solid defensive work from the front. Hailing from Iga City in Mie prefecture, famous as the home of ninjas, he celebrates goals with his trademark ninja pose, and serves as tourism ambassador for the city. “I do the pose to give something back to my hometown. I want to keep scoring goals and contribute to the development and promotion of Iga.”"
     },
     {
       "id": "japan-tanaka",
@@ -91,7 +97,8 @@
       "goals": 8,
       "clubId": "leeds-united",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Developed in the Kawasaki Frontale academy, Tanaka’s technical quality is clear, but it’s his ability to cover wide areas at both ends of the pitch and anticipate shifts in play that gives him the edge. He reads danger early and has a strong eye for goal too, scoring in Japan’s win over Spain at the Qatar World Cup. He is known as an avid reader, organising his reading notes around three axes: knowledge, information and action. He’s all about structure and efficiency. His first name means blue – his parents had a different name in mind, but the sky was so blue on the day he was born, they chose that instead. One story from his elementary school days sums up his drive and determination: during his first trial for the school team he was playing happily at first, but halfway through the teacher spotted him crying in the corner of the schoolyard. When the teacher asked him what was wrong, he replied: “I'm bored with this practice. I want to practise harder.\""
     },
     {
       "id": "japan-kubo",
@@ -104,7 +111,8 @@
       "goals": 7,
       "clubId": "real-sociedad",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A huge talent, often dubbed “the Japanese Messi”. Kubo was talent spotted by Barcelona at the age of eight, and joined their La Masia academy at 10. In 2023 he revealed how hard the experience had been, saying: “There were a lot of kids with strong personalities at school and in the dorms, so I tried not to get lost in the crowd, or rather, I thought that if I was looked down upon even a little, it would be the end, so even though I was small I tried my best not to lose, but I still got punched by bigger kids. I can't really say much, but it was a really tough environment.” His progress there was halted, anyway, when the club were found to have violated Fifa's international transfer policy for under-18s. Instead he developed at FC Tokyo before returning to Spain with Real Madrid in 2019. His ability to draw in defenders with sharp, explosive dribbling makes him a huge threat, and he is equally potent as a playmaker, delivering decisive final passes. He has plenty of self-confidence too, saying recently: “I’m not just good with the ball at my feet – I think I’m good at football as a whole.” This summer is a chance to showcase his talents on a global stage, with clubs in England tracking his progress."
     },
     {
       "id": "japan-goto",
@@ -117,7 +125,8 @@
       "goals": 0,
       "clubId": "sint-truiden",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "As a child Goto tried his hand at a wide range of sports from volleyball and track and field to swimming and tennis, before settling on football. A towering striker at 1.91m (6ft 3in), he made the move to Europe in 2024 with Anderlecht, initially in their reserve side RSCA Futures, and made his senior debut for them last year before joining Sint-Truiden on loan to continue his development. Plenty of big clubs in England and Germany have been tracking him, but he is shy about being called “the Japanese Erling Haaland” by Belgian media, telling the Times in March: “No, no, no!” But he did admit he tries to model himself on Harry Kane because of the England striker’s “movement off the ball, knowing how to drop deep, to create and shoot from outside the box”."
     },
     {
       "id": "japan-doan",
@@ -130,7 +139,8 @@
       "goals": 11,
       "clubId": "eintracht-frankfurt",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "At the Qatar World Cup Doan scored against Germany and Spain, staking his claim to be Japan’s leading attacking threat. Cutting in from the right at speed he poses a constant threat with his powerful left-footed shot. Despite being just 1.73m (5ft 8in) he is physically strong too. His ability to deliver on the biggest stage means he has often been compared to the former Japan star Keisuke Honda, not only for his style but also for his strong sense of self-belief. He said in February: “I do have the sense that people are depending on me … I want to be the kind of player who makes his team a winning team. I think we need the kind of players where the coach and the team can feel like: ‘I know that I can count on Ritsu when he’s around,’ or: ‘Ritsu can help us settle down even when things get tricky,’ or: ‘If he’s standing strong, we stay solid as well,’ that sort of thing. The best teams always have players like that.” He has played his club football in Germany since 2020, initially on loan at Arminia Bielefeld from PSV, then with Freiburg and, since last year, with Eintracht Frankfurt following an £18m move."
     },
     {
       "id": "japan-maeda",
@@ -143,7 +153,8 @@
       "goals": 4,
       "clubId": "celtic",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A versatile, physical attacker, Maeda’s big strengths lie in his relentless pressing and explosive sprinting: he’s among the fastest players in the national team. His knack for closing down opponents with subtle, quiet movement earned him the nickname Prius in high school. His time there wasn’t always smooth, though: in his first year he was involved in a disciplinary incident that led to a lengthy spell of no school football; he responded by committing himself to extra training and playing for a local amateur side, while also building character by working part-time at a bakery in the mornings before school started. He went on to build a successful career, and has been a big player at Celtic since moving to Scotland in 2021, earning his own chant, with fans singing his name to the tune of the Champs’ classic Tequila. Maeda has thanked them online for “their wonderful song”."
     },
     {
       "id": "japan-osako",
@@ -156,7 +167,8 @@
       "goals": 0,
       "clubId": "sanfrecce-hiroshima",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "In his first professional season with Sanfrecce Hiroshima back in 2018, Osako devoted himself to relentless self-improvement, adding extra individual sessions after morning training and even joining youth-team training in the afternoons. That work ethic has taken him to a World Cup. A solid shot-stopper, he is also known for being a brilliant communicator when marshalling the defence in front of him. He names the former Japan internationals Yoshikatsu Kawaguchi and Eiji Kawashima as his role models, but says he’s more focused on being one himself: “When people think of Japan’s guardian, I want them to think of Osako.”"
     },
     {
       "id": "japan-nakamura",
@@ -169,7 +181,8 @@
       "goals": 10,
       "clubId": "reims",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Nakamura’s signature move is cutting in from the left to shoot. In recent years he has moved away from upper-body-focused weight training, instead prioritising developing his fluid, evasive style that allows him to glide past opponents. He’s also known for wearing his socks low, Jack Grealish-style, which he says helps reduce his tendency to suffer from muscle cramps. He has played his club football in Ligue 1 since 2023, and has been linked with clubs in England. Before this tournament he spoke to Fifa.com about his World Cup memories, saying: “The 2018 and 2022 tournaments left their mark on me. Both times we got our hearts broken in the last 16, but they signified one more step forward for us as a country. I remember getting goosebumps just watching the team play, and it reinforced my ambition to appear there one day myself. We’ll be hoping to reach the knockout stages again and go even further. I would love to be able to contribute towards that goal, even just a little … I’ve dreamed about playing in the World Cup since I was a little boy.”"
     },
     {
       "id": "japan-ito",
@@ -182,7 +195,8 @@
       "goals": 15,
       "clubId": "genk",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Relatively unspectacular throughout high school, Ito went on to study at Kanagawa University, whose footballers play in Japan’s Kanto Division 2. He steadily built his reputation there, quickly gaining attention with his exceptional pace. After graduating he joined the J1 side Ventforet Kofu in 2015 and Kashiwa Reysol the following year. He moved to Europe in 2019, first to Genk in Belgium, then to France with Reims in 2022 before returning to Genk last year on a three-year deal. He is great as an impact player, often coming off the bench, with the ability to completely change the flow of a match. Despite his explosive and energetic presence on the pitch, he is, by his own admission, quite shy in private, a self-described introvert who is happier at home than going out on his days off."
     },
     {
       "id": "japan-kamada",
@@ -195,7 +209,8 @@
       "goals": 12,
       "clubId": "crystal-palace",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A player with a high football IQ, defined by a tireless work rate and sharp reading of the game. Since moving to England with Palace from Lazio in 2024 Kamada has again proven his tactical flexibility, capable of operating as an attacking midfielder and in a deeper role. His focus has always been on his work ethic, including in the pre-season periods, which he once called “more like hardship than training, and no one trains as much as I do”. He brings a wealth of experience to the national side, having played in the top divisions in Japan, Germany, Italy, Belgium and England, and he helped Palace win the FA Cup in his first season. He released his official biography in 2023, called Unwavering Belief: 12 People Testify to the Growth Story of Japan National Football Team Player Daichi Kamada."
     },
     {
       "id": "japan-watanabe",
@@ -208,7 +223,8 @@
       "goals": 0,
       "clubId": "feyenoord",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "After moving from FC Tokyo to Gent in 2021 he developed into one of the Belgian team’s standout players, earning the club’s player of the year award in the 2024-25 season. Built on a powerful physical foundation, he rarely shows any weakness in duels. He is also dominant in the air, using his anticipation to win headers at a high point, and poses a threat in set-piece situations with his goalscoring ability. Having raised his profile in the Belgian league he secured a move to the Dutch giants Feyenoord last year. “I don’t want to leave defending to others, I want to organise and lead the back line myself,” he says. “I don’t feel pressure right now; I’m excited to see how far I can go.”"
     },
     {
       "id": "japan-yuito-suzuki",
@@ -221,7 +237,8 @@
       "goals": 0,
       "clubId": "freiburg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A versatile attacker who likes to glide past opponents with deft feints and smooth control. Capable of playing on the wing, in the middle or as a shadow striker, Suzuki creates chances and finishes them too. At the core of his game lies a clear personal philosophy based around strength of character. “It’s important to grow as a person,” he says. When he moved to Brøndby in Denmark he chose not to reveal to everyone he met that he was a footballer, wanting to be judged as a “normal” person instead. \"I was shy in Japan,” he told GQ, “but after going to Denmark I started to proactively strike up conversations. I became friends with café staff and people I was introduced to. I wanted to be just a normal friend, so there are some I didn't tell that I was a player.\" He signed for Freiburg last year for a reported fee of up to £8m, making him Brøndby’s most lucrative sale. Freiburg's chief sporting officer, Jochen Saier, said they had been after Suzuki for “a really long time … he can both score goals and set up his teammates. His pace, flexibility and technique will improve our overall attacking play.”"
     },
     {
       "id": "japan-ueda",
@@ -234,7 +251,8 @@
       "goals": 16,
       "clubId": "feyenoord",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Inspired by his dad, who wore the No 18 in homage to his hero, the former Germany international Jürgen Klinsmann, Ueda chose the same number for the national team. He is a talented forward, known for smart reading of the game, full of neat diagonal runs and intelligent positioning. “Only the final 10% of an attacking move – the goal itself – is down to me,” he said. “The other 90% comes from the buildup, so my role is to bring out the strengths of my teammates and turn it into a successful move.” At the World Cup four years ago he featured in just one match, but this summer, with more experience and a growing sense of responsibility, he is determined to make his mark on the world stage. He joined Feyenoord in 2023 for £7m from Belgium’s Cercle Brugge."
     },
     {
       "id": "japan-ogawa",
@@ -247,7 +265,8 @@
       "goals": 11,
       "clubId": "nec-nijmegen",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A strong, gritty all-round forward capable of heading, holding up the ball and finishing with either foot, Ogawa models himself on his idol, Robert Lewandowski. In 2017, he suffered a serious knee injury and was left out of the Tokyo Olympics squad, facing a long road to recovery. Opportunities have come and gone since, but it taught him plenty. “I approach every day as if it’s my last chance, throwing everything into football,” he says. “I play every match with the feeling that I’m desperate for goals.” He is starting to make his mark in the Eredivisie, having joined NEC Nijmegen in 2023. At international level, he knows there is competition for places, but backs himself. “I think I’m probably the best natural goalscorer,” he told Fifa.com last year. “A forward’s job is to score, and, more than anything, I back myself to find the net and help the team win matches … I want to be the guy who pops up with a goal when the team needs it the most.”"
     },
     {
       "id": "japan-seko",
@@ -260,7 +279,8 @@
       "goals": 0,
       "clubId": "le-havre",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A defender who excels in reading the game and outmaneuvering opponents through intelligence and anticipation. He is also effective in possession, with precise passing to build from the back. He joined the Ligue 1 side Le Havre on a free from Grasshopper Zurich last year, becoming the club’s first Japanese player. As a child he was inspired by the popular Japanese manga Detective Conan. “When Conan presses the button on his belt, a ball comes out. I always dreamed of kicking it like him,” he recalls. He is versatile like Detective Conan too. “I’m the only one who can play all positions in a back three,” he says. His ability to perform at a high level regardless of position makes him an invaluable asset this summer."
     },
     {
       "id": "japan-hiroki-ito",
@@ -273,7 +293,8 @@
       "goals": 1,
       "clubId": "bayern-munich",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "After moving from Jubilo Iwata in J2 to Stuttgart in 2021, Ito quickly established himself as a real talent in European football. Renowned for his exceptional left-footed precision and his long-range distribution, he combines physical strength in duels with an aggressive mindset, while his intelligent positioning and covering deny opponents time and space. He made a big-money move to Bayern Munich in 2024 and, despite suffering three serious injuries soon after joining, he made a strong recovery to become a big presence in their backline. He feels at home in Germany, telling Bayern’s website last year there’s “really good sushi in Munich”. He added: “I’m a typical Japanese person. Politeness is very important to me. The German and Japanese mentalities are similar, with cleanliness, politeness and punctuality. But I’m not shy. I always fight for 90 minutes on the pitch.”"
     },
     {
       "id": "japan-tomiyasu",
@@ -286,7 +307,8 @@
       "goals": 1,
       "clubId": "ajax",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Few players inspire as much trust through their consistency and integrity as Takehiro Tomiyasu. His character has remained unchanged since childhood. During his middle school years he would arrive for football sessions before everyone else to set up, and stay behind to clean up. “If I arrive early and prepare everything, training can start right away,” he said. Dominant in the air, physically strong in duels, and equipped with impressive agility, he possesses all the attributes required of a top-level defender. While he can do a job on either flank as a full-back, it’s at centre-back where his composure and stability stand out. He moved to Arsenal in 2021 from Bologna for £17m but his time in London was hampered by injuries, and was ultimately ended by a serious knee injury which required surgery. He left the club last summer, but was picked up by Ajax on a short-term deal in December. If he can prove he has fully recovered match fitness, he should be a key player this summer."
     },
     {
       "id": "japan-hayakawa",
@@ -299,7 +321,8 @@
       "goals": 0,
       "clubId": "kashima-antlers",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A late bloomer who earned his first call-up at 26. Hayakawa, known for quick reflexes and being sharp reacting to second balls, played a key role in helping Kashima Antlers secure their first league title in nine years last season. A couple of years ago he began working with a personal trainer to reassess his body mechanics and range of motion, and has continued to elevate his performance levels. He made the bench in last October’s international friendly against Brazil, but won’t be satisfied until he earns first-choice status – and knows he will have to prove his ability at the top level to do so. “Unless I can stop someone like Mbappé one-on-one, I can’t truly compete for a starting spot.”"
     },
     {
       "id": "japan-sano",
@@ -312,7 +335,8 @@
       "goals": 0,
       "clubId": "mainz",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Following the advice of his father, a former skier, Sano spent much of his childhood wearing traditional wooden geta sandals. “It definitely helped me develop my balance,” he said, and it still shows now, with outstanding core strength and movement. He’s always difficult to knock off the ball, combining stability in possession with the strength to win it back. His younger brother, Kodai, plays for NEC Nijmegen in the Dutch league, and during the Asian final qualifiers, both brothers were called up to the national team together. In 2025 he was recalled by Japan having been left out of the squad since his arrest the previous summer on suspicion of sexual assault. The investigation was closed by a public prosecutor without charges. Japan’s manager, Hajime Moriyasu, said Sano had given him the impression that he had \"reflected deeply\" on the episode, saying: “Should someone who was part of the family of the team be cast out of society and out of football for making a mistake?\" Sano issued a statement saying: “I am truly sorry for causing trouble to so many people with my actions.”"
     },
     {
       "id": "japan-junnosuke-suzuki",
@@ -325,7 +349,8 @@
       "goals": 0,
       "clubId": "fc-copenhagen",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "In his third professional season Suzuki transitioned from a defensive midfielder to a centre-back, and the decision paid off. Last year he made the move from the J1 side Shonan Bellmare to FC Copenhagen, and has earned plenty of praise in Denmark for his precise passing with both feet and his ability to read the game. A first call-up soon followed and he played the full match in the friendly against Brazil last October, looking strong and assured against some of the world’s top attackers. His experience as a midfielder gives him a wide field of vision and composure on the ball. A former high-school coach describes him as someone who is “never influenced by his emotions” and “always listens carefully, even when the feedback isn’t directed at him”."
     },
     {
       "id": "japan-shiogai",
@@ -338,7 +363,8 @@
       "goals": 0,
       "clubId": "wolfsburg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Remained largely unknown until the summer of his final year of high school and went on to study at university. There, he wore the No 10 and quickly stood out. While still enrolled, he secured a move to Yokohama F Marinos, making his J.League debut and scoring his first goal just three months later. He then moved to NEC Nijmegen before joining Wolfsburg in January this year, reaching one of Europe’s top five leagues in the span of just a year and a half. His greatest weapon is his extraordinary acceleration, having recorded a sprint speed of 36.2 km/h. He even studied Usain Bolt’s running form to refine his explosiveness, combining that pace with powerful shooting and dynamic dribbling. In March this year, he earned his first call-up to the Japan national team and assisted the winning goal on his debut. Now he is part of the World Cup squad."
     }
   ]
 }

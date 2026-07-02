@@ -13,7 +13,8 @@
       "goals": 0,
       "clubId": "red-bull-salzburg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Schlager heads to the World Cup with the edge over Patrick Pentz in their long-running battle to be Austria’s first-choice goalkeeper. Schlager missed Euro 2024 because of injury and admitted watching the tournament on television was painful. “Watching the buildup and the aftermath and all the emotions around it became too much, so I decided that I would only turn on the TV when the game was starting,” he said. Schlager is a complete modern keeper: strong on the line, commanding in his area, sharp with his feet and comfortable in the buildup. Nicknamed “Gassi” – from Gastberger, the surname of his biological father – he decided to become a goalkeeper only at 15. His explanation was simple: he liked throwing himself around and getting dirty. Schlager has also taken courses in nutritional science and recently discussed his hair transplant procedure."
     },
     {
       "id": "austria-affengruber",
@@ -26,7 +27,8 @@
       "goals": 0,
       "clubId": "elche",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Only a handful have switched Austria for Spain. So when Affengruber won the league with Sturm Graz in 2024 and, despite his strong displays at centre-back, chose to move to Spain’s second division, the reaction was one of surprise. “Experts can say and write what they want. It doesn’t affect me. I go my own way,” he said later. Many predicted the move would bury him. Instead, Affengruber quickly became a key part of Elche’s promotion campaign and then established himself in La Liga too. At Elche they call him Kaiser or even Affenbauer, a nod to Franz Beckenbauer. He came to football through his three older brothers, was spotted young and moved to RB Salzburg’s academy, where independence came early: “I had to do my own laundry at 13.” It shows in his game too: Affengruber is a strong, intelligent and highly capable ball-playing defender who shines in buildup play without losing his edge in duels."
     },
     {
       "id": "austria-danso",
@@ -39,7 +41,8 @@
       "goals": 0,
       "clubId": "tottenham-hotspur",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "“As a kid, I wanted to be an action movie star,” Danso says. Kylian Mbappé can attest to his imposing physique: the France forward broke his nose after jumping face-first into Danso’s back at Euro 2024. Born in the Styrian town of Voitsberg to Ghanaian parents, Danso moved to England at six but has remained closely connected to Austria. Alongside his godmother, he founded DANnSO, an organisation supporting families in difficult circumstances in his hometown. After a standout season with Lens in 2024, a proposed move to Roma collapsed when medical tests revealed scarring on his heart. Following a minor procedure, he went on to win the Europa League with Tottenham. Known for his authority in the air, his reliability defending crosses earned him the nickname Magnet Head from his former manager Thomas Frank."
     },
     {
       "id": "austria-xaver-schlager",
@@ -52,7 +55,8 @@
       "goals": 4,
       "clubId": "rb-leipzig",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "In Austria, there is a running joke that once the last fan has left the stadium and the lights have gone out, Xaver Schlager is still chasing the ball. He is a cornerstone of Ralf Rangnick’s system: a presser, a ball-winner and exactly the sort of player opponents hate to face. That he can do plenty with the ball as well became clear at RB Leipzig and, above all, with the national team. Michael Gregoritsch has said his teammate “has also developed enormously in terms of leadership”. Schlager, who spent part of his childhood at boarding school – “a tough school, but a very educational one” – is a grounded person who, in 2025, opened a restaurant in his home town of St Valentin called Dorfrichter. Injuries have set him back in recent years, but he appears to be getting back to his best just in time for the World Cup."
     },
     {
       "id": "austria-posch",
@@ -65,7 +69,8 @@
       "goals": 5,
       "clubId": "mainz",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Nicknamed Stefan Porsche by Bologna fans, the versatile 29-year-old moved to Como and spent the second half of this past season on loan at Mainz. It was at Bologna that Posch made his name as a full-back after moving from centre-back. “At first I thought it was just a limited period of time and that I would move back into the centre,” he once said. Instead, he made the role his own. Posch, who is a managing director and shareholder in a property company, brings real drive going forward with his excellent passing, dynamism and a clear eye for goal. Under Ralf Rangnick, when fit, he has been one of Austria’s more understated constants in recent years. In 2020, he was made an honorary citizen of his home town, Kraubath an der Mur."
     },
     {
       "id": "austria-seiwald",
@@ -78,7 +83,8 @@
       "goals": 1,
       "clubId": "rb-leipzig",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "One of Ralf Rangnick’s most trusted players, at the time of writing Seiwald has missed just 13 minutes of competitive action under the head coach – when he was subbed out late in a 10-0 win over San Marino. At Salzburg, the defensive midfielder progressed from the under-nines to the Champions League while still living in his childhood bedroom in the village of Kuchl. He may not yet have fulfilled his childhood ambition of “being the best player at FC Barcelona, being the best player in the world”, but he has developed into a key figure in RB Leipzig’s midfield. “He is our pulse and never stops,” his club coach, Ole Werner, says. Seiwald tends to favour the safe option in possession but is formidable out of it, a relentless presence in the press."
     },
     {
       "id": "austria-arnautovic",
@@ -91,7 +97,8 @@
       "goals": 47,
       "clubId": "red-star-belgrade",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Once an extremely polarising figure in Austria due to run-ins with police, teammates and opponents, Arnautovic has matured into an elder statesman. These days you are more likely to find him in negotiations for a new public holiday with the Austrian president than anything else off the pitch. The 36-year-old demanded the national day off after Austria qualified for the World Cup; President Alexander Van der Bellen suggested they might have to win the whole thing for that to happen. In March they met, taking selfies and coming to an agreement, although they did not reveal what it was. Arnautovic surpassed Toni Polster as Austria’s most prolific international goalscorer during the World Cup qualifiers, and is known as a leader in the dressing room. He may retire after the tournament but will remain his country’s most capped player for a while – at time of writing he is 20 ahead of second-placed David Alaba."
     },
     {
       "id": "austria-alaba",
@@ -104,7 +111,8 @@
       "goals": 15,
       "clubId": "real-madrid",
       "captain": true,
-      "bio": ""
+      "bio": "",
+      "description": "Possibly Austria’s greatest footballer of all time, Alaba may be in the autumn of his career but he remains central to the national team. Injured at Euro 2024, he was still named by Ralf Rangnick as a non-playing captain and remained one of the driving forces in a squad whose cohesion is as important as individual quality. He is the face of the generation that has transformed Austrian football, with his buildup play, reading of the game and versatility earning the nickname “God” from Pep Guardiola. A four-time Champions League winner, Alaba showed how much the national team means to him when he said: “Qualifying for the World Cup is something I rank right at the top of my career.” Talent runs in the family: his Nigerian father once had a No 2 hit in the Austrian charts with Indian Song while his sister is also a musician. As for this summer, Alaba has no doubt: “Austria will have a successful World Cup, I’m convinced of that. I can feel that we’re going there to make history.”"
     },
     {
       "id": "austria-sabitzer",
@@ -117,7 +125,8 @@
       "goals": 26,
       "clubId": "borussia-dortmund",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The Dortmund midfielder is set to reach 100 caps during the World Cup, and will become only the fifth Austrian man to do so. Known for his quiet, almost reclusive off-pitch demeanour, Sabitzer is omnipresent on the field, usually deployed as a roaming left-winger and involved in almost every attacking move. At 32, he has maintained his performance level thanks to rigorous discipline. “I haven’t opened a pack of crisps in the last five years,” he confessed in 2021. Sabitzer is not afraid of confrontation and has clashed with club coaches in the past, though never with Rangnick – at least publicly. Not one to take results lightly, he skipped an international friendly to recover mentally after having lost the Champions League final in 2024. Sabitzer married Katja Kühne, a winner of the German edition of The Bachelor, in 2025."
     },
     {
       "id": "austria-grillitsch",
@@ -130,7 +139,8 @@
       "goals": 1,
       "clubId": "braga",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A defensive midfielder with playmaking qualities, Grillitsch is an exceedingly rare breed in Austria. After an impressive spell with Hoffenheim, he appeared set for a transfer to a bigger club in 2022. Talks with Milan, Fiorentina and other clubs collapsed, however, with Fiorentina’s sporting director publicly criticising the conduct of Grillitsch’s father in negotiations. The player subsequently returned to working with an agent and, after two months as a free agent, signed for Ajax. Grillitsch’s second stint at Hoffenheim ended early after he was deemed to not fit into the system of the head coach, Christian Ilzer, prompting a move to Braga. “If I speak, I’m in big trouble,” he said, channeling his inner José Mourinho. While showing very little emotion to the outside world, Grillitsch is known as a joker within the squad."
     },
     {
       "id": "austria-gregoritsch",
@@ -143,7 +153,8 @@
       "goals": 24,
       "clubId": "fc-augsburg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Gregoritsch has had a tendency to shape the trajectory of Austrian football. Most recently, it was his equaliser against Bosnia and Herzegovina that sent Austria to the World Cup. He has kept delivering even when everyone else – apart from Ralf Rangnick, the coach – has seemed to have stopped believing in him. Once the youngest-ever Austrian goalscorer in the Bundesliga, Gregoritsch has matured during a long career that has taught him to have perspective. “I don’t have to pretend I’m the fastest,” he once said. He has also helped shape how the national team is seen in public, urging people to “pull themselves together” and move “far away” from rightwing thinking, saying football shows what solidarity really means. Speaking immediately after Austria’s qualifier against San Marino, played a day after nine students and a teacher were killed in a school shooting in Graz, Gregoritsch said he had been deeply shaken because he had grown up “10 minutes from there”, adding that “sometimes football matches are not that important”. On the field, he remains exactly what Austria need: a target man who works, occupies defenders, creates space for midfield and still scores hugely important goals."
     },
     {
       "id": "austria-wiegele",
@@ -156,7 +167,8 @@
       "goals": 0,
       "clubId": "viktoria-plzen",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Wiegele is hard to miss. The Viktoria Plzen goalkeeper stands at 2.05m (almost 6ft 9in), and became the tallest player ever to appear for Austria when he made his international debut as a substitute against Ghana in March. Wiegele’s rise has come late: it is only in the past 18 months that his career has really taken off. He spent years in Austria’s lower leagues before breaking into professional football with DSV Leoben at 22. Plzen signed him in 2024 and he became first-choice there in November after a loan spell at Grazer AK. Wiegele said his international debut “was an honour” and joked that the microphone had to be lowered for his interview. Unsurprisingly, he is dominant in the air, but he is also comfortable with the ball at his feet. That is despite the fact he still wears rugby boots, as football boots are not available in his size."
     },
     {
       "id": "austria-pentz",
@@ -169,7 +181,8 @@
       "goals": 0,
       "clubId": "brondby",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Usually the backup to Schlager, Pentz excelled as Austria’s No 1 at Euro 2024. After another convincing performance against South Korea in March, the coach, Ralf Rangnick, said he was spoilt for choice. Outstanding with the ball at his feet and a sharp shot-stopper, Pentz still divides opinion: at 1.83m (6ft), he is considered short by modern goalkeeping standards. After tough spells at Leverkusen and Reims, he is enjoying life in Copenhagen as Brøndby’s undisputed No 1. “In Denmark, people respect that footballers have private lives,” he says. Denmark is a fitting destination for this avid collector of Harry Potter Lego sets, although that was not the reason he turned down more lucrative offers last summer. “You have to ask yourself if it’s worth it,” he said. “I do appreciate the great life we have here in Copenhagen.”"
     },
     {
       "id": "austria-kalajdzic",
@@ -182,7 +195,8 @@
       "goals": 4,
       "clubId": "lask",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Kalajdzic’s career reads as an extraordinarily painful series of what-ifs. What if he hadn’t broken his foot in 2018? What if his ankle ligament hadn’t ruptured the same year? What if he hadn’t suffered a torn anterior cruciate ligament in 2019, and again in 2022? And yet again in 2024? When fit, Kalajdzic has had a fair claim to be Austria’s best striker, including a goal against the eventual champions, Italy, in their Euro 2020 last-16 game. Standing 2m (6ft 7in) tall, his ball control and vision are much better than expected. Kalajdzic looks like a playmaker trapped in the body of a striker, his skills a reminder of his footballing education as a midfielder. The Austrian legend Ernst Baumeister converted him to the forward line at the age of 20, arguing: “Even as a defensive midfielder, he was the most dangerous attacker.”"
     },
     {
       "id": "austria-lienhart",
@@ -195,7 +209,8 @@
       "goals": 3,
       "clubId": "freiburg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Lienhart’s senior career began with a 13-minute cameo that no longer officially counts. In 2015, while still a teenager, he came on for Real Madrid in a Copa del Rey tie against Cádiz, only for the result to be annulled because his side had fielded an ineligible player. His appearance vanished from the record, but not from memory. “One thing I took from [the coach Zinedine] Zidane was that as a centre-back, you should always try to speed the game up: few touches, crisp passes – and driving the play from the back.” Lienhart’s path led him to Freiburg, where he has become a mainstay and one of the Bundesliga’s most reliable central defenders. “I’m not a showman,” he once said of himself, and it shows in the way he plays: uncompromising and physical, but also intelligent, composed and quietly dependable. The fact he was born in Lilienfeld, a town at the foot of the Muckenkogel – one of the birthplaces of alpine skiing – only makes his story feel even more Austrian."
     },
     {
       "id": "austria-mwene",
@@ -208,7 +223,8 @@
       "goals": 0,
       "clubId": "mainz",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Reliable left-backs are in short supply but the 32-year-old has established himself as one of them, making him an important player for Ralf Rangnick’s team. Mwene solves problems on the left flank; he is a dynamic worker, sharp in defence and energetic going forward. In Swahili, the phrase is hakuna matata – no problem – which was also the name of a Kenyan restaurant his father, John, had in Vienna. His mother worked as a nurse at Vienna’s AKH, one of Europe’s biggest hospitals, which brought its own advantages. “When I came home from playing football with scrapes and bruises, she could treat me straight away,” he once said. Joined Mainz for the first time in 2018 and when he left for PSV three years later the then-coach, Bo Svensson, said it “hurt personally”. Now back at the Bundesliga club, he has regained his starting place."
     },
     {
       "id": "austria-chukwuemeka",
@@ -221,7 +237,8 @@
       "goals": 1,
       "clubId": "borussia-dortmund",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Chukwuemeka arrived, scored and instantly made people take notice. Brought on against Ghana in March for his first appearance after becoming eligible for Austria, the midfielder marked the occasion with a goal and celebrated in disbelief as his new teammates swarmed around him. “When the ball went in, I couldn’t believe it. I want to do it again straight away,” he said afterwards. He said it in English, because he speaks only limited German. One of the first local phrases he picked up was: “Bist deppat, oida?” – the Austrian slang equivalent to “Are you crazy, man?” Born in Vienna to Nigerian parents, who moved to England when he was very young, Chukwuemeka came through the Aston Villa academy before joining Chelsea in 2022. Rangnick is unlikely to care that he made almost 100 senior appearances before completing 90 minutes, in Dortmund’s defeat by Hoffenheim in April. As a dynamic No 8 with pace, drive, goal threat and an eye for the right pass, he looks a major addition to Austria’s squad."
     },
     {
       "id": "austria-schmid",
@@ -234,7 +251,8 @@
       "goals": 3,
       "clubId": "werder-bremen",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Once hailed by the Austria legend Andreas Herzog as “one of Austria’s biggest talents”, Schmid scored within his first 15 minutes of game time for his childhood club, Sturm Graz – becoming the first player born in the 2000s to score in the Austrian Bundesliga. Nearly nine years later, he has spent most of his career with Werder Bremen, with rumoured moves to the Premier League yet to realise. Standing at 1.68m (5ft 6in), he may be Austria’s shortest squad member, but his low centre of gravity makes him a formidable presence in one-on-ones. A technically adept playmaker, Schmid is often deployed on the right side by Ralf Rangnick and at the time of writing he has featured in 29 consecutive matches under Austria’s head coach."
     },
     {
       "id": "austria-ljubicic",
@@ -247,7 +265,8 @@
       "goals": 1,
       "clubId": "fc-schalke-04",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Ljubicic was in Croatia on holiday and, in fact, asleep when the Austrian FA rang him to say he had been called up as a late replacement for the injured Christoph Baumgartner. \"I travelled to Vienna and then flew to the USA,\" said the 28-year-old, who can play in several different positions in midfield. \"This is a dream come true for me. It is such a good feeling to be back with the national team.\" Having had his breakthrough at Rapid Vienna, he moved to Cologne and – after a brief spell in Croatia with Dinamo Zagreb – he signed for Schalke in January and helped them gain promotion to the Bundesliga in May. He says: \"I don't think I can step in for Baumi as a like-for-like replacement, he is one of a kind, but I can help out in different positions. I am very, very sorry for him.\""
     },
     {
       "id": "austria-laimer",
@@ -260,7 +279,8 @@
       "goals": 7,
       "clubId": "bayern-munich",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Laimer had plenty of doubters when he left RB Leipzig for Bayern Munich on a free transfer in 2023 but, after failing to establish himself as a first-choice midfielder, he has reinvented himself as a right-back, occasionally filling in on the left. Laimer is the epitome of a workhorse and, having been educated at Salzburg’s Red Bull academy, the perfect disciple for Ralf Rangnick’s gegenpressing doctrine. “I want to be as unpleasant as possible on the pitch and I like it when things get physical,” he told Sports Illustrated this year. “One-on-one duels and intensity have always been important parts of my game.\" He added with a smile: “I can probably be a bit annoying on the pitch, although my wife would say that goes for off the pitch too!” Austria’s footballer of the year in 2025, Laimer is known as a down-to-earth guy who enjoys a game of chess or a round of golf in his spare time."
     },
     {
       "id": "austria-wimmer",
@@ -273,7 +293,8 @@
       "goals": 1,
       "clubId": "wolfsburg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Wimmer is a rarity in modern football: he is not an academy product, nor is he a polished system player. Rejected by St Pölten, he ended up in the lower leagues at Gaflenz and only got his chance at Austria Vienna after a club vice-president pushed to sign him, going so far as collecting video footage of Wimmer’s matches. Perhaps that is exactly what Ralf Rangnick, the Austria coach, values: a player that can be wildly unpredictable, direct in attack, and a strong dribbler capable of unexpected passes. Wimmer grew up on a farm in a tiny village in Lower Austria with just 16 households. He was nudged into football more by his grandmother than by his own ambition, and was even an international weightlifting champion between the ages of 10 and 14. He also trained as a mechatronics technician and says becoming a professional footballer was never really the plan. One Opta stat from 2023 captured his quality: among players with at least 500 minutes in Europe’s top five leagues, only Kevin De Bruyne, Wimmer and Lionel Messi had averaged more than one major chance created per game."
     },
     {
       "id": "austria-prass",
@@ -286,7 +307,8 @@
       "goals": 0,
       "clubId": "tsg-hoffenheim",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "After progressing through Red Bull Salzburg’s academy, Prass joined Sturm Graz on a free transfer in 2021. “I never got the feeling that they really wanted me,” he said of Salzburg. At Sturm Graz, he developed into an influential, high-energy presence and played a key role in the side that ended Salzburg’s decade-long title run in 2024. His assist for the decisive goal on the final day captured his style: a risky, almost ill-judged surge from midfield that came off more through sheer force than ball control. Consistent performances at Sturm, followed by an impressive Euro 2024, earned him a move to Hoffenheim. Used primarily as a left-back by Ralf Rangnick, Austria's coach. Prass can lack composure in one-on-one situations but compensates with relentless running down the flank."
     },
     {
       "id": "austria-friedl",
@@ -299,7 +321,8 @@
       "goals": 0,
       "clubId": "werder-bremen",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "It was not love at first sight between Friedl and Ralf Rangnick, that’s for sure. “Nobody is talking to me, so I’ve given up. I’m really angry,” the defender said in September 2024 after again being omitted from the Austria squad. Despite Rangnick’s preference for a left-footed option at left centre-back, it took the Werder Bremen captain until last year to establish himself. Friedl came through Bayern Munich’s academy, where he would occasionally stay in David Alaba’s guest room. “He is like a little brother to me,” Alaba said at the time – though Friedl’s performance as a ballboy for Bayern’s games left room for improvement. “Once, he was daydreaming and I had to shout at him to throw me the ball,” Alaba recalls. Now a respected figure at his club, Friedl is valued for his leadership and for speaking up in difficult situations."
     },
     {
       "id": "austria-wanner",
@@ -312,7 +335,8 @@
       "goals": 0,
       "clubId": "psv-eindhoven",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Ralf Rangnick was pleased in the spring. “If we were a club, you could say it had been a very successful transfer window,” he said, referring in part to Wanner becoming eligible to play for Austria. Born in Dornbirn to an Austrian mother and a German father, Wanner was the subject of a long tug-of-war between the two countries. “In the end, I had to listen to myself and I wanted to play for Austria. I’m convinced it was the right decision,” he said. Wanner came through Bayern’s academy and once held the club record as their youngest-ever Champions League starter. Now being developed as a No 6 at PSV, Wanner also made an immediate impression for Austria with a lively display off the bench against Ghana in March. Technically gifted and sharp in tight spaces with a strong left foot, he is capable of adding more than just squad depth."
     },
     {
       "id": "austria-svoboda",
@@ -325,7 +349,8 @@
       "goals": 0,
       "clubId": "venezia",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "For a Viennese footballer playing in Italy, the question ought to be simple enough: espresso or melange? Svoboda’s answer is surprising. “Neither. I don’t drink coffee,” he said on a podcast. He has shown examples of resistance elsewhere, too. Venezia’s captain tore a cruciate ligament last year but returned seemingly stronger than ever. Ralf Rangnick seems to have taken a liking to the centre-back, who has remained on Austria’s radar since his first call-up in 2024. That almost never happened, though. “I missed the first call because my phone was on silent,” he once recalled. Svoboda’s profile is an unusual one: a robust, physical but also dynamic defender, and a late bloomer who made his way from WSG Tirol to Venezia. Has made his mark in Italy, where defensive toughness and tactical discipline are held in such high regard."
     },
     {
       "id": "austria-schopf",
@@ -338,7 +363,8 @@
       "goals": 6,
       "clubId": "wolfsberger-ac",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Perhaps the biggest surprise in Ralf Rangnick’s squad, given Schöpf’s season with Wolfsberger did not exactly demand attention. Even so, his qualities have clearly not gone unnoticed. The well-travelled midfielder has long been valued for his technique, his dynamism and the quality of his passing. When he moved to Vancouver Whitecaps after more than a decade in Germany, he seemed to find renewed confidence and something like a reboot for his career – along with a fine home for his two golden retrievers, Mila and Levi. “There are great beaches. And Stanley Park is a beautiful place. Our dogs will love it there,” said Schöpf, who is also known as Ale – in the German pronunciation, so not the beer. Even before his move back home, he had made his target clear: the World Cup. He is joining the Linz-based Lask this summer."
     }
   ]
 }

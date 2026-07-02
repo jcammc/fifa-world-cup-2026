@@ -888,20 +888,15 @@ node scripts/generate-search-index.js
 npm run validate
 ```
 
-### Guardian player bios (manual, one-time)
+### Guardian player bios (automated, Sprint 35)
 
-The Guardian's WC 2026 player guide is blocked by their anti-bot CDN — WebFetch and all automated Node.js fetches fail.
+The Guardian's WC 2026 player guide *page* is blocked by their anti-bot CDN — but the data behind it isn't. Each team's player data is backed by its own Google Sheet, served as static JSON by Guardian's own CDN at `https://interactive.guim.co.uk/docsdata/{spreadsheetId}.json` — public, unauthenticated, no browser needed. The "Teams" sheet (`data/guardian-teams-raw.json`, a one-time capture — see that file's `sheets.Teams[].spreadsheet` field) lists all 48 teams' spreadsheet IDs.
 
-**Manual extraction steps:**
-1. Open the Guardian WC 2026 player guide URL in a browser
-2. Open DevTools → Console
-3. Run: `copy(JSON.stringify(window.__NEXT_DATA__))`
-4. Create `data/guardian-raw.json` and paste the copied JSON
-5. Run: `npm run gather-guardian-bios`
+**To run:** `npm run gather-guardian-bios`. The script fetches all 48 team sheets, matches players against that team's own roster (never across countries, to avoid misattributing a bio to a same-surnamed player on a different team), and writes matched bio text to the `description` field (not `bio`) in each `data/players/{team}.json` file. Matching tries, in order: exact name, dropped leading honorific/extra given name, quoted-nickname extraction, a small hand-verified `NAME_ALIASES` table, then an unambiguous same-surname-plus-first-initial fallback. Reports matched/unmatched counts per team plus a summary.
 
-The script reads `guardian-raw.json`, walks the JSON tree to find the player array, normalises names (diacritic-stripping for fuzzy matching), and writes bio text to the `bio` field in each `data/players/{team}.json` file. Reports matched / unmatched counts.
+**Current state (as of Sprint 35, 2026-07-02):** 1,245/1,248 players (99.8%) have a populated `description`. The 3 gaps are known and explained (see `docs/ROADMAP.md` Sprint 35 retrospective), not bugs. Safe to re-run any time — idempotent, and will pick up newly-available/updated Guardian content.
 
-**Current state:** All player `bio` fields are empty strings `""` — Guardian bios not yet fetched.
+**If `data/guardian-teams-raw.json` is ever missing** (e.g. a fresh checkout that didn't carry it, or Guardian restructures their sheet), the script falls back to printing manual DevTools capture instructions (Network tab → Fetch/XHR → find the response starting `{"sheets":{"Teams":[...`) rather than failing silently.
 
 ### Yellow card suspension rules (WC 2026)
 
@@ -1019,11 +1014,12 @@ As R32/R16/QF/SF results land, the bracket updates — but there's no visual "ju
 - No club badges (CSS fallback active).
 - `data/rankings.json` empty — Rankings component not implemented.
 - `scotland-gordon` age (43, DOB 1982-12-31) triggers a validator DOB-range warning — expected and benign (Craig Gordon is genuinely 43; the DOB_MIN=1984 bound is a soft warning, not fatal).
-- `jordan-zito` has `_verification: "caps/club uncertain"` — data confidence flag, no action needed.
+- ~~`jordan-zito` has `_verification: "caps/club uncertain"` — data confidence flag, no action needed~~ — **Superseded Sprint 35.** That flag was an undersell: "Zito Luvumbo" wasn't uncertain, he was a fabricated entry (a real footballer, but Angolan, with no Jordan connection). Investigating it led to discovering Jordan's entire roster (from Sprint 9's bulk-population batch) didn't match the real World Cup squad — 24 of 26 players were wrong. Full squad replaced from Wikipedia's `2026 FIFA World Cup squads` article, cross-checked against FIFA.com's official announcement. New captain is `jordan-haddad` / "Ihsan Haddad" (previous data had the wrong captain too — "Ahmad Haddad"). One slot (`jordan-taha`, shirt 18) carries a new `_verification` note for a genuine Wikipedia-vs-source inconsistency, resolved via a corroborating match-day lineup — see `docs/ROADMAP.md` Sprint 35 retrospective for full detail. Sprint 9's other 22 "batch 3" teams were spot-checked against independent data and found accurate — this issue appears isolated to Jordan, not systemic.
 - ~~`uzbekistan.json` had two players named "Eldor Shomurodov"~~ — **Resolved Sprint 22 squad audit.** Full squad replaced from Wikipedia. Shirt 9 is now Odiljon Hamrobekov (`uzbekistan-hamrobekov`), shirt 14 is Eldor Shomurodov (`uzbekistan-shomurodov`, captain). No duplicates remain.
 - `scripts/update-standings.js` and `scripts/generate-player-bios.js`, `scripts/generate-rankings.js` are stubs. `update-knockout.js`, `gather-photos.js`, and `sync-data.mjs` are fully implemented. `update-standings.js` is now superseded by `sync-data.mjs` for score/standings updates — the stub can remain as-is.
 - **Group K match events missing (Sprint 31 gap):** Group K (6 matches) was rate-limited by Wikipedia during the Sprint 31 `gather-match-events` run. Match Centre pages for Group K fixtures will show no events timeline. Re-run `npm run gather-match-events` during off-peak hours to populate.
-- **Guardian player bios:** All `bio` fields are empty `""`. See Guardian bios manual extraction steps in WIKIPEDIA DATA WORKFLOW section above. One-time action; bios will be populated after manual `__NEXT_DATA__` extraction + `npm run gather-guardian-bios`.
+- ~~**Guardian player bios:** All `bio` fields are empty `""`... bios will be populated after manual `__NEXT_DATA__` extraction~~ — **Resolved Sprint 35.** The manual extraction step turned out to be unnecessary: `https://interactive.guim.co.uk/docsdata/{spreadsheetId}.json` is a public, unauthenticated endpoint serving each team's data directly. `gather-guardian-bios.mjs` now fetches all 48 teams automatically and writes to the `description` field (not `bio` — see Sprint 32 note above). 1,245/1,248 players (99.8%) populated; re-run the script any time to pick up newly-available Guardian content or re-verify.
+- **Jordan photo gap (new, Sprint 35):** replacing Jordan's roster means most `player-photos.json` entries no longer correspond to any current player ID (old IDs pointed at different, incorrect people). Two were salvaged directly during the roster fix (Musa Al-Taamari's real photo migrated to the new ID; a stray photo of Zito Luvumbo that had been mistakenly left attached to `jordan-al-rosan` since the June 22 partial fix was removed). The other ~24 correct Jordan players currently show initials-fallback, not a photo. Re-run `npm run gather-photos` (or equivalent) for Jordan specifically to close this gap — deliberately not done as part of Sprint 35.
 - **Formation derivation approximation:** Match Centre "Previous XI" shows formations like "4-5-1" that may actually be "4-2-3-1" or "4-3-2-1". Simple DEF/MID/FWD tier counts from Wikipedia position codes cannot distinguish these. Accepted limitation.
 
 ---

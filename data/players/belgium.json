@@ -13,7 +13,8 @@
       "goals": 0,
       "clubId": "real-madrid",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Look who’s back! Courtois was left at home by Belgium for Euro 2024 because of a back-and-forth argument with the then head coach, Domenico Tedesco. The German-Italian didn’t come out of it well, either, being fired soon afterwards. His successor, Rudi Garcia, flew to Madrid to convince Courtois to return to duty, and he agreed – much to the distress of Koen Casteels, the man who had stepped up to replace him. Casteels promptly quit the national team, saying: “It's strange that they are rolling out the red carpet and welcoming him back with open arms … As of today, I am no longer available.\" This summer is another chance for Courtois to show the world exactly how good he is. He knows it will be difficult to win the World Cup, but maybe he can add another record to his collection, which includes the record for most saves in a Champions League final (nine against Liverpool in 2022). Or could he win the Golden Glove again, as he did in 2018? His wife, the Israeli model Mishel Gerzig, will surely be in the US to support him, which he’ll appreciate if he isn’t glued to his phone. She once called him “the king of mobile phones” because of his fixation, saying he would regularly bump into door frames while using one."
     },
     {
       "id": "belgium-debast",
@@ -26,7 +27,8 @@
       "goals": 1,
       "clubId": "sporting-cp",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "One of the many excellent products of Anderlecht’s academy, Debast had been hoping to become the next Kevin De Bruyne, playing as an attacking midfielder until he was 15. But then, partly due to his growth spurt, he was moved back, and excelled in his new role. He says he learned a lot from the current Wales manager, Craig Bellamy, who was then coaching Anderlecht Under-21s. “Before I worked with him, I had never tackled a player in my life,” he said. “He also taught me to be meaner.” Now, with his great long-range passes and growing physical power, he is the leader of Belgium’s backline. That’s despite facing big competition for places at club level, with Sporting sometimes deploying him as a holding midfielder instead. Everyone in Belgium has the feeling he has a big career ahead of him. He’s known by his nickname, Scampi, which was given to him as a child by his mother. It fell out of use until a teammate, Benito Raman, discovered it on Facebook and eagerly brought it back into circulation."
     },
     {
       "id": "belgium-theate",
@@ -39,7 +41,8 @@
       "goals": 1,
       "clubId": "eintracht-frankfurt",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "As a youth player, Theate moved from Genk to Standard Liège, then back to Genk and finally to … Standard. But he didn’t make the cut and was rejected even by clubs from the third division before being given a chance by KV Oostende. From there on, things moved quickly for the left-footed and long-haired defender, who idolised Carles Puyol. Bologna, Rennes and Eintracht Frankfurt all paid millions to sign him. Reflecting on his difficult early years, and the push it gave him, he told the magazine Humo: “I don’t feel any grudge. On the contrary, I say thanks to all those who rejected me.” He’s a big F1 fan, so will be keeping an eye on the four races scheduled during the World Cup. And if he performs well, he might even receive a message from the double Olympic champion cyclist and former football player Remco Evenepoel. At the national youth level they shared a room, and they’re still in touch."
     },
     {
       "id": "belgium-mechele",
@@ -52,7 +55,8 @@
       "goals": 1,
       "clubId": "club-brugge",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Mechele is already a Club Brugge legend, holding the record for most appearances in European competition (101) and sharing the record for most league titles (six) with his teammate Hans Vanaken. But it hasn’t all been plain sailing: there was a time when he didn’t feel appreciated, with the board buying a new central defender almost every year. “Then I hung my head and walked around in frustration,” he told the newspaper HLN. “It’s tiring that I have to keep proving myself to the outside world.” Yet he never thought of leaving. He started and wants to finish his career in Bruges, where he rides his bike to training. He was really disappointed to be left out of the Belgium squad for previous tournaments, but now he’s finally made it. His close friend Tibo Debaillie will be happy: he plays for the Canadian Football League team BC Lions in Vancouver, where the Red Devils face New Zealand."
     },
     {
       "id": "belgium-de-cuyper",
@@ -65,7 +69,8 @@
       "goals": 4,
       "clubId": "brighton",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "In September last year, Antoine Semenyo, then at Bournemouth, knocked De Cuyper into the advertising boards, injuring the Brighton full-back’s knee in his debut season in the Premier League. He spent much of the rest of the campaign on the bench, but could still be an important player for Belgium at this World Cup. For years Belgium had to deploy central defenders out wide, such as Jan Vertonghen and Thomas Vermaelen, but with De Cuyper they’ve finally found a natural left-back who also offers an attacking and goalscoring threat. The curly-haired kid from Knokke is a proper Club Brugge product, with a strong aversion to their biggest rivals. “In kindergarten, when he was only three years old, he refused to colour a drawing of a plum,” his mother told the newspaper Nieuwsblad – because purple was Anderlecht’s colour. De Cuyper’s favourite meal before a game? Sausage with apple sauce and potatoes."
     },
     {
       "id": "belgium-witsel",
@@ -78,7 +83,8 @@
       "goals": 12,
       "clubId": "girona",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The oldest Red Devil. Witsel made his international debut in 2008 when his teammate Nathan De Cat (who made his debut in March at 17 but has not made the cut) hadn’t even been born. Witsel is now 37 but still standing strong thanks to his work ethic, which, said his father, Thierry, with whom he runs a football academy, is “similar to that of Cristiano Ronaldo”. In recent years Witsel also started skipping carbs in the evening and he wears a Whoop bracelet to track his running, sleep and overall health. He didn’t play for Belgium for almost three years, to focus on his club career, but he admitted he regretted that decision. He is expected to play a key role this summer, but more off the pitch than on it. If he does get more minutes than expected, though, we’ll be able to admire his famous tattoos once more. Apart from the paternoster on his chest, his arms are now fully inked, including the names of his kids and an image of a roaring lion."
     },
     {
       "id": "belgium-de-bruyne",
@@ -91,7 +97,8 @@
       "goals": 37,
       "clubId": "napoli",
       "captain": true,
-      "bio": ""
+      "bio": "",
+      "description": "What do Jamal Musiala, Gavi and Anthony Gordon have in common? They all played in the KDB Cup, the now 10-year-old youth tournament named after (and supported by) Kevin De Bruyne. His own younger years – back when he frequently ran away from training because of arguments with coaches, was supporting Liverpool and went on a trial at Arsenal – seem a long time ago now. He arrives at the World Cup as an elder statesman, a Manchester City legend, with 422 games, 108 goals and 19 trophies, and one of Belgium’s last “golden generation” members. He certainly hopes to perform better than at the previous World Cup. If not, he’ll be flying home on his 35th birthday, since it falls right after the New Zealand game. But whatever happens, the family’s future looks bright after footage emerged of his seven-year-old son Rome scoring some of his dad’s trademark goals at Real Casarea, a club in the Napoli area."
     },
     {
       "id": "belgium-tielemans",
@@ -104,7 +111,8 @@
       "goals": 13,
       "clubId": "aston-villa",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "This year Tielemans celebrates his 10th anniversary as a Red Devil. Belgium fans still remember him as an 18-year old at his squad initiation ceremony singing Cheerleader by Omi in front of his teammates. And now, in his fifth major tournament, he wants to play a key role for the first time. And he should, because Rudi Garcia has named him captain, which is quite some honour with Thibaut Courtois, Kevin De Bruyne and Romelu Lukaku also in the squad. Tielemans was the least controversial choice, though: not only does he speak Dutch and French fluidly, he is loved by nearly everyone. Besides his great feet – he scores screamers with both, such as his unforgettable winner for Leicester in the FA Cup final in 2022 against Chelsea – he always puts the team first. Negative stories? You won’t find any. He also never talks about his private life, so it took a while to double check that he now has three daughters rather than two."
     },
     {
       "id": "belgium-lukaku",
@@ -117,7 +125,8 @@
       "goals": 90,
       "clubId": "napoli",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Some strikers don’t score 89 goals in their entire career. Lukaku arrived at this World Cup having scored 89 for his country alone. That’s over twice as many as any other Belgian player – and why his nickname Big Rom isn’t just a reference to his bulky 1.91m (6ft 3in) frame. At this tournament he will be on a mission. Four years ago, in Qatar, he wasn’t fully fit and missed some big chances as a substitute against Croatia. “Afterwards, on vacation, for a week straight I was crying every day,” he told the podcast Koolcast later on. Apart from his sons Jordan and Romeo, it was the legendary Thierry Henry, a former assistant of the national team, who gave him the mental support he needed. Last season Lukaku had his share of bad luck with a hamstring injury, which led to a falling-out with the coaching staff and board at Napoli as the striker opted to complete a big part of his rehab in Antwerp. But even without many minutes to his name in 2025-26, defenders will still fear his strength and efficiency."
     },
     {
       "id": "belgium-trossard",
@@ -130,7 +139,8 @@
       "goals": 12,
       "clubId": "arsenal",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Ten years ago Trossard was being relegated to Belgium’s second division with OH Leuven. A decade on, he’s a World Cup player who has just spent a season at the heart of a succesful Premier League title challenge. He’s not immune to criticism, though, with Belgian media and fans often saying he doesn’t perform at the same level for his country as he does for his club. In a press conference in October, for instance, a reporter even told him that he always looks less happy when he’s with the national team. Trossard smiled, flashed his white teeth and countered: “No idea where that comes from. I’m always happy when I’m on the field.” He hopes to show that at the World Cup and, if he finds the net, watch out for him putting on his imaginary glasses – his signature celebration. Also watch out for any Belgium matches refereed by the French official Clément Turpin, who is Trossard’s doppelganger."
     },
     {
       "id": "belgium-doku",
@@ -143,7 +153,8 @@
       "goals": 7,
       "clubId": "manchester-city",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "How many times will we see Doku hit the Griddy (his trademark dance celebration) at the World Cup? Belgium fans didn’t see it often enough last season, but with five goals and three assists the speedster and prolific dribbler was still one of the most important players in the qualifiers. If he stays fit and performs well fans will surely be treated to another episode of his “dokumentary” on YouTube; previous episodes have included discussing his faith, and taking viewers to Ghana, where his parents were born. His dad was already well-known, though, thanks to a story he told about the time his boy, then in the youth system at Anderlecht, was being shown around Liverpool’s training complex before a possible transfer. His dad told the newspaper Nieuwsblad that, when they were being shown around, the Liverpool staff seemed twitchy because “we were talking about Chelsea quite often. Liverpool were afraid that Jérémy would sign there instead. But we were just talking about our youngest daughter. Her name is Chelsea.”"
     },
     {
       "id": "belgium-lammens",
@@ -156,7 +167,8 @@
       "goals": 0,
       "clubId": "manchester-united",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "“Senne started out as a striker,” his dad, Eddy, told the newspaper Nieuwsblad: “He shot from every angle and scored with ease.” But his son was even better with the ball in his hands. He focused on that, it quickly paid off – and last summer he became the most expensive goalkeeper sold by a Belgian club when Manchester United paid Antwerp £18m for him. He quickly silenced the pundits and United legends who wrote him off without knowing him – yes, you too, Peter Schmeichel. This is his first World Cup, but he won’t be nervous. Like Edwin van der Sar, he’s known as the Ice Rabbit, and keeps a journal of his thoughts to stay calm. “Before and after the game, I just write key words down and my thoughts a little bit,” he says. “Because, sometimes, if you don't do that, it can be a lot going through your mind. It helps me stay calm and stay in the moment, and not overreact. I write key words, trigger points. [It means] you don't have to think a lot during the games, mentally you are already prepared for the game and what it's going to be like. You’re not going to be so surprised. I think that is important.”"
     },
     {
       "id": "belgium-penders",
@@ -169,7 +181,8 @@
       "goals": 0,
       "clubId": "strasbourg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Left-footed, 2m (6ft 6.5in) tall, developed in Genk’s academy and signed by Chelsea – it’s no surprise that Penders is often compared to Thibaut Courtois. It was remarkable, though, that after only one senior league game he was signed by the London club for £17m last year – especially as they already had six goalkeepers. Since then, on loan at Strasbourg, he has worn the No 39 on his back, a tribute to his granddad Nico, his biggest fan. Nico told the newspaper Belang van Limburg last year: “When he started playing as a little boy I was always there, and later at Bregel Sport and Genk as well. I think I only missed maybe 10 of his training sessions in the past 15 years. Even when he was with the first team and the sessions were closed, they would let me in. Something that will always stay with me is that he came to give me a kiss on the sidelines before a match. In a packed stadium, he didn't let any of that bother him. And did you know that even his No 39 is a reference to me? I was born in 1939. He will play with that number at Chelsea as well.”"
     },
     {
       "id": "belgium-lukebakio",
@@ -182,7 +195,8 @@
       "goals": 6,
       "clubId": "benfica",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "“I’m so grateful. After my first goal I was even in tears,” he said after his sublime performance against the US at the end of March. “This means so much to me.” The emotional response was explained by the winger having suffered an ankle fracture, which ruined half of his debut season at Benfica, and left him fearing it would ruin his chances of playing at his first major tournament. But it all worked out and he has now made it to the biggest stage. Now the world will know who Dodi is, although there are still doubts about the origin of his name. According to his mother, it refers to Dodi Fayed, who died in an accident in Paris alongside Princess Diana less than a month before Lukebakio's birth. But according to his father, Dodi stands for Don de Dieu, which is French for gift from God. The last explanation pleases him most, since he’s very religious himself."
     },
     {
       "id": "belgium-meunier",
@@ -195,7 +209,8 @@
       "goals": 10,
       "clubId": "lille",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The NBA legend Karl Malone was called the Mailman because he always delivered, but Meunier was literally working as a postman before he turned pro. Another big career switch soon followed while he settled in at Club Brugge: he began as a left-winger, then moved all the way across the field to become a right-back – and a very good one, too. His natural ability in the position earned him a big move to Paris Saint-Germain in 2016 where he won a string of honours, and then to Dortmund in 2020. Now 34, he said recently he hopes to keep playing until he is 40. But if the end comes sooner than that, he won’t be bored away from the game. Besides having three kids, he also has his businesses in Bastogne, where he grew up, including a rotisserie chicken restaurant, and his love for art. He likes to visit museums and even used to have a picture of Salvador Dalí’s The Persistence of Memory as his phone screensaver."
     },
     {
       "id": "belgium-de-winter",
@@ -208,7 +223,8 @@
       "goals": 0,
       "clubId": "ac-milan",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Belgian fans first heard the name De Winter eight years ago when, without even having made his senior debut at Zulte Waregem, the 16-year-old was signed by Juventus. He became Juve’s youngest starter ever in the Champions League and relished the chance to train with Cristiano Ronaldo and learn from Leonardo Bonucci and Giorgio Chiellini. But in the end he needed loan spells at Empoli and Genoa to gain experience before Juve sold him to Genoa – a decision they may already regret in Turin. Last summer Milan paid over £17m to sign him, and he has since become a key player there. Now we know why his youth coaches used to compare him to an all-time great. “He was a bit like the young Vincent Kompany,” Bert Wets told the newspaper HLN. “He had lots of elegance, flair and fancy tricks.” Those qualities used to mean some costly mistakes, but they are becoming rarer. His first name, Koni, wasn’t his dad’s first choice. “As a child I watched Milan’s Champions League matches on TV and played the Rossoneri on my PlayStation. My dad watched them even before I was born. He liked Seedorf and wanted to name me after him, Clarence.”"
     },
     {
       "id": "belgium-de-ketelaere",
@@ -221,7 +237,8 @@
       "goals": 6,
       "clubId": "atalanta",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "A Flemish tennis champion at the age of 10, De Ketelaere could have followed the path of his idol Roger Federer. Luckily for Belgium fans, he made a different choice. Explaining how he made the decision as a youngster, he told the newspaper Nieuwsblad: “Always getting private lessons from an adult coach or playing with your friends: what do you think a boy of that age likes best?” His personality in tennis was all about aggression, being admonished for swearing and smashing his rackets. In football, he couldn’t be more different, often regarded as perfect son-in-law material. Maybe his laid-back nature was one of the reasons why, despite his talent and three titles with Club Brugge, he didn’t succeed at Milan, where the competition and pressure are huge. In 40 games he didn’t score a single goal. At Atalanta, however, the versatile forward plays a very important role, and has a Europa League winner’s medal to his name already."
     },
     {
       "id": "belgium-seys",
@@ -234,7 +251,8 @@
       "goals": 0,
       "clubId": "club-brugge",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Maxim De Cuyper’s successor at Club Brugge, just with blond curls instead of brown ones. As a young boy Seys enjoyed skating, despite all the cuts and bruises, but he chose to dedicate himself to becoming a footballer instead. Around the age of 15 he lacked strength, but coaches stuck by him, recognising he was a late bloomer – and he grew stronger year by year, eventually earning his first professional deal. And although he’s left-footed, he soon established himself as a fine right-back. You might assume he’s named after the famous actor Joaquin Phoenix, but in fact it comes from Joaquín Cortés, a Spanish flamenco dancer. That was explained by his father, with whom he shares a close bond. They both have the words “sempre con voi” tattooed on their bodies, which is Italian for “always with you”."
     },
     {
       "id": "belgium-moreira",
@@ -247,7 +265,8 @@
       "goals": 0,
       "clubId": "strasbourg",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Moreira comes from pure football stock. His father, Almani Moreira, was a fan favourite at Standard Liège from 2001 to 2006, and his grandfather on his mother’s side, Helmut Graf, also played for them from 1976 to 1982. Born in Liège, he came through the youth ranks at Standard but left at 16 for Benfica, where he was outstanding during their Uefa Youth League winning campaign. He later made his senior debut but refused a new contract and left, passing through Chelsea and Lyon before finding stability at Strasbourg in Ligue 1. Internationally, he represented Portugal at youth level up to the under-21s, before switching to Belgium at senior level. He’s seen as a modern, versatile performer who can play as a winger or drop back to full-back on both sides."
     },
     {
       "id": "belgium-vanaken",
@@ -260,7 +279,8 @@
       "goals": 7,
       "clubId": "club-brugge",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Vanaken likes to collect things. The playmaker already has six Belgian titles (with Club Brugge) and three Golden Boots for best player in the Belgian league, but his collection of football shirts is equally impressive. He has around 350, many of them obtained by swapping with opponents. One is missing, though: Lionel Messi’s international shirt. He’s already got one of the GOAT from when he played against Paris Saint-Germain. “I have to thank our president, Bart Verhaeghe, who went into their dressing room,” he told the broadcaster Sporza. But Messi’s light-blue-and-white Argentina jersey is at the top of his wishlist. Could they meet at this World Cup? One thing he doesn’t like to collect is yellow and red cards, but he does love playing cards with his teammates while travelling for away games. He’ll know what to do during the long flights in the weeks ahead."
     },
     {
       "id": "belgium-castagne",
@@ -273,7 +293,8 @@
       "goals": 2,
       "clubId": "fulham",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Life has never been easy for Castagne. As a child he suffered from exophoria, with his eyes drifting slightly outwards. That condition corrected itself, but after sustaining a head injury in a match for Genk in 2015 he was left with severe double vision and migraines, and needed eye surgery, sidelining him for months. Then came his first major tournament with the national side – Euro 2020 – and another serious collision, in a group-stage win over Russia, which fractured an eye socket and meant more surgery. “On the plane home, all I could do was cry,” he told the newspaper Nieuwsblad – but he still considers himself lucky. Had the impact been slightly higher it could have ended his career. Five years on from that trauma the versatile right-back, who can also do a job on the left, is an established Premier League player. He’s also a real family man. He’s been with Camille, the daughter of his agent, Zénon Melon, for many years; their second daughter was born on Valentine’s Day."
     },
     {
       "id": "belgium-saelemaekers",
@@ -286,7 +307,8 @@
       "goals": 2,
       "clubId": "ac-milan",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Saelemaekers won his first cap in 2020, but was ignored for all major tournaments since then, once because of injury. However, he has fully convinced Rudi Garcia of his worth, and missed only one game during the World Cup qualifiers. That was no surprise because he has just had his best season ever at Milan. A right-winger who can also play as a full-back or wingback, he was virtually an ever-present in Milan’s side, and signed a new five-year deal – quite a turnaround after he was loaned to Bologna and Roma in the two previous seasons. The goalkeeper Asmir Begovic, who was on loan at Milan in 2020 when they first signed Saelemaekers, recently talked about the forward’s self-confidence, telling TalkSport how he may have got ahead of himself a bit during his early days in Italy: “The first few days after he arrived he was quiet, but two weeks later he came to the club in his new Porsche. The first thing Zlatan Ibrahimović did was to take his keys. He told him: ‘Listen, you’re taking this car back to the garage. If not, I’ll do it myself.’”"
     },
     {
       "id": "belgium-raskin",
@@ -299,7 +321,8 @@
       "goals": 2,
       "clubId": "rangers",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "When Rudi Garcia became Belgium’s head coach, he pulled a rabbit – or should we say a Raskin – out of the hat. The then 24-year-old Rangers player had never been called up, but out of nowhere he immediately became a mainstay in the midfield – just as his former manager Hein Vanhaezebrouck had predicted in his column for the newspaper Nieuwsblad six years earlier. “One day,” Vanhaezebrouck wrote, “he’ll be an undisputed starter for the national team.” Despite being about 15cm shorter than Amadou Onana, Raskin has still scored five headers in the last two seasons and compensates for his lack of height with tons of energy and quick feet. He’s always been a little pitbull, nicknamed the Raskinator at Standard Liège, but it was Philippe Clement who helped him improve tactically. “Nico was a fireman,\" he told the newspaper HLN. \"He often went to put out fires elsewhere, which caused problems in his own zone. Now he no longer does that.”"
     },
     {
       "id": "belgium-onana",
@@ -312,7 +335,8 @@
       "goals": 1,
       "clubId": "aston-villa",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Onana could have won the Africa Cup of Nations final this year, since he was born in Senegal and moved to Brussels only at the age of 11. But he has always played for Belgium, where he is known as a stylish player, including off the pitch. He once reported for international duty wearing a men’s skirt. “Fashion is a realm where I find expression and creativity,” he says. “I enjoy experimenting with different looks and have even dabbled in designing my own pieces. Fashion, much like football, is a way for me to connect with people and share a part of myself with the world.” On the pitch, he is the Marouane Fellaini of his generation, not only because he played for Everton, but also because he’s a real powerhouse. And the best is yet to come. “One day, I’ll play for one of the five biggest clubs in the world,” he told the newspaper La Dernière Heure. Who would have thought? Not the people at Anderlecht or Zulte Waregem, where his talent was overlooked. It was thanks to his sister and agent, Melissa, that he got noticed. She bought a video camera to film her brother at training, and sent the footage to numerous European clubs."
     },
     {
       "id": "belgium-ngoy",
@@ -325,7 +349,8 @@
       "goals": 0,
       "clubId": "lille",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Ngoy started out as a striker in Anderlecht’s youth academy, where scoring goals came naturally. And that instinct is still there. At the end of February, he enjoyed a dream week. In the Europa League, the Belgian with Congolese roots came off the bench in extra time against Red Star Belgrade and scored the winner to send Lille through. Just days later, he struck again, netting a 94th-minute decider against Nantes after an assist from Thomas Meunier. His conversion into a defender happened at the academy, when coaches realised his pace and technique would work well at the back. At 16 he left for Anderlecht's rivals Standard Liège and went on to make his professional debut in 2021, scoring his first goal as a professional in a 3-2 comeback win against … Anderlecht. Now at Lille, whom he joined last year, he has quickly become a key player. He can also play at full-back when needed."
     },
     {
       "id": "belgium-fernandez-pardo",
@@ -338,7 +363,8 @@
       "goals": 0,
       "clubId": "lille",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "“My heart lies with Spain. Am I sure about who I want to play for? Yes, Spain. Absolutely sure.” Those were the words of Fernandez-Pardo in the Spanish newspaper Marca in 2024. Yet he has now emerged as a surprise inclusion in Belgium’s World Cup squad, with Rudi Garcia favouring him over Loïs Openda, who had too little playing time. Fernandez-Pardo grew up in Belgium, with a Spanish father and an Italian mother – meaning Italy were also an option for his international future. At 15, he left Lille for Gent. “He played like Eden Hazard, but without end product,” said his former coach Hein Vanhaezebrouck. “I showed him clips of Real Madrid, where Vinícius Júnior often drifts from striker to the left wing to become playable. Matias picked that up and became unstoppable that way.” Lille paid €10m last summer to bring him back to northern France. He initially featured on the wing but since March has been used centrally. With five goals and three assists, the lightning-fast striker has pushed Olivier Giroud out of the starting XI."
     }
   ]
 }

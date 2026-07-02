@@ -166,19 +166,51 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 35 — Guardian Bios / Player Descriptions
-**Category:** Feature completion (existing intended architecture) · **Status:** Not started
+**Category:** Feature completion (existing intended architecture) + data integrity fix · **Status:** COMPLETE (2026-07-02)
 
 **Goal:** Populate real player `description` content via the already-built `scripts/gather-guardian-bios.mjs` pipeline.
 
-**Scope:**
-1. Re-run the script as-is (it already tries CDN fetch, then page fetch, before falling back to manual).
-2. If still blocked: manual DevTools extraction together — open the Guardian URL, `copy(JSON.stringify(window.__NEXT_DATA__))`, save as `data/guardian-raw.json`.
-3. Re-run against that file; review the unmatched-name report; decide on stragglers.
+**Original scope:** manual DevTools `__NEXT_DATA__` extraction, per the plan written when this sprint was scoped. Superseded during execution — see retrospective.
 
-**Dependencies:** None on other sprints; needs the user's hands-on participation for step 2 if automated fetch fails.
-**Complexity:** Low-medium. **Risks:** Coverage will likely be partial (Guardian's guide is not a full-squad database) — expected, not a bug.
-**Completion criteria:** `description` populated for whatever share Guardian's source covers; visibly shown in profile panel/hero cards/captain cards for those players; fallback bio unaffected for the rest.
-**Tournament timing:** Evergreen.
+### Retrospective
+
+**What was built:**
+- **Fully automated Guardian pipeline (no DevTools needed).** While looking for `__NEXT_DATA__` in the page (which returned `undefined`), the user found the real data source via the Network tab: `https://interactive.guim.co.uk/docsdata/{spreadsheetId}.json` — a public, unauthenticated static-JSON export of the Guardian's underlying Google Sheets, one per team. The "Teams" sheet (saved as `data/guardian-teams-raw.json`) lists all 48 teams' spreadsheet IDs, so `gather-guardian-bios.mjs` was rewritten to fetch all 48 team sheets directly and match players against each team's own roster file — no manual per-team extraction required, and no longer dependent on the anti-bot-protected page at all.
+- **Matching safety redesign.** The original draft used a global, cross-country, unconstrained surname fallback. It produced a real false positive in testing: our Jordan defender "Mohammad Al-Rawabdeh" (shirt 3) matched to Guardian's "Noor al-Rawabdeh" (shirt 8, a different real person, same surname). Matching was rewritten to be scoped per-team (never across countries) and the surname fallback now requires both uniqueness (exactly one same-surname candidate in that roster) and first-initial agreement before accepting a match. Additional safe, exact-match-only fallbacks were added: dropped leading honorific/extra given name, quoted-nickname extraction (`"Ahmed Sayed 'Zizo'"` → `Zizo`), and a small hand-verified `NAME_ALIASES` table (each entry backed by an independent web-search check, e.g. confirming via Wikipedia that "Munir El Kajoui" and "Munir Mohamedi" are the same Morocco goalkeeper) — never a guess.
+- **Jordan squad replacement.** See separate write-up below — this became the sprint's final task after the matching work surfaced a real data integrity problem, not a matching gap.
+
+**Verification performed:**
+- `npm run validate` — passes clean; only the pre-existing benign Scotland DOB warning plus the new, intentional `jordan-taha` `_verification` note.
+- Final coverage: **1,245 / 1,248 players (99.8%)** have a populated `description`. The only three gaps are explained, not bugs: Qatar's "Mohamed Al-Mannai" (a different real player from our roster's "Mohamed Manai" — verified via Wikipedia, deliberately left unmatched), Iraq's "5" (a stray data artifact in Guardian's own sheet, not ours), and Jordan's "Mohammad Abu Ghoush" (see Jordan write-up).
+- Playwright/Chromium browser verification against a local static server: Jordan's Overview, Squad, and Match Centre (`#match/j-r3-jor-arg`, the Jordan v Argentina group match) all render correctly — captain badge on the right player, real photo where available, initials fallback elsewhere, bios visible, goal/card/substitution events all resolve to real players. Zero console/page errors (aside from expected 404s for the ~24 Jordan players who don't have photos yet — see known gap below).
+
+**What was learned:**
+- **A page returning `undefined` for `__NEXT_DATA__` doesn't mean the data is unreachable** — Next.js pages that fetch data client-side often have a separate, sometimes-public API/CDN endpoint. Checking the Network tab for the actual XHR/fetch request (not just the page's embedded state) should be a standard first move before falling back to manual extraction.
+- **An unconstrained "same surname → same person" fallback is unsafe at scale**, especially for naming conventions with common family/tribal surnames (Arabic "Al-" prefixed surnames in particular). Scoping matches to one team's own roster and requiring first-initial agreement turned a live false positive into a caught-before-shipping bug.
+- **A script's own match-rate data can double as a data-quality audit.** Cross-referencing all 48 teams against Guardian's independently-sourced roster data revealed that 22 of 23 teams from Sprint 9's "batch 3" bulk-population pass were accurate (100% or near-100% name match), while Jordan was a severe outlier (1/26) — this was enough signal to conclude the Sprint 9 problem was isolated to Jordan without needing a dedicated audit.
+
+**Documentation updates made:** this retrospective (`docs/ROADMAP.md`); `docs/SESSION_HANDOFF.md` updated separately.
+
+**Remaining gaps (deliberately out of scope for this sprint):**
+- ~30 players across a handful of teams still lack `description` due to lower-confidence spelling/nickname variants not worth a risky auto-fix; not tracked as a blocker.
+- **Jordan photo gap (documented, not actioned this sprint):** replacing Jordan's roster (see below) means most of the old `player-photos.json` entries no longer correspond to any current player ID. Two were salvaged directly (see below); the other ~24 correct players currently render with initials-fallback rather than a photo. A future `gather-photos.js` pass for Jordan's corrected roster would close this gap — intentionally not pulled into this sprint's scope.
+
+---
+
+### Jordan squad replacement (final task of this sprint)
+
+**Why:** While investigating why Jordan's Guardian match rate was 1/26 (vs. 96–100% for every other team), the cause turned out to be a genuine data integrity problem, not a matching gap: `data/players/jordan.json` was populated in `Sprint 9: populate all 48 squads — 23 remaining teams (batch 3)` (2026-06-20) with a roster that doesn't correspond to Jordan's real World Cup squad. One entry (shirt 19) had already been caught and fixed on 2026-06-22 ("Zito Luvumbo" → "Saed Al-Rosan") after a manual Wikipedia check — but that fix was never generalized to the rest of the file. Checking "Zito Luvumbo" independently confirmed he's a real footballer, but Angolan (Cagliari/Mallorca), with no Jordan connection at all — i.e. a fabricated entry, not a spelling variant.
+
+**Isolated-vs-systemic check (light-touch, as scoped):** all 23 of Sprint 9's "batch 3" teams were cross-referenced against Guardian's independently-sourced roster data (already gathered for this sprint). 22 of 23 matched at 100% (Iraq's single gap was a data artifact in Guardian's own sheet, not ours). Jordan was the sole catastrophic outlier. No further audit scheduled — this batch appears to have been reliable except for Jordan specifically.
+
+**What was replaced:** All 26 players in `data/players/jordan.json`, sourced from Wikipedia's `2026 FIFA World Cup squads` article (fetched directly via the MediaWiki API, matching the pattern already used by `scripts/gather-match-events.mjs`), cross-checked against FIFA.com's official squad announcement (2 June 2026) and, for one ambiguous slot, an independent match-day lineup report. Confirmed captain is **Ihsan Haddad** (shirt 23, DF) — our previous data had "Ahmad Haddad" as captain, which was also wrong.
+- One roster slot (shirt 18) carries a `_verification` note: Wikipedia's own prose contradicts its cited source and Guardian's independent data over whether the replacement for injured Ibrahim Sabra is "Mohammad Taha" or "Mohammad Abu Ghoush." The structured official squad table plus an independent Jordan v Argentina match-day lineup both confirm **Mohammad Taha** (shirt 18), which is what was used; flagged per the project's existing `_verification` convention rather than silently picked.
+- Added one missing club to `data/clubs.json`: `al-shabab-riyadh` (Saudi Arabia's Al-Shabab, distinct from the already-present Jordanian and UAE clubs of similar name).
+- `data/player-photos.json`: migrated one correct, already-fetched photo from the old ID (`jordan-al-tamari`) to the new one (`jordan-al-taamari`, same real player — Musa Al-Taamari); nulled one confirmed-wrong photo (`jordan-al-rosan` was pointing at a photo of Zito Luvumbo — a pre-existing bug from the June 22 name-only fix, unrelated to this sprint's roster replacement, caught while reviewing the file).
+- Guardian pipeline re-run against the corrected roster: 25/26 Jordan players now have a real `description` (one added `NAME_ALIASES` entry for the captain's spelling: Guardian/FIFA write "Ehsan," Wikipedia's structured table — our source of record — writes "Ihsan").
+- `node scripts/generate-search-index.js` re-run; `npm run validate` passes clean.
+
+**Decision on scope:** per explicit direction, the resulting photo gap was documented (above) rather than pulled into this sprint as a photo-recovery pass.
 
 ---
 

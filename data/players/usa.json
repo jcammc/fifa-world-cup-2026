@@ -13,7 +13,8 @@
       "goals": 0,
       "clubId": "new-england-revolution",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The stories you hear about Turner’s high school soccer career feel like borderline mythology. Teammates will tell you he saved 30, or sometimes 40 shots a game, insane statistics that are, shockingly enough, backed up by newspaper reports from the time. Turner only started playing the sport when he was 14, and he was a late bloomer to the national team as well, first joining it in 2021; a year later, he’d start all four of the USA’s matches at the 2022 World Cup and for a while he appeared to be the closest thing the US had to a lock starter in goal. He’s recently been supplanted, and his career abroad also did not quite pan out, with Turner returning to the New England Revolution ahead of the 2026 season. Regardless, Turner’s career arc remains remarkable given his origin story."
     },
     {
       "id": "usa-dest",
@@ -26,7 +27,8 @@
       "goals": 3,
       "clubId": "psv-eindhoven",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Dest has always done things a little differently. He became the first American player ever to appear for Barcelona, playing alongside Lionel Messi. When the Argentinian legend announced he’d be leaving the club, most of his teammates showed up in a suit and tie. Dest showed up in a Chicago Bulls jersey and shorts, owing to the fact that he’d forgotten to set an alarm. Dutch by birth, Dest idolized the Brazil legend Ronaldinho as a child and it shows in his play; he possesses flair and style that are not often seen in American players and particularly not defenders. Dest’s passion occasionally gets the best of him, as it did a few years ago in Concacaf Nations League play, when he was sent off for yelling not only at the ref, but also his own teammates."
     },
     {
       "id": "usa-richards",
@@ -39,7 +41,8 @@
       "goals": 3,
       "clubId": "crystal-palace",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The reigning USMNT player of the year. Hailing from Hoover, Alabama, Richards chose soccer over basketball after his under-16s team visited Argentina. Was cut from his first trial with FC Dallas’s academy before the MLS side extended an offer one year later. Something of a late bloomer, having signed his first pro contract with Bayern Munich just before turning 19. A loan with Hoffenheim set him on the path that sees him regularly start for Crystal Palace. Quickly emerging as a vocal leader for club and country alike; he was the only one to play all 540 minutes of Palace’s triumphant FA Cup run in 2025. Already the 10th-most appearances among USA outfield players in Premier League history. His leg bears a tattoo of a cartoon he drew at age three of himself playing soccer. If only we all could have such career clarity so soon …"
     },
     {
       "id": "usa-adams",
@@ -52,7 +55,8 @@
       "goals": 2,
       "clubId": "bournemouth",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "So important to the USA midfield that the fanbase’s morale plummets with each of his unfortunate injuries. Was the ballboy who supplied Thierry Henry with the ball for his famous 2012 Olimpico for New York Red Bulls against Columbus Crew. Shoehorned into the Red Bulls lineup as a right-back before turning 17, he is now an established Premier League anchor. Studied Philipp Lahm, Pep Guardiola and Joshua Kimmich to refine his approach to defensive midfield work. The Scottish side of his family backs Rangers, and one uncle trained his dog to growl when they say “Celtic”. Every coach he has had says Adams is built for the big occasions; keeping him available is at the top of the physio department’s priorities."
     },
     {
       "id": "usa-robinson",
@@ -65,7 +69,8 @@
       "goals": 5,
       "clubId": "fulham",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The greatest American player to hail from Milton Keynes; a naturalized citizen as his father had moved to New York at age nine. Already a starter for this team in 2022, arguably saw his career peak soon after winning Fulham's player of the season award in 2023-24. Injuries plagued him throughout 2025-26, minimizing his impact before the season’s business end. Can execute an impressive strutting celebration on the rare occasions that he scores. Proudly nicknamed Jedi in honor of his obsession with Star Wars as a five-year-old. “I introduce myself as Jedi these days just to make it easier,” Robinson told Wigan's website upon joining in 2018. “There’s quite a bit of force in it.” Has not publicly stated his views on Disney’s sequel trilogy. Also a budding illusionist who won’t shy away from learning a card trick."
     },
     {
       "id": "usa-trusty",
@@ -78,7 +83,8 @@
       "goals": 0,
       "clubId": "celtic",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Trusty grew up in Media, Pennsylvania, surrounded by a friend group in which he was the only one who cared seriously about soccer. His connection to the game, then, came via family: Trusty’s sister, Onnie Nicholson, played with the USA women’s team at youth level alongside future stars such as Alyssa Neher, Kelley O’Hara and Tobin Heath. His journey, he says, has been almost single-mindedly geared towards being in the picture for the 2026 World Cup. After coming through the vaunted local Philadelphia Union youth academy, Trusty moved to Colorado before being a surprise sale to Arsenal. His stock really began to rise after establishing himself in the Premier League with Sheffield United, and then in Scotland with Celtic. At each stop, Trusty has remained, well, trusty, eventually finding a consistent, durable place along the backline."
     },
     {
       "id": "usa-reyna",
@@ -91,7 +97,8 @@
       "goals": 9,
       "clubId": "gladbach",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Reyna is descended from soccer royalty, as the son of the former USMNT captain and World Cup veteran Claudio Reyna. Reyna Jr has sometimes struggled to escape that shadow, though it has nothing to do with his play on the field. During the 2022 World Cup, Reyna’s absence from the USA lineup was attributed to a “lack of commitment” by the then coach, Gregg Berhalter, and less than a year later it was revealed that his mother had privately informed US Soccer during the tournament about damaging information regarding Berhalter’s past. The entire series of events has hung over Reyna’s national-team career, and poor form and fitness at Mönchengladbach haven’t helped his case recently. A hugely talented player, he remains as polarizing as ever."
     },
     {
       "id": "usa-mckennie",
@@ -104,7 +111,8 @@
       "goals": 12,
       "clubId": "juventus",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "McKennie is among the most talented players the USA has ever produced, and he is also among the most doubted. Formed in the youth system of FC Dallas and at the now-defunct US Soccer youth residency program in Bradenton, Florida, McKennie moved abroad to the Bundesliga before becoming the first American to appear for Italian giants Juventus in 2020. McKennie has at times struggled to be appropriately recognized at that club, and a disastrous loan spell to Leeds in 2023 didn’t help his case much. Even as a consistent contributor, the 27-year-old was frequently the subject of transfer rumors, or talked about as being dropped from the club’s plans. All of this despite the fact that very few on Juventus’s current roster have performed as consistently well as McKennie has over the past two years. At this point, the kid who grew up in Little Elm, Texas is among the club’s top 10 Champions League goalscorers. His recent form seems to have finally convinced someone that McKennie is among the world’s top midfielders – in March of this year, Juventus signed him through 2030."
     },
     {
       "id": "usa-pepi",
@@ -117,7 +125,8 @@
       "goals": 13,
       "clubId": "psv-eindhoven",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Among the last and more agonizing cuts from the 2022 World Cup roster, Pepi has done plenty to prove he deserves his spot in the USA team in the four years since Qatar. He has scored 10 of his 13 international goals in that span at the time of writing, and went from riding the bench at Augsburg to being a key part of a PSV side that have won three consecutive Dutch league titles. Born on the US-Mexico border, Pepi’s breakthrough came with FC Dallas after turning heads due to his impressive scoring rate at youth level. The rate was so impressive that fans began talking about the Ricardo Pepi hype train – lending him a nickname, El Tren, that sticks among some USA fans to this day."
     },
     {
       "id": "usa-pulisic",
@@ -130,7 +139,8 @@
       "goals": 33,
       "clubId": "ac-milan",
       "captain": true,
-      "bio": ""
+      "bio": "",
+      "description": "This generation of USA players has more than ever playing at elite clubs in Europe, but none of them are as important to the team’s success as Pulisic. When he is on form, “the kid from Hershey, Pennsylvania” is more capable than anyone in the team of finding a way through defences, and finding small windows in which to take shots and, ideally, score goals. In 2025, he said “his body had started talking to him” and he opted out of the Gold Cup squad, a decision he was criticised for by certain former players, such as Landon Donovan and Tim Howard. “When it comes to those guys, it is tough because I looked up to those guys growing up,” he said to CBS about his critics. “Some of these guys were my idols, and I respect them so much as players. Privately, the way they talk to me and clearly want to show support and be your friend and everything, and then they say something slightly different publicly. Does it hurt me? Am I surprised by it? I don’t know. Not really.” Though he’s surrounded by a more than capable USA roster, the pressure on Pulisic to perform at this World Cup is immense. He is the face of the program, even if he himself is more of an introvert."
     },
     {
       "id": "usa-aaronson",
@@ -143,7 +153,8 @@
       "goals": 9,
       "clubId": "leeds-united",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Long before Aaronson made his debut at Elland Road, the former Philadelphia Union midfielder was honing his skills in a Medford, New Jersey basement. His father, Rusty, was a former professional and he had set up the lower level of his house as a mini pitch of sorts, one where Aaronson, along with his brother, Paxten, could hone their skills. The work paid off, with both having played in Europe. A product of the Union’s academy, Aaronson’s 2020 transfer to RB Salzburg set what was at the time a record fee for an MLS homegrown player. By the time he joined Leeds years later, his value had only risen, and he proved a key piece for them in their recent relegation battle. Not bad for a kid his teammates once called the “Medford Messi”."
     },
     {
       "id": "usa-miles-robinson",
@@ -156,7 +167,8 @@
       "goals": 3,
       "clubId": "fc-cincinnati",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "At age nine, Robinson stood 1.75m and wore a size 13 shoe. Those are typically the characteristics of an up-and-coming basketball player, and indeed that was the sport where Robinson first impressed. Once he switched to soccer, though, he excelled – despite his first coach recalling that he was “looking like Bambi” out on the pitch. Robinson developed at Syracuse University, and broke through as a professional at Atlanta United, where his physical profile combined with impressive one-v-one defending ability and an advanced reading of the game to become one of the league’s best center-backs straight away. He was near-certain to play a big role for the USA at the 2022 World Cup, but a ruptured achilles months before the tournament ruled him out. A devastating injury, to be sure, but Robinson didn’t let the heartbreak keep him from watching with friends and family. “I was outside watching that shit,” he told Goal.com."
     },
     {
       "id": "usa-ream",
@@ -169,7 +181,8 @@
       "goals": 1,
       "clubId": "charlotte-fc",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Ream probably never imagined 20 years ago that he would become the USMNT’s elder statesman. At the time, he was driving a beat-up Pontiac Grand Am five hours from St Louis to Chicago to play developmental soccer. Now, Ream isn’t just the elder statesman, he’s in line to become the oldest player in the history of the men’s national team to appear in a World Cup. He has unquestionably lost a step or two, but his experience and calming presence are badly needed on a USA backline that’s still very young and occasionally error-prone. Ream doesn’t chalk his longevity up to any given workout routine, instead citing the smaller things: walking his dogs, fishing and even zoning out while playing with Lego. “Grandpa,” as his USMNT teammates sometimes call him, has no plans to retire anytime soon, having said he feels he could play another two or three years. Hopefully the USA can find a replacement by 2030."
     },
     {
       "id": "usa-berhalter",
@@ -182,7 +195,8 @@
       "goals": 1,
       "clubId": "vancouver-whitecaps",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Perhaps not the Berhalter many fans expected to be involved when the 2026 World Cup cycle kicked off. Earned his USA debut under Mauricio Pochettino, going entirely uninvolved during his father’s six-year stretch as USMNT coach. Credits the ability to train with his dad during the Covid lockdown as unlocking more of his athleticism and potential. Briefly considered hanging up his boots after Austin FC declined a purchase option after his 2021 loan but Vancouver provided the launchpad he needed. One of MLS’s breakout stars in 2025, making the year-end best XI after joining forces with Thomas Müller to reach the club’s first MLS Cup final. His mother, Rosalind, was a two-time national champion on the University of North Carolina’s vaunted soccer team."
     },
     {
       "id": "usa-roldan",
@@ -195,7 +209,8 @@
       "goals": 0,
       "clubId": "seattle-sounders",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Roldan was still many years away from being a professional when he had his first brush with fame. The Seattle Sounders stalwart was just nine when he starred in a classic Adidas commercial, playing a young soccer player who spent the day gathering plastic bags, which he then made into a ball to juggle in a dirt plot beside a highway. That nine-year-old has gone on to make more than 400 appearances for the Sounders, standing as one of the most respected players in MLS. A quintessential “locker room guy”, Roldan has built his career on doing the dirty work that makes his teammates better, but he’s not immune to stepping up with a big goal when needed."
     },
     {
       "id": "usa-freeman",
@@ -208,7 +223,8 @@
       "goals": 2,
       "clubId": "villarreal",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Freeman had played just 10 minutes of first-division soccer before 2025 and is now heading to a World Cup. The son of the former NFL legend Antonio Freeman, the Florida native serves as an example of Mauricio Pochettino’s proclivity towards youth and his willingness to offer opportunities to sometimes unheralded players. The defender has done well with those chances, having played a large part in the USMNT’s run to the Gold Cup finals last summer and even bagging a brace against Uruguay later in the year. A move to Villarreal in Spain's La Liga only solidified his place in Pochettino’s squad. \"It's been a year since I really got on to the scene, and now, one year later, I'm in Spain,\" he told Goal.com. \"It's hard to comprehend that aspect of it. You always have time to think as a pro footballer. You have training in the morning or in the afternoon and a decent amount of free time. You have time to think, but not really time to comprehend. It's hard to take it fully in.\""
     },
     {
       "id": "usa-tillman",
@@ -221,7 +237,8 @@
       "goals": 3,
       "clubId": "bayer-leverkusen",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "The latest in a long line of German-American dual-nationals to turn out for the USA team, Tillman’s place was far from a sure thing in 2022, when he filed a one-time switch from the country where he grew up. \"It took me a lot of time to make the decision, but in the end I listened to what my heart told me, and, yeah, I hope it's the right decision,” he said. “I hope I like it,\" said Tillman. \"I'm happy to be here.\" His place in the squad has solidified considerably in the last year, especially with a strong run of games over the summer of 2025, including the Concacaf Gold Cup. Quiet and reserved off the field, Tillman’s creative instincts on the pitch are renowned enough that Bayer Leverkusen brought him in to be Florian Wirtz’s replacement after he moved to Liverpool."
     },
     {
       "id": "usa-arfsten",
@@ -234,7 +251,8 @@
       "goals": 1,
       "clubId": "columbus-crew",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Arfsten started 2025 out with an invitation to “camp cupcake”, the January camp the USMNT uses to examine its fringe players and has-beens, guys who rarely go on to become regulars. Sixteen caps later and Arfsten has established himself as one of Mauricio Pochettino’s most consistent contributors. The California-born wing-back is an ideal fit in Pochettino’s system, especially given his lack of left-sided options. Arfsten followed a pretty standard MLS developmental path and in 2023 became the first player in league history drafted out of MLS Next Pro. His form in Columbus – 10 goals and seven assists across all competitions in 2025, outstanding numbers for a largely defensive player – earned him interest from abroad. Making any kind of splash at a home World Cup would likely make those approaches even more concrete."
     },
     {
       "id": "usa-wright",
@@ -247,7 +265,8 @@
       "goals": 7,
       "clubId": "coventry-city",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Against all odds, this World Cup will include a former New York Cosmo. Born some 58 years after Pelé, Wright began his professional career in 2015 with three appearances on a squad that included the Spain legends Raúl and Marcos Senna, but the second-division club opted not to renew his deal after one season. Wright didn’t stick with Schalke, VVV-Venlo or Sønderjyske, but a loan to Antalyaspor provided him with the finishing chops that endeared him to Frank Lampard at Coventry. One of three squad members with a World Cup goal. More dynamic than most who match his considerable stature, Wright idolized Ronaldinho and Thierry Henry as a kid and punishes defenses by cutting inwards from the left flank with similar glee."
     },
     {
       "id": "usa-balogun",
@@ -260,7 +279,8 @@
       "goals": 9,
       "clubId": "monaco",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Give the assist for this roster selection to the US commercial airline industry. Balogun was still in utero when his mother visited New York on vacation, but the return trip never happened as the airline refused to let her board the plane due to the size of her belly and how close she was to giving birth. As it happened, Balogun was born in Brooklyn and was off to London months later, where he fell in love with football and came up through the Arsenal academy. Now one of the most promising strikers in Europe, “Flo” is expected to lead the line for the USA, using his speed, tactical awareness, and deft finishing touch to give his birth country something to cheer about."
     },
     {
       "id": "usa-weah",
@@ -273,7 +293,8 @@
       "goals": 7,
       "clubId": "marseille",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "His father may be a legend of African soccer and Liberia’s former president, but it was Tim who opened the family’s World Cup goalscoring account in 2022. A nimble dribbler who can capably cross from the right and shoot off-center, Weah is an ideal foil opposite Christian Pulisic for the US. Weah writes and performs trap soul music on the side, having built a studio in his house while with Lille. Admitted that Juventus tested his confidence, as their rotating cast of coaches shuffled him both throughout the right wing and in and out of their teamsheets. More settled with Marseille, after getting a 4am call from Roberto De Zerbi as part of the French club’s recruitment. More fashionable than most of us can dream to be."
     },
     {
       "id": "usa-mckenzie",
@@ -286,7 +307,8 @@
       "goals": 0,
       "clubId": "toulouse",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "While most of his boyhood friends spent Saturday morning watching cartoons, McKenzie and his father fixated on Milan. The left-footed, ball-playing defender from the Philadelphia Union academy quickly became a standout MLS center-back before turning 22. His form oscillated greatly at Genk, but Ligue 1 has seen him go from strength to strength, logging full-90 shifts with regularity. Upon signing with Toulouse, the McDonald’s French menu offered a sandwich named in his honor. (“It was a promo thing, to be honest. [Ligue 1] is sponsored by McDonald’s. I’m American.”) One of the final and harshest cuts from the 2022 squad. Regularly speaks up in support of Black representation in the sport. Has recently picked up a photography hobby – film, since the fleeting nature of digital snaps lets one “lose the meaning behind taking the photo itself”."
     },
     {
       "id": "usa-scally",
@@ -299,7 +321,8 @@
       "goals": 0,
       "clubId": "gladbach",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Despite being only 23, Scally is one of the most experienced members of the USMNT, a stalwart in the Bundesliga with 24 caps to his name at the time of writing. Still, he was out of the picture for most of 2025 after a bad performance at the Concacaf Nations League that drew some pointed comments from Mauricio Pochettino. A right-back who is comfortable playing on the opposite flank or as a right center-back in a three-man backline, Scally hails from Long Island, New York and came up through the New York City FC academy. As befitting his origins, he has been known to request his mom bring bagels with her from home when visiting – unfortunately, they often end up stale by the time they arrive."
     },
     {
       "id": "usa-freese",
@@ -312,7 +335,8 @@
       "goals": 0,
       "clubId": "nyc-fc",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "For three decades, the USMNT was known for producing elite goalkeepers, and names such as Tim Howard, Brad Friedel and Kasey Keller were anchors for the team who kept the USA competitive even when badly outmatched. The current state of the USA goalkeeper pool is the subject of much debate amongst fans and the rise of Freese – an MLS keeper who got his first international start only last summer – is fueling that dialogue. The relatively unheralded Harvard graduate has gone on to start nearly every game since for Mauricio Pochettino and seems a lock to be first-choice at the tournament. A solid showing for the USA this summer and a move to Europe afterwards would go a long way."
     },
     {
       "id": "usa-brady",
@@ -325,7 +349,8 @@
       "goals": 0,
       "clubId": "chicago-fire",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "Brady took over as the starter for his club team after his much-hyped fellow Chicago Fire academy graduate Gabriel Slonina left for Chelsea, and has been a far better performer than his predecessor. He was named MLS defender of the year in 2023 – fitting, as the lack of quality ahead of him kept Brady awfully busy. The former USA coach Gregg Berhalter is now in charge in Chicago, and his staff have helped improve Brady's approach to distribution, especially short-range recirculation, while his goal prevention is at career-best levels in 2026 to date. Brady is seemingly contending with USA training camp invitee Diego Kochen to be the program’s future at the position."
     },
     {
       "id": "usa-zendejas",
@@ -338,7 +363,8 @@
       "goals": 2,
       "clubId": "america",
       "captain": false,
-      "bio": ""
+      "bio": "",
+      "description": "In a country with plenty of Mexican-American dual-nationals, Zendejas is one of a very small group to have played for both teams. A drawn-out, technical drama regarding his eligibility played out over months, eventually ending with his commitment to the USA. Under Mauricio Pochettino, Zendejas has found a role off the bench as a speedy, creative attacker. In a rarity for a USA international, Zendejas is also a key attacking player in Liga MX, captaining giants Club América and donning the No 10 shirt. Was left out of the March squad by Pochettino but did enough in the last months of the season to make the World Cup cut."
     }
   ]
 }
