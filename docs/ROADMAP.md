@@ -141,6 +141,28 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 **Completion criteria (per pass):** `npm run validate` passes; just-completed round's data reflects real results; gaps logged, not dropped. **Final:** zero known gaps across the full 2026 tournament.
 **Tournament timing:** Live now through the Final, then converts to an archival pass.
 
+### Pass 1 retrospective (2026-07-02)
+
+**What changed:**
+- `npm run sync-data` (using `FOOTBALL_DATA_API_KEY` from a local, gitignored `.env` — never committed): `fixtures.json`/`standings.json` had no changes (group stage already 72/72 FT). `knockout.json` got 10 R32 matches updated from `scheduled`/`live` to `FT` with real scores: South Africa 0–1 Canada, Germany 4–5 Paraguay, Netherlands 3–4 Morocco, Brazil 2–1 Japan, France 3–0 Sweden, Ivory Coast 1–2 Norway, Mexico 2–0 Ecuador, England 2–1 DR Congo, USA 2–0 Bosnia-Herzegovina, Belgium 3–2 Senegal.
+- `scripts/update-knockout.js --force` (run once per newly-FT R32 match, after a dry-run pass confirmed each propagation target): propagated all 10 winners into their correct Round of 16 slots. Verified post-hoc against a pre-propagation backup of `knockout.json` — exactly 5 R16 match objects changed (r16-m1: Paraguay/France, r16-m2: Canada/Morocco, r16-m3: Brazil/Norway, r16-m4: Mexico/England, r16-m6: USA/Belgium), zero unexpected changes anywhere else in the bracket (QF/SF/Final and the 6 still-unplayed R32 matches untouched).
+- `npm run gather-match-events`: match-events.json stayed at 84 entries (no new fixtures, just richer data on existing ones) — 6 of the newly-FT R32 matches (m5, m6, m7, m8, m9, m10) went from placeholder/partial to full events + MOTM + lineups (11v11 each). The other 4 newly-FT matches (m1-m4) already had this from a prior pass. Group D's known incomplete-template gap (4 fixtures) is unchanged — still blocked on the same Wikipedia template issue, not a transient rate-limit this time.
+- `npm run gather-head-to-head`: `matchStory` coverage rose from 71/88 to 81/88 (the 10 newly-FT R32 matches migrated from `headToHead`). `headToHead` (upcoming-only) dropped from 16/88 to 6/88 correspondingly. `headToHeadStats` unchanged at 0/88 (Sprint 36's scope). Group K remains rate-limited (`✗ Wikipedia gave up after 3 retries`) — logged, not chased, per this pass's scope.
+- `npm run validate` — passes clean throughout, no new warnings.
+
+**Browser verification (Playwright/Chromium against a local static server):**
+- **Completed match** (`r32-m7`, Mexico 2–0 Ecuador, newly fully populated this pass): header score, MOTM, and full events timeline all render correctly.
+- **Upcoming match** (`r32-m11`, Portugal v Croatia, not yet played): correctly takes the upcoming-match branch — "World Cup History" section with collapsed history notes, previous-lineup SVG pitches for both teams, broadcaster badge.
+- **Newly-propagated R16 fixture** (`r16-m4`, Mexico v England): displays the real team names and flags (not TBD placeholders), correct venue/date, previous starting XI pitch graphics — confirms the propagation is not just correct in the data file but actually renders end-to-end.
+- **Knockout bracket page** (`#knockout`): snapshot correctly shows 82 played / 22 remaining; R32 column shows real scores; R16 column shows Paraguay/France with green "confirmed" checkmarks; right-rail correctly moved the 6 still-unplayed R32 matches into "Today"/"Coming Up".
+- Zero console/page errors across all four navigations.
+
+**Newly discovered issue (out of scope for this pass, logged for later):** the knockout bracket page's Round of 32 column header shows a date range of "NaN Jun–NaN Jul" — a date-parsing bug in `#roundDateRange()` (`js/modules/knockout-bracket.js`), unrelated to this pass's data work. Not fixed here per the agreed scope (data maintenance only); worth a small follow-up fix, possibly folded into the standing Match Centre UX sprint note above if that sprint gets created, or as a quick standalone fix whenever convenient.
+
+**Remaining gaps after this pass:** Group D (4 fixtures, incomplete-template issue) and Group K (rate-limited) match-events; `headToHeadStats` still fully unbuilt (Sprint 36); 6 R32 matches (m11-m16) still upcoming, will need this same cadence once they complete.
+
+**Next pass trigger:** after the remaining 6 R32 matches complete, or once the Round of 16 Wikipedia pages start appearing (whichever comes first).
+
 ---
 
 ## Sprint 35 — Guardian Bios / Player Descriptions

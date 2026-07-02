@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-06-30T17:17:07.437Z",
+  "lastUpdated": "2026-07-02T13:15:15.905Z",
   "data": {
     "a-r1-mex-rsa": {
       "events": [
@@ -18639,8 +18639,92 @@
       ]
     },
     "r32-m6": {
-      "events": [],
-      "motm": null,
+      "events": [
+        {
+          "type": "goal",
+          "minute": "39",
+          "teamId": "norway",
+          "scorer": "Nusa",
+          "assistBy": null
+        },
+        {
+          "type": "yellow_card",
+          "minute": "45+1",
+          "teamId": "norway",
+          "player": "Antonio Nusa"
+        },
+        {
+          "type": "substitution",
+          "minute": "60",
+          "teamId": "ivory-coast",
+          "offPlayer": "Christ Inao Oulaï",
+          "onPlayer": "Amad Diallo"
+        },
+        {
+          "type": "substitution",
+          "minute": "60",
+          "teamId": "ivory-coast",
+          "offPlayer": "Ange-Yoan Bonny",
+          "onPlayer": "Elye Wahi"
+        },
+        {
+          "type": "substitution",
+          "minute": "71",
+          "teamId": "norway",
+          "offPlayer": "Alexander Sørloth",
+          "onPlayer": "Andreas Schjelderup"
+        },
+        {
+          "type": "substitution",
+          "minute": "71",
+          "teamId": "norway",
+          "offPlayer": "Antonio Nusa",
+          "onPlayer": "Oscar Bobb"
+        },
+        {
+          "type": "goal",
+          "minute": "74",
+          "teamId": "ivory-coast",
+          "scorer": "Diallo",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "83",
+          "teamId": "norway",
+          "offPlayer": "Marcus Holmgren Pedersen",
+          "onPlayer": "Fredrik Aursnes"
+        },
+        {
+          "type": "goal",
+          "minute": "86",
+          "teamId": "norway",
+          "scorer": "Haaland",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "87",
+          "teamId": "ivory-coast",
+          "offPlayer": "Nicolas Pépé",
+          "onPlayer": "Oumar Diakité"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+3",
+          "teamId": "ivory-coast",
+          "offPlayer": "Ghislain Konan",
+          "onPlayer": "Evann Guessand"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+3",
+          "teamId": "ivory-coast",
+          "offPlayer": "Yan Diomande",
+          "onPlayer": "Bazoumana Touré"
+        }
+      ],
+      "motm": "Antonio Nusa",
       "homeFormation": "4-3-3",
       "awayFormation": "4-3-3",
       "homeStarting": [
@@ -18675,14 +18759,14 @@
           "shirt": 18
         },
         {
-          "name": "Christ Inao Oulaï",
-          "pos": "CM",
-          "shirt": 26
-        },
-        {
           "name": "Franck Kessié",
           "pos": "CM",
           "shirt": 8
+        },
+        {
+          "name": "Christ Inao Oulaï",
+          "pos": "CM",
+          "shirt": 26
         },
         {
           "name": "Nicolas Pépé",
@@ -18757,58 +18841,1473 @@
           "shirt": 20
         }
       ],
-      "homeSubs": [],
-      "awaySubs": []
+      "homeSubs": [
+        {
+          "name": "Amad Diallo",
+          "pos": "FW",
+          "shirt": 15,
+          "onMinute": "60"
+        },
+        {
+          "name": "Elye Wahi",
+          "pos": "FW",
+          "shirt": 12,
+          "onMinute": "60"
+        },
+        {
+          "name": "Oumar Diakité",
+          "pos": "FW",
+          "shirt": 14,
+          "onMinute": "87"
+        },
+        {
+          "name": "Evann Guessand",
+          "pos": "FW",
+          "shirt": 22,
+          "onMinute": "90+3"
+        },
+        {
+          "name": "Bazoumana Touré",
+          "pos": "FW",
+          "shirt": 24,
+          "onMinute": "90+3"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Andreas Schjelderup",
+          "pos": "MF",
+          "shirt": 21,
+          "onMinute": "71"
+        },
+        {
+          "name": "Oscar Bobb",
+          "pos": "MF",
+          "shirt": 22,
+          "onMinute": "71"
+        },
+        {
+          "name": "Fredrik Aursnes",
+          "pos": "MF",
+          "shirt": 14,
+          "onMinute": "83"
+        }
+      ]
     },
     "r32-m5": {
-      "events": [],
-      "motm": null,
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": [],
-      "homeSubs": [],
-      "awaySubs": []
+      "events": [
+        {
+          "type": "goal",
+          "minute": "45",
+          "teamId": "france",
+          "scorer": "Mbappé",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "53",
+          "teamId": "france",
+          "scorer": "Barcola",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "66",
+          "teamId": "sweden",
+          "offPlayer": "Lucas Bergvall",
+          "onPlayer": "Taha Ali"
+        },
+        {
+          "type": "substitution",
+          "minute": "66",
+          "teamId": "sweden",
+          "offPlayer": "Elliot Stroud",
+          "onPlayer": "Besfort Zeneli"
+        },
+        {
+          "type": "goal",
+          "minute": "74",
+          "teamId": "france",
+          "scorer": "Mbappé",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "75",
+          "teamId": "france",
+          "offPlayer": "Jules Koundé",
+          "onPlayer": "Désiré Doué"
+        },
+        {
+          "type": "substitution",
+          "minute": "75",
+          "teamId": "france",
+          "offPlayer": "Ousmane Dembélé",
+          "onPlayer": "Malo Gusto"
+        },
+        {
+          "type": "substitution",
+          "minute": "78",
+          "teamId": "france",
+          "offPlayer": "Lucas Digne",
+          "onPlayer": "Théo Hernandez"
+        },
+        {
+          "type": "substitution",
+          "minute": "82",
+          "teamId": "sweden",
+          "offPlayer": "Daniel Svensson",
+          "onPlayer": "Benjamin Nygren"
+        },
+        {
+          "type": "substitution",
+          "minute": "82",
+          "teamId": "sweden",
+          "offPlayer": "Yasin Ayari",
+          "onPlayer": "Mattias Svanberg"
+        },
+        {
+          "type": "substitution",
+          "minute": "85",
+          "teamId": "france",
+          "offPlayer": "Michael Olise",
+          "onPlayer": "Jean-Philippe Mateta"
+        },
+        {
+          "type": "substitution",
+          "minute": "85",
+          "teamId": "france",
+          "offPlayer": "Kylian Mbappé",
+          "onPlayer": "Rayan Cherki"
+        },
+        {
+          "type": "substitution",
+          "minute": "89",
+          "teamId": "sweden",
+          "offPlayer": "Alexander Isak",
+          "onPlayer": "Gustaf Nilsson"
+        }
+      ],
+      "motm": "Kylian Mbappé",
+      "homeFormation": "4-3-3",
+      "awayFormation": "4-4-2",
+      "homeStarting": [
+        {
+          "name": "Mike Maignan",
+          "pos": "GK",
+          "shirt": 16
+        },
+        {
+          "name": "Jules Koundé",
+          "pos": "RB",
+          "shirt": 5
+        },
+        {
+          "name": "Dayot Upamecano",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "William Saliba",
+          "pos": "CB",
+          "shirt": 17
+        },
+        {
+          "name": "Lucas Digne",
+          "pos": "LB",
+          "shirt": 3
+        },
+        {
+          "name": "Aurélien Tchouaméni",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Adrien Rabiot",
+          "pos": "CM",
+          "shirt": 14
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "pos": "RW",
+          "shirt": 7
+        },
+        {
+          "name": "Michael Olise",
+          "pos": "AM",
+          "shirt": 11
+        },
+        {
+          "name": "Bradley Barcola",
+          "pos": "LW",
+          "shirt": 12
+        },
+        {
+          "name": "Kylian Mbappé",
+          "pos": "CF",
+          "shirt": 10
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Jacob Widell Zetterström",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Daniel Svensson",
+          "pos": "RB",
+          "shirt": 8
+        },
+        {
+          "name": "Gustaf Lagerbielke",
+          "pos": "CB",
+          "shirt": 2
+        },
+        {
+          "name": "Victor Lindelöf",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Gabriel Gudmundsson",
+          "pos": "LB",
+          "shirt": 5
+        },
+        {
+          "name": "Anthony Elanga",
+          "pos": "RM",
+          "shirt": 11
+        },
+        {
+          "name": "Lucas Bergvall",
+          "pos": "CM",
+          "shirt": 7
+        },
+        {
+          "name": "Yasin Ayari",
+          "pos": "CM",
+          "shirt": 18
+        },
+        {
+          "name": "Elliot Stroud",
+          "pos": "LM",
+          "shirt": 24
+        },
+        {
+          "name": "Viktor Gyökeres",
+          "pos": "CF",
+          "shirt": 17
+        },
+        {
+          "name": "Alexander Isak",
+          "pos": "CF",
+          "shirt": 9
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Désiré Doué",
+          "pos": "FW",
+          "shirt": 20,
+          "onMinute": "75"
+        },
+        {
+          "name": "Malo Gusto",
+          "pos": "DF",
+          "shirt": 2,
+          "onMinute": "75"
+        },
+        {
+          "name": "Théo Hernandez",
+          "pos": "DF",
+          "shirt": 19,
+          "onMinute": "78"
+        },
+        {
+          "name": "Jean-Philippe Mateta",
+          "pos": "FW",
+          "shirt": 22,
+          "onMinute": "85"
+        },
+        {
+          "name": "Rayan Cherki",
+          "pos": "MF",
+          "shirt": 24,
+          "onMinute": "85"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Taha Ali",
+          "pos": "FW",
+          "shirt": 26,
+          "onMinute": "66"
+        },
+        {
+          "name": "Besfort Zeneli",
+          "pos": "MF",
+          "shirt": 22,
+          "onMinute": "66"
+        },
+        {
+          "name": "Benjamin Nygren",
+          "pos": "MF",
+          "shirt": 10,
+          "onMinute": "82"
+        },
+        {
+          "name": "Mattias Svanberg",
+          "pos": "MF",
+          "shirt": 19,
+          "onMinute": "82"
+        },
+        {
+          "name": "Gustaf Nilsson",
+          "pos": "FW",
+          "shirt": 25,
+          "onMinute": "89"
+        }
+      ]
     },
     "r32-m7": {
-      "events": [],
-      "motm": null,
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": [],
-      "homeSubs": [],
-      "awaySubs": []
+      "events": [
+        {
+          "type": "goal",
+          "minute": "22",
+          "teamId": "mexico",
+          "scorer": "Quiñones",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "31",
+          "teamId": "mexico",
+          "scorer": "Jiménez",
+          "assistBy": null
+        },
+        {
+          "type": "yellow_card",
+          "minute": "45+1",
+          "teamId": "ecuador",
+          "player": "Alan Franco"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "ecuador",
+          "offPlayer": "Alan Franco",
+          "onPlayer": "Yaimar Medina"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "ecuador",
+          "offPlayer": "Joel Ordóñez",
+          "onPlayer": "Ángelo Preciado"
+        },
+        {
+          "type": "substitution",
+          "minute": "59",
+          "teamId": "mexico",
+          "offPlayer": "Gilberto Mora",
+          "onPlayer": "Brian Gutiérrez"
+        },
+        {
+          "type": "substitution",
+          "minute": "59",
+          "teamId": "ecuador",
+          "offPlayer": "Enner Valencia",
+          "onPlayer": "Kevin Rodríguez"
+        },
+        {
+          "type": "substitution",
+          "minute": "73",
+          "teamId": "mexico",
+          "offPlayer": "Luis Romo",
+          "onPlayer": "Obed Vargas"
+        },
+        {
+          "type": "substitution",
+          "minute": "73",
+          "teamId": "mexico",
+          "offPlayer": "Raúl Jiménez",
+          "onPlayer": "Santiago Giménez"
+        },
+        {
+          "type": "substitution",
+          "minute": "79",
+          "teamId": "ecuador",
+          "offPlayer": "John Yeboah",
+          "onPlayer": "Kendry Páez"
+        },
+        {
+          "type": "substitution",
+          "minute": "79",
+          "teamId": "ecuador",
+          "offPlayer": "Nilson Angulo",
+          "onPlayer": "Jordy Caicedo"
+        },
+        {
+          "type": "substitution",
+          "minute": "80",
+          "teamId": "mexico",
+          "offPlayer": "Roberto Alvarado",
+          "onPlayer": "Israel Reyes"
+        },
+        {
+          "type": "substitution",
+          "minute": "80",
+          "teamId": "mexico",
+          "offPlayer": "Julián Quiñones",
+          "onPlayer": "Orbelín Pineda"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "90+3",
+          "teamId": "ecuador",
+          "player": "Kendry Páez"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "90+9",
+          "teamId": "ecuador",
+          "player": "Moisés Caicedo"
+        }
+      ],
+      "motm": "Julián Quiñones",
+      "homeFormation": "4-3-3",
+      "awayFormation": "4-4-2",
+      "homeStarting": [
+        {
+          "name": "Raúl Rangel",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Jorge Sánchez",
+          "pos": "RB",
+          "shirt": 2
+        },
+        {
+          "name": "César Montes",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Johan Vásquez",
+          "pos": "CB",
+          "shirt": 5
+        },
+        {
+          "name": "Jesús Gallardo",
+          "pos": "LB",
+          "shirt": 23
+        },
+        {
+          "name": "Érik Lira",
+          "pos": "DM",
+          "shirt": 6
+        },
+        {
+          "name": "Gilberto Mora",
+          "pos": "CM",
+          "shirt": 19
+        },
+        {
+          "name": "Luis Romo",
+          "pos": "CM",
+          "shirt": 7
+        },
+        {
+          "name": "Roberto Alvarado",
+          "pos": "RF",
+          "shirt": 25
+        },
+        {
+          "name": "Raúl Jiménez",
+          "pos": "CF",
+          "shirt": 9
+        },
+        {
+          "name": "Julián Quiñones",
+          "pos": "LF",
+          "shirt": 16
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Hernán Galíndez",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Alan Franco",
+          "pos": "RB",
+          "shirt": 21
+        },
+        {
+          "name": "Joel Ordóñez",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Willian Pacho",
+          "pos": "CB",
+          "shirt": 6
+        },
+        {
+          "name": "Piero Hincapié",
+          "pos": "LB",
+          "shirt": 3
+        },
+        {
+          "name": "John Yeboah",
+          "pos": "RM",
+          "shirt": 9
+        },
+        {
+          "name": "Moisés Caicedo",
+          "pos": "CM",
+          "shirt": 23
+        },
+        {
+          "name": "Pedro Vite",
+          "pos": "CM",
+          "shirt": 15
+        },
+        {
+          "name": "Nilson Angulo",
+          "pos": "LM",
+          "shirt": 20
+        },
+        {
+          "name": "Gonzalo Plata",
+          "pos": "CF",
+          "shirt": 19
+        },
+        {
+          "name": "Enner Valencia",
+          "pos": "CF",
+          "shirt": 13
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Brian Gutiérrez",
+          "pos": "MF",
+          "shirt": 26,
+          "onMinute": "59"
+        },
+        {
+          "name": "Obed Vargas",
+          "pos": "MF",
+          "shirt": 18,
+          "onMinute": "73"
+        },
+        {
+          "name": "Santiago Giménez",
+          "pos": "FW",
+          "shirt": 11,
+          "onMinute": "73"
+        },
+        {
+          "name": "Israel Reyes",
+          "pos": "DF",
+          "shirt": 15,
+          "onMinute": "80"
+        },
+        {
+          "name": "Orbelín Pineda",
+          "pos": "MF",
+          "shirt": 17,
+          "onMinute": "80"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Yaimar Medina",
+          "pos": "MF",
+          "shirt": 26,
+          "onMinute": "46"
+        },
+        {
+          "name": "Ángelo Preciado",
+          "pos": "DF",
+          "shirt": 17,
+          "onMinute": "46"
+        },
+        {
+          "name": "Kevin Rodríguez",
+          "pos": "FW",
+          "shirt": 11,
+          "onMinute": "59"
+        },
+        {
+          "name": "Kendry Páez",
+          "pos": "MF",
+          "shirt": 10,
+          "onMinute": "79"
+        },
+        {
+          "name": "Jordy Caicedo",
+          "pos": "FW",
+          "shirt": 16,
+          "onMinute": "79"
+        }
+      ]
     },
     "r32-m8": {
-      "events": [],
-      "motm": null,
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": [],
-      "homeSubs": [],
-      "awaySubs": []
+      "events": [
+        {
+          "type": "goal",
+          "minute": "7",
+          "teamId": "dr-congo",
+          "scorer": "Cipenga",
+          "assistBy": null
+        },
+        {
+          "type": "yellow_card",
+          "minute": "19",
+          "teamId": "england",
+          "player": "Jude Bellingham"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "27",
+          "teamId": "dr-congo",
+          "player": "Noah Sadiki"
+        },
+        {
+          "type": "substitution",
+          "minute": "60",
+          "teamId": "england",
+          "offPlayer": "Noni Madueke",
+          "onPlayer": "Bukayo Saka"
+        },
+        {
+          "type": "substitution",
+          "minute": "60",
+          "teamId": "england",
+          "offPlayer": "Marcus Rashford",
+          "onPlayer": "Anthony Gordon"
+        },
+        {
+          "type": "substitution",
+          "minute": "64",
+          "teamId": "dr-congo",
+          "offPlayer": "Nathanaël Mbuku",
+          "onPlayer": "Meschak Elia"
+        },
+        {
+          "type": "substitution",
+          "minute": "70",
+          "teamId": "england",
+          "offPlayer": "Djed Spence",
+          "onPlayer": "Eberechi Eze"
+        },
+        {
+          "type": "goal",
+          "minute": "75",
+          "teamId": "england",
+          "scorer": "Kane",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "76",
+          "teamId": "dr-congo",
+          "offPlayer": "Ngal'ayel Mukau",
+          "onPlayer": "Théo Bongonda"
+        },
+        {
+          "type": "substitution",
+          "minute": "76",
+          "teamId": "dr-congo",
+          "offPlayer": "Brian Cipenga",
+          "onPlayer": "Edo Kayembe"
+        },
+        {
+          "type": "goal",
+          "minute": "86",
+          "teamId": "england",
+          "scorer": "Kane",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "89",
+          "teamId": "dr-congo",
+          "offPlayer": "Arthur Masuaku",
+          "onPlayer": "Joris Kayembe"
+        },
+        {
+          "type": "substitution",
+          "minute": "89",
+          "teamId": "dr-congo",
+          "offPlayer": "Samuel Moutoussamy",
+          "onPlayer": "Fiston Mayele"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+1",
+          "teamId": "england",
+          "offPlayer": "Declan Rice",
+          "onPlayer": "John Stones"
+        }
+      ],
+      "motm": "Harry Kane",
+      "homeFormation": "4-3-3",
+      "awayFormation": "4-5-1",
+      "homeStarting": [
+        {
+          "name": "Jordan Pickford",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Djed Spence",
+          "pos": "RB",
+          "shirt": 25
+        },
+        {
+          "name": "Ezri Konsa",
+          "pos": "CB",
+          "shirt": 2
+        },
+        {
+          "name": "Marc Guéhi",
+          "pos": "CB",
+          "shirt": 6
+        },
+        {
+          "name": "Nico O'Reilly",
+          "pos": "LB",
+          "shirt": 3
+        },
+        {
+          "name": "Elliot Anderson",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Declan Rice",
+          "pos": "CM",
+          "shirt": 4
+        },
+        {
+          "name": "Noni Madueke",
+          "pos": "RW",
+          "shirt": 20
+        },
+        {
+          "name": "Jude Bellingham",
+          "pos": "AM",
+          "shirt": 10
+        },
+        {
+          "name": "Marcus Rashford",
+          "pos": "LW",
+          "shirt": 11
+        },
+        {
+          "name": "Harry Kane",
+          "pos": "CF",
+          "shirt": 9
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Lionel Mpasi",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Aaron Wan-Bissaka",
+          "pos": "RB",
+          "shirt": 2
+        },
+        {
+          "name": "Chancel Mbemba",
+          "pos": "CB",
+          "shirt": 22
+        },
+        {
+          "name": "Axel Tuanzebe",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Arthur Masuaku",
+          "pos": "LB",
+          "shirt": 26
+        },
+        {
+          "name": "Samuel Moutoussamy",
+          "pos": "DM",
+          "shirt": 8
+        },
+        {
+          "name": "Nathanaël Mbuku",
+          "pos": "RM",
+          "shirt": 7
+        },
+        {
+          "name": "Ngal'ayel Mukau",
+          "pos": "CM",
+          "shirt": 6
+        },
+        {
+          "name": "Noah Sadiki",
+          "pos": "CM",
+          "shirt": 14
+        },
+        {
+          "name": "Brian Cipenga",
+          "pos": "LM",
+          "shirt": 9
+        },
+        {
+          "name": "Yoane Wissa",
+          "pos": "CF",
+          "shirt": 20
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Bukayo Saka",
+          "pos": "FW",
+          "shirt": 7,
+          "onMinute": "60"
+        },
+        {
+          "name": "Anthony Gordon",
+          "pos": "FW",
+          "shirt": 18,
+          "onMinute": "60"
+        },
+        {
+          "name": "Eberechi Eze",
+          "pos": "MF",
+          "shirt": 21,
+          "onMinute": "70"
+        },
+        {
+          "name": "John Stones",
+          "pos": "DF",
+          "shirt": 5,
+          "onMinute": "90+1"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Meschak Elia",
+          "pos": "FW",
+          "shirt": 13,
+          "onMinute": "64"
+        },
+        {
+          "name": "Théo Bongonda",
+          "pos": "MF",
+          "shirt": 10,
+          "onMinute": "76"
+        },
+        {
+          "name": "Edo Kayembe",
+          "pos": "MF",
+          "shirt": 25,
+          "onMinute": "76"
+        },
+        {
+          "name": "Joris Kayembe",
+          "pos": "DF",
+          "shirt": 12,
+          "onMinute": "89"
+        },
+        {
+          "name": "Fiston Mayele",
+          "pos": "FW",
+          "shirt": 19,
+          "onMinute": "89"
+        }
+      ]
     },
     "r32-m10": {
-      "events": [],
-      "motm": null,
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": [],
-      "homeSubs": [],
-      "awaySubs": []
+      "events": [
+        {
+          "type": "goal",
+          "minute": "25",
+          "teamId": "senegal",
+          "scorer": "Diarra",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "belgium",
+          "offPlayer": "Charles De Ketelaere",
+          "onPlayer": "Romelu Lukaku"
+        },
+        {
+          "type": "goal",
+          "minute": "51",
+          "teamId": "senegal",
+          "scorer": "I. Sarr",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "56",
+          "teamId": "belgium",
+          "offPlayer": "Kevin De Bruyne",
+          "onPlayer": "Dodi Lukébakio"
+        },
+        {
+          "type": "substitution",
+          "minute": "56",
+          "teamId": "belgium",
+          "offPlayer": "Jérémy Doku",
+          "onPlayer": "Nicolas Raskin"
+        },
+        {
+          "type": "substitution",
+          "minute": "63",
+          "teamId": "belgium",
+          "offPlayer": "Hans Vanaken",
+          "onPlayer": "Diego Moreira"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "64",
+          "teamId": "belgium",
+          "player": "Brandon Mechele"
+        },
+        {
+          "type": "substitution",
+          "minute": "66",
+          "teamId": "senegal",
+          "offPlayer": "Pape Gueye",
+          "onPlayer": "Lamine Camara"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "67",
+          "teamId": "senegal",
+          "player": "Lamine Camara"
+        },
+        {
+          "type": "substitution",
+          "minute": "73",
+          "teamId": "senegal",
+          "offPlayer": "Habib Diarra",
+          "onPlayer": "Pape Matar Sarr"
+        },
+        {
+          "type": "substitution",
+          "minute": "73",
+          "teamId": "senegal",
+          "offPlayer": "Iliman Ndiaye",
+          "onPlayer": "Ibrahim Mbaye"
+        },
+        {
+          "type": "substitution",
+          "minute": "78",
+          "teamId": "belgium",
+          "offPlayer": "Maxim De Cuyper",
+          "onPlayer": "Thomas Meunier"
+        },
+        {
+          "type": "goal",
+          "minute": "86",
+          "teamId": "belgium",
+          "scorer": "Lukaku",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "89",
+          "teamId": "belgium",
+          "scorer": "Tielemans",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "93",
+          "teamId": "senegal",
+          "offPlayer": "Ismail Jakobs",
+          "onPlayer": "Nicolas Jackson"
+        },
+        {
+          "type": "substitution",
+          "minute": "93",
+          "teamId": "senegal",
+          "offPlayer": "Sadio Mané",
+          "onPlayer": "El Hadji Malick Diouf"
+        },
+        {
+          "type": "substitution",
+          "minute": "95",
+          "teamId": "senegal",
+          "offPlayer": "Idrissa Gueye",
+          "onPlayer": "Bara Sapoko Ndiaye"
+        },
+        {
+          "type": "substitution",
+          "minute": "109",
+          "teamId": "belgium",
+          "offPlayer": "Leandro Trossard",
+          "onPlayer": "Amadou Onana"
+        },
+        {
+          "type": "goal",
+          "minute": "120+5",
+          "teamId": "belgium",
+          "scorer": "Tielemans",
+          "assistBy": null
+        }
+      ],
+      "motm": "Youri Tielemans",
+      "homeFormation": "4-3-3",
+      "awayFormation": "4-3-3",
+      "homeStarting": [
+        {
+          "name": "Thibaut Courtois",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Timothy Castagne",
+          "pos": "RB",
+          "shirt": 21
+        },
+        {
+          "name": "Brandon Mechele",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Arthur Theate",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Maxim De Cuyper",
+          "pos": "LB",
+          "shirt": 5
+        },
+        {
+          "name": "Hans Vanaken",
+          "pos": "CM",
+          "shirt": 20
+        },
+        {
+          "name": "Youri Tielemans",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Leandro Trossard",
+          "pos": "RW",
+          "shirt": 10
+        },
+        {
+          "name": "Kevin De Bruyne",
+          "pos": "AM",
+          "shirt": 7
+        },
+        {
+          "name": "Jérémy Doku",
+          "pos": "LW",
+          "shirt": 11
+        },
+        {
+          "name": "Charles De Ketelaere",
+          "pos": "CF",
+          "shirt": 17
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Mory Diaw",
+          "pos": "GK",
+          "shirt": 23
+        },
+        {
+          "name": "Krépin Diatta",
+          "pos": "RB",
+          "shirt": 15
+        },
+        {
+          "name": "Pathé Ciss",
+          "pos": "CB",
+          "shirt": 6
+        },
+        {
+          "name": "Moussa Niakhaté",
+          "pos": "CB",
+          "shirt": 19
+        },
+        {
+          "name": "Ismail Jakobs",
+          "pos": "LB",
+          "shirt": 14
+        },
+        {
+          "name": "Habib Diarra",
+          "pos": "CM",
+          "shirt": 21
+        },
+        {
+          "name": "Idrissa Gueye",
+          "pos": "CM",
+          "shirt": 5
+        },
+        {
+          "name": "Pape Gueye",
+          "pos": "CM",
+          "shirt": 26
+        },
+        {
+          "name": "Iliman Ndiaye",
+          "pos": "RF",
+          "shirt": 13
+        },
+        {
+          "name": "Ismaïla Sarr",
+          "pos": "CF",
+          "shirt": 18
+        },
+        {
+          "name": "Sadio Mané",
+          "pos": "LF",
+          "shirt": 10
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Romelu Lukaku",
+          "pos": "FW",
+          "shirt": 9,
+          "onMinute": "46"
+        },
+        {
+          "name": "Dodi Lukébakio",
+          "pos": "FW",
+          "shirt": 14,
+          "onMinute": "56"
+        },
+        {
+          "name": "Nicolas Raskin",
+          "pos": "MF",
+          "shirt": 23,
+          "onMinute": "56"
+        },
+        {
+          "name": "Diego Moreira",
+          "pos": "MF",
+          "shirt": 19,
+          "onMinute": "63"
+        },
+        {
+          "name": "Thomas Meunier",
+          "pos": "DF",
+          "shirt": 15,
+          "onMinute": "78"
+        },
+        {
+          "name": "Amadou Onana",
+          "pos": "MF",
+          "shirt": 24,
+          "onMinute": "109"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Lamine Camara",
+          "pos": "MF",
+          "shirt": 8,
+          "onMinute": "66"
+        },
+        {
+          "name": "Pape Matar Sarr",
+          "pos": "MF",
+          "shirt": 17,
+          "onMinute": "73"
+        },
+        {
+          "name": "Ibrahim Mbaye",
+          "pos": "FW",
+          "shirt": 20,
+          "onMinute": "73"
+        },
+        {
+          "name": "Nicolas Jackson",
+          "pos": "FW",
+          "shirt": 11,
+          "onMinute": "93"
+        },
+        {
+          "name": "El Hadji Malick Diouf",
+          "pos": "DF",
+          "shirt": 25,
+          "onMinute": "93"
+        },
+        {
+          "name": "Bara Sapoko Ndiaye",
+          "pos": "MF",
+          "shirt": 22,
+          "onMinute": "95"
+        }
+      ]
     },
     "r32-m9": {
-      "events": [],
-      "motm": null,
-      "homeFormation": null,
-      "awayFormation": null,
-      "homeStarting": [],
-      "awayStarting": [],
-      "homeSubs": [],
-      "awaySubs": []
+      "events": [
+        {
+          "type": "goal",
+          "minute": "45",
+          "teamId": "usa",
+          "scorer": "Balogun",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "51",
+          "teamId": "bosnia-herzegovina",
+          "offPlayer": "Armin Gigović",
+          "onPlayer": "Ermin Mahmić"
+        },
+        {
+          "type": "substitution",
+          "minute": "51",
+          "teamId": "bosnia-herzegovina",
+          "offPlayer": "Ivan Šunjić",
+          "onPlayer": "Benjamin Tahirović"
+        },
+        {
+          "type": "substitution",
+          "minute": "51",
+          "teamId": "bosnia-herzegovina",
+          "offPlayer": "Edin Džeko",
+          "onPlayer": "Esmir Bajraktarević"
+        },
+        {
+          "type": "substitution",
+          "minute": "75",
+          "teamId": "bosnia-herzegovina",
+          "offPlayer": "Nikola Katić",
+          "onPlayer": "Haris Tabaković"
+        },
+        {
+          "type": "substitution",
+          "minute": "75",
+          "teamId": "bosnia-herzegovina",
+          "offPlayer": "Sead Kolašinac",
+          "onPlayer": "Amar Memić"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "80",
+          "teamId": "bosnia-herzegovina",
+          "player": "Stjepan Radeljić"
+        },
+        {
+          "type": "goal",
+          "minute": "82",
+          "teamId": "usa",
+          "scorer": "Tillman",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "87",
+          "teamId": "usa",
+          "offPlayer": "Sergiño Dest",
+          "onPlayer": "Sebastian Berhalter"
+        },
+        {
+          "type": "substitution",
+          "minute": "87",
+          "teamId": "usa",
+          "offPlayer": "Christian Pulisic",
+          "onPlayer": "Ricardo Pepi"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+5",
+          "teamId": "usa",
+          "offPlayer": "Weston McKennie",
+          "onPlayer": "Giovanni Reyna"
+        }
+      ],
+      "motm": "Malik Tillman",
+      "homeFormation": "3-5-2",
+      "awayFormation": "4-4-2",
+      "homeStarting": [
+        {
+          "name": "Matt Freese",
+          "pos": "GK",
+          "shirt": 24
+        },
+        {
+          "name": "Alex Freeman",
+          "pos": "CB",
+          "shirt": 16
+        },
+        {
+          "name": "Chris Richards",
+          "pos": "CB",
+          "shirt": 3
+        },
+        {
+          "name": "Tim Ream",
+          "pos": "CB",
+          "shirt": 13
+        },
+        {
+          "name": "Sergiño Dest",
+          "pos": "RM",
+          "shirt": 2
+        },
+        {
+          "name": "Weston McKennie",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Tyler Adams",
+          "pos": "CM",
+          "shirt": 4
+        },
+        {
+          "name": "Malik Tillman",
+          "pos": "CM",
+          "shirt": 17
+        },
+        {
+          "name": "Antonee Robinson",
+          "pos": "LM",
+          "shirt": 5
+        },
+        {
+          "name": "Christian Pulisic",
+          "pos": "CF",
+          "shirt": 10
+        },
+        {
+          "name": "Folarin Balogun",
+          "pos": "CF",
+          "shirt": 20
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Nikola Vasilj",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Amar Dedić",
+          "pos": "RB",
+          "shirt": 7
+        },
+        {
+          "name": "Nikola Katić",
+          "pos": "CB",
+          "shirt": 18
+        },
+        {
+          "name": "Tarik Muharemović",
+          "pos": "CB",
+          "shirt": 4
+        },
+        {
+          "name": "Stjepan Radeljić",
+          "pos": "LB",
+          "shirt": 21
+        },
+        {
+          "name": "Armin Gigović",
+          "pos": "RM",
+          "shirt": 8
+        },
+        {
+          "name": "Ivan Šunjić",
+          "pos": "CM",
+          "shirt": 14
+        },
+        {
+          "name": "Kerim Alajbegović",
+          "pos": "CM",
+          "shirt": 19
+        },
+        {
+          "name": "Sead Kolašinac",
+          "pos": "LM",
+          "shirt": 5
+        },
+        {
+          "name": "Ermedin Demirović",
+          "pos": "CF",
+          "shirt": 10
+        },
+        {
+          "name": "Edin Džeko",
+          "pos": "CF",
+          "shirt": 11
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Sebastian Berhalter",
+          "pos": "MF",
+          "shirt": 14,
+          "onMinute": "87"
+        },
+        {
+          "name": "Ricardo Pepi",
+          "pos": "FW",
+          "shirt": 9,
+          "onMinute": "87"
+        },
+        {
+          "name": "Giovanni Reyna",
+          "pos": "MF",
+          "shirt": 7,
+          "onMinute": "90+5"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Ermin Mahmić",
+          "pos": "MF",
+          "shirt": 26,
+          "onMinute": "51"
+        },
+        {
+          "name": "Benjamin Tahirović",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "51"
+        },
+        {
+          "name": "Esmir Bajraktarević",
+          "pos": "MF",
+          "shirt": 20,
+          "onMinute": "51"
+        },
+        {
+          "name": "Haris Tabaković",
+          "pos": "FW",
+          "shirt": 23,
+          "onMinute": "75"
+        },
+        {
+          "name": "Amar Memić",
+          "pos": "MF",
+          "shirt": 15,
+          "onMinute": "75"
+        }
+      ]
     },
     "r32-m12": {
       "events": [],
