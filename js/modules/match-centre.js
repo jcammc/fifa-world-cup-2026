@@ -337,15 +337,31 @@ export class MatchCentre {
     const statsHtml = stats ? this.#buildH2HStatsGrid(stats, home) : '';
 
     if (isFT) {
-      // Completed match: "Match Story" section
-      if (!story && !statsHtml) return '';
-      const proseHtml = story
-        ? `<blockquote class="mc-hth">${escapeHtml(story)}</blockquote>` : '';
-      const historyDetails = (statsHtml || h2hProse)
+      // Completed match: "Match Story" section.
+      // Prefer the migrated matchStory field; fall back to the legacy headToHead
+      // field so matches whose data hasn't been re-scraped yet still show content
+      // instead of nothing (see gather-head-to-head.mjs's migration step).
+      //
+      // This fallback is a PERMANENT robustness layer, not a one-time migration
+      // shim to delete later. gather-head-to-head.mjs only re-runs periodically
+      // (per knockout round, not per match — see docs/ROADMAP.md Sprint 34), so
+      // every newly-FT match sits with only `headToHead` populated until the next
+      // maintenance pass. That lag recurs for the rest of the tournament, not just
+      // during this one historical backfill. Keep this fallback even once the
+      // current backlog is fully migrated.
+      const primaryProse = story || h2hProse;
+      if (!primaryProse && !statsHtml) return '';
+
+      const proseHtml = primaryProse
+        ? `<blockquote class="mc-hth">${escapeHtml(primaryProse)}</blockquote>` : '';
+      // Only surface h2hProse a second time in the details block if it's genuinely
+      // distinct extra content (i.e. story already took the primary blockquote slot).
+      const extraProse = (story && h2hProse) ? h2hProse : '';
+      const historyDetails = (statsHtml || extraProse)
         ? `<details class="mc-hth-details">
             <summary class="mc-hth-details__toggle">World Cup History</summary>
             ${statsHtml}
-            ${h2hProse ? `<p class="mc-hth-prose">${escapeHtml(h2hProse)}</p>` : ''}
+            ${extraProse ? `<p class="mc-hth-prose">${escapeHtml(extraProse)}</p>` : ''}
           </details>`
         : '';
       return `

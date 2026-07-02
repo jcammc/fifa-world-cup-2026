@@ -16,7 +16,8 @@
 **Document location convention:** All `.md` files live in `docs/`. Never place `.md` files in the project root or other directories (exception: `skills/**/SKILL.md` and `schemas/README.md` which serve their own directories).
 
 **Living project documents (read these when implementing):**
-- `docs/08_PROJECT_STATUS_REVIEW.md` — definitive snapshot of current feature state, findings, architecture decisions, and V1.0 definition
+- `docs/ROADMAP.md` — **current plan of record.** Sprint 33 onward: ordered, dependency-aware sprints derived from a full project-status-review audit (2026-07-02). Check this first for "what's next" before proposing new work — do not recreate a roadmap from scratch.
+- `docs/08_PROJECT_STATUS_REVIEW.md` — definitive snapshot of current feature state, findings, architecture decisions, and V1.0 definition. **Known stale as of 2026-07-02** (last refreshed 2026-06-20) — refresh is Sprint 40 in `docs/ROADMAP.md`. Until then, prefer `docs/ROADMAP.md` and this document for current status.
 - `docs/IMPLEMENTATION_BLUEPRINT.md` — module design, lifecycle, routing, Auto-Focus system detail
 - `docs/TASK_BREAKDOWN.md` — all tasks T-001 through T-083 with statuses
 - `docs/RECOMMENDATIONS.md` — 18 architectural recommendations with adopt/reject status
