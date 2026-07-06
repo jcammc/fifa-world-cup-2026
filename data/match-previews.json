@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-02T13:17:10.264Z",
+  "lastUpdated": "2026-07-06T17:58:58.841Z",
   "data": {
     "a-r1-mex-rsa": {
       "headToHead": "",
@@ -20,7 +20,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:25:33.374Z",
+          "autoFetchedAt": "2026-07-06T17:59:18.626Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -47,7 +47,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:25:40.482Z",
+          "autoFetchedAt": "2026-07-06T17:59:25.920Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -74,7 +74,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:25:47.591Z",
+          "autoFetchedAt": "2026-07-06T17:59:34.047Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -101,7 +101,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:25:54.693Z",
+          "autoFetchedAt": "2026-07-06T17:59:41.203Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -128,7 +128,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:01.842Z",
+          "autoFetchedAt": "2026-07-06T17:59:49.425Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -155,7 +155,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:09.018Z",
+          "autoFetchedAt": "2026-07-06T17:59:56.589Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -182,7 +182,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:16.138Z",
+          "autoFetchedAt": "2026-07-06T18:00:04.827Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -209,7 +209,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:23.234Z",
+          "autoFetchedAt": "2026-07-06T18:00:11.955Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -236,7 +236,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:30.338Z",
+          "autoFetchedAt": "2026-07-06T18:00:20.100Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -263,7 +263,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:37.483Z",
+          "autoFetchedAt": "2026-07-06T18:00:27.273Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -290,7 +290,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:44.591Z",
+          "autoFetchedAt": "2026-07-06T18:00:34.449Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -317,7 +317,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:51.736Z",
+          "autoFetchedAt": "2026-07-06T18:00:41.617Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -344,7 +344,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:26:58.847Z",
+          "autoFetchedAt": "2026-07-06T18:00:48.786Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -371,7 +371,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:05.948Z",
+          "autoFetchedAt": "2026-07-06T18:00:55.958Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -410,7 +410,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:13.053Z",
+          "autoFetchedAt": "2026-07-06T18:01:03.823Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -445,7 +445,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:20.161Z",
+          "autoFetchedAt": "2026-07-06T18:01:11.000Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -478,7 +478,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:27.265Z",
+          "autoFetchedAt": "2026-07-06T18:01:18.197Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -512,7 +512,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:34.361Z",
+          "autoFetchedAt": "2026-07-06T18:01:25.388Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -539,7 +539,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:41.498Z",
+          "autoFetchedAt": "2026-07-06T18:01:32.777Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -566,7 +566,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:48.596Z",
+          "autoFetchedAt": "2026-07-06T18:01:39.947Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -593,7 +593,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:27:55.777Z",
+          "autoFetchedAt": "2026-07-06T18:01:47.110Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -620,7 +620,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:02.925Z",
+          "autoFetchedAt": "2026-07-06T18:01:54.281Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -647,7 +647,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:10.037Z",
+          "autoFetchedAt": "2026-07-06T18:02:01.445Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -674,7 +674,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:17.148Z",
+          "autoFetchedAt": "2026-07-06T18:02:08.621Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -701,7 +701,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:24.255Z",
+          "autoFetchedAt": "2026-07-06T18:02:15.805Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -728,7 +728,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:31.370Z",
+          "autoFetchedAt": "2026-07-06T18:02:23.008Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -755,7 +755,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:38.531Z",
+          "autoFetchedAt": "2026-07-06T18:02:30.245Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -782,7 +782,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:45.629Z",
+          "autoFetchedAt": "2026-07-06T18:02:37.412Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -809,7 +809,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:52.738Z",
+          "autoFetchedAt": "2026-07-06T18:02:44.600Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -848,7 +848,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:28:59.841Z",
+          "autoFetchedAt": "2026-07-06T18:02:51.769Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -883,7 +883,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:07.002Z",
+          "autoFetchedAt": "2026-07-06T18:02:58.957Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -910,7 +910,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:14.103Z",
+          "autoFetchedAt": "2026-07-06T18:03:06.173Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -937,7 +937,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:21.234Z",
+          "autoFetchedAt": "2026-07-06T18:03:13.405Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -964,7 +964,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:28.343Z",
+          "autoFetchedAt": "2026-07-06T18:03:20.593Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -991,7 +991,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:35.463Z",
+          "autoFetchedAt": "2026-07-06T18:03:27.756Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1018,7 +1018,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:42.588Z",
+          "autoFetchedAt": "2026-07-06T18:03:34.929Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1045,7 +1045,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:49.692Z",
+          "autoFetchedAt": "2026-07-06T18:03:42.089Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1072,7 +1072,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:29:56.851Z",
+          "autoFetchedAt": "2026-07-06T18:03:49.266Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1099,7 +1099,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:04.442Z",
+          "autoFetchedAt": "2026-07-06T18:03:56.435Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1126,7 +1126,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:11.588Z",
+          "autoFetchedAt": "2026-07-06T18:04:03.603Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1153,7 +1153,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:18.731Z",
+          "autoFetchedAt": "2026-07-06T18:04:10.772Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1180,7 +1180,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:25.838Z",
+          "autoFetchedAt": "2026-07-06T18:04:17.960Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1207,7 +1207,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:32.971Z",
+          "autoFetchedAt": "2026-07-06T18:04:25.119Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1234,7 +1234,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:40.099Z",
+          "autoFetchedAt": "2026-07-06T18:04:32.309Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -1261,7 +1261,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:48.221Z",
+          "autoFetchedAt": "2026-07-06T18:04:39.473Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -1288,7 +1288,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:30:55.335Z",
+          "autoFetchedAt": "2026-07-06T18:04:46.640Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1315,7 +1315,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:02.440Z",
+          "autoFetchedAt": "2026-07-06T18:04:53.811Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1348,7 +1348,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:09.671Z",
+          "autoFetchedAt": "2026-07-06T18:05:01.041Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -1394,7 +1394,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:16.785Z",
+          "autoFetchedAt": "2026-07-06T18:05:08.219Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -1429,7 +1429,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:23.886Z",
+          "autoFetchedAt": "2026-07-06T18:05:15.391Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1456,7 +1456,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:31.044Z",
+          "autoFetchedAt": "2026-07-06T18:05:22.572Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1483,7 +1483,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:38.165Z",
+          "autoFetchedAt": "2026-07-06T18:05:29.736Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1510,7 +1510,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:45.288Z",
+          "autoFetchedAt": "2026-07-06T18:05:36.904Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1537,7 +1537,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:52.396Z",
+          "autoFetchedAt": "2026-07-06T18:05:44.090Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1564,7 +1564,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:31:59.574Z",
+          "autoFetchedAt": "2026-07-06T18:05:51.260Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1591,7 +1591,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:32:06.701Z",
+          "autoFetchedAt": "2026-07-06T18:05:58.438Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1618,7 +1618,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:32:13.812Z",
+          "autoFetchedAt": "2026-07-06T18:06:05.627Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1645,7 +1645,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:32:20.918Z",
+          "autoFetchedAt": "2026-07-06T18:06:12.802Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1684,7 +1684,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:32:28.051Z",
+          "autoFetchedAt": "2026-07-06T18:06:19.988Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -1719,7 +1719,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:32:35.154Z",
+          "autoFetchedAt": "2026-07-06T18:06:27.164Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1746,7 +1746,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:32:42.276Z",
+          "autoFetchedAt": "2026-07-06T18:06:34.356Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1773,7 +1773,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:32:49.440Z",
+          "autoFetchedAt": "2026-07-06T18:06:51.701Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1800,7 +1800,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:33:26.811Z",
+          "autoFetchedAt": "2026-07-06T18:06:58.883Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1827,7 +1827,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:33:33.912Z",
+          "autoFetchedAt": "2026-07-06T18:07:06.027Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1854,7 +1854,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:33:41.085Z",
+          "autoFetchedAt": "2026-07-06T18:07:13.224Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1880,14 +1880,15 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:33:48.193Z",
+          "autoFetchedAt": "2026-07-06T18:07:20.533Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
           },
           "manualSupplement": null
         }
-      }
+      },
+      "matchStory": "The two teams had never met before. Uzbekistan scored an early lead against the determined DR Congo team by Eldor Shomurodov in the first half, though a costly mistake in the second half resulted in Yoane Wissa to score an equalizer. Additional goals by Fiston Mayele and Yoane Wissa secured DR Congo's spot in the knockout phase for the first time ever. For Uzbekistan, three straight defeats meant they were eliminated from the group stage alongside fellow debutant Jordan, who also went winless with three straight defeats in their group."
     },
     "l-r1-eng-cro": {
       "headToHead": "",
@@ -1922,7 +1923,7 @@
         ],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:33:55.326Z",
+          "autoFetchedAt": "2026-07-06T18:07:27.715Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -1949,7 +1950,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:02.514Z",
+          "autoFetchedAt": "2026-07-06T18:07:34.895Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -1976,7 +1977,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:09.609Z",
+          "autoFetchedAt": "2026-07-06T18:07:42.062Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2003,7 +2004,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:16.720Z",
+          "autoFetchedAt": "2026-07-06T18:07:49.281Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2042,7 +2043,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:23.858Z",
+          "autoFetchedAt": "2026-07-06T18:07:56.453Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2077,7 +2078,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:30.959Z",
+          "autoFetchedAt": "2026-07-06T18:08:03.614Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2104,7 +2105,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:38.100Z",
+          "autoFetchedAt": "2026-07-06T18:08:10.775Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2131,7 +2132,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:59.472Z",
+          "autoFetchedAt": "2026-07-06T18:08:32.305Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2158,7 +2159,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:45.237Z",
+          "autoFetchedAt": "2026-07-06T18:08:17.936Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2185,7 +2186,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:34:52.335Z",
+          "autoFetchedAt": "2026-07-06T18:08:25.119Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2212,7 +2213,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:13.710Z",
+          "autoFetchedAt": "2026-07-06T18:08:46.878Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2239,7 +2240,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:06.595Z",
+          "autoFetchedAt": "2026-07-06T18:08:39.472Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2266,7 +2267,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:20.817Z",
+          "autoFetchedAt": "2026-07-06T18:08:54.044Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2293,7 +2294,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:27.930Z",
+          "autoFetchedAt": "2026-07-06T18:09:01.289Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2320,7 +2321,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:42.188Z",
+          "autoFetchedAt": "2026-07-06T18:09:15.630Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2347,7 +2348,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:35.052Z",
+          "autoFetchedAt": "2026-07-06T18:09:08.468Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2357,7 +2358,7 @@
       }
     },
     "r32-m12": {
-      "headToHead": "The two teams have met 16 times before this match, including a 2–1 group stage win for Austria in the 1978 FIFA World Cup. Their most recent encounter was a friendly in 2009 that ended 5–1 to Spain.",
+      "headToHead": "",
       "source": "Wikipedia",
       "headToHeadStats": {
         "teams": {
@@ -2373,17 +2374,18 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:56.488Z",
+          "autoFetchedAt": "2026-07-06T18:09:29.993Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
           },
           "manualSupplement": null
         }
-      }
+      },
+      "matchStory": "The two teams have met 16 times before this match, including a 2–1 group stage win for Austria in the 1978 FIFA World Cup. Their most recent encounter was a friendly in 2009 that ended 5–1 to Spain."
     },
     "r32-m11": {
-      "headToHead": "The two teams have met 10 times before, with Portugal winning seven matches. Their most recent meeting was a 1–1 group stage draw in the 2024–25 UEFA Nations League A.",
+      "headToHead": "",
       "source": "Wikipedia",
       "headToHeadStats": {
         "teams": {
@@ -2399,17 +2401,18 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:35:49.319Z",
+          "autoFetchedAt": "2026-07-06T18:09:22.823Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
           },
           "manualSupplement": null
         }
-      }
+      },
+      "matchStory": "The two teams have met 10 times before, with Portugal winning seven matches. Their most recent meeting was a 1–1 group stage draw in the 2024–25 UEFA Nations League A."
     },
     "r32-m13": {
-      "headToHead": "The teams have met on two occasions, with Switzerland winning both friendlies, most recently in 1986 by 2–0.",
+      "headToHead": "",
       "source": "Wikipedia",
       "headToHeadStats": {
         "teams": {
@@ -2425,17 +2428,18 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:03.615Z",
+          "autoFetchedAt": "2026-07-06T18:09:37.147Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
           },
           "manualSupplement": null
         }
-      }
+      },
+      "matchStory": "The teams have met on two occasions, with Switzerland winning both friendlies, most recently in 1986 by 2–0."
     },
     "r32-m16": {
-      "headToHead": "Australia and Egypt have met twice before, most recently in 2010, a 3–0 win for Egypt in a friendly.",
+      "headToHead": "",
       "source": "Wikipedia",
       "headToHeadStats": {
         "teams": {
@@ -2451,17 +2455,18 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:24.961Z",
+          "autoFetchedAt": "2026-07-06T18:09:58.869Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
           },
           "manualSupplement": null
         }
-      }
+      },
+      "matchStory": "Australia and Egypt have met twice before, most recently in 2010, a 3–0 win for Egypt in a friendly."
     },
     "r32-m14": {
-      "headToHead": "The two teams have never met before.",
+      "headToHead": "",
       "source": "Wikipedia",
       "headToHeadStats": {
         "teams": {
@@ -2477,17 +2482,18 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:10.722Z",
+          "autoFetchedAt": "2026-07-06T18:09:44.338Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
           },
           "manualSupplement": null
         }
-      }
+      },
+      "matchStory": "The two teams have never met before."
     },
     "r32-m15": {
-      "headToHead": "The two teams have never met before.",
+      "headToHead": "",
       "source": "Wikipedia",
       "headToHeadStats": {
         "teams": {
@@ -2503,14 +2509,15 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:17.843Z",
+          "autoFetchedAt": "2026-07-06T18:09:51.521Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
           },
           "manualSupplement": null
         }
-      }
+      },
+      "matchStory": "The two teams have never met before."
     },
     "r16-m1": {
       "headToHeadStats": {
@@ -2527,7 +2534,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:32.069Z",
+          "autoFetchedAt": "2026-07-06T18:10:06.067Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2572,7 +2579,7 @@
         ],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:39.177Z",
+          "autoFetchedAt": "2026-07-06T18:10:13.237Z",
           "autoCapped": {
             "allTime": false,
             "worldCup": false
@@ -2596,7 +2603,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:46.265Z",
+          "autoFetchedAt": "2026-07-06T18:10:20.413Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2620,7 +2627,7 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:36:53.394Z",
+          "autoFetchedAt": "2026-07-06T18:10:27.578Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
@@ -2644,10 +2651,151 @@
         "matches": [],
         "meta": {
           "autoSource": "football-data.org",
-          "autoFetchedAt": "2026-07-04T23:37:00.534Z",
+          "autoFetchedAt": "2026-07-06T18:10:41.920Z",
           "autoCapped": {
             "allTime": true,
             "worldCup": true
+          },
+          "manualSupplement": null
+        }
+      }
+    },
+    "r16-m5": {
+      "headToHeadStats": {
+        "teams": {
+          "home": "portugal",
+          "away": "spain"
+        },
+        "allTime": {
+          "meetings": 0
+        },
+        "worldCup": {
+          "meetings": 0
+        },
+        "matches": [],
+        "meta": {
+          "autoSource": "football-data.org",
+          "autoFetchedAt": "2026-07-06T18:10:34.756Z",
+          "autoCapped": {
+            "allTime": true,
+            "worldCup": true
+          },
+          "manualSupplement": null
+        }
+      }
+    },
+    "r16-m7": {
+      "headToHeadStats": {
+        "teams": {
+          "home": "argentina",
+          "away": "egypt"
+        },
+        "allTime": {
+          "meetings": 0
+        },
+        "worldCup": {
+          "meetings": 0
+        },
+        "matches": [],
+        "meta": {
+          "autoSource": "football-data.org",
+          "autoFetchedAt": "2026-07-06T18:10:49.084Z",
+          "autoCapped": {
+            "allTime": false,
+            "worldCup": false
+          },
+          "manualSupplement": null
+        }
+      }
+    },
+    "r16-m8": {
+      "headToHeadStats": {
+        "teams": {
+          "home": "switzerland",
+          "away": "colombia"
+        },
+        "allTime": {
+          "meetings": 0
+        },
+        "worldCup": {
+          "meetings": 0
+        },
+        "matches": [],
+        "meta": {
+          "autoSource": "football-data.org",
+          "autoFetchedAt": "2026-07-06T18:10:56.265Z",
+          "autoCapped": {
+            "allTime": true,
+            "worldCup": true
+          },
+          "manualSupplement": null
+        }
+      }
+    },
+    "qf-m1": {
+      "headToHeadStats": {
+        "teams": {
+          "home": "france",
+          "away": "morocco"
+        },
+        "allTime": {
+          "meetings": 1,
+          "homeWins": 1,
+          "awayWins": 0,
+          "draws": 0,
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "lastMeeting": "2022-12-14"
+        },
+        "worldCup": {
+          "meetings": 1,
+          "homeWins": 1,
+          "awayWins": 0,
+          "draws": 0,
+          "homeGoals": 2,
+          "awayGoals": 0,
+          "lastMeeting": "2022-12-14"
+        },
+        "matches": [
+          {
+            "date": "2022-12-14",
+            "competition": "FIFA World Cup",
+            "homeTeam": "France",
+            "awayTeam": "Morocco",
+            "homeScore": 2,
+            "awayScore": 0
+          }
+        ],
+        "meta": {
+          "autoSource": "football-data.org",
+          "autoFetchedAt": "2026-07-06T18:11:03.442Z",
+          "autoCapped": {
+            "allTime": false,
+            "worldCup": false
+          },
+          "manualSupplement": null
+        }
+      }
+    },
+    "qf-m3": {
+      "headToHeadStats": {
+        "teams": {
+          "home": "norway",
+          "away": "england"
+        },
+        "allTime": {
+          "meetings": 0
+        },
+        "worldCup": {
+          "meetings": 0
+        },
+        "matches": [],
+        "meta": {
+          "autoSource": "football-data.org",
+          "autoFetchedAt": "2026-07-06T18:11:10.631Z",
+          "autoCapped": {
+            "allTime": false,
+            "worldCup": false
           },
           "manualSupplement": null
         }

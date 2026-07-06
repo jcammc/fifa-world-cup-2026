@@ -163,6 +163,25 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 
 **Next pass trigger:** after the remaining 6 R32 matches complete, or once the Round of 16 Wikipedia pages start appearing (whichever comes first).
 
+### Pass 2 retrospective (2026-07-06)
+
+**Trigger:** run as a deliberate prerequisite before the Sprint 37 knockout-bracket architecture investigation, so verification of those fixes wouldn't be confounded by stale data. All 6 remaining R32 matches (m11–m16) had completed since Pass 1; Round of 16 matchdays 1–2 (m1–m4) had also completed.
+
+**What changed:**
+- `npm run sync-data`: `fixtures.json`/`standings.json` unchanged (group stage already 72/72 FT). `knockout.json` — 13 matches updated: all 6 remaining R32 results (Portugal 2–1 Croatia, Spain 3–0 Austria, Switzerland 2–0 Algeria, Argentina 3–2 Cape Verde, Colombia 1–0 Ghana, Australia 3–5 Egypt) plus 4 R16 results (Paraguay 0–1 France, Canada 0–3 Morocco, Brazil 1–2 Norway, Mexico 2–3 England). Notably, `sync-data.mjs`'s own opportunistic team-matching (`syncKnockout()`) auto-resolved `r16-m5` (Portugal v Spain) and `qf-m1` (France v Morocco) correctly on its own, since those dates didn't collide with another still-TBD slot.
+- **Live confirmation of the date-fallback ambiguity found during the Sprint 37 investigation:** `r16-m7`/`r16-m8` (both kickoff `2026-07-07`, same UTC date) and `qf-m3` (shares kickoff date `2026-07-11` with `qf-m4`) stayed fully TBD after `sync-data` despite their feeder matches already being complete — `syncKnockout()`'s single-candidate-per-date fallback couldn't disambiguate. This is the same fragility documented in `netlify/functions/live-data.mjs`'s `mergeKnockout()`, confirmed live in the offline path too, not just hypothesized.
+- `scripts/update-knockout.js --force` (dry-run reviewed first, then applied — same procedure as Pass 1): run for all 10 newly-FT matches (6 R32 + 4 R16). Propagated: `r16-m5` (portugal/spain — already correct, no-op), `r16-m7` (argentina/egypt — **this is the slot the automated sync couldn't resolve**), `r16-m8` (switzerland/colombia — **also unresolved by sync**), `qf-m1` (france/morocco — already correct, no-op), `qf-m3` (norway/england — **also unresolved by sync**). Round of 16 is now **fully populated** (8/8 matches have both teams); Quarter-finals has 2/4 resolved (`qf-m1`, `qf-m3`), the other 2 correctly still TBD pending `r16-m5`/`m6`/`m7`/`m8` results.
+- `npm run gather-match-events`: 6 newly populated (the 6 R32 matches — goals, cards, subs, lineups, MOTM). R16/QF/SF Wikipedia pages don't exist yet (expected — those rounds are still in progress). Group D's known incomplete-template gap unchanged.
+- `npm run gather-head-to-head`: 6 `headToHead` → `matchStory` migrations (the 6 newly-FT R32 matches) plus 1 new entry (`k-r3-cod-uzb`, a previously rate-limited Group K gap that resolved this run). R16/QF/SF pages still don't exist, as expected.
+- `node --env-file=.env scripts/gather-head-to-head-stats.mjs`: resolvable-fixture count rose from 93 to 98 (R16 `m5`–`m8` and QF `m1`/`m3` became resolvable now that their teams are known). All 7 Sprint 36 manual overrides re-merged correctly. Capped count rose from 29 to 31 (new fixtures inherit the same capping signal); still 24 unsupplemented (up from 22 — the newly-resolvable fixtures added their own capped pairs to the backlog, not a regression).
+- `npm run validate` — clean pass throughout (same pre-existing warnings as before, unrelated to this pass).
+
+**Browser verification (Playwright/Chromium):** `r32-m11` (Portugal 2–1 Croatia, newly FT) renders full match events. `r16-m4` (Mexico 2–3 England, newly FT) renders Match Story + Head-to-Head History + Recent Form. `qf-m1` (France v Morocco, newly resolved, still upcoming) renders its Head-to-Head/World Cup section — a fixture that only became resolvable during this pass. Confirmed the Round of 16 column on `#knockout` now shows the round-level "All confirmed" banner with zero individual ticks (proving `allTeamsSet` is now `true` for R16), while the Quarter-finals column shows exactly 4 individual ticks (France/Morocco/Norway/England) and no round banner (`qf-m2`/`qf-m4` still TBD) — a live, real-data confirmation of the Sprint 37 root-cause diagnosis: the round-level gating bug hasn't been fixed, it has simply moved down to the next partially-resolved round, exactly as predicted. Zero console/page errors across all navigations.
+
+**Remaining gaps after this pass:** Group D (4 fixtures) and Group K (match-events fully closed this pass) — Group D's incomplete-template issue is the only surviving match-events gap. `headToHeadStats` manual-supplement backlog: 24 pairs (up from 22, expected — new fixtures became resolvable). R16 `m5`–`m8` results, and QF `m2`/`m4` pairings, will need this same cadence once played.
+
+**Next pass trigger:** after Round of 16 matchdays 3–4 (`m5`–`m8`) complete, or once the Quarter-finals Wikipedia page appears (whichever comes first).
+
 ---
 
 ## Sprint 35 — Guardian Bios / Player Descriptions
