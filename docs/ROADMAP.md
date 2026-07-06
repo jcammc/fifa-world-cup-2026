@@ -288,12 +288,16 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 37 — Regression-Prevention Test Coverage
-**Category:** Architectural improvement · **Status:** Not started
+**Category:** Architectural improvement · **Status:** Approved (2026-07-06), not yet started
 
 **Goal:** Narrow, high-value automated coverage so a bug shaped like Sprint 33's cannot ship silently again.
 
-**Scope:** `node:test` (zero new deps, fits the project's no-build-step philosophy) unless a fuller framework is wanted. Three tests: (1) Match Story regression test on a known-populated FT fixture, (2) `npm run validate` smoke test, (3) router-resolution test for every named route. Capped scope — no coverage-percentage chasing.
-**Dependencies:** First test needs Sprint 33 landed.
+**Tooling decision (resolved 2026-07-06):** `node:test` (built into Node 18+, zero new dependencies, fits the project's no-build-step philosophy) plus **`jsdom`** as a single lightweight devDependency, added only because the router-resolution test needs real `document`/`location` APIs. Vitest/Jest rejected — both would require a config file and transform pipeline, contrary to this project's zero-build-step identity, and are overkill for three deliberately capped tests.
+
+**Sequencing decision (resolved 2026-07-06):** rather than treating this as a strict prerequisite for Sprint 42, write a targeted regression test alongside *each* of Sprint 42's four implementation steps as it lands (e.g. a test asserting connector-derived pairs match `js/bracket-topology.js` for a known bracket state; a test reproducing the exact R16/QF same-date collision against the consolidated merge function), then fold those into this sprint's permanent suite afterward. This gets Sprint 42's actively-recurring propagation pain fixed without an unrelated, not-yet-started test-infrastructure sprint gating it.
+
+**Scope:** Three tests: (1) Match Story regression test on a known-populated FT fixture, (2) `npm run validate` smoke test, (3) router-resolution test for every named route — plus whatever Sprint 42-alongside tests get folded in per the sequencing decision above. Capped scope — no coverage-percentage chasing.
+**Dependencies:** First test needs Sprint 33 landed (it has).
 **Complexity:** Medium (first test in the project costs more than subsequent ones).
 **Completion criteria:** Tests exist, pass, runnable via `npm test`; the regression test specifically fails if Sprint 33's fix is reverted.
 **Tournament timing:** Evergreen.
@@ -301,9 +305,11 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 38 — Ranking System Design (design deliverable, no code)
-**Category:** Product/architecture design · **Status:** Not started
+**Category:** Product/architecture design · **Status:** Approved (2026-07-06) — process confirmed, session not yet held
 
 **Goal:** Produce and get sign-off on a full ranking-system design before any data sourcing begins.
+
+**Process decision (resolved 2026-07-06):** confirmed as a dedicated design session (e.g. `/brainstorming`), not an inline discussion — a proper written design document with an explicit Phase 1 scope boundary is required before any Sprint 39 implementation begins. Given Sprint 39's own cost profile (real manual data-sourcing across ~1,250 players), an under-baked inline answer here risks expensive rework after sourcing has already started, which the dedicated-session cost avoids.
 
 **Deliverable — answers needed:**
 - What gets ranked (players only, or teams/managers too)?
@@ -313,7 +319,6 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 - Which values are static vs. evolve during the tournament (and on what trigger)?
 - Where in the app do rankings surface (Profile Panel? Compare Teams? a new leaderboard page? Statistics Dashboard)?
 
-**Recommended process:** run as its own dedicated planning session (e.g. `/brainstorming`), not answered inline in an implementation sprint.
 **Dependencies:** None to start; fully blocks Sprint 39.
 **Completion criteria:** written design, reviewed and approved, with an explicit v1 scope boundary.
 **Tournament timing:** Evergreen.
@@ -321,7 +326,7 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 39 — Rankings Phase 1 Implementation
-**Category:** Genuinely new feature (data sourcing + build) · **Status:** Not started, blocked on Sprint 38
+**Category:** Genuinely new feature (data sourcing + build) · **Status:** Not started, remains fully blocked on Sprint 38 (confirmed 2026-07-06) — no implementation work of any kind until the Sprint 38 design is written and approved.
 
 **Goal:** Implement the ranking system per Sprint 38's agreed design, Phase 1 scope.
 
@@ -332,34 +337,34 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 40 — Documentation & Process Debt Cleanup
-**Category:** Documentation + minor technical debt · **Status:** Not started
+**Category:** Documentation + minor technical debt · **Status:** Decisions resolved (2026-07-06), not yet executed
 
 **Goal:** Bring `docs/08_PROJECT_STATUS_REVIEW.md` back in line with reality; remove misleading tooling signals.
 
-**Scope:**
-- Refresh `docs/08_PROJECT_STATUS_REVIEW.md` (best after 33/34/35/36 land).
-- Decide (user's call, not yet decided): keep or remove that doc's stated precedence over this document/`SESSION_HANDOFF.md`.
-- Decide (user's call, not yet decided): delete the three confirmed-dead stub scripts (`scripts/generate-player-bios.js`, `scripts/lib/bio-templates.js`, `scripts/update-standings.js`)?
-- Decide (user's call, not yet decided): delete `netlify/functions/sync-tournament.mjs` outright, or just remove its `netlify.toml` schedule block and keep the file as reference?
-- Fix or remove the two no-op steps (`generate-bios`, `generate-rankings`) from the `pre-deploy` npm script chain.
+**Scope, with decisions resolved 2026-07-06:**
+- **Delete the confirmed-dead stub scripts:** `scripts/generate-player-bios.js`, `scripts/update-standings.js`, `scripts/lib/bio-templates.js` — **and `scripts/lib/ranking-formula.js`**, found in the identical state while verifying this decision (`computeConsensus()` returns `null`, unimported anywhere — not in the original list, but the same situation exactly). All four are confirmed zero-risk to delete: bare stubs or unimported dead code, fully superseded (`generate-player-bios.js` by `gather-guardian-bios.mjs`, `update-standings.js` by `sync-data.mjs`), preserved in git history regardless.
+- **Remove the false precedence claim** in `docs/08_PROJECT_STATUS_REVIEW.md` (line 9: *"When these documents conflict on feature status, this document takes precedence"* over `SESSION_HANDOFF.md`) — **immediately, not gated on the full content refresh.** These are two separable tasks; the one-line correction shouldn't wait on the larger audit.
+- **Remove the two no-op `pre-deploy` steps** (`generate-bios`, `generate-rankings`) now, since they call the stub files being deleted above. Re-add real invocations once Sprint 39 actually implements ranking generation. (Also worth fixing in the same pass: `gather-guardian-bios.mjs`, which is fully implemented and already in use, currently isn't part of the `pre-deploy` chain at all.)
+- **Delete `netlify/functions/sync-tournament.mjs`** — confirmed safe: its implementation knowledge is fully preserved in **`docs/LIVE_DATA_PLAN.md` §11 ("Architecture Redesign — Cache-Aside Pipeline")** and in `docs/ENGINEERING_PRINCIPLES.md` (which uses this exact incident as its canonical "silent success ≠ correctness" example). Nothing is lost by deleting the code file; it stops a real, ongoing cost too — the `netlify.toml` schedule still triggers this function every 2 minutes for a guaranteed no-op, which is quota/log noise on the Netlify account, not just a tidiness issue.
+- Refresh `docs/08_PROJECT_STATUS_REVIEW.md` content itself (best after 33/34/35/36/42 land — the first four already have).
 
-**Dependencies:** Best after 33/34/35/36. **Complexity:** Low.
+**Dependencies:** Best after 33/34/35/36 (satisfied). **Complexity:** Low.
 **Tournament timing:** Evergreen, best done last among whichever sprints run first.
 
 ---
 
 ## Sprint 41 — Remaining Photo Gaps (optional, explicitly the user's call)
-**Category:** Operational/data-maintenance, evergreen · **Status:** Not started, not yet greenlit
+**Category:** Operational/data-maintenance, evergreen · **Status:** Deferred (decided 2026-07-06) — not skipped, revisit later
 
 **Goal:** Another recovery pass for 300 remaining null player photos + 3 manager photos (Haiti, Cape Verde, Saudi Arabia).
 **Scope:** `node scripts/gather-photos.js` with `RETRY_NULLS=true`, then `WIKIDATA_PASS=true` (same pattern as Sprint 20-21).
 **Completion criteria:** coverage improves measurably from 76.9% (996/1,296).
-**Tournament timing:** Evergreen, no urgency. Not yet approved to run — ask before starting.
+**Tournament timing:** Evergreen, no urgency. **Deferred rather than skipped or run now** — isn't blocking anything, and there's higher-leverage active work in flight (Sprint 42, ongoing Sprint 34 cadence); revisit once those settle.
 
 ---
 
 ## Sprint 42 — Knockout Bracket Architecture Fixes
-**Category:** Architectural bug fix (rendering + data-pipeline consolidation) · **Status:** Investigation complete (2026-07-06), plan below, **not yet implemented**
+**Category:** Architectural bug fix (rendering + data-pipeline consolidation) · **Status:** Fully greenlit (2026-07-06), **not yet implemented**
 
 **Goal:** Fix two confirmed architectural defects in the knockout bracket — a round-level "confirmed" gate that should be per-match, and a bracket connector-line algorithm that positions cards by array order instead of actual propagation relationships — without a visual redesign.
 
@@ -412,13 +417,74 @@ Triggered by a user report of the bracket showing wrong-looking results (paraphr
 **Completion criteria:** Per-match tick verified correct on a round with mixed resolved/TBD slots; connector lines verified to match the topology graph for every current bracket slot; `sync-data.mjs` and `live-data.mjs` share one merge implementation; a reproduction of the exact R16-same-date collision scenario resolves correctly without manual `update-knockout.js` intervention.
 **Tournament timing:** Time-sensitive in the sense that every future round transition (QF→SF, SF→Final) will keep re-exposing Defect 1 and re-testing Defect 3's fallback until fixed — the sooner this lands, the fewer more manual `update-knockout.js` catch-up passes are needed for the same reason.
 
+### Post-implementation verification pass (required before moving to the next major feature)
+
+Once all four implementation steps land, a dedicated verification pass — automated **and** real-browser — is required before starting any other major feature work, proving:
+1. **Connector topology is correct** — every connector line matches `js/bracket-topology.js`'s feeder relationships, not array order (re-run the same slot-by-slot comparison table used to find Defect 2, now expecting zero mismatches).
+2. **Propagation works correctly** — a full, real (or simulated) result cascades correctly through the whole chain, R32 → R16 → QF → SF → Final, via the consolidated merge function.
+3. **Confirmation indicators behave correctly** — the per-match tick and the round-level banner each behave as specified in Defect 1's fix, verified on a round with a genuine mix of resolved and still-TBD matches.
+4. **Automatic advancement works correctly** — an end-to-end check (distinct from #2's function-level correctness) that a newly-synced result advances through `sync-data.mjs`/`live-data.mjs` without needing manual `update-knockout.js` intervention, specifically re-testing the exact R16/QF same-date collision scenario that misfired live during Sprint 34 Pass 2.
+5. **No regressions** — existing Match Centre, Tournament Centre, and best-thirds pages still render correctly for both resolved and TBD matches.
+
 ---
+
+## Sprint 43 — Broadcaster Schedule Data (proposal only, no code written)
+**Category:** Data acquisition (new pipeline) · **Status:** Investigation + proposal complete (2026-07-06), **awaiting decision on where it belongs in the roadmap — no code written**
+
+**Trigger:** user report that upcoming knockout fixtures show no "Watch on BBC/ITV" badge. Investigated read-only (no files changed) before any implementation, per the same discipline used for Sprint 42.
+
+### Current state and root cause
+
+**Not a regression — an acquisition gap that was never closed.** Checked `data/knockout.json`: all 16 R32 matches have real `broadcaster` values (`"ITV"`/`"BBC"`); every match from R16 onward (`r16-m1` through `final-m1`, 22 matches) has `broadcaster: null`. Checked `data/fixtures.json`: **all 72 group-stage fixtures have `broadcaster: null`, and always have** — this field has never been populated for the group stage at all, only for the 16 R32 matches, apparently via a one-time manual entry during Sprint 29 when the badge-rendering feature was built (ROADMAP's own Sprint 29 entry: *"All R32 matches have `broadcaster` populated in `knockout.json`"*).
+
+**No acquisition pipeline exists.** `grep -ri broadcaster scripts/ netlify/` returns zero hits — not `sync-data.mjs`, not any `gather-*.mjs` script, not `live-data.mjs`. This isn't a bug in an existing pipeline (rendering issue / stale data / merge bug) — no pipeline was ever built. `docs/DATA_ENTRY_GUIDE.md`'s fixture schema example (§13) shows `"broadcaster": null` as the field's own illustrative default, consistent with it always having been a manually-entered-when-known field, never an automated one.
+
+**No evidence the source data exists and simply fails to propagate.** football-data.org's API isn't referenced for broadcaster anywhere in this codebase, and the 16 R32 values (`ITV,BBC,ITV,ITV,ITV,BBC,ITV,BBC,BBC,ITV,BBC,BBC,BBC,ITV,ITV,BBC`) don't follow an obvious derivable rule (not simple alternation) — consistent with one-time hand-entry from a real published UK schedule, not an algorithm or a field this project already has access to.
+
+### Why only upcoming matches are actually affected
+
+`js/broadcasters.js`'s `broadcasterBadge()` and `broadcasterIcon()` both explicitly `return ''` when `status === 'FT'` (lines 29 and 46) — completed matches never render a broadcaster badge, regardless of the underlying data. This means:
+- The 4 already-completed R16 matches (`r16-m1`–`r16-m4`) are **not** part of the visible symptom — their `null` broadcaster is invisible by design.
+- Retroactively backfilling the 72 already-FT group-stage fixtures would have **zero visible effect** in the UI.
+- The actual, narrower, user-visible gap is specifically the genuinely-still-upcoming matches (as of this writing: `r16-m5` onward through `final-m1`).
+
+### Manual, automated, or hybrid?
+
+Did a live viability check (not implementation) before recommending: the UK 2026 broadcast split is real and public — BBC and ITV share all 104 matches free-to-air (confirmed via web search: BBC ~54 games, ITV ~51, both networks air the Final). A Wikipedia article, "2026 FIFA World Cup broadcasting rights," exists, but appears (based on search summaries, not yet directly inspected) to document country-level rights holders rather than a match-by-match channel table — similar in shape to the Sprint 36 H2H investigation, where the "obvious" source turned out not to have the granularity needed. Several TV-listing aggregator sites (Sports Mole, Goal.com UK, 101greatgoals.com, live-footballontv.com, fanzo.com) appear to maintain match-by-match BBC/ITV listings, but **none have been tested for bot-blocking/WAF behavior in this project** — Sprint 36 found several superficially-similar sites (`thesoccerworldcups.com`, Transfermarkt, FBref) blocked `ClaudeBot` outright, so this needs the same kind of short, deliberate viability pass before committing to any one source, not an assumption that it'll work.
+
+**Recommendation: hybrid, reusing the exact pattern already proven in Sprint 36.** A short automated-source viability check first (same spirit as Sprint 36's architecture investigation — inspect robots.txt/WAF behavior on 1–2 candidates before writing a scraper), backed by a manual-override file for whatever the automated pass can't resolve — mirroring `data/h2h-manual-overrides.json`'s already-documented workflow (`docs/DATA_ENTRY_GUIDE.md` §18) rather than inventing a new pattern. Given broadcaster assignment is a simple two-value enum (unlike H2H's richer stats schema), this is very plausibly simpler than the H2H pipeline even in the pure-manual case — likely a small CLI update per round (matching `update-knockout.js`'s existing shape) rather than a full scraper, if the automated-source check comes back negative.
+
+### What source(s) would be appropriate
+
+- **Primary candidate to test first:** Wikipedia's "2026 FIFA World Cup broadcasting rights" article — needs direct inspection (not yet done) to confirm whether it has per-match detail or only country/rights-holder-level facts.
+- **Secondary candidates for match-by-match schedule specifically:** Sports Mole, Goal.com UK, 101greatgoals.com, live-footballontv.com, fanzo.com — found via search, none bot-accessibility-tested yet.
+- **Fallback:** manual entry from BBC/ITV's own official schedule pages or press releases (a citable primary source) — the same workflow that produced the original R32 values. Worth noting: per search results, "the schedule is divided between the networks, requiring viewers to constantly check daily listings" — i.e., assignments firm up close to matchday, similar to how H2H stats had a "capped" completeness problem early on. An automated or manual pass run too far ahead of a round may not have reliable data yet regardless of source.
+
+### How it fits into the existing architecture
+
+**No schema or rendering changes needed — the gap is purely on the acquisition side.** The `broadcaster` field already exists on every fixture/knockout match; `js/broadcasters.js`'s `BROADCASTERS` config and `broadcasterBadge()`/`broadcasterIcon()` are already fully built and correctly wired into Match Centre, the Tournament Centre rail/strip, and the knockout bracket. Whatever gets built here only needs to **populate** the existing field — following existing naming conventions, a `scripts/gather-broadcasters.mjs` (if an automated source pans out, matching the `gather-*.mjs` family) and/or a `data/broadcaster-overrides.json` + small CLI update step (if manual, matching `update-knockout.js`'s and `h2h-manual-overrides.json`'s shape) would both slot in without touching any rendering code at all.
+
+### Own sprint or folded into Sprint 34?
+
+**Recommendation: own sprint (this one, Sprint 43), not folded into Sprint 34** — for the same reason Sprint 36 (H2H stats) got its own sprint rather than being absorbed into Sprint 34's cadence. Sprint 34's defined scope is explicitly about running **already-built, proven pipelines** (`sync-data`, `gather-match-events`, `gather-head-to-head`, `gather-head-to-head-stats`) on a recurring schedule — it is not where new acquisition capability gets built. Broadcaster data needs a pipeline (or manual workflow) built from scratch, whichever way the viability check comes out. **Confirmed no architectural overlap with Sprint 42** — zero shared code paths (Sprint 42 touches `knockout-bracket.js` and the `sync-data.mjs`/`live-data.mjs` knockout-merge functions specifically; broadcaster touches neither) — so per your own stated condition, this correctly stays a separate sprint. Once built, re-running/re-checking it going forward is exactly the kind of thing that *then* joins the Sprint 34 cadence (the same way `gather-head-to-head-stats.mjs` did after Sprint 36 built it) — the build is Sprint 43; the maintenance becomes Sprint 34's problem afterward.
+
+**Explicitly not done in this pass:** no code written, no source tested via a real fetch, no data populated. First real task if greenlit: the automated-source viability check (test Wikipedia's broadcasting-rights article structure + 1–2 TV-listing aggregators for bot-accessibility) — a research step, not an implementation one, matching how Sprint 36 began.
+
+**Dependencies:** None blocking. **Complexity:** Low–Medium, depending entirely on whether the automated-source viability check succeeds (low if yes, since the schema/rendering already exist; still low-to-medium if manual-only, given the simple two-value schema).
+**Completion criteria:** Not yet defined — pending your decision on where this sits in the roadmap and whether to greenlight the viability check.
+**Tournament timing:** Value decays as the tournament progresses — the badge only ever matters for still-upcoming matches, so fewer rounds remain in which this is worth fixing the closer the tournament gets to the Final.
+
+---
+
+## Decisions resolved (2026-07-06)
+
+1. ~~Sprint 38 scheduling~~ — **dedicated design session**, not inline.
+2. ~~Sprint 36 scope~~ — **both** all-time and WC-only, resolved when `headToHeadStats` was implemented.
+3. ~~Sprint 40 — three confirmations~~ — **delete** the dead stub scripts (plus `ranking-formula.js`, found in the same state); **remove** the doc precedence claim now, independent of the full refresh; **delete** `sync-tournament.mjs` outright (knowledge preserved in `docs/LIVE_DATA_PLAN.md` §11 and `docs/ENGINEERING_PRINCIPLES.md`, confirmed).
+4. ~~Sprint 37 tooling~~ — **`node:test` + `jsdom`**, not Vitest/Jest.
+5. ~~Sprint 41~~ — **deferred**, not skipped.
+6. ~~Sprint 42~~ — **fully greenlit**, in the recommended order (topology module → per-match tick → connector fix → sync/live-data consolidation), with a required post-implementation verification pass before the next major feature.
 
 ## Decisions still needed from the user (not yet resolved)
 
-1. Sprint 38 scheduling — dedicated design session vs. inline draft.
-2. Sprint 36 scope — all-time vs. WC-only vs. both for `headToHeadStats`.
-3. Sprint 40 — three small confirmations: delete dead stub scripts? keep/remove doc precedence claim? delete `sync-tournament.mjs` outright or keep as reference?
-4. Sprint 37 tooling — `node:test` (default) vs. Vitest/Jest.
-5. Sprint 41 — greenlight, defer, or skip.
-6. Sprint 42 — greenlight implementation (plan is written, nothing implemented yet); confirm recommended order (topology module → per-match tick → connector fix → sync/live-data consolidation) before starting.
+1. **Sprint 43 (broadcaster data)** — where does this sit in the roadmap relative to Sprint 42/37, and is the automated-source viability check (Wikipedia + TV-listing aggregators) greenlit as the first task? Proposal is written (see Sprint 43 above); no code or data acquisition has happened yet.
