@@ -13,6 +13,7 @@ function read(rel) {
 const VALID_POSITIONS = new Set(['GK', 'DF', 'MF', 'FW']);
 const DOB_MIN = 1984;   // oldest plausible tournament player
 const DOB_MAX = 2009;   // youngest plausible tournament player
+const BROADCASTER_WARN_DAYS = 7; // flag an upcoming knockout match missing a broadcaster once this close to kickoff
 
 function validateSquads(clubs) {
   const clubIds  = new Set(clubs.data.map(c => c.id));
@@ -92,6 +93,36 @@ function validateFixtures() {
   return { errors, total: fixtures.length };
 }
 
+// Sprint 43 — no automated broadcaster source exists (see docs/ROADMAP.md
+// Sprint 43 for the investigation), so this is detection, not acquisition:
+// flag non-FT knockout matches with a confirmed matchup but no broadcaster,
+// once close enough to kickoff to actually be researchable. Never flags a
+// completed match (the badge never renders for FT — js/broadcasters.js) or
+// a still-TBD pairing (nothing to research yet). Non-fatal — this rides
+// along on every `npm run validate` call, which is already the last step
+// of every Sprint 34 maintenance pass, so no new recurring script is needed.
+function validateBroadcasters() {
+  const knockout = read('data/knockout.json').data;
+  const warnings = [];
+  const now = Date.now();
+
+  for (const round of knockout) {
+    for (const m of round.matches ?? []) {
+      if (m.status === 'FT') continue;
+      if (!m.homeTeamId || !m.awayTeamId) continue;
+      if (m.broadcaster) continue;
+
+      const kickoffMs = m.kickoff ? new Date(m.kickoff).getTime() : null;
+      const daysUntil = kickoffMs != null ? (kickoffMs - now) / 86_400_000 : null;
+      if (daysUntil != null && daysUntil > BROADCASTER_WARN_DAYS) continue;
+
+      warnings.push(`${m.id}: ${m.homeTeamId} v ${m.awayTeamId} (${m.kickoff ?? 'kickoff TBD'}) — no broadcaster set`);
+    }
+  }
+
+  return { warnings };
+}
+
 function summaryStats(clubs) {
   const countries   = read('data/countries.json').data;
   const playerFiles = readdirSync(join(root, 'data/players')).filter(f => f.endsWith('.json'));
@@ -150,6 +181,13 @@ function main() {
     fx.errors.forEach(e => console.log('  ✗', e));
   } else {
     console.log('Fixture checks: ✓ all passed');
+  }
+
+  // ── Broadcaster schedule (Sprint 43 — detection, not acquisition) ──────
+  const bc = validateBroadcasters();
+  if (bc.warnings.length) {
+    console.log(`\nBroadcaster gaps (${bc.warnings.length}) — non-fatal, see docs/DATA_ENTRY_GUIDE.md §19:`);
+    bc.warnings.forEach(w => console.log('  ⚠', w));
   }
 
   // ── Summary ─────────────────────────────────────────────────────────────

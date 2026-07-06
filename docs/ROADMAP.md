@@ -458,8 +458,8 @@ All four steps were implemented in the agreed order: (1) extracted `js/bracket-t
 
 ---
 
-## Sprint 43 — Broadcaster Schedule Data (architecture decided, not yet implemented)
-**Category:** Data maintenance (detection + manual workflow, not an acquisition pipeline) · **Status:** Investigation complete, architecture decided (2026-07-06), **no code written yet**
+## Sprint 43 — Broadcaster Schedule Data (detection + manual workflow)
+**Category:** Data maintenance (detection + manual workflow, not an acquisition pipeline) · **Status:** COMPLETE (2026-07-06)
 
 **Trigger:** user report that upcoming knockout fixtures show no "Watch on BBC/ITV" badge. Investigated read-only (no files changed) before any implementation, per the same discipline used for Sprint 42.
 
@@ -521,6 +521,19 @@ I checked `validate-data.js` directly: it currently validates squads (`validateS
 **Completion criteria:** `npm run validate` clearly lists every non-FT knockout match still missing a broadcaster, without failing validation; a human can act on the report using the new doc section; zero application/rendering code touched.
 **Tournament timing:** Value decays as the tournament progresses — fewer knockout matches remain to ever need this the closer the tournament gets to the Final — so implementing this sooner rather than later captures more of its value.
 
+### Implementation retrospective (2026-07-06)
+
+**What was built, exactly as recommended:**
+- `scripts/validate-data.js`: new `BROADCASTER_WARN_DAYS = 7` constant; new `validateBroadcasters()` function reading `data/knockout.json` and flagging any match where `status !== 'FT'`, both `homeTeamId`/`awayTeamId` are set, `broadcaster` is `null`, and kickoff is within the warning window; wired into `main()` as a new non-fatal warnings block (same severity tier as the squad DOB warning — never affects `VALIDATION PASSED`/`FAILED`).
+- `docs/DATA_ENTRY_GUIDE.md` §19: documents why broadcaster is manual (the investigation findings, condensed), why only non-FT knockout matches ever need a value (the FT-suppression rule), how the detection works, the 4-step manual fill-in workflow (research → edit `data/knockout.json` directly → re-validate), and how to add a new broadcaster value if the UK rights split ever changes.
+- **No application or rendering code touched** — confirmed by design (the schema and `js/broadcasters.js` were already complete) and by the diff itself (only `scripts/validate-data.js` and one doc file changed).
+
+**Verification performed:**
+- `npm run validate` against live current data: correctly flagged exactly 6 matches (`r16-m5`, `r16-m6`, `r16-m7`, `r16-m8`, `qf-m1`, `qf-m3` — every non-FT knockout match with a confirmed pairing) and correctly excluded the 4 FT R16 matches, the 2 QF matches with still-TBD pairings, and both SF/Final/3rd-place slots (all still TBD). `VALIDATION PASSED` unaffected by the new warnings, confirming the non-fatal severity is correct.
+- `npm test` — all 24 existing tests (Sprint 37) still pass unchanged, including `validate-smoke.test.mjs`, which re-runs `validate-data.js` and asserts on `VALIDATION PASSED` — confirms the new check doesn't break the existing smoke coverage. No new dedicated test was written for `validateBroadcasters()` itself (a deliberate scope call, not an oversight — this sprint's ask was the detection + docs, not new test coverage; a targeted test could be added cheaply later given Sprint 37's infrastructure already exists, if wanted).
+
+**No architectural issues found during implementation** — the plan from the evaluation/recommendation phase matched the actual code shape exactly (confirmed `validate-data.js`'s squad-warnings pattern was there to mirror, confirmed knockout.json's schema needed no changes).
+
 ---
 
 ## Decisions resolved (2026-07-06)
@@ -531,8 +544,8 @@ I checked `validate-data.js` directly: it currently validates squads (`validateS
 4. ~~Sprint 37 tooling~~ — **`node:test` + `jsdom`**, not Vitest/Jest.
 5. ~~Sprint 41~~ — **deferred**, not skipped.
 6. ~~Sprint 42~~ — **fully greenlit**, in the recommended order (topology module → per-match tick → connector fix → sync/live-data consolidation), with a required post-implementation verification pass before the next major feature.
-7. ~~Sprint 43 architecture~~ — investigated 6 candidate automated sources (none comprehensive/reliable — see Sprint 43 above), then decided **automatic detection + manual completion**: extend `scripts/validate-data.js` with a new non-fatal warning check for non-FT knockout matches missing a `broadcaster`, reusing Sprint 36's "detect, report, point at manual workflow" reporting idiom (non-interactive) but *not* its separate-overrides-file mechanism, since broadcaster has no automated writer to protect a manual edit from. Rides along on `npm run validate`, already the last step of every Sprint 34 pass — no new recurring script needed.
+7. ~~Sprint 43~~ — investigated 6 candidate automated sources (none comprehensive/reliable), decided and **implemented automatic detection + manual completion**: `validateBroadcasters()` in `scripts/validate-data.js` flags non-FT knockout matches missing a `broadcaster` as a non-fatal warning, riding along on the already-existing `npm run validate` step (last step of every Sprint 34 pass) — no new recurring script. `docs/DATA_ENTRY_GUIDE.md` §19 documents the manual fill-in workflow. Verified: correctly flags exactly the 6 current gaps, all 24 Sprint 37 tests still pass.
 
 ## Decisions still needed from the user (not yet resolved)
 
-1. **Sprint 43 implementation greenlight** — architecture is decided (see above); no code has been written yet. Greenlight to implement the `validate-data.js` extension + `docs/DATA_ENTRY_GUIDE.md` §19?
+None currently open.

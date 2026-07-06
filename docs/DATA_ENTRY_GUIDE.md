@@ -702,4 +702,47 @@ As later knockout rounds resolve (R16 → QF → SF → Final), previously-unkno
 
 ---
 
+## SECTION 19 — BROADCASTER FIELD: MANUAL ENTRY WORKFLOW (Sprint 43)
+
+`broadcaster` on each `data/knockout.json` match (and `data/fixtures.json` fixture) is a **manually-maintained field, not an automated pipeline** — a deliberate, evidence-based decision, not a gap left for later.
+
+### Why this one is manual, not automated
+
+Sprint 43 investigated six candidate automated sources for UK broadcaster assignment (BBC vs. ITV) before concluding none clear the bar (full investigation and reasoning in `docs/ROADMAP.md` Sprint 43):
+
+- `sportsmole.co.uk` has a clean, structured `schema.org` `BroadcastEvent` data block covering all 104 matches — but only the 72 **group-stage** matches carry the precise channel assignment; all 32 **knockout-stage** matches (the only ones that ever actually need this — see below) fall back to a generic, non-specific description listing every platform, not the one assigned channel. Verified against a match we already know the true answer for.
+- `101greatgoals.com` has real per-round precision, but scoped to England's own path through the bracket, not a general answer for any of the 48 teams.
+- `livesoccertv.com` is WAF-blocked (HTTP 403). Wikipedia's dedicated broadcasting-rights article is country-level only, and the `{{football box}}` template already parsed by `gather-match-events.mjs` has no broadcaster field at all.
+
+In short: the one source with full match coverage is structurally blind to the round we need; the one source with real precision only covers one team. Building a scraper against either would be fragile or narrow. **Do not resurrect automated broadcaster acquisition without a fresh evaluation** — this was a considered decision, not an oversight.
+
+### Why only some matches ever need a value at all
+
+`js/broadcasters.js`'s `broadcasterBadge()`/`broadcasterIcon()` both return `''` once a match's `status` is `'FT'` — a completed match never renders the broadcaster badge, regardless of the data. Group-stage fixtures are all FT already, so their `broadcaster: null` is permanent and harmless — **do not spend time backfilling `data/fixtures.json`**, it would have zero visible effect. Only **non-FT knockout matches with a confirmed matchup** (both `homeTeamId` and `awayTeamId` set) ever need a real value.
+
+### Detection: `npm run validate` tells you when one is needed
+
+`scripts/validate-data.js`'s `validateBroadcasters()` flags any knockout match where `status !== 'FT'`, both teams are confirmed, `broadcaster` is still `null`, and kickoff is within `BROADCASTER_WARN_DAYS` (currently 7) — printed as a non-fatal warning block, same severity as the squad DOB warning; it never fails `VALIDATION PASSED`. Example output:
+
+```
+Broadcaster gaps (2) — non-fatal, see docs/DATA_ENTRY_GUIDE.md §19:
+  ⚠ qf-m1: france v morocco (2026-07-09T20:00:00Z) — no broadcaster set
+  ⚠ qf-m3: norway v england (2026-07-11T21:00:00Z) — no broadcaster set
+```
+
+This is the same "detect an incomplete case, print it clearly, point at the fix" idiom Sprint 36 established for `headToHeadStats` (`gather-head-to-head-stats.mjs`'s capped-pair summary) — reused deliberately. **What's different here, on purpose:** there's no separate overrides file or merge script. Sprint 36's file-based override exists specifically to protect a manual correction from being overwritten by an *automated* pipeline that re-runs periodically. Broadcaster has no automated writer to protect against — a human edits the field directly.
+
+### How to fill in a flagged match
+
+1. Run `npm run validate` (or just check the last Sprint 34 pass's output — this check rides along automatically, no separate command needed).
+2. For each flagged match, research the true channel from a citable source: the official BBC/ITV schedule pages, or cross-check against the aggregator sites investigated above (useful as a human reference even though none are reliable enough to automate).
+3. Edit `data/knockout.json` directly — set `"broadcaster"` to `"BBC"` or `"ITV"` (matching the keys in `js/broadcasters.js`'s `BROADCASTERS` config) for the relevant match. No other file needs touching; no script needs re-running.
+4. Re-run `npm run validate` to confirm the warning is gone.
+
+### Adding a new broadcaster value (if the UK rights split ever changes)
+
+Add a new entry to `BROADCASTERS` in `js/broadcasters.js` (logo, label, links — see that file's own header comment: "Adding a broadcaster = one new entry in `BROADCASTERS`. No rendering code to touch."). No change needed in `validate-data.js` or this workflow.
+
+---
+
 End of DATA_ENTRY_GUIDE.md
