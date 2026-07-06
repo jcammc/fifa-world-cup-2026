@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-06T19:50:03.974Z",
+  "lastUpdated": "2026-07-06T23:24:23.062Z",
   "data": [
     {
       "id": "r32",
@@ -279,9 +279,9 @@
           "homeTeamId": "portugal",
           "awayTeamId": "spain",
           "homeScore": 0,
-          "awayScore": 0,
+          "awayScore": 1,
           "kickoff": "2026-07-06T19:00:00Z",
-          "status": "scheduled",
+          "status": "FT",
           "venue": "AT&T Stadium, Arlington",
           "broadcaster": null
         },
@@ -347,7 +347,7 @@
           "id": "qf-m2",
           "homeLabel": null,
           "awayLabel": null,
-          "homeTeamId": null,
+          "homeTeamId": "spain",
           "awayTeamId": null,
           "homeScore": null,
           "awayScore": null,

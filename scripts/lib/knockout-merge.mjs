@@ -35,6 +35,16 @@ const STATUS_MAP = {
  *      whenever two TBD slots share a kickoff date. Kept as a last resort
  *      rather than removed, since it's still useful for the very first
  *      knockout round (R32), which isn't fed by another knockout match.
+ *
+ * Local propagation is run BOTH before and after the API loop. Before:
+ * catches anything already-FT locally whose feeders finished since the
+ * last run. After: catches a match that only became FT *during this same
+ * run* (its own score just arrived from the API loop below) — without
+ * this second pass, a fresh result wouldn't propagate into the next round
+ * until a subsequent run, even though this run already has everything
+ * needed to resolve it. Found via real data: a same-run Portugal vs Spain
+ * result didn't advance Spain into the Quarter-finals slot until this was
+ * added (see docs/ROADMAP.md Sprint 39 notes).
  */
 export function mergeKnockoutMatches(rounds, apiMatches, teamMap) {
   let changed = resolvePropagatedSlots(rounds);
@@ -92,6 +102,8 @@ export function mergeKnockoutMatches(rounds, apiMatches, teamMap) {
 
     if (JSON.stringify(slot) !== before) changed++;
   }
+
+  changed += resolvePropagatedSlots(rounds);
 
   return changed;
 }
