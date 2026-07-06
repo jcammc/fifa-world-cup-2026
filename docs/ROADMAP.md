@@ -363,7 +363,7 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 40 — Documentation & Process Debt Cleanup
-**Category:** Documentation + minor technical debt · **Status:** Decisions resolved (2026-07-06), not yet executed
+**Category:** Documentation + minor technical debt · **Status:** COMPLETE (2026-07-06) — the four mechanical cleanup actions below; the content refresh remains separate, unstarted
 
 **Goal:** Bring `docs/08_PROJECT_STATUS_REVIEW.md` back in line with reality; remove misleading tooling signals.
 
@@ -376,6 +376,25 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 
 **Dependencies:** Best after 33/34/35/36 (satisfied). **Complexity:** Low.
 **Tournament timing:** Evergreen, best done last among whichever sprints run first.
+
+### Implementation retrospective (2026-07-06)
+
+**What was done — exactly the four decided actions, scope deliberately not expanded:**
+- Deleted `scripts/generate-player-bios.js`, `scripts/update-standings.js`, `scripts/lib/bio-templates.js`, `scripts/lib/ranking-formula.js`.
+- Removed the false precedence sentence from `docs/08_PROJECT_STATUS_REVIEW.md` line 9, replacing it with an accurate statement that `docs/ROADMAP.md`/`docs/SESSION_HANDOFF.md` are the actively-maintained sources of truth and this document is a periodic snapshot (the operational-procedure precedence in favor of `SESSION_HANDOFF.md`, which was never flagged as false, was left as-is).
+- `package.json`: removed the `generate-bios` and `update-standings` npm scripts entirely (not just from `pre-deploy` — their target files no longer exist, so leaving the script entries would have created new dangling references); removed `generate-bios`/`generate-rankings` from the `pre-deploy` chain and added `gather-guardian-bios`, per the decision. `generate-rankings` (the npm script) was deliberately left defined, since `scripts/generate-rankings.js` was never part of this deletion batch (see note below).
+- Deleted `netlify/functions/sync-tournament.mjs` and its `[functions.sync-tournament]` schedule block in `netlify.toml`.
+
+**One inconsistency noticed during execution, deliberately not acted on (kept in scope discipline):** `scripts/generate-rankings.js` is in the identical bare-stub state as the three deleted "dead" scripts (prints "not yet implemented", never wired to its own `ranking-formula.js` helper — which *was* deleted). The difference: `generate-rankings.js` isn't superseded by a working replacement the way `generate-player-bios.js` (→ `gather-guardian-bios.mjs`) and `update-standings.js` (→ `sync-data.mjs`) are — it's a placeholder for Sprint 39's not-yet-built ranking feature. Whether it should also be deleted (on the same "Sprint 39 will write fresh code against Sprint 38's design anyway, not resurrect this stub" reasoning already applied to `ranking-formula.js`) or kept as a reserved placeholder is a real, undecided question — flagged here rather than resolved unilaterally, since this pass's instruction was to stay within the four already-decided actions only.
+
+**One stale comment found and fixed while checking for dangling references:** `netlify/functions/live-data.mjs`'s header comment referenced "the scheduled sync-tournament function" in present tense, describing code that no longer exists after this sprint's own deletion. Updated to past tense with a pointer to the two docs (`LIVE_DATA_PLAN.md` §11, `ENGINEERING_PRINCIPLES.md`) that preserve the lesson.
+
+**Verification performed:**
+- `grep`ed the entire codebase (excluding `node_modules`) for every deleted filename/function name — the only hit was the stale `live-data.mjs` comment above, now fixed. No other dangling references.
+- Confirmed every remaining `package.json` script resolves to a file that actually exists.
+- `npm run validate` — clean, `VALIDATION PASSED`, broadcaster gaps section unaffected (still correctly flags the same 6 matches from Sprint 43).
+- `npm test` — all 24 Sprint 37 tests still pass, confirming none of the deleted files or moved config were load-bearing anywhere in the test suite either.
+- Did **not** run `npm run pre-deploy` itself (it performs real network fetches and file writes — `gather-guardian-bios`, `build-search-index` — out of scope for a verification pass); instead verified the chain's structure and every referenced script's file existence directly.
 
 ---
 
@@ -540,7 +559,7 @@ I checked `validate-data.js` directly: it currently validates squads (`validateS
 
 1. ~~Sprint 38 scheduling~~ — **dedicated design session**, not inline.
 2. ~~Sprint 36 scope~~ — **both** all-time and WC-only, resolved when `headToHeadStats` was implemented.
-3. ~~Sprint 40 — three confirmations~~ — **delete** the dead stub scripts (plus `ranking-formula.js`, found in the same state); **remove** the doc precedence claim now, independent of the full refresh; **delete** `sync-tournament.mjs` outright (knowledge preserved in `docs/LIVE_DATA_PLAN.md` §11 and `docs/ENGINEERING_PRINCIPLES.md`, confirmed).
+3. ~~Sprint 40 — three confirmations~~ — **decided and executed**: deleted the 4 dead stub files; removed the doc precedence claim; fixed the `pre-deploy` chain; deleted `sync-tournament.mjs` + its `netlify.toml` schedule block. `npm run validate`/`npm test` clean. One undecided question surfaced during execution and left open: whether `scripts/generate-rankings.js` (same bare-stub state, but a placeholder for Sprint 39 rather than superseded dead code) should also go.
 4. ~~Sprint 37 tooling~~ — **`node:test` + `jsdom`**, not Vitest/Jest.
 5. ~~Sprint 41~~ — **deferred**, not skipped.
 6. ~~Sprint 42~~ — **fully greenlit**, in the recommended order (topology module → per-match tick → connector fix → sync/live-data consolidation), with a required post-implementation verification pass before the next major feature.

@@ -4,7 +4,10 @@
  *
  * On-demand (HTTP) functions automatically receive Netlify Blobs context,
  * so this function can both READ and WRITE the Blob Store without any
- * extra credentials. The scheduled sync-tournament function cannot do this.
+ * extra credentials — a scheduled function cannot (see docs/LIVE_DATA_PLAN.md
+ * §11 and docs/ENGINEERING_PRINCIPLES.md for the incident that established
+ * this; the scheduled function that hit it, sync-tournament.mjs, was removed
+ * in Sprint 40 as dead code once its lesson was fully captured in those docs).
  *
  * Strategy: serve cached Blob Store data if < 90 s old. If stale or
  * missing, fetch from football-data.org, merge with static files, write

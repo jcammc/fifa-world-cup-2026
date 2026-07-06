@@ -4,9 +4,6 @@
 [functions]
   node_bundler = "esbuild"
 
-[functions.sync-tournament]
-  schedule = "*/2 * * * *"
-
 [[headers]]
   for = "/*.json"
   [headers.values]

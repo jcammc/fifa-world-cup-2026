@@ -5,9 +5,7 @@
   "type": "module",
   "scripts": {
     "sync-data": "node scripts/sync-data.mjs",
-    "generate-bios": "node scripts/generate-player-bios.js",
     "generate-rankings": "node scripts/generate-rankings.js",
-    "update-standings": "node scripts/update-standings.js",
     "update-knockout": "node scripts/update-knockout.js",
     "validate": "node scripts/validate-data.js",
     "build-search-index": "node scripts/generate-search-index.js",
@@ -16,7 +14,7 @@
     "gather-head-to-head": "node scripts/gather-head-to-head.mjs",
     "gather-guardian-bios": "node scripts/gather-guardian-bios.mjs",
     "test": "node --test",
-    "pre-deploy": "npm run validate && npm run generate-bios && npm run generate-rankings && npm run build-search-index"
+    "pre-deploy": "npm run validate && npm run gather-guardian-bios && npm run build-search-index"
   },
   "devDependencies": {
     "jsdom": "^29.1.1"

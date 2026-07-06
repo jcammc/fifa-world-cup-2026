@@ -6,7 +6,7 @@
 
 **Document scope:** This is the permanent project-state record — what exists, what works, what is broken, what was decided, and what remains.
 
-**Companion document:** `docs/SESSION_HANDOFF.md` is the operational quick-reference for active development sessions. It covers npm scripts, data-entry workflow, schema rules, the Wikipedia API workflow, routing map, and JSON schema definitions. When these documents conflict on feature status, this document takes precedence. When they conflict on operational procedure, `docs/SESSION_HANDOFF.md` takes precedence.
+**Companion document:** `docs/SESSION_HANDOFF.md` is the operational quick-reference for active development sessions. It covers npm scripts, data-entry workflow, schema rules, the Wikipedia API workflow, routing map, and JSON schema definitions. **This document is a periodic snapshot, refreshed manually — it is not the current source of truth on feature status.** `docs/ROADMAP.md` and `docs/SESSION_HANDOFF.md` are the actively-maintained documents; prefer them for anything time-sensitive (see `docs/ROADMAP.md` Sprint 40 for why this correction was made). When `docs/SESSION_HANDOFF.md` and this document conflict on operational procedure, `docs/SESSION_HANDOFF.md` takes precedence.
 
 ---
 
