@@ -11,6 +11,7 @@
  * all three types to Blob Store, then return the requested type.
  */
 import { getStore } from '@netlify/blobs';
+import { mergeKnockoutMatches } from '../../scripts/lib/knockout-merge.mjs';
 
 const VALID_TYPES  = new Set(['fixtures', 'standings', 'knockout']);
 const API_KEY      = process.env.FOOTBALL_DATA_API_KEY;
@@ -98,60 +99,12 @@ function mergeStandings(existing, apiStandings, teamMap) {
   return out;
 }
 
+// Merge logic lives in scripts/lib/knockout-merge.mjs — shared with
+// scripts/sync-data.mjs so the two don't drift (see docs/ROADMAP.md
+// Sprint 42, Defect 3).
 function mergeKnockout(existing, apiMatches, teamMap) {
-  const out    = structuredClone(existing);
-  const rounds = out.data;
-
-  const byTeams = new Map();
-  const byDate  = new Map();
-
-  for (const round of rounds) {
-    for (const m of round.matches ?? []) {
-      if (m.homeTeamId && m.awayTeamId) {
-        byTeams.set(`${m.homeTeamId}:${m.awayTeamId}`, m);
-      } else if (m.kickoff) {
-        const d = m.kickoff.slice(0, 10);
-        if (!byDate.has(d)) byDate.set(d, []);
-        byDate.get(d).push(m);
-      }
-    }
-  }
-
-  for (const m of apiMatches) {
-    if (m.stage === 'GROUP_STAGE') continue;
-    const homeId    = teamMap[String(m.homeTeam?.id)] ?? null;
-    const awayId    = teamMap[String(m.awayTeam?.id)] ?? null;
-    const newStatus = STATUS_MAP[m.status] ?? 'scheduled';
-    const newHome   = m.score?.fullTime?.home ?? null;
-    const newAway   = m.score?.fullTime?.away ?? null;
-
-    let slot    = null;
-    let swapped = false;
-    if (homeId && awayId) {
-      slot = byTeams.get(`${homeId}:${awayId}`);
-      if (!slot) {
-        slot = byTeams.get(`${awayId}:${homeId}`);
-        if (slot) swapped = true;
-      }
-      if (!slot) {
-        const candidates = byDate.get(m.utcDate?.slice(0, 10) ?? '') ?? [];
-        if (candidates.length === 1) slot = candidates[0];
-      }
-    }
-    if (!slot) continue;
-
-    if (!swapped) {
-      if (homeId) slot.homeTeamId = homeId;
-      if (awayId) slot.awayTeamId = awayId;
-    }
-    slot.status    = newStatus;
-    slot.homeScore = swapped ? newAway : newHome;
-    slot.awayScore = swapped ? newHome : newAway;
-    if (m.utcDate?.includes('T') && !slot.kickoff?.includes('T')) {
-      slot.kickoff = m.utcDate;
-    }
-  }
-
+  const out = structuredClone(existing);
+  mergeKnockoutMatches(out.data, apiMatches, teamMap);
   out.lastUpdated = new Date().toISOString();
   return out;
 }

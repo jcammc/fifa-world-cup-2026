@@ -2,6 +2,7 @@ import { DataManager } from '../data.js';
 import { formatKickoff } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { buildBracketProjection } from '../tournament-state.js';
+import { getFeederMatchIds } from '../bracket-topology.js';
 
 export class KnockoutBracket {
   #container;
@@ -71,11 +72,18 @@ export class KnockoutBracket {
   // ─── Round column ─────────────────────────────────────────
 
   #buildRound(round) {
+    // Round-level "every match confirmed" banner — a standalone milestone
+    // indicator, deliberately decoupled from the per-match tick decision
+    // in #buildMatch(). A round fills in match-by-match over real days
+    // (R32 is the exception, roughly gated by group-stage completion);
+    // gating individual ticks on the WHOLE round being done meant a single
+    // still-open sibling match kept the tick showing on every other match
+    // in that round, including ones resolved days earlier.
     const allTeamsSet = round.matches.length > 0 &&
       round.matches.every(m => m.homeTeamId && m.awayTeamId);
 
     const matchesHtml = round.matches
-      .map(m => this.#buildMatch(m, allTeamsSet))
+      .map(m => this.#buildMatch(m))
       .join('');
 
     const dateRange = this.#roundDateRange(round.matches);
@@ -120,7 +128,11 @@ export class KnockoutBracket {
 
   // ─── Match card ───────────────────────────────────────────
 
-  #buildMatch(match, hideUnplayedTick = false) {
+  #buildMatch(match) {
+    // Per-match, not per-round: a team's "confirmed" tick disappears as
+    // soon as ITS OWN match has both sides known, independent of whether
+    // sibling matches in the same round are still TBD.
+    const matchFullySet = Boolean(match.homeTeamId && match.awayTeamId);
     const matchLabelHtml = match.matchLabel
       ? `<div class="bracket-match__label">${escapeHtml(match.matchLabel)}</div>`
       : '';
@@ -132,9 +144,9 @@ export class KnockoutBracket {
     return `
       <a href="#match/${escapeHtml(match.id)}" class="bracket-match" data-match="${escapeHtml(match.id)}">
         ${matchLabelHtml}
-        ${this.#buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj, hideUnplayedTick)}
+        ${this.#buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj, matchFullySet)}
         <div class="bracket-divider"></div>
-        ${this.#buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj, hideUnplayedTick)}
+        ${this.#buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj, matchFullySet)}
         ${meta}
       </a>`;
   }
@@ -263,6 +275,10 @@ export class KnockoutBracket {
     const totalH   = firstN * slotH - CARD_GAP;
 
     const centersPerRound = [];
+    // Parallel to centersPerRound: matchId -> center, so later rounds (and
+    // connector drawing) can look up a feeder's position by its actual
+    // match ID instead of assuming it sits at a specific array index.
+    const centerMapPerRound = [];
 
     for (let r = 0; r < roundData.length; r++) {
       const { matchesEl, cards } = roundData[r];
@@ -272,32 +288,48 @@ export class KnockoutBracket {
         // First round: evenly spaced from the top.
         centers = cards.map((_, i) => i * slotH + cardH / 2);
       } else {
-        const prev = centersPerRound[r - 1];
+        const prevMap = centerMapPerRound[r - 1];
 
-        // Final column (round.id "final") has 2 entries:
-        //   index 0 = 3rd-place, index 1 = final-m1 (from knockout.json order).
-        // Both cards have a matchLabel div that makes them taller than a plain card.
-        // Position the Final at the SF midpoint and derive 3rd Place from the Final
-        // card's actual rendered height so there is exactly CARD_GAP between them.
+        // Final column (round.id "final") has 2 entries: 3rd-place and
+        // final-m1. Both share the same two SF feeders (topology-derived,
+        // not assumed by position) but render at different vertical spots:
+        // the Final sits at the SF midpoint, and 3rd Place is derived from
+        // the Final card's actual rendered height so there is exactly
+        // CARD_GAP between them.
         const isFinalRound = r === roundData.length - 1 && cards.length === 2;
 
         if (isFinalRound) {
-          const sfMid = (prev[0] + prev[1]) / 2;
           const fi = cards.findIndex(c => c.dataset.match?.startsWith('final'));
           const validFi = fi >= 0 ? fi : 1;
           const validTi = 1 - validFi;
+          const feederIds = getFeederMatchIds(cards[validFi].dataset.match);
+          const feederYs = feederIds.map(id => prevMap.get(id)).filter(y => y != null);
+          const sfMid = feederYs.length
+            ? feederYs.reduce((a, b) => a + b, 0) / feederYs.length
+            : totalH / 2;
           const finalH = cards[validFi].getBoundingClientRect().height || cardH;
           const thirdH = cards[validTi].getBoundingClientRect().height || cardH;
           centers = new Array(2);
           centers[validFi] = sfMid;
           centers[validTi] = sfMid + finalH / 2 + CARD_GAP + thirdH / 2;
         } else {
-          // Each card sits exactly halfway between its two feeder cards.
-          centers = cards.map((_, i) => (prev[i * 2] + prev[i * 2 + 1]) / 2);
+          // Each card sits at the average of its TRUE feeder cards'
+          // centers, looked up by match ID via the propagation topology —
+          // not by assuming round r's card i is fed by round r-1's cards
+          // 2i/2i+1 (that assumption doesn't hold for this bracket's
+          // non-sequential R32 pairings; see js/bracket-topology.js).
+          centers = cards.map(card => {
+            const feederIds = getFeederMatchIds(card.dataset.match);
+            const feederYs = feederIds.map(id => prevMap.get(id)).filter(y => y != null);
+            return feederYs.length
+              ? feederYs.reduce((a, b) => a + b, 0) / feederYs.length
+              : totalH / 2;
+          });
         }
       }
 
       centersPerRound.push(centers);
+      centerMapPerRound.push(new Map(cards.map((c, i) => [c.dataset.match, centers[i]])));
 
       // All columns share the same total height so connectors align correctly.
       matchesEl.style.height = totalH + 'px';
@@ -328,18 +360,18 @@ export class KnockoutBracket {
         if (fi >= 0) {
           this.#drawConnectors(
             roundData[r].matchesEl,
-            centersPerRound[r],
-            [centersPerRound[r + 1][fi]],
+            centerMapPerRound[r],
             [toCards[fi]],
+            centerMapPerRound[r + 1],
             totalH, gapPx, color
           );
         }
       } else {
         this.#drawConnectors(
           roundData[r].matchesEl,
-          centersPerRound[r],
-          centersPerRound[r + 1],
+          centerMapPerRound[r],
           roundData[r + 1].cards,
+          centerMapPerRound[r + 1],
           totalH, gapPx, color
         );
       }
@@ -350,7 +382,12 @@ export class KnockoutBracket {
   // and positioned at left: 100% (spanning the gap to the next column).
   // Lines: right stub from feeder A → midpoint → right stub from feeder B → vertical
   // spine → outgoing stub to the child card in the next round.
-  #drawConnectors(matchesEl, fromCenters, toCenters, toCards, totalH, gapPx, color) {
+  //
+  // `fromCenterMap` is the PREVIOUS round's matchId -> center map (used to look
+  // up each toCard's true feeders via the propagation topology, not array
+  // position); `toCenterMap` is the DESTINATION round's own matchId -> center
+  // map (where each toCard actually sits).
+  #drawConnectors(matchesEl, fromCenterMap, toCards, toCenterMap, totalH, gapPx, color) {
     matchesEl.querySelectorAll('.bracket-svg-connector').forEach(s => s.remove());
 
     const ns  = 'http://www.w3.org/2000/svg';
@@ -373,16 +410,18 @@ export class KnockoutBracket {
       svg.appendChild(el);
     };
 
-    toCenters.forEach((toY, i) => {
-      const fromA = fromCenters[i * 2];
-      const fromB = fromCenters[i * 2 + 1];
-      if (fromA == null || fromB == null) return;
+    for (const toCard of toCards) {
+      const toY = toCenterMap.get(toCard.dataset.match);
+      const feederIds = getFeederMatchIds(toCard.dataset.match);
+      const fromA = fromCenterMap.get(feederIds[0]);
+      const fromB = fromCenterMap.get(feederIds[1]);
+      if (toY == null || fromA == null || fromB == null) continue;
 
       addLine(0,    fromA, midX,  fromA); // right stub from feeder A
       addLine(0,    fromB, midX,  fromB); // right stub from feeder B
       addLine(midX, fromA, midX,  fromB); // vertical spine
       addLine(midX, toY,   gapPx, toY);  // outgoing stub to child
-    });
+    }
 
     matchesEl.appendChild(svg);
   }

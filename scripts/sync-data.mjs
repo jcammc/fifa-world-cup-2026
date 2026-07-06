@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { mergeKnockoutMatches } from './lib/knockout-merge.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
@@ -124,72 +125,16 @@ function syncStandings(apiStandings, teamMap) {
 }
 
 // ── Knockout sync ─────────────────────────────────────────────────────────────
+//
+// Merge logic lives in scripts/lib/knockout-merge.mjs — shared with
+// netlify/functions/live-data.mjs so the two don't drift (see
+// docs/ROADMAP.md Sprint 42, Defect 3).
 
 function syncKnockout(apiMatches, teamMap) {
   const file   = readJson('data/knockout.json');
   const rounds = file.data;
 
-  // Build lookup: "homeTeamId:awayTeamId" → match (only for matches where teams are known)
-  const byTeams = new Map();
-  for (const round of rounds) {
-    for (const m of round.matches ?? []) {
-      if (m.homeTeamId && m.awayTeamId) {
-        byTeams.set(`${m.homeTeamId}:${m.awayTeamId}`, m);
-      }
-    }
-  }
-
-  // Build date-only lookup for unassigned slots (multiple matches per date possible)
-  const byDateVenue = new Map();
-  for (const round of rounds) {
-    for (const m of round.matches ?? []) {
-      if (!m.homeTeamId && !m.awayTeamId && m.kickoff) {
-        const dateKey = m.kickoff.slice(0, 10);
-        if (!byDateVenue.has(dateKey)) byDateVenue.set(dateKey, []);
-        byDateVenue.get(dateKey).push(m);
-      }
-    }
-  }
-
-  let changed = 0;
-  for (const m of apiMatches) {
-    if (m.stage === 'GROUP_STAGE') continue;
-
-    const newStatus = STATUS_MAP[m.status] ?? 'scheduled';
-    const newHome   = m.score?.fullTime?.home ?? null;
-    const newAway   = m.score?.fullTime?.away ?? null;
-    const homeId    = teamMap[String(m.homeTeam?.id)] ?? null;
-    const awayId    = teamMap[String(m.awayTeam?.id)] ?? null;
-
-    // If teams are known, match by team pair
-    let internal = null;
-    if (homeId && awayId) {
-      internal = byTeams.get(`${homeId}:${awayId}`);
-      if (!internal) {
-        // Teams are now known but slot was TBD — find by date and assign
-        const apiDate    = m.utcDate.slice(0, 10);
-        const candidates = byDateVenue.get(apiDate) ?? [];
-        if (candidates.length === 1) {
-          internal = candidates[0];
-        }
-      }
-    }
-
-    if (!internal) continue;
-
-    let touched = false;
-    if (homeId && internal.homeTeamId !== homeId) { internal.homeTeamId = homeId; touched = true; }
-    if (awayId && internal.awayTeamId !== awayId) { internal.awayTeamId = awayId; touched = true; }
-    if (internal.status    !== newStatus) { internal.status    = newStatus; touched = true; }
-    if (internal.homeScore !== newHome)   { internal.homeScore = newHome;   touched = true; }
-    if (internal.awayScore !== newAway)   { internal.awayScore = newAway;   touched = true; }
-    // Write full UTC kickoff timestamp when API provides one and we only have a date-only string
-    if (m.utcDate?.includes('T') && !internal.kickoff?.includes('T')) {
-      internal.kickoff = m.utcDate; touched = true;
-    }
-
-    if (touched) changed++;
-  }
+  const changed = mergeKnockoutMatches(rounds, apiMatches, teamMap);
 
   if (changed > 0) {
     file.lastUpdated = new Date().toISOString();

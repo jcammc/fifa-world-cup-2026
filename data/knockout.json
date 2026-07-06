@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-06T17:57:21.051Z",
+  "lastUpdated": "2026-07-06T19:50:03.974Z",
   "data": [
     {
       "id": "r32",
@@ -278,8 +278,8 @@
           "awayLabel": null,
           "homeTeamId": "portugal",
           "awayTeamId": "spain",
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 0,
+          "awayScore": 0,
           "kickoff": "2026-07-06T19:00:00Z",
           "status": "scheduled",
           "venue": "AT&T Stadium, Arlington",
@@ -306,7 +306,7 @@
           "awayTeamId": "egypt",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-07",
+          "kickoff": "2026-07-07T16:00:00Z",
           "status": "scheduled",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "broadcaster": null
@@ -319,7 +319,7 @@
           "awayTeamId": "colombia",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-07",
+          "kickoff": "2026-07-07T20:00:00Z",
           "status": "scheduled",
           "venue": "BC Place, Vancouver",
           "broadcaster": null
@@ -364,7 +364,7 @@
           "awayTeamId": "england",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-11",
+          "kickoff": "2026-07-11T21:00:00Z",
           "status": "scheduled",
           "venue": "Hard Rock Stadium, Miami Gardens",
           "broadcaster": null

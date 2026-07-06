@@ -23,76 +23,16 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { PROPAGATION } from '../js/bracket-topology.js';
 
 const __dirname     = dirname(fileURLToPath(import.meta.url));
 const KNOCKOUT_PATH = resolve(__dirname, '../data/knockout.json');
 
-// ─── Bracket propagation map ───────────────────────────────────────────────
-//
-// Verified against Wikipedia: en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage
-// R32 matches are NOT simple sequential pairings — see inline comments below.
-// Use --dry-run to preview, --no-propagate to skip propagation.
-//
-const PROPAGATION = {
-  // ── Round of 32 → Round of 16 ───────────────────────────────────────────
-  // Verified against Wikipedia bracket: en.wikipedia.org/wiki/2026_FIFA_World_Cup_knockout_stage
-  // r32-m1 (M73) + r32-m3 (M75) → r16-m2 (M90)
-  // r32-m2 (M74) + r32-m5 (M77) → r16-m1 (M89)
-  // r32-m4 (M76) + r32-m6 (M78) → r16-m3 (M91)
-  // r32-m7 (M79) + r32-m8 (M80) → r16-m4 (M92)
-  // r32-m9 (M81) + r32-m10 (M82) → r16-m6 (M94)
-  // r32-m11 (M83) + r32-m12 (M84) → r16-m5 (M93)
-  // r32-m13 (M85) + r32-m15 (M87) → r16-m8 (M96)
-  // r32-m14 (M86) + r32-m16 (M88) → r16-m7 (M95)
-  'r32-m1':  { winner: { match: 'r16-m2', slot: 'home' } },
-  'r32-m2':  { winner: { match: 'r16-m1', slot: 'home' } },
-  'r32-m3':  { winner: { match: 'r16-m2', slot: 'away' } },
-  'r32-m4':  { winner: { match: 'r16-m3', slot: 'home' } },
-  'r32-m5':  { winner: { match: 'r16-m1', slot: 'away' } },
-  'r32-m6':  { winner: { match: 'r16-m3', slot: 'away' } },
-  'r32-m7':  { winner: { match: 'r16-m4', slot: 'home' } },
-  'r32-m8':  { winner: { match: 'r16-m4', slot: 'away' } },
-  'r32-m9':  { winner: { match: 'r16-m6', slot: 'home' } },
-  'r32-m10': { winner: { match: 'r16-m6', slot: 'away' } },
-  'r32-m11': { winner: { match: 'r16-m5', slot: 'home' } },
-  'r32-m12': { winner: { match: 'r16-m5', slot: 'away' } },
-  'r32-m13': { winner: { match: 'r16-m8', slot: 'home' } },
-  'r32-m14': { winner: { match: 'r16-m7', slot: 'home' } },
-  'r32-m15': { winner: { match: 'r16-m8', slot: 'away' } },
-  'r32-m16': { winner: { match: 'r16-m7', slot: 'away' } },
-  // ── Round of 16 → Quarter-finals ────────────────────────────────────────
-  // r16-m1 (M89) + r16-m2 (M90) → qf-m1 (M97)
-  // r16-m3 (M91) + r16-m4 (M92) → qf-m3 (M99)
-  // r16-m5 (M93) + r16-m6 (M94) → qf-m2 (M98)
-  // r16-m7 (M95) + r16-m8 (M96) → qf-m4 (M100)
-  'r16-m1':  { winner: { match: 'qf-m1', slot: 'home' } },
-  'r16-m2':  { winner: { match: 'qf-m1', slot: 'away' } },
-  'r16-m3':  { winner: { match: 'qf-m3', slot: 'home' } },
-  'r16-m4':  { winner: { match: 'qf-m3', slot: 'away' } },
-  'r16-m5':  { winner: { match: 'qf-m2', slot: 'home' } },
-  'r16-m6':  { winner: { match: 'qf-m2', slot: 'away' } },
-  'r16-m7':  { winner: { match: 'qf-m4', slot: 'home' } },
-  'r16-m8':  { winner: { match: 'qf-m4', slot: 'away' } },
-  // ── Quarter-finals → Semi-finals ────────────────────────────────────────
-  // qf-m1 (M97) + qf-m2 (M98) → sf-m1 (M101)
-  // qf-m3 (M99) + qf-m4 (M100) → sf-m2 (M102)
-  'qf-m1':   { winner: { match: 'sf-m1', slot: 'home' } },
-  'qf-m2':   { winner: { match: 'sf-m1', slot: 'away' } },
-  'qf-m3':   { winner: { match: 'sf-m2', slot: 'home' } },
-  'qf-m4':   { winner: { match: 'sf-m2', slot: 'away' } },
-  // ── Semi-finals → Final + 3rd Place (winner + loser both propagate) ─────
-  'sf-m1':   {
-    winner: { match: 'final-m1', slot: 'home' },
-    loser:  { match: '3rd-place', slot: 'home' },
-  },
-  'sf-m2':   {
-    winner: { match: 'final-m1', slot: 'away' },
-    loser:  { match: '3rd-place', slot: 'away' },
-  },
-  // ── Terminal matches — no propagation ───────────────────────────────────
-  'final-m1':  null,
-  '3rd-place': null,
-};
+// Bracket propagation map now lives in js/bracket-topology.js — single
+// source of truth, shared with the bracket renderer's connector-line
+// positioning (js/modules/knockout-bracket.js) and the sync/live-data
+// merge functions. Use --dry-run to preview, --no-propagate to skip
+// propagation.
 
 // ─── Helpers ───────────────────────────────────────────────────────────────
 
