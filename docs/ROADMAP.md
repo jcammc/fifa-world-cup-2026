@@ -288,7 +288,7 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 37 — Regression-Prevention Test Coverage
-**Category:** Architectural improvement · **Status:** Approved (2026-07-06), not yet started
+**Category:** Architectural improvement · **Status:** COMPLETE (2026-07-06)
 
 **Goal:** Narrow, high-value automated coverage so a bug shaped like Sprint 33's cannot ship silently again.
 
@@ -301,6 +301,32 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 **Complexity:** Medium (first test in the project costs more than subsequent ones).
 **Completion criteria:** Tests exist, pass, runnable via `npm test`; the regression test specifically fails if Sprint 33's fix is reverted.
 **Tournament timing:** Evergreen.
+
+### Retrospective (2026-07-06)
+
+**What was built:** 24 tests across 6 files, all passing via `npm test` (`node --test`, zero config). `jsdom` installed as the only new devDependency, needed only where a module's import chain transitively touches `window`/`document` (three of the six files).
+
+**A design tension surfaced immediately: two of the three originally-planned tests (Match Story, router resolution) target logic buried in private class methods that depend on either a live fetch pipeline or 11 other page modules' own data dependencies to reach.** Rather than build a heavy DOM+fetch-mocking harness (high effort, fragile, and conflates unrelated modules' bugs with the router's own), each was resolved the same way: **extract the exact regression-prone logic into a small, pure, exported module-level function** — same code, same behavior, just parameterized instead of reading instance state (`this.#countryMap` → a `countryMap` argument, etc.). This is a well-established testability pattern, not a functional change; each extraction was verified as behavior-preserving via `node --check` and a full browser regression sweep afterward.
+
+**Four extractions, all mechanical (move + parameterize, no logic changes):**
+- `js/modules/knockout-bracket.js`: `#buildMatch`/`#buildTeamSlot`/`#buildMeta`/`#projectionKey` → exported `buildMatch`/`buildTeamSlot`/`buildMeta`/`projectionKey`. Enables direct testing of Defect 1's per-match tick fix.
+- `js/modules/match-centre.js`: `#buildHeadToHeadSection`/`#buildH2HStatsGrids`/`#buildOneH2HGrid` → exported equivalents. Enables direct testing of the Sprint 33 regression without mocking MatchCentre's ~8 DataManager dependencies.
+- `js/router.js`: `#parseRoute(hash)` → exported `resolveRoute(hash, countryIds)`; `PlaceholderModule`/`NotFoundModule` also exported (previously module-local only) so tests can assert against them directly. Enables testing all ~19 named routes' Module resolution without instantiating the Router singleton or any of the 11 page modules it can route to.
+
+**Test files, mapped to what each locks in:**
+- `test/bracket-topology.test.mjs` (5 tests) — `getFeederMatchIds` correctness for all 16 destination matches (Defect 2's data contract); `deriveWinnerId`/`deriveLoserId` including the penalty-shootout branch; `resolvePropagatedSlots` reproducing the exact `r16-m7`/`r16-m8` same-date collision and its idempotency; winner+loser propagation into Final/3rd-place (Defect 3).
+- `test/knockout-merge.test.mjs` (4 tests) — the consolidated `mergeKnockoutMatches` resolving the same collision via local propagation with zero API data, team-pair matching, the home/away-swap handling `sync-data.mjs` previously lacked, and group-stage exclusion.
+- `test/knockout-bracket-tick.test.mjs` (4 tests) — all three tick states (fully resolved/no tick, fully unresolved/TBD, **partially resolved/tick on the known side only** — the exact state Defect 1's fix targets) plus the played-match case.
+- `test/match-story.test.mjs` (4 tests) — the Sprint 33 regression itself (empty `matchStory`, populated legacy `headToHead`, must still render), matchStory-preferred-when-both-present, genuine-empty case, and the upcoming-match branch staying unaffected.
+- `test/router.test.mjs` (6 tests) — all ~19 named routes resolve to the correct Module, plus param extraction (group letter, compare team slugs, match fixture id, player-vs-country disambiguation) and the unrecognized-prefix fallback.
+- `test/validate-smoke.test.mjs` (1 test) — `scripts/validate-data.js` exits clean.
+
+**Verification performed:**
+- `npm test` — 24/24 passing.
+- `npm run validate` — clean, unaffected by the refactors.
+- Full browser regression sweep (Playwright/Chromium) across all three refactored files' real render paths: knockout bracket (tick/banner/connector state re-confirmed byte-identical to pre-refactor), two Match Centre pages (completed and upcoming), a team page, a player deep-link, Compare Teams, best-thirds, and a 404 route. Zero console/page errors. One apparent anomaly investigated and confirmed NOT a regression: `r16-m4`'s Match Story section has no prose blockquote (`.mc-hth` absent) because that fixture's data genuinely has no `matchStory`/`headToHead` populated yet (R16's Wikipedia page didn't exist when `gather-head-to-head` last ran) — the section itself, with its stats grid, still correctly renders.
+
+**No architectural issues found** — the three extractions were the only design decision needed, and none revealed a deeper problem; they were a means to test existing, already-correct code, not a discovery of new bugs.
 
 ---
 

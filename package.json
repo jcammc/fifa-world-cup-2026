@@ -15,9 +15,12 @@
     "gather-match-events": "node scripts/gather-match-events.mjs",
     "gather-head-to-head": "node scripts/gather-head-to-head.mjs",
     "gather-guardian-bios": "node scripts/gather-guardian-bios.mjs",
+    "test": "node --test",
     "pre-deploy": "npm run validate && npm run generate-bios && npm run generate-rankings && npm run build-search-index"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  },
   "dependencies": {
     "@netlify/blobs": "^8.1.0"
   }

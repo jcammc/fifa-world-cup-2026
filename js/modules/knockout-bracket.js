@@ -4,6 +4,108 @@ import { escapeHtml } from '../utils.js';
 import { buildBracketProjection } from '../tournament-state.js';
 import { getFeederMatchIds } from '../bracket-topology.js';
 
+// ─── Pure match-card builders ────────────────────────────────
+//
+// Extracted to module scope (rather than private class methods) so
+// Sprint 37's regression tests can exercise the per-match confirmation
+// tick logic directly, without instantiating the class or mocking
+// DataManager. No behavior change from the extraction itself — these
+// take countryMap/projectionMap as parameters instead of reading
+// instance fields.
+
+export function projectionKey(label, matchId) {
+  if (!label) return null;
+  if (/^1[A-L]$/.test(label)) return `Winner Group ${label[1]}`;
+  if (/^2[A-L]$/.test(label)) return `Runner-up Group ${label[1]}`;
+  if (label.startsWith('3rd')) return `best-third-${matchId}`;
+  return null;
+}
+
+export function buildMeta(match) {
+  if (match.status === 'FT') {
+    return `<div class="bracket-match__meta"><span class="badge badge--ft">FT</span></div>`;
+  }
+  if (match.status === 'live') {
+    return `<div class="bracket-match__meta"><span class="badge badge--live"><span class="live-dot live-dot--sm" aria-hidden="true"></span> LIVE</span></div>`;
+  }
+  if (match.kickoff) {
+    return `<div class="bracket-match__meta">${escapeHtml(formatKickoff(match.kickoff))}</div>`;
+  }
+  return '';
+}
+
+export function buildTeamSlot(teamId, label, score, projection = null, hideUnplayedTick = false, countryMap = new Map()) {
+  if (teamId) {
+    const country   = countryMap.get(teamId);
+    const name      = country ? escapeHtml(country.name) : escapeHtml(teamId);
+    const flagHtml  = `<img src="assets/flags/${escapeHtml(teamId)}.svg" alt=""
+            width="20" height="14" class="bracket-team__flag" aria-hidden="true"
+            onerror="this.style.display='none'">`;
+    const hasScore  = score !== null && score !== undefined;
+    const scoreHtml = hasScore
+      ? `<span class="bracket-team__score">${score}</span>`
+      : hideUnplayedTick
+        ? ''
+        : `<span class="bracket-team__score bracket-team__score--confirmed">&#10003;</span>`;
+    return `
+      <div class="bracket-team ${hideUnplayedTick ? '' : 'bracket-team--confirmed'}">
+        ${flagHtml}
+        <span class="bracket-team__name">${name}</span>
+        ${scoreHtml}
+      </div>`;
+  }
+
+  if (projection) {
+    const country   = countryMap.get(projection.teamId);
+    const name      = country ? escapeHtml(country.name) : escapeHtml(projection.teamId);
+    const flagHtml  = `<img src="assets/flags/${escapeHtml(projection.teamId)}.svg" alt=""
+            width="20" height="14" class="bracket-team__flag" aria-hidden="true"
+            onerror="this.style.display='none'">`;
+    const c         = projection.confidence;
+    const confCls   = c === 'confirmed' ? 'bracket-conf--confirmed'
+                    : c === 'likely'    ? 'bracket-conf--likely'
+                    : 'bracket-conf--open';
+    const confLabel = c === 'confirmed' ? 'Confirmed' : c === 'likely' ? 'Likely' : 'Open';
+    return `
+      <div class="bracket-team bracket-team--projected">
+        ${flagHtml}
+        <span class="bracket-team__name">${name}</span>
+        <span class="bracket-conf ${confCls}">${confLabel}</span>
+      </div>`;
+  }
+
+  const name = label ? escapeHtml(label) : 'TBD';
+  return `
+    <div class="bracket-team bracket-team--pending">
+      <span class="bracket-team__flag-placeholder" aria-hidden="true"></span>
+      <span class="bracket-team__name">${name}</span>
+      <span class="bracket-team__score bracket-team__score--empty">–</span>
+    </div>`;
+}
+
+export function buildMatch(match, projectionMap = new Map(), countryMap = new Map()) {
+  // Per-match, not per-round: a team's "confirmed" tick disappears as
+  // soon as ITS OWN match has both sides known, independent of whether
+  // sibling matches in the same round are still TBD.
+  const matchFullySet = Boolean(match.homeTeamId && match.awayTeamId);
+  const matchLabelHtml = match.matchLabel
+    ? `<div class="bracket-match__label">${escapeHtml(match.matchLabel)}</div>`
+    : '';
+  const homeKey  = projectionKey(match.homeLabel, match.id);
+  const awayKey  = projectionKey(match.awayLabel, match.id);
+  const homeProj = !match.homeTeamId ? (projectionMap.get(homeKey) ?? null) : null;
+  const awayProj = !match.awayTeamId ? (projectionMap.get(awayKey) ?? null) : null;
+  const meta = buildMeta(match);
+  return `
+    <a href="#match/${escapeHtml(match.id)}" class="bracket-match" data-match="${escapeHtml(match.id)}">
+      ${matchLabelHtml}
+      ${buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj, matchFullySet, countryMap)}
+      <div class="bracket-divider"></div>
+      ${buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj, matchFullySet, countryMap)}
+      ${meta}
+    </a>`;
+}
+
 export class KnockoutBracket {
   #container;
   #rounds         = [];
@@ -83,7 +185,7 @@ export class KnockoutBracket {
       round.matches.every(m => m.homeTeamId && m.awayTeamId);
 
     const matchesHtml = round.matches
-      .map(m => this.#buildMatch(m))
+      .map(m => buildMatch(m, this.#projectionMap, this.#countryMap))
       .join('');
 
     const dateRange = this.#roundDateRange(round.matches);
@@ -114,103 +216,6 @@ export class KnockoutBracket {
     if (first.m === last.m && first.d === last.d) return `${first.d} ${MONTHS[first.m - 1]}`;
     if (first.m === last.m)  return `${first.d}–${last.d} ${MONTHS[first.m - 1]}`;
     return `${first.d} ${MONTHS[first.m - 1]}–${last.d} ${MONTHS[last.m - 1]}`;
-  }
-
-  // ─── Slot label resolution ────────────────────────────────
-
-  #projectionKey(label, matchId) {
-    if (!label) return null;
-    if (/^1[A-L]$/.test(label)) return `Winner Group ${label[1]}`;
-    if (/^2[A-L]$/.test(label)) return `Runner-up Group ${label[1]}`;
-    if (label.startsWith('3rd')) return `best-third-${matchId}`;
-    return null;
-  }
-
-  // ─── Match card ───────────────────────────────────────────
-
-  #buildMatch(match) {
-    // Per-match, not per-round: a team's "confirmed" tick disappears as
-    // soon as ITS OWN match has both sides known, independent of whether
-    // sibling matches in the same round are still TBD.
-    const matchFullySet = Boolean(match.homeTeamId && match.awayTeamId);
-    const matchLabelHtml = match.matchLabel
-      ? `<div class="bracket-match__label">${escapeHtml(match.matchLabel)}</div>`
-      : '';
-    const homeKey  = this.#projectionKey(match.homeLabel, match.id);
-    const awayKey  = this.#projectionKey(match.awayLabel, match.id);
-    const homeProj = !match.homeTeamId ? (this.#projectionMap.get(homeKey) ?? null) : null;
-    const awayProj = !match.awayTeamId ? (this.#projectionMap.get(awayKey) ?? null) : null;
-    const meta = this.#buildMeta(match);
-    return `
-      <a href="#match/${escapeHtml(match.id)}" class="bracket-match" data-match="${escapeHtml(match.id)}">
-        ${matchLabelHtml}
-        ${this.#buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj, matchFullySet)}
-        <div class="bracket-divider"></div>
-        ${this.#buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj, matchFullySet)}
-        ${meta}
-      </a>`;
-  }
-
-  #buildTeamSlot(teamId, label, score, projection = null, hideUnplayedTick = false) {
-    if (teamId) {
-      const country   = this.#countryMap.get(teamId);
-      const name      = country ? escapeHtml(country.name) : escapeHtml(teamId);
-      const flagHtml  = `<img src="assets/flags/${escapeHtml(teamId)}.svg" alt=""
-              width="20" height="14" class="bracket-team__flag" aria-hidden="true"
-              onerror="this.style.display='none'">`;
-      const hasScore  = score !== null && score !== undefined;
-      const scoreHtml = hasScore
-        ? `<span class="bracket-team__score">${score}</span>`
-        : hideUnplayedTick
-          ? ''
-          : `<span class="bracket-team__score bracket-team__score--confirmed">&#10003;</span>`;
-      return `
-        <div class="bracket-team ${hideUnplayedTick ? '' : 'bracket-team--confirmed'}">
-          ${flagHtml}
-          <span class="bracket-team__name">${name}</span>
-          ${scoreHtml}
-        </div>`;
-    }
-
-    if (projection) {
-      const country   = this.#countryMap.get(projection.teamId);
-      const name      = country ? escapeHtml(country.name) : escapeHtml(projection.teamId);
-      const flagHtml  = `<img src="assets/flags/${escapeHtml(projection.teamId)}.svg" alt=""
-              width="20" height="14" class="bracket-team__flag" aria-hidden="true"
-              onerror="this.style.display='none'">`;
-      const c         = projection.confidence;
-      const confCls   = c === 'confirmed' ? 'bracket-conf--confirmed'
-                      : c === 'likely'    ? 'bracket-conf--likely'
-                      : 'bracket-conf--open';
-      const confLabel = c === 'confirmed' ? 'Confirmed' : c === 'likely' ? 'Likely' : 'Open';
-      return `
-        <div class="bracket-team bracket-team--projected">
-          ${flagHtml}
-          <span class="bracket-team__name">${name}</span>
-          <span class="bracket-conf ${confCls}">${confLabel}</span>
-        </div>`;
-    }
-
-    const name = label ? escapeHtml(label) : 'TBD';
-    return `
-      <div class="bracket-team bracket-team--pending">
-        <span class="bracket-team__flag-placeholder" aria-hidden="true"></span>
-        <span class="bracket-team__name">${name}</span>
-        <span class="bracket-team__score bracket-team__score--empty">–</span>
-      </div>`;
-  }
-
-  #buildMeta(match) {
-    if (match.status === 'FT') {
-      return `<div class="bracket-match__meta"><span class="badge badge--ft">FT</span></div>`;
-    }
-    if (match.status === 'live') {
-      return `<div class="bracket-match__meta"><span class="badge badge--live"><span class="live-dot live-dot--sm" aria-hidden="true"></span> LIVE</span></div>`;
-    }
-    if (match.kickoff) {
-      return `<div class="bracket-match__meta">${escapeHtml(formatKickoff(match.kickoff))}</div>`;
-    }
-    return '';
   }
 
   // ─── Lifecycle ────────────────────────────────────────────

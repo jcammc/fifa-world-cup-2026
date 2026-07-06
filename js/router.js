@@ -14,7 +14,7 @@ import { escapeHtml } from './utils.js';
 
 // ─── Placeholder for unimplemented routes ──────────────────
 
-class PlaceholderModule {
+export class PlaceholderModule {
   #container; #params;
   constructor(container, params = {}) { this.#container = container; this.#params = params; }
   async render() {
@@ -33,7 +33,7 @@ class PlaceholderModule {
 
 // ─── 404 ───────────────────────────────────────────────────
 
-class NotFoundModule {
+export class NotFoundModule {
   #container; #params;
   constructor(container, params = {}) { this.#container = container; this.#params = params; }
   async render() {
@@ -55,6 +55,114 @@ class NotFoundModule {
 // ─── Named stub routes ─────────────────────────────────────
 
 const STUB_ROUTES = new Set([]);
+
+// ─── Route resolution (pure) ────────────────────────────────
+//
+// Extracted to module scope (rather than a private Router method) so
+// Sprint 37's regression test can exercise every named route directly,
+// without instantiating the Router singleton or its 11 page modules.
+// No behavior change from the extraction itself — takes `countryIds` as
+// a parameter instead of reading Router's private instance field.
+
+export function resolveRoute(hash, countryIds = new Set()) {
+  // Home / Tournament Centre
+  if (!hash || hash === 'tournament') {
+    return { Module: TournamentCentre, params: {} };
+  }
+
+  // Deep-linked tournament tabs
+  if (hash === 'today') {
+    return { Module: TournamentCentre, params: { initialTab: 'today' } };
+  }
+  if (hash === 'knockout') {
+    return { Module: TournamentCentre, params: { initialTab: 'knockout' } };
+  }
+  // Group deep-link: #group-a through #group-l
+  if (/^group-[a-l]$/.test(hash)) {
+    return {
+      Module: TournamentCentre,
+      params: { initialTab: 'groups', groupId: hash.slice(6).toUpperCase() },
+    };
+  }
+
+  // Countries browse
+  if (hash === 'countries') {
+    return { Module: CountriesPage, params: {} };
+  }
+
+  // Continents browse
+  if (hash === 'continents') {
+    return { Module: ContinentsPage, params: {} };
+  }
+
+  // Global statistics dashboard
+  if (hash === 'statistics') {
+    return { Module: StatisticsPage, params: {} };
+  }
+
+  // League explorer
+  if (hash === 'league-explorer') {
+    return { Module: LeagueExplorer, params: {} };
+  }
+
+  // Club explorer
+  if (hash === 'club-explorer') {
+    return { Module: ClubExplorer, params: {} };
+  }
+
+  // Groups — alias for Tournament Centre group stage tab
+  if (hash === 'groups') {
+    return { Module: TournamentCentre, params: { initialTab: 'groups' } };
+  }
+
+  // Compare route: #compare or #compare/teamA/teamB
+  if (hash === 'compare' || hash.startsWith('compare/')) {
+    const parts = hash.split('/');
+    return { Module: CompareView, params: { teamA: parts[1] ?? null, teamB: parts[2] ?? null } };
+  }
+
+  // Match Centre route: #match/{fixtureId} — must be before player deep-link loop
+  if (hash.startsWith('match/')) {
+    return { Module: MatchCentre, params: { fixtureId: hash.slice(6) } };
+  }
+
+  // Best-thirds race page
+  if (hash === 'best-thirds') {
+    return { Module: BestThirds, params: {} };
+  }
+
+  // Manager profile route: #manager/{countryId}
+  if (hash.startsWith('manager/')) {
+    return { Module: ManagerPage, params: { countryId: hash.slice(8) } };
+  }
+
+  // Player route: must check before country route (e.g. #france-mbappe)
+  for (const id of (countryIds ?? [])) {
+    if (hash.startsWith(id + '-')) {
+      return {
+        Module: TeamPage,
+        params: { countryId: id, scrollToPlayer: hash.slice(id.length + 1) },
+      };
+    }
+  }
+
+  // Country route
+  if (countryIds?.has(hash)) {
+    return { Module: TeamPage, params: { countryId: hash } };
+  }
+
+  // Named stub routes
+  if (STUB_ROUTES.has(hash)) {
+    return { Module: PlaceholderModule, params: { route: hash } };
+  }
+
+  // Prefixed routes (club-, league-, search-)
+  if (hash.startsWith('club-') || hash.startsWith('league-') || hash.startsWith('search-')) {
+    return { Module: PlaceholderModule, params: { route: hash } };
+  }
+
+  return { Module: NotFoundModule, params: { hash } };
+}
 
 // ─── Router ────────────────────────────────────────────────
 
@@ -85,7 +193,7 @@ class _Router {
         this.#countryIds = new Set(countries.map(c => c.id));
       }
 
-      const { Module, params } = this.#parseRoute(hash);
+      const { Module, params } = resolveRoute(hash, this.#countryIds);
       const mod = new Module(this.#contentEl, params);
       this.#currentModule = mod;
       await mod.render();
@@ -101,106 +209,6 @@ class _Router {
           </div>
         </div>`;
     }
-  }
-
-  #parseRoute(hash) {
-    // Home / Tournament Centre
-    if (!hash || hash === 'tournament') {
-      return { Module: TournamentCentre, params: {} };
-    }
-
-    // Deep-linked tournament tabs
-    if (hash === 'today') {
-      return { Module: TournamentCentre, params: { initialTab: 'today' } };
-    }
-    if (hash === 'knockout') {
-      return { Module: TournamentCentre, params: { initialTab: 'knockout' } };
-    }
-    // Group deep-link: #group-a through #group-l
-    if (/^group-[a-l]$/.test(hash)) {
-      return {
-        Module: TournamentCentre,
-        params: { initialTab: 'groups', groupId: hash.slice(6).toUpperCase() },
-      };
-    }
-
-    // Countries browse
-    if (hash === 'countries') {
-      return { Module: CountriesPage, params: {} };
-    }
-
-    // Continents browse
-    if (hash === 'continents') {
-      return { Module: ContinentsPage, params: {} };
-    }
-
-    // Global statistics dashboard
-    if (hash === 'statistics') {
-      return { Module: StatisticsPage, params: {} };
-    }
-
-    // League explorer
-    if (hash === 'league-explorer') {
-      return { Module: LeagueExplorer, params: {} };
-    }
-
-    // Club explorer
-    if (hash === 'club-explorer') {
-      return { Module: ClubExplorer, params: {} };
-    }
-
-    // Groups — alias for Tournament Centre group stage tab
-    if (hash === 'groups') {
-      return { Module: TournamentCentre, params: { initialTab: 'groups' } };
-    }
-
-    // Compare route: #compare or #compare/teamA/teamB
-    if (hash === 'compare' || hash.startsWith('compare/')) {
-      const parts = hash.split('/');
-      return { Module: CompareView, params: { teamA: parts[1] ?? null, teamB: parts[2] ?? null } };
-    }
-
-    // Match Centre route: #match/{fixtureId} — must be before player deep-link loop
-    if (hash.startsWith('match/')) {
-      return { Module: MatchCentre, params: { fixtureId: hash.slice(6) } };
-    }
-
-    // Best-thirds race page
-    if (hash === 'best-thirds') {
-      return { Module: BestThirds, params: {} };
-    }
-
-    // Manager profile route: #manager/{countryId}
-    if (hash.startsWith('manager/')) {
-      return { Module: ManagerPage, params: { countryId: hash.slice(8) } };
-    }
-
-    // Player route: must check before country route (e.g. #france-mbappe)
-    for (const id of (this.#countryIds ?? [])) {
-      if (hash.startsWith(id + '-')) {
-        return {
-          Module: TeamPage,
-          params: { countryId: id, scrollToPlayer: hash.slice(id.length + 1) },
-        };
-      }
-    }
-
-    // Country route
-    if (this.#countryIds?.has(hash)) {
-      return { Module: TeamPage, params: { countryId: hash } };
-    }
-
-    // Named stub routes
-    if (STUB_ROUTES.has(hash)) {
-      return { Module: PlaceholderModule, params: { route: hash } };
-    }
-
-    // Prefixed routes (club-, league-, search-)
-    if (hash.startsWith('club-') || hash.startsWith('league-') || hash.startsWith('search-')) {
-      return { Module: PlaceholderModule, params: { route: hash } };
-    }
-
-    return { Module: NotFoundModule, params: { hash } };
   }
 
   #updateActiveLink(hash) {

@@ -5,6 +5,137 @@ import { Charts } from '../charts.js';
 import { getMatchImplication, deriveRecentForm } from '../tournament-state.js';
 import { broadcasterBadge } from '../broadcasters.js';
 
+// ─── Pure head-to-head / Match Story builders ────────────────
+//
+// Extracted to module scope (rather than private class methods) so
+// Sprint 37's regression test can lock in the Sprint 33 fix directly,
+// without instantiating the class or mocking DataManager. No behavior
+// change from the extraction itself — none of these three read `this`.
+
+// `capped` distinguishes a genuine zero-history pair (common — many 2026
+// fixtures are first-ever meetings) from a pair where the automated source
+// told us history exists but couldn't return it (aggregates.numberOfMatches
+// exceeded what was actually returned — see gather-head-to-head-stats.mjs).
+// Silently showing nothing in the latter case would misrepresent a data gap
+// as "these teams have never met."
+export function buildOneH2HGrid(scope, capped, home, away, homeIsFixtureHome, meetingsLabel) {
+  if (!scope) return '<p class="mc-h2h-empty">Not yet available.</p>';
+  if (!scope.meetings) {
+    return capped
+      ? '<p class="mc-h2h-empty">Prior meetings exist but full detail isn’t available yet.</p>'
+      : '<p class="mc-h2h-empty">No prior meetings on record.</p>';
+  }
+  const homeName = escapeHtml(home?.name ?? 'Home');
+  const awayName = escapeHtml(away?.name ?? 'Away');
+  // scope.homeWins/homeGoals etc. are stored relative to `stats.teams.home`
+  // (the team that was fixture-home at acquisition time), not necessarily
+  // whichever side is rendering as home right now — reorient if needed.
+  const [homeWins, awayWins]   = homeIsFixtureHome ? [scope.homeWins, scope.awayWins]   : [scope.awayWins, scope.homeWins];
+  const [homeGoals, awayGoals] = homeIsFixtureHome ? [scope.homeGoals, scope.awayGoals] : [scope.awayGoals, scope.homeGoals];
+
+  const rows = [
+    [meetingsLabel,        scope.meetings],
+    [`${homeName} wins`,   homeWins ?? '—'],
+    [`${awayName} wins`,   awayWins ?? '—'],
+    ['Draws',              scope.draws ?? 0],
+    ['Goals',              homeGoals != null ? `${homeGoals} – ${awayGoals}` : '—'],
+    ['Last meeting',       scope.lastMeeting ?? '—'],
+  ].map(([label, val]) => `
+    <div class="mc-h2h-row">
+      <span class="mc-h2h-label">${label}</span>
+      <span class="mc-h2h-val">${typeof val === 'number' ? val : escapeHtml(String(val))}</span>
+    </div>`).join('');
+
+  return `<div class="mc-h2h-stats">${rows}</div>`;
+}
+
+// Renders both the World Cup-only and all-time head-to-head grids, when
+// present. `stats` is the fixture's `headToHeadStats` object — see
+// scripts/gather-head-to-head-stats.mjs for the schema (Sprint 36).
+// `stats.teams.home`/`.away` record which side is home *for this fixture*,
+// so historical W/D/L (stored per-team, not per-match-role) can be
+// reoriented to "this fixture's home team" regardless of which side a team
+// played on in any given historical meeting.
+export function buildH2HStatsGrids(stats, home, away) {
+  if (!stats) return '';
+  const homeIsFixtureHome = stats.teams?.home === home?.id;
+  const worldCupHtml = buildOneH2HGrid(stats.worldCup, stats.meta?.autoCapped?.worldCup, home, away, homeIsFixtureHome, 'World Cup meetings');
+  const allTimeHtml  = buildOneH2HGrid(stats.allTime,  stats.meta?.autoCapped?.allTime,  home, away, homeIsFixtureHome, 'All-time meetings');
+
+  return `
+    <div class="mc-h2h-block">
+      <h3 class="mc-h2h-block__title">World Cup</h3>
+      ${worldCupHtml}
+    </div>
+    <div class="mc-h2h-block">
+      <h3 class="mc-h2h-block__title">All-time (all competitions)</h3>
+      ${allTimeHtml}
+    </div>`;
+}
+
+export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, home = null, away = null) {
+  const entry = matchPreviews?.data?.[fixtureId];
+  if (!entry) return '';
+
+  const stats    = entry.headToHeadStats ?? null;
+  const story    = entry.matchStory ?? '';
+  const h2hProse = entry.headToHead ?? '';
+
+  // Stats grids (World Cup + all-time, side by side conceptually, stacked in markup)
+  const statsHtml = stats ? buildH2HStatsGrids(stats, home, away) : '';
+
+  if (isFT) {
+    // Completed match: "Match Story" section.
+    // Prefer the migrated matchStory field; fall back to the legacy headToHead
+    // field so matches whose data hasn't been re-scraped yet still show content
+    // instead of nothing (see gather-head-to-head.mjs's migration step).
+    //
+    // This fallback is a PERMANENT robustness layer, not a one-time migration
+    // shim to delete later. gather-head-to-head.mjs only re-runs periodically
+    // (per knockout round, not per match — see docs/ROADMAP.md Sprint 34), so
+    // every newly-FT match sits with only `headToHead` populated until the next
+    // maintenance pass. That lag recurs for the rest of the tournament, not just
+    // during this one historical backfill. Keep this fallback even once the
+    // current backlog is fully migrated.
+    const primaryProse = story || h2hProse;
+    if (!primaryProse && !statsHtml) return '';
+
+    const proseHtml = primaryProse
+      ? `<blockquote class="mc-hth">${escapeHtml(primaryProse)}</blockquote>` : '';
+    // Only surface h2hProse a second time in the details block if it's genuinely
+    // distinct extra content (i.e. story already took the primary blockquote slot).
+    const extraProse = (story && h2hProse) ? h2hProse : '';
+    const historyDetails = (statsHtml || extraProse)
+      ? `<details class="mc-hth-details">
+          <summary class="mc-hth-details__toggle">Head-to-Head History</summary>
+          ${statsHtml}
+          ${extraProse ? `<p class="mc-hth-prose">${escapeHtml(extraProse)}</p>` : ''}
+        </details>`
+      : '';
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Match Story</h2>
+        ${proseHtml}
+        ${historyDetails}
+      </div>`;
+  } else {
+    // Upcoming match: "Head-to-Head" section (World Cup history prose + both stat grids)
+    if (!statsHtml && !h2hProse) return '';
+    const proseDetails = h2hProse
+      ? `<details class="mc-hth-details">
+          <summary class="mc-hth-details__toggle">History notes</summary>
+          <p class="mc-hth-prose">${escapeHtml(h2hProse)}</p>
+        </details>`
+      : '';
+    return `
+      <div class="mc-section">
+        <h2 class="mc-section__title">Head-to-Head</h2>
+        ${statsHtml}
+        ${proseDetails}
+      </div>`;
+  }
+}
+
 export class MatchCentre {
   #container;
   #params;
@@ -160,7 +291,7 @@ export class MatchCentre {
 
     // ── Head-to-head (all matches) ────────────────────────────
     const hthHtml = showEnrichment
-      ? this.#buildHeadToHeadSection(fixture.id, matchPreviews, isFT, home, away) : '';
+      ? buildHeadToHeadSection(fixture.id, matchPreviews, isFT, home, away) : '';
 
     // ── Upcoming match sections ───────────────────────────────
     const prevLineupHtml = (isUpcoming && showEnrichment)
@@ -321,132 +452,6 @@ export class MatchCentre {
         <h2 class="mc-section__title">Man of the Match</h2>
         <p class="mc-motm">${escapeHtml(entry.motm)}</p>
       </div>`;
-  }
-
-  // ─── Head-to-head / Match Story ───────────────────────────
-
-  #buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, home = null, away = null) {
-    const entry = matchPreviews?.data?.[fixtureId];
-    if (!entry) return '';
-
-    const stats    = entry.headToHeadStats ?? null;
-    const story    = entry.matchStory ?? '';
-    const h2hProse = entry.headToHead ?? '';
-
-    // Stats grids (World Cup + all-time, side by side conceptually, stacked in markup)
-    const statsHtml = stats ? this.#buildH2HStatsGrids(stats, home, away) : '';
-
-    if (isFT) {
-      // Completed match: "Match Story" section.
-      // Prefer the migrated matchStory field; fall back to the legacy headToHead
-      // field so matches whose data hasn't been re-scraped yet still show content
-      // instead of nothing (see gather-head-to-head.mjs's migration step).
-      //
-      // This fallback is a PERMANENT robustness layer, not a one-time migration
-      // shim to delete later. gather-head-to-head.mjs only re-runs periodically
-      // (per knockout round, not per match — see docs/ROADMAP.md Sprint 34), so
-      // every newly-FT match sits with only `headToHead` populated until the next
-      // maintenance pass. That lag recurs for the rest of the tournament, not just
-      // during this one historical backfill. Keep this fallback even once the
-      // current backlog is fully migrated.
-      const primaryProse = story || h2hProse;
-      if (!primaryProse && !statsHtml) return '';
-
-      const proseHtml = primaryProse
-        ? `<blockquote class="mc-hth">${escapeHtml(primaryProse)}</blockquote>` : '';
-      // Only surface h2hProse a second time in the details block if it's genuinely
-      // distinct extra content (i.e. story already took the primary blockquote slot).
-      const extraProse = (story && h2hProse) ? h2hProse : '';
-      const historyDetails = (statsHtml || extraProse)
-        ? `<details class="mc-hth-details">
-            <summary class="mc-hth-details__toggle">Head-to-Head History</summary>
-            ${statsHtml}
-            ${extraProse ? `<p class="mc-hth-prose">${escapeHtml(extraProse)}</p>` : ''}
-          </details>`
-        : '';
-      return `
-        <div class="mc-section">
-          <h2 class="mc-section__title">Match Story</h2>
-          ${proseHtml}
-          ${historyDetails}
-        </div>`;
-    } else {
-      // Upcoming match: "Head-to-Head" section (World Cup history prose + both stat grids)
-      if (!statsHtml && !h2hProse) return '';
-      const proseDetails = h2hProse
-        ? `<details class="mc-hth-details">
-            <summary class="mc-hth-details__toggle">History notes</summary>
-            <p class="mc-hth-prose">${escapeHtml(h2hProse)}</p>
-          </details>`
-        : '';
-      return `
-        <div class="mc-section">
-          <h2 class="mc-section__title">Head-to-Head</h2>
-          ${statsHtml}
-          ${proseDetails}
-        </div>`;
-    }
-  }
-
-  // Renders both the World Cup-only and all-time head-to-head grids, when
-  // present. `stats` is the fixture's `headToHeadStats` object — see
-  // scripts/gather-head-to-head-stats.mjs for the schema (Sprint 36).
-  // `stats.teams.home`/`.away` record which side is home *for this fixture*,
-  // so historical W/D/L (stored per-team, not per-match-role) can be
-  // reoriented to "this fixture's home team" regardless of which side a team
-  // played on in any given historical meeting.
-  #buildH2HStatsGrids(stats, home, away) {
-    if (!stats) return '';
-    const homeIsFixtureHome = stats.teams?.home === home?.id;
-    const worldCupHtml = this.#buildOneH2HGrid(stats.worldCup, stats.meta?.autoCapped?.worldCup, home, away, homeIsFixtureHome, 'World Cup meetings');
-    const allTimeHtml  = this.#buildOneH2HGrid(stats.allTime,  stats.meta?.autoCapped?.allTime,  home, away, homeIsFixtureHome, 'All-time meetings');
-
-    return `
-      <div class="mc-h2h-block">
-        <h3 class="mc-h2h-block__title">World Cup</h3>
-        ${worldCupHtml}
-      </div>
-      <div class="mc-h2h-block">
-        <h3 class="mc-h2h-block__title">All-time (all competitions)</h3>
-        ${allTimeHtml}
-      </div>`;
-  }
-
-  // `capped` distinguishes a genuine zero-history pair (common — many 2026
-  // fixtures are first-ever meetings) from a pair where the automated source
-  // told us history exists but couldn't return it (aggregates.numberOfMatches
-  // exceeded what was actually returned — see gather-head-to-head-stats.mjs).
-  // Silently showing nothing in the latter case would misrepresent a data gap
-  // as "these teams have never met."
-  #buildOneH2HGrid(scope, capped, home, away, homeIsFixtureHome, meetingsLabel) {
-    if (!scope) return '<p class="mc-h2h-empty">Not yet available.</p>';
-    if (!scope.meetings) {
-      return capped
-        ? '<p class="mc-h2h-empty">Prior meetings exist but full detail isn’t available yet.</p>'
-        : '<p class="mc-h2h-empty">No prior meetings on record.</p>';
-    }
-    const homeName = escapeHtml(home?.name ?? 'Home');
-    const awayName = escapeHtml(away?.name ?? 'Away');
-    // scope.homeWins/homeGoals etc. are stored relative to `stats.teams.home`
-    // (the team that was fixture-home at acquisition time), not necessarily
-    // whichever side is rendering as home right now — reorient if needed.
-    const [homeWins, awayWins]   = homeIsFixtureHome ? [scope.homeWins, scope.awayWins]   : [scope.awayWins, scope.homeWins];
-    const [homeGoals, awayGoals] = homeIsFixtureHome ? [scope.homeGoals, scope.awayGoals] : [scope.awayGoals, scope.homeGoals];
-
-    const rows = [
-      [meetingsLabel,        scope.meetings],
-      [`${homeName} wins`,   homeWins ?? '—'],
-      [`${awayName} wins`,   awayWins ?? '—'],
-      ['Draws',              scope.draws ?? 0],
-      ['Goals',              homeGoals != null ? `${homeGoals} – ${awayGoals}` : '—'],
-      ['Last meeting',       scope.lastMeeting ?? '—'],
-    ].map(([label, val]) => `
-      <div class="mc-h2h-row">
-        <span class="mc-h2h-label">${label}</span>
-        <span class="mc-h2h-val">${typeof val === 'number' ? val : escapeHtml(String(val))}</span>
-      </div>`).join('');
-
-    return `<div class="mc-h2h-stats">${rows}</div>`;
   }
 
   // ─── Previous starting XI ─────────────────────────────────
