@@ -331,34 +331,36 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 38 — Ranking System Design (design deliverable, no code)
-**Category:** Product/architecture design · **Status:** Approved (2026-07-06) — process confirmed, session not yet held
+**Category:** Product/architecture design · **Status:** COMPLETE (2026-07-06) — design document written and committed, no code written
 
 **Goal:** Produce and get sign-off on a full ranking-system design before any data sourcing begins.
 
-**Process decision (resolved 2026-07-06):** confirmed as a dedicated design session (e.g. `/brainstorming`), not an inline discussion — a proper written design document with an explicit Phase 1 scope boundary is required before any Sprint 39 implementation begins. Given Sprint 39's own cost profile (real manual data-sourcing across ~1,250 players), an under-baked inline answer here risks expensive rework after sourcing has already started, which the dedicated-session cost avoids.
+**Full design:** [`docs/plans/2026-07-06-ranking-system-design.md`](plans/2026-07-06-ranking-system-design.md) — produced via a dedicated `/brainstorming` session (not an inline draft, per the process decision below), refined across several `/evaluate` rounds that each ground-truthed a specific claim against the live codebase rather than accepting it on assertion.
 
-**Deliverable — answers needed:**
-- What gets ranked (players only, or teams/managers too)?
-- What categories (overall ability, current form, potential, historical legacy, others)?
-- Which data source(s) feed each category, and why?
-- How does weighting work across categories/sources?
-- Which values are static vs. evolve during the tournament (and on what trigger)?
-- Where in the app do rankings surface (Profile Panel? Compare Teams? a new leaderboard page? Statistics Dashboard)?
+**Deliverable — answers, all resolved (see the linked design for full reasoning):**
+- **What gets ranked:** players only. Adopted the original spec's existing formula/weights/component sources (`Consensus = TM×0.40 + EA×0.20 + Awards×0.20 + Media×0.10 + Form×0.10`, found already fully specified in `docs/DATA_ACQUISITION_STRATEGY.md` §4) rather than designing from scratch — but re-scoped for a mid-tournament, already-launched app rather than the original pre-launch phasing.
+- **Scope:** the 12 currently-alive teams' full squads (~312 players), a one-time cut, all 5 components sourced together (no phased component rollout).
+- **The one real design change from the original plan:** Form is computed from this project's own `data/match-events.json` (starts, sub-appearances, goals, assists, MOTM — broadened from "goals+assists" so it's meaningful across all positions, not just attackers) instead of an external manual lookup. This was verified against real tournament data during the session, which also surfaced a genuine name-matching bug (a real player's stats silently split across two name variants) that's now a required regression-test fixture, not just a lesson noted in the doc.
+- **Normalization:** percentile rank, not min-max — chosen based on the actual (heavily right-skewed) score distribution measured from real data during the session, not asserted.
+- **Determinism:** a hard requirement — unresolved player names are reported and skipped, never guessed, reusing `gather-guardian-bios.mjs`'s already-proven, already-deterministic matching chain rather than inventing new fuzzy logic.
+- **Where rankings surface:** Hero Cards (fixing a pre-existing gap versus the original spec — cards were always showing caps, never the "Consensus Score" the spec actually called for), a new Profile Panel "Ranking Breakdown" section, and Club/League Explorer's "Average Consensus Rating."
 
-**Dependencies:** None to start; fully blocks Sprint 39.
-**Completion criteria:** written design, reviewed and approved, with an explicit v1 scope boundary.
+**Process decision (resolved 2026-07-06):** confirmed as a dedicated design session (`/brainstorming`), not an inline discussion — see the linked design doc's "Decisions log" for the full, itemized record of every choice made and why.
+
+**Dependencies:** None to start; fully blocks Sprint 39 (still blocked — no implementation has started).
+**Completion criteria:** written design, reviewed and approved, with an explicit v1 scope boundary. **Met.**
 **Tournament timing:** Evergreen.
 
 ---
 
 ## Sprint 39 — Rankings Phase 1 Implementation
-**Category:** Genuinely new feature (data sourcing + build) · **Status:** Not started, remains fully blocked on Sprint 38 (confirmed 2026-07-06) — no implementation work of any kind until the Sprint 38 design is written and approved.
+**Category:** Genuinely new feature (data sourcing + build) · **Status:** Not started. Sprint 38's design is now complete and approved (see `docs/plans/2026-07-06-ranking-system-design.md`), but no Sprint 39 implementation work has begun — ready to start whenever greenlit.
 
-**Goal:** Implement the ranking system per Sprint 38's agreed design, Phase 1 scope.
+**Goal:** Implement the ranking system exactly per the approved design: `scripts/generate-rankings.js` + `scripts/lib/ranking-formula.mjs`, `data/ranking-scope.json`, manual entry of the 4 static components for the ~312 in-scope players, the three UI surfaces (Hero Cards, Profile Panel Ranking Breakdown, Club/League Explorer), and the new `validate-data.js` completeness check.
 
-**Complexity:** Likely high — real manual data-sourcing effort was always the expensive part of this feature (original spec estimated ~60 min for just the Media component across ~1,250 players; a fuller multi-category design costs more). Treat as its own multi-session initiative, not a single bounded sprint.
-**Completion criteria:** defined in Sprint 38's design doc, per category/entity.
-**Tournament timing:** Design is evergreen; a "current form" category (if included) benefits from being computed against complete tournament data.
+**Complexity:** Likely high — real manual data-sourcing effort is still the expensive part (4 manual components × ~312 players, down from the original ~1,250-player estimate now that scope is the 12 alive teams only). Treat as its own multi-session initiative, not a single bounded sprint. Form itself is now fully automated (no manual sourcing needed for that component), which reduces the total manual burden versus the original 5-component plan.
+**Completion criteria:** defined in `docs/plans/2026-07-06-ranking-system-design.md` §6 (unit tests, real-data sanity check reproducing the design session's own top-player result, browser regression across 3 team states).
+**Tournament timing:** the 12-team scope is a stable, one-time cut (doesn't shrink as more teams are eliminated), so there's no urgency pressure from the tournament clock beyond "earlier means more of the tournament's remaining matches benefit from a working Form component."
 
 ---
 
