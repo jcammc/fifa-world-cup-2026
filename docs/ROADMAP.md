@@ -358,6 +358,62 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 
 ---
 
+## Sprint 42 — Knockout Bracket Architecture Fixes
+**Category:** Architectural bug fix (rendering + data-pipeline consolidation) · **Status:** Investigation complete (2026-07-06), plan below, **not yet implemented**
+
+**Goal:** Fix two confirmed architectural defects in the knockout bracket — a round-level "confirmed" gate that should be per-match, and a bracket connector-line algorithm that positions cards by array order instead of actual propagation relationships — without a visual redesign.
+
+### Background — how this was found
+
+Triggered by a user report of the bracket showing wrong-looking results (paraphrased as "France beat Sweden but Brazil appeared in the downstream slot"). A full read-only investigation (see conversation history, 2026-07-06) traced `js/modules/knockout-bracket.js`, `scripts/update-knockout.js`, `scripts/sync-data.mjs`, and `netlify/functions/live-data.mjs` against the live `data/knockout.json`, and found **two confirmed, independent defects** — neither of which was the original literal example (which didn't reproduce from the data at the time), but both real and evidenced. A Sprint 34 Pass 2 data-maintenance run (see above) then live-confirmed both diagnoses against real, current tournament data before any code changed.
+
+### Defect 1 — round-level "confirmed" tick gate (should be per-match)
+
+**Current behavior** (`js/modules/knockout-bracket.js:73-95, 142-161`): `#buildRound()` computes `allTeamsSet = round.matches.every(m => m.homeTeamId && m.awayTeamId)` — once per round — and passes it to every match in that round as `hideUnplayedTick`. The green `.bracket-team--confirmed` tick is suppressed only when **every** match in the round is fully resolved.
+
+**Why this is wrong:** a round doesn't resolve all-at-once — R32 does (roughly, since it's gated by group-stage completion), but R16/QF/SF each fill in match-by-match over several real days as individual feeder matches conclude. Any single still-unresolved match in a round keeps the tick showing on every other match in that round, including ones resolved days earlier. **Live-confirmed in Pass 2:** with R16 now 8/8 resolved, the round shows its "All confirmed" banner and zero ticks (correct); with QF now 2/4 resolved (`qf-m1`, `qf-m3`), the round shows 4 individual ticks and no banner (`qf-m2`/`qf-m4` still TBD) — the exact symptom, now on the next round, as predicted.
+
+**Fix:** compute the "hide tick" decision **per match**, not per round: `const matchFullySet = m.homeTeamId && m.awayTeamId` inside `#buildMatch()`, used in place of the round-wide `hideUnplayedTick` parameter. A team's tick disappears as soon as *its own match* has both sides known — independent of sibling matches in the same round.
+
+**What happens to the round-level "All confirmed" banner:** keep it, but decouple it entirely from the per-match tick decision. It becomes a standalone milestone indicator (shown once literally every match in the round has both teams, same computation as today) with no bearing on individual tick visibility. This avoids the awkward case where every visible slot looks individually "confirmed" via the new per-match rule, yet the banner doesn't show because of a genuinely-still-open sibling match — that's fine and not confusing, since the banner and the ticks are now answering different questions ("is the whole round done" vs. "is this specific matchup known").
+
+### Defect 2 — connector/positioning algorithm uses array order, not the actual propagation graph
+
+**Current behavior** (`js/modules/knockout-bracket.js:294-297`): `#positionBracket()` computes each card's vertical center as `(prev[i*2] + prev[i*2+1]) / 2` — i.e., it assumes round *r*'s card at array index *i* is fed by round *r-1*'s cards at array indices `2i` and `2i+1`. This is never checked against real feeder relationships.
+
+**Verified mismatch** against `scripts/update-knockout.js`'s `PROPAGATION` map: 7 of 8 R16 slots and 2 of 4 QF slots are positioned/connected incorrectly by this assumption (full table in the investigation notes). Only `r16-m4` and `qf-m1`/`qf-m4` align correctly, by coincidence of array order. **Team names inside each card are always correct** (rendered directly from `match.homeTeamId`/`awayTeamId`, unaffected) — it's the **SVG connector line** between columns that draws the wrong "this feeds that" relationship for most slots. This is very likely the real mechanism behind "traced a line from the France/Sweden result and it visually led to Brazil's box" even though the underlying JSON has always been correct.
+
+**Fix:** derive feeder relationships from the actual propagation topology instead of array position. Concretely:
+1. Extract `update-knockout.js`'s `PROPAGATION` map into a small, dependency-free shared module — e.g. `js/bracket-topology.js`, following the existing pattern of `js/tournament-state.js` (pure data/logic, no DOM, no fetching, no Node-only APIs) — so it's importable from both browser code and Node scripts without a build step, consistent with this project's zero-build-step architecture.
+2. `update-knockout.js` imports `PROPAGATION` from that module instead of defining it inline (single source of truth — currently the map only exists in one place, which is good, but it's Node-only and the renderer has no way to consult it).
+3. `#positionBracket()` in `knockout-bracket.js` uses the same topology to find each match's true two feeder match IDs, looks up their DOM elements/centers by match ID (not array index), and computes the midpoint from those — the connector lines then always represent the real relationship, and the layout keeps working correctly regardless of the order matches happen to appear in `knockout.json`.
+
+**No visual redesign implied by this fix** — same columns, same card style, same overall bracket shape. Only the *derivation* of which two cards a connector line joins changes from "array position" to "graph lookup."
+
+### Defect 3 (found investigating Defect 2's blast radius) — duplicated, fragile propagation-matching logic in two data-sync paths
+
+**Found:** `scripts/sync-data.mjs`'s `syncKnockout()` (lines 128-200) and `netlify/functions/live-data.mjs`'s `mergeKnockout()` (lines 101-157) independently re-implement near-identical logic: match an API result to a local slot by team-ID pair, falling back to "exactly one local slot shares this UTC calendar date" when the slot is still TBD. **This fallback is fragile and already misfired live**, twice, during Sprint 34 Pass 2: `r16-m7`/`r16-m8` (same kickoff date) and `qf-m3`/`qf-m4` (same kickoff date) could not be auto-resolved by either script even though their feeder matches were already complete — both required the manual `update-knockout.js --force` step to fill in.
+
+**Recommendation — consolidate, and mostly supersede the date fallback rather than just hardening it:**
+- Extract a single shared `mergeKnockoutData(existingKnockout, apiMatches, teamMap)` function (e.g. `scripts/lib/knockout-merge.mjs`) used by both `sync-data.mjs` (Node CLI) and `netlify/functions/live-data.mjs` (Netlify Function) — both already run in Node/ESM, so a shared import needs no new tooling. This directly answers "should they share a canonical implementation": **yes** — maintaining two hand-copies of the same fallback logic is exactly how a fix to one and not the other reintroduces this defect later.
+- Once the `js/bracket-topology.js` propagation graph from Defect 2 exists, the shared merge function can use it as a **third, deterministic resolution path**: for any local slot still TBD, check whether the topology says its two feeder matches are already FT in local data — if so, the winners are already knowable *without needing anything from the API's date field at all*. This isn't available for the very first round (R32, fed by group-stage qualification, not by another knockout match) but covers R16 onward entirely, which is exactly where the date-collision fragility lives today.
+- **Explicit decision on the date-based fallback (per the plan requirement to not leave this implicit):** keep it, but demote it to a last-resort path used only when neither team-pair matching nor the propagation-graph resolution applies (in practice, this becomes rare — mostly moot once the graph-based path is added for knockout rounds). Do not attempt to "harden" the date comparison itself (e.g. normalizing UTC-vs-local calendar day) as a primary fix — the propagation graph is a strictly better, deterministic source of truth wherever it applies, and investing in a smarter date heuristic would be solving the wrong layer of the problem.
+
+### Explicitly out of scope for this sprint
+
+**Visual/layout redesign.** The underlying bracket *topology* is correct and matches FIFA's real structure (verified: the two Sprint-27-established halves of 8 R32 matches each cleanly feed separate semifinal paths, with no crossover until the Final, and the existing 3rd-place-branch positioning in `#positionBracket()`'s final-round handling is already correct). Nothing found in this investigation motivates a different visual layout — only the connector *derivation logic* needs fixing. Revisit a possible layout modernization only after Defects 1–3 are implemented and verified, as a separate, later decision.
+
+**Regression test coverage** for these fixes belongs naturally in Sprint 37 (Regression-Prevention Test Coverage, already scoped above) — e.g. a test asserting connector-derived pairs match the topology module for a known bracket state, and a test reproducing the exact R16/QF same-date collision scenario against the consolidated merge function.
+
+**Recommended implementation order:** (1) extract `js/bracket-topology.js` and point `update-knockout.js` at it — pure refactor, no behavior change, easiest to verify in isolation; (2) fix the per-match tick rule (Defect 1) — small, independent, low-risk; (3) fix connector derivation (Defect 2) using the new topology module; (4) consolidate `sync-data.mjs`/`live-data.mjs` into a shared merge function and add the graph-based resolution path (Defect 3) — largest change, do last once 1-3 are settled and verified.
+
+**Dependencies:** None blocking — can start independently of Sprint 37, though sequencing test coverage alongside these fixes (rather than after) would let the tests double as the verification evidence.
+**Complexity:** Medium — three related but separable fixes, each individually small; the consolidation in Defect 3 is the largest single piece.
+**Completion criteria:** Per-match tick verified correct on a round with mixed resolved/TBD slots; connector lines verified to match the topology graph for every current bracket slot; `sync-data.mjs` and `live-data.mjs` share one merge implementation; a reproduction of the exact R16-same-date collision scenario resolves correctly without manual `update-knockout.js` intervention.
+**Tournament timing:** Time-sensitive in the sense that every future round transition (QF→SF, SF→Final) will keep re-exposing Defect 1 and re-testing Defect 3's fallback until fixed — the sooner this lands, the fewer more manual `update-knockout.js` catch-up passes are needed for the same reason.
+
+---
+
 ## Decisions still needed from the user (not yet resolved)
 
 1. Sprint 38 scheduling — dedicated design session vs. inline draft.
@@ -365,3 +421,4 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 3. Sprint 40 — three small confirmations: delete dead stub scripts? keep/remove doc precedence claim? delete `sync-tournament.mjs` outright or keep as reference?
 4. Sprint 37 tooling — `node:test` (default) vs. Vitest/Jest.
 5. Sprint 41 — greenlight, defer, or skip.
+6. Sprint 42 — greenlight implementation (plan is written, nothing implemented yet); confirm recommended order (topology module → per-match tick → connector fix → sync/live-data consolidation) before starting.
