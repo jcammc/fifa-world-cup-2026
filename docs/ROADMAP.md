@@ -364,7 +364,7 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 42 — Knockout Bracket Architecture Fixes
-**Category:** Architectural bug fix (rendering + data-pipeline consolidation) · **Status:** Fully greenlit (2026-07-06), **not yet implemented**
+**Category:** Architectural bug fix (rendering + data-pipeline consolidation) · **Status:** COMPLETE and verified (2026-07-06)
 
 **Goal:** Fix two confirmed architectural defects in the knockout bracket — a round-level "confirmed" gate that should be per-match, and a bracket connector-line algorithm that positions cards by array order instead of actual propagation relationships — without a visual redesign.
 
@@ -417,14 +417,18 @@ Triggered by a user report of the bracket showing wrong-looking results (paraphr
 **Completion criteria:** Per-match tick verified correct on a round with mixed resolved/TBD slots; connector lines verified to match the topology graph for every current bracket slot; `sync-data.mjs` and `live-data.mjs` share one merge implementation; a reproduction of the exact R16-same-date collision scenario resolves correctly without manual `update-knockout.js` intervention.
 **Tournament timing:** Time-sensitive in the sense that every future round transition (QF→SF, SF→Final) will keep re-exposing Defect 1 and re-testing Defect 3's fallback until fixed — the sooner this lands, the fewer more manual `update-knockout.js` catch-up passes are needed for the same reason.
 
-### Post-implementation verification pass (required before moving to the next major feature)
+### Post-implementation verification pass — completed 2026-07-06
 
-Once all four implementation steps land, a dedicated verification pass — automated **and** real-browser — is required before starting any other major feature work, proving:
-1. **Connector topology is correct** — every connector line matches `js/bracket-topology.js`'s feeder relationships, not array order (re-run the same slot-by-slot comparison table used to find Defect 2, now expecting zero mismatches).
-2. **Propagation works correctly** — a full, real (or simulated) result cascades correctly through the whole chain, R32 → R16 → QF → SF → Final, via the consolidated merge function.
-3. **Confirmation indicators behave correctly** — the per-match tick and the round-level banner each behave as specified in Defect 1's fix, verified on a round with a genuine mix of resolved and still-TBD matches.
-4. **Automatic advancement works correctly** — an end-to-end check (distinct from #2's function-level correctness) that a newly-synced result advances through `sync-data.mjs`/`live-data.mjs` without needing manual `update-knockout.js` intervention, specifically re-testing the exact R16/QF same-date collision scenario that misfired live during Sprint 34 Pass 2.
-5. **No regressions** — existing Match Centre, Tournament Centre, and best-thirds pages still render correctly for both resolved and TBD matches.
+All four steps were implemented in the agreed order: (1) extracted `js/bracket-topology.js` (PROPAGATION map + a derived `getFeederMatchIds()` lookup), verified as a pure no-op via dry-run comparison; (2) fixed the confirmation-tick gate to per-match in `js/modules/knockout-bracket.js`, keeping the round-level banner as a decoupled milestone indicator; (3) rewrote `#positionBracket()`/`#drawConnectors()` to derive feeder relationships from the topology graph instead of array order; (4) consolidated `sync-data.mjs`'s `syncKnockout()` and `live-data.mjs`'s `mergeKnockout()` into a shared `scripts/lib/knockout-merge.mjs`, adding `resolvePropagatedSlots()` (in `bracket-topology.js`) as a new deterministic resolution path that fills a TBD slot from already-FT local feeders before falling back to the fragile same-date matching.
+
+**Unexpected finding, resolved in-scope (no scope expansion needed):** while consolidating, found that `live-data.mjs`'s `mergeKnockout()` already had home/away-swap handling (tries both `homeId:awayId` and `awayId:homeId` team-pair keys) that `sync-data.mjs`'s `syncKnockout()` was missing entirely — a real, previously-unnoticed inconsistency between the two beyond what the original investigation identified. The consolidation naturally fixes this: `sync-data.mjs` now inherits the swap handling for free.
+
+**Verification results, all five checklist items:**
+1. **Connector topology correct** — verified geometrically (exact pixel-center comparison, not just visual inspection) across all four round transitions (R32→R16, R16→QF, QF→SF, SF→Final): every connector line now lands exactly on its true feeder's rendered center. Confirmed all 7 previously-wrong R16 slots and 2 previously-wrong QF slots (`qf-m2`/`qf-m3`, which were swapped with each other) are now correct.
+2. **Propagation works correctly** — verified against real data (R32→R16→QF, already resolved) and a synthetic end-to-end test simulating both semi-finals completing (one on normal time, one on penalties), confirming `final-m1` and `3rd-place` both resolve correctly, including the previously-untested loser-propagation path and penalty-shootout branch.
+3. **Confirmation indicators behave correctly** — verified all three possible states: fully resolved (no tick — R32/R16 in current data), fully unresolved (TBD placeholder — `qf-m2`/`qf-m4`), and partially resolved (tick on the known side only). The third state doesn't occur naturally in the current bracket data (every match is currently either fully known or fully unknown), so it was verified via a temporary injected test fixture (`qf-m4` with only the home side populated), confirmed correct, then reverted — real data was never left altered.
+4. **Automatic advancement works correctly** — reproduced the exact `r16-m7`/`r16-m8` same-kickoff-date collision that required manual `update-knockout.js` intervention during Sprint 34 Pass 2, and confirmed the new consolidated merge resolves it with **zero API or date dependency** (tested by calling the merge function with an empty API match list — it still correctly resolves both slots from local data alone). Also ran the real `sync-data.mjs` end-to-end against live production data with no errors.
+5. **No regressions** — `npm run validate` clean; zero console/page errors across a full browser sweep (Match Centre for a completed R32 match, a completed R16 match, and an upcoming QF match; Tournament Centre's knockout and today tabs; the best-thirds page; a team page; Compare Teams).
 
 ---
 
