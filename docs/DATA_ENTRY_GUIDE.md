@@ -645,4 +645,61 @@ If a player's club is not in `data/clubs.json`, add the club there first (see Se
 
 ---
 
+## SECTION 18 — HEAD-TO-HEAD STATS SCHEMA & MANUAL SUPPLEMENT WORKFLOW (Sprint 36)
+
+`headToHeadStats` lives on each fixture's entry in `data/match-previews.json`, alongside the existing Wikipedia-sourced `matchStory`/`headToHead` prose fields (Sprint 31) — it's a **complementary structured-stats addition, not a replacement** for that prose. Populated and maintained by `scripts/gather-head-to-head-stats.mjs`.
+
+### Why a manual-supplement path exists at all
+
+The automated source (football-data.org's `/matches/{id}/head2head` subresource — already-authenticated, zero acquisition risk) caps at the 2 most recent meetings across all competitions on our current plan. That's usually fine — most 2026 fixture pairs have 0-2 all-time meetings, which the API returns completely and correctly — but for pairs with real history, the API's own response tells us it's incomplete: `aggregates.numberOfMatches` (the true total) exceeds the number of match objects actually returned. The gather script computes this per fixture and marks it in `meta.autoCapped`. A separate WorldFootball.net-based approach was investigated and explicitly ruled out as a primary source (see `docs/ROADMAP.md` Sprint 36 retrospective) after a Cloudflare block proved persistent, not just a pacing issue — so capped pairs get a **manual, cited research pass**, not a second automated scrape.
+
+### Schema (per fixture, in `match-previews.json`)
+
+```json
+"headToHeadStats": {
+  "teams": { "home": "portugal", "away": "croatia" },
+  "worldCup": { "meetings": 2, "homeWins": 1, "awayWins": 0, "draws": 1, "homeGoals": 3, "awayGoals": 2, "lastMeeting": "2026-07-02" },
+  "allTime":  { "meetings": 10, "homeWins": 7, "awayWins": 1, "draws": 2, "homeGoals": 19, "awayGoals": 8, "lastMeeting": "2026-07-02" },
+  "matches": [ { "date": "2026-07-02", "competition": "FIFA World Cup", "homeTeam": "Portugal", "awayTeam": "Croatia", "homeScore": 3, "awayScore": 2 } ],
+  "meta": {
+    "autoSource": "football-data.org",
+    "autoFetchedAt": "2026-07-02T20:00:00.000Z",
+    "autoCapped": { "allTime": false, "worldCup": false },
+    "manualSupplement": null
+  }
+}
+```
+
+- `teams.home`/`.away` — **this fixture's** home/away assignment (from `fixtures.json`/`knockout.json`), used to reorient historical W/D/L consistently regardless of which side a team played on in any given past meeting. `js/modules/match-centre.js`'s `#buildH2HStatsGrids()` reads this to render correctly no matter which side is home in the current match.
+- `worldCup` / `allTime` — same shape, one filtered to `competition.code === 'WC'`, the other unfiltered. Either can be `{ "meetings": 0 }` when there's no history — a legitimate, common value (most 2026 debutant pairings), not an error.
+- `matches` — raw list actually returned by the automated source (may be partial if capped — see `meta.autoCapped`). Not currently rendered directly in the UI; kept for future use (e.g. a "recent meetings" list).
+- `meta.autoCapped` — **the provenance signal.** `true` means the automated pass could not confirm completeness for that scope. Always computed, never guessed.
+- `meta.manualSupplement` — `null` when the automated data was used as-is. When a capped pair has been manually researched, this becomes `{ "scopes": [...], "source": "...", "suppliedAt": "...", "note": "..." }` recording exactly which scope(s) were hand-corrected and why. **This is the field that makes provenance unambiguous** — anyone reading a fixture's data can tell at a glance whether every number came from the API or whether part of it was manually verified.
+
+### The manual-supplement workflow
+
+1. Run `node scripts/gather-head-to-head-stats.mjs`. Its summary reports how many pairs are capped and not yet supplemented.
+2. For each capped pair worth correcting (prioritise fixtures with real historical depth — a capped debutant pairing with 0-2 meetings isn't actually missing anything meaningful), research the true record from a citable source: Wikipedia's head-to-head sections, press coverage confirming a specific record (e.g. "Brazil have 8 wins, 2 draws, 0 losses against Scotland"), or another citable stats source. Prefer a source you can name, not an aggregate guess.
+3. Add or update an entry in `data/h2h-manual-overrides.json`, keyed by fixture ID:
+   ```json
+   "c-r3-sco-bra": {
+     "scopes": ["allTime"],
+     "source": "https://www.worldfootball.net/match-report/co139/fifa-world-cup/ma10713809/scotland_brazil/head-to-head/ (cross-checked against press coverage of the 2026 fixture)",
+     "suppliedAt": "2026-07-02",
+     "note": "Scotland have never beaten Brazil in 10 meetings",
+     "data": {
+       "allTime": { "meetings": 10, "homeWins": 0, "awayWins": 8, "draws": 2, "homeGoals": 3, "awayGoals": 16, "lastMeeting": "2026-06-24" }
+     }
+   }
+   ```
+   `scopes` lists which of `worldCup`/`allTime` this override replaces — only include the scope(s) you actually corrected; anything not listed keeps its automated value. `data` must contain a full replacement object for each listed scope (same shape as the automated scope object), not a partial patch.
+4. Re-run `node scripts/gather-head-to-head-stats.mjs` — it's idempotent and will merge the override on top of the freshly-fetched automated data, setting `meta.manualSupplement` accordingly.
+5. Spot-check the fixture's Match Centre page — both the "World Cup" and "All-time" grids should reflect the corrected numbers, and nothing else about the page should change.
+
+### Adding new fixture pairs (ongoing maintenance)
+
+As later knockout rounds resolve (R16 → QF → SF → Final), previously-unknown pairings become real fixtures with a resolvable `football-data.org` match ID. Re-running the gather script picks these up automatically — no separate step needed. Fold this into the same Sprint 34 maintenance cadence already used for `gather-match-events.mjs`/`gather-head-to-head.mjs` (once per completed knockout round), checking the capped-pair count each time in case any newly-revealed pairing needs its own manual supplement.
+
+---
+
 End of DATA_ENTRY_GUIDE.md

@@ -898,6 +898,16 @@ The Guardian's WC 2026 player guide *page* is blocked by their anti-bot CDN — 
 
 **If `data/guardian-teams-raw.json` is ever missing** (e.g. a fresh checkout that didn't carry it, or Guardian restructures their sheet), the script falls back to printing manual DevTools capture instructions (Network tab → Fetch/XHR → find the response starting `{"sheets":{"Teams":[...`) rather than failing silently.
 
+### Head-to-head stats (Sprint 36)
+
+`headToHeadStats` on each `data/match-previews.json` fixture entry — World Cup and all-time head-to-head grids in Match Centre, complementing (not replacing) the existing Wikipedia-sourced `matchStory`/`headToHead` prose. See `docs/DATA_ENTRY_GUIDE.md` Section 18 for the full schema and workflow; `docs/ROADMAP.md` Sprint 36 retrospective for the architecture investigation that led here (several sources evaluated and rejected — WorldFootball.net had the best data but an unpredictable Cloudflare block; `thesoccerworldcups.com` blocks `ClaudeBot` by name and WAF-blocks non-browser clients regardless).
+
+**To run:** `node scripts/gather-head-to-head-stats.mjs` (needs `FOOTBALL_DATA_API_KEY`, e.g. `node --env-file=.env scripts/gather-head-to-head-stats.mjs`). Automated source is football-data.org's `head2head` subresource; capped/incomplete pairs (detected via the API's own `aggregates.numberOfMatches` vs. what it actually returns — not a guess) are listed in the run summary and can be corrected in `data/h2h-manual-overrides.json`.
+
+**Current state (as of Sprint 36, 2026-07-03):** 93 of 104 known fixtures populated (72 group stage + 21 knockout — R16 only partially known so far). **29 are flagged capped and not yet manually supplemented** — a real, open backlog, not a hidden gap. Re-run the gather script after each knockout round (same Sprint 34 cadence as the other maintenance scripts) to pick up newly-known pairings.
+
+**2026-07-05 follow-up — self-inclusion bug found and fixed:** every one of the 82 completed fixtures' `headToHeadStats` was wrongly including the fixture's own result as if it were a prior meeting (football-data.org's head2head endpoint includes the reference match itself once it's been played; the script didn't filter it out). Fixed in `fetchHeadToHead()` by excluding any returned match whose `id` equals the reference match ID, and the full pipeline was re-run to regenerate all 93 fixtures cleanly (`npm run validate` clean, Playwright-verified in browser). Also closed 7 of the 29-pair manual-supplement backlog in the same pass (22 remain) — see `docs/ROADMAP.md` Sprint 36 follow-up section and `data/h2h-manual-overrides.json` for citations.
+
 ### Yellow card suspension rules (WC 2026)
 
 Cards accumulate across **Group Stage + Round of 32 + Round of 16**. Two yellow cards in this accumulation phase = automatic 1-match ban for the next match. Cards **reset before the Quarter-Finals** — a player with 1 yellow heading into the QF has a clean slate.

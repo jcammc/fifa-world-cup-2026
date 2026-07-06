@@ -673,6 +673,25 @@
 
 /* ─── H2H stats grid ─────────────────────────────────────── */
 
+.mc-h2h-block + .mc-h2h-block {
+  margin-top: var(--space-3);
+}
+
+.mc-h2h-block__title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-1);
+}
+
+.mc-h2h-empty {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
 .mc-h2h-stats {
   display: grid;
   grid-template-columns: 1fr auto;

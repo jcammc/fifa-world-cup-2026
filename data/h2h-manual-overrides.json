@@ -1,0 +1,70 @@
+{
+  "c-r2-sco-mor": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "https://en.wikipedia.org/wiki/1998_FIFA_World_Cup_Group_A",
+    "suppliedAt": "2026-07-05",
+    "note": "Scotland and Morocco have met only once, at the 1998 World Cup (Morocco won 3-0) — also their only all-time meeting.",
+    "data": {
+      "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 3, "lastMeeting": "1998-06-23" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 3, "lastMeeting": "1998-06-23" }
+    }
+  },
+  "i-r1-fra-sen": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "https://en.wikipedia.org/wiki/2002_FIFA_World_Cup_Group_A",
+    "suppliedAt": "2026-07-05",
+    "note": "France and Senegal have met only once, at the 2002 World Cup opening match (Senegal won 1-0) — also their only all-time meeting.",
+    "data": {
+      "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 1, "lastMeeting": "2002-05-31" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 1, "lastMeeting": "2002-05-31" }
+    }
+  },
+  "j-r3-alg-aut": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "https://en.wikipedia.org/wiki/1982_FIFA_World_Cup_Group_2",
+    "suppliedAt": "2026-07-05",
+    "note": "Algeria and Austria have met only once, at the 1982 World Cup (Austria won 2-0) — also their only all-time meeting.",
+    "data": {
+      "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 2, "lastMeeting": "1982-06-21" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 2, "lastMeeting": "1982-06-21" }
+    }
+  },
+  "l-r3-pan-eng": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup_Group_G",
+    "suppliedAt": "2026-07-05",
+    "note": "Panama and England have met only once, at the 2018 World Cup (England won 6-1) — also their only all-time meeting.",
+    "data": {
+      "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 1, "awayGoals": 6, "lastMeeting": "2018-06-24" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 1, "awayGoals": 6, "lastMeeting": "2018-06-24" }
+    }
+  },
+  "e-r3-ecu-ger": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup_Group_A (Germany 3-0, 20 Jun 2006); ESPN match report for the 2013 friendly, Germany 4-2 (29 May 2013): https://www.espn.com/soccer/match/_/gameId/361584/alemania-ecuador",
+    "suppliedAt": "2026-07-05",
+    "note": "Ecuador and Germany have met twice all-time: the 2006 World Cup group stage (Germany 3-0) and a 2013 friendly (Germany 4-2). No other meetings on record.",
+    "data": {
+      "allTime":  { "meetings": 2, "homeWins": 0, "awayWins": 2, "draws": 0, "homeGoals": 2, "awayGoals": 7, "lastMeeting": "2013-05-29" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 3, "lastMeeting": "2006-06-20" }
+    }
+  },
+  "c-r3-sco-bra": {
+    "scopes": ["worldCup"],
+    "source": "Individual World Cup match results cross-checked via web search against Wikipedia group-stage pages and secondary head-to-head summaries: 1974 (0-0 draw), 1982 (Brazil 4-1, scorers Zico/Oscar/Eder/Falcao vs Narey), 1990 (Brazil 1-0, Muller), 1998 (Brazil 2-1, https://en.wikipedia.org/wiki/1998_FIFA_World_Cup_Group_A, 10 Jun 1998).",
+    "suppliedAt": "2026-07-05",
+    "note": "Scotland and Brazil had met at the World Cup on four prior occasions before this 2026 fixture (all in the group stage): 1974 draw, then three Brazil wins (1982, 1990, 1998). All-time (all-competitions) record — 10 meetings, Brazil 8 wins/2 draws per secondary sources — NOT included here: only 5 of the 10 individual scorelines could be independently confirmed, so exact goal aggregates for all-time remain unresolved. allTime scope intentionally left on the automated/capped value pending further research.",
+    "data": {
+      "worldCup": { "meetings": 4, "homeWins": 0, "awayWins": 3, "draws": 1, "homeGoals": 2, "awayGoals": 7, "lastMeeting": "1998-06-10" }
+    }
+  },
+  "h-r3-uru-esp": {
+    "scopes": ["worldCup"],
+    "source": "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup_final_round (2-2, 9 Jul 1950); https://en.wikipedia.org/wiki/1990_FIFA_World_Cup_Group_E (0-0, 17 Jun 1990); confirmed as the only two prior WC meetings via secondary head-to-head summary (Spain's 2026 win was their first-ever WC win over Uruguay).",
+    "suppliedAt": "2026-07-05",
+    "note": "Uruguay and Spain had met at the World Cup twice before this 2026 fixture, both draws (1950, 1990). All-time (all-competitions) record — 10 total meetings per prose — NOT included here: only 3 of the 10 individual scorelines are confirmed, so all-time goal aggregates remain unresolved. allTime scope intentionally left on the automated/capped value pending further research.",
+    "data": {
+      "worldCup": { "meetings": 2, "homeWins": 0, "awayWins": 0, "draws": 2, "homeGoals": 2, "awayGoals": 2, "lastMeeting": "1990-06-17" }
+    }
+  }
+}
