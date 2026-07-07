@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T10:11:25.912Z",
+  "lastUpdated": "2026-07-07T10:13:33.358Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -1658,7 +1658,7 @@
       "playerId": "colombia-ospina",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 50.4,
       "form": 20.4,
       "formBreakdown": {
@@ -1668,12 +1668,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 35.4,
+      "consensus": 25.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 56180
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 56180,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/David_Ospina",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-munoz",
@@ -1700,7 +1712,7 @@
       "playerId": "colombia-lucumi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 25.7,
       "form": 87,
       "formBreakdown": {
@@ -1710,18 +1722,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56.4,
+      "consensus": 30.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 23188
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 23188,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jhon_Lucumí",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-arias",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 27.5,
       "form": 39.6,
       "formBreakdown": {
@@ -1731,18 +1755,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.6,
+      "consensus": 24.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 24896
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 24896,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Santiago_Arias",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-castano",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 13.7,
       "form": 32.3,
       "formBreakdown": {
@@ -1752,18 +1788,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 23,
+      "consensus": 14,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 10651
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 10651,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Kevin_Castaño",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-rios",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 52.8,
       "form": 43.9,
       "formBreakdown": {
@@ -1773,12 +1821,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.3,
+      "consensus": 29.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 62846
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 62846,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Richard_Ríos",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-diaz",
@@ -1805,7 +1865,7 @@
       "playerId": "colombia-carrascal",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 12.7,
       "form": 20.4,
       "formBreakdown": {
@@ -1815,18 +1875,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.6,
+      "consensus": 10.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 9510
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 9510,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jorge_Carrascal",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-cordoba",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 33.1,
       "form": 57.2,
       "formBreakdown": {
@@ -1836,18 +1908,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.2,
+      "consensus": 25.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 29961
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 29961,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jhon_Córdoba",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-rodriguez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 35,
       "media": 96.5,
       "form": 87,
       "formBreakdown": {
@@ -1857,12 +1941,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 91.8,
+      "consensus": 63.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 664199
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 2,
+        "domesticTitles": 8
+      },
+      "mediaPageviews": 664199,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/James_Rodríguez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-jhon-arias",
@@ -1889,7 +1985,7 @@
       "playerId": "colombia-vargas",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 30.6,
       "form": 87,
       "formBreakdown": {
@@ -1899,18 +1995,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.8,
+      "consensus": 36.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 26899
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 5
+      },
+      "mediaPageviews": 26899,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Camilo_Vargas",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-mina",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 39.8,
       "form": 20.4,
       "formBreakdown": {
@@ -1920,18 +2028,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.1,
+      "consensus": 22.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 40635
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 40635,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Yerry_Mina",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-puerta",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 42.3,
       "form": 87,
       "formBreakdown": {
@@ -1941,12 +2061,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.6,
+      "consensus": 34.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 43824
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 43824,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Gustavo_Puerta",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-portilla",
@@ -1973,7 +2105,7 @@
       "playerId": "colombia-lerma",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 26.4,
       "form": 87,
       "formBreakdown": {
@@ -1983,18 +2115,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56.7,
+      "consensus": 28.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 23861
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 23861,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jefferson_Lerma",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-mojica",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 20.4,
       "form": 67.7,
       "formBreakdown": {
@@ -2004,18 +2148,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.1,
+      "consensus": 22,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 16056
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 16056,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Johan_Mojica",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-ditta",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 13,
       "form": 20.4,
       "formBreakdown": {
@@ -2025,18 +2181,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.7,
+      "consensus": 15.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 10031
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 10031,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Willer_Ditta",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-hernandez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 45.8,
       "form": 28.1,
       "formBreakdown": {
@@ -2046,18 +2214,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37,
+      "consensus": 18.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 48758
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 48758,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Cucho_Hernández",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-fernando-quintero",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 38,
       "form": 32.3,
       "formBreakdown": {
@@ -2067,18 +2247,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 35.2,
+      "consensus": 17.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 36598
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 36598,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Juan_Fernando_Quintero",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-campaz",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 30.3,
       "form": 32.3,
       "formBreakdown": {
@@ -2088,12 +2280,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.3,
+      "consensus": 18.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 26321
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 26321,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jaminton_Campaz",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-machado",
@@ -2120,7 +2324,7 @@
       "playerId": "colombia-sanchez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 43,
       "form": 87,
       "formBreakdown": {
@@ -2130,12 +2334,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65,
+      "consensus": 40,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 44843
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 44843,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Davinson_Sánchez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-montero",
@@ -2162,7 +2378,7 @@
       "playerId": "colombia-suarez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 59.9,
       "form": 59.6,
       "formBreakdown": {
@@ -2172,12 +2388,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 59.8,
+      "consensus": 29.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 76479
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 76479,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Luis_Suárez_(footballer",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-gomez",
