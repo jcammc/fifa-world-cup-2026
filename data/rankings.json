@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T11:43:43.724Z",
+  "lastUpdated": "2026-07-07T12:50:38.988Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -8117,7 +8117,7 @@
       "playerId": "usa-turner",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 75.4,
       "form": 20.4,
       "formBreakdown": {
@@ -8127,18 +8127,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.9,
+      "consensus": 24,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 151727
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 151727,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Matt_Turner_(soccer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-dest",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 89.8,
       "form": 55.1,
       "formBreakdown": {
@@ -8148,18 +8160,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.5,
+      "consensus": 43.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 299397
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 299397,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Sergiño_Dest",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-richards",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 82,
       "form": 55.1,
       "formBreakdown": {
@@ -8169,18 +8193,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.6,
+      "consensus": 36.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 195593
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 195593,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Chris_Richards_(soccer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-adams",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 77.5,
       "form": 55.1,
       "formBreakdown": {
@@ -8190,18 +8226,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 66.3,
+      "consensus": 33.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 167758
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 167758,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Tyler_Adams",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-robinson",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 86.6,
       "form": 55.1,
       "formBreakdown": {
@@ -8211,18 +8259,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.9,
+      "consensus": 35.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 247989
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 247989,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Antonee_Robinson",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-trusty",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 74.6,
       "form": 20.4,
       "formBreakdown": {
@@ -8232,18 +8292,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.5,
+      "consensus": 28.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 149193
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 149193,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Auston_Trusty",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-reyna",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 95.1,
       "form": 73,
       "formBreakdown": {
@@ -8253,18 +8325,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 84.1,
+      "consensus": 42,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 544761
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 544761,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Giovanni_Reyna",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-mckennie",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 87,
       "form": 55.1,
       "formBreakdown": {
@@ -8274,18 +8358,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 71.1,
+      "consensus": 35.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 262035
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 262035,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Weston_McKennie",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-pepi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 83.5,
       "form": 28.1,
       "formBreakdown": {
@@ -8295,18 +8391,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.8,
+      "consensus": 35.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 212637
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 212637,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Pepi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-pulisic",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 97.9,
       "form": 55.1,
       "formBreakdown": {
@@ -8316,18 +8424,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 76.5,
+      "consensus": 43.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 1237098
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 1237098,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Christian_Pulisic",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-aaronson",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 63.7,
       "form": 20.4,
       "formBreakdown": {
@@ -8337,18 +8457,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.1,
+      "consensus": 26,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 103782
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 103782,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Brenden_Aaronson",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-miles-robinson",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 56.3,
       "form": 20.4,
       "formBreakdown": {
@@ -8358,18 +8490,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38.3,
+      "consensus": 19.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 76306
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 76306,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Miles_Robinson_(soccer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-ream",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 88.4,
       "form": 55.1,
       "formBreakdown": {
@@ -8379,18 +8523,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 71.8,
+      "consensus": 35.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 288611
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 288611,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Tim_Ream",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-berhalter",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 84.5,
       "form": 32.3,
       "formBreakdown": {
@@ -8400,18 +8556,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.4,
+      "consensus": 29.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 225484
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 225484,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Sebastian_Berhalter",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-roldan",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 52.1,
       "form": 20.4,
       "formBreakdown": {
@@ -8421,18 +8589,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.3,
+      "consensus": 18.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 67820
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 67820,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Cristian_Roldan",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-freeman",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 93.7,
       "form": 55.1,
       "formBreakdown": {
@@ -8442,18 +8622,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.4,
+      "consensus": 37.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 422089
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 422089,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Alex_Freeman",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-tillman",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 83.1,
       "form": 92.3,
       "formBreakdown": {
@@ -8463,18 +8655,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 87.7,
+      "consensus": 51.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 205703
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 205703,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Malik_Tillman",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-arfsten",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 39.4,
       "form": 20.4,
       "formBreakdown": {
@@ -8484,18 +8688,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 29.9,
+      "consensus": 15,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 46142
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 46142,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Max_Arfsten",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-wright",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 60.9,
       "form": 20.4,
       "formBreakdown": {
@@ -8505,18 +8721,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.6,
+      "consensus": 20.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 89772
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 89772,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Haji_Wright",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-balogun",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 98.6,
       "form": 96.1,
       "formBreakdown": {
@@ -8526,18 +8754,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 97.4,
+      "consensus": 48.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 1723379
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 1723379,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Folarin_Balogun",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-weah",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 89.1,
       "form": 28.1,
       "formBreakdown": {
@@ -8547,18 +8787,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.6,
+      "consensus": 36.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 291506
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 291506,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Timothy_Weah",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-mckenzie",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 53.5,
       "form": 20.4,
       "formBreakdown": {
@@ -8568,18 +8820,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37,
+      "consensus": 18.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 72461
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 72461,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mark_McKenzie_(soccer",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-scally",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 58.1,
       "form": 20.4,
       "formBreakdown": {
@@ -8589,18 +8853,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.3,
+      "consensus": 19.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 82951
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 82951,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Joe_Scally",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-freese",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 78.2,
       "form": 55.1,
       "formBreakdown": {
@@ -8610,18 +8886,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 66.7,
+      "consensus": 33.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 169643
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 169643,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Matt_Freese",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-brady",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 42.6,
       "form": 20.4,
       "formBreakdown": {
@@ -8631,18 +8919,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.5,
+      "consensus": 15.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 50647
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 50647,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Chris_Brady_(soccer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-zendejas",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 70.1,
       "form": 20.4,
       "formBreakdown": {
@@ -8652,12 +8952,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.3,
+      "consensus": 30.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 124175
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 124175,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Alejandro_Zendejas",
+          "enteredAt": "2026-07-07"
+        }
+      }
     }
   ]
 }
