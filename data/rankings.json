@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T12:50:38.988Z",
+  "lastUpdated": "2026-07-07T13:28:05.601Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -449,7 +449,7 @@
       "playerId": "argentina-gonzalez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 40.1,
       "form": 32.3,
       "formBreakdown": {
@@ -459,12 +459,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.2,
+      "consensus": 18.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 46718
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 46718,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nicolás_González_(footballer",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-almada",
@@ -1691,7 +1703,7 @@
       "playerId": "colombia-munoz",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 61.6,
       "form": 94,
       "formBreakdown": {
@@ -1701,12 +1713,24 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 77.8,
+      "consensus": 38.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 91598
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 91598,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Daniel_Muñoz_(footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-lucumi",
@@ -1844,7 +1868,7 @@
       "playerId": "colombia-diaz",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 79.6,
       "form": 97.5,
       "formBreakdown": {
@@ -1854,12 +1878,24 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 88.6,
+      "consensus": 51.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 176055
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 6
+      },
+      "mediaPageviews": 176055,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Luis_Díaz_(footballer",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-carrascal",
@@ -1964,7 +2000,7 @@
       "playerId": "colombia-jhon-arias",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 39.8,
       "form": 87,
       "formBreakdown": {
@@ -1974,12 +2010,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63.4,
+      "consensus": 34.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 46594
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 46594,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jhon_Arias_(footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-vargas",
@@ -2630,7 +2678,7 @@
       "playerId": "egypt-trezeguet",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 71.8,
       "form": 88.1,
       "formBreakdown": {
@@ -2640,12 +2688,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80,
+      "consensus": 42.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 137012
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 137012,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Trézéguet_(Egyptian_footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-ashour",
