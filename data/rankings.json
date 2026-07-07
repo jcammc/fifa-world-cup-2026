@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T11:00:30.038Z",
+  "lastUpdated": "2026-07-07T11:07:08.369Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -7271,7 +7271,7 @@
       "playerId": "switzerland-kobel",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 38,
       "form": 87,
       "formBreakdown": {
@@ -7281,12 +7281,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 62.5,
+      "consensus": 31.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 37190
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 37190,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Gregor_Kobel",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-muheim",
@@ -7313,7 +7325,7 @@
       "playerId": "switzerland-widmer",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 17.6,
       "form": 46.7,
       "formBreakdown": {
@@ -7323,12 +7335,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.2,
+      "consensus": 16.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 14241
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 14241,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Silvan_Widmer",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-elvedi",
@@ -7355,7 +7379,7 @@
       "playerId": "switzerland-akanji",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 25,
       "media": 63,
       "form": 87,
       "formBreakdown": {
@@ -7365,18 +7389,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75,
+      "consensus": 50,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 89419
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 5
+      },
+      "mediaPageviews": 89419,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Manuel_Akanji",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-zakaria",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 42.3,
       "form": 55.1,
       "formBreakdown": {
@@ -7386,18 +7422,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.7,
+      "consensus": 24.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 44842
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 44842,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Denis_Zakaria",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-embolo",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 81,
       "form": 95.8,
       "formBreakdown": {
@@ -7407,18 +7455,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 88.4,
+      "consensus": 51.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 175676
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 175676,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Breel_Embolo",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-freuler",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 24.3,
       "form": 87,
       "formBreakdown": {
@@ -7428,18 +7488,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.7,
+      "consensus": 27.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 21823
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 21823,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Remo_Freuler",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-manzambi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 85.6,
       "form": 97.9,
       "formBreakdown": {
@@ -7449,18 +7521,30 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 91.8,
+      "consensus": 45.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 226598
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 226598,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Johan_Manzambi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-xhaka",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 89.4,
       "form": 87,
       "formBreakdown": {
@@ -7470,18 +7554,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 88.2,
+      "consensus": 51.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 291290
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 291290,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Granit_Xhaka",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-ndoye",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 51.1,
       "form": 89.8,
       "formBreakdown": {
@@ -7491,18 +7587,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.4,
+      "consensus": 35.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 62195
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 62195,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Dan_Ndoye",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-mvogo",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 19.7,
       "form": 20.4,
       "formBreakdown": {
@@ -7512,18 +7620,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20,
+      "consensus": 10,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 16052
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 16052,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Yvon_Mvogo",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-rodriguez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 2.5,
       "form": 87,
       "formBreakdown": {
@@ -7533,18 +7653,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.8,
+      "consensus": 22.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 244
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 244,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ricardo_Rodriguez_(footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-jashari",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 29.2,
       "form": 28.1,
       "formBreakdown": {
@@ -7554,18 +7686,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.7,
+      "consensus": 14.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 25936
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 25936,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ardon_Jashari",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-sow",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 21.1,
       "form": 43.9,
       "formBreakdown": {
@@ -7575,18 +7719,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.5,
+      "consensus": 21.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 18096
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 18096,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Djibril_Sow",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-fassnacht",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 14.1,
       "form": 28.1,
       "formBreakdown": {
@@ -7596,12 +7752,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.1,
+      "consensus": 18.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 11115
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 5
+      },
+      "mediaPageviews": 11115,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Christian_Fassnacht",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-vargas",
@@ -7628,7 +7796,7 @@
       "playerId": "switzerland-comert",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 16.9,
       "form": 20.4,
       "formBreakdown": {
@@ -7638,18 +7806,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.7,
+      "consensus": 14.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 13679
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 13679,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Eray_Cömert",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-okafor",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 31,
       "form": 28.1,
       "formBreakdown": {
@@ -7659,18 +7839,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 29.6,
+      "consensus": 22.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 27382
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 5
+      },
+      "mediaPageviews": 27382,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Noah_Okafor",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-aebischer",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 18,
       "form": 59.6,
       "formBreakdown": {
@@ -7680,18 +7872,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38.8,
+      "consensus": 26.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 14497
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 14497,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Michel_Aebischer",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-keller",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 1.4,
       "form": 20.4,
       "formBreakdown": {
@@ -7701,18 +7905,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 10.9,
+      "consensus": 8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 139
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 139,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Marvin_Keller_(footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-rieder",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 14.8,
       "form": 46.7,
       "formBreakdown": {
@@ -7722,18 +7938,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.8,
+      "consensus": 20.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 11340
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 11340,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Fabian_Rieder",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-amdouni",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 28.2,
       "form": 32.3,
       "formBreakdown": {
@@ -7743,18 +7971,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.3,
+      "consensus": 15.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 25271
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 25271,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Zeki_Amdouni",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-amenda",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 21.8,
       "form": 20.4,
       "formBreakdown": {
@@ -7764,18 +8004,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.1,
+      "consensus": 13.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 18184
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 18184,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Aurèle_Amenda",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-jaquez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 22.2,
       "form": 43.9,
       "formBreakdown": {
@@ -7785,18 +8037,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.1,
+      "consensus": 16.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 18190
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 18190,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Luca_Jaquez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "switzerland-itten",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 23.9,
       "form": 32.3,
       "formBreakdown": {
@@ -7806,12 +8070,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.1,
+      "consensus": 21.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 20866
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 20866,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Cedric_Itten",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "usa-turner",
