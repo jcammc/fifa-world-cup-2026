@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T01:56:02.005Z",
+  "lastUpdated": "2026-07-07T08:36:08.592Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -197,7 +197,7 @@
       "playerId": "argentina-messi",
       "transfermarkt": null,
       "ea": null,
-      "awards": 15,
+      "awards": 100,
       "media": 100,
       "form": 100,
       "formBreakdown": {
@@ -207,12 +207,15 @@
         "assists": 0,
         "motm": 3
       },
-      "consensus": 57.5,
+      "consensus": 100,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
       "awardsRaw": {
-        "worldCupWinner": true
+        "worldCupWinner": true,
+        "ballonDorTier": "winner",
+        "uefaPoty": true,
+        "wcGoldenBall": true
       },
       "mediaPageviews": 4032748
     },
@@ -1843,7 +1846,7 @@
       "playerId": "egypt-salah",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 95.8,
       "form": 98.6,
       "formBreakdown": {
@@ -1853,11 +1856,11 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 97.2,
+      "consensus": 48.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
+      "awardsRaw": {},
       "mediaPageviews": 625714
     },
     {
@@ -2872,7 +2875,7 @@
       "playerId": "france-dembele",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 100,
       "media": 97.2,
       "form": 97.2,
       "formBreakdown": {
@@ -2882,11 +2885,13 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 97.2,
+      "consensus": 98.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
+      "awardsRaw": {
+        "ballonDorTier": "winner"
+      },
       "mediaPageviews": 955583
     },
     {

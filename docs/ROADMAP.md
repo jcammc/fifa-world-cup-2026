@@ -392,6 +392,22 @@ Before starting the manual data-entry phase, each of the four components' planne
 
 **Manual work still remaining, unchanged in shape:** Transfermarkt and EA raw values (and the non-World-Cup-winner parts of `awardsRaw`) still need a human to supply them directly into `data/rankings.json`, per the phasing recommendation above — that data-entry phase has not yet started.
 
+### Acquisition workflow refinements (2026-07-08) — before the manual pilot began, round 2
+
+Three refinements, requested after reviewing the above: (1) check whether Awards automation could be extended further, (2) build a proper bulk-import mechanism instead of hand-editing JSON for the remaining manual fields, (3) add provenance to manually-entered values from the start.
+
+**Wikidata extension.** Found and verified a further automatable Awards signal: Wikidata's structured `P166` ("award received") claims, queried via an exact sitelinks lookup against the article titles `gather-rankings-signals.mjs` already resolves (no new name-matching risk). Initially mapped four fields — `ballonDorTier` (winner tier), `fifaBestPlayer`, `uefaPoty`, `wcGoldenBall`.
+
+**Real bug found and reverted the same day:** `fifaBestPlayer` produced a confirmed false positive — Egypt's Mohamed Salah shows a `P166` claim for "The Best FIFA Men's Player" despite only finishing 3rd (2018, 2021; confirmed against the actual Wikipedia prose). Wikidata includes podium finalists under "award received" for this specific award with no queryable qualifier distinguishing a finalist from a winner. Spot-checked the other three mappings against real non-winners already in scope (Ballon d'Or: Mbappé; UEFA POTY: Bellingham and Kane; World Cup Golden Ball: Mbappé again) — all clean, so the issue was isolated to `fifaBestPlayer`, not systemic (one unrelated false *negative* also surfaced: Spain's Rodri's genuine 2023-24 UEFA POTY win isn't yet in Wikidata — an acceptable gap, since under-detection just defers to manual entry). Per this project's determinism principle, `fifaBestPlayer` was removed entirely rather than patched with an unverified heuristic, and the two already-written values (Messi, Salah) were stripped from `data/rankings.json` — including Messi's, even though it happened to be correct by coincidence. Final automated coverage after the fix: `worldCupWinner`, `ballonDorTier` (winner-only), `uefaPoty`, `wcGoldenBall`.
+
+**Bulk-import mechanism.** New `scripts/import-ranking-raw.mjs` (`npm run import-ranking-raw`) — bulk-imports one team's researched values at a time from a pasted CSV via stdin, instead of hand-editing 286 players' worth of nested JSON. Conservative by default (never overwrites a non-null raw field without `--force`); a player's row appearing in an Awards import at all marks `awardsRaw` as researched even when every optional column is blank, so "checked, has none" correctly resolves to a real 0, not stuck on `null`.
+
+**Lightweight provenance, added from the outset.** Every entry can now carry a `rawProvenance` object recording `{source, enteredAt}` per raw-field-group (`transfermarktValueEUR` / `eaRatingRaw` / `awardsRaw`) for manually-supplied values — matching this project's `h2h-manual-overrides.json` convention of tracking where a hand-entered value came from, without retrofitting it after hundreds of entries exist.
+
+Full design detail in `docs/plans/2026-07-06-ranking-system-design.md` §0b. 56/56 tests passing, `npm run validate` clean.
+
+**Manual work still remaining, unchanged in shape:** Transfermarkt and EA raw values, plus `fifaBestPlayer` and the remaining `awardsRaw` sub-fields Wikidata/Wikipedia can't reach, still need a human to supply them — now via `scripts/import-ranking-raw.mjs` rather than hand-editing JSON. That data-entry phase has not yet started.
+
 ---
 
 ## Sprint 40 — Documentation & Process Debt Cleanup

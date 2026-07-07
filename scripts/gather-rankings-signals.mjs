@@ -1,24 +1,34 @@
 /**
- * Automated acquisition for the two ranking signals that ARE reliably
- * fetchable (see docs/plans/2026-07-06-ranking-system-design.md §0/§3a):
+ * Automated acquisition for the ranking signals that ARE reliably fetchable
+ * (see docs/plans/2026-07-06-ranking-system-design.md §0/§3a/§0b):
  *
  *   - `mediaPageviews` — Wikimedia Pageviews API, replacing Instagram
  *     entirely (Instagram is login-walled; confirmed even for a global
  *     superstar's own public profile).
  *   - `awardsRaw.worldCupWinner` — parsed from the player's Wikipedia
- *     infobox `medaltemplates` field, which is structured and reliable for
- *     TEAM competition results. Every other `awardsRaw` sub-field (Ballon
- *     d'Or tier, FIFA Best Player, etc.) lives in free prose, not a
- *     structured template, and is NOT auto-detected here — see the design
- *     doc for why that's a deliberate scope limit, not an oversight.
+ *     infobox `medaltemplates` field, structured and reliable for TEAM
+ *     competition results.
+ *   - `awardsRaw.{ballonDorTier,uefaPoty,wcGoldenBall}` — Wikidata's
+ *     structured `P166` ("award received") claims, looked up by an EXACT
+ *     sitelinks query against the same article title already resolved
+ *     above (no new fuzzy name-matching). Deliberately limited to a small,
+ *     individually-verified Q-id table (§0b) — Wikidata's P166 only
+ *     reliably captures wins, not placements, so Ballon d'Or top-3/top-10,
+ *     CL wins, domestic title counts, and TOTY stay manual. FIFA Best
+ *     Player was tried and removed (§0b) after a confirmed false positive
+ *     (Egypt's Salah shows a claim despite only finishing 3rd) — stays
+ *     manual too.
  *
- * Transfermarkt/EA raw values and the rest of awardsRaw are manual —
- * agent-side fetching for those was tested and confirmed blocked. Edit
- * data/rankings.json directly for those fields.
+ * Transfermarkt/EA raw values and the remaining awardsRaw sub-fields are
+ * manual — agent-side fetching for those was tested and confirmed blocked.
+ * Use scripts/import-ranking-raw.mjs to bulk-populate them from pasted
+ * research, rather than hand-editing data/rankings.json.
  *
- * Never overwrites a raw field a human has already supplied. Never guesses
- * a Wikipedia article title — an unresolved player is reported and skipped,
- * matching this project's determinism convention everywhere else.
+ * Never overwrites a raw field a human (or a prior automated pass) has
+ * already supplied. Never guesses a Wikipedia article title or an award
+ * mapping not in the verified table — an unresolved player, or an award
+ * this script can't confidently map, is reported and skipped, matching
+ * this project's determinism convention everywhere else.
  *
  * Run: node scripts/gather-rankings-signals.mjs
  * Idempotent — safe to re-run any time (e.g. monthly, to refresh pageviews).
@@ -128,6 +138,64 @@ export function detectWorldCupWinner(wikitext) {
   return false;
 }
 
+// ── Wikidata award detection — exact sitelinks lookup, verified Q-id table ──
+//
+// Different mechanism from the medaltemplates parse above: Wikidata's P166
+// ("award received") claims are structured per-award, not free prose.
+// Looked up via an EXACT sitelinks query against the article title already
+// resolved by resolveArticleTitle() -- no new name-matching risk. Verified
+// directly (see design doc §0b): Messi (Q615) has 66 P166 claims including
+// Ballon d'Or/FIFA Ballon d'Or/FIFA World Player of the Year/World Cup
+// Golden Ball; an obscure squad player (Norway's Sondre Langås, Q102330606)
+// has a real resolved entity with 0 claims -- the correct, honest answer,
+// not a lookup failure.
+//
+// Each Q-id below was individually looked up and confirmed, not guessed.
+// P166 only reliably captures WINS -- it has no concept of "runner-up" or
+// "top 10", so Ballon d'Or top-3/top-10 placements, CL wins, domestic title
+// counts, and TOTY (a video-game award, not tracked the same way) are
+// deliberately NOT covered here and stay manual (scripts/import-ranking-raw.mjs).
+//
+// "The Best FIFA Men's Player" / "FIFA World Player of the Year" (Q28156245 /
+// Q182529) were REMOVED from this table 2026-07-08 after a confirmed false
+// positive: Egypt's Mohamed Salah shows a P166 claim for Q28156245, but he
+// only finished 3rd (2018, 2021) -- Wikidata includes podium finalists under
+// "award received" for this specific award with no queryable qualifier
+// distinguishing them from an actual winner (checked: only a P585 date
+// qualifier is present, no placement marker). Spot-checked the three
+// remaining mappings below against real non-winners already in this
+// project's scope (Ballon d'Or: Mbappé, a genuine multi-time runner-up;
+// UEFA POTY: Bellingham, a real 2023-24 finalist who didn't win, and Kane;
+// World Cup Golden Ball: Mbappé, the real 2022 Silver Ball/runner-up) --
+// all three correctly show no claim, so this false-positive risk appears
+// isolated to the FIFA Best Player award specifically, not systemic. Per
+// this project's determinism principle, a field that can produce even one
+// wrong answer is removed entirely rather than patched with a heuristic --
+// fifaBestPlayer stays manual (scripts/import-ranking-raw.mjs).
+const BALLON_DOR_QIDS    = new Set(['Q166177', 'Q2291862']); // Ballon d'Or; FIFA Ballon d'Or (2010-2015 merged era)
+const UEFA_POTY_QID      = 'Q260117';  // UEFA Men's Player of the Year Award
+const WC_GOLDEN_BALL_QID = 'Q17355204'; // World Cup Golden Ball
+
+// Pure mapping function, unit-testable without any network access.
+export function mapWikidataAwardsToRaw(awardQids) {
+  const raw = {};
+  if (awardQids.some(q => BALLON_DOR_QIDS.has(q))) raw.ballonDorTier = 'winner';
+  if (awardQids.includes(UEFA_POTY_QID)) raw.uefaPoty = true;
+  if (awardQids.includes(WC_GOLDEN_BALL_QID)) raw.wcGoldenBall = true;
+  return raw;
+}
+
+export async function fetchWikidataAwardQids(title) {
+  const url = `https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=${encodeURIComponent(title)}&props=claims&format=json`;
+  const res = await fetchWithRetry(url).catch(() => null);
+  if (!res || !res.ok) return null;
+  const json = await res.json();
+  const entity = Object.values(json.entities ?? {})[0];
+  if (!entity || entity.missing !== undefined) return null;
+  const claims = entity.claims?.P166 ?? [];
+  return claims.map(c => c.mainsnak?.datavalue?.value?.id).filter(Boolean);
+}
+
 // ── Wikimedia Pageviews — a single, fully-completed calendar month ─────────
 //
 // Verified: a same-month start/end range (e.g. 20260601/20260630) returns
@@ -170,7 +238,7 @@ async function main() {
 
   console.log(`Fetching signals for ${players.length} in-scope players (pageviews window: ${window.label})...\n`);
 
-  let mediaUpdated = 0, wcWinnerDetected = 0, unresolved = [];
+  let mediaUpdated = 0, wcWinnerDetected = 0, wikidataAwardsDetected = 0, unresolved = [];
 
   for (const player of players) {
     const entry = byPlayerId.get(player.id);
@@ -196,6 +264,17 @@ async function main() {
     }
 
     await sleep(DELAY_MS);
+
+    const awardQids = await fetchWikidataAwardQids(title);
+    if (awardQids) {
+      const mapped = mapWikidataAwardsToRaw(awardQids);
+      if (Object.keys(mapped).length) {
+        entry.awardsRaw = { ...(entry.awardsRaw ?? {}), ...mapped };
+        wikidataAwardsDetected++;
+      }
+    }
+
+    await sleep(DELAY_MS);
   }
 
   rankingsFile.lastUpdated = new Date().toISOString();
@@ -206,6 +285,7 @@ async function main() {
   console.log('────────────────────────────────────────────────────────────');
   console.log(`  mediaPageviews populated       : ${mediaUpdated}`);
   console.log(`  worldCupWinner newly detected  : ${wcWinnerDetected}`);
+  console.log(`  Wikidata awards newly detected : ${wikidataAwardsDetected} (Ballon d'Or/UEFA POTY/WC Golden Ball)`);
   console.log(`  Unresolved article titles      : ${unresolved.length}`);
   if (unresolved.length) {
     console.log('\n  Players whose Wikipedia article could not be resolved (reported, not guessed):');
@@ -213,8 +293,10 @@ async function main() {
     if (unresolved.length > 30) console.log(`    ... and ${unresolved.length - 30} more`);
   }
   console.log('────────────────────────────────────────────────────────────');
-  console.log('\nNote: this only fills mediaPageviews and awardsRaw.worldCupWinner.');
-  console.log('Run npm run generate-rankings afterward to recompute derived scores.');
+  console.log('\nNote: this only fills mediaPageviews and the auto-detectable awardsRaw');
+  console.log('sub-fields above. Run npm run generate-rankings afterward to recompute');
+  console.log('derived scores. Use scripts/import-ranking-raw.mjs for the remaining');
+  console.log('manual fields (transfermarktValueEUR, eaRatingRaw, and the rest of awardsRaw).');
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) main();

@@ -29,6 +29,35 @@ Before starting the manual data-entry phase, each of the four components' origin
 
 ---
 
+## 0b. Wikidata Awards extension + manual-entry workflow (2026-07-08)
+
+Before starting the manual data-entry phase, one further automatable source was found and verified: **Wikidata's structured `P166` ("award received") claims.** Tested directly, not assumed:
+- Messi (`Q615`) has 66 `P166` claims, including exact Q-ids for **Ballon d'Or** (`Q166177`), **FIFA Ballon d'Or** (`Q2291862`, the 2010-2015 merged era), **FIFA World Player of the Year** (`Q182529`) / **The Best FIFA Men's Player** (`Q28156245`, the post-2016 name for the same lineage), **UEFA Men's Player of the Year Award** (`Q260117`), and **World Cup Golden Ball** (`Q17355204`).
+- A control check against an obscure squad player (Norway's Sondre Langås, `Q102330606`) returned a real, resolved entity with **0** award claims — the correct, honest answer, not a lookup failure.
+- Crucially, this is queried with an **exact, deterministic lookup** (`action=wbgetentities&sites=enwiki&titles=<title>`), reusing the article title `gather-rankings-signals.mjs` already resolved and verified for Media/World-Cup-winner — no new fuzzy name-matching risk introduced.
+
+**Coverage limit, by design, not oversight:** `P166` only reliably captures **wins**, never placements — it has no concept of "Ballon d'Or runner-up" or "top 10". So Ballon d'Or top-3/top-10 tiers, Champions League win counts, domestic title counts, and TOTY (a video-game industry award, not tracked the same way on Wikidata) are **not** covered by this extension and remain manual. An award Q-id not in the small, individually-verified mapping table (`BALLON_DOR_QIDS`/`UEFA_POTY_QID`/`WC_GOLDEN_BALL_QID` in `scripts/gather-rankings-signals.mjs`) is simply not touched — never guessed.
+
+**FIFA Best Player was tried and removed the same day, after a confirmed false positive.** Wikidata's `P166` claims for Egypt's Mohamed Salah include `Q28156245` ("The Best FIFA Men's Player") — but Salah only ever **finished 3rd** for that award (2018, 2021; confirmed against the actual Wikipedia prose). Wikidata includes podium finalists under "award received" for this specific award with no queryable qualifier distinguishing a finalist from an actual winner (checked: the claim carries only a `P585` date qualifier, nothing else). Spot-checked the three remaining mappings against real non-winners already in this project's scope — Ballon d'Or: Mbappé (a genuine multi-time runner-up); UEFA POTY: Bellingham (a real 2023-24 finalist who didn't win) and Kane; World Cup Golden Ball: Mbappé again (the real 2022 Silver Ball/runner-up) — all three correctly show no claim, so this risk appears isolated to FIFA Best Player specifically, not systemic. (One unrelated false *negative* surfaced during this check: Spain's Rodri genuinely won UEFA POTY 2023-24, but Wikidata doesn't yet have that claim — an acceptable gap, since under-detection just defers to manual entry rather than asserting a wrong fact.) Per this project's determinism principle — a field that can produce even one wrong answer gets removed entirely, not patched with an unverified heuristic — `fifaBestPlayer` is fully manual again, and the two already-written values this bug produced (Messi, Egypt's Salah) were stripped from `data/rankings.json` even though Messi's happened to be correct by coincidence.
+
+**Manual-entry workflow, revised to avoid hand-editing JSON:** `scripts/import-ranking-raw.mjs` (`npm run import-ranking-raw`) bulk-imports one team's worth of researched values at a time from a pasted CSV (no header row) via stdin:
+
+```
+--field transfermarkt : playerId,valueEUR
+--field ea            : playerId,ratingRaw                (0-99, EA's own scale)
+--field awards        : playerId,ballonDorTier,fifaBestPlayer,uefaPoty,totyEaFc,clWins,domesticTitles
+                         (worldCupWinner, ballonDorTier[winner-only], uefaPoty, and
+                          wcGoldenBall are auto-detected where reliable and don't need
+                          a manual entry unless correcting/supplementing one; fifaBestPlayer
+                          is fully manual — see above)
+```
+
+A blank cell means "not researched/not applicable" and is left untouched — never coerced to 0/false. For `--field awards`, a player's row appearing in the CSV at all marks `awardsRaw` as researched (a real object, not `null`) even when every optional column is blank, so a player who was genuinely checked and has none of these correctly resolves to a computed score of 0, not stuck forever on "not yet researched" (matching the same "researched-and-found-nothing is 0, not null" rule `deriveAwardsScore()` already enforces). Never overwrites a field that's already non-null unless `--force` is passed (a deliberate correction) — same conservative default as this project's other hand-maintained fields (`broadcaster`, H2H manual overrides).
+
+**Lightweight provenance, added from the outset rather than retrofitted:** every entry gains an optional `rawProvenance` object recording, per raw-field-group (`transfermarktValueEUR` / `eaRatingRaw` / `awardsRaw`), the `source` (a URL, or `"manual research"`) and `enteredAt` date supplied to the import run — see §2's schema example. This is deliberately one provenance note per field group per import pass, not per individual `awardsRaw` sub-field — "source plus entered date" is enough to answer "where did this come from and when," without the bookkeeping overhead of tracking provenance at the sub-field level. The auto-populated fields (`mediaPageviews`, and the Wikidata/`medaltemplates`-derived `awardsRaw` sub-fields) don't need provenance — they're always freshly re-verifiable by re-running `gather-rankings-signals.mjs`, unlike a human's one-time claim.
+
+---
+
 ## 1. Scope & Purpose
 
 This document is the full design for the player ranking / consensus score system originally specified in `01_PRODUCT_SPEC.md` and `docs/DATA_ACQUISITION_STRATEGY.md` §4, adapted for the fact that the app is now live and mid-tournament (Round of 16 / Quarter-finals) rather than pre-launch.
@@ -53,7 +82,7 @@ All five components normalized 0–100. All 5 are sourced together from day one 
 
 `data/rankings.json` already exists as an empty stub envelope (`{ "version": "1.0", "lastUpdated": ..., "data": [] }`) with `DataManager.loadRankings()` already wired up in `js/data.js` but currently uncalled anywhere. Sprint 39 populates this — no new client-side data-loading plumbing needed.
 
-Per-player entry (revised 2026-07-07 — see §0 for why):
+Per-player entry (revised 2026-07-07 for raw-in/derived-out, revised again 2026-07-08 for `rawProvenance` — see §0/§0b for why):
 
 ```json
 {
@@ -71,6 +100,11 @@ Per-player entry (revised 2026-07-07 — see §0 for why):
     "domesticTitles": 10
   },
   "mediaPageviews": 771996,
+  "rawProvenance": {
+    "transfermarktValueEUR": { "source": "https://www.transfermarkt.com/lionel-messi/profil/spieler/28003", "enteredAt": "2026-07-08" },
+    "eaRatingRaw": { "source": "https://www.ea.com/games/ea-sports-fc/ratings", "enteredAt": "2026-07-08" },
+    "awardsRaw": { "source": "manual research", "enteredAt": "2026-07-08" }
+  },
   "transfermarkt": 78,
   "ea": 91,
   "awards": 100,
@@ -82,7 +116,8 @@ Per-player entry (revised 2026-07-07 — see §0 for why):
 }
 ```
 
-- **Raw fields** — `transfermarktValueEUR`, `eaRatingRaw`, `awardsRaw`, `mediaPageviews`. These are the only fields a human (or the new `gather-rankings-signals.mjs`, for Media pageviews and `awardsRaw.worldCupWinner` only) ever writes directly. No provenance wrapper (unlike the H2H stats schema from Sprint 36) — there's no automated writer to reconcile a manual edit against for the fields that stay fully manual, the same way `broadcaster` and `venue` are hand-maintained elsewhere in this project. `awardsRaw` is `null` until first touched, then a structured object mirroring the rubric's own shape (tier + boolean flags + counts) — never a free-text blob, so `deriveAwardsScore()` can stay a deterministic pure function.
+- **Raw fields** — `transfermarktValueEUR`, `eaRatingRaw`, `awardsRaw`, `mediaPageviews`. Written by a human (via `scripts/import-ranking-raw.mjs`, see §0b — never hand-edited JSON directly) for `transfermarktValueEUR`/`eaRatingRaw`/`fifaBestPlayer`/most of `awardsRaw`, or by `gather-rankings-signals.mjs` for `mediaPageviews` and the `awardsRaw` sub-fields Wikipedia/Wikidata reliably support (`worldCupWinner`, `ballonDorTier` [winner tier only], `uefaPoty`, `wcGoldenBall` — see §0b for why `fifaBestPlayer` was tried and reverted). `awardsRaw` is `null` until first touched, then a structured object mirroring the rubric's own shape (tier + boolean flags + counts) — never a free-text blob, so `deriveAwardsScore()` can stay a deterministic pure function.
+- **`rawProvenance`** (added 2026-07-08, see §0b) — optional per-entry object, one `{ source, enteredAt }` note per raw-field-group (`transfermarktValueEUR` / `eaRatingRaw` / `awardsRaw`) that was manually supplied via the import script. Not present for auto-populated fields (`mediaPageviews`, and the Wikidata/`medaltemplates`-derived `awardsRaw` sub-fields) — those are always freshly re-verifiable by re-running `gather-rankings-signals.mjs`, so a one-time provenance note doesn't apply the same way it does to a human's claim.
 - **Derived fields** — `transfermarkt` / `ea` / `awards` / `media`, flat 0–100 numbers. **Never hand-edited.** `generate-rankings.js` recomputes each one, every run, from its corresponding raw field via a pure `derive*Score()` function in `ranking-formula.mjs` (see §3a) — exactly the same "recompute fresh every run, no version marker needed" treatment `form` already gets, just extended to all four components instead of one. A `null` raw field means the derived field stays `null` too (not 0 — a missing score must never look like an assessed, poor one).
 - `form` / `formBreakdown` — computed, not manually entered, unchanged from the original design. See §3.
 - `consensus` — computed by `generate-rankings.js`, renormalizing weights across whichever of the 4 derived components are actually non-null (see §4).
@@ -148,8 +183,8 @@ Four pure functions in `ranking-formula.mjs`, each taking a raw signal and retur
 - `scripts/lib/ranking-formula.mjs` — new. (The previous `scripts/lib/ranking-formula.js` was correctly deleted in Sprint 40 as unimported dead code; this is fresh code against this design, not a resurrection of that stub.) Pure, exported functions: Form aggregation from match-events, the name-matching chain, percentile normalization with tie-breaking, consensus computation with renormalization. Designed for direct Sprint-37-style unit testing — no DOM/fetch mocking needed.
 
 **Data flow, revised 2026-07-07 (see §0) — three stages now, not two:**
-1. **Raw signal entry, directly in `data/rankings.json`.** For `transfermarktValueEUR` and `eaRatingRaw`: a human supplies the raw value directly on a player's entry, sourced from their own browser session (no automated fetch — see §0). For `awardsRaw`: mostly manual (structured object, see §2), except `worldCupWinner` which `gather-rankings-signals.mjs` can fill in automatically. For `mediaPageviews`: fully automated by `gather-rankings-signals.mjs`. No separate overrides file, no merge script for the manual raw fields (unlike the H2H stats pattern from Sprint 36, deliberately: that pattern protects a manual correction from being overwritten by an *automated* pipeline that re-runs periodically; there's no automated writer here to protect the manual raw fields against, so a human just edits the field, matching how `broadcaster` is handled in Sprint 43).
-2. **`gather-rankings-signals.mjs` (new, optional, re-runnable):** for each in-scope player, resolves their Wikipedia article title, fetches Wikimedia Pageviews to populate `mediaPageviews`, and checks the infobox `medaltemplates` field to populate `awardsRaw.worldCupWinner` (merged in without touching any other `awardsRaw` sub-field a human may have already filled in). Reports unresolved players clearly; never guesses. Never overwrites a raw field a human already supplied.
+1. **Raw signal entry, one team at a time via `scripts/import-ranking-raw.mjs`** (§0b) — not hand-edited JSON. For `transfermarktValueEUR` and `eaRatingRaw`: a human supplies the raw value, sourced from their own browser session (no automated fetch — see §0). For `awardsRaw`: the sub-fields Wikidata/Wikipedia can't reach (Ballon d'Or top-3/top-10, CL wins, domestic titles, TOTY). For `mediaPageviews`: fully automated, see below. No separate overrides file — the import script still writes directly into `data/rankings.json`, same target as a hand-edit would (unlike the H2H stats pattern from Sprint 36, deliberately: that pattern protects a manual correction from being overwritten by an *automated* pipeline that re-runs periodically; there's no automated writer here to protect the manual raw fields against). Every import records a lightweight `rawProvenance` note (§0b/§2).
+2. **`gather-rankings-signals.mjs` (new, optional, re-runnable):** for each in-scope player, resolves their Wikipedia article title, fetches Wikimedia Pageviews to populate `mediaPageviews`, checks the infobox `medaltemplates` field for `awardsRaw.worldCupWinner`, and queries Wikidata's structured `P166` claims (via the same resolved title) for `awardsRaw.ballonDorTier`/`uefaPoty`/`wcGoldenBall` (§0b — `fifaBestPlayer` was tried the same way and reverted after a confirmed false positive) — merged in without touching any other `awardsRaw` sub-field a human may have already filled in. Reports unresolved players clearly; never guesses. Never overwrites a raw field a human already supplied.
 3. **`generate-rankings.js` seeds + derives + recomputes, idempotently, on every run:**
    - Ensures every player in `data/ranking-scope.json`'s teams has at least a stub entry (raw fields `null` if not yet researched).
    - Recomputes `form`/`formBreakdown` for every entry, fresh, from `match-events.json` (cheap; see §2's `formVersion` reasoning).
@@ -189,6 +224,7 @@ Four pure functions in `ranking-formula.mjs`, each taking a raw signal and retur
 - **(Added 2026-07-07)** `deriveTransfermarktScore()` / `deriveMediaScore()`: percentile behavior over a subset with some `null` raw values excluded, not just a full pool.
 - `deriveEaScore()`: direct passthrough (91 → 91), `null` → `null`, no percentile/rescale applied.
 - `deriveAwardsScore()`: the tier-plus-bonus rubric — a Ballon d'Or winner with World Cup + CL + domestic bonuses capping at 100; a player with no honours at all (`awardsRaw` all-false/zero, but non-null) scoring 0, not `null` — the distinction between "researched, genuinely has nothing" (0) and "not yet researched" (`null`) must hold.
+- **(Added 2026-07-08, `test/gather-rankings-signals.test.mjs`)** `detectWorldCupWinner()`: the real Messi medaltemplates fixture (win), a youth-tournament fixture (must NOT count), a runner-up fixture (must NOT count). `mapWikidataAwardsToRaw()`: the real Messi Q-id set mapping to all four covered fields; an empty claim list (the real Langås fixture) mapping to `{}`; unrelated real award Q-ids Messi also has (European Golden Shoe, etc.) NOT leaking into the result. `mostRecentCompletedMonth()`: the day-28-fails-for-30-day-months bug as a fixture, plus a January-rollback-to-December-of-prior-year edge case.
 
 **Unmatched names: always reported, never silent, never guessed.** Reusing `gather-guardian-bios.mjs`'s existing convention (matched/unmatched counts per team, unmatched names listed, capped at 30 with a "+N more" summary), `generate-rankings.js` logs every event name it couldn't resolve even after the full fallback chain, with a run-end summary — matching the "detect and report" idiom this project now uses everywhere (H2H capped pairs, broadcaster gaps, and now this).
 
@@ -222,6 +258,10 @@ Four pure functions in `ranking-formula.mjs`, each taking a raw signal and retur
 | **(2026-07-07) Media acquisition** | **Revised**: Instagram confirmed login-walled even for a control superstar profile — replaced entirely with the Wikimedia Pageviews API (public, no-auth, verified against both a superstar and an obscure squad player) |
 | **(2026-07-07) Awards acquisition** | **Revised**: only World Cup winner status is reliably auto-detectable from Wikipedia's structured infobox `medaltemplates` field; individual-award tiers (Ballon d'Or, FIFA Best, UEFA POTY, WC Golden Ball, TOTY) live in free prose, not a structured field, and aren't reliably parseable without risking a silent misclassification — kept as a manual structured field, same as Transfermarkt/EA |
 | **(2026-07-07) Architecture principle** | **Added**: "raw data in, derived scores out" — no human ever hand-maintains a final 0–100 score for any of the 4 manual components; schema extended with `transfermarktValueEUR`/`eaRatingRaw`/`awardsRaw`/`mediaPageviews`; `computeConsensus()` itself is unchanged and still only ever consumes 0–100 derived scores |
+| **(2026-07-08) Awards automation, extended** | Wikidata's structured `P166` claims automate `ballonDorTier` (winner only), `uefaPoty`, and `wcGoldenBall` — verified via an exact sitelinks lookup reusing the already-resolved article title, no new name-matching risk. Ballon d'Or top-3/top-10, CL wins, domestic titles, and TOTY remain manual — `P166` only captures wins, never placements |
+| **(2026-07-08) `fifaBestPlayer` automation, tried and reverted** | Confirmed false positive: Egypt's Salah shows a `P166` claim for "The Best FIFA Men's Player" despite only finishing 3rd (2018, 2021) — Wikidata includes finalists here with no distinguishing qualifier. Spot-checked the other three mappings clean against real non-winners (Mbappé, Bellingham, Kane); removed `fifaBestPlayer` entirely rather than build an unverified heuristic, and stripped the two already-written values (Messi, Salah) from `data/rankings.json` |
+| **(2026-07-08) Manual-entry mechanism** | `scripts/import-ranking-raw.mjs` bulk-imports one team's pasted CSV at a time directly into `data/rankings.json`'s raw fields, instead of hand-editing JSON. Conservative by default (never overwrites a non-null raw field without `--force`) |
+| **(2026-07-08) Provenance** | Added from the outset, not retrofitted: `rawProvenance` records `{source, enteredAt}` per raw-field-group for manually-supplied values only — auto-populated fields don't need it, since they're always freshly re-verifiable |
 
 ## Explicitly out of scope for Sprint 39
 
