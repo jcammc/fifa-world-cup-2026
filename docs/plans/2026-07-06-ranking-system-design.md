@@ -1,7 +1,31 @@
 # Ranking System Design (Sprint 38)
 
-**Status:** Design complete, approved. Not yet implemented — this is Sprint 39's job.
+**Status:** Design complete, approved. Infrastructure implemented (Sprint 39, first pass, 2026-07-06/07). This document was revised on 2026-07-07, before the manual data-entry phase began, once real-world source-access testing (see "Acquisition strategy revision" below) showed the originally-planned sourcing for 3 of the 4 manual components didn't hold up.
 **Produced:** 2026-07-06, via a `/brainstorming` design session (per the Sprint 38 decision to run this as a dedicated conversation, not an inline draft).
+
+---
+
+## 0. Acquisition strategy revision (2026-07-07, pre-manual-entry)
+
+Before starting the manual data-entry phase, each of the four components' originally-planned source (§4 of `DATA_ACQUISITION_STRATEGY.md`) was tested directly against the live sites, not assumed. Three of the four didn't hold up:
+
+- **Transfermarkt** (40% weight): fully blocked to any automated/agent fetch — `curl` returns 403, and Claude Code's own WebFetch tool returns a hard error, not just a blocked-content page. Same failure class this project already hit and ruled out for WorldFootball.net (see `scripts/gather-head-to-head-stats.mjs`'s header comment).
+- **EA ratings**: `ea.com/games/ea-sports-fc/ratings` only renders ~15-20 global "featured" superstars in static content — tested against a real, non-superstar squad player (Norway's Sondre Langås) and got zero results, because the actual per-player search is JS-driven. Both common scriptable mirrors (FUTBIN, SoFIFA) return a hard 403.
+- **Media**: Instagram is login-walled — tested against Messi's own profile (the best-case control) and no follower count is visible without authenticating.
+- **Awards**: the one exception. Wikipedia is reachable, and `DATA_ACQUISITION_STRATEGY.md` §4 already has a usable scoring rubric — but see the further limitation below.
+
+**Revised acquisition strategy, adopted going forward:**
+
+| Component | Original plan | Revised plan |
+|---|---|---|
+| Transfermarkt | Agent fetches transfermarkt.com | **User supplies the raw market value (€)** from their own browser session (one Transfermarkt squad page shows all ~26 players at once — this is one lookup per team, not 26); the 0–100 score is then **derived automatically** |
+| EA | Agent fetches ea.com/FUTBIN | **User supplies the raw OVR rating** (0–99) per player; the 0–100 score is a **direct passthrough**, no agent fetch |
+| Awards | Agent fully automates from Wikipedia | **Partially automated**: World Cup winner status is reliably auto-detectable (see below); everything else (individual-award tiers, CL/domestic title counts) is a **manual structured field**, same reasoning as Transfermarkt/EA — free-text award mentions aren't reliably parseable, see below |
+| Media | Instagram follower count | **Replaced entirely** with the **Wikimedia Pageviews API** (`wikimedia.org/api/rest_v1/metrics/pageviews/...`) — public, no-auth, verified reachable for both a global superstar (Messi: 771,996 May-2026 views) and an obscure squad player (Langås: 4,946 views), with a clean 404 for a nonexistent article rather than a silent wrong answer |
+
+**New architectural principle: raw data in, derived scores out.** No human ever hand-computes or hand-enters a final 0–100 score for any of the four manual components. A human (or an automated fetch, where one reliably exists) supplies the **raw** signal — market value in €, EA's own 0–99 rating, a structured honours record, a pageview count — and a pure function in `scripts/lib/ranking-formula.mjs` derives the 0–100 score from it, deterministically, every time `generate-rankings.js` runs. This replaces the original design's "a human just edits the 0–100 field directly" convention (§4, below) for these four fields specifically; `provisional` and `consensus` are unaffected.
+
+**Further limitation found while implementing Awards automation:** Wikipedia footballer infoboxes have a `medaltemplates` field that reliably captures **team competition results** (`{{Medal|W|[[2022 FIFA World Cup|2022 Qatar]]}}` — structured, deterministic, confirmed against Messi's actual infobox wikitext) — enough to auto-detect the rubric's "World Cup winner: +15" bonus. But the rubric's highest-value signals — Ballon d'Or tier, FIFA Best Player, UEFA Player of the Year, World Cup Golden Ball, TOTY — live in free-flowing prose in a separate article section (confirmed: no `individualhonours` infobox field exists on this template variant), not a structured template. Parsing free prose into a specific tier deterministically isn't reliably achievable without risking a silent misclassification, which conflicts with this project's hard determinism requirement (§3, below). So Awards auto-detection is scoped to World Cup winner only; the rest of `awardsRaw` (see §2) is a manual structured field, same as Transfermarkt/EA.
 
 ---
 
@@ -29,11 +53,24 @@ All five components normalized 0–100. All 5 are sourced together from day one 
 
 `data/rankings.json` already exists as an empty stub envelope (`{ "version": "1.0", "lastUpdated": ..., "data": [] }`) with `DataManager.loadRankings()` already wired up in `js/data.js` but currently uncalled anywhere. Sprint 39 populates this — no new client-side data-loading plumbing needed.
 
-Per-player entry:
+Per-player entry (revised 2026-07-07 — see §0 for why):
 
 ```json
 {
   "playerId": "argentina-messi",
+  "transfermarktValueEUR": 15000000,
+  "eaRatingRaw": 91,
+  "awardsRaw": {
+    "ballonDorTier": "winner",
+    "fifaBestPlayer": true,
+    "uefaPoty": false,
+    "wcGoldenBall": true,
+    "totyEaFc": true,
+    "worldCupWinner": true,
+    "clWins": 4,
+    "domesticTitles": 10
+  },
+  "mediaPageviews": 771996,
   "transfermarkt": 78,
   "ea": 91,
   "awards": 100,
@@ -45,10 +82,11 @@ Per-player entry:
 }
 ```
 
-- `transfermarkt` / `ea` / `awards` / `media` — flat, manually-entered numbers, 0–100. No provenance wrapper (unlike the H2H stats schema from Sprint 36) — there's no automated writer to reconcile a manual edit against, so a human just edits the field directly, the same way `broadcaster` and `venue` are hand-maintained elsewhere in this project.
-- `form` / `formBreakdown` — computed, not manually entered. See §3.
-- `consensus` — computed by `generate-rankings.js`, renormalizing weights across whichever of the 4 manual components are actually non-null (see §4).
-- `provisional` — `true` whenever any of the 4 manual components is still `null`. Stored rather than re-derived by every consumer, matching the same reasoning as `formBreakdown` (compute once, don't make downstream code recompute a derived value). See §4 and §5 for how this gates hero-card eligibility and UI display.
+- **Raw fields** — `transfermarktValueEUR`, `eaRatingRaw`, `awardsRaw`, `mediaPageviews`. These are the only fields a human (or the new `gather-rankings-signals.mjs`, for Media pageviews and `awardsRaw.worldCupWinner` only) ever writes directly. No provenance wrapper (unlike the H2H stats schema from Sprint 36) — there's no automated writer to reconcile a manual edit against for the fields that stay fully manual, the same way `broadcaster` and `venue` are hand-maintained elsewhere in this project. `awardsRaw` is `null` until first touched, then a structured object mirroring the rubric's own shape (tier + boolean flags + counts) — never a free-text blob, so `deriveAwardsScore()` can stay a deterministic pure function.
+- **Derived fields** — `transfermarkt` / `ea` / `awards` / `media`, flat 0–100 numbers. **Never hand-edited.** `generate-rankings.js` recomputes each one, every run, from its corresponding raw field via a pure `derive*Score()` function in `ranking-formula.mjs` (see §3a) — exactly the same "recompute fresh every run, no version marker needed" treatment `form` already gets, just extended to all four components instead of one. A `null` raw field means the derived field stays `null` too (not 0 — a missing score must never look like an assessed, poor one).
+- `form` / `formBreakdown` — computed, not manually entered, unchanged from the original design. See §3.
+- `consensus` — computed by `generate-rankings.js`, renormalizing weights across whichever of the 4 derived components are actually non-null (see §4).
+- `provisional` — `true` whenever any of the 4 derived components is still `null` (equivalently: whenever its raw field is still `null`). Stored rather than re-derived by every consumer, matching the same reasoning as `formBreakdown` (compute once, don't make downstream code recompute a derived value). See §4 and §5 for how this gates hero-card eligibility and UI display.
 
 **No `formVersion` field.** `generate-rankings.js` recomputes Form for every entry from scratch on every run (cheap — no external API, just rescanning already-local files), so 100% of entries always reflect the same formula by construction. A per-record version marker would just be identical duplication across ~312 records. If the Form formula changes, bump the top-level `rankings.json` `"version"` string and record the change in a `docs/ROADMAP.md` sprint retrospective — the same convention every other formula/architecture change in this project has used (the H2H self-inclusion fix, the bracket topology fix), never an embedded per-record version field.
 
@@ -90,19 +128,34 @@ Raw score = weighted sum → **percentile-ranked** (not min-max) across the scop
 
 ---
 
+## 3a. Component Derivation Methodology (added 2026-07-07, see §0)
+
+Four pure functions in `ranking-formula.mjs`, each taking a raw signal and returning a 0–100 score (or `null` if the raw input is `null`). **These three different derivation methods are deliberately not unified into one rule** — applying percentile rank to EA's already-0–100-scaled rating, for instance, would compress it in a way the original spec never intended.
+
+- **`deriveTransfermarktScore(entries)`** — `entries: [{ key, raw }]`, `raw` = market value in EUR. A thin wrapper over the existing `percentileRank()` (same function Form already uses). **Percentile scope is the subset of in-scope players who currently have a non-null `transfermarktValueEUR`, not the full 286-player scope** — unlike Form, which always has a numeric raw value for every player (zero tracked events still yields raw score 0), a not-yet-researched player has no raw Transfermarkt value at all. The percentile is recomputed fresh every run and will shift slightly as more raw values arrive — expected, same "always recompute" philosophy as Form.
+- **`deriveMediaScore(entries)`** — identical shape and same non-null-subset percentile treatment, over `mediaPageviews`.
+- **`deriveEaScore(rawOvr)`** — **direct passthrough, not percentile.** `DATA_ACQUISITION_STRATEGY.md` §4's own wording is "0–99 scale → treat as 0–100," i.e. use the number as-is (a 91 OVR becomes score 91) — no proportional rescale, no percentile step.
+- **`deriveAwardsScore(awardsRaw)`** — applies the existing rubric (`DATA_ACQUISITION_STRATEGY.md` §4) mechanically: take the highest base tier reached across Ballon d'Or (winner 100 / top 3: 85 / top 10: 70), FIFA Best Player (95), UEFA Player of the Year (90), World Cup Golden Ball (90), TOTY (80); add the capped bonuses (World Cup winner +15, CL wins ×10 capped at +20, domestic titles ×5 capped at +15); cap the total at 100.
+
+**Wikipedia article-title resolution** (needed for both Media pageviews and Awards' World Cup Winner auto-detection) is a different problem from the existing match-events name-matching chain (§3) — that chain resolves a free-text event name to a team-roster player ID; this resolves a player's name to an actual Wikipedia **article title**. Strategy, same "unambiguous or refuse" determinism principle as everywhere else in this project: try the direct title (`Firstname_Lastname`) first — confirmed this resolves correctly for both a global superstar and an obscure squad player during testing; if that 404s, fall back to Wikipedia's own search API and accept a candidate only if it's an unambiguous single match, otherwise report the player as unresolved and leave the raw field `null` — never guess.
+
+---
+
 ## 4. Architecture & Data Flow
 
 **Files** (following the established `scripts/` + `scripts/lib/` pattern, same shape as Sprint 42's `knockout-merge.mjs`):
 - `scripts/generate-rankings.js` — orchestrator. Replaces the empty stub kept through Sprint 40 deliberately for this design (Sprint 40's retrospective explicitly flagged this file as a placeholder for Sprint 39, not dead code).
 - `scripts/lib/ranking-formula.mjs` — new. (The previous `scripts/lib/ranking-formula.js` was correctly deleted in Sprint 40 as unimported dead code; this is fresh code against this design, not a resurrection of that stub.) Pure, exported functions: Form aggregation from match-events, the name-matching chain, percentile normalization with tie-breaking, consensus computation with renormalization. Designed for direct Sprint-37-style unit testing — no DOM/fetch mocking needed.
 
-**Data flow, two stages:**
-1. **Manual entry, directly in `data/rankings.json`.** A human researches and edits `transfermarkt`/`ea`/`awards`/`media` directly on a player's entry — no separate overrides file, no merge script (unlike the H2H stats pattern from Sprint 36, deliberately: that pattern protects a manual correction from being overwritten by an *automated* pipeline that re-runs periodically; there's no automated writer here to protect against, so a human just edits the field, matching how `broadcaster` is handled in Sprint 43).
-2. **`generate-rankings.js` seeds + recomputes, idempotently, on every run:**
-   - Ensures every player in `data/ranking-scope.json`'s teams has at least a stub entry (with manual fields `null` if not yet researched).
+**Data flow, revised 2026-07-07 (see §0) — three stages now, not two:**
+1. **Raw signal entry, directly in `data/rankings.json`.** For `transfermarktValueEUR` and `eaRatingRaw`: a human supplies the raw value directly on a player's entry, sourced from their own browser session (no automated fetch — see §0). For `awardsRaw`: mostly manual (structured object, see §2), except `worldCupWinner` which `gather-rankings-signals.mjs` can fill in automatically. For `mediaPageviews`: fully automated by `gather-rankings-signals.mjs`. No separate overrides file, no merge script for the manual raw fields (unlike the H2H stats pattern from Sprint 36, deliberately: that pattern protects a manual correction from being overwritten by an *automated* pipeline that re-runs periodically; there's no automated writer here to protect the manual raw fields against, so a human just edits the field, matching how `broadcaster` is handled in Sprint 43).
+2. **`gather-rankings-signals.mjs` (new, optional, re-runnable):** for each in-scope player, resolves their Wikipedia article title, fetches Wikimedia Pageviews to populate `mediaPageviews`, and checks the infobox `medaltemplates` field to populate `awardsRaw.worldCupWinner` (merged in without touching any other `awardsRaw` sub-field a human may have already filled in). Reports unresolved players clearly; never guesses. Never overwrites a raw field a human already supplied.
+3. **`generate-rankings.js` seeds + derives + recomputes, idempotently, on every run:**
+   - Ensures every player in `data/ranking-scope.json`'s teams has at least a stub entry (raw fields `null` if not yet researched).
    - Recomputes `form`/`formBreakdown` for every entry, fresh, from `match-events.json` (cheap; see §2's `formVersion` reasoning).
-   - Recomputes `consensus` for every entry, **renormalizing weights across whichever of the 4 manual components are actually non-null.** This isn't a phased-rollout mechanism (§1 already decided against phasing by category) — it's a practical necessity, because 312 players' worth of manual research will genuinely arrive over real time, not atomically. The original spec's own renormalization logic (Phase 1: TM 50%/EA 25%/Awards 25% with 3 components) turns out to still be needed, just for a different reason than originally intended.
-   - Sets `provisional: true` whenever any manual component is still `null`.
+   - Recomputes `transfermarkt`/`ea`/`awards`/`media` for every entry, fresh, from whichever raw fields are currently non-null, via the four `derive*Score()` functions (§3a) — never hand-edited, same "always recompute" treatment Form already gets.
+   - Recomputes `consensus` for every entry, **renormalizing weights across whichever of the 4 derived components are actually non-null.** This isn't a phased-rollout mechanism (§1 already decided against phasing by category) — it's a practical necessity, because 286 players' worth of manual research will genuinely arrive over real time, not atomically. The original spec's own renormalization logic (Phase 1: TM 50%/EA 25%/Awards 25% with 3 components) turns out to still be needed, just for a different reason than originally intended.
+   - Sets `provisional: true` whenever any of the 4 derived components is still `null`.
 
 **Provisional entries are ranked and visible, but not eligible for automatic hero-card/top-player selection until `provisional` is false.** (Simpler than an earlier considered alternative — a minimum-component threshold or tie-break rule — deliberately rejected in favor of this cleaner binary rule.) This prevents an incompletely-researched player's renormalized score (potentially inflated, since renormalizing over 1 present component gives it 100% of the manual weight) from out-ranking a genuinely stronger, fully-researched player in a user-facing "best of the tournament" selection, purely because their research gap hasn't been filled in yet.
 
@@ -133,6 +186,9 @@ Raw score = weighted sum → **percentile-ranked** (not min-max) across the scop
 - Percentile normalization, including the tie-break rule (identical raw scores → identical percentile).
 - **A fixture shaped exactly like the real Messi bug found during this design session** — a player appearing as both a full name and a surname-only string across different event types within one match — asserting the matching chain resolves them to a single combined stat line, not two fragments. The bug that was found becomes the regression test, not just a note in this document.
 - A fixture with a genuinely unresolvable name (no exact/alias/unambiguous-surname match available) — asserting it's reported and the event is skipped, not guessed.
+- **(Added 2026-07-07)** `deriveTransfermarktScore()` / `deriveMediaScore()`: percentile behavior over a subset with some `null` raw values excluded, not just a full pool.
+- `deriveEaScore()`: direct passthrough (91 → 91), `null` → `null`, no percentile/rescale applied.
+- `deriveAwardsScore()`: the tier-plus-bonus rubric — a Ballon d'Or winner with World Cup + CL + domestic bonuses capping at 100; a player with no honours at all (`awardsRaw` all-false/zero, but non-null) scoring 0, not `null` — the distinction between "researched, genuinely has nothing" (0) and "not yet researched" (`null`) must hold.
 
 **Unmatched names: always reported, never silent, never guessed.** Reusing `gather-guardian-bios.mjs`'s existing convention (matched/unmatched counts per team, unmatched names listed, capped at 30 with a "+N more" summary), `generate-rankings.js` logs every event name it couldn't resolve even after the full fallback chain, with a run-end summary — matching the "detect and report" idiom this project now uses everywhere (H2H capped pairs, broadcaster gaps, and now this).
 
@@ -162,6 +218,10 @@ Raw score = weighted sum → **percentile-ranked** (not min-max) across the scop
 | Provisional entries + hero cards | Ranked and visible everywhere, but excluded from automatic hero-card/top-player selection until `provisional` is false |
 | Hero-card fallback visibility | Stat line shows "Consensus N" for ranked cards vs. "N caps" for fallback cards — also fixes a pre-existing gap versus the original spec |
 | Testing | Pure-function unit tests including a Messi-shaped name-collision fixture; reused unmatched-reporting convention; browser regression across 3 team states |
+| **(2026-07-07) Transfermarkt/EA acquisition** | **Revised**: agent-side fetch confirmed blocked for both (Transfermarkt 403/WebFetch hard error; EA static content only covers ~15-20 superstars, FUTBIN/SoFIFA both 403) — user supplies raw values, `derive*Score()` computes the 0–100 score |
+| **(2026-07-07) Media acquisition** | **Revised**: Instagram confirmed login-walled even for a control superstar profile — replaced entirely with the Wikimedia Pageviews API (public, no-auth, verified against both a superstar and an obscure squad player) |
+| **(2026-07-07) Awards acquisition** | **Revised**: only World Cup winner status is reliably auto-detectable from Wikipedia's structured infobox `medaltemplates` field; individual-award tiers (Ballon d'Or, FIFA Best, UEFA POTY, WC Golden Ball, TOTY) live in free prose, not a structured field, and aren't reliably parseable without risking a silent misclassification — kept as a manual structured field, same as Transfermarkt/EA |
+| **(2026-07-07) Architecture principle** | **Added**: "raw data in, derived scores out" — no human ever hand-maintains a final 0–100 score for any of the 4 manual components; schema extended with `transfermarktValueEUR`/`eaRatingRaw`/`awardsRaw`/`mediaPageviews`; `computeConsensus()` itself is unchanged and still only ever consumes 0–100 derived scores |
 
 ## Explicitly out of scope for Sprint 39
 

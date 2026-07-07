@@ -219,3 +219,57 @@ export function computeConsensus(entry, weights = CONSENSUS_WEIGHTS) {
 
   return { consensus, provisional };
 }
+
+// ── Component derivation: raw data in, derived 0-100 scores out ────────────
+//
+// Added 2026-07-07 (see docs/plans/2026-07-06-ranking-system-design.md §0/§3a)
+// after direct testing showed Transfermarkt/EA/Instagram aren't reliably
+// fetchable by an agent. No human ever hand-maintains a final 0-100 score
+// for these four components — a raw signal goes in, one of these pure
+// functions derives the score, every time generate-rankings.js runs.
+//
+// Deliberately NOT unified into one rule: percentile-ranking EA's own
+// already-0-100-scaled rating would compress it in a way never intended.
+
+// Transfermarkt and Media share this shape: entries = [{ key, raw }], raw
+// values only present for players who currently have a non-null raw field.
+// A thin wrapper over percentileRank() -- same function Form already uses,
+// same "always recompute fresh" treatment, no separate normalization logic.
+export function deriveTransfermarktScore(entries) {
+  return percentileRank(entries);
+}
+
+export function deriveMediaScore(entries) {
+  return percentileRank(entries);
+}
+
+// EA's own scale is already 0-99 -- DATA_ACQUISITION_STRATEGY.md §4 says
+// "treat as 0-100" literally: use the number as-is, no rescale, no percentile.
+export function deriveEaScore(rawOvr) {
+  return rawOvr == null ? null : rawOvr;
+}
+
+// Mechanically applies the existing Awards scoring rubric
+// (DATA_ACQUISITION_STRATEGY.md §4): highest base tier reached, plus
+// capped bonuses, capped total. awardsRaw is a structured object (never
+// free text) so this stays a deterministic pure function -- see §0 for why
+// only `worldCupWinner` is auto-detectable; the rest is manually entered
+// in the same shape.
+export function deriveAwardsScore(awardsRaw) {
+  if (awardsRaw == null) return null;
+
+  let score = 0;
+  if (awardsRaw.ballonDorTier === 'winner') score = Math.max(score, 100);
+  else if (awardsRaw.ballonDorTier === 'top3') score = Math.max(score, 85);
+  else if (awardsRaw.ballonDorTier === 'top10') score = Math.max(score, 70);
+  if (awardsRaw.fifaBestPlayer) score = Math.max(score, 95);
+  if (awardsRaw.uefaPoty) score = Math.max(score, 90);
+  if (awardsRaw.wcGoldenBall) score = Math.max(score, 90);
+  if (awardsRaw.totyEaFc) score = Math.max(score, 80);
+
+  if (awardsRaw.worldCupWinner) score += 15;
+  if (awardsRaw.clWins) score += Math.min(awardsRaw.clWins * 10, 20);
+  if (awardsRaw.domesticTitles) score += Math.min(awardsRaw.domesticTitles * 5, 15);
+
+  return Math.min(score, 100);
+}

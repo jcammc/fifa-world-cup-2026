@@ -12,6 +12,7 @@
     "gather-photos": "node scripts/gather-photos.js",
     "gather-match-events": "node scripts/gather-match-events.mjs",
     "gather-head-to-head": "node scripts/gather-head-to-head.mjs",
+    "gather-rankings-signals": "node scripts/gather-rankings-signals.mjs",
     "gather-guardian-bios": "node scripts/gather-guardian-bios.mjs",
     "test": "node --test",
     "pre-deploy": "npm run validate && npm run gather-guardian-bios && npm run build-search-index"

@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 import {
   normaliseName, buildTeamIndex, matchEventName, aggregateFormStats,
   rawFormScore, percentileRank, computeConsensus, FORM_WEIGHTS,
+  deriveTransfermarktScore, deriveMediaScore, deriveEaScore, deriveAwardsScore,
 } from '../scripts/lib/ranking-formula.mjs';
 
 // ── normaliseName ───────────────────────────────────────────────────────
@@ -180,4 +181,73 @@ test('computeConsensus is not provisional once all four manual components are pr
   const expected = Math.round((80 * 0.40 + 70 * 0.20 + 60 * 0.20 + 50 * 0.10 + 90 * 0.10) * 10) / 10;
   assert.equal(consensus, expected);
   assert.equal(provisional, false);
+});
+
+// ── deriveTransfermarktScore / deriveMediaScore: percentile over a subset ──
+
+test('deriveTransfermarktScore percentile-ranks only players with a non-null raw value', () => {
+  // Only 3 of these have a raw market value; the percentile pool must be
+  // exactly those 3, not padded with nulls (which percentileRank can't rank).
+  const entries = [
+    { key: 'a', raw: 1000000 },
+    { key: 'b', raw: 5000000 },
+    { key: 'c', raw: 20000000 },
+  ];
+  const result = deriveTransfermarktScore(entries);
+  assert.equal(result.get('c'), 100);
+  assert.equal(result.get('a'), 0);
+  assert.ok(result.get('b') > 0 && result.get('b') < 100);
+});
+
+test('deriveMediaScore uses the same percentile treatment as Transfermarkt', () => {
+  const entries = [{ key: 'a', raw: 4946 }, { key: 'b', raw: 771996 }];
+  const result = deriveMediaScore(entries);
+  assert.equal(result.get('b'), 100);
+  assert.equal(result.get('a'), 0);
+});
+
+// ── deriveEaScore: direct passthrough, never percentile ────────────────────
+
+test('deriveEaScore passes the raw 0-99 rating through unchanged', () => {
+  assert.equal(deriveEaScore(91), 91);
+  assert.equal(deriveEaScore(0), 0);
+});
+
+test('deriveEaScore returns null for a null raw rating, never a guessed default', () => {
+  assert.equal(deriveEaScore(null), null);
+});
+
+// ── deriveAwardsScore: tier + capped bonuses, per the existing rubric ──────
+
+test('deriveAwardsScore applies the highest base tier plus capped bonuses (Messi-shaped fixture)', () => {
+  const awardsRaw = {
+    ballonDorTier: 'winner', fifaBestPlayer: true, uefaPoty: false,
+    wcGoldenBall: true, totyEaFc: true,
+    worldCupWinner: true, clWins: 4, domesticTitles: 10,
+  };
+  // base 100 (Ballon d'Or winner, already the max) + 15 (WC) + 20 (CL, capped) + 15 (domestic, capped) = 150, capped at 100
+  assert.equal(deriveAwardsScore(awardsRaw), 100);
+});
+
+test('deriveAwardsScore scores a genuinely honours-less player as 0, not null', () => {
+  const awardsRaw = {
+    ballonDorTier: null, fifaBestPlayer: false, uefaPoty: false,
+    wcGoldenBall: false, totyEaFc: false,
+    worldCupWinner: false, clWins: 0, domesticTitles: 0,
+  };
+  assert.equal(deriveAwardsScore(awardsRaw), 0);
+});
+
+test('deriveAwardsScore returns null when awardsRaw itself is null (not yet researched)', () => {
+  assert.equal(deriveAwardsScore(null), null);
+});
+
+test('deriveAwardsScore takes the highest tier among competing individual-award signals', () => {
+  // No Ballon d'Or, but UEFA POTY (90) beats TOTY (80) as the base tier.
+  const awardsRaw = {
+    ballonDorTier: null, fifaBestPlayer: false, uefaPoty: true,
+    wcGoldenBall: false, totyEaFc: true,
+    worldCupWinner: false, clWins: 0, domesticTitles: 0,
+  };
+  assert.equal(deriveAwardsScore(awardsRaw), 90);
 });
