@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T17:43:17.651Z",
+  "lastUpdated": "2026-07-07T18:02:44.857Z",
   "data": [
     {
       "playerId": "argentina-musso",
-      "transfermarkt": 11.8,
+      "transfermarkt": 9.1,
       "ea": null,
       "awards": 0,
       "media": 24.6,
@@ -16,7 +16,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 11.5,
+      "consensus": 10.2,
       "provisional": true,
       "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
@@ -41,7 +41,7 @@
     },
     {
       "playerId": "argentina-senesi",
-      "transfermarkt": 70.6,
+      "transfermarkt": 55.8,
       "ea": null,
       "awards": 0,
       "media": 76.1,
@@ -53,7 +53,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 49.8,
+      "consensus": 42.4,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -78,7 +78,7 @@
     },
     {
       "playerId": "argentina-tagliafico",
-      "transfermarkt": 19.6,
+      "transfermarkt": 15.6,
       "ea": null,
       "awards": 15,
       "media": 35.9,
@@ -90,7 +90,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 23.9,
+      "consensus": 21.9,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -115,7 +115,7 @@
     },
     {
       "playerId": "argentina-montiel",
-      "transfermarkt": 21.6,
+      "transfermarkt": 16.9,
       "ea": null,
       "awards": 20,
       "media": 45.1,
@@ -127,7 +127,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 26.9,
+      "consensus": 24.6,
       "provisional": true,
       "transfermarktValueEUR": 4500000,
       "eaRatingRaw": null,
@@ -153,7 +153,7 @@
     },
     {
       "playerId": "argentina-paredes",
-      "transfermarkt": 23.5,
+      "transfermarkt": 18.2,
       "ea": null,
       "awards": 15,
       "media": 58.5,
@@ -165,7 +165,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.7,
+      "consensus": 26,
       "provisional": true,
       "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
@@ -190,7 +190,7 @@
     },
     {
       "playerId": "argentina-lisandro-martinez",
-      "transfermarkt": 84.3,
+      "transfermarkt": 71.4,
       "ea": null,
       "awards": 10,
       "media": 51.1,
@@ -202,7 +202,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 59.5,
+      "consensus": 53.1,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -227,7 +227,7 @@
     },
     {
       "playerId": "argentina-de-paul",
-      "transfermarkt": 45.1,
+      "transfermarkt": 35.1,
       "ea": null,
       "awards": 0,
       "media": 78.9,
@@ -239,7 +239,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.9,
+      "consensus": 35.9,
       "provisional": true,
       "transfermarktValueEUR": 14000000,
       "eaRatingRaw": null,
@@ -264,7 +264,7 @@
     },
     {
       "playerId": "argentina-barco",
-      "transfermarkt": 84.3,
+      "transfermarkt": 71.4,
       "ea": null,
       "awards": null,
       "media": 73.2,
@@ -276,7 +276,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 73.1,
+      "consensus": 64.5,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -291,7 +291,7 @@
     },
     {
       "playerId": "argentina-alvarez",
-      "transfermarkt": 98,
+      "transfermarkt": 94.8,
       "ea": null,
       "awards": 25,
       "media": 3.9,
@@ -303,7 +303,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 62.6,
+      "consensus": 61,
       "provisional": true,
       "transfermarktValueEUR": 100000000,
       "eaRatingRaw": null,
@@ -328,7 +328,7 @@
     },
     {
       "playerId": "argentina-messi",
-      "transfermarkt": 52.9,
+      "transfermarkt": 40.3,
       "ea": null,
       "awards": 100,
       "media": 100,
@@ -340,7 +340,7 @@
         "assists": 0,
         "motm": 3
       },
-      "consensus": 76.4,
+      "consensus": 70.2,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -368,7 +368,7 @@
     },
     {
       "playerId": "argentina-lo-celso",
-      "transfermarkt": 33.3,
+      "transfermarkt": 24.7,
       "ea": null,
       "awards": 5,
       "media": 66.2,
@@ -380,7 +380,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 37.6,
+      "consensus": 33.3,
       "provisional": true,
       "transfermarktValueEUR": 8000000,
       "eaRatingRaw": null,
@@ -405,7 +405,7 @@
     },
     {
       "playerId": "argentina-rulli",
-      "transfermarkt": 27.5,
+      "transfermarkt": 20.8,
       "ea": null,
       "awards": 0,
       "media": 23.6,
@@ -417,7 +417,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 19.2,
+      "consensus": 15.9,
       "provisional": true,
       "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
@@ -442,7 +442,7 @@
     },
     {
       "playerId": "argentina-romero",
-      "transfermarkt": 86.3,
+      "transfermarkt": 74,
       "ea": null,
       "awards": 15,
       "media": 49.3,
@@ -454,7 +454,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61.5,
+      "consensus": 55.4,
       "provisional": true,
       "transfermarktValueEUR": 45000000,
       "eaRatingRaw": null,
@@ -480,7 +480,7 @@
     },
     {
       "playerId": "argentina-palacios",
-      "transfermarkt": 70.6,
+      "transfermarkt": 55.8,
       "ea": null,
       "awards": 5,
       "media": 29.2,
@@ -492,7 +492,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.1,
+      "consensus": 37.8,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -517,7 +517,7 @@
     },
     {
       "playerId": "argentina-gonzalez",
-      "transfermarkt": 60.8,
+      "transfermarkt": 46.8,
       "ea": null,
       "awards": 0,
       "media": 40.1,
@@ -529,7 +529,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.5,
+      "consensus": 32.4,
       "provisional": true,
       "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
@@ -554,7 +554,7 @@
     },
     {
       "playerId": "argentina-almada",
-      "transfermarkt": 52.9,
+      "transfermarkt": 40.3,
       "ea": null,
       "awards": 5,
       "media": 65.1,
@@ -566,7 +566,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45,
+      "consensus": 38.7,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -591,7 +591,7 @@
     },
     {
       "playerId": "argentina-simeone",
-      "transfermarkt": 84.3,
+      "transfermarkt": 71.4,
       "ea": null,
       "awards": 0,
       "media": 57.4,
@@ -603,7 +603,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 54.3,
+      "consensus": 47.8,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -628,7 +628,7 @@
     },
     {
       "playerId": "argentina-paz",
-      "transfermarkt": 92.2,
+      "transfermarkt": 89.6,
       "ea": null,
       "awards": 15,
       "media": 85.6,
@@ -640,7 +640,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 66,
+      "consensus": 64.7,
       "provisional": true,
       "transfermarktValueEUR": 80000000,
       "eaRatingRaw": null,
@@ -665,7 +665,7 @@
     },
     {
       "playerId": "argentina-otamendi",
-      "transfermarkt": 2,
+      "transfermarkt": 1.3,
       "ea": null,
       "awards": 15,
       "media": 66.5,
@@ -677,7 +677,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.9,
+      "consensus": 18.5,
       "provisional": true,
       "transfermarktValueEUR": 1000000,
       "eaRatingRaw": null,
@@ -702,7 +702,7 @@
     },
     {
       "playerId": "argentina-mac-allister",
-      "transfermarkt": 90.2,
+      "transfermarkt": 87,
       "ea": null,
       "awards": 10,
       "media": 80.3,
@@ -714,7 +714,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 66.8,
+      "consensus": 65.2,
       "provisional": true,
       "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
@@ -739,7 +739,7 @@
     },
     {
       "playerId": "argentina-lopez",
-      "transfermarkt": 70.6,
+      "transfermarkt": 55.8,
       "ea": null,
       "awards": 10,
       "media": 1.1,
@@ -751,7 +751,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.4,
+      "consensus": 34.1,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -776,7 +776,7 @@
     },
     {
       "playerId": "argentina-lautaro-martinez",
-      "transfermarkt": 94.1,
+      "transfermarkt": 90.9,
       "ea": null,
       "awards": 15,
       "media": 72.5,
@@ -788,7 +788,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.7,
+      "consensus": 69.1,
       "provisional": true,
       "transfermarktValueEUR": 85000000,
       "eaRatingRaw": null,
@@ -813,7 +813,7 @@
     },
     {
       "playerId": "argentina-emiliano-martinez",
-      "transfermarkt": 39.2,
+      "transfermarkt": 29.9,
       "ea": null,
       "awards": 95,
       "media": 86.3,
@@ -825,7 +825,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65,
+      "consensus": 60.4,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -851,7 +851,7 @@
     },
     {
       "playerId": "argentina-fernandez",
-      "transfermarkt": 96.1,
+      "transfermarkt": 93.5,
       "ea": null,
       "awards": 10,
       "media": 77.1,
@@ -863,7 +863,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.6,
+      "consensus": 67.4,
       "provisional": true,
       "transfermarktValueEUR": 90000000,
       "eaRatingRaw": null,
@@ -888,7 +888,7 @@
     },
     {
       "playerId": "argentina-medina",
-      "transfermarkt": 58.8,
+      "transfermarkt": 44.2,
       "ea": null,
       "awards": 0,
       "media": 54.2,
@@ -900,7 +900,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.6,
+      "consensus": 37.3,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -925,7 +925,7 @@
     },
     {
       "playerId": "argentina-molina",
-      "transfermarkt": 52.9,
+      "transfermarkt": 40.3,
       "ea": null,
       "awards": 15,
       "media": 34.5,
@@ -937,7 +937,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.7,
+      "consensus": 35.4,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -3418,7 +3418,7 @@
     },
     {
       "playerId": "england-pickford",
-      "transfermarkt": null,
+      "transfermarkt": 33.8,
       "ea": null,
       "awards": 0,
       "media": 83.8,
@@ -3430,9 +3430,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.7,
+      "consensus": 38.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 13000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3446,12 +3446,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Jordan_Pickford",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-konsa",
-      "transfermarkt": null,
+      "transfermarkt": 71.4,
       "ea": null,
       "awards": 0,
       "media": 77.8,
@@ -3463,9 +3467,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.2,
+      "consensus": 56.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3479,12 +3483,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Ezri_Konsa",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-oreilly",
-      "transfermarkt": null,
+      "transfermarkt": 87,
       "ea": null,
       "awards": 0,
       "media": 75.7,
@@ -3496,9 +3504,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37.2,
+      "consensus": 62.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3512,12 +3520,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Nico_O'Reilly",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-rice",
-      "transfermarkt": null,
+      "transfermarkt": 97.4,
       "ea": null,
       "awards": 5,
       "media": 91.2,
@@ -3529,9 +3541,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.2,
+      "consensus": 69.8,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 120000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3545,12 +3557,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Declan_Rice",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-stones",
-      "transfermarkt": null,
+      "transfermarkt": 29.9,
       "ea": null,
       "awards": 100,
       "media": 73.9,
@@ -3562,9 +3578,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 79.5,
+      "consensus": 54.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3578,12 +3594,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/John_Stones",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-guehi",
-      "transfermarkt": null,
+      "transfermarkt": 87,
       "ea": null,
       "awards": 0,
       "media": 72.9,
@@ -3595,9 +3615,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.5,
+      "consensus": 61.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3611,12 +3631,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Marc_Guéhi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-saka",
-      "transfermarkt": null,
+      "transfermarkt": 96.1,
       "ea": null,
       "awards": 5,
       "media": 89.4,
@@ -3628,9 +3652,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38.6,
+      "consensus": 67.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 110000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3644,12 +3668,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Bukayo_Saka",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-anderson",
-      "transfermarkt": null,
+      "transfermarkt": 88.3,
       "ea": null,
       "awards": 0,
       "media": 3.2,
@@ -3661,9 +3689,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.6,
+      "consensus": 55.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 75000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3677,12 +3705,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Elliot_Anderson",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-kane",
-      "transfermarkt": null,
+      "transfermarkt": 77.9,
       "ea": null,
       "awards": 10,
       "media": 98.2,
@@ -3694,9 +3726,9 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 54.3,
+      "consensus": 66.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 60000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3710,12 +3742,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Harry_Kane",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-bellingham",
-      "transfermarkt": null,
+      "transfermarkt": 98.7,
       "ea": null,
       "awards": 95,
       "media": 96.8,
@@ -3727,9 +3763,9 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 96.4,
+      "consensus": 97.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 130000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3743,12 +3779,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Jude_Bellingham",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-rashford",
-      "transfermarkt": null,
+      "transfermarkt": 71.4,
       "ea": null,
       "awards": 5,
       "media": 92.6,
@@ -3760,9 +3800,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.9,
+      "consensus": 59.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3776,12 +3816,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Marcus_Rashford",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-chalobah",
-      "transfermarkt": null,
+      "transfermarkt": 71.4,
       "ea": null,
       "awards": 0,
       "media": 59.5,
@@ -3793,9 +3837,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20,
+      "consensus": 45.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3809,12 +3853,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Trevoh_Chalobah",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-dean-henderson",
-      "transfermarkt": null,
+      "transfermarkt": 58.4,
       "ea": null,
       "awards": 0,
       "media": 43.3,
@@ -3826,9 +3874,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15.9,
+      "consensus": 37.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 28000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3842,12 +3890,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Dean_Henderson",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-jordan-henderson",
-      "transfermarkt": null,
+      "transfermarkt": 2.6,
       "ea": null,
       "awards": 15,
       "media": 76.4,
@@ -3859,9 +3911,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.6,
+      "consensus": 18.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 1200000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3875,12 +3927,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Jordan_Henderson",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-burn",
-      "transfermarkt": null,
+      "transfermarkt": 15.6,
       "ea": null,
       "awards": 0,
       "media": 52.5,
@@ -3892,9 +3948,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.2,
+      "consensus": 16.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3908,12 +3964,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Dan_Burn",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-mainoo",
-      "transfermarkt": null,
+      "transfermarkt": 87,
       "ea": null,
       "awards": 0,
       "media": 66.9,
@@ -3925,9 +3985,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.8,
+      "consensus": 54.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3941,12 +4001,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Kobbie_Mainoo",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-rogers",
-      "transfermarkt": null,
+      "transfermarkt": 93.5,
       "ea": null,
       "awards": 0,
       "media": 84.2,
@@ -3958,9 +4022,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.7,
+      "consensus": 63.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 90000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -3974,12 +4038,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Morgan_Rogers",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-gordon",
-      "transfermarkt": null,
+      "transfermarkt": 81.8,
       "ea": null,
       "awards": 0,
       "media": 2.8,
@@ -3991,9 +4059,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15,
+      "consensus": 48.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 65000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4007,12 +4075,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Anthony_Gordon_(footballer)",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-watkins",
-      "transfermarkt": null,
+      "transfermarkt": 55.8,
       "ea": null,
       "awards": 0,
       "media": 62,
@@ -4024,9 +4096,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.5,
+      "consensus": 39.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4040,12 +4112,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Ollie_Watkins",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-madueke",
-      "transfermarkt": null,
+      "transfermarkt": 75.3,
       "ea": null,
       "awards": 5,
       "media": 88,
@@ -4057,9 +4133,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.8,
+      "consensus": 59,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4073,12 +4149,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Noni_Madueke",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-eze",
-      "transfermarkt": null,
+      "transfermarkt": 81.8,
       "ea": null,
       "awards": 5,
       "media": 76.8,
@@ -4090,9 +4170,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.6,
+      "consensus": 56.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 65000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4106,12 +4186,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Eberechi_Eze",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-toney",
-      "transfermarkt": null,
+      "transfermarkt": 45.5,
       "ea": null,
       "awards": 0,
       "media": 71.5,
@@ -4123,9 +4207,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 23,
+      "consensus": 34.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 20000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4139,12 +4223,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Ivan_Toney",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-trafford",
-      "transfermarkt": null,
+      "transfermarkt": 55.8,
       "ea": null,
       "awards": 0,
       "media": 48.6,
@@ -4156,9 +4244,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 17.3,
+      "consensus": 36.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4172,12 +4260,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/James_Trafford",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-reece-james",
-      "transfermarkt": null,
+      "transfermarkt": 77.9,
       "ea": null,
       "awards": 10,
       "media": 68.7,
@@ -4189,9 +4281,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36,
+      "consensus": 56.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 60000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4205,12 +4297,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Reece_James",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-spence",
-      "transfermarkt": null,
+      "transfermarkt": 61,
       "ea": null,
       "awards": 0,
       "media": 90.1,
@@ -4222,9 +4318,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37.4,
+      "consensus": 49.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4238,12 +4334,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Djed_Spence",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "england-quansah",
-      "transfermarkt": null,
+      "transfermarkt": 74,
       "ea": null,
       "awards": 5,
       "media": 78.5,
@@ -4255,9 +4355,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32,
+      "consensus": 53,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 45000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -4270,6 +4370,10 @@
       "rawProvenance": {
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Jarell_Quansah",
+          "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (England squad page, provided by user)",
           "enteredAt": "2026-07-07"
         }
       }
@@ -5958,7 +6062,7 @@
     },
     {
       "playerId": "norway-thorsby",
-      "transfermarkt": 7.8,
+      "transfermarkt": 6.5,
       "ea": null,
       "awards": null,
       "media": 15.5,
@@ -5970,7 +6074,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 12.5,
+      "consensus": 11.6,
       "provisional": true,
       "transfermarktValueEUR": 2800000,
       "eaRatingRaw": null,
@@ -5985,7 +6089,7 @@
     },
     {
       "playerId": "norway-ajer",
-      "transfermarkt": 58.8,
+      "transfermarkt": 44.2,
       "ea": null,
       "awards": 15,
       "media": 34.2,
@@ -5997,7 +6101,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.9,
+      "consensus": 38.6,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -6022,7 +6126,7 @@
     },
     {
       "playerId": "norway-ostigrd",
-      "transfermarkt": 43.1,
+      "transfermarkt": 33.8,
       "ea": null,
       "awards": 5,
       "media": 44.7,
@@ -6034,7 +6138,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.4,
+      "consensus": 34.8,
       "provisional": true,
       "transfermarktValueEUR": 13000000,
       "eaRatingRaw": null,
@@ -6059,7 +6163,7 @@
     },
     {
       "playerId": "norway-moller-wolfe",
-      "transfermarkt": 33.3,
+      "transfermarkt": 24.7,
       "ea": null,
       "awards": 0,
       "media": 28.5,
@@ -6071,7 +6175,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.7,
+      "consensus": 24.4,
       "provisional": true,
       "transfermarktValueEUR": 8000000,
       "eaRatingRaw": null,
@@ -6096,7 +6200,7 @@
     },
     {
       "playerId": "norway-berg",
-      "transfermarkt": 33.3,
+      "transfermarkt": 24.7,
       "ea": null,
       "awards": 15,
       "media": 41.2,
@@ -6108,7 +6212,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33,
+      "consensus": 28.7,
       "provisional": true,
       "transfermarktValueEUR": 8000000,
       "eaRatingRaw": null,
@@ -6133,7 +6237,7 @@
     },
     {
       "playerId": "norway-sorloth",
-      "transfermarkt": 58.8,
+      "transfermarkt": 44.2,
       "ea": null,
       "awards": 5,
       "media": 68.3,
@@ -6145,7 +6249,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.7,
+      "consensus": 40.4,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -6170,7 +6274,7 @@
     },
     {
       "playerId": "norway-berge",
-      "transfermarkt": 70.6,
+      "transfermarkt": 55.8,
       "ea": null,
       "awards": 5,
       "media": 40.5,
@@ -6182,7 +6286,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.1,
+      "consensus": 42.7,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -6244,7 +6348,7 @@
     },
     {
       "playerId": "norway-odegaard",
-      "transfermarkt": 88.2,
+      "transfermarkt": 81.8,
       "ea": null,
       "awards": 5,
       "media": 82.4,
@@ -6256,7 +6360,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.1,
+      "consensus": 60.9,
       "provisional": true,
       "transfermarktValueEUR": 65000000,
       "eaRatingRaw": null,
@@ -6281,7 +6385,7 @@
     },
     {
       "playerId": "norway-strand-larsen",
-      "transfermarkt": 84.3,
+      "transfermarkt": 71.4,
       "ea": null,
       "awards": 0,
       "media": 47.2,
@@ -6293,7 +6397,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 53,
+      "consensus": 46.6,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -6318,7 +6422,7 @@
     },
     {
       "playerId": "norway-tangvik",
-      "transfermarkt": 11.8,
+      "transfermarkt": 9.1,
       "ea": null,
       "awards": null,
       "media": 16.5,
@@ -6330,7 +6434,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 14,
+      "consensus": 12.2,
       "provisional": true,
       "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
@@ -6372,7 +6476,7 @@
     },
     {
       "playerId": "norway-aursnes",
-      "transfermarkt": 52.9,
+      "transfermarkt": 40.3,
       "ea": null,
       "awards": 10,
       "media": 26.8,
@@ -6384,7 +6488,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.4,
+      "consensus": 35.1,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -6409,7 +6513,7 @@
     },
     {
       "playerId": "norway-andre-bjorkan",
-      "transfermarkt": 15.7,
+      "transfermarkt": 11.7,
       "ea": null,
       "awards": 15,
       "media": 13.4,
@@ -6421,7 +6525,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.2,
+      "consensus": 16.2,
       "provisional": true,
       "transfermarktValueEUR": 3500000,
       "eaRatingRaw": null,
@@ -6446,7 +6550,7 @@
     },
     {
       "playerId": "norway-holmgren-pedersen",
-      "transfermarkt": 15.7,
+      "transfermarkt": 11.7,
       "ea": null,
       "awards": 5,
       "media": 36.6,
@@ -6458,7 +6562,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.7,
+      "consensus": 22.7,
       "provisional": true,
       "transfermarktValueEUR": 3500000,
       "eaRatingRaw": null,
@@ -6483,7 +6587,7 @@
     },
     {
       "playerId": "norway-heggem",
-      "transfermarkt": 43.1,
+      "transfermarkt": 33.8,
       "ea": null,
       "awards": 0,
       "media": 31.7,
@@ -6495,7 +6599,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 34,
+      "consensus": 29.3,
       "provisional": true,
       "transfermarktValueEUR": 13000000,
       "eaRatingRaw": null,
@@ -6520,7 +6624,7 @@
     },
     {
       "playerId": "norway-thorstvedt",
-      "transfermarkt": 39.2,
+      "transfermarkt": 29.9,
       "ea": null,
       "awards": 0,
       "media": 31,
@@ -6532,7 +6636,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 29,
+      "consensus": 24.3,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -6557,7 +6661,7 @@
     },
     {
       "playerId": "norway-aasgaard",
-      "transfermarkt": 7.8,
+      "transfermarkt": 6.5,
       "ea": null,
       "awards": null,
       "media": 69,
@@ -6569,7 +6673,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.9,
+      "consensus": 28.1,
       "provisional": true,
       "transfermarktValueEUR": 2800000,
       "eaRatingRaw": null,
@@ -6584,7 +6688,7 @@
     },
     {
       "playerId": "norway-nusa",
-      "transfermarkt": 76.5,
+      "transfermarkt": 62.3,
       "ea": null,
       "awards": 10,
       "media": 93.3,
@@ -6596,7 +6700,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 64.2,
+      "consensus": 57.1,
       "provisional": true,
       "transfermarktValueEUR": 32000000,
       "eaRatingRaw": null,
@@ -6621,7 +6725,7 @@
     },
     {
       "playerId": "norway-schjelderup",
-      "transfermarkt": 74.5,
+      "transfermarkt": 61,
       "ea": null,
       "awards": 5,
       "media": 37,
@@ -6633,7 +6737,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50,
+      "consensus": 43.3,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -6658,7 +6762,7 @@
     },
     {
       "playerId": "norway-bobb",
-      "transfermarkt": 72.5,
+      "transfermarkt": 58.4,
       "ea": null,
       "awards": 5,
       "media": 81.7,
@@ -6670,7 +6774,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 54.6,
+      "consensus": 47.6,
       "provisional": true,
       "transfermarktValueEUR": 28000000,
       "eaRatingRaw": null,
@@ -6695,7 +6799,7 @@
     },
     {
       "playerId": "norway-petter-hauge",
-      "transfermarkt": 39.2,
+      "transfermarkt": 29.9,
       "ea": null,
       "awards": 10,
       "media": 19.7,
@@ -6707,7 +6811,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.1,
+      "consensus": 23.4,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -6732,7 +6836,7 @@
     },
     {
       "playerId": "norway-langs",
-      "transfermarkt": 19.6,
+      "transfermarkt": 15.6,
       "ea": null,
       "awards": null,
       "media": 13.7,
@@ -6744,7 +6848,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20,
+      "consensus": 17.4,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -6759,7 +6863,7 @@
     },
     {
       "playerId": "norway-falchener",
-      "transfermarkt": 27.5,
+      "transfermarkt": 20.8,
       "ea": null,
       "awards": 5,
       "media": 18,
@@ -6771,7 +6875,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.2,
+      "consensus": 18.9,
       "provisional": true,
       "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
@@ -6796,7 +6900,7 @@
     },
     {
       "playerId": "norway-ryerson",
-      "transfermarkt": 70.6,
+      "transfermarkt": 55.8,
       "ea": null,
       "awards": null,
       "media": 43.7,
@@ -6808,7 +6912,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63.5,
+      "consensus": 53.7,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
