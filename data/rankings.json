@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T10:37:17.395Z",
+  "lastUpdated": "2026-07-07T10:41:06.206Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -5649,7 +5649,7 @@
       "playerId": "norway-nyland",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 60.2,
       "form": 67.7,
       "formBreakdown": {
@@ -5659,12 +5659,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64,
+      "consensus": 34.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 78303
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 78303,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ørjan_Nyland",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-thorsby",
@@ -5691,7 +5703,7 @@
       "playerId": "norway-ajer",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 39.1,
       "form": 67.7,
       "formBreakdown": {
@@ -5701,18 +5713,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 53.4,
+      "consensus": 34.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 38279
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 38279,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Kristoffer_Ajer",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-ostigrd",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 48.6,
       "form": 88.1,
       "formBreakdown": {
@@ -5722,18 +5746,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.4,
+      "consensus": 36.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 52513
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 52513,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Leo_Østigård",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-moller-wolfe",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 33.8,
       "form": 67.7,
       "formBreakdown": {
@@ -5743,18 +5779,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.8,
+      "consensus": 25.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 30733
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 30733,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/David_Møller_Wolfe",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-berg",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 45.4,
       "form": 59.6,
       "formBreakdown": {
@@ -5764,18 +5812,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 52.5,
+      "consensus": 33.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 48457
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 48457,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Patrick_Berg",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-sorloth",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 70.8,
       "form": 67.7,
       "formBreakdown": {
@@ -5785,18 +5845,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 69.3,
+      "consensus": 37.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 120369
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 120369,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Alexander_Sørloth",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-berge",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 44.7,
       "form": 67.7,
       "formBreakdown": {
@@ -5806,18 +5878,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56.2,
+      "consensus": 30.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 46864
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 46864,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Sander_Berge",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-haaland",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 100,
       "media": 99.6,
       "form": 99.3,
       "formBreakdown": {
@@ -5827,18 +5911,30 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 99.5,
+      "consensus": 99.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 2699716
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": true,
+        "totyEaFc": true,
+        "clWins": 1,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 2699716,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Erling_Haaland",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-odegaard",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 83.1,
       "form": 67.7,
       "formBreakdown": {
@@ -5848,18 +5944,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.4,
+      "consensus": 40.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 196384
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 196384,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Martin_Ødegaard",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-strand-larsen",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 51.1,
       "form": 39.6,
       "formBreakdown": {
@@ -5869,12 +5977,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.4,
+      "consensus": 22.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 59975
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 59975,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jørgen_Strand_Larsen",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-tangvik",
@@ -5922,7 +6042,7 @@
       "playerId": "norway-aursnes",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 32,
       "form": 73,
       "formBreakdown": {
@@ -5932,18 +6052,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 52.5,
+      "consensus": 31.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 28592
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 28592,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Fredrik_Aursnes",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-andre-bjorkan",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 18.7,
       "form": 39.6,
       "formBreakdown": {
@@ -5953,18 +6085,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 29.2,
+      "consensus": 22.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 14811
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 14811,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Fredrik_André_Bjørkan",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-holmgren-pedersen",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 41.5,
       "form": 88.1,
       "formBreakdown": {
@@ -5974,18 +6118,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.8,
+      "consensus": 34.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 43039
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 43039,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Marcus_Holmgren_Pedersen",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-heggem",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 36.6,
       "form": 67.7,
       "formBreakdown": {
@@ -5995,18 +6151,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 52.2,
+      "consensus": 26.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 33667
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 33667,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Torbjørn_Heggem",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-thorstvedt",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 35.9,
       "form": 43.9,
       "formBreakdown": {
@@ -6016,12 +6184,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.9,
+      "consensus": 20,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 33426
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 33426,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Kristian_Thorstvedt",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-aasgaard",
@@ -6048,7 +6228,7 @@
       "playerId": "norway-nusa",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 93.7,
       "form": 94,
       "formBreakdown": {
@@ -6058,18 +6238,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 93.9,
+      "consensus": 51.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 411478
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 411478,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Antonio_Nusa",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-schjelderup",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 41.9,
       "form": 55.1,
       "formBreakdown": {
@@ -6079,18 +6271,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.5,
+      "consensus": 26.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 43099
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 43099,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Andreas_Schjelderup",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-bobb",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 82.7,
       "form": 55.1,
       "formBreakdown": {
@@ -6100,18 +6304,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.9,
+      "consensus": 37,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 185856
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 185856,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Oscar_Bobb",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-petter-hauge",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 25,
       "form": 28.1,
       "formBreakdown": {
@@ -6121,12 +6337,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 26.6,
+      "consensus": 18.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 22106
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 22106,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jens_Petter_Hauge",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-langs",
@@ -6153,7 +6381,7 @@
       "playerId": "norway-falchener",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 23.2,
       "form": 39.6,
       "formBreakdown": {
@@ -6163,12 +6391,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.4,
+      "consensus": 18.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 19295
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 19295,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Henrik_Falchener",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-ryerson",
