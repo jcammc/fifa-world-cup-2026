@@ -15,10 +15,14 @@
  *
  *   --field transfermarkt : playerId,valueEUR
  *   --field ea            : playerId,ratingRaw          (0-99, EA's own scale)
- *   --field awards        : playerId,ballonDorTier,fifaBestPlayer,uefaPoty,totyEaFc,clWins,domesticTitles
+ *   --field awards        : playerId,ballonDorTier,fifaBestPlayer,uefaPoty,totyEaFc,clWins,domesticTitles,sourceUrl
  *       ballonDorTier : blank | winner | top3 | top10
  *       fifaBestPlayer / uefaPoty / totyEaFc : blank | true | false
  *       clWins / domesticTitles : blank | integer
+ *       sourceUrl (optional, 8th column) : this player's own Wikipedia article
+ *         URL, if the shared --source for the whole batch shouldn't apply --
+ *         see the provenance note below for why Awards needs this and
+ *         Transfermarkt/EA don't.
  *     (worldCupWinner, ballonDorTier[winner-only], uefaPoty, and wcGoldenBall
  *      are already auto-detected where Wikidata/Wikipedia reliably support
  *      it -- see scripts/gather-rankings-signals.mjs -- and don't need a
@@ -34,11 +38,16 @@
  * checked and genuinely has none of these still correctly resolves to a
  * computed score of 0, not stays stuck on "not yet researched".
  *
- * Every value written this way gets a `rawProvenance` entry recording
- * --source and the entry date, added from the outset rather than retrofitted
+ * Every value written this way gets a `rawProvenance` entry recording a
+ * source and the entry date, added from the outset rather than retrofitted
  * (see design doc's "lightweight provenance" decision, 2026-07-08) --
  * source/date apply to the whole field group (transfermarktValueEUR /
  * eaRatingRaw / awardsRaw) per import run, not per individual sub-field.
+ * For Transfermarkt/EA, one shared --source is accurate for an entire
+ * team-batch (one Transfermarkt squad page covers all ~26 players). Awards
+ * research is per-player -- each player has their own distinct Wikipedia
+ * article -- so --field awards rows may supply their own sourceUrl (8th
+ * column), which wins over the shared --source for that row only.
  *
  * Never overwrites a raw field that's already non-null, unless --force is
  * passed (for corrections) -- same conservative default as this project's
@@ -117,7 +126,7 @@ function applyEa(entry, cells) {
 }
 
 function applyAwards(entry, cells) {
-  const [, ballonDorTierStr, fifaBestPlayerStr, uefaPotyStr, totyEaFcStr, clWinsStr, domesticTitlesStr] = cells;
+  const [, ballonDorTierStr, fifaBestPlayerStr, uefaPotyStr, totyEaFcStr, clWinsStr, domesticTitlesStr, sourceUrlStr] = cells;
   const patch = {};
 
   if (ballonDorTierStr) {
@@ -149,7 +158,7 @@ function applyAwards(entry, cells) {
 
   // Appearing as a row at all marks this player's awardsRaw as researched,
   // even if every optional column was blank -- see header comment.
-  return { rawPatch: patch, provKey: 'awardsRaw', touchesAwardsRaw: true };
+  return { rawPatch: patch, provKey: 'awardsRaw', touchesAwardsRaw: true, sourceUrl: sourceUrlStr || undefined };
 }
 
 const FIELD_HANDLERS = {
@@ -227,7 +236,7 @@ async function main() {
     }
 
     entry.rawProvenance = entry.rawProvenance ?? {};
-    entry.rawProvenance[result.provKey] = { source, enteredAt };
+    entry.rawProvenance[result.provKey] = { source: result.sourceUrl || source, enteredAt };
     updated++;
   }
 
