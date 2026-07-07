@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T10:18:42.468Z",
+  "lastUpdated": "2026-07-07T10:22:36.828Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -3206,7 +3206,7 @@
       "playerId": "england-pickford",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 84.5,
       "form": 87,
       "formBreakdown": {
@@ -3216,18 +3216,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 85.8,
+      "consensus": 42.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 214285
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 214285,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jordan_Pickford",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-konsa",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 79.6,
       "form": 87,
       "formBreakdown": {
@@ -3237,18 +3249,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 83.3,
+      "consensus": 41.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 167787
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 167787,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ezri_Konsa",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-oreilly",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 77.5,
       "form": 73,
       "formBreakdown": {
@@ -3258,18 +3282,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.3,
+      "consensus": 37.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 151913
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 151913,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nico_O'Reilly",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-rice",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 91.9,
       "form": 67.7,
       "formBreakdown": {
@@ -3279,18 +3315,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 79.8,
+      "consensus": 42.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 326942
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 326942,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Declan_Rice",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-stones",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 100,
       "media": 76.1,
       "form": 43.9,
       "formBreakdown": {
@@ -3300,18 +3348,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 60,
+      "consensus": 80,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 144783
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 1,
+        "domesticTitles": 6
+      },
+      "mediaPageviews": 144783,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/John_Stones",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-guehi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 75,
       "form": 73,
       "formBreakdown": {
@@ -3321,18 +3381,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74,
+      "consensus": 37,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 141107
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 141107,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Marc_Guéhi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-saka",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 90.1,
       "form": 55.1,
       "formBreakdown": {
@@ -3342,18 +3414,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.6,
+      "consensus": 38.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 298940
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 298940,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Bukayo_Saka",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-anderson",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 8.1,
       "form": 87,
       "formBreakdown": {
@@ -3363,18 +3447,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.6,
+      "consensus": 23.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 1456
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 1456,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Elliot_Anderson",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-kane",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 98.2,
       "form": 98.9,
       "formBreakdown": {
@@ -3384,18 +3480,30 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 98.6,
+      "consensus": 54.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 1278062
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 1278062,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Harry_Kane",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-bellingham",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 95,
       "media": 96.8,
       "form": 98.6,
       "formBreakdown": {
@@ -3405,18 +3513,30 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 97.7,
+      "consensus": 96.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 801345
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 1,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 801345,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jude_Bellingham",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-rashford",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 93,
       "form": 89.1,
       "formBreakdown": {
@@ -3426,18 +3546,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 91.1,
+      "consensus": 48,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 380135
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 380135,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Marcus_Rashford",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-chalobah",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 62.7,
       "form": 20.4,
       "formBreakdown": {
@@ -3447,18 +3579,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.6,
+      "consensus": 20.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 87339
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 87339,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Trevoh_Chalobah",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-dean-henderson",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 47.2,
       "form": 20.4,
       "formBreakdown": {
@@ -3468,18 +3612,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.8,
+      "consensus": 16.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 51621
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 51621,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Dean_Henderson",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-jordan-henderson",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 78.2,
       "form": 28.1,
       "formBreakdown": {
@@ -3489,18 +3645,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 53.2,
+      "consensus": 34.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 155746
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 155746,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jordan_Henderson",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-burn",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 56.3,
       "form": 20.4,
       "formBreakdown": {
@@ -3510,18 +3678,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38.3,
+      "consensus": 19.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 68922
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 68922,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Dan_Burn",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-mainoo",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 69.4,
       "form": 20.4,
       "formBreakdown": {
@@ -3531,18 +3711,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.9,
+      "consensus": 22.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 112272
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 112272,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Kobbie_Mainoo",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-rogers",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 84.9,
       "form": 46.7,
       "formBreakdown": {
@@ -3552,12 +3744,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65.8,
+      "consensus": 32.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 220619
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 220619,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Morgan_Rogers",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-gordon",
@@ -3584,7 +3788,7 @@
       "playerId": "england-watkins",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 64.4,
       "form": 28.1,
       "formBreakdown": {
@@ -3594,18 +3798,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 46.3,
+      "consensus": 23.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 96103
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 96103,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ollie_Watkins",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-madueke",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 88.7,
       "form": 73,
       "formBreakdown": {
@@ -3615,18 +3831,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80.9,
+      "consensus": 42.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 286665
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 286665,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Noni_Madueke",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-eze",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 78.5,
       "form": 39.6,
       "formBreakdown": {
@@ -3636,18 +3864,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 59.1,
+      "consensus": 32,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 157534
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 157534,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Eberechi_Eze",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-toney",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 73.9,
       "form": 20.4,
       "formBreakdown": {
@@ -3657,18 +3897,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.2,
+      "consensus": 23.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 132736
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 132736,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ivan_Toney",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-trafford",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 52.5,
       "form": 20.4,
       "formBreakdown": {
@@ -3678,18 +3930,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.4,
+      "consensus": 18.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 62679
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 62679,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/James_Trafford",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-reece-james",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 71.1,
       "form": 55.1,
       "formBreakdown": {
@@ -3699,18 +3963,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63.1,
+      "consensus": 36.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 120371
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 120371,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Reece_James",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-spence",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 90.8,
       "form": 59.6,
       "formBreakdown": {
@@ -3720,18 +3996,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.2,
+      "consensus": 37.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 304386
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 304386,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Djed_Spence",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-quansah",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 80.3,
       "form": 39.6,
       "formBreakdown": {
@@ -3741,12 +4029,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 60,
+      "consensus": 32.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 172817
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 172817,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jarell_Quansah",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-samba",
