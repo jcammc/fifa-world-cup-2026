@@ -66,6 +66,8 @@ This document is the full design for the player ranking / consensus score system
 
 **Who gets ranked, initially:** full squads (26 players each) of the teams still alive in the tournament at design time — 12 teams, ~312 players (`argentina, belgium, colombia, egypt, england, france, morocco, norway, portugal, spain, switzerland, usa`). This is a **one-time cut, not a moving target**: because "alive" only shrinks as the tournament progresses, nothing ranked now becomes invalid later. Expanding to the 36 eliminated teams is a future, lower-priority backfill (possibly never, if the tournament ends first).
 
+**Correction (2026-07-07):** the scope was actually locked at Sprint 39 implementation time, not this design session's snapshot — Portugal was eliminated in between, so the real, locked scope is **11 teams, 286 players** (see `data/ranking-scope.json` and `docs/ROADMAP.md`'s Sprint 39 retrospective). The 12-team/~312-player figures above are this design session's own point-in-time count, kept as-is for historical accuracy rather than silently edited.
+
 **Formula, unchanged from the original spec:**
 ```
 Consensus = (Transfermarkt × 0.40) + (EA × 0.20) + (Awards × 0.20) + (Media × 0.10) + (Form × 0.10)
