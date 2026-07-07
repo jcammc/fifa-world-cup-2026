@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T10:22:36.828Z",
+  "lastUpdated": "2026-07-07T10:30:22.854Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -4052,7 +4052,7 @@
       "playerId": "france-samba",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 49.3,
       "form": 20.4,
       "formBreakdown": {
@@ -4062,18 +4062,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 34.8,
+      "consensus": 17.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 53215
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 53215,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Brice_Samba",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-gusto",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 58.5,
       "form": 39.6,
       "formBreakdown": {
@@ -4083,18 +4095,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 49.1,
+      "consensus": 24.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 75060
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 75060,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Malo_Gusto",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-digne",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 65.5,
       "form": 55.1,
       "formBreakdown": {
@@ -4104,18 +4128,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 60.3,
+      "consensus": 37.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 99673
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 99673,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Lucas_Digne",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-upamecano",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 65.8,
       "form": 87,
       "formBreakdown": {
@@ -4125,18 +4161,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 76.4,
+      "consensus": 45.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 99872
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 99872,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Dayot_Upamecano",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-kounde",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 65.1,
       "form": 87,
       "formBreakdown": {
@@ -4146,18 +4194,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 76.1,
+      "consensus": 45.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 96388
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 96388,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jules_Koundé",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-kone",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 73.2,
       "form": 55.1,
       "formBreakdown": {
@@ -4167,12 +4227,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.2,
+      "consensus": 32.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 131517
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 131517,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Manu_Koné",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-dembele",
@@ -4193,15 +4265,26 @@
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
       "awardsRaw": {
-        "ballonDorTier": "winner"
+        "ballonDorTier": "winner",
+        "fifaBestPlayer": true,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 2,
+        "domesticTitles": 6
       },
-      "mediaPageviews": 955583
+      "mediaPageviews": 955583,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ousmane_Dembélé",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-tchouameni",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 72.9,
       "form": 67.7,
       "formBreakdown": {
@@ -4211,18 +4294,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.3,
+      "consensus": 42.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 127851
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 127851,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Aurélien_Tchouaméni",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-thuram",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 70.1,
       "form": 28.1,
       "formBreakdown": {
@@ -4232,18 +4327,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 49.1,
+      "consensus": 29.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 114446
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 114446,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Marcus_Thuram",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-mbappe",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 95,
       "media": 99.3,
       "form": 99.6,
       "formBreakdown": {
@@ -4253,18 +4360,30 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 99.5,
+      "consensus": 97.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 2666972
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 0,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 2666972,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Kylian_Mbappé",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-olise",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 97.5,
       "form": 91.9,
       "formBreakdown": {
@@ -4274,18 +4393,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 94.7,
+      "consensus": 52.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 1090387
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 1090387,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Michael_Olise",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-barcola",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 35,
       "media": 88,
       "form": 91.2,
       "formBreakdown": {
@@ -4295,18 +4426,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 89.6,
+      "consensus": 62.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 267149
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 2,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 267149,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Bradley_Barcola",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-kante",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 100,
       "media": 91.5,
       "form": 20.4,
       "formBreakdown": {
@@ -4316,18 +4459,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56,
+      "consensus": 78,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 317163
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 1,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 317163,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/N'Golo_Kanté",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-rabiot",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 82,
       "form": 67.7,
       "formBreakdown": {
@@ -4337,18 +4492,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.9,
+      "consensus": 44.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 181148
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 6
+      },
+      "mediaPageviews": 181148,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Adrien_Rabiot",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-konate",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 83.5,
       "form": 28.1,
       "formBreakdown": {
@@ -4358,18 +4525,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.8,
+      "consensus": 30.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 201487
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 201487,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ibrahima_Konaté",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-maignan",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 73.6,
       "form": 87,
       "formBreakdown": {
@@ -4379,18 +4558,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80.3,
+      "consensus": 45.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 132564
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 132564,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mike_Maignan",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-saliba",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 85,
       "media": 81.3,
       "form": 67.7,
       "formBreakdown": {
@@ -4400,18 +4591,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.5,
+      "consensus": 79.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 177620
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 177620,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/William_Saliba",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-zaire-emery",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 35,
       "media": 55.6,
       "form": 20.4,
       "formBreakdown": {
@@ -4421,12 +4624,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38,
+      "consensus": 36.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 67619
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 2,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 67619,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Warren_Zaïre-Emery",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-theo-hernandez",
@@ -4453,7 +4668,7 @@
       "playerId": "france-doue",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 30,
       "media": 92.6,
       "form": 89.1,
       "formBreakdown": {
@@ -4463,12 +4678,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 90.9,
+      "consensus": 60.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 367455
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 2,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 367455,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Désiré_Doué",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-lucas-hernandez",
@@ -4495,7 +4722,7 @@
       "playerId": "france-mateta",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 58.8,
       "form": 32.3,
       "formBreakdown": {
@@ -4505,18 +4732,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.6,
+      "consensus": 22.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 75150
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 75150,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jean-Philippe_Mateta",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-risser",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 49.6,
       "form": 20.4,
       "formBreakdown": {
@@ -4526,18 +4765,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 35,
+      "consensus": 17.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 55820
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 55820,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Robin_Risser",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-cherki",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 86.6,
       "form": 43.9,
       "formBreakdown": {
@@ -4547,18 +4798,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65.3,
+      "consensus": 32.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 242370
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 242370,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Rayan_Cherki",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-akliouche",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 59.2,
       "form": 28.1,
       "formBreakdown": {
@@ -4568,18 +4831,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.7,
+      "consensus": 21.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 75465
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 75465,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Maghnes_Akliouche",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-lacroix",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 68.3,
       "form": 39.6,
       "formBreakdown": {
@@ -4589,12 +4864,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 54,
+      "consensus": 27,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 105372
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 105372,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Maxence_Lacroix",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-bounou",
