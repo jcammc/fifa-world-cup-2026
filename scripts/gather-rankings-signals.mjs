@@ -83,8 +83,18 @@ async function fetchWithRetry(url, attempt = 1) {
 // when the direct title doesn't exist, and only accepts a single
 // unambiguous candidate.
 
+// `redirects=1` matters here, not just as a nicety: found 2026-07-xx that
+// "Rodri_(footballer)" -- the exact suffix this project's own fallback tries
+// next -- is itself a redirect back to the "Rodri" disambiguation page, not
+// to the real footballer article. Without `redirects=1`, `action=parse`
+// returns the raw `#REDIRECT [[Rodri]]` stub as if it were successful
+// content (no `missingtitle` error), which would have made resolveArticleTitle
+// accept a redirect-to-a-disambig-page as a real match. With it, MediaWiki
+// resolves to whatever the redirect chain actually terminates at, and the
+// isDisambiguationWikitext() check below still catches it if that's a dab
+// page after all.
 export async function pageWikitext(title) {
-  const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&prop=wikitext&section=0&format=json&formatversion=2`;
+  const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&prop=wikitext&section=0&redirects=1&format=json&formatversion=2`;
   const res = await fetchWithRetry(url).catch(() => null);
   if (!res || !res.ok) return null;
   const json = await res.json();
@@ -97,7 +107,7 @@ export async function pageWikitext(title) {
 // medaltemplates check. Used by scripts/dump-player-honours.mjs to read a
 // player's "Honours" section, which lives later in the article body.
 export async function pageFullWikitext(title) {
-  const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&prop=wikitext&format=json&formatversion=2`;
+  const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&prop=wikitext&redirects=1&format=json&formatversion=2`;
   const res = await fetchWithRetry(url).catch(() => null);
   if (!res || !res.ok) return null;
   const json = await res.json();
@@ -114,6 +124,23 @@ export async function searchCandidate(playerName) {
   return results.length === 1 ? results[0].title : null;
 }
 
+// A disambiguation/set-index/nickname-list page counts as a successful fetch
+// (pageWikitext returns real wikitext, no `missingtitle` error), so without
+// this check resolveArticleTitle would wrongly accept it as the player's own
+// article and never try the `_(footballer)` suffix or search fallback that
+// would have found the real page. Found 2026-07-xx researching Spain's
+// Awards data: both "Rodri" and "Gavi" direct-match to list pages instead of
+// the real footballer -- confirmed via pageFullWikitext content and, for
+// Gavi, MediaWiki's own pageprops `disambiguation` flag. Rodri's page uses
+// {{Nickname}} rather than {{disambig}}, so a template/pageprops check alone
+// would have missed it -- but every one of these list-style pages opens with
+// the same "'''Name''' may refer to:" / "'''Name''' or '''Alt''' may refer
+// to:" convention regardless of which template marks the bottom, which is
+// what this checks instead.
+export function isDisambiguationWikitext(wikitext) {
+  return /^\s*'''.+?'''\s*(?:or\s+'''.+?'''\s*)?may refer to:?/i.test(wikitext);
+}
+
 // Known direct-title collisions -- confirmed cases where a squad player's
 // plain name string resolves to a DIFFERENT, more famous, unrelated
 // person's Wikipedia article instead of their own. Found 2026-07-08 while
@@ -128,19 +155,46 @@ export async function searchCandidate(playerName) {
 // disambiguation mechanism (that would be guessing).
 const KNOWN_TITLE_OVERRIDES = {
   'Luis Suárez': 'Luis_Suárez_(footballer,_born_1997)', // Colombia's Luis Suárez, not the Uruguayan
+  // Rodri (b. 1996, Villarreal/Manchester City, 2024 Ballon d'Or winner) --
+  // "Rodri" is a disambiguation page listing 11 different footballers named
+  // Rodri, and even the "_(footballer)" suffix this project's own fallback
+  // tries next is a redirect back to that same disambiguation page rather
+  // than to any one of them. searchCandidate() can't disambiguate either
+  // (multiple same-name results, not the required single unambiguous match),
+  // so this needs an explicit override the same way Suárez did. Confirmed
+  // via pageFullWikitext content -- full name Rodrigo Hernández Cascante.
+  'Rodri': 'Rodri_(footballer,_born_1996)',
+  // Egypt's Trézéguet (real name Mahmoud Hassan, b. 1994) -- "Trézéguet" is
+  // a {{Surname}} disambiguation page (David Trezeguet, this player, and
+  // David's father Jorge Trezeguet all share the surname). This one was
+  // ALREADY CONTAMINATING production data before this fix: the auto-gather
+  // pipeline's mediaPageviews for egypt-trezeguet had picked up the
+  // disambiguation page's own pageviews (91 -- implausibly low for a
+  // professional footballer) rather than his real article's. Corrected
+  // alongside adding this override -- see the fix commit.
+  'Trézéguet': 'Trézéguet_(Egyptian_footballer)',
 };
 
 export async function resolveArticleTitle(playerName) {
   if (KNOWN_TITLE_OVERRIDES[playerName]) return KNOWN_TITLE_OVERRIDES[playerName];
 
   const direct = playerName.replace(/ /g, '_');
-  if (await pageWikitext(direct)) return direct;
+  const directWikitext = await pageWikitext(direct);
+  if (directWikitext && !isDisambiguationWikitext(directWikitext)) return direct;
 
+  // Confirmed 2026-07-xx (Rodri): this suffix can itself be a redirect back
+  // to the disambiguation page rather than to a real footballer article --
+  // same disambig check applies here, not just on the direct title.
   const withSuffix = `${direct}_(footballer)`;
-  if (await pageWikitext(withSuffix)) return withSuffix;
+  const suffixWikitext = await pageWikitext(withSuffix);
+  if (suffixWikitext && !isDisambiguationWikitext(suffixWikitext)) return withSuffix;
 
   const candidate = await searchCandidate(playerName);
-  if (candidate && await pageWikitext(candidate.replace(/ /g, '_'))) return candidate.replace(/ /g, '_');
+  if (candidate) {
+    const candidateTitle = candidate.replace(/ /g, '_');
+    const candidateWikitext = await pageWikitext(candidateTitle);
+    if (candidateWikitext && !isDisambiguationWikitext(candidateWikitext)) return candidateTitle;
+  }
 
   return null;
 }

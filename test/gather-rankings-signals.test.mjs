@@ -5,7 +5,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  detectWorldCupWinner, mapWikidataAwardsToRaw, mostRecentCompletedMonth, resolveArticleTitle,
+  detectWorldCupWinner, isDisambiguationWikitext, mapWikidataAwardsToRaw, mostRecentCompletedMonth,
+  resolveArticleTitle,
 } from '../scripts/gather-rankings-signals.mjs';
 
 // ── resolveArticleTitle: known direct-title collisions ──────────────────
@@ -19,6 +20,35 @@ import {
 test('resolveArticleTitle uses the known override for a confirmed name collision, not the direct title', async () => {
   const title = await resolveArticleTitle('Luis Suárez');
   assert.equal(title, 'Luis_Suárez_(footballer,_born_1997)');
+});
+
+test('resolveArticleTitle uses the known override for Rodri, a disambiguation-page collision', async () => {
+  const title = await resolveArticleTitle('Rodri');
+  assert.equal(title, 'Rodri_(footballer,_born_1996)');
+});
+
+// ── isDisambiguationWikitext ──────────────────────────────────────────────
+//
+// Confirmed real bug (Spain Awards research): "Rodri" and "Gavi" both
+// direct-title-match to list pages instead of the real footballer, but they
+// use DIFFERENT templates ({{Nickname}} vs {{disambig}}), so a single
+// template/pageprops check wouldn't catch both -- these are the real
+// wikitext openings captured from each, verified against a real biography's
+// opening for contrast (a normal article never opens with "may refer to").
+
+test('isDisambiguationWikitext recognizes a real {{Nickname}}-style list page (Rodri)', () => {
+  const wikitext = `'''Rodri''' may refer to:\n\n* [[Rodri (footballer, born 1996)]], full name Rodrigo Hernández Cascante`;
+  assert.equal(isDisambiguationWikitext(wikitext), true);
+});
+
+test('isDisambiguationWikitext recognizes a real {{disambig}}-style page with an "or" variant (Gavi)', () => {
+  const wikitext = `'''Gavi''' or '''GAVI''' may refer to: \n==Places==\n* [[Gavi (island)]]`;
+  assert.equal(isDisambiguationWikitext(wikitext), true);
+});
+
+test('isDisambiguationWikitext does not flag a normal biography opening', () => {
+  const wikitext = `'''Kylian Mbappé''' (born 20 December 1998) is a French professional footballer.`;
+  assert.equal(isDisambiguationWikitext(wikitext), false);
 });
 
 // ── detectWorldCupWinner ────────────────────────────────────────────────
