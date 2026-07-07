@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T10:30:22.854Z",
+  "lastUpdated": "2026-07-07T10:37:17.395Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -4887,7 +4887,7 @@
       "playerId": "morocco-bounou",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 88.4,
       "form": 87,
       "formBreakdown": {
@@ -4897,18 +4897,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 87.7,
+      "consensus": 51.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 286361
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 286361,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Yassine_Bounou",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-hakimi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 100,
       "media": 95.4,
       "form": 94.4,
       "formBreakdown": {
@@ -4918,18 +4930,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 94.9,
+      "consensus": 97.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 619701
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 3,
+        "domesticTitles": 6
+      },
+      "mediaPageviews": 619701,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Achraf_Hakimi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-mazraoui",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 76.4,
       "form": 73,
       "formBreakdown": {
@@ -4939,18 +4963,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.7,
+      "consensus": 44.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 146289
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 146289,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Noussair_Mazraoui",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-amrabat",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 62,
       "form": 39.6,
       "formBreakdown": {
@@ -4960,12 +4996,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.8,
+      "consensus": 27.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 86015
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 86015,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Sofyan_Amrabat",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-saadane",
@@ -5013,7 +5061,7 @@
       "playerId": "morocco-talbi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 51.8,
       "form": 39.6,
       "formBreakdown": {
@@ -5023,18 +5071,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.7,
+      "consensus": 25.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 62461
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 62461,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Chemsdine_Talbi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-ounahi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 56.7,
       "form": 73,
       "formBreakdown": {
@@ -5044,18 +5104,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.9,
+      "consensus": 32.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 70626
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 70626,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Azzedine_Ounahi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-rahimi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 54.6,
       "form": 87,
       "formBreakdown": {
@@ -5065,12 +5137,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.8,
+      "consensus": 42.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 67107
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 67107,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Soufiane_Rahimi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-brahim-diaz",
@@ -5097,7 +5181,7 @@
       "playerId": "morocco-saibari",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 94.7,
       "form": 96.5,
       "formBreakdown": {
@@ -5107,18 +5191,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 95.6,
+      "consensus": 55.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 500381
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 500381,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ismael_Saibari",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-mohamedi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 35.2,
       "form": 20.4,
       "formBreakdown": {
@@ -5128,18 +5224,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.8,
+      "consensus": 16.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 32855
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 32855,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Munir_Mohamedi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-el-ouahdi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 35.6,
       "form": 20.4,
       "formBreakdown": {
@@ -5149,12 +5257,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28,
+      "consensus": 14,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 33145
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 33145,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Zakaria_El_Ouahdi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-diop",
@@ -5202,7 +5322,7 @@
       "playerId": "morocco-yassine",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 52.1,
       "form": 73,
       "formBreakdown": {
@@ -5212,12 +5332,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 62.6,
+      "consensus": 31.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 62489
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 62489,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Gessime_Yassine",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-sbai",
@@ -5244,7 +5376,7 @@
       "playerId": "morocco-riad",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 57.4,
       "form": 87,
       "formBreakdown": {
@@ -5254,18 +5386,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.2,
+      "consensus": 38.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 72479
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 72479,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Chadi_Riad",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-belammari",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 32.4,
       "form": 20.4,
       "formBreakdown": {
@@ -5275,18 +5419,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 26.4,
+      "consensus": 15.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 28928
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 28928,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Youssef_Belammari",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-el-kaabi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 50.7,
       "form": 39.6,
       "formBreakdown": {
@@ -5296,12 +5452,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.2,
+      "consensus": 27.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 58525
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 58525,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ayoub_El_Kaabi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-amaimouni",
@@ -5328,7 +5496,7 @@
       "playerId": "morocco-tagnaouti",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 28.2,
       "form": 20.4,
       "formBreakdown": {
@@ -5338,18 +5506,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.3,
+      "consensus": 19.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 25267
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 5
+      },
+      "mediaPageviews": 25267,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ahmed_Reda_Tagnaouti",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-el-khannouss",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 60.9,
       "form": 87,
       "formBreakdown": {
@@ -5359,18 +5539,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74,
+      "consensus": 37,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 82800
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 82800,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Bilal_El_Khannouss",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-el-aynaoui",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 63.7,
       "form": 87,
       "formBreakdown": {
@@ -5380,12 +5572,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.4,
+      "consensus": 37.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 89633
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 89633,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Neil_El_Aynaoui",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-halhal",
@@ -5412,7 +5616,7 @@
       "playerId": "morocco-salah-eddine",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 46.1,
       "form": 46.7,
       "formBreakdown": {
@@ -5422,12 +5626,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 46.4,
+      "consensus": 25.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 49388
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 49388,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Anass_Salah-Eddine",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "norway-nyland",
