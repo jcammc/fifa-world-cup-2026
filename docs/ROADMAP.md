@@ -354,13 +354,33 @@ Sprint 41 (remaining photo gaps) ── fully independent, lowest priority, opti
 ---
 
 ## Sprint 39 — Rankings Phase 1 Implementation
-**Category:** Genuinely new feature (data sourcing + build) · **Status:** Not started. Sprint 38's design is now complete and approved (see `docs/plans/2026-07-06-ranking-system-design.md`), but no Sprint 39 implementation work has begun — ready to start whenever greenlit.
+**Category:** Genuinely new feature (data sourcing + build) · **Status:** Infrastructure COMPLETE (2026-07-06/07). Pipeline, schema, generation script, all three UI surfaces, validation, and tests are built and verified. The 4 manual components (transfermarkt/ea/awards/media) have deliberately **not** been researched yet — every in-scope player is currently `provisional`. See the phasing recommendation below before starting that work.
 
 **Goal:** Implement the ranking system exactly per the approved design: `scripts/generate-rankings.js` + `scripts/lib/ranking-formula.mjs`, `data/ranking-scope.json`, manual entry of the 4 static components for the ~312 in-scope players, the three UI surfaces (Hero Cards, Profile Panel Ranking Breakdown, Club/League Explorer), and the new `validate-data.js` completeness check.
 
-**Complexity:** Likely high — real manual data-sourcing effort is still the expensive part (4 manual components × ~312 players, down from the original ~1,250-player estimate now that scope is the 12 alive teams only). Treat as its own multi-session initiative, not a single bounded sprint. Form itself is now fully automated (no manual sourcing needed for that component), which reduces the total manual burden versus the original 5-component plan.
+**Complexity:** Likely high — real manual data-sourcing effort is still the expensive part (4 manual components × 286 players, down from the original ~1,250-player estimate now that scope is stable-alive teams only). Treat as its own multi-session initiative, not a single bounded sprint. Form itself is now fully automated (no manual sourcing needed for that component), which reduces the total manual burden versus the original 5-component plan.
 **Completion criteria:** defined in `docs/plans/2026-07-06-ranking-system-design.md` §6 (unit tests, real-data sanity check reproducing the design session's own top-player result, browser regression across 3 team states).
-**Tournament timing:** the 12-team scope is a stable, one-time cut (doesn't shrink as more teams are eliminated), so there's no urgency pressure from the tournament clock beyond "earlier means more of the tournament's remaining matches benefit from a working Form component."
+**Tournament timing:** the scope is locked from freshly-refreshed data at implementation time (11 teams — Portugal was eliminated between the Sprint 38 design session and Sprint 39 build, confirming the design's own "lock from current state, not the design snapshot" decision), so there's no urgency pressure from the tournament clock beyond "earlier means more of the tournament's remaining matches benefit from a working Form component."
+
+### Implementation retrospective (2026-07-06/07) — infrastructure only
+
+**What was done:**
+- Refreshed tournament data via the Sprint 34 cadence (`sync-data` → `update-knockout` → `gather-match-events`/`gather-head-to-head*` → `validate`) before locking scope, per the approved plan.
+- **Found and fixed a real bug while refreshing data**, unrelated to Sprint 39's own design: `mergeKnockoutMatches()` (`scripts/lib/knockout-merge.mjs`, Sprint 42) only ran `resolvePropagatedSlots()` once, before the API-result loop, so a same-run newly-FT result (Portugal 0-1 Spain) wouldn't propagate Spain into the next round until a second script run. Fixed by calling it again after the API loop.
+- Locked `data/ranking-scope.json` from the post-refresh alive-team list: **11 teams** (Portugal eliminated since the design session's 12-team snapshot).
+- Built `scripts/lib/ranking-formula.mjs` (pure functions: name normalization/matching, Form aggregation, percentile ranking, consensus computation) and `scripts/generate-rankings.js` (orchestrator — seeds stub entries, computes Form + consensus, reports unmatched names).
+- Added `validateRankings()` to `scripts/validate-data.js` — non-fatal completeness report, same idiom as Sprint 43's broadcaster check.
+- Wired all three approved UI surfaces: Hero Cards (`overview-tab.js` — consensus-first with caps fallback, explicit "Consensus N"/"N caps" stat line), Profile Panel Ranking Breakdown (`profile-panel.js` — placed after the bio block; the design doc's "before Similar Players" framing didn't apply since no such section exists in the actual code), and Club/League Explorer average consensus rating (omitted entirely, not shown as N/A, when a club/league has zero non-provisional ranked players).
+- Wrote `test/ranking-formula.test.mjs` (Sprint-37-style, `node:test`, no mocking) covering name-matching (including the three real bugs found below as fixtures), Form aggregation, percentile tie-breaks, and consensus renormalization. Full suite: 38/38 passing.
+
+**Three real-data bugs found and fixed while building the formula (all now locked in as regression tests):**
+1. **Messi name fragmentation** — naive exact-string matching split "Lionel Messi" (starting lineup/MOTM) from "Messi" (goal scorer) into two stat entries. Fixed with a generalized unambiguous-suffix-match rule.
+2. **Compound-surname matching gap** (Lo Celso, De Bruyne) — the same suffix-match rule, generalized rather than assuming a surname is always one token, fixed both.
+3. **MOTM-via-substitute** (Switzerland's Manzambi) — only starting lineups were checked to resolve which team a MOTM played for, missing subs. Fixed by building a combined starters+subs roster per fixture.
+
+11 event names remain genuinely unresolved (abbreviations, nicknames, and at least one likely pre-existing misattribution) — deliberately left reported-and-skipped per the design's determinism requirement, not chased further.
+
+**Recommendation for phasing the manual data-entry work (4 components × 286 players):** do it **one component at a time across all 286 players**, not one player at a time across all 4 components — each component has a single consistent source (Transfermarkt market value, EA ratings, awards voting, media mentions), so batching by source minimizes context-switching and lets `npm run generate-rankings` + `npm run validate` re-run after each full pass to show shrinking provisional counts as concrete progress. Suggested order: Transfermarkt first (highest weight, most objectively sourceable), then EA, then Awards, then Media. Each pass is independently stoppable/resumable — provisional entries stay fully visible and ranked throughout, just excluded from hero-card selection until complete.
 
 ---
 

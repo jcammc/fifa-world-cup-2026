@@ -197,7 +197,7 @@
 
 .le-club-row {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-2) var(--space-1);
@@ -223,6 +223,12 @@
   color: var(--color-accent);
   min-width: 24px;
   text-align: right;
+}
+
+.le-club-row__consensus {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
 }
 
 .le-club-row__flags {
@@ -286,6 +292,10 @@
   }
 
   .le-club-row__flags {
+    display: none;
+  }
+
+  .le-club-row__consensus {
     display: none;
   }
 }

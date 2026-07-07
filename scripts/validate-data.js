@@ -123,6 +123,31 @@ function validateBroadcasters() {
   return { warnings };
 }
 
+// Sprint 39 — rankings are manually-entered for 4 of 5 components (see
+// docs/plans/2026-07-06-ranking-system-design.md); this reports which
+// in-scope players still need that research done, same non-fatal
+// "detect and report" idiom as the broadcaster check above.
+function validateRankings() {
+  let scope;
+  try { scope = read('data/ranking-scope.json').teams; } catch { return { warnings: [] }; }
+  const rankings  = read('data/rankings.json').data;
+  const byPlayer  = new Map(rankings.map(e => [e.playerId, e]));
+  const warnings  = [];
+
+  for (const teamId of scope) {
+    let players;
+    try { players = read(`data/players/${teamId}.json`).data; } catch { continue; }
+    for (const p of players) {
+      const entry = byPlayer.get(p.id);
+      if (!entry) { warnings.push(`${p.id}: no rankings.json entry yet (run npm run generate-rankings)`); continue; }
+      const missing = ['transfermarkt', 'ea', 'awards', 'media'].filter(k => entry[k] == null);
+      if (missing.length) warnings.push(`${p.id}: provisional — missing ${missing.join(', ')}`);
+    }
+  }
+
+  return { warnings };
+}
+
 function summaryStats(clubs) {
   const countries   = read('data/countries.json').data;
   const playerFiles = readdirSync(join(root, 'data/players')).filter(f => f.endsWith('.json'));
@@ -188,6 +213,14 @@ function main() {
   if (bc.warnings.length) {
     console.log(`\nBroadcaster gaps (${bc.warnings.length}) — non-fatal, see docs/DATA_ENTRY_GUIDE.md §19:`);
     bc.warnings.forEach(w => console.log('  ⚠', w));
+  }
+
+  // ── Rankings completeness (Sprint 39 — manual entry, not acquisition) ──
+  const rk = validateRankings();
+  if (rk.warnings.length) {
+    console.log(`\nRanking gaps (${rk.warnings.length}) — non-fatal, see docs/plans/2026-07-06-ranking-system-design.md:`);
+    rk.warnings.slice(0, 20).forEach(w => console.log('  ⚠', w));
+    if (rk.warnings.length > 20) console.log(`  ... and ${rk.warnings.length - 20} more`);
   }
 
   // ── Summary ─────────────────────────────────────────────────────────────

@@ -130,7 +130,7 @@
 
 .ce-club-row {
   display: grid;
-  grid-template-columns: 1fr auto auto;
+  grid-template-columns: 1fr auto auto auto;
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-3) var(--space-2);
@@ -163,6 +163,12 @@
   color: var(--color-accent);
   min-width: 28px;
   text-align: right;
+}
+
+.ce-club-row__consensus {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
 }
 
 .ce-club-row__flags {
@@ -257,6 +263,10 @@
   }
 
   .ce-club-row__flags {
+    display: none;
+  }
+
+  .ce-club-row__consensus {
     display: none;
   }
 }

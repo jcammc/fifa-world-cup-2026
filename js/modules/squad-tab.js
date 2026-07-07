@@ -14,17 +14,19 @@ export class SquadTab {
   #players;
   #clubMap;
   #photoMap;
+  #rankingsMap;
   #observer    = null;
   #panel       = null;
   #rowSelections = new Map();   // position → playerId
   #groups      = [];            // { key, label, players }
 
-  constructor(container, country, players, clubs, photoMap = {}) {
-    this.#container = container;
-    this.#country   = country;
-    this.#players   = players;
-    this.#clubMap   = new Map((clubs ?? []).map(c => [c.id, c]));
-    this.#photoMap  = photoMap;
+  constructor(container, country, players, clubs, photoMap = {}, rankingsMap = new Map()) {
+    this.#container  = container;
+    this.#country     = country;
+    this.#players     = players;
+    this.#clubMap     = new Map((clubs ?? []).map(c => [c.id, c]));
+    this.#photoMap    = photoMap;
+    this.#rankingsMap = rankingsMap;
   }
 
   async render() {
@@ -102,7 +104,7 @@ export class SquadTab {
     // Init ProfilePanel
     const panelEl = this.#container.querySelector('.squad-panel-container');
     if (!panelEl) return;
-    this.#panel = new ProfilePanel(panelEl, this.#photoMap);
+    this.#panel = new ProfilePanel(panelEl, this.#photoMap, this.#rankingsMap);
 
     // Default row selections: first player in each group
     this.#groups.forEach(g => {

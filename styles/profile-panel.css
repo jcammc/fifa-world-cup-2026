@@ -159,3 +159,83 @@
   line-height: 1.65;
   margin: 0;
 }
+
+/* ─── Ranking breakdown (Sprint 39) ──────────────────────────── */
+.pp-rank {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.pp-rank__title {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.pp-rank__consensus {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.pp-rank__consensus-val {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.pp-rank__consensus-lbl {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.pp-rank__provisional {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-warning, #b8860b);
+  background: var(--color-warning-bg, rgba(184, 134, 11, 0.12));
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.pp-rank__components {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.pp-rank__row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.pp-rank__label {
+  color: var(--color-text-secondary);
+}
+
+.pp-rank__value {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.pp-rank__form-details {
+  margin-top: var(--space-2);
+}
+
+.pp-rank__form-details summary {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.pp-rank__form-details .pp-rank__components {
+  margin-top: var(--space-2);
+}

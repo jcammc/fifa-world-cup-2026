@@ -14,8 +14,9 @@ export class OverviewTab {
   #onHeroSelect;
   #photoMap;
   #fixtures;
+  #rankingsMap;
 
-  constructor(container, country, players, clubs, leagues, onHeroSelect, photoMap = {}, fixtures = []) {
+  constructor(container, country, players, clubs, leagues, onHeroSelect, photoMap = {}, fixtures = [], rankingsMap = new Map()) {
     this.#container    = container;
     this.#country      = country;
     this.#players      = players;
@@ -24,6 +25,7 @@ export class OverviewTab {
     this.#onHeroSelect = onHeroSelect;
     this.#photoMap     = photoMap;
     this.#fixtures     = fixtures;
+    this.#rankingsMap  = rankingsMap;
   }
 
   async render() {
@@ -44,8 +46,19 @@ export class OverviewTab {
       return;
     }
 
-    // Hero players: sort by caps desc, take top 5
-    const heroes = [...players].sort((a, b) => (b.caps ?? 0) - (a.caps ?? 0)).slice(0, 5);
+    // Hero players: non-provisional ranked players first (by consensus desc),
+    // remaining slots filled by caps desc — see docs/plans/2026-07-06-ranking-system-design.md §5.
+    // Teams with no ranked entries at all (out of Sprint 39's scope) fall back to caps entirely.
+    const ranked = players
+      .map(p => ({ player: p, ranking: this.#rankingsMap.get(p.id) }))
+      .filter(({ ranking }) => ranking && !ranking.provisional)
+      .sort((a, b) => b.ranking.consensus - a.ranking.consensus);
+    const rankedIds = new Set(ranked.map(({ player }) => player.id));
+    const capsFallback = [...players]
+      .filter(p => !rankedIds.has(p.id))
+      .sort((a, b) => (b.caps ?? 0) - (a.caps ?? 0))
+      .map(player => ({ player, ranking: null }));
+    const heroes = [...ranked, ...capsFallback].slice(0, 5);
 
     // Squad makeup by position
     const byPos = { GK: 0, DF: 0, MF: 0, FW: 0 };
@@ -103,13 +116,14 @@ export class OverviewTab {
   // ─── Hero cards ──────────────────────────────────────────────
 
   #renderHeroes(heroes) {
-    const cards = heroes.map(p => {
+    const cards = heroes.map(({ player: p, ranking }) => {
       const club     = this.#clubMap.get(p.clubId);
       const clubName = escapeHtml(club?.name ?? '');
       const id       = escapeHtml(p.id);
       const name     = escapeHtml(p.name);
       const pos      = escapeHtml(p.position);
       const initials = escapeHtml(getInitials(p.name));
+      const statLine = ranking ? `Consensus ${ranking.consensus}` : `${p.caps ?? 0} caps`;
 
       const photoSrc = this.#photoMap[p.id] || `assets/players/${id}.jpg`;
       return `
@@ -124,7 +138,7 @@ export class OverviewTab {
             <span class="tp-pos tp-pos--${pos.toLowerCase()}">${pos}</span>
             ${p.captain ? '<span class="tp-hero-card__captain">Captain</span>' : ''}
             ${clubName ? `<span class="tp-hero-card__club">${clubName}</span>` : ''}
-            <span class="tp-hero-card__stat">${p.caps ?? 0} caps</span>
+            <span class="tp-hero-card__stat">${escapeHtml(statLine)}</span>
             ${p.description ? `<span class="tp-hero-card__desc">${escapeHtml(p.description)}</span>` : ''}
           </div>
         </button>`;

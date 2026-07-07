@@ -17,11 +17,13 @@ export class LeagueExplorer {
         </div>
       </div>`;
 
-    const [leagues, clubs, allPlayers] = await Promise.all([
+    const [leagues, clubs, allPlayers, rankings] = await Promise.all([
       DataManager.loadLeagues(),
       DataManager.loadClubs(),
       DataManager.loadAllPlayers(),
+      DataManager.loadRankings(),
     ]);
+    const rankingsMap = new Map(rankings.map(e => [e.playerId, e]));
 
     // Players grouped by club
     const playersByClub = new Map();
@@ -31,7 +33,8 @@ export class LeagueExplorer {
       playersByClub.get(p.clubId).push(p);
     }
 
-    // Per-league stats: clubs with their player counts + nation sets
+    // Per-league stats: clubs with their player counts + nation sets +
+    // average consensus (non-provisional ranked players only, omitted if none)
     const leagueData = new Map();
     for (const league of leagues) {
       const leagueClubs = clubs
@@ -39,7 +42,13 @@ export class LeagueExplorer {
         .map(c => {
           const players = playersByClub.get(c.id) ?? [];
           const nations = [...new Set(players.map(p => p.countryId).filter(Boolean))];
-          return { club: c, playerCount: players.length, nations };
+          const eligible = players
+            .map(p => rankingsMap.get(p.id))
+            .filter(r => r && !r.provisional);
+          const avgConsensus = eligible.length > 0
+            ? Math.round((eligible.reduce((s, r) => s + r.consensus, 0) / eligible.length) * 10) / 10
+            : null;
+          return { club: c, playerCount: players.length, nations, avgConsensus };
         })
         .filter(r => r.playerCount > 0)
         .sort((a, b) => b.playerCount - a.playerCount);
@@ -109,7 +118,7 @@ export class LeagueExplorer {
 
   // ─── Club row (inside expansion) ─────────────────────────
 
-  #renderClubRow({ club, playerCount, nations }) {
+  #renderClubRow({ club, playerCount, nations, avgConsensus }) {
     const flagsHtml = nations.slice(0, 8).map(cId =>
       `<img src="assets/flags/${escapeHtml(cId)}.svg" alt="${escapeHtml(cId)}"
             class="le-flag" width="18" height="12"
@@ -123,6 +132,7 @@ export class LeagueExplorer {
       <div class="le-club-row">
         <span class="le-club-row__name">${escapeHtml(club.name)}</span>
         <span class="le-club-row__count">${playerCount}</span>
+        <span class="le-club-row__consensus">${avgConsensus != null ? `${avgConsensus} avg consensus` : ''}</span>
         <div class="le-club-row__flags">${flagsHtml}${overflow}</div>
       </div>`;
   }

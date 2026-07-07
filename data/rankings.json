@@ -1,1 +1,4868 @@
-{ "version": "1.0", "lastUpdated": "2026-06-19T00:00:00Z", "data": [] }
+{
+  "version": "1.0",
+  "lastUpdated": "2026-07-06T23:47:06.162Z",
+  "data": [
+    {
+      "playerId": "argentina-musso",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-senesi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-tagliafico",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-montiel",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-paredes",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-lisandro-martinez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-de-paul",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-barco",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-alvarez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-messi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 100,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 7,
+        "assists": 0,
+        "motm": 3
+      },
+      "consensus": 100,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-lo-celso",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 91.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 91.6,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-rulli",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-romero",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-palacios",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-gonzalez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-almada",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-simeone",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-paz",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-otamendi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-mac-allister",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-lopez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-lautaro-martinez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-emiliano-martinez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-fernandez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-medina",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "argentina-molina",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 57.2,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 57.2,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-courtois",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-debast",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-theate",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 57.2,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 57.2,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-mechele",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-de-cuyper",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-witsel",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-de-bruyne",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 90.5,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 90.5,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-tielemans",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 95.8,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 2,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 95.8,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-lukaku",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 90.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 2,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 90.9,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-trossard",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 95.8,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 2,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 95.8,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-doku",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-lammens",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-penders",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-lukebakio",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-meunier",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 57.2,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 57.2,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-de-winter",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-de-ketelaere",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-seys",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-moreira",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-vanaken",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 59.6,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 59.6,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-castagne",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-saelemaekers",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-raskin",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-onana",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-ngoy",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "belgium-fernandez-pardo",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-ospina",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-munoz",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 94,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 94,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-lucumi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-arias",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-castano",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-rios",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 4,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-diaz",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 97.5,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 2
+      },
+      "consensus": 97.5,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-carrascal",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-cordoba",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 57.2,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 57.2,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-rodriguez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-jhon-arias",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-vargas",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-mina",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-puerta",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-portilla",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-lerma",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-mojica",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-ditta",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-hernandez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-fernando-quintero",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-campaz",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-machado",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-sanchez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-montero",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-suarez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 59.6,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 59.6,
+      "provisional": true
+    },
+    {
+      "playerId": "colombia-gomez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-el-shenawy",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-ibrahim",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-hany",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-abdelmaguid",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-rabia",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 59.6,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 59.6,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-abdelmonem",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-trezeguet",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 88.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 88.1,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-ashour",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 95.8,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 2,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 95.8,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-abdelkarim",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 4,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-salah",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 98.6,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 2
+      },
+      "consensus": 98.6,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-ziko",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 90.5,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 90.5,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-hassan-h",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-fatouh",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-fathy",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-hafez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-soliman",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-lasheen",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-emad",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-attia",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-adel",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-saber",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-marmoush",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-shobeir",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-alaa-t",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-zizo",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "egypt-alaa-m",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "england-pickford",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "england-konsa",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "england-oreilly",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "england-rice",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "england-stones",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "england-guehi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "england-saka",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "england-anderson",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "england-kane",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 98.9,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 4,
+        "assists": 0,
+        "motm": 2
+      },
+      "consensus": 98.9,
+      "provisional": true
+    },
+    {
+      "playerId": "england-bellingham",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 98.6,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 2
+      },
+      "consensus": 98.6,
+      "provisional": true
+    },
+    {
+      "playerId": "england-rashford",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 89.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 89.1,
+      "provisional": true
+    },
+    {
+      "playerId": "england-chalobah",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "england-dean-henderson",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "england-jordan-henderson",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "england-burn",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "england-mainoo",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "england-rogers",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "england-gordon",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 57.2,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 57.2,
+      "provisional": true
+    },
+    {
+      "playerId": "england-watkins",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "england-madueke",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "england-eze",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "england-toney",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "england-trafford",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "england-reece-james",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "england-spence",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 59.6,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 59.6,
+      "provisional": true
+    },
+    {
+      "playerId": "england-quansah",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "france-samba",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "france-gusto",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "france-digne",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "france-upamecano",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "france-kounde",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "france-kone",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "france-dembele",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 97.2,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 4,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 97.2,
+      "provisional": true
+    },
+    {
+      "playerId": "france-tchouameni",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "france-thuram",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "france-mbappe",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 99.6,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 6,
+        "assists": 0,
+        "motm": 2
+      },
+      "consensus": 99.6,
+      "provisional": true
+    },
+    {
+      "playerId": "france-olise",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 91.9,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 91.9,
+      "provisional": true
+    },
+    {
+      "playerId": "france-barcola",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 91.2,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 2,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 91.2,
+      "provisional": true
+    },
+    {
+      "playerId": "france-kante",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "france-rabiot",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "france-konate",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "france-maignan",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "france-saliba",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "france-zaire-emery",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "france-theo-hernandez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 57.2,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 57.2,
+      "provisional": true
+    },
+    {
+      "playerId": "france-doue",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 89.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 89.1,
+      "provisional": true
+    },
+    {
+      "playerId": "france-lucas-hernandez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "france-mateta",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "france-risser",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "france-cherki",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 4,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "france-akliouche",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "france-lacroix",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-bounou",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-hakimi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 94.4,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 94.4,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-mazraoui",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-amrabat",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-saadane",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-bouaddi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-talbi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-ounahi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-rahimi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 4,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-brahim-diaz",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-saibari",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 96.5,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 3,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 96.5,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-mohamedi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-el-ouahdi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-diop",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 93,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 93,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-el-mourabet",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 4,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-yassine",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-sbai",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-riad",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-belammari",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-el-kaabi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-amaimouni",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-tagnaouti",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-el-khannouss",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-el-aynaoui",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-halhal",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "morocco-salah-eddine",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-nyland",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-thorsby",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-ajer",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-ostigrd",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 88.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 88.1,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-moller-wolfe",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-berg",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 59.6,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 59.6,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-sorloth",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-berge",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-haaland",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 99.3,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 5,
+        "assists": 0,
+        "motm": 2
+      },
+      "consensus": 99.3,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-odegaard",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-strand-larsen",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-tangvik",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-selvik",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-aursnes",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-andre-bjorkan",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-holmgren-pedersen",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 88.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 88.1,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-heggem",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 67.7,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 67.7,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-thorstvedt",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-aasgaard",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73.3,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73.3,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-nusa",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 94,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 94,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-schjelderup",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-bobb",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-petter-hauge",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-langs",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-falchener",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "norway-ryerson",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-raya",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-pubill",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-grimaldo",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-eric-garcia",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-llorente",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-merino",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-torres",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-ruiz",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-gavi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-olmo",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 59.6,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 59.6,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-pino",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-porro",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 88.4,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 88.4,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-joan-garcia",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-laporte",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-baena",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 93,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 93,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-rodri",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-williams",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 39.6,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 3,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 39.6,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-zubimendi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-yamal",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 94,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 94,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-pedri",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-oyarzabal",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 97.2,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 4,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 97.2,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-cubarsi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-simon",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-cucurella",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-munoz",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "spain-iglesias",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-kobel",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-muheim",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-widmer",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-elvedi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-akanji",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-zakaria",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-embolo",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 95.8,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 2,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 95.8,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-freuler",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-manzambi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 97.9,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 2
+      },
+      "consensus": 97.9,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-xhaka",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-ndoye",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 89.8,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 89.8,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-mvogo",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-rodriguez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 87,
+      "formBreakdown": {
+        "starts": 4,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 87,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-jashari",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-sow",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-fassnacht",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-vargas",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 89.8,
+      "formBreakdown": {
+        "starts": 3,
+        "subApps": 1,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 89.8,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-comert",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-okafor",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-aebischer",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 59.6,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 59.6,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-keller",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-rieder",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 46.7,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 46.7,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-amdouni",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-amenda",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-jaquez",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 43.9,
+      "formBreakdown": {
+        "starts": 1,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 43.9,
+      "provisional": true
+    },
+    {
+      "playerId": "switzerland-itten",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-turner",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-dest",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-richards",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-adams",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-robinson",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-trusty",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-reyna",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 73,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 1,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 73,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-mckennie",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-pepi",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-pulisic",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-aaronson",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-miles-robinson",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-ream",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-berhalter",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 32.3,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 2,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 32.3,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-roldan",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-freeman",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-tillman",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 92.3,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 1,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 92.3,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-arfsten",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-wright",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-balogun",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 96.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 3,
+        "assists": 0,
+        "motm": 1
+      },
+      "consensus": 96.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-weah",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 28.1,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 1,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 28.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-mckenzie",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-scally",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-freese",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 55.1,
+      "formBreakdown": {
+        "starts": 2,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 55.1,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-brady",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    },
+    {
+      "playerId": "usa-zendejas",
+      "transfermarkt": null,
+      "ea": null,
+      "awards": null,
+      "media": null,
+      "form": 20.4,
+      "formBreakdown": {
+        "starts": 0,
+        "subApps": 0,
+        "goals": 0,
+        "assists": 0,
+        "motm": 0
+      },
+      "consensus": 20.4,
+      "provisional": true
+    }
+  ]
+}

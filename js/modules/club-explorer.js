@@ -18,25 +18,38 @@ export class ClubExplorer {
         </div>
       </div>`;
 
-    const [clubs, allPlayers] = await Promise.all([
+    const [clubs, allPlayers, rankings] = await Promise.all([
       DataManager.loadClubs(),
       DataManager.loadAllPlayers(),
+      DataManager.loadRankings(),
     ]);
+    const rankingsMap = new Map(rankings.map(e => [e.playerId, e]));
 
-    // Players grouped by club → count + nation set
+    // Players grouped by club → count + nation set + consensus sum (non-provisional only)
     const clubData = new Map();
     for (const p of allPlayers) {
       if (!p.clubId) continue;
-      if (!clubData.has(p.clubId)) clubData.set(p.clubId, { count: 0, nations: new Set() });
+      if (!clubData.has(p.clubId)) clubData.set(p.clubId, { count: 0, nations: new Set(), consensusSum: 0, consensusCount: 0 });
       const entry = clubData.get(p.clubId);
       entry.count++;
       if (p.countryId) entry.nations.add(p.countryId);
+      const ranking = rankingsMap.get(p.id);
+      if (ranking && !ranking.provisional) {
+        entry.consensusSum += ranking.consensus;
+        entry.consensusCount++;
+      }
     }
 
     // Ranked clubs (only those with WC players)
     const ranked = clubs
       .filter(c => clubData.has(c.id))
-      .map(c => ({ club: c, ...clubData.get(c.id), nations: [...clubData.get(c.id).nations] }))
+      .map(c => {
+        const data = clubData.get(c.id);
+        const avgConsensus = data.consensusCount > 0
+          ? Math.round((data.consensusSum / data.consensusCount) * 10) / 10
+          : null;
+        return { club: c, ...data, nations: [...data.nations], avgConsensus };
+      })
       .sort((a, b) => b.count - a.count);
 
     const topClub       = ranked[0];
@@ -75,7 +88,7 @@ export class ClubExplorer {
 
   // ─── Club row ─────────────────────────────────────────────
 
-  #renderRow({ club, count, nations }) {
+  #renderRow({ club, count, nations, avgConsensus }) {
     const id    = escapeHtml(club.id);
     const name  = escapeHtml(club.name);
     const multi = count >= 2 ? '' : ' ce-club-row--single';
@@ -96,6 +109,7 @@ export class ClubExplorer {
       <div class="ce-club-row${multi}" data-count="${count}" data-searchable="${name.toLowerCase()}">
         <span class="ce-club-row__name">${name}</span>
         <span class="ce-club-row__count">${count}</span>
+        <span class="ce-club-row__consensus">${avgConsensus != null ? `${avgConsensus} avg consensus` : ''}</span>
         <div class="ce-club-row__flags">${flagsHtml}${overflow}</div>
       </div>`;
   }

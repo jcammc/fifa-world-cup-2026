@@ -5,10 +5,12 @@ export class ProfilePanel {
   #container;
   #currentPlayerId = null;
   #photoMap;
+  #rankingsMap;
 
-  constructor(container, photoMap = {}) {
-    this.#container = container;
-    this.#photoMap  = photoMap;
+  constructor(container, photoMap = {}, rankingsMap = new Map()) {
+    this.#container   = container;
+    this.#photoMap    = photoMap;
+    this.#rankingsMap = rankingsMap;
     this.#showEmpty();
   }
 
@@ -81,7 +83,57 @@ export class ProfilePanel {
           </div>
           <p class="pp-bio">${description}</p>
           ${fullBio ? `<details class="pp-bio-details"><summary>Full biography</summary><p>${fullBio}</p></details>` : ''}
+          ${this.#renderRankingBreakdown(this.#rankingsMap.get(player.id))}
         </div>
+      </div>`;
+  }
+
+  // ─── Ranking breakdown (Sprint 39) ─────────────────────────────
+  // See docs/plans/2026-07-06-ranking-system-design.md §5. Absent entirely
+  // for players outside the ranking scope (this.#rankingsMap has no entry).
+
+  #renderRankingBreakdown(ranking) {
+    if (!ranking) return '';
+
+    const components = [
+      ['Transfermarkt', ranking.transfermarkt],
+      ['EA Rating', ranking.ea],
+      ['Awards Voting', ranking.awards],
+      ['Media Coverage', ranking.media],
+      ['Tournament Form', ranking.form],
+    ];
+    const rows = components.map(([label, val]) => `
+      <div class="pp-rank__row">
+        <span class="pp-rank__label">${escapeHtml(label)}</span>
+        <span class="pp-rank__value">${val == null ? 'not yet researched' : val}</span>
+      </div>`).join('');
+
+    const fb = ranking.formBreakdown ?? {};
+    const fbRows = [
+      ['Starts', fb.starts],
+      ['Sub appearances', fb.subApps],
+      ['Goals', fb.goals],
+      ['Assists', fb.assists],
+      ['Player of the Match', fb.motm],
+    ].map(([label, val]) => `
+      <div class="pp-rank__row">
+        <span class="pp-rank__label">${escapeHtml(label)}</span>
+        <span class="pp-rank__value">${val ?? 0}</span>
+      </div>`).join('');
+
+    return `
+      <div class="pp-rank">
+        <h4 class="pp-rank__title">Ranking Breakdown</h4>
+        <div class="pp-rank__consensus">
+          <span class="pp-rank__consensus-val">${ranking.consensus}</span>
+          <span class="pp-rank__consensus-lbl">Consensus Score</span>
+          ${ranking.provisional ? '<span class="pp-rank__provisional">Provisional</span>' : ''}
+        </div>
+        <div class="pp-rank__components">${rows}</div>
+        <details class="pp-rank__form-details">
+          <summary>Form breakdown</summary>
+          <div class="pp-rank__components">${fbRows}</div>
+        </details>
       </div>`;
   }
 
