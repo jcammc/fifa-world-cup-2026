@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T14:32:00.673Z",
+  "lastUpdated": "2026-07-07T16:53:10.351Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -2855,7 +2855,7 @@
       "playerId": "egypt-hassan-h",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 22.5,
       "form": 28.1,
       "formBreakdown": {
@@ -2865,12 +2865,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 25.3,
+      "consensus": 12.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 25088
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 25088,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Haissem_Hassan",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-fatouh",
@@ -3863,7 +3875,7 @@
       "playerId": "england-gordon",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 2.8,
       "form": 57.2,
       "formBreakdown": {
@@ -3873,12 +3885,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30,
+      "consensus": 15,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 1148
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 1148,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Anthony_Gordon_(footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "england-watkins",
@@ -4743,7 +4767,7 @@
       "playerId": "france-theo-hernandez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 0.7,
       "form": 57.2,
       "formBreakdown": {
@@ -4753,12 +4777,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 29,
+      "consensus": 22,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 158
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 158,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Théo_Hernández",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-doue",
@@ -4797,7 +4833,7 @@
       "playerId": "france-lucas-hernandez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 35,
       "media": 2.1,
       "form": 20.4,
       "formBreakdown": {
@@ -4807,12 +4843,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 11.3,
+      "consensus": 23.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 372
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 3,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 372,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Lucas_Hernández",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "france-mateta",
@@ -5256,7 +5304,7 @@
       "playerId": "morocco-brahim-diaz",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 25,
       "media": 2.5,
       "form": 87,
       "formBreakdown": {
@@ -5266,12 +5314,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.8,
+      "consensus": 34.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 578
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 578,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Brahim_Diaz",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-saibari",
@@ -5376,7 +5436,7 @@
       "playerId": "morocco-diop",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 94,
       "form": 93,
       "formBreakdown": {
@@ -5386,12 +5446,24 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 93.5,
+      "consensus": 46.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 427093
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 427093,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Issa_Diop_(footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "morocco-el-mourabet",
