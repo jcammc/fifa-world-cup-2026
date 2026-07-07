@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T16:53:10.351Z",
+  "lastUpdated": "2026-07-07T17:14:06.505Z",
   "data": [
     {
       "playerId": "argentina-musso",
-      "transfermarkt": null,
+      "transfermarkt": 4,
       "ea": null,
       "awards": 0,
       "media": 24.6,
@@ -16,9 +16,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 11.3,
+      "consensus": 7.6,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -32,12 +32,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Juan_Musso",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-senesi",
-      "transfermarkt": null,
+      "transfermarkt": 64,
       "ea": null,
       "awards": 0,
       "media": 76.1,
@@ -49,9 +53,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.9,
+      "consensus": 46.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -65,12 +69,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Marcos_Senesi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-tagliafico",
-      "transfermarkt": null,
+      "transfermarkt": 8,
       "ea": null,
       "awards": 15,
       "media": 35.9,
@@ -82,9 +90,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.2,
+      "consensus": 18.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -98,12 +106,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Nicolás_Tagliafico",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-montiel",
-      "transfermarkt": null,
+      "transfermarkt": 12,
       "ea": null,
       "awards": 20,
       "media": 45.1,
@@ -115,9 +127,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.3,
+      "consensus": 22.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 4500000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "worldCupWinner": true,
@@ -132,12 +144,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Gonzalo_Montiel",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-paredes",
-      "transfermarkt": null,
+      "transfermarkt": 16,
       "ea": null,
       "awards": 15,
       "media": 58.5,
@@ -149,9 +165,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.8,
+      "consensus": 24.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -165,12 +181,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Leandro_Paredes",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-lisandro-martinez",
-      "transfermarkt": null,
+      "transfermarkt": 76,
       "ea": null,
       "awards": 10,
       "media": 51.1,
@@ -182,9 +202,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 34.7,
+      "consensus": 55.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -198,12 +218,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Lisandro_Martínez",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-de-paul",
-      "transfermarkt": null,
+      "transfermarkt": 32,
       "ea": null,
       "awards": 0,
       "media": 78.9,
@@ -215,9 +239,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.7,
+      "consensus": 34.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 14000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -231,12 +255,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Rodrigo_De_Paul",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-barco",
-      "transfermarkt": null,
+      "transfermarkt": 76,
       "ea": null,
       "awards": null,
       "media": 73.2,
@@ -248,16 +276,22 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.7,
+      "consensus": 67.6,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": 143308
+      "mediaPageviews": 143308,
+      "rawProvenance": {
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-alvarez",
-      "transfermarkt": null,
+      "transfermarkt": 100,
       "ea": null,
       "awards": 25,
       "media": 3.9,
@@ -269,9 +303,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.3,
+      "consensus": 63.6,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 100000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -285,12 +319,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Julián_Álvarez",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-messi",
-      "transfermarkt": null,
+      "transfermarkt": 44,
       "ea": null,
       "awards": 100,
       "media": 100,
@@ -302,9 +340,9 @@
         "assists": 0,
         "motm": 3
       },
-      "consensus": 100,
+      "consensus": 72,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "worldCupWinner": true,
@@ -321,12 +359,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-lo-celso",
-      "transfermarkt": null,
+      "transfermarkt": 24,
       "ea": null,
       "awards": 5,
       "media": 66.2,
@@ -338,9 +380,9 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 42,
+      "consensus": 33,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 8000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -354,12 +396,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Giovani_Lo_Celso",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-rulli",
-      "transfermarkt": null,
+      "transfermarkt": 20,
       "ea": null,
       "awards": 0,
       "media": 23.6,
@@ -371,9 +417,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 11,
+      "consensus": 15.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -387,12 +433,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Gerónimo_Rulli",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-romero",
-      "transfermarkt": null,
+      "transfermarkt": 80,
       "ea": null,
       "awards": 15,
       "media": 49.3,
@@ -404,9 +454,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.7,
+      "consensus": 58.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 45000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "worldCupWinner": true,
@@ -421,12 +471,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Cristian_Romero",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-palacios",
-      "transfermarkt": null,
+      "transfermarkt": 64,
       "ea": null,
       "awards": 5,
       "media": 29.2,
@@ -438,9 +492,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 19.7,
+      "consensus": 41.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -454,12 +508,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Exequiel_Palacios",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-gonzalez",
-      "transfermarkt": null,
+      "transfermarkt": 52,
       "ea": null,
       "awards": 0,
       "media": 40.1,
@@ -471,9 +529,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.1,
+      "consensus": 35.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -487,12 +545,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Nicolás_González_(footballer",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-almada",
-      "transfermarkt": null,
+      "transfermarkt": 44,
       "ea": null,
       "awards": 5,
       "media": 65.1,
@@ -504,9 +566,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37,
+      "consensus": 40.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -520,12 +582,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Thiago_Almada",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-simeone",
-      "transfermarkt": null,
+      "transfermarkt": 76,
       "ea": null,
       "awards": 0,
       "media": 57.4,
@@ -537,9 +603,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.3,
+      "consensus": 50.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -553,12 +619,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Giuliano_Simeone",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-paz",
-      "transfermarkt": null,
+      "transfermarkt": 88,
       "ea": null,
       "awards": 15,
       "media": 85.6,
@@ -570,9 +640,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.9,
+      "consensus": 63.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 80000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -586,12 +656,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Nico_Paz",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-otamendi",
-      "transfermarkt": null,
+      "transfermarkt": 0,
       "ea": null,
       "awards": 15,
       "media": 66.5,
@@ -603,9 +677,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 35.8,
+      "consensus": 17.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 1000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -619,12 +693,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Nicolás_Otamendi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-mac-allister",
-      "transfermarkt": null,
+      "transfermarkt": 84,
       "ea": null,
       "awards": 10,
       "media": 80.3,
@@ -636,9 +714,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.3,
+      "consensus": 63.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -652,12 +730,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Alexis_Mac_Allister",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-lopez",
-      "transfermarkt": null,
+      "transfermarkt": 64,
       "ea": null,
       "awards": 10,
       "media": 1.1,
@@ -669,9 +751,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 12.3,
+      "consensus": 38.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -685,12 +767,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/José_Manuel_López_(footballer)",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-lautaro-martinez",
-      "transfermarkt": null,
+      "transfermarkt": 92,
       "ea": null,
       "awards": 15,
       "media": 72.5,
@@ -702,9 +788,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.4,
+      "consensus": 69.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 85000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -718,12 +804,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Lautaro_Martínez",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-emiliano-martinez",
-      "transfermarkt": null,
+      "transfermarkt": 28,
       "ea": null,
       "awards": 95,
       "media": 86.3,
@@ -735,9 +825,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 90.8,
+      "consensus": 59.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "worldCupWinner": true,
@@ -752,12 +842,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Emiliano_Martínez",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-fernandez",
-      "transfermarkt": null,
+      "transfermarkt": 96,
       "ea": null,
       "awards": 10,
       "media": 77.1,
@@ -769,9 +863,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.2,
+      "consensus": 68.6,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 90000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -785,12 +879,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Enzo_Fernández",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-medina",
-      "transfermarkt": null,
+      "transfermarkt": 48,
       "ea": null,
       "awards": 0,
       "media": 54.2,
@@ -802,9 +900,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.5,
+      "consensus": 39.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -818,12 +916,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Facundo_Medina",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
+          "enteredAt": "2026-07-07"
         }
       }
     },
     {
       "playerId": "argentina-molina",
-      "transfermarkt": null,
+      "transfermarkt": 44,
       "ea": null,
       "awards": 15,
       "media": 34.5,
@@ -835,9 +937,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.4,
+      "consensus": 37.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "worldCupWinner": true,
@@ -851,6 +953,10 @@
       "rawProvenance": {
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Nahuel_Molina",
+          "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Argentina squad page, provided by user)",
           "enteredAt": "2026-07-07"
         }
       }
