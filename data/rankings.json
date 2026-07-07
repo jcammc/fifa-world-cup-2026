@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T10:13:33.358Z",
+  "lastUpdated": "2026-07-07T10:18:42.468Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -2432,7 +2432,7 @@
       "playerId": "egypt-el-shenawy",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 22.9,
       "form": 20.4,
       "formBreakdown": {
@@ -2442,18 +2442,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.7,
+      "consensus": 18.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 19187
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 19187,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mohamed_El_Shenawy",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-ibrahim",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 13.4,
       "form": 73,
       "formBreakdown": {
@@ -2463,18 +2475,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.2,
+      "consensus": 29.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 10196
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 10196,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Yasser_Ibrahim",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-hany",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 31.7,
       "form": 87,
       "formBreakdown": {
@@ -2484,18 +2508,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 59.4,
+      "consensus": 37.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 27861
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 8
+      },
+      "mediaPageviews": 27861,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Hany",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-abdelmaguid",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 11.6,
       "form": 32.3,
       "formBreakdown": {
@@ -2505,18 +2541,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.9,
+      "consensus": 18.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 7861
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 7861,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Hossam_Abdelmaguid",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-rabia",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 16.9,
       "form": 59.6,
       "formBreakdown": {
@@ -2526,18 +2574,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38.3,
+      "consensus": 26.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 12016
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 10
+      },
+      "mediaPageviews": 12016,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ramy_Rabia",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-abdelmonem",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 17.6,
       "form": 39.6,
       "formBreakdown": {
@@ -2547,12 +2607,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.6,
+      "consensus": 19.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 13954
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 13954,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Abdelmonem",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-trezeguet",
@@ -2579,7 +2651,7 @@
       "playerId": "egypt-ashour",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 70.4,
       "form": 95.8,
       "formBreakdown": {
@@ -2589,12 +2661,24 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 83.1,
+      "consensus": 49.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 116488
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 116488,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Emam_Ashour",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-abdelkarim",
@@ -2621,7 +2705,7 @@
       "playerId": "egypt-salah",
       "transfermarkt": null,
       "ea": null,
-      "awards": 0,
+      "awards": 25,
       "media": 95.8,
       "form": 98.6,
       "formBreakdown": {
@@ -2631,12 +2715,24 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 48.6,
+      "consensus": 61.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": {},
-      "mediaPageviews": 625714
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 625714,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mohamed_Salah",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-ziko",
@@ -2684,7 +2780,7 @@
       "playerId": "egypt-fatouh",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 15.8,
       "form": 67.7,
       "formBreakdown": {
@@ -2694,18 +2790,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.8,
+      "consensus": 28.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 11544
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 11544,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ahmed_Fatouh",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-fathy",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 15.5,
       "form": 67.7,
       "formBreakdown": {
@@ -2715,18 +2823,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.6,
+      "consensus": 28.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 11489
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 11489,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Hamdy_Fathy",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-hafez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 10.6,
       "form": 43.9,
       "formBreakdown": {
@@ -2736,18 +2856,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.2,
+      "consensus": 13.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 6794
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 6794,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Karim_Hafez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-soliman",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 11.3,
       "form": 20.4,
       "formBreakdown": {
@@ -2757,18 +2889,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15.9,
+      "consensus": 10.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 7713
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 7713,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/El_Mahdy_Soliman",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-lasheen",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 16.5,
       "form": 67.7,
       "formBreakdown": {
@@ -2778,18 +2922,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.1,
+      "consensus": 21,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 11922
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 11922,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mohanad_Lasheen",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-emad",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 12,
       "form": 20.4,
       "formBreakdown": {
@@ -2799,18 +2955,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.2,
+      "consensus": 8.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 8586
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 8586,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nabil_Emad",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-attia",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 14.8,
       "form": 73,
       "formBreakdown": {
@@ -2820,18 +2988,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.9,
+      "consensus": 29.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 11303
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 11303,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Marwan_Attia",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-adel",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 14.1,
       "form": 28.1,
       "formBreakdown": {
@@ -2841,12 +3021,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.1,
+      "consensus": 10.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 10794
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 10794,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Ibrahim_Adel",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-saber",
@@ -2873,7 +3065,7 @@
       "playerId": "egypt-marmoush",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 71.8,
       "form": 73,
       "formBreakdown": {
@@ -2883,18 +3075,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.4,
+      "consensus": 36.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 121827
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 121827,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Omar_Marmoush",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-shobeir",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 33.5,
       "form": 87,
       "formBreakdown": {
@@ -2904,12 +3108,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 60.3,
+      "consensus": 37.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 30589
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 30589,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mostafa_Shobeir",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-alaa-t",
@@ -2936,7 +3152,7 @@
       "playerId": "egypt-zizo",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 4.9,
       "form": 39.6,
       "formBreakdown": {
@@ -2946,12 +3162,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.3,
+      "consensus": 16.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 349
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 349,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Zizo",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "egypt-alaa-m",
