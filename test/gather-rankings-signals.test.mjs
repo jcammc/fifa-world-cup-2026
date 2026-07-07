@@ -5,8 +5,21 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  detectWorldCupWinner, mapWikidataAwardsToRaw, mostRecentCompletedMonth,
+  detectWorldCupWinner, mapWikidataAwardsToRaw, mostRecentCompletedMonth, resolveArticleTitle,
 } from '../scripts/gather-rankings-signals.mjs';
+
+// ── resolveArticleTitle: known direct-title collisions ──────────────────
+//
+// Confirmed real bug (2026-07-08): Colombia's Luis Suárez (b. 1997,
+// Sporting CP) direct-title-matched to the globally famous Uruguayan Luis
+// Suárez instead -- his own project bio literally opens "Not that one".
+// The override short-circuits before any network call, so this is
+// testable without mocking fetch.
+
+test('resolveArticleTitle uses the known override for a confirmed name collision, not the direct title', async () => {
+  const title = await resolveArticleTitle('Luis Suárez');
+  assert.equal(title, 'Luis_Suárez_(footballer,_born_1997)');
+});
 
 // ── detectWorldCupWinner ────────────────────────────────────────────────
 

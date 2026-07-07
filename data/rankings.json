@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T10:03:37.840Z",
+  "lastUpdated": "2026-07-07T10:11:25.912Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -40,7 +40,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 0,
-      "media": 77.5,
+      "media": 77.8,
       "form": 39.6,
       "formBreakdown": {
         "starts": 1,
@@ -49,7 +49,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 29.3,
+      "consensus": 29.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -140,7 +140,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 15,
-      "media": 61.3,
+      "media": 61.6,
       "form": 46.7,
       "formBreakdown": {
         "starts": 1,
@@ -149,7 +149,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 34.5,
+      "consensus": 34.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -206,7 +206,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 0,
-      "media": 80.3,
+      "media": 80.6,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -215,7 +215,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37,
+      "consensus": 37.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -239,7 +239,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 75,
+      "media": 75.4,
       "form": 28.1,
       "formBreakdown": {
         "starts": 0,
@@ -248,7 +248,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 51.6,
+      "consensus": 51.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -317,7 +317,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 5,
-      "media": 68.3,
+      "media": 68.7,
       "form": 91.6,
       "formBreakdown": {
         "starts": 1,
@@ -326,7 +326,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 42.5,
+      "consensus": 42.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -471,7 +471,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 5,
-      "media": 67.3,
+      "media": 67.6,
       "form": 73,
       "formBreakdown": {
         "starts": 3,
@@ -480,7 +480,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37.6,
+      "consensus": 37.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -504,7 +504,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 0,
-      "media": 60.2,
+      "media": 60.6,
       "form": 39.6,
       "formBreakdown": {
         "starts": 1,
@@ -513,7 +513,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 25,
+      "consensus": 25.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -537,7 +537,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 15,
-      "media": 85.9,
+      "media": 86.3,
       "form": 43.9,
       "formBreakdown": {
         "starts": 1,
@@ -546,7 +546,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.9,
+      "consensus": 40.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -570,7 +570,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 15,
-      "media": 68.7,
+      "media": 69,
       "form": 46.7,
       "formBreakdown": {
         "starts": 1,
@@ -603,7 +603,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 10,
-      "media": 81.3,
+      "media": 81.7,
       "form": 73,
       "formBreakdown": {
         "starts": 3,
@@ -612,7 +612,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.6,
+      "consensus": 43.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -657,7 +657,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 15,
-      "media": 74.3,
+      "media": 74.6,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -666,7 +666,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.8,
+      "consensus": 47.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -690,7 +690,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 95,
-      "media": 86.6,
+      "media": 87,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -699,7 +699,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 90.9,
+      "consensus": 91,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -724,7 +724,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 10,
-      "media": 78.5,
+      "media": 78.9,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -733,7 +733,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.6,
+      "consensus": 41.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -824,7 +824,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 100,
-      "media": 85.6,
+      "media": 85.9,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -1010,7 +1010,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 100,
-      "media": 91.9,
+      "media": 92.3,
       "form": 90.5,
       "formBreakdown": {
         "starts": 4,
@@ -1019,7 +1019,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 95.6,
+      "consensus": 95.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -1044,7 +1044,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 10,
-      "media": 62.7,
+      "media": 63,
       "form": 95.8,
       "formBreakdown": {
         "starts": 4,
@@ -1053,7 +1053,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 44.6,
+      "consensus": 44.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -1110,7 +1110,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 10,
-      "media": 66.2,
+      "media": 66.5,
       "form": 95.8,
       "formBreakdown": {
         "starts": 4,
@@ -1119,7 +1119,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 45.5,
+      "consensus": 45.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -1143,7 +1143,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": 5,
-      "media": 76.8,
+      "media": 77.1,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -1152,7 +1152,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38.6,
+      "consensus": 38.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2163,7 +2163,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 94,
+      "media": 59.9,
       "form": 59.6,
       "formBreakdown": {
         "starts": 2,
@@ -2172,12 +2172,12 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 76.8,
+      "consensus": 59.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": 434701
+      "mediaPageviews": 76479
     },
     {
       "playerId": "colombia-gomez",
@@ -2352,7 +2352,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 70.1,
+      "media": 70.4,
       "form": 95.8,
       "formBreakdown": {
         "starts": 4,
@@ -2361,7 +2361,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 82.9,
+      "consensus": 83.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2373,7 +2373,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 66.5,
+      "media": 66.9,
       "form": 43.9,
       "formBreakdown": {
         "starts": 0,
@@ -2382,7 +2382,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.2,
+      "consensus": 55.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2415,7 +2415,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 66.9,
+      "media": 67.3,
       "form": 90.5,
       "formBreakdown": {
         "starts": 4,
@@ -2424,7 +2424,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 78.7,
+      "consensus": 78.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2646,7 +2646,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 71.5,
+      "media": 71.8,
       "form": 73,
       "formBreakdown": {
         "starts": 3,
@@ -2655,7 +2655,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.3,
+      "consensus": 72.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2751,7 +2751,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 84.2,
+      "media": 84.5,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -2760,7 +2760,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 85.6,
+      "consensus": 85.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2772,7 +2772,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 79.2,
+      "media": 79.6,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -2781,7 +2781,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 83.1,
+      "consensus": 83.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2793,7 +2793,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 77.1,
+      "media": 77.5,
       "form": 73,
       "formBreakdown": {
         "starts": 3,
@@ -2802,7 +2802,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.1,
+      "consensus": 75.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2814,7 +2814,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 91.5,
+      "media": 91.9,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -2823,7 +2823,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 79.6,
+      "consensus": 79.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2835,7 +2835,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 75.7,
+      "media": 76.1,
       "form": 43.9,
       "formBreakdown": {
         "starts": 1,
@@ -2844,7 +2844,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 59.8,
+      "consensus": 60,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2856,7 +2856,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 74.6,
+      "media": 75,
       "form": 73,
       "formBreakdown": {
         "starts": 3,
@@ -2865,7 +2865,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 73.8,
+      "consensus": 74,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2877,7 +2877,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 89.8,
+      "media": 90.1,
       "form": 55.1,
       "formBreakdown": {
         "starts": 1,
@@ -2886,7 +2886,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.5,
+      "consensus": 72.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2961,7 +2961,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 92.6,
+      "media": 93,
       "form": 89.1,
       "formBreakdown": {
         "starts": 2,
@@ -2970,7 +2970,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 90.9,
+      "consensus": 91.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -2982,7 +2982,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 62.3,
+      "media": 62.7,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -2991,7 +2991,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.3,
+      "consensus": 41.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3024,7 +3024,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 77.8,
+      "media": 78.2,
       "form": 28.1,
       "formBreakdown": {
         "starts": 0,
@@ -3033,7 +3033,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 53,
+      "consensus": 53.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3066,7 +3066,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 69,
+      "media": 69.4,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -3075,7 +3075,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.7,
+      "consensus": 44.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3087,7 +3087,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 84.5,
+      "media": 84.9,
       "form": 46.7,
       "formBreakdown": {
         "starts": 1,
@@ -3096,7 +3096,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65.6,
+      "consensus": 65.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3129,7 +3129,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 64.1,
+      "media": 64.4,
       "form": 28.1,
       "formBreakdown": {
         "starts": 0,
@@ -3138,7 +3138,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 46.1,
+      "consensus": 46.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3150,7 +3150,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 88.4,
+      "media": 88.7,
       "form": 73,
       "formBreakdown": {
         "starts": 3,
@@ -3159,7 +3159,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80.7,
+      "consensus": 80.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3171,7 +3171,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 78.2,
+      "media": 78.5,
       "form": 39.6,
       "formBreakdown": {
         "starts": 0,
@@ -3180,7 +3180,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.9,
+      "consensus": 59.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3192,7 +3192,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 73.6,
+      "media": 73.9,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -3201,7 +3201,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47,
+      "consensus": 47.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3234,7 +3234,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 70.8,
+      "media": 71.1,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -3243,7 +3243,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63,
+      "consensus": 63.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3255,7 +3255,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 90.5,
+      "media": 90.8,
       "form": 59.6,
       "formBreakdown": {
         "starts": 2,
@@ -3264,7 +3264,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.1,
+      "consensus": 75.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3276,7 +3276,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 79.9,
+      "media": 80.3,
       "form": 39.6,
       "formBreakdown": {
         "starts": 1,
@@ -3285,7 +3285,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 59.8,
+      "consensus": 60,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3339,7 +3339,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 65.1,
+      "media": 65.5,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -3348,7 +3348,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 60.1,
+      "consensus": 60.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3360,7 +3360,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 65.5,
+      "media": 65.8,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -3369,7 +3369,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 76.3,
+      "consensus": 76.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3381,7 +3381,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 64.8,
+      "media": 65.1,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -3390,7 +3390,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.9,
+      "consensus": 76.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3402,7 +3402,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 72.9,
+      "media": 73.2,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -3411,7 +3411,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64,
+      "consensus": 64.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3446,7 +3446,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 72.5,
+      "media": 72.9,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -3455,7 +3455,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.1,
+      "consensus": 70.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3467,7 +3467,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 69.7,
+      "media": 70.1,
       "form": 28.1,
       "formBreakdown": {
         "starts": 0,
@@ -3476,7 +3476,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.9,
+      "consensus": 49.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3530,7 +3530,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 87.7,
+      "media": 88,
       "form": 91.2,
       "formBreakdown": {
         "starts": 2,
@@ -3539,7 +3539,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 89.5,
+      "consensus": 89.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3551,7 +3551,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 91.2,
+      "media": 91.5,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -3560,7 +3560,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.8,
+      "consensus": 56,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3572,7 +3572,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 81.7,
+      "media": 82,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -3581,7 +3581,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.7,
+      "consensus": 74.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3593,7 +3593,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 83.1,
+      "media": 83.5,
       "form": 28.1,
       "formBreakdown": {
         "starts": 0,
@@ -3602,7 +3602,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.6,
+      "consensus": 55.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3614,7 +3614,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 73.2,
+      "media": 73.6,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -3623,7 +3623,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80.1,
+      "consensus": 80.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3635,7 +3635,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 81,
+      "media": 81.3,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -3644,7 +3644,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.4,
+      "consensus": 74.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3698,7 +3698,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 92.3,
+      "media": 92.6,
       "form": 89.1,
       "formBreakdown": {
         "starts": 2,
@@ -3707,7 +3707,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 90.7,
+      "consensus": 90.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3782,7 +3782,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 86.3,
+      "media": 86.6,
       "form": 43.9,
       "formBreakdown": {
         "starts": 0,
@@ -3791,7 +3791,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65.1,
+      "consensus": 65.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3824,7 +3824,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 68,
+      "media": 68.3,
       "form": 39.6,
       "formBreakdown": {
         "starts": 1,
@@ -3833,7 +3833,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 53.8,
+      "consensus": 54,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3845,7 +3845,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 88,
+      "media": 88.4,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -3854,7 +3854,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 87.5,
+      "consensus": 87.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3887,7 +3887,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 76.1,
+      "media": 76.4,
       "form": 73,
       "formBreakdown": {
         "starts": 3,
@@ -3896,7 +3896,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.6,
+      "consensus": 74.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3908,7 +3908,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 61.6,
+      "media": 62,
       "form": 39.6,
       "formBreakdown": {
         "starts": 1,
@@ -3917,7 +3917,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.6,
+      "consensus": 50.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -3950,7 +3950,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 93,
+      "media": 93.3,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -3959,7 +3959,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80.4,
+      "consensus": 80.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4307,7 +4307,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 60.6,
+      "media": 60.9,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -4316,7 +4316,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 73.8,
+      "consensus": 74,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4328,7 +4328,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 63.4,
+      "media": 63.7,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -4337,7 +4337,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.2,
+      "consensus": 75.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4391,7 +4391,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 59.9,
+      "media": 60.2,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -4400,7 +4400,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63.8,
+      "consensus": 64,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4517,7 +4517,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 70.4,
+      "media": 70.8,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -4526,7 +4526,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 69.1,
+      "consensus": 69.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4580,7 +4580,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 82.7,
+      "media": 83.1,
       "form": 67.7,
       "formBreakdown": {
         "starts": 3,
@@ -4589,7 +4589,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.2,
+      "consensus": 75.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4769,7 +4769,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 71.1,
+      "media": 71.5,
       "form": 73.3,
       "formBreakdown": {
         "starts": 1,
@@ -4778,7 +4778,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.2,
+      "consensus": 72.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4790,7 +4790,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 93.3,
+      "media": 93.7,
       "form": 94,
       "formBreakdown": {
         "starts": 3,
@@ -4799,7 +4799,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 93.6,
+      "consensus": 93.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4832,7 +4832,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 82.4,
+      "media": 82.7,
       "form": 55.1,
       "formBreakdown": {
         "starts": 1,
@@ -4841,7 +4841,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.8,
+      "consensus": 68.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -4937,7 +4937,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 69.4,
+      "media": 69.7,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -4946,7 +4946,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.9,
+      "consensus": 45.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5063,7 +5063,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 73.9,
+      "media": 74.3,
       "form": 55.1,
       "formBreakdown": {
         "starts": 1,
@@ -5072,7 +5072,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.5,
+      "consensus": 64.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5126,7 +5126,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 67.6,
+      "media": 68,
       "form": 59.6,
       "formBreakdown": {
         "starts": 2,
@@ -5135,7 +5135,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63.6,
+      "consensus": 63.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5210,7 +5210,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 64.4,
+      "media": 64.8,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -5219,7 +5219,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75.7,
+      "consensus": 75.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5273,7 +5273,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 82,
+      "media": 82.4,
       "form": 39.6,
       "formBreakdown": {
         "starts": 0,
@@ -5282,7 +5282,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 60.8,
+      "consensus": 61,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5336,7 +5336,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 71.8,
+      "media": 72.2,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -5345,7 +5345,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 79.4,
+      "consensus": 79.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5357,7 +5357,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 90.8,
+      "media": 91.2,
       "form": 97.2,
       "formBreakdown": {
         "starts": 4,
@@ -5366,7 +5366,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 94,
+      "consensus": 94.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5399,7 +5399,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 62,
+      "media": 62.3,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -5408,7 +5408,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.5,
+      "consensus": 74.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5567,7 +5567,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 63,
+      "media": 63.4,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -5576,7 +5576,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 75,
+      "consensus": 75.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5609,7 +5609,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 80.6,
+      "media": 81,
       "form": 95.8,
       "formBreakdown": {
         "starts": 4,
@@ -5618,7 +5618,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 88.2,
+      "consensus": 88.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5651,7 +5651,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 85.2,
+      "media": 85.6,
       "form": 97.9,
       "formBreakdown": {
         "starts": 2,
@@ -5660,7 +5660,7 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 91.6,
+      "consensus": 91.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5672,7 +5672,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 89.1,
+      "media": 89.4,
       "form": 87,
       "formBreakdown": {
         "starts": 4,
@@ -5681,7 +5681,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 88.1,
+      "consensus": 88.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -5819,7 +5819,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 75.4,
+      "media": 75.7,
       "form": 89.8,
       "formBreakdown": {
         "starts": 3,
@@ -5828,7 +5828,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 82.6,
+      "consensus": 82.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6050,7 +6050,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 90.1,
+      "media": 90.5,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -6059,7 +6059,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.6,
+      "consensus": 72.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6092,7 +6092,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 78.9,
+      "media": 79.2,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -6101,7 +6101,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 67,
+      "consensus": 67.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6113,7 +6113,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 87,
+      "media": 87.3,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -6122,7 +6122,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 71.1,
+      "consensus": 71.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6134,7 +6134,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 76.4,
+      "media": 76.8,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -6143,7 +6143,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.4,
+      "consensus": 48.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6176,7 +6176,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 87.3,
+      "media": 87.7,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -6185,7 +6185,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 71.2,
+      "consensus": 71.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6197,7 +6197,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 83.8,
+      "media": 84.2,
       "form": 28.1,
       "formBreakdown": {
         "starts": 0,
@@ -6206,7 +6206,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56,
+      "consensus": 56.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6239,7 +6239,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 65.8,
+      "media": 66.2,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -6248,7 +6248,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.1,
+      "consensus": 43.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6281,7 +6281,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 88.7,
+      "media": 89.1,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -6290,7 +6290,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 71.9,
+      "consensus": 72.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6302,7 +6302,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 84.9,
+      "media": 85.2,
       "form": 32.3,
       "formBreakdown": {
         "starts": 0,
@@ -6311,7 +6311,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.6,
+      "consensus": 58.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6344,7 +6344,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 93.7,
+      "media": 94,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -6353,7 +6353,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74.4,
+      "consensus": 74.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6365,7 +6365,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 83.5,
+      "media": 83.8,
       "form": 92.3,
       "formBreakdown": {
         "starts": 2,
@@ -6374,7 +6374,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 87.9,
+      "consensus": 88.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6407,7 +6407,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 63.7,
+      "media": 64.1,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -6416,7 +6416,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.1,
+      "consensus": 42.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6449,7 +6449,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 89.4,
+      "media": 89.8,
       "form": 28.1,
       "formBreakdown": {
         "starts": 0,
@@ -6458,7 +6458,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.8,
+      "consensus": 59,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6491,7 +6491,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 60.9,
+      "media": 61.3,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -6500,7 +6500,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.6,
+      "consensus": 40.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6512,7 +6512,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 79.6,
+      "media": 79.9,
       "form": 55.1,
       "formBreakdown": {
         "starts": 2,
@@ -6521,7 +6521,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 67.4,
+      "consensus": 67.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
@@ -6554,7 +6554,7 @@
       "transfermarkt": null,
       "ea": null,
       "awards": null,
-      "media": 72.2,
+      "media": 72.5,
       "form": 20.4,
       "formBreakdown": {
         "starts": 0,
@@ -6563,7 +6563,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 46.3,
+      "consensus": 46.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,

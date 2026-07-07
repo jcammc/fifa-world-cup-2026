@@ -114,7 +114,25 @@ export async function searchCandidate(playerName) {
   return results.length === 1 ? results[0].title : null;
 }
 
+// Known direct-title collisions -- confirmed cases where a squad player's
+// plain name string resolves to a DIFFERENT, more famous, unrelated
+// person's Wikipedia article instead of their own. Found 2026-07-08 while
+// researching Colombia's Awards data: Colombia's Luis Suárez (b. 1997,
+// Sporting CP) direct-matched to the globally famous Uruguayan Luis Suárez
+// instead -- confirmed via this project's own player data (his bio
+// literally opens "Not that one") and cross-checked pageviews (~76K for
+// the correct article vs. the ~435K that had been wrongly attributed from
+// the famous namesake). The correct, disambiguated title was found and
+// verified separately. Only add an entry here after confirming a real
+// collision this way -- never speculatively, and never as a general
+// disambiguation mechanism (that would be guessing).
+const KNOWN_TITLE_OVERRIDES = {
+  'Luis Suárez': 'Luis_Suárez_(footballer,_born_1997)', // Colombia's Luis Suárez, not the Uruguayan
+};
+
 export async function resolveArticleTitle(playerName) {
+  if (KNOWN_TITLE_OVERRIDES[playerName]) return KNOWN_TITLE_OVERRIDES[playerName];
+
   const direct = playerName.replace(/ /g, '_');
   if (await pageWikitext(direct)) return direct;
 
