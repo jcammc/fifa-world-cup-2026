@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-06T23:24:23.062Z",
+  "lastUpdated": "2026-07-07T00:19:41.072Z",
   "data": [
     {
       "id": "r32",
@@ -291,10 +291,10 @@
           "awayLabel": null,
           "homeTeamId": "usa",
           "awayTeamId": "belgium",
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 0,
+          "awayScore": 1,
           "kickoff": "2026-07-07T00:00:00Z",
-          "status": "scheduled",
+          "status": "live",
           "venue": "Lumen Field, Seattle",
           "broadcaster": null
         },
