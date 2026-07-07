@@ -27,6 +27,11 @@ test('resolveArticleTitle uses the known override for Rodri, a disambiguation-pa
   assert.equal(title, 'Rodri_(footballer,_born_1996)');
 });
 
+test('resolveArticleTitle uses the known override for Mark McKenzie, a doubly-ambiguous soccer-suffix collision', async () => {
+  const title = await resolveArticleTitle('Mark McKenzie');
+  assert.equal(title, 'Mark_McKenzie_(soccer,_born_1999)');
+});
+
 // ── isDisambiguationWikitext ──────────────────────────────────────────────
 //
 // Confirmed real bug (Spain Awards research): "Rodri" and "Gavi" both

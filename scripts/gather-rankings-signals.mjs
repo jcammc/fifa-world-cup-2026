@@ -173,6 +173,45 @@ const KNOWN_TITLE_OVERRIDES = {
   // professional footballer) rather than his real article's. Corrected
   // alongside adding this override -- see the fix commit.
   'Trézéguet': 'Trézéguet_(Egyptian_footballer)',
+  // USA's Mark McKenzie (b. 1999) -- "Mark McKenzie" AND "Mark_McKenzie_
+  // (soccer)" (the new soccer-suffix fallback added alongside this entry)
+  // are BOTH disambiguation pages -- the second one is a human-name-dis
+  // ({{Hndis}}) page listing 9 different Mark/Marc McKenzies, one of whom
+  // is this player under the more specific "(soccer, born 1999)" title.
+  // searchCandidate() can't disambiguate (multiple same-name results).
+  'Mark McKenzie': 'Mark_McKenzie_(soccer,_born_1999)',
+  // Spain's Eric García (b. 2001, Barcelona/Man City defender) -- "Eric
+  // Garcia"/"Eric_García" is a disambiguation page (writer, this player,
+  // a basketball player, and a DIFFERENT Spanish footballer born 1993 all
+  // share the name); searchCandidate() can't disambiguate. Found auditing
+  // mediaPageviews outliers after the Trézéguet contamination -- this one
+  // was ALSO already contaminated (110 -- implausibly low for a Barcelona
+  // first-teamer) in data already committed for Spain's Awards batch,
+  // corrected alongside adding this override.
+  'Eric García': 'Eric_García_(footballer,_born_2001)',
+  // The Eric García find prompted a full audit of every already-researched
+  // player whose mediaPageviews looked implausibly low for their real
+  // profile, across all previously-completed teams. These four were
+  // confirmed the same way (real disambiguation page content, correct
+  // candidate identified via the project's own squad data e.g. Tarek Alaa's
+  // FIFA World Cup 2026 Egypt squad-list citation) and were ALSO already
+  // contaminating committed mediaPageviews -- corrected alongside adding
+  // these entries. Some other low-pageview players (e.g. Julián Álvarez,
+  // Lucas Hernández, Brahim Diaz, France's Théo Hernández) were spot-checked
+  // too and confirmed to resolve correctly already -- genuinely low real
+  // numbers for that fetch window, not a resolution bug, so left untouched.
+  'Luis Díaz': 'Luis_Díaz_(footballer,_born_1997)', // Colombia's Bayern Munich winger
+  'Nicolás González': 'Nicolás_González_(footballer,_born_1998)', // Argentina's Juventus winger
+  'Álvaro Montero': 'Álvaro_Montero_(Colombian_footballer)', // Colombia's goalkeeper, b. 1995
+  'Tarek Alaa': 'Tarek_Alaa_(footballer,_born_2002)', // Egypt's player -- confirmed via the article's own FIFA World Cup 2026 squad-list citation
+  // Spain's Víctor Muñoz (b. 2003) -- another disambiguation collision found
+  // in the same audit; confirmed via the article's own FIFA World Cup 2026
+  // Spain squad-list citation. This one had ALSO been wrongly marked "no
+  // Honours section found" during the original Spain Awards research (the
+  // dump script was reading the disambiguation page, which has no Honours
+  // section, not his real one, which does) -- corrected as a follow-up to
+  // that batch alongside this override, not just the pageviews.
+  'Víctor Muñoz': 'Víctor_Muñoz_(footballer,_born_2003)',
 };
 
 export async function resolveArticleTitle(playerName) {
@@ -188,6 +227,18 @@ export async function resolveArticleTitle(playerName) {
   const withSuffix = `${direct}_(footballer)`;
   const suffixWikitext = await pageWikitext(withSuffix);
   if (suffixWikitext && !isDisambiguationWikitext(suffixWikitext)) return withSuffix;
+
+  // American players use the American-English disambiguator "(soccer)"
+  // instead of "(footballer)" -- found 2026-07-xx researching USA's Awards
+  // data: 5 squad players with common Anglo surnames (Matt Turner, Chris
+  // Richards, Miles Robinson, Mark McKenzie, Chris Brady) all direct- and
+  // "_(footballer)"-suffix-collided with disambiguation pages, and
+  // searchCandidate() couldn't disambiguate among the multiple same-name
+  // results either. All 5 confirmed to resolve correctly with this suffix
+  // instead (verified via real wikitext content, not guessed).
+  const withSoccerSuffix = `${direct}_(soccer)`;
+  const soccerSuffixWikitext = await pageWikitext(withSoccerSuffix);
+  if (soccerSuffixWikitext && !isDisambiguationWikitext(soccerSuffixWikitext)) return withSoccerSuffix;
 
   const candidate = await searchCandidate(playerName);
   if (candidate) {

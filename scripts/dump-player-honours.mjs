@@ -41,8 +41,26 @@ function parseArgs(argv) {
 // same-or-higher-level heading. Falls back to reporting "no Honours section
 // found" rather than guessing a substitute -- some articles use a different
 // heading, which should be read manually instead.
-function extractHonoursSection(wikitext) {
-  const match = wikitext.match(/\n(={2,4})\s*Honours\s*\1\n([\s\S]*?)(?=\n={2,4}[^=]|\n==\s*(References|External links|See also)\s*==|$)/i);
+//
+// Matches "Honours" OR "Honors" -- found 2026-07-xx researching USA's
+// Awards data: every single USA player (Pulisic, McKennie, Weah, Adams,
+// etc.) came back "no Honours section found", a 100% failure rate that
+// doesn't match their real profiles (Pulisic played for Chelsea/AC Milan).
+// Confirmed via Pulisic's real wikitext: American players' articles use
+// the US spelling "Honors" by Wikipedia house style, with an explicit
+// editorial note enforcing it ("Do not change to 'Honours' because he is
+// American"). The old Honours-only regex silently treated this as "no
+// section" rather than a real absence for this project's entire USA squad.
+//
+// Also tolerates an HTML comment between the heading text and the closing
+// "=" run: Pulisic's real heading is literally
+// `== Honors <!--Do not change to "Honours" because he is American.--> ==`
+// -- the enforcement comment itself sits between "Honors" and "==", which
+// a plain `\s*` doesn't match. Re-confirmed still "no Honours section
+// found" for Pulisic specifically even after the Honors/Honours fix above,
+// which is what surfaced this.
+export function extractHonoursSection(wikitext) {
+  const match = wikitext.match(/\n(={2,4})(?:\s|<!--[\s\S]*?-->)*Honou?rs(?:\s|<!--[\s\S]*?-->)*\1\n([\s\S]*?)(?=\n={2,4}[^=]|\n==\s*(References|External links|See also)\s*==|$)/i);
   return match ? match[2].trim() : null;
 }
 
@@ -82,4 +100,4 @@ async function main() {
   }
 }
 
-main();
+if (process.argv[1] === fileURLToPath(import.meta.url)) main();
