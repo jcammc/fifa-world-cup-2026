@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T13:52:49.455Z",
+  "lastUpdated": "2026-07-07T14:32:00.673Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -259,7 +259,7 @@
       "playerId": "argentina-alvarez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 25,
       "media": 3.9,
       "form": 55.1,
       "formBreakdown": {
@@ -269,12 +269,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 29.5,
+      "consensus": 27.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 5540
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 5540,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Julián_Álvarez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-messi",
@@ -647,7 +659,7 @@
       "playerId": "argentina-lopez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 1.1,
       "form": 28.1,
       "formBreakdown": {
@@ -657,12 +669,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 14.6,
+      "consensus": 12.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 211
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 211,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/José_Manuel_López_(footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-lautaro-martinez",
