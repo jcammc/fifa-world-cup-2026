@@ -92,6 +92,19 @@ export async function pageWikitext(title) {
   return json.parse?.wikitext ?? null;
 }
 
+// Full article wikitext (no section restriction) -- unlike pageWikitext()
+// above, which only fetches section 0 (the infobox/lead) for the
+// medaltemplates check. Used by scripts/dump-player-honours.mjs to read a
+// player's "Honours" section, which lives later in the article body.
+export async function pageFullWikitext(title) {
+  const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(title)}&prop=wikitext&format=json&formatversion=2`;
+  const res = await fetchWithRetry(url).catch(() => null);
+  if (!res || !res.ok) return null;
+  const json = await res.json();
+  if (json.error) return null;
+  return json.parse?.wikitext ?? null;
+}
+
 export async function searchCandidate(playerName) {
   const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(`"${playerName}" footballer`)}&srlimit=2&format=json&formatversion=2`;
   const res = await fetchWithRetry(url).catch(() => null);

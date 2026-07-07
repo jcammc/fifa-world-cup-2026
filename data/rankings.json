@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T08:36:08.592Z",
+  "lastUpdated": "2026-07-07T09:46:32.624Z",
   "data": [
     {
       "playerId": "argentina-musso",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 29.9,
       "form": 20.4,
       "formBreakdown": {
@@ -16,18 +16,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 25.2,
+      "consensus": 12.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 26209
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 26209,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Juan_Musso",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-senesi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 77.5,
       "form": 39.6,
       "formBreakdown": {
@@ -37,18 +49,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.6,
+      "consensus": 29.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 152704
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 152704,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Marcos_Senesi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-tagliafico",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 40.8,
       "form": 46.7,
       "formBreakdown": {
@@ -58,18 +82,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.8,
+      "consensus": 29.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 42654
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 42654,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nicolás_Tagliafico",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-montiel",
       "transfermarkt": null,
       "ea": null,
-      "awards": 15,
+      "awards": 20,
       "media": 48.9,
       "form": 43.9,
       "formBreakdown": {
@@ -79,20 +115,31 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.7,
+      "consensus": 33.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
       "awardsRaw": {
-        "worldCupWinner": true
+        "worldCupWinner": true,
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
       },
-      "mediaPageviews": 52892
+      "mediaPageviews": 52892,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Gonzalo_Montiel",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-paredes",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 61.3,
       "form": 46.7,
       "formBreakdown": {
@@ -102,18 +149,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 54,
+      "consensus": 34.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 84015
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 6
+      },
+      "mediaPageviews": 84015,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Leandro_Paredes",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-lisandro-martinez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 54.9,
       "form": 67.7,
       "formBreakdown": {
@@ -123,18 +182,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61.3,
+      "consensus": 35.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 67205
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 67205,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Lisandro_Martínez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-de-paul",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 80.3,
       "form": 67.7,
       "formBreakdown": {
@@ -144,12 +215,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 74,
+      "consensus": 37,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 175090
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 175090,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Rodrigo_De_Paul",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-barco",
@@ -215,15 +298,25 @@
         "worldCupWinner": true,
         "ballonDorTier": "winner",
         "uefaPoty": true,
-        "wcGoldenBall": true
+        "wcGoldenBall": true,
+        "fifaBestPlayer": true,
+        "totyEaFc": true,
+        "clWins": 4,
+        "domesticTitles": 12
       },
-      "mediaPageviews": 4032748
+      "mediaPageviews": 4032748,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-lo-celso",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 68.3,
       "form": 91.6,
       "formBreakdown": {
@@ -233,18 +326,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 80,
+      "consensus": 42.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 108615
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 108615,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Giovani_Lo_Celso",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-rulli",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 28.9,
       "form": 20.4,
       "formBreakdown": {
@@ -254,12 +359,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.7,
+      "consensus": 12.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 25565
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 25565,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Gerónimo_Rulli",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-romero",
@@ -280,15 +397,26 @@
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
       "awardsRaw": {
-        "worldCupWinner": true
+        "worldCupWinner": true,
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
       },
-      "mediaPageviews": 63388
+      "mediaPageviews": 63388,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Cristian_Romero",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-palacios",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 34.2,
       "form": 39.6,
       "formBreakdown": {
@@ -298,12 +426,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.9,
+      "consensus": 21,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 31097
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 31097,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Exequiel_Palacios",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-gonzalez",
@@ -330,7 +470,7 @@
       "playerId": "argentina-almada",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 67.3,
       "form": 73,
       "formBreakdown": {
@@ -340,18 +480,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.2,
+      "consensus": 37.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 105178
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 105178,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Thiago_Almada",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-simeone",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 60.2,
       "form": 39.6,
       "formBreakdown": {
@@ -361,18 +513,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 49.9,
+      "consensus": 25,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 82204
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 82204,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Giuliano_Simeone",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-paz",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 85.9,
       "form": 43.9,
       "formBreakdown": {
@@ -382,18 +546,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.9,
+      "consensus": 39.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 240335
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 1,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 240335,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nico_Paz",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-otamendi",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 68.7,
       "form": 46.7,
       "formBreakdown": {
@@ -403,18 +579,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 57.7,
+      "consensus": 36.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 111265
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 111265,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nicolás_Otamendi",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-mac-allister",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 81.3,
       "form": 73,
       "formBreakdown": {
@@ -424,12 +612,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 77.2,
+      "consensus": 43.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 179174
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 179174,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Alexis_Mac_Allister",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-lopez",
@@ -456,7 +656,7 @@
       "playerId": "argentina-lautaro-martinez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 74.3,
       "form": 87,
       "formBreakdown": {
@@ -466,18 +666,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80.7,
+      "consensus": 47.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 140176
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 140176,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Lautaro_Martínez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-emiliano-martinez",
       "transfermarkt": null,
       "ea": null,
-      "awards": 15,
+      "awards": 95,
       "media": 86.6,
       "form": 87,
       "formBreakdown": {
@@ -487,20 +699,31 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.9,
+      "consensus": 90.9,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
       "awardsRaw": {
-        "worldCupWinner": true
+        "worldCupWinner": true,
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 0,
+        "domesticTitles": 0
       },
-      "mediaPageviews": 243372
+      "mediaPageviews": 243372,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Emiliano_Martínez",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-fernandez",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 78.5,
       "form": 67.7,
       "formBreakdown": {
@@ -510,18 +733,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 73.1,
+      "consensus": 41.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 160390
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 160390,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Enzo_Fernández",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-medina",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 57.7,
       "form": 67.7,
       "formBreakdown": {
@@ -531,12 +766,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 62.7,
+      "consensus": 31.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 73024
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 73024,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Facundo_Medina",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "argentina-molina",
@@ -557,9 +804,20 @@
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
       "awardsRaw": {
-        "worldCupWinner": true
+        "worldCupWinner": true,
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
       },
-      "mediaPageviews": 40579
+      "mediaPageviews": 40579,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nahuel_Molina",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-courtois",
