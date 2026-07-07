@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T13:28:05.601Z",
+  "lastUpdated": "2026-07-07T13:52:49.455Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -2405,7 +2405,7 @@
       "playerId": "colombia-montero",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 8.1,
       "form": 20.4,
       "formBreakdown": {
@@ -2415,12 +2415,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 14.3,
+      "consensus": 14.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 10370
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 10370,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Álvaro_Montero_(Colombian_footballer)",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-suarez",
