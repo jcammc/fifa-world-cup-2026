@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T09:46:32.624Z",
+  "lastUpdated": "2026-07-07T10:03:37.840Z",
   "data": [
     {
       "playerId": "argentina-musso",
@@ -823,7 +823,7 @@
       "playerId": "belgium-courtois",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 100,
       "media": 85.6,
       "form": 87,
       "formBreakdown": {
@@ -833,18 +833,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 86.3,
+      "consensus": 93.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 233085
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 2,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 233085,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Thibaut_Courtois",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-debast",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 19.7,
       "form": 20.4,
       "formBreakdown": {
@@ -854,12 +866,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20,
+      "consensus": 12.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 15999
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 15999,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Zeno_Debast",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-theate",
@@ -886,7 +910,7 @@
       "playerId": "belgium-mechele",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 27.1,
       "form": 87,
       "formBreakdown": {
@@ -896,18 +920,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 57.1,
+      "consensus": 36,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 24500
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 24500,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Brandon_Mechele",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-de-cuyper",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 29.2,
       "form": 73,
       "formBreakdown": {
@@ -917,18 +953,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 51.1,
+      "consensus": 28.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 25894
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 25894,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Maxim_De_Cuyper",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-witsel",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 50,
       "form": 20.4,
       "formBreakdown": {
@@ -938,18 +986,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 35.2,
+      "consensus": 25.1,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 56079
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 56079,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Axel_Witsel",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-de-bruyne",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 100,
       "media": 91.9,
       "form": 90.5,
       "formBreakdown": {
@@ -959,18 +1019,31 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 91.2,
+      "consensus": 95.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 347839
+      "awardsRaw": {
+        "ballonDorTier": "top3",
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": true,
+        "clWins": 1,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 347839,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Kevin_De_Bruyne",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-tielemans",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 62.7,
       "form": 95.8,
       "formBreakdown": {
@@ -980,18 +1053,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 79.3,
+      "consensus": 44.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 89242
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 89242,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Youri_Tielemans",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-lukaku",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 96.1,
       "form": 90.9,
       "formBreakdown": {
@@ -1001,18 +1086,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 93.5,
+      "consensus": 54.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 645589
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 645589,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Romelu_Lukaku",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-trossard",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 10,
       "media": 66.2,
       "form": 95.8,
       "formBreakdown": {
@@ -1022,18 +1119,30 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 81,
+      "consensus": 45.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 104429
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 2
+      },
+      "mediaPageviews": 104429,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Leandro_Trossard",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-doku",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 76.8,
       "form": 67.7,
       "formBreakdown": {
@@ -1043,18 +1152,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.2,
+      "consensus": 38.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 151115
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 151115,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Jérémy_Doku",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-lammens",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 46.8,
       "form": 20.4,
       "formBreakdown": {
@@ -1064,18 +1185,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.6,
+      "consensus": 16.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 51305
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 51305,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Senne_Lammens",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-penders",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 25.4,
       "form": 20.4,
       "formBreakdown": {
@@ -1085,18 +1218,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.9,
+      "consensus": 11.5,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 23168
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 23168,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Mike_Penders",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-lukebakio",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 31,
       "form": 32.3,
       "formBreakdown": {
@@ -1106,18 +1251,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.7,
+      "consensus": 15.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 27082
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 27082,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Dodi_Lukébakio",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-meunier",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 43.3,
       "form": 57.2,
       "formBreakdown": {
@@ -1127,18 +1284,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.3,
+      "consensus": 32.6,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 45109
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 4
+      },
+      "mediaPageviews": 45109,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Thomas_Meunier",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-de-winter",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 21.1,
       "form": 20.4,
       "formBreakdown": {
@@ -1148,18 +1317,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20.8,
+      "consensus": 10.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 17746
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 17746,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Koni_De_Winter",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-de-ketelaere",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 54.2,
       "form": 67.7,
       "formBreakdown": {
@@ -1169,18 +1350,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61,
+      "consensus": 38,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 65800
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 3
+      },
+      "mediaPageviews": 65800,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Charles_De_Ketelaere",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-seys",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 16.2,
       "form": 20.4,
       "formBreakdown": {
@@ -1190,18 +1383,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.3,
+      "consensus": 11.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 11632
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 11632,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Joaquin_Seys",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-moreira",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 34.5,
       "form": 28.1,
       "formBreakdown": {
@@ -1211,18 +1416,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.3,
+      "consensus": 15.7,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 32075
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 32075,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Diego_Moreira",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-vanaken",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 15,
       "media": 23.9,
       "form": 59.6,
       "formBreakdown": {
@@ -1232,18 +1449,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.8,
+      "consensus": 28.4,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 20845
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 7
+      },
+      "mediaPageviews": 20845,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Hans_Vanaken",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-castagne",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 26.8,
       "form": 73,
       "formBreakdown": {
@@ -1253,18 +1482,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 49.9,
+      "consensus": 25,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 23980
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 23980,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Timothy_Castagne",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-saelemaekers",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 5,
       "media": 36.3,
       "form": 87,
       "formBreakdown": {
@@ -1274,18 +1515,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61.7,
+      "consensus": 33.3,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 33457
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 1
+      },
+      "mediaPageviews": 33457,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Alexis_Saelemaekers",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-raskin",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 37,
       "form": 55.1,
       "formBreakdown": {
@@ -1295,18 +1548,30 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 46.1,
+      "consensus": 23,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 33677
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 33677,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Nicolas_Raskin",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-onana",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 58.1,
       "form": 46.7,
       "formBreakdown": {
@@ -1316,12 +1581,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 52.4,
+      "consensus": 26.2,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 73790
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 73790,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Amadou_Onana",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "belgium-ngoy",
@@ -1348,7 +1625,7 @@
       "playerId": "belgium-fernandez-pardo",
       "transfermarkt": null,
       "ea": null,
-      "awards": null,
+      "awards": 0,
       "media": 59.5,
       "form": 39.6,
       "formBreakdown": {
@@ -1358,12 +1635,24 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 49.6,
+      "consensus": 24.8,
       "provisional": true,
       "transfermarktValueEUR": null,
       "eaRatingRaw": null,
-      "awardsRaw": null,
-      "mediaPageviews": 75937
+      "awardsRaw": {
+        "fifaBestPlayer": false,
+        "uefaPoty": false,
+        "totyEaFc": false,
+        "clWins": 0,
+        "domesticTitles": 0
+      },
+      "mediaPageviews": 75937,
+      "rawProvenance": {
+        "awardsRaw": {
+          "source": "https://en.wikipedia.org/wiki/Matias_Fernandez-Pardo",
+          "enteredAt": "2026-07-07"
+        }
+      }
     },
     {
       "playerId": "colombia-ospina",
