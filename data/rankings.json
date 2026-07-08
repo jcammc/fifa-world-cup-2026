@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-08T08:48:45.564Z",
+  "lastUpdated": "2026-07-08T08:50:53.719Z",
   "data": [
     {
       "playerId": "argentina-musso",
-      "transfermarkt": 22.2,
+      "transfermarkt": 21.9,
       "ea": null,
       "awards": 0,
       "media": 24.6,
@@ -16,7 +16,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.7,
+      "consensus": 16.6,
       "provisional": true,
       "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
@@ -41,7 +41,7 @@
     },
     {
       "playerId": "argentina-senesi",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 76.1,
@@ -53,7 +53,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.5,
+      "consensus": 49.2,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -78,7 +78,7 @@
     },
     {
       "playerId": "argentina-tagliafico",
-      "transfermarkt": 27.1,
+      "transfermarkt": 26.6,
       "ea": null,
       "awards": 15,
       "media": 35.9,
@@ -90,7 +90,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.6,
+      "consensus": 27.4,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -115,7 +115,7 @@
     },
     {
       "playerId": "argentina-montiel",
-      "transfermarkt": 28,
+      "transfermarkt": 27.9,
       "ea": null,
       "awards": 20,
       "media": 45.1,
@@ -153,7 +153,7 @@
     },
     {
       "playerId": "argentina-paredes",
-      "transfermarkt": 30.4,
+      "transfermarkt": 30.5,
       "ea": null,
       "awards": 15,
       "media": 58.5,
@@ -165,7 +165,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.1,
+      "consensus": 32.2,
       "provisional": true,
       "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
@@ -190,7 +190,7 @@
     },
     {
       "playerId": "argentina-lisandro-martinez",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 10,
       "media": 51.1,
@@ -202,7 +202,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.7,
+      "consensus": 59.2,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -227,7 +227,7 @@
     },
     {
       "playerId": "argentina-de-paul",
-      "transfermarkt": 46.9,
+      "transfermarkt": 48.1,
       "ea": null,
       "awards": 0,
       "media": 78.9,
@@ -239,7 +239,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.8,
+      "consensus": 42.4,
       "provisional": true,
       "transfermarktValueEUR": 14000000,
       "eaRatingRaw": null,
@@ -264,7 +264,7 @@
     },
     {
       "playerId": "argentina-barco",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": null,
       "media": 73.2,
@@ -276,7 +276,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72,
+      "consensus": 72.7,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -291,7 +291,7 @@
     },
     {
       "playerId": "argentina-alvarez",
-      "transfermarkt": 97.1,
+      "transfermarkt": 97.4,
       "ea": null,
       "awards": 25,
       "media": 3.9,
@@ -303,7 +303,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 62.2,
+      "consensus": 62.3,
       "provisional": true,
       "transfermarktValueEUR": 100000000,
       "eaRatingRaw": null,
@@ -328,7 +328,7 @@
     },
     {
       "playerId": "argentina-messi",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 100,
       "media": 100,
@@ -340,7 +340,7 @@
         "assists": 0,
         "motm": 3
       },
-      "consensus": 75.4,
+      "consensus": 76,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -405,7 +405,7 @@
     },
     {
       "playerId": "argentina-rulli",
-      "transfermarkt": 33.8,
+      "transfermarkt": 33.9,
       "ea": null,
       "awards": 0,
       "media": 23.6,
@@ -417,7 +417,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.4,
+      "consensus": 22.5,
       "provisional": true,
       "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
@@ -442,7 +442,7 @@
     },
     {
       "playerId": "argentina-romero",
-      "transfermarkt": 84.5,
+      "transfermarkt": 85.4,
       "ea": null,
       "awards": 15,
       "media": 49.3,
@@ -454,7 +454,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 60.6,
+      "consensus": 61.1,
       "provisional": true,
       "transfermarktValueEUR": 45000000,
       "eaRatingRaw": null,
@@ -480,7 +480,7 @@
     },
     {
       "playerId": "argentina-palacios",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 5,
       "media": 29.2,
@@ -492,7 +492,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.9,
+      "consensus": 44.6,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -517,7 +517,7 @@
     },
     {
       "playerId": "argentina-gonzalez",
-      "transfermarkt": 59.9,
+      "transfermarkt": 61.4,
       "ea": null,
       "awards": 0,
       "media": 40.1,
@@ -529,7 +529,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39,
+      "consensus": 39.8,
       "provisional": true,
       "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
@@ -554,7 +554,7 @@
     },
     {
       "playerId": "argentina-almada",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 5,
       "media": 65.1,
@@ -566,7 +566,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.9,
+      "consensus": 44.5,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -591,7 +591,7 @@
     },
     {
       "playerId": "argentina-simeone",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 0,
       "media": 57.4,
@@ -603,7 +603,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 53.4,
+      "consensus": 54,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -628,7 +628,7 @@
     },
     {
       "playerId": "argentina-paz",
-      "transfermarkt": 95.2,
+      "transfermarkt": 95.7,
       "ea": null,
       "awards": 15,
       "media": 85.6,
@@ -640,7 +640,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 67.5,
+      "consensus": 67.8,
       "provisional": true,
       "transfermarktValueEUR": 80000000,
       "eaRatingRaw": null,
@@ -665,7 +665,7 @@
     },
     {
       "playerId": "argentina-otamendi",
-      "transfermarkt": 5.8,
+      "transfermarkt": 6.4,
       "ea": null,
       "awards": 15,
       "media": 66.5,
@@ -677,7 +677,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20.8,
+      "consensus": 21.1,
       "provisional": true,
       "transfermarktValueEUR": 1000000,
       "eaRatingRaw": null,
@@ -702,7 +702,7 @@
     },
     {
       "playerId": "argentina-mac-allister",
-      "transfermarkt": 92.8,
+      "transfermarkt": 93.1,
       "ea": null,
       "awards": 10,
       "media": 80.3,
@@ -714,7 +714,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.1,
+      "consensus": 68.2,
       "provisional": true,
       "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
@@ -739,7 +739,7 @@
     },
     {
       "playerId": "argentina-lopez",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 10,
       "media": 1.1,
@@ -751,7 +751,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.2,
+      "consensus": 40.9,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -776,7 +776,7 @@
     },
     {
       "playerId": "argentina-lautaro-martinez",
-      "transfermarkt": 95.7,
+      "transfermarkt": 96.1,
       "ea": null,
       "awards": 15,
       "media": 72.5,
@@ -788,7 +788,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 71.5,
+      "consensus": 71.7,
       "provisional": true,
       "transfermarktValueEUR": 85000000,
       "eaRatingRaw": null,
@@ -813,7 +813,7 @@
     },
     {
       "playerId": "argentina-emiliano-martinez",
-      "transfermarkt": 44.4,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 95,
       "media": 86.3,
@@ -825,7 +825,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 67.6,
+      "consensus": 68.4,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -851,7 +851,7 @@
     },
     {
       "playerId": "argentina-fernandez",
-      "transfermarkt": 96.6,
+      "transfermarkt": 97,
       "ea": null,
       "awards": 10,
       "media": 77.1,
@@ -863,7 +863,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.9,
+      "consensus": 69.1,
       "provisional": true,
       "transfermarktValueEUR": 90000000,
       "eaRatingRaw": null,
@@ -888,7 +888,7 @@
     },
     {
       "playerId": "argentina-medina",
-      "transfermarkt": 54.6,
+      "transfermarkt": 56.2,
       "ea": null,
       "awards": 0,
       "media": 54.2,
@@ -900,7 +900,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.5,
+      "consensus": 43.3,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -925,7 +925,7 @@
     },
     {
       "playerId": "argentina-molina",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 15,
       "media": 34.5,
@@ -937,7 +937,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.6,
+      "consensus": 41.2,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -963,7 +963,7 @@
     },
     {
       "playerId": "belgium-courtois",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 100,
       "media": 85.2,
@@ -975,7 +975,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 71.9,
+      "consensus": 72.5,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -1000,7 +1000,7 @@
     },
     {
       "playerId": "belgium-debast",
-      "transfermarkt": 69.6,
+      "transfermarkt": 70.8,
       "ea": null,
       "awards": 5,
       "media": 14.4,
@@ -1012,7 +1012,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.4,
+      "consensus": 41,
       "provisional": true,
       "transfermarktValueEUR": 28000000,
       "eaRatingRaw": null,
@@ -1037,7 +1037,7 @@
     },
     {
       "playerId": "belgium-theate",
-      "transfermarkt": 52.2,
+      "transfermarkt": 53.6,
       "ea": null,
       "awards": null,
       "media": 18.3,
@@ -1049,7 +1049,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.4,
+      "consensus": 48.3,
       "provisional": true,
       "transfermarktValueEUR": 17000000,
       "eaRatingRaw": null,
@@ -1064,7 +1064,7 @@
     },
     {
       "playerId": "belgium-mechele",
-      "transfermarkt": 20.3,
+      "transfermarkt": 19.7,
       "ea": null,
       "awards": 15,
       "media": 21.8,
@@ -1076,7 +1076,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.5,
+      "consensus": 27.2,
       "provisional": true,
       "transfermarktValueEUR": 2800000,
       "eaRatingRaw": null,
@@ -1101,7 +1101,7 @@
     },
     {
       "playerId": "belgium-de-cuyper",
-      "transfermarkt": 59.9,
+      "transfermarkt": 61.4,
       "ea": null,
       "awards": 5,
       "media": 23.9,
@@ -1113,7 +1113,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.3,
+      "consensus": 44.1,
       "provisional": true,
       "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
@@ -1138,7 +1138,7 @@
     },
     {
       "playerId": "belgium-witsel",
-      "transfermarkt": 8.2,
+      "transfermarkt": 9,
       "ea": null,
       "awards": 15,
       "media": 46.1,
@@ -1150,7 +1150,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.2,
+      "consensus": 16.6,
       "provisional": true,
       "transfermarktValueEUR": 1200000,
       "eaRatingRaw": null,
@@ -1213,7 +1213,7 @@
     },
     {
       "playerId": "belgium-tielemans",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 10,
       "media": 59.9,
@@ -1225,7 +1225,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 59.2,
+      "consensus": 59.5,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -1250,7 +1250,7 @@
     },
     {
       "playerId": "belgium-lukaku",
-      "transfermarkt": 33.8,
+      "transfermarkt": 33.9,
       "ea": null,
       "awards": 15,
       "media": 96.1,
@@ -1262,7 +1262,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44,
+      "consensus": 44.1,
       "provisional": true,
       "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
@@ -1287,7 +1287,7 @@
     },
     {
       "playerId": "belgium-trossard",
-      "transfermarkt": 54.6,
+      "transfermarkt": 56.2,
       "ea": null,
       "awards": 10,
       "media": 64.1,
@@ -1299,7 +1299,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 49.8,
+      "consensus": 50.6,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -1324,7 +1324,7 @@
     },
     {
       "playerId": "belgium-doku",
-      "transfermarkt": 94.2,
+      "transfermarkt": 94.4,
       "ea": null,
       "awards": 5,
       "media": 75,
@@ -1336,7 +1336,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 66.2,
+      "consensus": 66.3,
       "provisional": true,
       "transfermarktValueEUR": 75000000,
       "eaRatingRaw": null,
@@ -1361,7 +1361,7 @@
     },
     {
       "playerId": "belgium-lammens",
-      "transfermarkt": 77.3,
+      "transfermarkt": 78.5,
       "ea": null,
       "awards": 0,
       "media": 43,
@@ -1373,7 +1373,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 46.6,
+      "consensus": 47.2,
       "provisional": true,
       "transfermarktValueEUR": 35000000,
       "eaRatingRaw": null,
@@ -1398,7 +1398,7 @@
     },
     {
       "playerId": "belgium-penders",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 20.1,
@@ -1410,7 +1410,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.1,
+      "consensus": 39.8,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -1435,7 +1435,7 @@
     },
     {
       "playerId": "belgium-lukebakio",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 0,
       "media": 25.7,
@@ -1447,7 +1447,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.6,
+      "consensus": 33.2,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -1472,7 +1472,7 @@
     },
     {
       "playerId": "belgium-meunier",
-      "transfermarkt": 12.1,
+      "transfermarkt": 12.4,
       "ea": null,
       "awards": 15,
       "media": 38.4,
@@ -1484,7 +1484,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.7,
+      "consensus": 21.9,
       "provisional": true,
       "transfermarktValueEUR": 1500000,
       "eaRatingRaw": null,
@@ -1509,7 +1509,7 @@
     },
     {
       "playerId": "belgium-de-winter",
-      "transfermarkt": 60.4,
+      "transfermarkt": 62.2,
       "ea": null,
       "awards": 0,
       "media": 15.8,
@@ -1521,7 +1521,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 34.7,
+      "consensus": 35.6,
       "provisional": true,
       "transfermarktValueEUR": 23000000,
       "eaRatingRaw": null,
@@ -1546,7 +1546,7 @@
     },
     {
       "playerId": "belgium-de-ketelaere",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 15,
       "media": 50.4,
@@ -1558,7 +1558,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.7,
+      "consensus": 56.1,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -1583,7 +1583,7 @@
     },
     {
       "playerId": "belgium-seys",
-      "transfermarkt": 57,
+      "transfermarkt": 58.4,
       "ea": null,
       "awards": 5,
       "media": 10.9,
@@ -1595,7 +1595,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.7,
+      "consensus": 34.4,
       "provisional": true,
       "transfermarktValueEUR": 20000000,
       "eaRatingRaw": null,
@@ -1620,7 +1620,7 @@
     },
     {
       "playerId": "belgium-moreira",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 29.6,
@@ -1632,7 +1632,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.3,
+      "consensus": 42,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -1657,7 +1657,7 @@
     },
     {
       "playerId": "belgium-vanaken",
-      "transfermarkt": 30.4,
+      "transfermarkt": 30.5,
       "ea": null,
       "awards": 15,
       "media": 18.7,
@@ -1669,7 +1669,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.7,
+      "consensus": 28.8,
       "provisional": true,
       "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
@@ -1731,7 +1731,7 @@
     },
     {
       "playerId": "belgium-saelemaekers",
-      "transfermarkt": 57,
+      "transfermarkt": 58.4,
       "ea": null,
       "awards": 5,
       "media": 31.3,
@@ -1743,7 +1743,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.5,
+      "consensus": 45.2,
       "provisional": true,
       "transfermarktValueEUR": 20000000,
       "eaRatingRaw": null,
@@ -1768,7 +1768,7 @@
     },
     {
       "playerId": "belgium-raskin",
-      "transfermarkt": 44.4,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 0,
       "media": 32,
@@ -1780,7 +1780,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.1,
+      "consensus": 33.8,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -1805,7 +1805,7 @@
     },
     {
       "playerId": "belgium-onana",
-      "transfermarkt": 84.5,
+      "transfermarkt": 85.4,
       "ea": null,
       "awards": 0,
       "media": 54.6,
@@ -1817,7 +1817,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 54.9,
+      "consensus": 55.4,
       "provisional": true,
       "transfermarktValueEUR": 45000000,
       "eaRatingRaw": null,
@@ -1842,7 +1842,7 @@
     },
     {
       "playerId": "belgium-ngoy",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": null,
       "media": 49.6,
@@ -1854,7 +1854,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 62.9,
+      "consensus": 63.8,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -1869,7 +1869,7 @@
     },
     {
       "playerId": "belgium-fernandez-pardo",
-      "transfermarkt": 77.3,
+      "transfermarkt": 78.5,
       "ea": null,
       "awards": 0,
       "media": 56,
@@ -1881,7 +1881,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.6,
+      "consensus": 51.2,
       "provisional": true,
       "transfermarktValueEUR": 35000000,
       "eaRatingRaw": null,
@@ -1943,7 +1943,7 @@
     },
     {
       "playerId": "colombia-munoz",
-      "transfermarkt": 59.9,
+      "transfermarkt": 61.4,
       "ea": null,
       "awards": 0,
       "media": 61.6,
@@ -1955,7 +1955,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 49.4,
+      "consensus": 50.2,
       "provisional": true,
       "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
@@ -1980,7 +1980,7 @@
     },
     {
       "playerId": "colombia-lucumi",
-      "transfermarkt": 59.9,
+      "transfermarkt": 61.4,
       "ea": null,
       "awards": 5,
       "media": 20.4,
@@ -1992,7 +1992,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.6,
+      "consensus": 45.4,
       "provisional": true,
       "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
@@ -2017,7 +2017,7 @@
     },
     {
       "playerId": "colombia-arias",
-      "transfermarkt": 8.2,
+      "transfermarkt": 9,
       "ea": null,
       "awards": 15,
       "media": 22.2,
@@ -2029,7 +2029,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15.6,
+      "consensus": 16,
       "provisional": true,
       "transfermarktValueEUR": 1200000,
       "eaRatingRaw": null,
@@ -2054,7 +2054,7 @@
     },
     {
       "playerId": "colombia-castano",
-      "transfermarkt": 30.4,
+      "transfermarkt": 30.5,
       "ea": null,
       "awards": 5,
       "media": 8.5,
@@ -2066,7 +2066,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21.5,
+      "consensus": 21.6,
       "provisional": true,
       "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
@@ -2091,7 +2091,7 @@
     },
     {
       "playerId": "colombia-rios",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 10,
       "media": 48.9,
@@ -2103,7 +2103,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.1,
+      "consensus": 48.8,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -2128,7 +2128,7 @@
     },
     {
       "playerId": "colombia-diaz",
-      "transfermarkt": 92.8,
+      "transfermarkt": 93.1,
       "ea": null,
       "awards": 15,
       "media": 79.6,
@@ -2140,7 +2140,7 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 72.3,
+      "consensus": 72.4,
       "provisional": true,
       "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
@@ -2165,7 +2165,7 @@
     },
     {
       "playerId": "colombia-carrascal",
-      "transfermarkt": 46.4,
+      "transfermarkt": 47.6,
       "ea": null,
       "awards": 5,
       "media": 7,
@@ -2177,7 +2177,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.9,
+      "consensus": 28.5,
       "provisional": true,
       "transfermarktValueEUR": 13000000,
       "eaRatingRaw": null,
@@ -2202,7 +2202,7 @@
     },
     {
       "playerId": "colombia-cordoba",
-      "transfermarkt": 40.6,
+      "transfermarkt": 41.6,
       "ea": null,
       "awards": 5,
       "media": 27.8,
@@ -2214,7 +2214,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.2,
+      "consensus": 32.7,
       "provisional": true,
       "transfermarktValueEUR": 10000000,
       "eaRatingRaw": null,
@@ -2239,7 +2239,7 @@
     },
     {
       "playerId": "colombia-rodriguez",
-      "transfermarkt": 12.1,
+      "transfermarkt": 12.4,
       "ea": null,
       "awards": 35,
       "media": 96.5,
@@ -2251,7 +2251,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37.7,
+      "consensus": 37.9,
       "provisional": true,
       "transfermarktValueEUR": 1500000,
       "eaRatingRaw": null,
@@ -2276,7 +2276,7 @@
     },
     {
       "playerId": "colombia-jhon-arias",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 5,
       "media": 39.8,
@@ -2288,7 +2288,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.4,
+      "consensus": 43.1,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -2313,7 +2313,7 @@
     },
     {
       "playerId": "colombia-vargas",
-      "transfermarkt": 1.9,
+      "transfermarkt": 2.1,
       "ea": null,
       "awards": 15,
       "media": 25.4,
@@ -2325,7 +2325,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.8,
+      "consensus": 18.9,
       "provisional": true,
       "transfermarktValueEUR": 450000,
       "eaRatingRaw": null,
@@ -2350,7 +2350,7 @@
     },
     {
       "playerId": "colombia-mina",
-      "transfermarkt": 18.4,
+      "transfermarkt": 18,
       "ea": null,
       "awards": 15,
       "media": 34.9,
@@ -2362,7 +2362,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 19.9,
+      "consensus": 19.7,
       "provisional": true,
       "transfermarktValueEUR": 2500000,
       "eaRatingRaw": null,
@@ -2387,7 +2387,7 @@
     },
     {
       "playerId": "colombia-puerta",
-      "transfermarkt": 40.6,
+      "transfermarkt": 41.6,
       "ea": null,
       "awards": 5,
       "media": 37.3,
@@ -2399,7 +2399,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37.1,
+      "consensus": 37.6,
       "provisional": true,
       "transfermarktValueEUR": 10000000,
       "eaRatingRaw": null,
@@ -2424,7 +2424,7 @@
     },
     {
       "playerId": "colombia-portilla",
-      "transfermarkt": 30.4,
+      "transfermarkt": 30.5,
       "ea": null,
       "awards": null,
       "media": 4.6,
@@ -2436,7 +2436,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.4,
+      "consensus": 24.5,
       "provisional": true,
       "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
@@ -2451,7 +2451,7 @@
     },
     {
       "playerId": "colombia-lerma",
-      "transfermarkt": 33.8,
+      "transfermarkt": 33.9,
       "ea": null,
       "awards": 0,
       "media": 21.1,
@@ -2463,7 +2463,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.4,
+      "consensus": 30.5,
       "provisional": true,
       "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
@@ -2488,7 +2488,7 @@
     },
     {
       "playerId": "colombia-mojica",
-      "transfermarkt": 12.1,
+      "transfermarkt": 12.4,
       "ea": null,
       "awards": 0,
       "media": 15.1,
@@ -2500,7 +2500,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.4,
+      "consensus": 16.6,
       "provisional": true,
       "transfermarktValueEUR": 1500000,
       "eaRatingRaw": null,
@@ -2525,7 +2525,7 @@
     },
     {
       "playerId": "colombia-ditta",
-      "transfermarkt": 31.4,
+      "transfermarkt": 31.3,
       "ea": null,
       "awards": 15,
       "media": 7.4,
@@ -2562,7 +2562,7 @@
     },
     {
       "playerId": "colombia-hernandez",
-      "transfermarkt": 54.6,
+      "transfermarkt": 56.2,
       "ea": null,
       "awards": 0,
       "media": 41.5,
@@ -2574,7 +2574,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36,
+      "consensus": 36.8,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -2599,7 +2599,7 @@
     },
     {
       "playerId": "colombia-fernando-quintero",
-      "transfermarkt": 14.5,
+      "transfermarkt": 14.6,
       "ea": null,
       "awards": 0,
       "media": 33.1,
@@ -2611,7 +2611,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15.4,
+      "consensus": 15.5,
       "provisional": true,
       "transfermarktValueEUR": 1800000,
       "eaRatingRaw": null,
@@ -2636,7 +2636,7 @@
     },
     {
       "playerId": "colombia-campaz",
-      "transfermarkt": 31.4,
+      "transfermarkt": 31.3,
       "ea": null,
       "awards": 5,
       "media": 25,
@@ -2673,7 +2673,7 @@
     },
     {
       "playerId": "colombia-machado",
-      "transfermarkt": 14.5,
+      "transfermarkt": 14.6,
       "ea": null,
       "awards": null,
       "media": 6.7,
@@ -2685,7 +2685,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 17.4,
+      "consensus": 17.5,
       "provisional": true,
       "transfermarktValueEUR": 1800000,
       "eaRatingRaw": null,
@@ -2700,7 +2700,7 @@
     },
     {
       "playerId": "colombia-sanchez",
-      "transfermarkt": 51.2,
+      "transfermarkt": 52.4,
       "ea": null,
       "awards": 15,
       "media": 38,
@@ -2712,7 +2712,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45,
+      "consensus": 45.6,
       "provisional": true,
       "transfermarktValueEUR": 16000000,
       "eaRatingRaw": null,
@@ -2737,7 +2737,7 @@
     },
     {
       "playerId": "colombia-montero",
-      "transfermarkt": 18.4,
+      "transfermarkt": 18,
       "ea": null,
       "awards": 15,
       "media": 8.1,
@@ -2749,7 +2749,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.5,
+      "consensus": 16.3,
       "provisional": true,
       "transfermarktValueEUR": 2500000,
       "eaRatingRaw": null,
@@ -2774,7 +2774,7 @@
     },
     {
       "playerId": "colombia-suarez",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 0,
       "media": 56.7,
@@ -2786,7 +2786,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 51.7,
+      "consensus": 52.1,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -2811,7 +2811,7 @@
     },
     {
       "playerId": "colombia-gomez",
-      "transfermarkt": 41.1,
+      "transfermarkt": 42.1,
       "ea": null,
       "awards": null,
       "media": 3.5,
@@ -2823,7 +2823,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 32.7,
+      "consensus": 33.3,
       "provisional": true,
       "transfermarktValueEUR": 11000000,
       "eaRatingRaw": null,
@@ -2838,7 +2838,7 @@
     },
     {
       "playerId": "egypt-el-shenawy",
-      "transfermarkt": 2.4,
+      "transfermarkt": 2.6,
       "ea": null,
       "awards": 15,
       "media": 17.6,
@@ -2850,7 +2850,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 9.7,
+      "consensus": 9.8,
       "provisional": true,
       "transfermarktValueEUR": 500000,
       "eaRatingRaw": null,
@@ -2875,7 +2875,7 @@
     },
     {
       "playerId": "egypt-ibrahim",
-      "transfermarkt": 1.4,
+      "transfermarkt": 1.3,
       "ea": null,
       "awards": 15,
       "media": 7.7,
@@ -2912,7 +2912,7 @@
     },
     {
       "playerId": "egypt-hany",
-      "transfermarkt": 12.1,
+      "transfermarkt": 12.4,
       "ea": null,
       "awards": 15,
       "media": 26.4,
@@ -2924,7 +2924,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24,
+      "consensus": 24.1,
       "provisional": true,
       "transfermarktValueEUR": 1500000,
       "eaRatingRaw": null,
@@ -2986,7 +2986,7 @@
     },
     {
       "playerId": "egypt-rabia",
-      "transfermarkt": 2.9,
+      "transfermarkt": 3.4,
       "ea": null,
       "awards": 15,
       "media": 11.6,
@@ -2998,7 +2998,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 14.1,
+      "consensus": 14.4,
       "provisional": true,
       "transfermarktValueEUR": 600000,
       "eaRatingRaw": null,
@@ -3023,7 +3023,7 @@
     },
     {
       "playerId": "egypt-abdelmonem",
-      "transfermarkt": 18.4,
+      "transfermarkt": 18,
       "ea": null,
       "awards": 10,
       "media": 12.3,
@@ -3035,7 +3035,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.2,
+      "consensus": 18,
       "provisional": true,
       "transfermarktValueEUR": 2500000,
       "eaRatingRaw": null,
@@ -3060,7 +3060,7 @@
     },
     {
       "playerId": "egypt-trezeguet",
-      "transfermarkt": 28,
+      "transfermarkt": 27.9,
       "ea": null,
       "awards": 5,
       "media": 71.8,
@@ -3097,7 +3097,7 @@
     },
     {
       "playerId": "egypt-ashour",
-      "transfermarkt": 27.1,
+      "transfermarkt": 26.6,
       "ea": null,
       "awards": 15,
       "media": 68,
@@ -3109,7 +3109,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 37.8,
+      "consensus": 37.5,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -3134,7 +3134,7 @@
     },
     {
       "playerId": "egypt-abdelkarim",
-      "transfermarkt": 12.1,
+      "transfermarkt": 12.4,
       "ea": null,
       "awards": null,
       "media": 64.4,
@@ -3146,7 +3146,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 26.1,
+      "consensus": 26.3,
       "provisional": true,
       "transfermarktValueEUR": 1500000,
       "eaRatingRaw": null,
@@ -3161,7 +3161,7 @@
     },
     {
       "playerId": "egypt-salah",
-      "transfermarkt": 59.9,
+      "transfermarkt": 61.4,
       "ea": null,
       "awards": 25,
       "media": 95.8,
@@ -3173,7 +3173,7 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 60.5,
+      "consensus": 61.3,
       "provisional": true,
       "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
@@ -3198,7 +3198,7 @@
     },
     {
       "playerId": "egypt-ziko",
-      "transfermarkt": 14.5,
+      "transfermarkt": 14.6,
       "ea": null,
       "awards": null,
       "media": 64.8,
@@ -3225,7 +3225,7 @@
     },
     {
       "playerId": "egypt-hassan-h",
-      "transfermarkt": 24.2,
+      "transfermarkt": 23.6,
       "ea": null,
       "awards": 0,
       "media": 22.5,
@@ -3237,7 +3237,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.4,
+      "consensus": 18.1,
       "provisional": true,
       "transfermarktValueEUR": 3500000,
       "eaRatingRaw": null,
@@ -3262,7 +3262,7 @@
     },
     {
       "playerId": "egypt-fatouh",
-      "transfermarkt": 5.8,
+      "transfermarkt": 6.4,
       "ea": null,
       "awards": 15,
       "media": 10.6,
@@ -3274,7 +3274,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 16.4,
+      "consensus": 16.7,
       "provisional": true,
       "transfermarktValueEUR": 1000000,
       "eaRatingRaw": null,
@@ -3299,7 +3299,7 @@
     },
     {
       "playerId": "egypt-fathy",
-      "transfermarkt": 14.5,
+      "transfermarkt": 14.6,
       "ea": null,
       "awards": 15,
       "media": 10.2,
@@ -3311,7 +3311,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20.7,
+      "consensus": 20.8,
       "provisional": true,
       "transfermarktValueEUR": 1800000,
       "eaRatingRaw": null,
@@ -3336,7 +3336,7 @@
     },
     {
       "playerId": "egypt-hafez",
-      "transfermarkt": 3.4,
+      "transfermarkt": 3.9,
       "ea": null,
       "awards": 0,
       "media": 4.9,
@@ -3348,7 +3348,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 7.8,
+      "consensus": 8,
       "provisional": true,
       "transfermarktValueEUR": 700000,
       "eaRatingRaw": null,
@@ -3373,7 +3373,7 @@
     },
     {
       "playerId": "egypt-soliman",
-      "transfermarkt": 0.5,
+      "transfermarkt": 0.4,
       "ea": null,
       "awards": 5,
       "media": 5.6,
@@ -3410,7 +3410,7 @@
     },
     {
       "playerId": "egypt-lasheen",
-      "transfermarkt": 22.2,
+      "transfermarkt": 21.9,
       "ea": null,
       "awards": 0,
       "media": 11.3,
@@ -3422,7 +3422,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21,
+      "consensus": 20.8,
       "provisional": true,
       "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
@@ -3447,7 +3447,7 @@
     },
     {
       "playerId": "egypt-emad",
-      "transfermarkt": 5.8,
+      "transfermarkt": 6.4,
       "ea": null,
       "awards": 0,
       "media": 6.3,
@@ -3459,7 +3459,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 6.2,
+      "consensus": 6.5,
       "provisional": true,
       "transfermarktValueEUR": 1000000,
       "eaRatingRaw": null,
@@ -3484,7 +3484,7 @@
     },
     {
       "playerId": "egypt-attia",
-      "transfermarkt": 27.1,
+      "transfermarkt": 26.6,
       "ea": null,
       "awards": 15,
       "media": 9.5,
@@ -3496,7 +3496,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.6,
+      "consensus": 27.4,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -3521,7 +3521,7 @@
     },
     {
       "playerId": "egypt-adel",
-      "transfermarkt": 18.4,
+      "transfermarkt": 18,
       "ea": null,
       "awards": 0,
       "media": 8.8,
@@ -3533,7 +3533,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 13.8,
+      "consensus": 13.6,
       "provisional": true,
       "transfermarktValueEUR": 2500000,
       "eaRatingRaw": null,
@@ -3558,7 +3558,7 @@
     },
     {
       "playerId": "egypt-saber",
-      "transfermarkt": 12.1,
+      "transfermarkt": 12.4,
       "ea": null,
       "awards": null,
       "media": 14.1,
@@ -3570,7 +3570,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.9,
+      "consensus": 25.1,
       "provisional": true,
       "transfermarktValueEUR": 1500000,
       "eaRatingRaw": null,
@@ -3585,7 +3585,7 @@
     },
     {
       "playerId": "egypt-marmoush",
-      "transfermarkt": 87.4,
+      "transfermarkt": 88.4,
       "ea": null,
       "awards": 0,
       "media": 69.4,
@@ -3597,7 +3597,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61.5,
+      "consensus": 62,
       "provisional": true,
       "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
@@ -3622,7 +3622,7 @@
     },
     {
       "playerId": "egypt-shobeir",
-      "transfermarkt": 8.2,
+      "transfermarkt": 9,
       "ea": null,
       "awards": 15,
       "media": 28.2,
@@ -3634,7 +3634,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.3,
+      "consensus": 22.7,
       "provisional": true,
       "transfermarktValueEUR": 1200000,
       "eaRatingRaw": null,
@@ -3659,7 +3659,7 @@
     },
     {
       "playerId": "egypt-alaa-t",
-      "transfermarkt": 1,
+      "transfermarkt": 0.9,
       "ea": null,
       "awards": null,
       "media": 4.2,
@@ -3671,7 +3671,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 4.8,
+      "consensus": 4.7,
       "provisional": true,
       "transfermarktValueEUR": 250000,
       "eaRatingRaw": null,
@@ -3686,7 +3686,7 @@
     },
     {
       "playerId": "egypt-zizo",
-      "transfermarkt": 24.2,
+      "transfermarkt": 23.6,
       "ea": null,
       "awards": 10,
       "media": 1.8,
@@ -3698,7 +3698,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 19.8,
+      "consensus": 19.5,
       "provisional": true,
       "transfermarktValueEUR": 3500000,
       "eaRatingRaw": null,
@@ -3723,7 +3723,7 @@
     },
     {
       "playerId": "egypt-alaa-m",
-      "transfermarkt": 8.2,
+      "transfermarkt": 9,
       "ea": null,
       "awards": null,
       "media": 5.3,
@@ -3735,7 +3735,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 9.8,
+      "consensus": 10.3,
       "provisional": true,
       "transfermarktValueEUR": 1200000,
       "eaRatingRaw": null,
@@ -3750,7 +3750,7 @@
     },
     {
       "playerId": "england-pickford",
-      "transfermarkt": 46.4,
+      "transfermarkt": 47.6,
       "ea": null,
       "awards": 0,
       "media": 83.8,
@@ -3762,7 +3762,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.6,
+      "consensus": 45.2,
       "provisional": true,
       "transfermarktValueEUR": 13000000,
       "eaRatingRaw": null,
@@ -3787,7 +3787,7 @@
     },
     {
       "playerId": "england-konsa",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 0,
       "media": 77.8,
@@ -3799,7 +3799,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61.9,
+      "consensus": 62.5,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -3824,7 +3824,7 @@
     },
     {
       "playerId": "england-oreilly",
-      "transfermarkt": 92.8,
+      "transfermarkt": 93.1,
       "ea": null,
       "awards": 0,
       "media": 75.7,
@@ -3836,7 +3836,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65,
+      "consensus": 65.1,
       "provisional": true,
       "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
@@ -3861,7 +3861,7 @@
     },
     {
       "playerId": "england-rice",
-      "transfermarkt": 98.1,
+      "transfermarkt": 98.3,
       "ea": null,
       "awards": 5,
       "media": 91.2,
@@ -3873,7 +3873,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 70.2,
+      "consensus": 70.3,
       "provisional": true,
       "transfermarktValueEUR": 120000000,
       "eaRatingRaw": null,
@@ -3898,7 +3898,7 @@
     },
     {
       "playerId": "england-stones",
-      "transfermarkt": 44.4,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 100,
       "media": 73.9,
@@ -3910,7 +3910,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61.9,
+      "consensus": 62.7,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -3935,7 +3935,7 @@
     },
     {
       "playerId": "england-guehi",
-      "transfermarkt": 92.8,
+      "transfermarkt": 93.1,
       "ea": null,
       "awards": 0,
       "media": 72.9,
@@ -3947,7 +3947,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.6,
+      "consensus": 64.8,
       "provisional": true,
       "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
@@ -3972,7 +3972,7 @@
     },
     {
       "playerId": "england-saka",
-      "transfermarkt": 97.6,
+      "transfermarkt": 97.9,
       "ea": null,
       "awards": 5,
       "media": 89.4,
@@ -3984,7 +3984,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 68.1,
+      "consensus": 68.3,
       "provisional": true,
       "transfermarktValueEUR": 110000000,
       "eaRatingRaw": null,
@@ -4009,7 +4009,7 @@
     },
     {
       "playerId": "england-anderson",
-      "transfermarkt": 94.2,
+      "transfermarkt": 94.4,
       "ea": null,
       "awards": 0,
       "media": 3.2,
@@ -4021,7 +4021,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.4,
+      "consensus": 58.5,
       "provisional": true,
       "transfermarktValueEUR": 75000000,
       "eaRatingRaw": null,
@@ -4046,7 +4046,7 @@
     },
     {
       "playerId": "england-kane",
-      "transfermarkt": 88.9,
+      "transfermarkt": 89.7,
       "ea": null,
       "awards": 10,
       "media": 98.2,
@@ -4058,7 +4058,7 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 71.6,
+      "consensus": 72,
       "provisional": true,
       "transfermarktValueEUR": 60000000,
       "eaRatingRaw": null,
@@ -4083,7 +4083,7 @@
     },
     {
       "playerId": "england-bellingham",
-      "transfermarkt": 98.6,
+      "transfermarkt": 98.7,
       "ea": null,
       "awards": 95,
       "media": 96.8,
@@ -4120,7 +4120,7 @@
     },
     {
       "playerId": "england-rashford",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 5,
       "media": 92.6,
@@ -4132,7 +4132,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65.3,
+      "consensus": 65.8,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -4157,7 +4157,7 @@
     },
     {
       "playerId": "england-chalobah",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 0,
       "media": 59.5,
@@ -4169,7 +4169,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 51.3,
+      "consensus": 51.8,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -4194,7 +4194,7 @@
     },
     {
       "playerId": "england-dean-henderson",
-      "transfermarkt": 69.6,
+      "transfermarkt": 70.8,
       "ea": null,
       "awards": 0,
       "media": 43.3,
@@ -4206,7 +4206,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.8,
+      "consensus": 43.4,
       "provisional": true,
       "transfermarktValueEUR": 28000000,
       "eaRatingRaw": null,
@@ -4231,7 +4231,7 @@
     },
     {
       "playerId": "england-jordan-henderson",
-      "transfermarkt": 8.2,
+      "transfermarkt": 9,
       "ea": null,
       "awards": 15,
       "media": 76.4,
@@ -4243,7 +4243,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20.9,
+      "consensus": 21.3,
       "provisional": true,
       "transfermarktValueEUR": 1200000,
       "eaRatingRaw": null,
@@ -4268,7 +4268,7 @@
     },
     {
       "playerId": "england-burn",
-      "transfermarkt": 27.1,
+      "transfermarkt": 26.6,
       "ea": null,
       "awards": 0,
       "media": 52.5,
@@ -4280,7 +4280,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.7,
+      "consensus": 22.4,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -4305,7 +4305,7 @@
     },
     {
       "playerId": "england-mainoo",
-      "transfermarkt": 92.8,
+      "transfermarkt": 93.1,
       "ea": null,
       "awards": 0,
       "media": 66.9,
@@ -4317,7 +4317,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 57.3,
+      "consensus": 57.5,
       "provisional": true,
       "transfermarktValueEUR": 70000000,
       "eaRatingRaw": null,
@@ -4342,7 +4342,7 @@
     },
     {
       "playerId": "england-rogers",
-      "transfermarkt": 96.6,
+      "transfermarkt": 97,
       "ea": null,
       "awards": 0,
       "media": 84.2,
@@ -4354,7 +4354,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 64.7,
+      "consensus": 64.9,
       "provisional": true,
       "transfermarktValueEUR": 90000000,
       "eaRatingRaw": null,
@@ -4379,7 +4379,7 @@
     },
     {
       "playerId": "england-gordon",
-      "transfermarkt": 90.3,
+      "transfermarkt": 91,
       "ea": null,
       "awards": 0,
       "media": 2.8,
@@ -4391,7 +4391,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 52.6,
+      "consensus": 53,
       "provisional": true,
       "transfermarktValueEUR": 65000000,
       "eaRatingRaw": null,
@@ -4416,7 +4416,7 @@
     },
     {
       "playerId": "england-watkins",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 62,
@@ -4428,7 +4428,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.3,
+      "consensus": 46,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -4453,7 +4453,7 @@
     },
     {
       "playerId": "england-madueke",
-      "transfermarkt": 87.4,
+      "transfermarkt": 88.4,
       "ea": null,
       "awards": 5,
       "media": 88,
@@ -4465,7 +4465,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65.1,
+      "consensus": 65.6,
       "provisional": true,
       "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
@@ -4490,7 +4490,7 @@
     },
     {
       "playerId": "england-eze",
-      "transfermarkt": 90.3,
+      "transfermarkt": 91,
       "ea": null,
       "awards": 5,
       "media": 76.8,
@@ -4502,7 +4502,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61,
+      "consensus": 61.3,
       "provisional": true,
       "transfermarktValueEUR": 65000000,
       "eaRatingRaw": null,
@@ -4527,7 +4527,7 @@
     },
     {
       "playerId": "england-toney",
-      "transfermarkt": 57,
+      "transfermarkt": 58.4,
       "ea": null,
       "awards": 0,
       "media": 71.5,
@@ -4539,7 +4539,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40,
+      "consensus": 40.7,
       "provisional": true,
       "transfermarktValueEUR": 20000000,
       "eaRatingRaw": null,
@@ -4564,7 +4564,7 @@
     },
     {
       "playerId": "england-trafford",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 48.6,
@@ -4576,7 +4576,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 42.7,
+      "consensus": 43.4,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -4601,7 +4601,7 @@
     },
     {
       "playerId": "england-reece-james",
-      "transfermarkt": 88.9,
+      "transfermarkt": 89.7,
       "ea": null,
       "awards": 10,
       "media": 68.7,
@@ -4613,7 +4613,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 62.4,
+      "consensus": 62.8,
       "provisional": true,
       "transfermarktValueEUR": 60000000,
       "eaRatingRaw": null,
@@ -4638,7 +4638,7 @@
     },
     {
       "playerId": "england-spence",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 0,
       "media": 90.1,
@@ -4650,7 +4650,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55.9,
+      "consensus": 56.3,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -4675,7 +4675,7 @@
     },
     {
       "playerId": "england-quansah",
-      "transfermarkt": 84.5,
+      "transfermarkt": 85.4,
       "ea": null,
       "awards": 5,
       "media": 78.5,
@@ -4687,7 +4687,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 58.3,
+      "consensus": 58.7,
       "provisional": true,
       "transfermarktValueEUR": 45000000,
       "eaRatingRaw": null,
@@ -5571,7 +5571,7 @@
     },
     {
       "playerId": "morocco-bounou",
-      "transfermarkt": null,
+      "transfermarkt": 21.9,
       "ea": null,
       "awards": 15,
       "media": 87.7,
@@ -5583,9 +5583,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 51.2,
+      "consensus": 36.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5599,12 +5599,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Yassine_Bounou",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-hakimi",
-      "transfermarkt": null,
+      "transfermarkt": 95.7,
       "ea": null,
       "awards": 100,
       "media": 95.4,
@@ -5616,9 +5620,9 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 97.5,
+      "consensus": 96.6,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 80000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5632,12 +5636,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Achraf_Hakimi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-mazraoui",
-      "transfermarkt": null,
+      "transfermarkt": 56.2,
       "ea": null,
       "awards": 15,
       "media": 74.3,
@@ -5649,9 +5657,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.3,
+      "consensus": 50.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5665,12 +5673,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Noussair_Mazraoui",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-amrabat",
-      "transfermarkt": null,
+      "transfermarkt": 41.6,
       "ea": null,
       "awards": 5,
       "media": 58.8,
@@ -5682,9 +5694,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 27.1,
+      "consensus": 34.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 10000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5698,12 +5710,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Sofyan_Amrabat",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-saadane",
-      "transfermarkt": null,
+      "transfermarkt": 1.7,
       "ea": null,
       "awards": null,
       "media": null,
@@ -5715,16 +5731,22 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20.4,
+      "consensus": 5.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 400000,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": null
+      "mediaPageviews": null,
+      "rawProvenance": {
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
+        }
+      }
     },
     {
       "playerId": "morocco-bouaddi",
-      "transfermarkt": null,
+      "transfermarkt": 88.4,
       "ea": null,
       "awards": null,
       "media": 93,
@@ -5736,16 +5758,22 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 80.4,
+      "consensus": 85.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": 408301
+      "mediaPageviews": 408301,
+      "rawProvenance": {
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
+        }
+      }
     },
     {
       "playerId": "morocco-talbi",
-      "transfermarkt": null,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 5,
       "media": 47.9,
@@ -5757,9 +5785,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.4,
+      "consensus": 46.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5773,12 +5801,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Chemsdine_Talbi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-ounahi",
-      "transfermarkt": null,
+      "transfermarkt": 41.6,
       "ea": null,
       "awards": 0,
       "media": 52.8,
@@ -5790,9 +5822,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.5,
+      "consensus": 36.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 10000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5806,12 +5838,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Azzedine_Ounahi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-rahimi",
-      "transfermarkt": null,
+      "transfermarkt": 33.9,
       "ea": null,
       "awards": 15,
       "media": 50.7,
@@ -5823,9 +5859,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.9,
+      "consensus": 37.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5839,12 +5875,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Soufiane_Rahimi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-brahim-diaz",
-      "transfermarkt": null,
+      "transfermarkt": 78.5,
       "ea": null,
       "awards": 25,
       "media": 2.5,
@@ -5856,9 +5896,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 34.9,
+      "consensus": 56.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 35000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5872,12 +5912,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Brahim_Diaz",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-saibari",
-      "transfermarkt": null,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 15,
       "media": 94.7,
@@ -5889,9 +5933,9 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 55.3,
+      "consensus": 69.5,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5905,12 +5949,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Ismael_Saibari",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-mohamedi",
-      "transfermarkt": null,
+      "transfermarkt": 3.4,
       "ea": null,
       "awards": 5,
       "media": 30.3,
@@ -5922,9 +5970,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15.2,
+      "consensus": 9.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 600000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5938,12 +5986,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Munir_Mohamedi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-el-ouahdi",
-      "transfermarkt": null,
+      "transfermarkt": 53.6,
       "ea": null,
       "awards": 0,
       "media": 30.6,
@@ -5955,9 +6007,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 12.8,
+      "consensus": 33.2,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 17000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -5971,12 +6023,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Zakaria_El_Ouahdi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-diop",
-      "transfermarkt": null,
+      "transfermarkt": 38.6,
       "ea": null,
       "awards": 0,
       "media": 94,
@@ -5988,9 +6044,9 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 46.8,
+      "consensus": 42.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 8000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6004,12 +6060,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Issa_Diop_(footballer)",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-el-mourabet",
-      "transfermarkt": null,
+      "transfermarkt": 61.4,
       "ea": null,
       "awards": null,
       "media": 33.8,
@@ -6021,16 +6081,22 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 38.8,
+      "consensus": 53.9,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": 37379
+      "mediaPageviews": 37379,
+      "rawProvenance": {
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
+        }
+      }
     },
     {
       "playerId": "morocco-yassine",
-      "transfermarkt": null,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 0,
       "media": 48.2,
@@ -6042,9 +6108,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.3,
+      "consensus": 38.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6058,12 +6124,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Gessime_Yassine",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-sbai",
-      "transfermarkt": null,
+      "transfermarkt": 26.6,
       "ea": null,
       "awards": null,
       "media": 0,
@@ -6075,16 +6145,22 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 10.2,
+      "consensus": 21.1,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": 51
+      "mediaPageviews": 51,
+      "rawProvenance": {
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
+        }
+      }
     },
     {
       "playerId": "morocco-riad",
-      "transfermarkt": null,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 5,
       "media": 53.9,
@@ -6096,9 +6172,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37.7,
+      "consensus": 44.8,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6112,12 +6188,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Chadi_Riad",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-belammari",
-      "transfermarkt": null,
+      "transfermarkt": 9,
       "ea": null,
       "awards": 5,
       "media": 27.1,
@@ -6129,9 +6209,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 14.4,
+      "consensus": 11.7,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 1200000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6145,12 +6225,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Youssef_Belammari",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-el-kaabi",
-      "transfermarkt": null,
+      "transfermarkt": 27.9,
       "ea": null,
       "awards": 10,
       "media": 46.8,
@@ -6162,9 +6246,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 26.6,
+      "consensus": 27.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 4500000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6178,12 +6262,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Ayoub_El_Kaabi",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-amaimouni",
-      "transfermarkt": null,
+      "transfermarkt": 41.6,
       "ea": null,
       "awards": null,
       "media": 35.2,
@@ -6195,16 +6283,22 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 33.8,
+      "consensus": 39,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 10000000,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": 41231
+      "mediaPageviews": 41231,
+      "rawProvenance": {
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
+        }
+      }
     },
     {
       "playerId": "morocco-tagnaouti",
-      "transfermarkt": null,
+      "transfermarkt": 6.4,
       "ea": null,
       "awards": 15,
       "media": 22.9,
@@ -6216,9 +6310,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.3,
+      "consensus": 12.4,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 1000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6232,12 +6326,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Ahmed_Reda_Tagnaouti",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-el-khannouss",
-      "transfermarkt": null,
+      "transfermarkt": 78.5,
       "ea": null,
       "awards": 0,
       "media": 57.7,
@@ -6249,9 +6347,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.2,
+      "consensus": 57.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 35000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6265,12 +6363,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Bilal_El_Khannouss",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-el-aynaoui",
-      "transfermarkt": null,
+      "transfermarkt": 62.2,
       "ea": null,
       "awards": 0,
       "media": 60.6,
@@ -6282,9 +6384,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36.9,
+      "consensus": 49.6,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 23000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6298,12 +6400,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Neil_El_Aynaoui",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "morocco-halhal",
-      "transfermarkt": null,
+      "transfermarkt": 30.5,
       "ea": null,
       "awards": null,
       "media": 32.4,
@@ -6315,16 +6421,22 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 36,
+      "consensus": 32.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
       "awardsRaw": null,
-      "mediaPageviews": 34534
+      "mediaPageviews": 34534,
+      "rawProvenance": {
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
+        }
+      }
     },
     {
       "playerId": "morocco-salah-eddine",
-      "transfermarkt": null,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 5,
       "media": 41.9,
@@ -6336,9 +6448,9 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.7,
+      "consensus": 35.3,
       "provisional": true,
-      "transfermarktValueEUR": null,
+      "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
       "awardsRaw": {
         "fifaBestPlayer": false,
@@ -6352,12 +6464,16 @@
         "awardsRaw": {
           "source": "https://en.wikipedia.org/wiki/Anass_Salah-Eddine",
           "enteredAt": "2026-07-07"
+        },
+        "transfermarktValueEUR": {
+          "source": "Transfermarkt (Morocco squad page, provided by user)",
+          "enteredAt": "2026-07-08"
         }
       }
     },
     {
       "playerId": "norway-nyland",
-      "transfermarkt": 4.3,
+      "transfermarkt": 4.7,
       "ea": null,
       "awards": 5,
       "media": 57,
@@ -6369,7 +6485,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 19,
+      "consensus": 19.2,
       "provisional": true,
       "transfermarktValueEUR": 800000,
       "eaRatingRaw": null,
@@ -6394,7 +6510,7 @@
     },
     {
       "playerId": "norway-thorsby",
-      "transfermarkt": 20.3,
+      "transfermarkt": 19.7,
       "ea": null,
       "awards": null,
       "media": 15.5,
@@ -6406,7 +6522,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20.8,
+      "consensus": 20.4,
       "provisional": true,
       "transfermarktValueEUR": 2800000,
       "eaRatingRaw": null,
@@ -6421,7 +6537,7 @@
     },
     {
       "playerId": "norway-ajer",
-      "transfermarkt": 54.6,
+      "transfermarkt": 56.2,
       "ea": null,
       "awards": 15,
       "media": 34.2,
@@ -6433,7 +6549,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 43.8,
+      "consensus": 44.6,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -6458,7 +6574,7 @@
     },
     {
       "playerId": "norway-ostigrd",
-      "transfermarkt": 46.4,
+      "transfermarkt": 47.6,
       "ea": null,
       "awards": 5,
       "media": 44.7,
@@ -6470,7 +6586,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 41.1,
+      "consensus": 41.7,
       "provisional": true,
       "transfermarktValueEUR": 13000000,
       "eaRatingRaw": null,
@@ -6569,7 +6685,7 @@
     },
     {
       "playerId": "norway-sorloth",
-      "transfermarkt": 54.6,
+      "transfermarkt": 56.2,
       "ea": null,
       "awards": 5,
       "media": 68.3,
@@ -6581,7 +6697,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.6,
+      "consensus": 46.4,
       "provisional": true,
       "transfermarktValueEUR": 18000000,
       "eaRatingRaw": null,
@@ -6606,7 +6722,7 @@
     },
     {
       "playerId": "norway-berge",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 5,
       "media": 40.5,
@@ -6618,7 +6734,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.8,
+      "consensus": 49.5,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -6680,7 +6796,7 @@
     },
     {
       "playerId": "norway-odegaard",
-      "transfermarkt": 90.3,
+      "transfermarkt": 91,
       "ea": null,
       "awards": 5,
       "media": 82.4,
@@ -6692,7 +6808,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 65.2,
+      "consensus": 65.5,
       "provisional": true,
       "transfermarktValueEUR": 65000000,
       "eaRatingRaw": null,
@@ -6717,7 +6833,7 @@
     },
     {
       "playerId": "norway-strand-larsen",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 0,
       "media": 47.2,
@@ -6729,7 +6845,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 52.2,
+      "consensus": 52.7,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -6754,7 +6870,7 @@
     },
     {
       "playerId": "norway-tangvik",
-      "transfermarkt": 22.2,
+      "transfermarkt": 21.9,
       "ea": null,
       "awards": null,
       "media": 16.5,
@@ -6766,7 +6882,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 21,
+      "consensus": 20.8,
       "provisional": true,
       "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
@@ -6781,7 +6897,7 @@
     },
     {
       "playerId": "norway-selvik",
-      "transfermarkt": 12.1,
+      "transfermarkt": 12.4,
       "ea": null,
       "awards": null,
       "media": 20.8,
@@ -6793,7 +6909,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 18.1,
+      "consensus": 18.3,
       "provisional": true,
       "transfermarktValueEUR": 1500000,
       "eaRatingRaw": null,
@@ -6808,7 +6924,7 @@
     },
     {
       "playerId": "norway-aursnes",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 10,
       "media": 26.8,
@@ -6820,7 +6936,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.3,
+      "consensus": 40.9,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -6845,7 +6961,7 @@
     },
     {
       "playerId": "norway-andre-bjorkan",
-      "transfermarkt": 24.2,
+      "transfermarkt": 23.6,
       "ea": null,
       "awards": 15,
       "media": 13.4,
@@ -6857,7 +6973,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 22.5,
+      "consensus": 22.2,
       "provisional": true,
       "transfermarktValueEUR": 3500000,
       "eaRatingRaw": null,
@@ -6882,7 +6998,7 @@
     },
     {
       "playerId": "norway-holmgren-pedersen",
-      "transfermarkt": 24.2,
+      "transfermarkt": 23.6,
       "ea": null,
       "awards": 5,
       "media": 36.6,
@@ -6894,7 +7010,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28.9,
+      "consensus": 28.6,
       "provisional": true,
       "transfermarktValueEUR": 3500000,
       "eaRatingRaw": null,
@@ -6919,7 +7035,7 @@
     },
     {
       "playerId": "norway-heggem",
-      "transfermarkt": 46.4,
+      "transfermarkt": 47.6,
       "ea": null,
       "awards": 0,
       "media": 31.7,
@@ -6931,7 +7047,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 35.6,
+      "consensus": 36.2,
       "provisional": true,
       "transfermarktValueEUR": 13000000,
       "eaRatingRaw": null,
@@ -6956,7 +7072,7 @@
     },
     {
       "playerId": "norway-thorstvedt",
-      "transfermarkt": 44.4,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 0,
       "media": 31,
@@ -6968,7 +7084,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.6,
+      "consensus": 32.3,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -6993,7 +7109,7 @@
     },
     {
       "playerId": "norway-aasgaard",
-      "transfermarkt": 20.3,
+      "transfermarkt": 19.7,
       "ea": null,
       "awards": null,
       "media": 69,
@@ -7005,7 +7121,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 37.3,
+      "consensus": 36.9,
       "provisional": true,
       "transfermarktValueEUR": 2800000,
       "eaRatingRaw": null,
@@ -7020,7 +7136,7 @@
     },
     {
       "playerId": "norway-nusa",
-      "transfermarkt": 75.4,
+      "transfermarkt": 76,
       "ea": null,
       "awards": 10,
       "media": 93.3,
@@ -7032,7 +7148,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 63.6,
+      "consensus": 63.9,
       "provisional": true,
       "transfermarktValueEUR": 32000000,
       "eaRatingRaw": null,
@@ -7057,7 +7173,7 @@
     },
     {
       "playerId": "norway-schjelderup",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 5,
       "media": 37,
@@ -7069,7 +7185,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50,
+      "consensus": 50.3,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -7094,7 +7210,7 @@
     },
     {
       "playerId": "norway-bobb",
-      "transfermarkt": 69.6,
+      "transfermarkt": 70.8,
       "ea": null,
       "awards": 5,
       "media": 81.7,
@@ -7106,7 +7222,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 53.1,
+      "consensus": 53.8,
       "provisional": true,
       "transfermarktValueEUR": 28000000,
       "eaRatingRaw": null,
@@ -7131,7 +7247,7 @@
     },
     {
       "playerId": "norway-petter-hauge",
-      "transfermarkt": 44.4,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 10,
       "media": 19.7,
@@ -7143,7 +7259,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.7,
+      "consensus": 31.4,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -7168,7 +7284,7 @@
     },
     {
       "playerId": "norway-langs",
-      "transfermarkt": 27.1,
+      "transfermarkt": 26.6,
       "ea": null,
       "awards": null,
       "media": 13.7,
@@ -7180,7 +7296,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 25,
+      "consensus": 24.7,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -7195,7 +7311,7 @@
     },
     {
       "playerId": "norway-falchener",
-      "transfermarkt": 33.8,
+      "transfermarkt": 33.9,
       "ea": null,
       "awards": 5,
       "media": 18,
@@ -7232,7 +7348,7 @@
     },
     {
       "playerId": "norway-ryerson",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": null,
       "media": 43.7,
@@ -7244,7 +7360,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 61.9,
+      "consensus": 62.8,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -7259,7 +7375,7 @@
     },
     {
       "playerId": "spain-raya",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 5,
       "media": 67.3,
@@ -7271,7 +7387,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 49.4,
+      "consensus": 49.8,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -7296,7 +7412,7 @@
     },
     {
       "playerId": "spain-pubill",
-      "transfermarkt": 77.3,
+      "transfermarkt": 78.5,
       "ea": null,
       "awards": 0,
       "media": 27.5,
@@ -7308,7 +7424,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.6,
+      "consensus": 46.2,
       "provisional": true,
       "transfermarktValueEUR": 35000000,
       "eaRatingRaw": null,
@@ -7333,7 +7449,7 @@
     },
     {
       "playerId": "spain-grimaldo",
-      "transfermarkt": 57,
+      "transfermarkt": 58.4,
       "ea": null,
       "awards": 15,
       "media": 38.7,
@@ -7345,7 +7461,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 39.6,
+      "consensus": 40.3,
       "provisional": true,
       "transfermarktValueEUR": 20000000,
       "eaRatingRaw": null,
@@ -7370,7 +7486,7 @@
     },
     {
       "playerId": "spain-eric-garcia",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 15,
       "media": 28.9,
@@ -7382,7 +7498,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 51.2,
+      "consensus": 51.8,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -7407,7 +7523,7 @@
     },
     {
       "playerId": "spain-llorente",
-      "transfermarkt": 57,
+      "transfermarkt": 58.4,
       "ea": null,
       "awards": 15,
       "media": 44.4,
@@ -7419,7 +7535,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.7,
+      "consensus": 45.4,
       "provisional": true,
       "transfermarktValueEUR": 20000000,
       "eaRatingRaw": null,
@@ -7444,7 +7560,7 @@
     },
     {
       "playerId": "spain-merino",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 5,
       "media": 40.8,
@@ -7456,7 +7572,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 47.3,
+      "consensus": 48,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -7481,7 +7597,7 @@
     },
     {
       "playerId": "spain-torres",
-      "transfermarkt": 87.4,
+      "transfermarkt": 88.4,
       "ea": null,
       "awards": 15,
       "media": 72.2,
@@ -7493,7 +7609,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63.4,
+      "consensus": 63.9,
       "provisional": true,
       "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
@@ -7518,7 +7634,7 @@
     },
     {
       "playerId": "spain-ruiz",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 35,
       "media": 50,
@@ -7530,7 +7646,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 59.1,
+      "consensus": 59.4,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -7555,7 +7671,7 @@
     },
     {
       "playerId": "spain-gavi",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 15,
       "media": 61.3,
@@ -7567,7 +7683,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 54.1,
+      "consensus": 54.5,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -7592,7 +7708,7 @@
     },
     {
       "playerId": "spain-olmo",
-      "transfermarkt": 88.9,
+      "transfermarkt": 89.7,
       "ea": null,
       "awards": 15,
       "media": 65.5,
@@ -7604,7 +7720,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 63.8,
+      "consensus": 64.2,
       "provisional": true,
       "transfermarktValueEUR": 60000000,
       "eaRatingRaw": null,
@@ -7629,7 +7745,7 @@
     },
     {
       "playerId": "spain-pino",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 0,
       "media": 36.3,
@@ -7641,7 +7757,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.8,
+      "consensus": 46.1,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -7666,7 +7782,7 @@
     },
     {
       "playerId": "spain-porro",
-      "transfermarkt": 77.3,
+      "transfermarkt": 78.5,
       "ea": null,
       "awards": 5,
       "media": 44,
@@ -7678,7 +7794,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56.5,
+      "consensus": 57.1,
       "provisional": true,
       "transfermarktValueEUR": 35000000,
       "eaRatingRaw": null,
@@ -7703,7 +7819,7 @@
     },
     {
       "playerId": "spain-joan-garcia",
-      "transfermarkt": 84.5,
+      "transfermarkt": 85.4,
       "ea": null,
       "awards": 5,
       "media": 39.1,
@@ -7715,7 +7831,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.9,
+      "consensus": 51.4,
       "provisional": true,
       "transfermarktValueEUR": 45000000,
       "eaRatingRaw": null,
@@ -7777,7 +7893,7 @@
     },
     {
       "playerId": "spain-baena",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 0,
       "media": 53.2,
@@ -7789,7 +7905,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 59.6,
+      "consensus": 60.1,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -7814,7 +7930,7 @@
     },
     {
       "playerId": "spain-rodri",
-      "transfermarkt": 87.4,
+      "transfermarkt": 88.4,
       "ea": null,
       "awards": 100,
       "media": 81.3,
@@ -7826,7 +7942,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 89.7,
+      "consensus": 90.2,
       "provisional": true,
       "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
@@ -7852,7 +7968,7 @@
     },
     {
       "playerId": "spain-williams",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 0,
       "media": 81,
@@ -7864,7 +7980,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56.4,
+      "consensus": 56.9,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -7889,7 +8005,7 @@
     },
     {
       "playerId": "spain-zubimendi",
-      "transfermarkt": 94.2,
+      "transfermarkt": 94.4,
       "ea": null,
       "awards": 5,
       "media": 32.7,
@@ -7901,7 +8017,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 55,
+      "consensus": 55.1,
       "provisional": true,
       "transfermarktValueEUR": 75000000,
       "eaRatingRaw": null,
@@ -7964,7 +8080,7 @@
     },
     {
       "playerId": "spain-pedri",
-      "transfermarkt": 99,
+      "transfermarkt": 99.1,
       "ea": null,
       "awards": 15,
       "media": 69.7,
@@ -7976,7 +8092,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 72.8,
+      "consensus": 72.9,
       "provisional": true,
       "transfermarktValueEUR": 150000000,
       "eaRatingRaw": null,
@@ -8001,7 +8117,7 @@
     },
     {
       "playerId": "spain-oyarzabal",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 90.5,
@@ -8013,7 +8129,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 57.5,
+      "consensus": 58.2,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -8038,7 +8154,7 @@
     },
     {
       "playerId": "spain-cubarsi",
-      "transfermarkt": 95.2,
+      "transfermarkt": 95.7,
       "ea": null,
       "awards": 10,
       "media": 51.4,
@@ -8050,7 +8166,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 67.4,
+      "consensus": 67.7,
       "provisional": true,
       "transfermarktValueEUR": 80000000,
       "eaRatingRaw": null,
@@ -8075,7 +8191,7 @@
     },
     {
       "playerId": "spain-simon",
-      "transfermarkt": 59.9,
+      "transfermarkt": 61.4,
       "ea": null,
       "awards": 0,
       "media": 59.2,
@@ -8087,7 +8203,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 48.2,
+      "consensus": 49,
       "provisional": true,
       "transfermarktValueEUR": 22000000,
       "eaRatingRaw": null,
@@ -8112,7 +8228,7 @@
     },
     {
       "playerId": "spain-cucurella",
-      "transfermarkt": 87.4,
+      "transfermarkt": 88.4,
       "ea": null,
       "awards": 0,
       "media": 94.4,
@@ -8124,7 +8240,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 66.4,
+      "consensus": 66.9,
       "provisional": true,
       "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
@@ -8149,7 +8265,7 @@
     },
     {
       "playerId": "spain-munoz",
-      "transfermarkt": 74.4,
+      "transfermarkt": 75.1,
       "ea": null,
       "awards": 0,
       "media": 91.5,
@@ -8161,7 +8277,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 51.2,
+      "consensus": 51.5,
       "provisional": true,
       "transfermarktValueEUR": 30000000,
       "eaRatingRaw": null,
@@ -8186,7 +8302,7 @@
     },
     {
       "playerId": "spain-iglesias",
-      "transfermarkt": 20.3,
+      "transfermarkt": 19.7,
       "ea": null,
       "awards": 5,
       "media": 42.3,
@@ -8198,7 +8314,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 19.2,
+      "consensus": 18.9,
       "provisional": true,
       "transfermarktValueEUR": 2800000,
       "eaRatingRaw": null,
@@ -8223,7 +8339,7 @@
     },
     {
       "playerId": "switzerland-kobel",
-      "transfermarkt": 82.6,
+      "transfermarkt": 83.7,
       "ea": null,
       "awards": 0,
       "media": 33.5,
@@ -8235,7 +8351,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56.4,
+      "consensus": 56.9,
       "provisional": true,
       "transfermarktValueEUR": 40000000,
       "eaRatingRaw": null,
@@ -8260,7 +8376,7 @@
     },
     {
       "playerId": "switzerland-muheim",
-      "transfermarkt": 30.4,
+      "transfermarkt": 30.5,
       "ea": null,
       "awards": null,
       "media": 35.6,
@@ -8272,7 +8388,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 30.9,
+      "consensus": 31,
       "provisional": true,
       "transfermarktValueEUR": 5000000,
       "eaRatingRaw": null,
@@ -8287,7 +8403,7 @@
     },
     {
       "playerId": "switzerland-widmer",
-      "transfermarkt": 4.3,
+      "transfermarkt": 4.7,
       "ea": null,
       "awards": 0,
       "media": 12.7,
@@ -8299,7 +8415,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 9.6,
+      "consensus": 9.8,
       "provisional": true,
       "transfermarktValueEUR": 800000,
       "eaRatingRaw": null,
@@ -8351,7 +8467,7 @@
     },
     {
       "playerId": "switzerland-akanji",
-      "transfermarkt": 52.2,
+      "transfermarkt": 53.6,
       "ea": null,
       "awards": 25,
       "media": 60.2,
@@ -8363,7 +8479,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 50.8,
+      "consensus": 51.5,
       "provisional": true,
       "transfermarktValueEUR": 17000000,
       "eaRatingRaw": null,
@@ -8388,7 +8504,7 @@
     },
     {
       "playerId": "switzerland-zakaria",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 37.7,
@@ -8400,7 +8516,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 45.6,
+      "consensus": 46.3,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -8425,7 +8541,7 @@
     },
     {
       "playerId": "switzerland-embolo",
-      "transfermarkt": 50.7,
+      "transfermarkt": 51.9,
       "ea": null,
       "awards": 15,
       "media": 79.2,
@@ -8437,7 +8553,7 @@
         "assists": 0,
         "motm": 1
       },
-      "consensus": 51,
+      "consensus": 51.6,
       "provisional": true,
       "transfermarktValueEUR": 15000000,
       "eaRatingRaw": null,
@@ -8462,7 +8578,7 @@
     },
     {
       "playerId": "switzerland-freuler",
-      "transfermarkt": 22.2,
+      "transfermarkt": 21.9,
       "ea": null,
       "awards": 0,
       "media": 19.4,
@@ -8474,7 +8590,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 24.4,
+      "consensus": 24.2,
       "provisional": true,
       "transfermarktValueEUR": 3000000,
       "eaRatingRaw": null,
@@ -8499,7 +8615,7 @@
     },
     {
       "playerId": "switzerland-manzambi",
-      "transfermarkt": 87.4,
+      "transfermarkt": 88.4,
       "ea": null,
       "awards": 0,
       "media": 84.9,
@@ -8511,7 +8627,7 @@
         "assists": 0,
         "motm": 2
       },
-      "consensus": 66.6,
+      "consensus": 67.1,
       "provisional": true,
       "transfermarktValueEUR": 50000000,
       "eaRatingRaw": null,
@@ -8573,7 +8689,7 @@
     },
     {
       "playerId": "switzerland-ndoye",
-      "transfermarkt": 75.4,
+      "transfermarkt": 76,
       "ea": null,
       "awards": 0,
       "media": 47.5,
@@ -8585,7 +8701,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 54.9,
+      "consensus": 55.2,
       "provisional": true,
       "transfermarktValueEUR": 32000000,
       "eaRatingRaw": null,
@@ -8610,7 +8726,7 @@
     },
     {
       "playerId": "switzerland-mvogo",
-      "transfermarkt": 18.4,
+      "transfermarkt": 18,
       "ea": null,
       "awards": 0,
       "media": 14.8,
@@ -8622,7 +8738,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 13.6,
+      "consensus": 13.4,
       "provisional": true,
       "transfermarktValueEUR": 2500000,
       "eaRatingRaw": null,
@@ -8647,7 +8763,7 @@
     },
     {
       "playerId": "switzerland-rodriguez",
-      "transfermarkt": 8.7,
+      "transfermarkt": 9.4,
       "ea": null,
       "awards": 0,
       "media": 1.4,
@@ -8659,7 +8775,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15.4,
+      "consensus": 15.8,
       "provisional": true,
       "transfermarktValueEUR": 1400000,
       "eaRatingRaw": null,
@@ -8684,7 +8800,7 @@
     },
     {
       "playerId": "switzerland-jashari",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 0,
       "media": 24.3,
@@ -8696,7 +8812,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 40.6,
+      "consensus": 41.3,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -8795,7 +8911,7 @@
     },
     {
       "playerId": "switzerland-vargas",
-      "transfermarkt": 44.4,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": null,
       "media": 73.6,
@@ -8807,7 +8923,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 56.8,
+      "consensus": 57.8,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -8822,7 +8938,7 @@
     },
     {
       "playerId": "switzerland-comert",
-      "transfermarkt": 18.4,
+      "transfermarkt": 18,
       "ea": null,
       "awards": 10,
       "media": 12,
@@ -8834,7 +8950,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 15.7,
+      "consensus": 15.5,
       "provisional": true,
       "transfermarktValueEUR": 2500000,
       "eaRatingRaw": null,
@@ -8859,7 +8975,7 @@
     },
     {
       "playerId": "switzerland-okafor",
-      "transfermarkt": 68.1,
+      "transfermarkt": 69.5,
       "ea": null,
       "awards": 15,
       "media": 26.1,
@@ -8871,7 +8987,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 44.6,
+      "consensus": 45.3,
       "provisional": true,
       "transfermarktValueEUR": 25000000,
       "eaRatingRaw": null,
@@ -8896,7 +9012,7 @@
     },
     {
       "playerId": "switzerland-aebischer",
-      "transfermarkt": 27.1,
+      "transfermarkt": 26.6,
       "ea": null,
       "awards": 15,
       "media": 13,
@@ -8908,7 +9024,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 26.4,
+      "consensus": 26.1,
       "provisional": true,
       "transfermarktValueEUR": 4000000,
       "eaRatingRaw": null,
@@ -8933,7 +9049,7 @@
     },
     {
       "playerId": "switzerland-keller",
-      "transfermarkt": 33.8,
+      "transfermarkt": 33.9,
       "ea": null,
       "awards": 5,
       "media": 0.4,
@@ -8945,7 +9061,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 20.7,
+      "consensus": 20.8,
       "provisional": true,
       "transfermarktValueEUR": 6000000,
       "eaRatingRaw": null,
@@ -8970,7 +9086,7 @@
     },
     {
       "playerId": "switzerland-rieder",
-      "transfermarkt": 44.4,
+      "transfermarkt": 45.9,
       "ea": null,
       "awards": 10,
       "media": 9.9,
@@ -8982,7 +9098,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 31.8,
+      "consensus": 32.5,
       "provisional": true,
       "transfermarktValueEUR": 12000000,
       "eaRatingRaw": null,
@@ -9044,7 +9160,7 @@
     },
     {
       "playerId": "switzerland-amenda",
-      "transfermarkt": 40.6,
+      "transfermarkt": 41.6,
       "ea": null,
       "awards": 5,
       "media": 16.9,
@@ -9056,7 +9172,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 26.2,
+      "consensus": 26.7,
       "provisional": true,
       "transfermarktValueEUR": 10000000,
       "eaRatingRaw": null,
@@ -9081,7 +9197,7 @@
     },
     {
       "playerId": "switzerland-jaquez",
-      "transfermarkt": 40.6,
+      "transfermarkt": 41.6,
       "ea": null,
       "awards": 0,
       "media": 17.3,
@@ -9093,7 +9209,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 28,
+      "consensus": 28.5,
       "provisional": true,
       "transfermarktValueEUR": 10000000,
       "eaRatingRaw": null,
@@ -9118,7 +9234,7 @@
     },
     {
       "playerId": "switzerland-itten",
-      "transfermarkt": 14.5,
+      "transfermarkt": 14.6,
       "ea": null,
       "awards": 15,
       "media": 19,
@@ -9130,7 +9246,7 @@
         "assists": 0,
         "motm": 0
       },
-      "consensus": 17.4,
+      "consensus": 17.5,
       "provisional": true,
       "transfermarktValueEUR": 1800000,
       "eaRatingRaw": null,
