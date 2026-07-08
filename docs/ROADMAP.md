@@ -425,6 +425,16 @@ Worked one team at a time via a new research aid, `scripts/dump-player-honours.m
 
 **Manual work still remaining:** Transfermarkt and EA raw values only. Both are gated on the user supplying real per-team CSVs (`scripts/import-ranking-raw.mjs --field transfermarkt|ea`) — agent-side fetching for both was tested and confirmed blocked (§0 above). That data-entry phase has not started.
 
+### Transfermarkt manual data-entry phase (2026-07-08) — complete for all 11 teams
+
+Worked one team at a time via `scripts/import-ranking-raw.mjs --field transfermarkt`: user pasted each team's Transfermarkt squad-value table, values were converted from Transfermarkt's display format (`€180.00m`, `€800k`) to plain EUR integers, matched to roster player IDs by shirt number, imported, then verified with the same chain used throughout Sprint 39 (`generate-rankings` → `validate-data.js` → `npm test` → a monotonic-percentile/tie-handling sanity check → a cross-team leakage check) before each commit. **Final result: 286/286 players — Transfermarkt raw-value coverage is complete.** No architectural or schema changes were required; `deriveTransfermarktScore()`'s cross-team percentile-rank design (confirmed correct in production as the pool grew) worked as designed throughout.
+
+Three pasted squads were caught and rejected before import because they were the wrong page — England's and Switzerland's first pastes were historical/retired-era rosters, and France's first paste was an accidental repeat of the just-completed USA squad — in each case the mismatch was flagged and the user resent the correct current squad, no guessing involved. Two individual name matches were ambiguous enough to require independent verification rather than assumption: Egypt's "Nabil Dunga" (confirmed as `egypt-emad` via the player's own bio text) and Morocco's "Munir El Kajoui" (confirmed as `morocco-mohamedi` via an exact DOB/club/birthplace match on ESPN and Wikipedia).
+
+**Current rankings coverage after this phase: Transfermarkt 286/286, Awards 260/286, Media 285/286, EA 0/286.**
+
+**Manual work still remaining:** EA ratings only, gated on the user supplying per-team CSVs (`scripts/import-ranking-raw.mjs --field ea`, format `playerId,ratingRaw` 0–99 direct passthrough). That phase starts next, using the same proven team-by-team workflow.
+
 ---
 
 ## Sprint 40 — Documentation & Process Debt Cleanup
