@@ -474,12 +474,29 @@ Three pasted squads were caught and rejected before import because they were the
 ---
 
 ## Sprint 41 — Remaining Photo Gaps (optional, explicitly the user's call)
-**Category:** Operational/data-maintenance, evergreen · **Status:** Deferred (decided 2026-07-06) — not skipped, revisit later
+**Category:** Operational/data-maintenance, evergreen · **Status:** COMPLETE (2026-07-09)
 
 **Goal:** Another recovery pass for 300 remaining null player photos + 3 manager photos (Haiti, Cape Verde, Saudi Arabia).
 **Scope:** `node scripts/gather-photos.js` with `RETRY_NULLS=true`, then `WIKIDATA_PASS=true` (same pattern as Sprint 20-21).
 **Completion criteria:** coverage improves measurably from 76.9% (996/1,296).
-**Tournament timing:** Evergreen, no urgency. **Deferred rather than skipped or run now** — isn't blocking anything, and there's higher-leverage active work in flight (Sprint 42, ongoing Sprint 34 cadence); revisit once those settle.
+**Tournament timing:** Evergreen, no urgency. Deferred on 2026-07-06 in favor of higher-leverage work in flight at the time (Sprint 42/44); run once that settled.
+
+### Implementation retrospective (2026-07-09)
+
+**What was done, same pattern as Sprint 20-21:**
+- Pass 1 (`RETRY_NULLS=true`): Search API retry for 277 confirmed-null players. Recovered 87, 2 correctly auto-skipped as suspicious (left null for Pass 2).
+- Pass 2 (`WIKIDATA_PASS=true`): Wikipedia re-search + Wikidata P18 fallback for the remaining 191 nulls. Recovered 3 (one of which was a false positive caught in manual review, see below).
+- Manager gaps: `runManagerPass()`'s `undefined`-only filter doesn't retry entries already marked `null`, so the 3 known manager gaps (Haiti/Migné, Cape Verde/Bubista, Saudi Arabia/Donis) needed a direct one-off search + pageimages + Wikidata P18 check rather than a normal script run. Cape Verde's Bubista now has a Wikipedia lead image that didn't exist at Sprint 21 — recovered. Haiti and Saudi Arabia confirmed to still have neither a Wikipedia lead image nor a Wikidata P18 claim for either manager — genuinely unavailable via automation, left null.
+- Script constants (`RETRY_NULLS`/`WIKIDATA_PASS`) reset to `false` after use, per the established convention (Sprint 21 note).
+
+**One false positive found in manual review, not caught by `isSuspicious()`:** Cape Verde's Mércio Rosa (`cape-verde-mario-rosa`) deterministically matches to "Campeonato Carioca" (an unrelated Brazilian league article) on Wikipedia's search API — reproduced identically on both Pass 1 and Pass 2's independent search calls, so it's a persistent property of how this specific name matches that index, not a one-off fluke. `isSuspicious()` only filters by *image type* (logos/crests/placeholders via filename keywords) — it has no way to detect a *topically wrong article*, so this slipped through the script's own safety net both times. Caught by manually cross-checking every newly-recovered title against the player's actual name (all 87+3 recoveries), not by the script. Reverted to `null` and left there — not worth a third automated attempt against the same deterministic mismatch; would need manual research to close.
+
+**Verification performed:**
+- Downloaded and visually inspected the 3 photos that came from the least-trusted paths (a merged-caption World Cup crop for Sweden's Elliot Stroud, a Wikidata P18 candid for Uzbekistan's Azizjon Ganiev, and Cape Verde's Bubista) — all three confirmed as correct, clearly-isolated individual photos of the right person.
+- `npm test` — 74/74 passing (photo data isn't covered by the test suite; this confirms the change didn't break anything else).
+- `npm run validate` — clean, `VALIDATION PASSED`.
+
+**Final coverage:** players 950 → 1,038/1,248 (76.1% → 83.2%); managers 45 → 46/48 (95.8%); combined 995 → 1,084/1,296 (76.8% → 83.6%). Two manager gaps (Haiti, Saudi Arabia) and 208 player gaps remain — confirmed genuinely unavailable via Wikipedia/Wikidata automation, not a script limitation. No further automated pass is expected to close these; closing them would require manual research, which is out of scope for this operational sprint.
 
 ---
 
