@@ -29,6 +29,12 @@ function polygonPoints(cx, cy, r, n, offsetDeg = 0) {
   }).join(' ');
 }
 
+// ─── Lineup jersey icon ──────────────────────────────────────
+// Simple hand-drawn short-sleeve shirt silhouette, local coords centered
+// at the node origin (x in [-16,16], y in [-14,14]) so it drops straight
+// into a <g transform="translate(x,y)"> wrapper.
+const JERSEY_D = 'M -4,-14 Q 0,-9 4,-14 L 9,-12 L 16,-8 L 13,1 L 9,-3 L 10,14 L -10,14 L -9,-3 L -13,1 L -16,-8 L -9,-12 Z';
+
 export const Charts = {
   renderRadar(container, data) {
     const SIZE   = 280;
@@ -96,10 +102,11 @@ export const Charts = {
   renderLineup(container, formation, players) {
     if (!formation || !players?.length) { container.innerHTML = ''; return; }
 
-    const W = 240, H = 340, PAD_X = 20, PAD_Y = 24;
+    const W = 260, H = 400, PAD_X = 26, PAD_Y = 40;
     const PITCH_W = W - PAD_X * 2;
     const PITCH_H = H - PAD_Y * 2;
-    const R = 13;
+    const LABEL_Y = 26;         // surname baseline, below the jersey hem (hem bottom = y14)
+    const LABEL_MAX_CHARS = 8;  // longer surnames get compressed so they can't overlap a neighbour
 
     const tierCounts = [1, ...formation.split('-').map(Number)];
     const nTiers = tierCounts.length;
@@ -140,23 +147,45 @@ export const Charts = {
         const x = PAD_X + PITCH_W * xFrac;
         const surname = xmlEsc((p.name ?? '').split(' ').pop().slice(0, 11));
         const shirt   = xmlEsc(String(p.shirt ?? ''));
+        // Long surnames get length-compressed via textLength rather than
+        // shrinking the font (which would undo the whole point of this
+        // redesign) — keeps a 5-wide tier from overlapping at font-size 10.
+        const compress = surname.length > LABEL_MAX_CHARS
+          ? ' textLength="44" lengthAdjust="spacingAndGlyphs"'
+          : '';
         nodes += `<g transform="translate(${x.toFixed(1)},${y.toFixed(1)})">
-          <circle r="${R}" fill="var(--color-lineup-pitch)" stroke="#fff" stroke-width="2"/>
-          <text y="0.38em" text-anchor="middle" font-size="8" font-weight="700" fill="#fff" font-family="inherit">${shirt}</text>
-          <text y="${R + 9}" text-anchor="middle" font-size="6.5" fill="var(--color-text)" font-family="inherit">${surname}</text>
+          <path d="${JERSEY_D}" fill="#ffffff" stroke="rgba(10,30,10,0.35)" stroke-width="1" stroke-linejoin="round"/>
+          <text x="0" y="6" text-anchor="middle" font-size="11" font-weight="800" fill="var(--color-lineup-pitch)" font-family="inherit">${shirt}</text>
+          <text x="0" y="${LABEL_Y}" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff"
+                stroke="rgba(8,20,8,0.6)" stroke-width="3" stroke-linejoin="round" paint-order="stroke fill"
+                font-family="inherit"${compress}>${surname}</text>
         </g>`;
       }
     }
 
+    // Literal colors throughout (not CSS vars) — the pitch is dark green in
+    // BOTH site themes, so these need to read against green regardless of
+    // light/dark mode, same reasoning already applied to the halfway line
+    // and penalty-box strokes below. (A previous version used
+    // var(--color-text) for the surname label, which doesn't exist in
+    // styles/theme.css and silently fell back to black-on-green.)
     const halfY   = (H / 2).toFixed(1);
-    const boxL    = (PAD_X + PITCH_W * 0.18).toFixed(1);
     const boxW    = (PITCH_W * 0.64).toFixed(1);
-    const boxH    = (PITCH_H * 0.22).toFixed(1);
+    const boxH    = (PITCH_H * 0.16).toFixed(1);
+    const boxL    = (PAD_X + (PITCH_W - Number(boxW)) / 2).toFixed(1);
+    const goalW   = (PITCH_W * 0.30).toFixed(1);
+    const goalH   = (PITCH_H * 0.065).toFixed(1);
+    const goalL   = (PAD_X + (PITCH_W - Number(goalW)) / 2).toFixed(1);
+    const centerR = (Math.min(PITCH_W, PITCH_H) * 0.14).toFixed(1);
     const markings = `
       <rect width="${W}" height="${H}" fill="var(--color-lineup-pitch-bg)" rx="4"/>
       <line x1="${PAD_X}" y1="${halfY}" x2="${W - PAD_X}" y2="${halfY}" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+      <circle cx="${W / 2}" cy="${halfY}" r="${centerR}" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <circle cx="${W / 2}" cy="${halfY}" r="1.6" fill="rgba(255,255,255,0.35)"/>
       <rect x="${boxL}" y="${(H - PAD_Y - Number(boxH)).toFixed(1)}" width="${boxW}" height="${boxH}" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-      <rect x="${boxL}" y="${PAD_Y}" width="${boxW}" height="${boxH}" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>`;
+      <rect x="${boxL}" y="${PAD_Y}" width="${boxW}" height="${boxH}" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <rect x="${goalL}" y="${(H - PAD_Y - Number(goalH)).toFixed(1)}" width="${goalW}" height="${goalH}" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <rect x="${goalL}" y="${PAD_Y}" width="${goalW}" height="${goalH}" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>`;
 
     container.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Starting lineup">${markings}${nodes}</svg>`;
   },
