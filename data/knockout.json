@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-07T00:19:41.072Z",
+  "lastUpdated": "2026-07-09T12:01:10.493Z",
   "data": [
     {
       "id": "r32",
@@ -296,7 +296,7 @@
           "kickoff": "2026-07-07T00:00:00Z",
           "status": "live",
           "venue": "Lumen Field, Seattle",
-          "broadcaster": null
+          "broadcaster": "BBC"
         },
         {
           "id": "r16-m7",
@@ -309,7 +309,7 @@
           "kickoff": "2026-07-07T16:00:00Z",
           "status": "scheduled",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "broadcaster": null
+          "broadcaster": "ITV"
         },
         {
           "id": "r16-m8",
@@ -322,7 +322,7 @@
           "kickoff": "2026-07-07T20:00:00Z",
           "status": "scheduled",
           "venue": "BC Place, Vancouver",
-          "broadcaster": null
+          "broadcaster": "ITV"
         }
       ]
     },
@@ -341,7 +341,7 @@
           "kickoff": "2026-07-09T20:00:00Z",
           "status": "scheduled",
           "venue": "Gillette Stadium, Foxborough",
-          "broadcaster": null
+          "broadcaster": "ITV"
         },
         {
           "id": "qf-m2",
@@ -367,7 +367,7 @@
           "kickoff": "2026-07-11T21:00:00Z",
           "status": "scheduled",
           "venue": "Hard Rock Stadium, Miami Gardens",
-          "broadcaster": null
+          "broadcaster": "ITV"
         },
         {
           "id": "qf-m4",
