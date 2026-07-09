@@ -631,7 +631,7 @@ I checked `validate-data.js` directly: it currently validates squads (`validateS
 ---
 
 ## Sprint 44 — Knockout Bracket Wallchart Redesign
-**Category:** Visual/structural redesign (flagship feature) · **Status:** Design approved (2026-07-09), implementation not yet started
+**Category:** Visual/structural redesign (flagship feature) · **Status:** COMPLETE (2026-07-09)
 
 **Trigger:** user provided two reference images — the current live bracket (single left-to-right cascade, R32 through Final in one column sequence) versus a target layout (a classic symmetric double-sided "wallchart" bracket: Round of 32 on both far edges, rounds nesting inward toward the center, Final + Champion + Third Place converging in the middle). Full design in `docs/plans/2026-07-09-knockout-bracket-wallchart-design.md`.
 
@@ -642,6 +642,26 @@ I checked `validate-data.js` directly: it currently validates squads (`validateS
 **Dependencies:** None blocking. Builds on top of Sprint 42's topology/connector-correctness work (reused, not rebuilt). **Complexity:** Medium — mostly a refactor of existing positioning/connector code into a shared, parameterized form, plus one new small component (Champion box).
 **Completion criteria:** per `docs/plans/2026-07-09-knockout-bracket-wallchart-design.md` §6 — new unit tests for `getBracketSide()`/`getSidePartition()` (including a propagation-integrity/partition test), `computeConnectorGeometry()`, and `buildChampionBox()`; manual Playwright verification across three states (current live partial data, a synthetic fully-resolved bracket, the pre-group-stage empty state).
 **Tournament timing:** No urgency pressure from the tournament clock itself, but the current production layout is visibly broken-looking to the user right now, so this is the active priority over Sprint 39's resumption.
+
+### Implementation retrospective (2026-07-09)
+
+**What was built, exactly per the design doc:**
+- `js/bracket-topology.js`: `getBracketSide()` (forward-walks `PROPAGATION` to `'left'`/`'right'`/`null`, no hardcoded lists) + `getSidePartition()`.
+- `js/modules/knockout-bracket.js`: 9-column pipeline (`#buildColumns()`), `#computeHalfCenters()` as one shared per-half positioning algorithm called twice (left half in DOM order, right half in reversed/data-flow order), `#positionCenterColumn()` for Final/3rd Place/Champion, `#drawConnectors()` reduced to a thin wrapper around the new pure `computeConnectorGeometry()`, and `buildChampionBox()` built solely on the existing `deriveWinnerId()`.
+- `styles/knockout.css`: `--bracket-card-gap`/`--bracket-champion-gap` custom properties (replacing a hardcoded JS constant), `.bracket-champion` styles, 9-column width selectors.
+- Tests: `getBracketSide()` coverage + the propagation-integrity/partition test in `test/bracket-topology.test.mjs` (built from `PROPAGATION`'s own keys, not a hand-typed copy); `test/knockout-bracket-wallchart.test.mjs` (new) covering `computeConnectorGeometry()` (mirrored is an exact coordinate flip of the non-mirrored case, which itself reproduces Sprint 42's original verified math) and `buildChampionBox()` (placeholder, resolved-winner, and the FT-but-no-derivable-winner edge case).
+
+**One real, pre-existing bug found and fixed during visual verification, out of this sprint's original scope but directly visible in the exact feature being built:** `roundDateRange()`'s date parser (`s.split('-').map(Number)`) broke on full ISO kickoff timestamps (`"2026-06-28T19:00:00Z"` → day parsed as `NaN`), rendering every Round of 32/Round of 16 column header as "NaN Jun–NaN Jul". This logic was copied verbatim from the pre-Sprint-44 code, not introduced by this redesign — but since it was now visible in every screenshot of the new layout, it was fixed in place (strip any time component before splitting) rather than shipped broken. No test previously depended on the buggy behavior.
+
+**Verification performed:**
+- `npm test` — 74/74 passing (9 new: `getBracketSide` + propagation-integrity in `bracket-topology.test.mjs`, `computeConnectorGeometry` + `buildChampionBox` in the new `knockout-bracket-wallchart.test.mjs`).
+- `npm run validate` — clean, unaffected (this sprint touches rendering only, no data files).
+- Manual Playwright verification (Chromium, local static server — no dev-server script exists in this project, same gap noted since Sprint 33) across three states, `data/knockout.json` temporarily swapped and restored byte-for-byte after each (confirmed via `git status`/`git diff` showing zero changes to the file post-verification):
+  1. **Current live partial data** — correct 9-column order, TBD placeholders, per-match confirmed ticks (Sprint 42 behavior preserved), live-match rail entry, Champion placeholder shown. Zero console errors.
+  2. **Synthetic fully-resolved bracket** (temporary fixture, same technique Sprint 42 used) — all 9 columns populated 8/4/2/1/2/1/2/4/8, 8 connector SVGs drawn (4 gaps × 2 halves), left/right R32 columns measured to an identical total height (806.375px, confirming the two halves share one coordinate scale), zero confirmed-tick glyphs remaining (correct — everything has a real score), Champion box correctly resolved to France via `deriveWinnerId()`, 3rd Place positioned below the Final.
+  3. **Pre-group-stage empty state** (`data: []`) — unchanged empty-state message renders correctly, zero console errors, confirming this sprint's changes didn't touch that path.
+
+**No architectural surprises** — the design doc's plan (shared per-half algorithm called twice, pure connector-geometry extraction, champion box as ordinary center-column content) matched the actual implementation shape with no deviations.
 
 ---
 
