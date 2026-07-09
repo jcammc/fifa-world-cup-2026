@@ -15,7 +15,7 @@ const dom = new JSDOM('<!doctype html><html><body></body></html>', { url: 'http:
 globalThis.window   = dom.window;
 globalThis.document = dom.window.document;
 
-const { buildHeadToHeadSection, buildMatchMeta, attachTabScrollHandlers } = await import('../js/modules/match-centre.js');
+const { buildHeadToHeadSection, buildMatchMeta, attachTabScrollHandlers, pickActiveGroupId } = await import('../js/modules/match-centre.js');
 
 const home = { id: 'brazil', name: 'Brazil' };
 const away = { id: 'morocco', name: 'Morocco' };
@@ -130,4 +130,74 @@ test('attachTabScrollHandlers does not throw when a tab has no matching section'
   assert.doesNotThrow(() => {
     document.querySelector('.mc-tab').dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }));
   });
+});
+
+// Regression coverage for two related user-reported bugs in the tab
+// strip's scroll-spy. Bug A: the original IntersectionObserver callback
+// did "clear all tabs, set one" PER entry it looped over, not once per
+// batch — so when calling .observe() on every section coalesced multiple
+// simultaneously-active entries into one callback (e.g. at initial page
+// load), whichever entry was processed LAST silently won, overriding the
+// hardcoded first-tab default before any scrolling happened. Bug B: an
+// isIntersecting/overlap-based redesign fixed Bug A but then picking
+// "topmost overlapping" got the WRONG answer for a tab click, since two
+// adjacent contiguous sections can both briefly overlap a wide detection
+// band at once, and the just-clicked (lower) section should win, not the
+// one above it. pickActiveGroupId() fixes both by comparing real top-edge
+// positions against one fixed trigger line and taking the LAST section
+// (in document order) whose top has already reached it — never "topmost
+// of whatever's currently overlapping."
+
+test('pickActiveGroupId returns null when no section has reached the line yet (caller should leave the current tab alone)', () => {
+  const tops = new Map([['mc-group-match', 500], ['mc-group-context', 1200]]);
+  assert.equal(pickActiveGroupId(['mc-group-match', 'mc-group-context'], tops, 100), null);
+});
+
+test('pickActiveGroupId returns the sole section whose top has reached the line', () => {
+  const tops = new Map([['mc-group-match', -50], ['mc-group-context', 1200]]);
+  assert.equal(pickActiveGroupId(['mc-group-match', 'mc-group-context'], tops, 100), 'mc-group-match');
+});
+
+test('pickActiveGroupId resolves the LAST (bottommost) section whose top has reached the line, not the topmost (Bug B regression)', () => {
+  // Simulates a tab click landing on "context": both "match" (now
+  // scrolled well above the line, top deeply negative) and "context"
+  // (freshly landed, top just at/past the line) have reached the line
+  // simultaneously — "context" must win, since it's the one the user
+  // actually navigated to, not "match" simply because it comes first.
+  const groupIds = ['mc-group-match', 'mc-group-context', 'mc-group-teams'];
+  const tops = new Map([
+    ['mc-group-match', -537],
+    ['mc-group-context', 98],
+    ['mc-group-teams', 1500],
+  ]);
+  assert.equal(pickActiveGroupId(groupIds, tops, 100), 'mc-group-context');
+});
+
+test('pickActiveGroupId is unaffected by processing/insertion order — only position and document order matter (Bug A regression)', () => {
+  const groupIds = ['mc-group-match', 'mc-group-context', 'mc-group-teams'];
+  // Same positions as the previous test, but inserted into the Map in a
+  // different order — must still resolve to "context", not whichever
+  // entry happened to be set last.
+  const tops = new Map([
+    ['mc-group-teams', 1500],
+    ['mc-group-match', -537],
+    ['mc-group-context', 98],
+  ]);
+  assert.equal(pickActiveGroupId(groupIds, tops, 100), 'mc-group-context');
+});
+
+test('pickActiveGroupId keeps the last section active once scrolled past everything', () => {
+  const groupIds = ['mc-group-match', 'mc-group-context', 'mc-group-teams'];
+  const tops = new Map([
+    ['mc-group-match', -1500],
+    ['mc-group-context', -900],
+    ['mc-group-teams', -50],
+  ]);
+  assert.equal(pickActiveGroupId(groupIds, tops, 100), 'mc-group-teams');
+});
+
+test('pickActiveGroupId ignores a group id with no known position', () => {
+  const groupIds = ['mc-group-match', 'mc-group-context'];
+  const tops = new Map([['mc-group-context', 50]]); // "match" never fired an entry
+  assert.equal(pickActiveGroupId(groupIds, tops, 100), 'mc-group-context');
 });

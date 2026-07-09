@@ -45,6 +45,29 @@ export function attachTabScrollHandlers(container) {
   });
 }
 
+// ── Scroll-spy activation selection ───────────────────────────
+//
+// Pure so it can be unit tested without a real scroll/DOM environment.
+// `groupIds` must be in DOM/document order; `tops` maps a group id to
+// its current viewport-relative top edge (only ids with a known
+// position need be present). Sections are contiguous (each one's
+// bottom is the next one's top), so "the active section" is always the
+// LAST one (in document order) whose top has already scrolled up to or
+// past `triggerLinePx` — never the topmost one, which would wrongly
+// favor a section the user has already scrolled past. Returns null
+// when no section has reached the line yet (positioned above all of
+// them) — the caller decides what that means (this module treats it
+// as "the first tab," since that's both the true initial state and
+// correct again after scrolling back up past everything).
+export function pickActiveGroupId(groupIds, tops, triggerLinePx) {
+  let winner = null;
+  for (const id of groupIds) {
+    const top = tops.get(id);
+    if (top != null && top <= triggerLinePx) winner = id;
+  }
+  return winner;
+}
+
 // ─── Pure head-to-head / Match Story builders ────────────────
 //
 // Extracted to module scope (rather than private class methods) so
@@ -179,9 +202,9 @@ export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, h
 export class MatchCentre {
   #container;
   #params;
-  #tabObserver   = null;
-  #homeLineup    = null;
-  #awayLineup    = null;
+  #tabScrollHandler = null;
+  #homeLineup       = null;
+  #awayLineup       = null;
 
   constructor(container, params = {}) {
     this.#container = container;
@@ -915,7 +938,7 @@ export class MatchCentre {
   }
 
   init() {
-    const groups = this.#container.querySelectorAll('.mc-tab-group');
+    const groups = Array.from(this.#container.querySelectorAll('.mc-tab-group'));
     const tabs   = this.#container.querySelectorAll('.mc-tab');
     if (!groups.length || !tabs.length) return;
 
@@ -924,20 +947,94 @@ export class MatchCentre {
 
     attachTabScrollHandlers(this.#container);
 
-    this.#tabObserver = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          tabs.forEach(t => t.classList.remove('mc-tab--active'));
-          tabMap.get(entry.target.id)?.classList.add('mc-tab--active');
-        }
-      }
-    }, { threshold: 0.3 });
+    // Publish ONE combined offset — strip height + a little breathing
+    // room — so CSS (.mc-tab-group's scroll-margin-top, used when a tab
+    // click scrolls a section into view) and the JS detection line below
+    // (used to decide which tab lights up while scrolling) always agree
+    // on exactly where "just below the strip" is. Keeping the "+48"
+    // breathing-room amount in only one place (here) matters: an earlier
+    // version of this fix computed the detection line from the strip's
+    // raw height alone while CSS added its own separate "+48px" on top,
+    // so a tab click landed a section BELOW the detection line and its
+    // tab never highlighted — the exact "two independently-hardcoded
+    // guesses drift apart" failure mode that caused the original
+    // `top: var(--nav-height)` bug in the first place. Scoped to .mc-page
+    // (rebuilt every render()) rather than this.#container (#app-content,
+    // reused across route navigations), so it never leaks a stale value
+    // into the next page.
+    const stripEl = this.#container.querySelector('.mc-tab-strip');
+    const pageEl  = this.#container.querySelector('.mc-page');
+    const stripPx = stripEl ? Math.ceil(stripEl.getBoundingClientRect().height) : 48;
+    const scrollOffsetPx = stripPx + 48;
+    pageEl?.style.setProperty('--mc-tab-scroll-offset', `${scrollOffsetPx}px`);
 
-    groups.forEach(g => this.#tabObserver.observe(g));
+    // Scroll-spy: on every scroll tick, measure each section's CURRENT
+    // viewport-relative top edge directly (getBoundingClientRect(), not
+    // an IntersectionObserver entry) and pick whichever section's top has
+    // scrolled up PAST a fixed trigger line — the LAST one (in DOM order)
+    // whose top is at or above the line. Sections are contiguous (each
+    // one's bottom is the next one's top), so this is exact: at any
+    // scroll position exactly one section's span contains the line, and
+    // it's always the last one whose top has already reached it.
+    //
+    // Deliberately NOT an IntersectionObserver, despite that being the
+    // obvious first choice for "which section is at the top of the
+    // viewport" — confirmed via direct instrumentation that it doesn't
+    // give what this needs: IntersectionObserver only fires at THRESHOLD
+    // CROSSINGS, not continuously. Once a section starts intersecting
+    // (crosses threshold 0 on the way in), it fires once and then goes
+    // silent for the rest of a scroll that keeps it intersecting — for a
+    // section taller than the viewport (e.g. the previous-XI lineups),
+    // that "once" fires the moment its top barely enters the bottom edge
+    // of the screen, and its top is never reported again as the scroll
+    // continues, leaving stale, wildly-wrong position data for the rest
+    // of the scroll (or the whole rest of a smooth-scroll animation
+    // landing it near the top of the screen). A live scroll+rAF listener
+    // has no such gap — it always reads the DOM's actual current state.
+    //
+    // The trigger line sits just past where a tab click's scrollIntoView
+    // actually lands a section's top edge (y = navHeight + scrollOffsetPx
+    // — that's what scroll-margin-top does), so a freshly-clicked section
+    // reliably satisfies "top <= line" immediately, not balanced exactly
+    // on it. navHeight is included because getBoundingClientRect() is
+    // viewport-relative (the nav bar occupies real space at the top of
+    // the viewport) — this is NOT a repeat of the earlier
+    // `top: var(--nav-height)` bug, which was a sticky-position offset
+    // inside a scroll container that already excluded the nav, a
+    // different coordinate space than this.
+    const navHeightPx = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 60;
+    const triggerLinePx = navHeightPx + scrollOffsetPx + 2;
+    const groupIds = groups.map(g => g.id);
+
+    let scheduled = false;
+    const updateActiveTab = () => {
+      scheduled = false;
+      const tops = new Map(groups.map(g => [g.id, g.getBoundingClientRect().top]));
+      // No section having reached the line yet means we're positioned
+      // above all of them — at true initial load (nothing scrolled) or
+      // after scrolling back up past the first section. Either way the
+      // first tab is correct: it's the section the content actually
+      // belongs to right now, and the one that's next to be reached.
+      // (Deliberately NOT "leave whatever tab was active alone" — that
+      // would freeze on a stale later tab after scrolling back to top.)
+      const winnerId = pickActiveGroupId(groupIds, tops, triggerLinePx) ?? groupIds[0];
+      tabs.forEach(t => t.classList.toggle('mc-tab--active', t === tabMap.get(winnerId)));
+    };
+
+    this.#tabScrollHandler = () => {
+      if (scheduled) return;
+      scheduled = true;
+      requestAnimationFrame(updateActiveTab);
+    };
+    this.#container.addEventListener('scroll', this.#tabScrollHandler, { passive: true });
+
+    updateActiveTab();
   }
 
   teardown() {
-    this.#tabObserver?.disconnect();
-    this.#tabObserver = null;
+    if (this.#tabScrollHandler) {
+      this.#container.removeEventListener('scroll', this.#tabScrollHandler);
+      this.#tabScrollHandler = null;
+    }
   }
 }

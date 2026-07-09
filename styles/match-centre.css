@@ -7,11 +7,11 @@
 /* ─── Tab strip ───────────────────────────────────────────── */
 .mc-tab-strip {
   position: sticky;
-  top: var(--nav-height);
+  top: 0;
   z-index: 10;
   display: flex;
   gap: 0;
-  background: var(--color-bg);
+  background: var(--color-bg-primary);
   border-bottom: 2px solid var(--color-border);
   margin-bottom: var(--space-4);
   overflow-x: auto;
@@ -32,7 +32,7 @@
   white-space: nowrap;
 }
 .mc-tab:hover {
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 .mc-tab--active {
   color: var(--color-accent);
@@ -41,7 +41,14 @@
 
 /* ─── Tab groups ──────────────────────────────────────────── */
 .mc-tab-group {
-  scroll-margin-top: calc(var(--nav-height) + 48px);
+  /* --mc-tab-scroll-offset is published at runtime by MatchCentre#init()
+     (strip height + breathing room, measured via getBoundingClientRect())
+     so this and the IntersectionObserver's detection line always agree on
+     exactly where "just below the strip" is, instead of drifting apart
+     like two independently-hardcoded guesses (exactly how the old
+     `top: var(--nav-height)` mismatch happened). 96px fallback covers the
+     brief pre-init paint only. */
+  scroll-margin-top: var(--mc-tab-scroll-offset, 96px);
 }
 
 /* ─── Back link ───────────────────────────────────────────── */
@@ -669,7 +676,7 @@
 }
 
 .mc-hth-details[open] > .mc-hth-details__toggle {
-  color: var(--color-text);
+  color: var(--color-text-primary);
 }
 
 /* ─── H2H stats grid ─────────────────────────────────────── */
