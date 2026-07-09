@@ -1,5 +1,10 @@
 /* ─── Bracket wrapper ─────────────────────────────────────── */
+/* Sprint 44: spacing constants as CSS custom properties (read via
+   getComputedStyle in knockout-bracket.js) rather than hardcoded JS
+   numbers, so the wallchart layout is tunable from here alone. */
 .knockout-bracket {
+  --bracket-card-gap: 8px;
+  --bracket-champion-gap: 12px;
   padding: var(--space-4) 0 var(--space-6);
 }
 
@@ -26,10 +31,13 @@
 }
 
 /* ─── Single round column ────────────────────────────────── */
+/* Sprint 44: 9 columns now share the row (R32-L, R16-L, QF-L, SF-L,
+   Final, SF-R, QF-R, R16-R, R32-R), so the base width is narrower than
+   the pre-wallchart single-cascade layout. */
 .bracket-round {
   display: flex;
   flex-direction: column;
-  width: 220px;
+  width: 200px;
   flex-shrink: 0;
 }
 
@@ -230,10 +238,66 @@
 }
 
 /* ─── Wider columns for later rounds ─────────────────────── */
-.bracket-round[data-round="qf"],
-.bracket-round[data-round="sf"],
+/* Sprint 44: matched against the new 9-column IDs (r32-l/r16-l/qf-l/
+   sf-l, final, sf-r/qf-r/r16-r/r32-r) via prefix, since each round
+   now has a left and a right instance. */
+.bracket-round[data-round^="qf"],
+.bracket-round[data-round^="sf"],
 .bracket-round[data-round="final"] {
-  width: 200px;
+  width: 210px;
+}
+
+/* ─── Champion box (Sprint 44) ───────────────────────────── */
+/* Column content, positioned above the Final card by #positionBracket().
+   Not a bolted-on overlay — it lives inside the center column's own
+   .bracket-round__matches, alongside the Final and 3rd Place cards. */
+.bracket-champion {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-card);
+  text-align: center;
+}
+
+.bracket-champion__icon {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+}
+
+.bracket-champion__flag {
+  width: 28px;
+  height: 20px;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+.bracket-champion__name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bracket-champion__name--tbd {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-semibold);
+}
+
+.bracket-champion--resolved {
+  border-color: var(--color-accent);
+  background: rgba(251, 191, 36, 0.08);
+}
+
+.bracket-champion--resolved .bracket-champion__name {
+  color: var(--color-accent);
 }
 
 /* ─── Round-level confirmed banner ──────────────────────── */
@@ -268,12 +332,12 @@
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 640px) {
   .bracket-round {
-    width: 190px;
+    width: 180px;
   }
-  .bracket-round[data-round="qf"],
-  .bracket-round[data-round="sf"],
+  .bracket-round[data-round^="qf"],
+  .bracket-round[data-round^="sf"],
   .bracket-round[data-round="final"] {
-    width: 200px;
+    width: 190px;
   }
   .bracket-team__name {
     font-size: 10px;

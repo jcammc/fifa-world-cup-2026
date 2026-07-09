@@ -96,6 +96,46 @@ export function getFeederMatchIds(destMatchId) {
   return FEEDERS_BY_MATCH.get(destMatchId) ?? [];
 }
 
+// ── Wallchart side derivation (Sprint 44) ──────────────────────────────────
+//
+// Fully derived from PROPAGATION — no hardcoded left/right match-ID lists.
+// Walks a match's winner-chain forward until it reaches 'sf-m1' ('left') or
+// 'sf-m2' ('right'). Terminal matches ('final-m1', '3rd-place') return null;
+// they belong to the wallchart's center column, not either side.
+
+export function getBracketSide(matchId) {
+  let current = matchId;
+  const seen = new Set();
+  while (current) {
+    if (current === 'sf-m1') return 'left';
+    if (current === 'sf-m2') return 'right';
+    if (seen.has(current)) return null; // defends against a malformed/cyclic map
+    seen.add(current);
+    current = PROPAGATION[current]?.winner?.match ?? null;
+  }
+  return null;
+}
+
+/**
+ * Splits every non-terminal match ID across all given rounds (the
+ * data/knockout.json `.data` array shape) into { left, right } match-ID
+ * arrays, via getBracketSide(). Used both by the renderer (to build the
+ * two mirrored column groups) and directly by the propagation-integrity
+ * test, so the test exercises the same split the app actually renders.
+ */
+export function getSidePartition(rounds) {
+  const left = [];
+  const right = [];
+  for (const round of rounds) {
+    for (const m of round.matches ?? []) {
+      const side = getBracketSide(m.id);
+      if (side === 'left') left.push(m.id);
+      else if (side === 'right') right.push(m.id);
+    }
+  }
+  return { left, right };
+}
+
 // ── Winner/loser derivation from a stored match's own scores ──────────────
 //
 // Pure — takes a match object shaped like a data/knockout.json entry
