@@ -168,7 +168,8 @@
   margin-bottom: var(--space-4);
 }
 
-.mc-venue {
+.mc-venue,
+.mc-date {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
 }

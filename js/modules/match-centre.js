@@ -5,6 +5,25 @@ import { Charts } from '../charts.js';
 import { getMatchImplication, deriveRecentForm } from '../tournament-state.js';
 import { broadcasterBadge } from '../broadcasters.js';
 
+// ── Header meta row (date / venue / broadcaster) ──────────────
+//
+// Extracted to module scope, same reasoning as the head-to-head builders
+// below — directly testable without instantiating the class. `mc-date`
+// only appears for completed (FT) matches: upcoming matches already show
+// their kickoff time prominently in the score/status column, and adding
+// it again here would be redundant.
+export function buildMatchMeta(fixture) {
+  const isFT = fixture.status === 'FT';
+  const datePart = isFT
+    ? `<span class="mc-date">${escapeHtml(formatKickoff(fixture.kickoff))}</span>`
+    : '';
+  const venuePart = fixture.venue ? `<span class="mc-venue">${escapeHtml(fixture.venue)}</span>` : '';
+  const broadcasterPart = broadcasterBadge(fixture.broadcaster, fixture.status);
+  return (datePart || venuePart || broadcasterPart)
+    ? `<div class="mc-meta">${datePart}${venuePart}${broadcasterPart}</div>`
+    : '';
+}
+
 // ─── Pure head-to-head / Match Story builders ────────────────
 //
 // Extracted to module scope (rather than private class methods) so
@@ -267,11 +286,7 @@ export class MatchCentre {
               onerror="this.style.display='none'">`
       : `<span class="mc-team__flag-placeholder"></span>`;
 
-    const venuePart       = fixture.venue ? `<span class="mc-venue">${escapeHtml(fixture.venue)}</span>` : '';
-    const broadcasterPart = broadcasterBadge(fixture.broadcaster, fixture.status);
-    const metaHtml        = (venuePart || broadcasterPart)
-      ? `<div class="mc-meta">${venuePart}${broadcasterPart}</div>`
-      : '';
+    const metaHtml = buildMatchMeta(fixture);
 
     const showEnrichment = !!(homeId && awayId);
 

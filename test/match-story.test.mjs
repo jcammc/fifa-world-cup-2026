@@ -15,7 +15,7 @@ const dom = new JSDOM('<!doctype html><html><body></body></html>', { url: 'http:
 globalThis.window   = dom.window;
 globalThis.document = dom.window.document;
 
-const { buildHeadToHeadSection } = await import('../js/modules/match-centre.js');
+const { buildHeadToHeadSection, buildMatchMeta } = await import('../js/modules/match-centre.js');
 
 const home = { id: 'brazil', name: 'Brazil' };
 const away = { id: 'morocco', name: 'Morocco' };
@@ -68,4 +68,32 @@ test('upcoming (non-FT) match uses the Head-to-Head branch, unaffected by the FT
 
   assert.match(html, /Head-to-Head</);
   assert.doesNotMatch(html, /Match Story/);
+});
+
+// Regression coverage for a user-reported gap: the Match Centre header
+// showed no date/time at all for completed matches (only score + "FT"),
+// even though the exact same formatKickoff() helper already used for
+// upcoming matches works fine on a past ISO timestamp too.
+
+test('buildMatchMeta shows the formatted kickoff date/time for a completed (FT) match', () => {
+  const fixture = {
+    status: 'FT', kickoff: '2026-06-28T19:00:00Z',
+    venue: 'SoFi Stadium, Inglewood', broadcaster: 'ITV',
+  };
+  const html = buildMatchMeta(fixture);
+
+  assert.match(html, /mc-date/);
+  assert.match(html, /28 Jun/);
+  assert.match(html, /SoFi Stadium/);
+});
+
+test('buildMatchMeta does NOT show a date for an upcoming match (already shown prominently elsewhere in the header)', () => {
+  const fixture = {
+    status: 'scheduled', kickoff: '2026-07-11T21:00:00Z',
+    venue: 'Hard Rock Stadium, Miami Gardens', broadcaster: null,
+  };
+  const html = buildMatchMeta(fixture);
+
+  assert.doesNotMatch(html, /mc-date/);
+  assert.match(html, /Hard Rock Stadium/);
 });
