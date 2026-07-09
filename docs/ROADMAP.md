@@ -709,6 +709,19 @@ Three user-reported Match Centre issues, fixed as separate commits:
 
 **Verification:** `npm test` (88/88, 10 new tests across `test/match-story.test.mjs` and new `test/charts-lineup.test.mjs`), `npm run validate` clean throughout. Manual Playwright verification: all four tabs clicked in both an FT and an upcoming match's Match Centre, confirmed hash never changes and "Page not found" never appears; lineup screenshot (France v Morocco QF preview) confirmed jerseys, numbers, and names all render clearly.
 
+### Follow-up: tab strip still broken in practice (2026-07-09)
+
+The tab-click fix above stopped the "Page not found" crash, but using it surfaced four more real bugs — the strip's sticky header was invisible (scrolled content bled through it instead of being hidden underneath), and active-tab highlighting was fully broken in several ways (the jersey redesign's much taller "Lineups" section never highlighted, the first tab lost its highlight on load, and clicking a tab lit up the *previous* tab instead of the one just clicked).
+
+Root causes, confirmed via direct code reading and live browser instrumentation (not guesswork):
+
+1. `.mc-tab-strip`'s `background: var(--color-bg)` referenced an undefined CSS custom property (real vars are `--color-bg-primary`/`-secondary`/`-card`/`-elevated`) and silently fell back to transparent — the exact same bug class as this sprint's `var(--color-text)` fix in `js/charts.js`, just in a different file. Two more instances of the identical pattern found and fixed in the same pass (`.mc-tab:hover`, `.mc-hth-details__toggle`).
+2. `top: var(--nav-height)` assumed the strip needed to clear the main nav bar, but `#app-content` (the real scroll container) is a sibling grid area of the nav, never its descendant — the nav was never in that scrollport to begin with. Now `top: 0`.
+3. The highlighting logic was originally built on `IntersectionObserver`, which turned out to be the wrong tool for this job: confirmed via direct instrumentation that it only fires at *threshold crossings*, not continuously — once a section starts intersecting it goes silent for the rest of a scroll that keeps it intersecting, so its reported position goes stale mid-animation (exactly why a freshly-clicked tall section's true landing position was never observed). Replaced with a scroll+`requestAnimationFrame` listener that measures each section's real position on every tick.
+4. The winning-section algorithm itself needed two iterations to get right: "topmost of whatever's currently active" (an `IntersectionObserver`-era idea) picked the wrong section whenever a click landed on a lower section that still geometrically overlapped with the one above it. The final algorithm — the *last* (bottommost, in document order) section whose top has reached a shared trigger line — has no such ambiguity, since sections are contiguous. That trigger line uses the exact same offset CSS uses for `scroll-margin-top` (published once by JS as `--mc-tab-scroll-offset`), so the two can never independently drift apart the way `--nav-height` did in bug 2.
+
+New exported `pickActiveGroupId()` (pure, unit tested) encapsulates the selection logic. Verified extensively via Playwright: click-driven navigation in both match states, manual scroll-driven highlighting in both directions, scroll-to-bottom and scroll-back-to-top edge cases, and visually that the strip now sticks flush with an opaque background. `npm test` 94/94.
+
 ---
 
 ## Decisions resolved (2026-07-06)
