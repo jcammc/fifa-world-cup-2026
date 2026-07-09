@@ -15,7 +15,7 @@ const dom = new JSDOM('<!doctype html><html><body></body></html>', { url: 'http:
 globalThis.window   = dom.window;
 globalThis.document = dom.window.document;
 
-const { buildHeadToHeadSection, buildMatchMeta } = await import('../js/modules/match-centre.js');
+const { buildHeadToHeadSection, buildMatchMeta, attachTabScrollHandlers } = await import('../js/modules/match-centre.js');
 
 const home = { id: 'brazil', name: 'Brazil' };
 const away = { id: 'morocco', name: 'Morocco' };
@@ -96,4 +96,38 @@ test('buildMatchMeta does NOT show a date for an upcoming match (already shown p
 
   assert.doesNotMatch(html, /mc-date/);
   assert.match(html, /Hard Rock Stadium/);
+});
+
+// Regression coverage for a user-reported bug: clicking a Match Centre tab
+// (Match/Context/Teams or Preview/Lineups/Teams) showed "Page not found".
+// Root cause: the tab strip's plain <a href="#mc-group-X"> anchors changed
+// location.hash, which this app's global router intercepts on every
+// hashchange — "mc-group-X" doesn't match any known route, so the whole
+// page got torn down and replaced with NotFoundModule. The fix intercepts
+// the click and scrolls manually, never touching the hash.
+
+test('attachTabScrollHandlers scrolls to the target section without ever changing location.hash', () => {
+  document.body.innerHTML = `
+    <nav class="mc-tab-strip"><a class="mc-tab" href="#mc-group-context">Context</a></nav>
+    <section id="mc-group-context"></section>`;
+
+  const section = document.getElementById('mc-group-context');
+  let scrollCalls = 0;
+  section.scrollIntoView = () => { scrollCalls++; };
+  const hashBefore = window.location.hash;
+
+  attachTabScrollHandlers(document.body);
+  document.querySelector('.mc-tab').dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }));
+
+  assert.equal(scrollCalls, 1, 'scrollIntoView called exactly once on the matching section');
+  assert.equal(window.location.hash, hashBefore, 'location.hash must never change — this is exactly what triggered the 404');
+});
+
+test('attachTabScrollHandlers does not throw when a tab has no matching section', () => {
+  document.body.innerHTML = `<nav class="mc-tab-strip"><a class="mc-tab" href="#mc-group-nonexistent">Ghost</a></nav>`;
+
+  attachTabScrollHandlers(document.body);
+  assert.doesNotThrow(() => {
+    document.querySelector('.mc-tab').dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true }));
+  });
 });

@@ -24,6 +24,27 @@ export function buildMatchMeta(fixture) {
     : '';
 }
 
+// ── Tab strip click handling ──────────────────────────────────
+//
+// The .mc-tab-strip's links are plain <a href="#mc-group-X"> same-page
+// anchors. This app has a single GLOBAL hash router (js/router.js) that
+// intercepts every hashchange event, including same-page anchor clicks —
+// "mc-group-match" etc. don't match any known route, so an unhandled
+// click tears down the whole page and shows "Page not found". Intercept
+// the click and scroll manually instead, never touching location.hash.
+// .mc-tab-group already has scroll-margin-top set in CSS, so this clears
+// the sticky tab strip correctly with no extra offset math needed here.
+export function attachTabScrollHandlers(container) {
+  container.querySelectorAll('.mc-tab').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = link.getAttribute('href')?.slice(1);
+      const target = id && container.querySelector(`#${id}`);
+      target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
 // ─── Pure head-to-head / Match Story builders ────────────────
 //
 // Extracted to module scope (rather than private class methods) so
@@ -900,6 +921,8 @@ export class MatchCentre {
 
     const tabMap = new Map();
     tabs.forEach(t => tabMap.set(t.getAttribute('href')?.slice(1), t));
+
+    attachTabScrollHandlers(this.#container);
 
     this.#tabObserver = new IntersectionObserver(entries => {
       for (const entry of entries) {
