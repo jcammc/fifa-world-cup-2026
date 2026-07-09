@@ -696,6 +696,21 @@ Separately, user reported still not seeing BBC/ITV broadcaster badges for upcomi
 
 ---
 
+## Sprint 45 — Match Centre Post-Ship Bug Batch
+**Category:** Bug fixes + small visual redesign · **Status:** COMPLETE (2026-07-09)
+
+Three user-reported Match Centre issues, fixed as separate commits:
+
+**1. Played date/time missing on completed matches.** The header showed only score + "FT" for completed matches, no indication of when the match was played, even though `formatKickoff()` (already used for upcoming matches) works fine on a past timestamp and the data already has full ISO kickoff timestamps on every FT match. Extracted the header's meta-row construction to a new exported `buildMatchMeta(fixture)` in `js/modules/match-centre.js`, following this file's established pure-function-extraction convention — date only shows for FT matches, since upcoming matches already show their kickoff time prominently elsewhere in the header.
+
+**2. Tab clicks showed "Page not found."** The `.mc-tab-strip`'s `<a href="#mc-group-X">` same-page anchors collided with this app's single global hash router — any hash change (including an ordinary same-page anchor click) triggers the router's `hashchange` listener, and `mc-group-match`/`mc-group-context`/etc. don't match any known route, so every tab click tore down the whole page and replaced it with `NotFoundModule`. Affected all four tabs in both FT and upcoming states. Fixed with a new `attachTabScrollHandlers()` that intercepts the click, `preventDefault()`s the hash change, and scrolls manually — `.mc-tab-group` already had `scroll-margin-top` set in CSS, apparently built anticipating exactly this, so no extra sticky-header offset math was needed.
+
+**3. Previous-XI lineup redesigned to a jersey-icon style, fixing an unreadable-text bug.** User provided a buildlineup.com-style reference image. Investigation found `Charts.renderLineup()`'s surname label used `fill="var(--color-text)"` — a CSS custom property that doesn't exist anywhere in `styles/theme.css` (real vars are `--color-text-primary`/`-secondary`/`-muted`) — silently falling back to SVG's default black fill, unreadable against the dark-green pitch. Replaced the plain-circle player nodes with a hand-drawn white jersey silhouette (shirt number in bold pitch-green text on the jersey) and the surname in larger (10px, was 6.5px), bold white text with a dark halo stroke — literal colors, not another CSS var, since the pitch is dark green in both site themes (matching this same function's existing halfway-line/penalty-box strokes, which already use literal colors for the identical reason — swapping in a different var would have just failed differently in light mode). Long surnames get `textLength` compression so a 5-wide tier can't overlap. Added a center circle/spot and goal boxes to the pitch markings; skipped corner arcs as disproportionate for the visual payoff. Layout constants grew modestly (`240×340` → `260×400`) to fit the larger node footprint, verified against the worst-case 5-row formation.
+
+**Verification:** `npm test` (88/88, 10 new tests across `test/match-story.test.mjs` and new `test/charts-lineup.test.mjs`), `npm run validate` clean throughout. Manual Playwright verification: all four tabs clicked in both an FT and an upcoming match's Match Centre, confirmed hash never changes and "Page not found" never appears; lineup screenshot (France v Morocco QF preview) confirmed jerseys, numbers, and names all render clearly.
+
+---
+
 ## Decisions resolved (2026-07-06)
 
 1. ~~Sprint 38 scheduling~~ — **dedicated design session**, not inline.
