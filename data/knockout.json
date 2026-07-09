@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-09T12:01:10.493Z",
+  "lastUpdated": "2026-07-09T12:15:59.755Z",
   "data": [
     {
       "id": "r32",
@@ -291,10 +291,10 @@
           "awayLabel": null,
           "homeTeamId": "usa",
           "awayTeamId": "belgium",
-          "homeScore": 0,
-          "awayScore": 1,
+          "homeScore": 1,
+          "awayScore": 4,
           "kickoff": "2026-07-07T00:00:00Z",
-          "status": "live",
+          "status": "FT",
           "venue": "Lumen Field, Seattle",
           "broadcaster": "BBC"
         },
@@ -304,10 +304,10 @@
           "awayLabel": null,
           "homeTeamId": "argentina",
           "awayTeamId": "egypt",
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 3,
+          "awayScore": 2,
           "kickoff": "2026-07-07T16:00:00Z",
-          "status": "scheduled",
+          "status": "FT",
           "venue": "Mercedes-Benz Stadium, Atlanta",
           "broadcaster": "ITV"
         },
@@ -317,10 +317,10 @@
           "awayLabel": null,
           "homeTeamId": "switzerland",
           "awayTeamId": "colombia",
-          "homeScore": null,
-          "awayScore": null,
+          "homeScore": 4,
+          "awayScore": 3,
           "kickoff": "2026-07-07T20:00:00Z",
-          "status": "scheduled",
+          "status": "FT",
           "venue": "BC Place, Vancouver",
           "broadcaster": "ITV"
         }
@@ -348,13 +348,13 @@
           "homeLabel": null,
           "awayLabel": null,
           "homeTeamId": "spain",
-          "awayTeamId": null,
+          "awayTeamId": "belgium",
           "homeScore": null,
           "awayScore": null,
-          "kickoff": "2026-07-10",
+          "kickoff": "2026-07-10T19:00:00Z",
           "status": "scheduled",
           "venue": "SoFi Stadium, Inglewood",
-          "broadcaster": null
+          "broadcaster": "BBC"
         },
         {
           "id": "qf-m3",
@@ -373,14 +373,14 @@
           "id": "qf-m4",
           "homeLabel": null,
           "awayLabel": null,
-          "homeTeamId": null,
-          "awayTeamId": null,
+          "homeTeamId": "argentina",
+          "awayTeamId": "switzerland",
           "homeScore": null,
           "awayScore": null,
           "kickoff": "2026-07-11",
           "status": "scheduled",
           "venue": "Arrowhead Stadium, Kansas City",
-          "broadcaster": null
+          "broadcaster": "ITV"
         }
       ]
     },
