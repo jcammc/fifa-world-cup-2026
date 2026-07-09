@@ -2,7 +2,7 @@ import { DataManager } from '../data.js';
 import { formatKickoff } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { buildBracketProjection } from '../tournament-state.js';
-import { getFeederMatchIds, getSidePartition, deriveWinnerId } from '../bracket-topology.js';
+import { getFeederMatchIds, getSidePartition, deriveWinnerId, bracketSortKey } from '../bracket-topology.js';
 
 // ─── Pure match-card builders ────────────────────────────────
 //
@@ -294,7 +294,9 @@ export class KnockoutBracket {
     const byRoundId = new Map(this.#rounds.map(r => [r.id, r]));
 
     const sideMatches = (roundId, sideSet) =>
-      (byRoundId.get(roundId)?.matches ?? []).filter(m => sideSet.has(m.id));
+      (byRoundId.get(roundId)?.matches ?? [])
+        .filter(m => sideSet.has(m.id))
+        .sort((a, b) => bracketSortKey(a.id) - bracketSortKey(b.id));
 
     const ROUND_ORDER = ['r32', 'r16', 'qf', 'sf'];
     const columns = [];
@@ -313,7 +315,9 @@ export class KnockoutBracket {
     columns.push({
       id: 'final',
       label: finalRound?.label ?? 'Final',
-      matches: finalRound?.matches ?? [],
+      // Copy before sorting — finalRound.matches is the live shared data
+      // array and must not be mutated in place across re-renders.
+      matches: [...(finalRound?.matches ?? [])].sort((a, b) => bracketSortKey(a.id) - bracketSortKey(b.id)),
       mirrored: false,
       extraHtml: buildChampionBox(finalMatch, this.#countryMap),
     });

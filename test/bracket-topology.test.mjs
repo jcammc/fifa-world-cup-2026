@@ -13,6 +13,7 @@ import {
   resolvePropagatedSlots,
   getBracketSide,
   getSidePartition,
+  bracketSortKey,
   PROPAGATION,
 } from '../js/bracket-topology.js';
 
@@ -196,4 +197,66 @@ test('propagation-integrity: getSidePartition is exhaustive, disjoint, and corre
   assert.equal(countInRound(right, byRound.qf), 2);
   assert.deepEqual(left.filter(id => byRound.sf.includes(id)), ['sf-m1']);
   assert.deepEqual(right.filter(id => byRound.sf.includes(id)), ['sf-m2']);
+});
+
+// Regression coverage for a Sprint 44 follow-up bug: the wallchart's R32
+// columns displayed matches in data/knockout.json's raw file order (the
+// real tournament's official match numbering), which does NOT track
+// bracket-tree adjacency — two matches that feed the same R16 slot could
+// end up with an unrelated match sitting visually between them, producing
+// a scattered/asymmetric look even though the underlying feeder data was
+// always correct. bracketSortKey() fixes this by deriving display order
+// from a depth-first walk down from each side's semifinal instead.
+
+test('bracketSortKey assigns every match a key derived from a DFS walk down from its side\'s semifinal', () => {
+  const expected = {
+    // Left side (sf-m1) — DFS order: qf-m1's subtree (r16-m1: m2,m5; r16-m2: m1,m3),
+    // then qf-m2's subtree (r16-m5: m11,m12; r16-m6: m9,m10).
+    'r32-m2': 0, 'r32-m5': 1, 'r32-m1': 2, 'r32-m3': 3,
+    'r32-m11': 4, 'r32-m12': 5, 'r32-m9': 6, 'r32-m10': 7,
+    // Right side (sf-m2), ranks offset by 8 — qf-m3's subtree (r16-m3: m4,m6;
+    // r16-m4: m7,m8), then qf-m4's subtree (r16-m7: m14,m16; r16-m8: m13,m15).
+    'r32-m4': 8, 'r32-m6': 9, 'r32-m7': 10, 'r32-m8': 11,
+    'r32-m14': 12, 'r32-m16': 13, 'r32-m13': 14, 'r32-m15': 15,
+    // Later rounds: each key is the min of its feeders' keys.
+    'r16-m1': 0, 'r16-m2': 2, 'r16-m5': 4, 'r16-m6': 6,
+    'r16-m3': 8, 'r16-m4': 10, 'r16-m7': 12, 'r16-m8': 14,
+    'qf-m1': 0, 'qf-m2': 4, 'qf-m3': 8, 'qf-m4': 12,
+    'sf-m1': 0, 'sf-m2': 8,
+    // Terminal matches tie (both fed by sf-m1 and sf-m2) — stable sort
+    // preserves whatever relative order they already had.
+    'final-m1': 0, '3rd-place': 0,
+  };
+
+  for (const [matchId, key] of Object.entries(expected)) {
+    assert.equal(bracketSortKey(matchId), key, `sort key for ${matchId}`);
+  }
+});
+
+test('bracketSortKey, applied to getSidePartition\'s output, fixes the exact R32 sibling-scattering bug and leaves R16/QF unchanged', () => {
+  const nonTerminalIds = Object.keys(PROPAGATION).filter(id => id !== 'final-m1' && id !== '3rd-place');
+  const rounds = [
+    { id: 'r32', matches: nonTerminalIds.filter(id => id.startsWith('r32-')).map(id => ({ id })) },
+    { id: 'r16', matches: nonTerminalIds.filter(id => id.startsWith('r16-')).map(id => ({ id })) },
+    { id: 'qf',  matches: nonTerminalIds.filter(id => id.startsWith('qf-')).map(id => ({ id })) },
+  ];
+  const { left, right } = getSidePartition(rounds);
+  const sortedIn = (ids, prefix) =>
+    ids.filter(id => id.startsWith(prefix)).sort((a, b) => bracketSortKey(a) - bracketSortKey(b));
+
+  // The actual bug: r32-m1/r32-m3 (siblings feeding r16-m2) and r32-m2/r32-m5
+  // (siblings feeding r16-m1) used to be scattered by data/knockout.json's
+  // raw file order (m1,m2,m3,m5,...) — this locks in that they're now
+  // adjacent, as two contiguous pairs.
+  assert.deepEqual(sortedIn(left, 'r32-'), ['r32-m2', 'r32-m5', 'r32-m1', 'r32-m3', 'r32-m11', 'r32-m12', 'r32-m9', 'r32-m10']);
+  // Same bug, mirrored: r32-m13/r32-m15 (feeding r16-m8) and r32-m14/r32-m16
+  // (feeding r16-m7) used to be scattered.
+  assert.deepEqual(sortedIn(right, 'r32-'), ['r32-m4', 'r32-m6', 'r32-m7', 'r32-m8', 'r32-m14', 'r32-m16', 'r32-m13', 'r32-m15']);
+
+  // R16 and QF never had this bug (their own numbering already keeps
+  // siblings adjacent) — confirm the fix doesn't disturb them.
+  assert.deepEqual(sortedIn(left, 'r16-'), ['r16-m1', 'r16-m2', 'r16-m5', 'r16-m6']);
+  assert.deepEqual(sortedIn(right, 'r16-'), ['r16-m3', 'r16-m4', 'r16-m7', 'r16-m8']);
+  assert.deepEqual(sortedIn(left, 'qf-'), ['qf-m1', 'qf-m2']);
+  assert.deepEqual(sortedIn(right, 'qf-'), ['qf-m3', 'qf-m4']);
 });

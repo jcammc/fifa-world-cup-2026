@@ -136,6 +136,40 @@ export function getSidePartition(rounds) {
   return { left, right };
 }
 
+// ── Wallchart display-order sort key (Sprint 44 follow-up) ────────────────
+//
+// Derived by walking DOWN from each side's semifinal (sf-m1/sf-m2) through
+// getFeederMatchIds() — NOT from each match's own official match number.
+// data/knockout.json's r32 array follows the real tournament's official
+// numbering (M73..M88), which does not track bracket-tree adjacency, so
+// sorting by that number directly is a no-op against the exact scattering
+// this key exists to fix. This DFS visits a match's two feeders
+// consecutively at every level, so all R32 descendants of any subtree land
+// in one contiguous block — siblings that feed the same later-round match
+// always end up adjacent once a round's matches are sorted by this key.
+
+function dfsLeafOrder(matchId) {
+  const feeders = getFeederMatchIds(matchId);
+  if (feeders.length === 0) return [matchId]; // matchId is itself an R32 leaf
+  return feeders.flatMap(dfsLeafOrder);
+}
+
+const LEAF_RANK = (() => {
+  const map = new Map();
+  let rank = 0;
+  for (const sideRoot of ['sf-m1', 'sf-m2']) {
+    for (const leafId of dfsLeafOrder(sideRoot)) map.set(leafId, rank++);
+  }
+  return map;
+})();
+
+export function bracketSortKey(matchId) {
+  const leafRank = LEAF_RANK.get(matchId);
+  if (leafRank != null) return leafRank;
+  const feederKeys = getFeederMatchIds(matchId).map(bracketSortKey).filter(k => k != null);
+  return feederKeys.length ? Math.min(...feederKeys) : null;
+}
+
 // ── Winner/loser derivation from a stored match's own scores ──────────────
 //
 // Pure — takes a match object shaped like a data/knockout.json entry
