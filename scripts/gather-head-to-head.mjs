@@ -230,10 +230,12 @@ const GROUP_PAGES = [
 
 const KNOCKOUT_PAGES = [
   '2026_FIFA_World_Cup_round_of_32',
-  '2026_FIFA_World_Cup_round_of_16',
-  '2026_FIFA_World_Cup_quarter-finals',
-  '2026_FIFA_World_Cup_semi-finals',
-  '2026_FIFA_World_Cup_Final',
+  // Wikipedia merged R16/QF/SF into one article after the Round of 32 concluded;
+  // the old per-round titles (round_of_16, quarter-finals, semi-finals) now just
+  // redirect here, and action=parse doesn't follow redirects, so a stale title
+  // silently returns the empty redirect stub (0 sections) instead of erroring.
+  '2026_FIFA_World_Cup_knockout_stage',
+  '2026_FIFA_World_Cup_final',
 ];
 
 async function main() {
