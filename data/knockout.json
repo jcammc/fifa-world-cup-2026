@@ -399,7 +399,7 @@
           "kickoff": "2026-07-14",
           "status": "scheduled",
           "venue": "AT&T Stadium, Arlington",
-          "broadcaster": null
+          "broadcaster": "ITV"
         },
         {
           "id": "sf-m2",
@@ -412,7 +412,7 @@
           "kickoff": "2026-07-15",
           "status": "scheduled",
           "venue": "Mercedes-Benz Stadium, Atlanta",
-          "broadcaster": null
+          "broadcaster": "BBC"
         }
       ]
     },
@@ -432,7 +432,7 @@
           "status": "scheduled",
           "venue": "Hard Rock Stadium, Miami Gardens",
           "matchLabel": "3rd Place",
-          "broadcaster": null
+          "broadcaster": "BBC"
         },
         {
           "id": "final-m1",
@@ -446,7 +446,7 @@
           "status": "scheduled",
           "venue": "MetLife Stadium, East Rutherford",
           "matchLabel": "Final",
-          "broadcaster": null
+          "broadcaster": "BBC"
         }
       ]
     }

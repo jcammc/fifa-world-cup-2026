@@ -5,3 +5,6 @@ Thumbs.db
 .env
 .env.local
 data/.h2h-checkpoint.json
+
+# Local Netlify folder
+.netlify
