@@ -1,5 +1,5 @@
 import { DataManager } from '../data.js';
-import { formatKickoff } from '../time.js';
+import { formatKickoff, formatDate } from '../time.js';
 import { escapeHtml } from '../utils.js';
 import { Charts } from '../charts.js';
 import { getMatchImplication, deriveRecentForm } from '../tournament-state.js';
@@ -136,6 +136,96 @@ export function buildH2HStatsGrids(stats, home, away) {
     </div>`;
 }
 
+// Known competition name → short badge label/class. Falls back to the raw
+// name for anything unmapped (e.g. a future manual override citing a
+// competition not seen yet, like Copa América) — same badge pattern already
+// used for match status (badge--ft/--live in the header meta row).
+const COMPETITION_LABELS = {
+  'FIFA World Cup':         { label: 'World Cup', mod: 'wc' },
+  'European Championship':  { label: 'EURO',       mod: 'euro' },
+  'Copa América':           { label: 'Copa América', mod: 'copa' },
+  'Friendly':               { label: 'Friendly',  mod: 'friendly' },
+};
+
+export function competitionBadge(name) {
+  if (!name) return '';
+  const known = COMPETITION_LABELS[name];
+  const label = known?.label ?? name;
+  const mod   = known?.mod ?? 'other';
+  return `<span class="badge badge--comp badge--comp-${mod}">${escapeHtml(label)}</span>`;
+}
+
+// Renders the individual-match history list shared by both the completed-
+// and upcoming-match branches of buildHeadToHeadSection() below. `stats` is
+// the fixture's headToHeadStats object (or null if never fetched at all —
+// distinct from "fetched, confirmed zero meetings", see below).
+//
+// Four distinct states, deliberately not conflated:
+//   1. stats is null           → never fetched; neutral "not yet available".
+//   2. 0 rows, not capped      → confirmed genuine zero — "No previous meetings".
+//   3. 0 rows, capped          → history exists but nothing verified yet — same
+//                                 neutral wording as (1), since from the user's
+//                                 point of view both mean "we don't actually know".
+//   4. rows exist              → render the table; capped rows get a caveat
+//                                 ("Showing N of trueTotal" when the real total
+//                                 is known, otherwise a generic incomplete note —
+//                                 manual overrides that only verified some
+//                                 matches have no true total to compare against).
+export function buildMatchHistoryList(stats) {
+  const NOT_YET_AVAILABLE = '<p class="mc-h2h-history-empty">History not yet available.</p>';
+
+  if (!stats) return NOT_YET_AVAILABLE;
+
+  const rows = [...(stats.matches ?? [])].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const trueTotal = stats.meta?.trueTotal?.allTime ?? null;
+  // autoCapped is set once, at automated-fetch time, and never re-evaluated —
+  // a manual override that explicitly resolved the allTime scope (not just
+  // worldCup) supersedes it: that fixture's history is genuinely complete
+  // now, even though the stale flag still says "capped". An override that
+  // only resolved worldCup (allTime deliberately left open, e.g. a pair with
+  // known-incomplete all-time research) does NOT clear this — allTime really
+  // is still incomplete for those.
+  const resolvedByOverride = !!stats.meta?.manualSupplement?.scopes?.includes('allTime');
+  const capped = !!stats.meta?.autoCapped?.allTime && !resolvedByOverride;
+
+  if (rows.length === 0) {
+    return capped ? NOT_YET_AVAILABLE : '<p class="mc-h2h-history-empty">No previous meetings.</p>';
+  }
+
+  const rowsHtml = rows.map(m => {
+    const homeName = escapeHtml(m.homeTeam ?? '');
+    const awayName = escapeHtml(m.awayTeam ?? '');
+    const hs = m.homeScore, as = m.awayScore;
+    const scoreKnown = hs != null && as != null;
+    const homeWon = scoreKnown && hs > as;
+    const awayWon = scoreKnown && as > hs;
+    const scoreStr = scoreKnown ? `${hs}–${as}` : '—';
+
+    return `<tr>
+      <td class="mc-h2h-history__date">${escapeHtml(formatDate(m.date))}</td>
+      <td class="mc-h2h-history__comp">${competitionBadge(m.competition)}</td>
+      <td class="mc-h2h-history__result">
+        <span class="${homeWon ? 'mc-h2h-history__winner' : ''}">${homeName}</span>
+        <span class="mc-h2h-history__score">${scoreStr}</span>
+        <span class="${awayWon ? 'mc-h2h-history__winner' : ''}">${awayName}</span>
+      </td>
+    </tr>`;
+  }).join('');
+
+  const caveat = capped
+    ? (trueTotal != null && trueTotal > rows.length
+        ? `<p class="mc-h2h-history-caveat">Showing ${rows.length} of ${trueTotal} previous meetings.</p>`
+        : `<p class="mc-h2h-history-caveat">Only verified meetings shown — full history may be incomplete.</p>`)
+    : '';
+
+  return `
+    <table class="mc-h2h-history-table">
+      <thead><tr><th>Date</th><th>Competition</th><th>Result</th></tr></thead>
+      <tbody>${rowsHtml}</tbody>
+    </table>
+    ${caveat}`;
+}
+
 export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, home = null, away = null) {
   const entry = matchPreviews?.data?.[fixtureId];
   if (!entry) return '';
@@ -145,7 +235,8 @@ export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, h
   const h2hProse = entry.headToHead ?? '';
 
   // Stats grids (World Cup + all-time, side by side conceptually, stacked in markup)
-  const statsHtml = stats ? buildH2HStatsGrids(stats, home, away) : '';
+  const statsHtml   = stats ? buildH2HStatsGrids(stats, home, away) : '';
+  const historyHtml = buildMatchHistoryList(stats);
 
   if (isFT) {
     // Completed match: "Match Story" section.
@@ -165,16 +256,15 @@ export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, h
 
     const proseHtml = primaryProse
       ? `<blockquote class="mc-hth">${escapeHtml(primaryProse)}</blockquote>` : '';
-    // Only surface h2hProse a second time in the details block if it's genuinely
-    // distinct extra content (i.e. story already took the primary blockquote slot).
-    const extraProse = (story && h2hProse) ? h2hProse : '';
-    const historyDetails = (statsHtml || extraProse)
-      ? `<details class="mc-hth-details">
-          <summary class="mc-hth-details__toggle">Head-to-Head History</summary>
-          ${statsHtml}
-          ${extraProse ? `<p class="mc-hth-prose">${escapeHtml(extraProse)}</p>` : ''}
-        </details>`
-      : '';
+    // The History details toggle always renders once the section itself does —
+    // it no longer hides just because there's nothing structured to show; the
+    // match-history list itself communicates "not yet available"/"no meetings"
+    // rather than the toggle vanishing silently.
+    const historyDetails = `<details class="mc-hth-details">
+        <summary class="mc-hth-details__toggle">Head-to-Head History</summary>
+        ${statsHtml}
+        ${historyHtml}
+      </details>`;
     return `
       <div class="mc-section">
         <h2 class="mc-section__title">Match Story</h2>
@@ -182,19 +272,17 @@ export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, h
         ${historyDetails}
       </div>`;
   } else {
-    // Upcoming match: "Head-to-Head" section (World Cup history prose + both stat grids)
+    // Upcoming match: "Head-to-Head" section (stat grids + match-history table)
     if (!statsHtml && !h2hProse) return '';
-    const proseDetails = h2hProse
-      ? `<details class="mc-hth-details">
-          <summary class="mc-hth-details__toggle">History notes</summary>
-          <p class="mc-hth-prose">${escapeHtml(h2hProse)}</p>
-        </details>`
-      : '';
+    const historyDetails = `<details class="mc-hth-details">
+        <summary class="mc-hth-details__toggle">History notes</summary>
+        ${historyHtml}
+      </details>`;
     return `
       <div class="mc-section">
         <h2 class="mc-section__title">Head-to-Head</h2>
         ${statsHtml}
-        ${proseDetails}
+        ${historyDetails}
       </div>`;
   }
 }

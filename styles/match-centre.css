@@ -734,6 +734,78 @@
   white-space: nowrap;
 }
 
+/* ─── H2H match-history table (individual results, not prose) ─── */
+
+.mc-h2h-history-empty {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin: var(--space-3) 0 0;
+}
+
+.mc-h2h-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-3);
+}
+
+.mc-h2h-history-table th {
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mc-h2h-history-table td {
+  padding: var(--space-2);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.mc-h2h-history__date {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.mc-h2h-history__result {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.mc-h2h-history__winner {
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.mc-h2h-history__score {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+.mc-h2h-history-caveat {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: var(--space-2) 0 0;
+}
+
+/* Competition badges — same base .badge as match-status badges (utilities.css) */
+
+.badge--comp {
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+}
+
+.badge--comp-wc       { background: rgba(96, 165, 250, 0.15); color: #60a5fa; }
+.badge--comp-euro     { background: rgba(167, 139, 250, 0.15); color: #a78bfa; }
+.badge--comp-copa     { background: rgba(251, 191, 36, 0.15); color: var(--color-warning); }
+.badge--comp-friendly { background: var(--color-badge-bg); color: var(--color-badge-text); }
+
 /* ─── Previous starting XI ────────────────────────────────── */
 
 .mc-lineups {

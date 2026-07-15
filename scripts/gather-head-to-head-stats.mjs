@@ -133,6 +133,12 @@ async function fetchHeadToHead(fdMatchId, homeTeamId, awayTeamId, fdTeamIdOf) {
       // possibly-incomplete too, conservatively, rather than asserting completeness
       // we can't actually verify.
       autoCapped: { allTime: capped, worldCup: capped },
+      // The true total (used by the UI to say "showing 2 of 7") — only meaningful
+      // for allTime, since there's no independent per-competition total to trust
+      // for worldCup (see comment above). Always the real API-reported count, even
+      // when not capped (harmless/unused in that case, but keeps the field's
+      // meaning consistent rather than sometimes-present).
+      trueTotal: { allTime: trueTotal, worldCup: null },
       manualSupplement: null,
     },
   };
@@ -151,6 +157,14 @@ function applyManualSupplement(auto, override) {
   const merged = structuredClone(auto);
   for (const scope of override.scopes ?? []) {
     merged[scope] = { ...override.data[scope] };
+  }
+  // override.matches, when present, is the complete verified history for this
+  // fixture and REPLACES the automated list wholesale — never merged/deduped
+  // against it. A manual override exists precisely because the automated fetch
+  // couldn't confirm completeness, so treating its partial rows as a base to
+  // merge onto risks mixing unverified rows in with verified ones.
+  if (override.matches) {
+    merged.matches = override.matches;
   }
   merged.meta.manualSupplement = {
     scopes: override.scopes,

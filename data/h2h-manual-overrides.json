@@ -7,7 +7,10 @@
     "data": {
       "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 3, "lastMeeting": "1998-06-23" },
       "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 3, "lastMeeting": "1998-06-23" }
-    }
+    },
+    "matches": [
+      { "date": "1998-06-23", "competition": "FIFA World Cup", "homeTeam": "Scotland", "awayTeam": "Morocco", "homeScore": 0, "awayScore": 3 }
+    ]
   },
   "i-r1-fra-sen": {
     "scopes": ["allTime", "worldCup"],
@@ -17,7 +20,10 @@
     "data": {
       "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 1, "lastMeeting": "2002-05-31" },
       "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 1, "lastMeeting": "2002-05-31" }
-    }
+    },
+    "matches": [
+      { "date": "2002-05-31", "competition": "FIFA World Cup", "homeTeam": "France", "awayTeam": "Senegal", "homeScore": 0, "awayScore": 1 }
+    ]
   },
   "j-r3-alg-aut": {
     "scopes": ["allTime", "worldCup"],
@@ -27,7 +33,10 @@
     "data": {
       "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 2, "lastMeeting": "1982-06-21" },
       "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 2, "lastMeeting": "1982-06-21" }
-    }
+    },
+    "matches": [
+      { "date": "1982-06-21", "competition": "FIFA World Cup", "homeTeam": "Algeria", "awayTeam": "Austria", "homeScore": 0, "awayScore": 2 }
+    ]
   },
   "l-r3-pan-eng": {
     "scopes": ["allTime", "worldCup"],
@@ -37,7 +46,10 @@
     "data": {
       "allTime":  { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 1, "awayGoals": 6, "lastMeeting": "2018-06-24" },
       "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 1, "awayGoals": 6, "lastMeeting": "2018-06-24" }
-    }
+    },
+    "matches": [
+      { "date": "2018-06-24", "competition": "FIFA World Cup", "homeTeam": "Panama", "awayTeam": "England", "homeScore": 1, "awayScore": 6 }
+    ]
   },
   "e-r3-ecu-ger": {
     "scopes": ["allTime", "worldCup"],
@@ -47,7 +59,11 @@
     "data": {
       "allTime":  { "meetings": 2, "homeWins": 0, "awayWins": 2, "draws": 0, "homeGoals": 2, "awayGoals": 7, "lastMeeting": "2013-05-29" },
       "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 3, "lastMeeting": "2006-06-20" }
-    }
+    },
+    "matches": [
+      { "date": "2006-06-20", "competition": "FIFA World Cup", "homeTeam": "Ecuador", "awayTeam": "Germany", "homeScore": 0, "awayScore": 3 },
+      { "date": "2013-05-29", "competition": "Friendly", "homeTeam": "Ecuador", "awayTeam": "Germany", "homeScore": 2, "awayScore": 4 }
+    ]
   },
   "c-r3-sco-bra": {
     "scopes": ["worldCup"],
@@ -56,7 +72,13 @@
     "note": "Scotland and Brazil had met at the World Cup on four prior occasions before this 2026 fixture (all in the group stage): 1974 draw, then three Brazil wins (1982, 1990, 1998). All-time (all-competitions) record — 10 meetings, Brazil 8 wins/2 draws per secondary sources — NOT included here: only 5 of the 10 individual scorelines could be independently confirmed, so exact goal aggregates for all-time remain unresolved. allTime scope intentionally left on the automated/capped value pending further research.",
     "data": {
       "worldCup": { "meetings": 4, "homeWins": 0, "awayWins": 3, "draws": 1, "homeGoals": 2, "awayGoals": 7, "lastMeeting": "1998-06-10" }
-    }
+    },
+    "matches": [
+      { "date": "1974-06-18", "competition": "FIFA World Cup", "homeTeam": "Scotland", "awayTeam": "Brazil", "homeScore": 0, "awayScore": 0 },
+      { "date": "1982-06-18", "competition": "FIFA World Cup", "homeTeam": "Scotland", "awayTeam": "Brazil", "homeScore": 1, "awayScore": 4 },
+      { "date": "1990-06-20", "competition": "FIFA World Cup", "homeTeam": "Scotland", "awayTeam": "Brazil", "homeScore": 0, "awayScore": 1 },
+      { "date": "1998-06-10", "competition": "FIFA World Cup", "homeTeam": "Scotland", "awayTeam": "Brazil", "homeScore": 1, "awayScore": 2 }
+    ]
   },
   "h-r3-uru-esp": {
     "scopes": ["worldCup"],
@@ -65,6 +87,10 @@
     "note": "Uruguay and Spain had met at the World Cup twice before this 2026 fixture, both draws (1950, 1990). All-time (all-competitions) record — 10 total meetings per prose — NOT included here: only 3 of the 10 individual scorelines are confirmed, so all-time goal aggregates remain unresolved. allTime scope intentionally left on the automated/capped value pending further research.",
     "data": {
       "worldCup": { "meetings": 2, "homeWins": 0, "awayWins": 0, "draws": 2, "homeGoals": 2, "awayGoals": 2, "lastMeeting": "1990-06-17" }
-    }
+    },
+    "matches": [
+      { "date": "1950-07-09", "competition": "FIFA World Cup", "homeTeam": "Uruguay", "awayTeam": "Spain", "homeScore": 2, "awayScore": 2 },
+      { "date": "1990-06-17", "competition": "FIFA World Cup", "homeTeam": "Uruguay", "awayTeam": "Spain", "homeScore": 0, "awayScore": 0 }
+    ]
   }
 }
