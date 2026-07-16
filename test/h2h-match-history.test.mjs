@@ -1,9 +1,9 @@
 // Coverage for buildMatchHistoryList() and competitionBadge() — the
 // match-results table that replaced the old Wikipedia-prose "History
-// notes"/"Head-to-Head History" toggle content. Four states, deliberately
+// notes"/"Head-to-Head History" toggle content. Three states, deliberately
 // distinct (see the function's own header comment in match-centre.js):
-// never-fetched, confirmed-zero, capped-with-nothing-verified, and
-// rows-present (with or without a known true total).
+// nothing-verified-yet (renders nothing, not a placeholder sentence),
+// confirmed-zero, and rows-present (with or without a known true total).
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { JSDOM } from 'jsdom';
@@ -14,10 +14,8 @@ globalThis.document = dom.window.document;
 
 const { buildMatchHistoryList, competitionBadge } = await import('../js/modules/match-centre.js');
 
-test('stats is null (never fetched) renders a neutral "not yet available" message, not "no previous meetings"', () => {
-  const html = buildMatchHistoryList(null);
-  assert.match(html, /not yet available/i);
-  assert.doesNotMatch(html, /no previous meetings/i);
+test('stats is null (never fetched) renders nothing at all — no placeholder sentence', () => {
+  assert.equal(buildMatchHistoryList(null), '');
 });
 
 test('confirmed zero meetings (not capped) renders "No previous meetings"', () => {
@@ -26,11 +24,9 @@ test('confirmed zero meetings (not capped) renders "No previous meetings"', () =
   assert.match(html, /no previous meetings/i);
 });
 
-test('capped with zero verified rows renders the neutral "not yet available" message, not "no previous meetings"', () => {
+test('capped with zero verified rows renders nothing — a research gap, not something to paper over with a sentence', () => {
   const stats = { matches: [], meta: { autoCapped: { allTime: true }, trueTotal: { allTime: 7 } } };
-  const html = buildMatchHistoryList(stats);
-  assert.match(html, /not yet available/i);
-  assert.doesNotMatch(html, /no previous meetings/i);
+  assert.equal(buildMatchHistoryList(stats), '');
 });
 
 test('capped with partial rows and a known true total shows "Showing X of Y"', () => {

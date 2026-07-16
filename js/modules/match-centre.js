@@ -160,21 +160,21 @@ export function competitionBadge(name) {
 // the fixture's headToHeadStats object (or null if never fetched at all —
 // distinct from "fetched, confirmed zero meetings", see below).
 //
-// Four distinct states, deliberately not conflated:
-//   1. stats is null           → never fetched; neutral "not yet available".
-//   2. 0 rows, not capped      → confirmed genuine zero — "No previous meetings".
-//   3. 0 rows, capped          → history exists but nothing verified yet — same
-//                                 neutral wording as (1), since from the user's
-//                                 point of view both mean "we don't actually know".
-//   4. rows exist              → render the table; capped rows get a caveat
-//                                 ("Showing N of trueTotal" when the real total
-//                                 is known, otherwise a generic incomplete note —
-//                                 manual overrides that only verified some
-//                                 matches have no true total to compare against).
+// Three distinct states, deliberately not conflated:
+//   1. stats is null, OR 0 rows and capped → nothing verified yet — render
+//      NOTHING (not a placeholder sentence). Whatever the automated source
+//      couldn't confirm is a manual-research gap to close (see
+//      data/h2h-manual-overrides.json), not something to paper over with
+//      "not yet available" text — the aggregate stats grid above already
+//      shows whatever real numbers exist.
+//   2. 0 rows, not capped                  → confirmed genuine zero, a real
+//      fact worth stating — "No previous meetings".
+//   3. rows exist                          → render the table; capped rows
+//      get a caveat ("Showing N of trueTotal" when the real total is known,
+//      otherwise a generic incomplete note — manual overrides that only
+//      verified some matches have no true total to compare against).
 export function buildMatchHistoryList(stats) {
-  const NOT_YET_AVAILABLE = '<p class="mc-h2h-history-empty">History not yet available.</p>';
-
-  if (!stats) return NOT_YET_AVAILABLE;
+  if (!stats) return '';
 
   const rows = [...(stats.matches ?? [])].sort((a, b) => new Date(b.date) - new Date(a.date));
   const trueTotal = stats.meta?.trueTotal?.allTime ?? null;
@@ -189,7 +189,7 @@ export function buildMatchHistoryList(stats) {
   const capped = !!stats.meta?.autoCapped?.allTime && !resolvedByOverride;
 
   if (rows.length === 0) {
-    return capped ? NOT_YET_AVAILABLE : '<p class="mc-h2h-history-empty">No previous meetings.</p>';
+    return capped ? '' : '<p class="mc-h2h-history-empty">No previous meetings.</p>';
   }
 
   const rowsHtml = rows.map(m => {
@@ -256,15 +256,18 @@ export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, h
 
     const proseHtml = primaryProse
       ? `<blockquote class="mc-hth">${escapeHtml(primaryProse)}</blockquote>` : '';
-    // The History details toggle always renders once the section itself does —
-    // it no longer hides just because there's nothing structured to show; the
-    // match-history list itself communicates "not yet available"/"no meetings"
-    // rather than the toggle vanishing silently.
-    const historyDetails = `<details class="mc-hth-details">
-        <summary class="mc-hth-details__toggle">Head-to-Head History</summary>
-        ${statsHtml}
-        ${historyHtml}
-      </details>`;
+    // The History details toggle renders whenever there's SOMETHING inside it
+    // (a stats grid or history rows) — not unconditionally, since
+    // buildMatchHistoryList() can now legitimately return '' (nothing
+    // verified yet), and a toggle that expands to a completely empty box is
+    // worse than no toggle at all.
+    const historyDetails = (statsHtml || historyHtml)
+      ? `<details class="mc-hth-details">
+          <summary class="mc-hth-details__toggle">Head-to-Head History</summary>
+          ${statsHtml}
+          ${historyHtml}
+        </details>`
+      : '';
     return `
       <div class="mc-section">
         <h2 class="mc-section__title">Match Story</h2>
@@ -274,10 +277,12 @@ export function buildHeadToHeadSection(fixtureId, matchPreviews, isFT = false, h
   } else {
     // Upcoming match: "Head-to-Head" section (stat grids + match-history table)
     if (!statsHtml && !h2hProse) return '';
-    const historyDetails = `<details class="mc-hth-details">
-        <summary class="mc-hth-details__toggle">History notes</summary>
-        ${historyHtml}
-      </details>`;
+    const historyDetails = historyHtml
+      ? `<details class="mc-hth-details">
+          <summary class="mc-hth-details__toggle">History notes</summary>
+          ${historyHtml}
+        </details>`
+      : '';
     return `
       <div class="mc-section">
         <h2 class="mc-section__title">Head-to-Head</h2>

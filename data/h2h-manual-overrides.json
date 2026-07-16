@@ -92,5 +92,275 @@
       { "date": "1950-07-09", "competition": "FIFA World Cup", "homeTeam": "Uruguay", "awayTeam": "Spain", "homeScore": 2, "awayScore": 2 },
       { "date": "1990-06-17", "competition": "FIFA World Cup", "homeTeam": "Uruguay", "awayTeam": "Spain", "homeScore": 0, "awayScore": 0 }
     ]
+  },
+  "sf-m2": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against the Argentina–England football rivalry Wikipedia article and multiple named sports outlets (ESPN, Yahoo Sports, FOX Sports); every individual date/score verified against at least one dedicated match-report source.",
+    "suppliedAt": "2026-07-15",
+    "note": "England and Argentina have met 5 times at the World Cup (1962, 1966, 1986, 1998, 2002) — confident this is the complete World Cup record. All-time: 11 matches verified (1951–2005), used as the allTime aggregate even though at least one source cites 15 total prior meetings — the 11 are real and fully sourced, the aggregate is a known floor rather than a fabricated total.",
+    "data": {
+      "allTime":  { "meetings": 11, "homeWins": 6, "awayWins": 2, "draws": 3, "homeGoals": 19, "awayGoals": 13, "lastMeeting": "2005-11-12" },
+      "worldCup": { "meetings": 5, "homeWins": 3, "awayWins": 1, "draws": 1, "homeGoals": 8, "awayGoals": 5, "lastMeeting": "2002-06-07" }
+    },
+    "matches": [
+      { "date": "1951-05-09", "competition": "Friendly", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 2, "awayScore": 1 },
+      { "date": "1962-06-02", "competition": "FIFA World Cup", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 3, "awayScore": 1 },
+      { "date": "1964-06-06", "competition": "Friendly", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 0, "awayScore": 1 },
+      { "date": "1966-07-23", "competition": "FIFA World Cup", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 1, "awayScore": 0 },
+      { "date": "1974-05-14", "competition": "Friendly", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 2, "awayScore": 2 },
+      { "date": "1977-06-12", "competition": "Friendly", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 1, "awayScore": 1 },
+      { "date": "1980-05-13", "competition": "Friendly", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 3, "awayScore": 1 },
+      { "date": "1986-06-22", "competition": "FIFA World Cup", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 1, "awayScore": 2 },
+      { "date": "1998-06-30", "competition": "FIFA World Cup", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 2, "awayScore": 2 },
+      { "date": "2002-06-07", "competition": "FIFA World Cup", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 1, "awayScore": 0 },
+      { "date": "2005-11-12", "competition": "Friendly", "homeTeam": "England", "awayTeam": "Argentina", "homeScore": 3, "awayScore": 2 }
+    ]
+  },
+  "qf-m2": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against multiple named sports outlets (ESPN, Bolavip, Sports Mole, Yahoo Sports); each date/score independently confirmed.",
+    "suppliedAt": "2026-07-15",
+    "note": "Spain and Belgium have met twice at the World Cup (1986, 1990) — confident this is the complete World Cup record. All-time: 3 matches verified, used as a known floor even though a claimed 22 total meetings isn't fully resolved.",
+    "data": {
+      "allTime":  { "meetings": 3, "homeWins": 2, "awayWins": 0, "draws": 1, "homeGoals": 5, "awayGoals": 2, "lastMeeting": "2016-09-01" },
+      "worldCup": { "meetings": 2, "homeWins": 1, "awayWins": 0, "draws": 1, "homeGoals": 3, "awayGoals": 2, "lastMeeting": "1990-06-21" }
+    },
+    "matches": [
+      { "date": "1986-06-22", "competition": "FIFA World Cup", "homeTeam": "Spain", "awayTeam": "Belgium", "homeScore": 1, "awayScore": 1 },
+      { "date": "1990-06-21", "competition": "FIFA World Cup", "homeTeam": "Spain", "awayTeam": "Belgium", "homeScore": 2, "awayScore": 1 },
+      { "date": "2016-09-01", "competition": "Friendly", "homeTeam": "Spain", "awayTeam": "Belgium", "homeScore": 2, "awayScore": 0 }
+    ]
+  },
+  "qf-m4": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against Yahoo Sports, Bolavip, and Wikipedia's Switzerland at the FIFA World Cup article; both dates/scores independently confirmed.",
+    "suppliedAt": "2026-07-15",
+    "note": "Argentina and Switzerland have met twice at the World Cup (1966, 2014) — confident this is the complete World Cup record, and both were Argentina wins. All-time: these are the only 2 matches independently verified; used as a known floor even though a claimed 7 total meetings isn't fully resolved.",
+    "data": {
+      "allTime":  { "meetings": 2, "homeWins": 2, "awayWins": 0, "draws": 0, "homeGoals": 3, "awayGoals": 0, "lastMeeting": "2014-07-01" },
+      "worldCup": { "meetings": 2, "homeWins": 2, "awayWins": 0, "draws": 0, "homeGoals": 3, "awayGoals": 0, "lastMeeting": "2014-07-01" }
+    },
+    "matches": [
+      { "date": "1966-07-19", "competition": "FIFA World Cup", "homeTeam": "Argentina", "awayTeam": "Switzerland", "homeScore": 2, "awayScore": 0 },
+      { "date": "2014-07-01", "competition": "FIFA World Cup", "homeTeam": "Argentina", "awayTeam": "Switzerland", "homeScore": 1, "awayScore": 0 }
+    ]
+  },
+  "r16-m1": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against ESPN, 11v11-cited sources, and dedicated match reports for each of the 5 matches; every date/score independently confirmed.",
+    "suppliedAt": "2026-07-15",
+    "note": "Paraguay and France have met exactly 5 times all-time (1958, 1998, 2008, 2014, 2017), matching every source's stated total — confident this is complete for both scopes. Two of the five were World Cup meetings (1958, 1998).",
+    "data": {
+      "allTime":  { "meetings": 5, "homeWins": 0, "awayWins": 3, "draws": 2, "homeGoals": 4, "awayGoals": 14, "lastMeeting": "2017-06-02" },
+      "worldCup": { "meetings": 2, "homeWins": 0, "awayWins": 2, "draws": 0, "homeGoals": 3, "awayGoals": 8, "lastMeeting": "1998-06-28" }
+    },
+    "matches": [
+      { "date": "1958-06-08", "competition": "FIFA World Cup", "homeTeam": "Paraguay", "awayTeam": "France", "homeScore": 3, "awayScore": 7 },
+      { "date": "1998-06-28", "competition": "FIFA World Cup", "homeTeam": "Paraguay", "awayTeam": "France", "homeScore": 0, "awayScore": 1 },
+      { "date": "2008-05-31", "competition": "Friendly", "homeTeam": "Paraguay", "awayTeam": "France", "homeScore": 0, "awayScore": 0 },
+      { "date": "2014-06-01", "competition": "Friendly", "homeTeam": "Paraguay", "awayTeam": "France", "homeScore": 1, "awayScore": 1 },
+      { "date": "2017-06-02", "competition": "Friendly", "homeTeam": "Paraguay", "awayTeam": "France", "homeScore": 0, "awayScore": 5 }
+    ]
+  },
+  "r16-m3": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against ESPN, Yahoo Sports, and Sofascore; every date/score independently confirmed. \"Five times\" total per sources includes the 2026 fixture itself.",
+    "suppliedAt": "2026-07-15",
+    "note": "Brazil and Norway have met exactly 4 times prior to this 2026 fixture (1988, 1997, 1998, 2006) — confident this is complete for both scopes; Brazil have never beaten Norway. One of the four was a World Cup meeting (1998).",
+    "data": {
+      "allTime":  { "meetings": 4, "homeWins": 0, "awayWins": 2, "draws": 2, "homeGoals": 5, "awayGoals": 8, "lastMeeting": "2006-08-16" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 1, "awayGoals": 2, "lastMeeting": "1998-06-23" }
+    },
+    "matches": [
+      { "date": "1988-07-28", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Norway", "homeScore": 1, "awayScore": 1 },
+      { "date": "1997-05-30", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Norway", "homeScore": 2, "awayScore": 4 },
+      { "date": "1998-06-23", "competition": "FIFA World Cup", "homeTeam": "Brazil", "awayTeam": "Norway", "homeScore": 1, "awayScore": 2 },
+      { "date": "2006-08-16", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Norway", "homeScore": 1, "awayScore": 1 }
+    ]
+  },
+  "r16-m4": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against englandfootball.com, Bleacher Report, and multiple named match-report sources; every date/score independently confirmed. Matches the \"nine previous meetings\" total cited by multiple sources exactly.",
+    "suppliedAt": "2026-07-15",
+    "note": "Mexico and England have met exactly 9 times all-time (1959–2010) — confident this is complete for both scopes. One of the nine was a World Cup meeting (1966).",
+    "data": {
+      "allTime":  { "meetings": 9, "homeWins": 2, "awayWins": 6, "draws": 1, "homeGoals": 4, "awayGoals": 23, "lastMeeting": "2010-05-24" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 2, "lastMeeting": "1966-07-16" }
+    },
+    "matches": [
+      { "date": "1959-05-24", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 2, "awayScore": 1 },
+      { "date": "1961-05-10", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 0, "awayScore": 8 },
+      { "date": "1966-07-16", "competition": "FIFA World Cup", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 0, "awayScore": 2 },
+      { "date": "1969-06-01", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 0, "awayScore": 0 },
+      { "date": "1985-06-09", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 1, "awayScore": 0 },
+      { "date": "1986-05-17", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 0, "awayScore": 3 },
+      { "date": "1997-03-29", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 0, "awayScore": 2 },
+      { "date": "2001-05-25", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 0, "awayScore": 4 },
+      { "date": "2010-05-24", "competition": "Friendly", "homeTeam": "Mexico", "awayTeam": "England", "homeScore": 1, "awayScore": 3 }
+    ]
+  },
+  "r16-m5": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Direct Wikipedia fetch (Portugal–Spain football rivalry article) for the qualifying/tournament matches, cross-checked against Sports Mole and 11v11-cited sources.",
+    "suppliedAt": "2026-07-15",
+    "note": "Portugal and Spain have met twice at the World Cup itself (2010, 2018) — confident this is the complete World Cup record. All-time: 10 matches verified (including 2 WC qualifying ties, which don't count toward the worldCup scope), used as a known floor even though 42 total meetings is claimed.",
+    "data": {
+      "allTime":  { "meetings": 10, "homeWins": 1, "awayWins": 4, "draws": 5, "homeGoals": 11, "awayGoals": 25, "lastMeeting": "2025-06-08" },
+      "worldCup": { "meetings": 2, "homeWins": 0, "awayWins": 1, "draws": 1, "homeGoals": 3, "awayGoals": 4, "lastMeeting": "2018-06-15" }
+    },
+    "matches": [
+      { "date": "1934-03-11", "competition": "FIFA World Cup qualification", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 0, "awayScore": 9 },
+      { "date": "1934-03-18", "competition": "FIFA World Cup qualification", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 1, "awayScore": 2 },
+      { "date": "1950-04-02", "competition": "FIFA World Cup qualification", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 1, "awayScore": 5 },
+      { "date": "1950-04-09", "competition": "FIFA World Cup qualification", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 2, "awayScore": 2 },
+      { "date": "1984-06-17", "competition": "European Championship", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 1, "awayScore": 1 },
+      { "date": "2004-06-20", "competition": "European Championship", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 1, "awayScore": 0 },
+      { "date": "2010-06-29", "competition": "FIFA World Cup", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 0, "awayScore": 1 },
+      { "date": "2012-06-27", "competition": "European Championship", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 0, "awayScore": 0 },
+      { "date": "2018-06-15", "competition": "FIFA World Cup", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 3, "awayScore": 3 },
+      { "date": "2025-06-08", "competition": "UEFA Nations League", "homeTeam": "Portugal", "awayTeam": "Spain", "homeScore": 2, "awayScore": 2 }
+    ]
+  },
+  "r16-m6": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against a chronological stats summary (X/Twitter @stats_feed) and individual ESPN/11v11-cited match reports for each date.",
+    "suppliedAt": "2026-07-15",
+    "note": "USA and Belgium have met exactly 6 times prior to this 2026 fixture (1930–2014) — confident this is complete for both scopes. Two of the six were World Cup meetings (1930, 2014).",
+    "data": {
+      "allTime":  { "meetings": 6, "homeWins": 1, "awayWins": 5, "draws": 0, "homeGoals": 6, "awayGoals": 10, "lastMeeting": "2014-07-01" },
+      "worldCup": { "meetings": 2, "homeWins": 1, "awayWins": 1, "draws": 0, "homeGoals": 4, "awayGoals": 2, "lastMeeting": "2014-07-01" }
+    },
+    "matches": [
+      { "date": "1930-07-13", "competition": "FIFA World Cup", "homeTeam": "USA", "awayTeam": "Belgium", "homeScore": 3, "awayScore": 0 },
+      { "date": "1995-04-22", "competition": "Friendly", "homeTeam": "USA", "awayTeam": "Belgium", "homeScore": 0, "awayScore": 1 },
+      { "date": "1998-02-25", "competition": "Friendly", "homeTeam": "USA", "awayTeam": "Belgium", "homeScore": 0, "awayScore": 2 },
+      { "date": "2011-09-06", "competition": "Friendly", "homeTeam": "USA", "awayTeam": "Belgium", "homeScore": 0, "awayScore": 1 },
+      { "date": "2013-05-29", "competition": "Friendly", "homeTeam": "USA", "awayTeam": "Belgium", "homeScore": 2, "awayScore": 4 },
+      { "date": "2014-07-01", "competition": "FIFA World Cup", "homeTeam": "USA", "awayTeam": "Belgium", "homeScore": 1, "awayScore": 2 }
+    ]
+  },
+  "r16-m8": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against ESPN, Sports Mole, and Wikipedia's 1994 FIFA World Cup Group A article — which corrected an initial source's misreported 1994 scoreline (Colombia won 2-0, not 1-0).",
+    "suppliedAt": "2026-07-15",
+    "note": "Switzerland and Colombia have met exactly 4 times all-time (1985, 1991, 1994, 2007) — confident this is complete for both scopes. One of the four was a World Cup meeting (1994).",
+    "data": {
+      "allTime":  { "meetings": 4, "homeWins": 1, "awayWins": 2, "draws": 1, "homeGoals": 6, "awayGoals": 9, "lastMeeting": "2007-03-25" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 0, "awayGoals": 2, "lastMeeting": "1994-06-26" }
+    },
+    "matches": [
+      { "date": "1985-02-01", "competition": "Friendly", "homeTeam": "Switzerland", "awayTeam": "Colombia", "homeScore": 2, "awayScore": 2 },
+      { "date": "1991-02-03", "competition": "Miami Cup", "homeTeam": "Switzerland", "awayTeam": "Colombia", "homeScore": 3, "awayScore": 2 },
+      { "date": "1994-06-26", "competition": "FIFA World Cup", "homeTeam": "Switzerland", "awayTeam": "Colombia", "homeScore": 0, "awayScore": 2 },
+      { "date": "2007-03-25", "competition": "Friendly", "homeTeam": "Switzerland", "awayTeam": "Colombia", "homeScore": 1, "awayScore": 3 }
+    ]
+  },
+  "r32-m2": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against ESPN and asuncintimes.com; both dates/scores independently confirmed. A source describing the 2002 match as \"only the third senior meeting\" implies an earlier, undated match this research could not verify — not included, per the verified-only rule.",
+    "suppliedAt": "2026-07-15",
+    "note": "Germany and Paraguay's only confirmed World Cup meeting is 2002. All-time: these 2 verified matches (2002 WC, 2013 friendly) are used as a known floor — a source implies at least one earlier meeting exists but its date/score couldn't be verified.",
+    "data": {
+      "allTime":  { "meetings": 2, "homeWins": 1, "awayWins": 0, "draws": 1, "homeGoals": 4, "awayGoals": 3, "lastMeeting": "2013-08-14" },
+      "worldCup": { "meetings": 1, "homeWins": 1, "awayWins": 0, "draws": 0, "homeGoals": 1, "awayGoals": 0, "lastMeeting": "2002-06-15" }
+    },
+    "matches": [
+      { "date": "2002-06-15", "competition": "FIFA World Cup", "homeTeam": "Germany", "awayTeam": "Paraguay", "homeScore": 1, "awayScore": 0 },
+      { "date": "2013-08-14", "competition": "Friendly", "homeTeam": "Germany", "awayTeam": "Paraguay", "homeScore": 3, "awayScore": 3 }
+    ]
+  },
+  "r32-m3": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against ESPN and Morocco Football Tribune. A 1999 friendly (Morocco won 2-1) is well-corroborated but no source gave an exact day-of-month, so it is excluded from matches[] per the verified-only rule — allTime reflects only the 2 fully-dated matches (2 of a real 3), a known floor.",
+    "suppliedAt": "2026-07-15",
+    "note": "Netherlands and Morocco's only World Cup meeting prior to this 2026 fixture is 1994 — confident this is complete for the World Cup scope.",
+    "data": {
+      "allTime":  { "meetings": 2, "homeWins": 2, "awayWins": 0, "draws": 0, "homeGoals": 4, "awayGoals": 2, "lastMeeting": "2017-05-31" },
+      "worldCup": { "meetings": 1, "homeWins": 1, "awayWins": 0, "draws": 0, "homeGoals": 2, "awayGoals": 1, "lastMeeting": "1994-06-29" }
+    },
+    "matches": [
+      { "date": "1994-06-29", "competition": "FIFA World Cup", "homeTeam": "Netherlands", "awayTeam": "Morocco", "homeScore": 2, "awayScore": 1 },
+      { "date": "2017-05-31", "competition": "Friendly", "homeTeam": "Netherlands", "awayTeam": "Morocco", "homeScore": 2, "awayScore": 1 }
+    ]
+  },
+  "r32-m4": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against ESPN, 365scores, national-football-teams.com, and FIFA.com's own report of the October 2025 friendly; every date/score independently confirmed. Matches the \"15 meetings\" total (14 prior + this 2026 fixture) cited by multiple sources exactly.",
+    "suppliedAt": "2026-07-15",
+    "note": "Brazil and Japan have met exactly 14 times prior to this 2026 fixture (1989–2025) — confident this is complete for both scopes. One of the fourteen was a World Cup meeting (2006).",
+    "data": {
+      "allTime":  { "meetings": 14, "homeWins": 11, "awayWins": 1, "draws": 2, "homeGoals": 37, "awayGoals": 8, "lastMeeting": "2025-10-14" },
+      "worldCup": { "meetings": 1, "homeWins": 1, "awayWins": 0, "draws": 0, "homeGoals": 4, "awayGoals": 1, "lastMeeting": "2006-06-22" }
+    },
+    "matches": [
+      { "date": "1989-07-23", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 1, "awayScore": 0 },
+      { "date": "1995-06-06", "competition": "Umbro Cup", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 3, "awayScore": 0 },
+      { "date": "1995-08-09", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 5, "awayScore": 1 },
+      { "date": "1997-08-13", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 3, "awayScore": 0 },
+      { "date": "1999-03-31", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 2, "awayScore": 0 },
+      { "date": "2001-06-04", "competition": "FIFA Confederations Cup", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 0, "awayScore": 0 },
+      { "date": "2005-06-22", "competition": "FIFA Confederations Cup", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 2, "awayScore": 2 },
+      { "date": "2006-06-22", "competition": "FIFA World Cup", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 4, "awayScore": 1 },
+      { "date": "2012-10-16", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 4, "awayScore": 0 },
+      { "date": "2013-06-15", "competition": "FIFA Confederations Cup", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 3, "awayScore": 0 },
+      { "date": "2014-10-14", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 4, "awayScore": 0 },
+      { "date": "2017-11-10", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 3, "awayScore": 1 },
+      { "date": "2022-06-06", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 1, "awayScore": 0 },
+      { "date": "2025-10-14", "competition": "Friendly", "homeTeam": "Brazil", "awayTeam": "Japan", "homeScore": 2, "awayScore": 3 }
+    ]
+  },
+  "r32-m5": {
+    "scopes": ["allTime"],
+    "source": "Cross-checked via web search (ESPN-adjacent match reports). Only one of a claimed 8 all-time meetings could be independently dated/scored.",
+    "suppliedAt": "2026-07-15",
+    "note": "France and Sweden had never met at the World Cup before this 2026 fixture (confirmed via FIFA.com: \"France and Sweden have always managed to avoid one another at the World Cup until very recently\") — worldCup is genuinely zero, not a gap, but left un-overridden since the automated autoCapped flag can't be selectively cleared per-scope by this script (known limitation, not a fabrication risk). All-time uses the 1 verified match as a known floor against a claimed 8 total.",
+    "data": {
+      "allTime": { "meetings": 1, "homeWins": 1, "awayWins": 0, "draws": 0, "homeGoals": 4, "awayGoals": 2, "lastMeeting": "2020-11-18" }
+    },
+    "matches": [
+      { "date": "2020-11-18", "competition": "UEFA Nations League", "homeTeam": "France", "awayTeam": "Sweden", "homeScore": 4, "awayScore": 2 }
+    ]
+  },
+  "r32-m7": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against ESPN and Wikipedia's 2002 FIFA World Cup Group G article.",
+    "suppliedAt": "2026-07-15",
+    "note": "Mexico and Ecuador's only World Cup meeting prior to this 2026 fixture is 2002 — confident this is complete for the World Cup scope. All-time sources are contradictory (28 vs. 16 total meetings cited) and not resolvable with confidence; allTime here reflects just this 1 verified match as a known floor, not a claim of completeness.",
+    "data": {
+      "allTime":  { "meetings": 1, "homeWins": 1, "awayWins": 0, "draws": 0, "homeGoals": 2, "awayGoals": 1, "lastMeeting": "2002-06-09" },
+      "worldCup": { "meetings": 1, "homeWins": 1, "awayWins": 0, "draws": 0, "homeGoals": 2, "awayGoals": 1, "lastMeeting": "2002-06-09" }
+    },
+    "matches": [
+      { "date": "2002-06-09", "competition": "FIFA World Cup", "homeTeam": "Mexico", "awayTeam": "Ecuador", "homeScore": 2, "awayScore": 1 }
+    ]
+  },
+  "r32-m11": {
+    "scopes": ["allTime"],
+    "source": "Cross-checked via web search against UEFA.com and ESPN. A general summary's claim of a \"June 2024\" Croatia win could not be corroborated — the actual September and November 2024 Nations League matches found were a Portugal win and a draw respectively, so no Croatia win is included.",
+    "suppliedAt": "2026-07-15",
+    "note": "Only 3 of a claimed 10 all-time meetings could be independently verified — used as a known floor, not a claim of completeness. None were World Cup meetings (this 2026 fixture is Portugal and Croatia's first-ever World Cup meeting), so worldCup is not overridden.",
+    "data": {
+      "allTime": { "meetings": 3, "homeWins": 2, "awayWins": 0, "draws": 1, "homeGoals": 6, "awayGoals": 2, "lastMeeting": "2024-11-18" }
+    },
+    "matches": [
+      { "date": "1996-06-19", "competition": "European Championship", "homeTeam": "Portugal", "awayTeam": "Croatia", "homeScore": 3, "awayScore": 0 },
+      { "date": "2024-09-05", "competition": "UEFA Nations League", "homeTeam": "Portugal", "awayTeam": "Croatia", "homeScore": 2, "awayScore": 1 },
+      { "date": "2024-11-18", "competition": "UEFA Nations League", "homeTeam": "Portugal", "awayTeam": "Croatia", "homeScore": 1, "awayScore": 1 }
+    ]
+  },
+  "r32-m12": {
+    "scopes": ["allTime", "worldCup"],
+    "source": "Cross-checked via web search against Yahoo Sports (Spain v Austria history feature), footballdatabase.eu, and ESPN.",
+    "suppliedAt": "2026-07-15",
+    "note": "Spain and Austria's only World Cup meeting prior to this 2026 fixture is 1978 — confident this is complete for the World Cup scope (a widely-cited \"most notable meeting between the two nations up until now\"). All-time reflects these 3 verified matches as a known floor against a claimed 16 total.",
+    "data": {
+      "allTime":  { "meetings": 3, "homeWins": 2, "awayWins": 1, "draws": 0, "homeGoals": 15, "awayGoals": 3, "lastMeeting": "2009-11-18" },
+      "worldCup": { "meetings": 1, "homeWins": 0, "awayWins": 1, "draws": 0, "homeGoals": 1, "awayGoals": 2, "lastMeeting": "1978-06-03" }
+    },
+    "matches": [
+      { "date": "1978-06-03", "competition": "FIFA World Cup", "homeTeam": "Spain", "awayTeam": "Austria", "homeScore": 1, "awayScore": 2 },
+      { "date": "1999-03-27", "competition": "European Championship qualification", "homeTeam": "Spain", "awayTeam": "Austria", "homeScore": 9, "awayScore": 0 },
+      { "date": "2009-11-18", "competition": "Friendly", "homeTeam": "Spain", "awayTeam": "Austria", "homeScore": 5, "awayScore": 1 }
+    ]
   }
 }
