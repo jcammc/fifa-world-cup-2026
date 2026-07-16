@@ -83,11 +83,22 @@ export function buildTeamSlot(teamId, label, score, projection = null, hideUnpla
     </div>`;
 }
 
-export function buildMatch(match, projectionMap = new Map(), countryMap = new Map()) {
-  // Per-match, not per-round: a team's "confirmed" tick disappears as
-  // soon as ITS OWN match has both sides known, independent of whether
-  // sibling matches in the same round are still TBD.
-  const matchFullySet = Boolean(match.homeTeamId && match.awayTeamId);
+export function buildMatch(match, projectionMap = new Map(), countryMap = new Map(), knockoutStarted = false) {
+  // The "confirmed" tick was designed as a ONE-TIME indicator for the
+  // group-stage -> Round-of-32 qualification transition (Sprint 27: "during
+  // R3 users will revisit the bracket frequently, so newly confirmed teams
+  // should stand out instantly") — not a recurring per-round feature. It
+  // must never appear outside R32, and must permanently retire once the
+  // knockout stage has actually started (any R32 match live/FT), regardless
+  // of how later rounds' participants become known. Match ids are r32-m1..
+  // r32-m16 — unambiguous prefix check, no round-lookup needed.
+  const isR32 = match.id?.startsWith('r32') ?? false;
+  // Per-match, not per-round: within R32 and before kickoff, a team's tick
+  // disappears as soon as ITS OWN match has both sides known, independent
+  // of whether sibling matches in the same round are still TBD (Sprint 42
+  // Defect 1) — preserved exactly, just now bounded to isR32 && !started.
+  const matchFullySet    = Boolean(match.homeTeamId && match.awayTeamId);
+  const hideUnplayedTick = !isR32 || knockoutStarted || matchFullySet;
   const matchLabelHtml = match.matchLabel
     ? `<div class="bracket-match__label">${escapeHtml(match.matchLabel)}</div>`
     : '';
@@ -99,9 +110,9 @@ export function buildMatch(match, projectionMap = new Map(), countryMap = new Ma
   return `
     <a href="#match/${escapeHtml(match.id)}" class="bracket-match" data-match="${escapeHtml(match.id)}">
       ${matchLabelHtml}
-      ${buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj, matchFullySet, countryMap)}
+      ${buildTeamSlot(match.homeTeamId, match.homeLabel, match.homeScore, homeProj, hideUnplayedTick, countryMap)}
       <div class="bracket-divider"></div>
-      ${buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj, matchFullySet, countryMap)}
+      ${buildTeamSlot(match.awayTeamId, match.awayLabel, match.awayScore, awayProj, hideUnplayedTick, countryMap)}
       ${meta}
     </a>`;
 }
@@ -133,13 +144,17 @@ export function roundDateRange(matches) {
   return `${first.d} ${MONTHS[first.m - 1]}–${last.d} ${MONTHS[last.m - 1]}`;
 }
 
-export function buildColumn(descriptor, projectionMap = new Map(), countryMap = new Map()) {
+export function buildColumn(descriptor, projectionMap = new Map(), countryMap = new Map(), knockoutStarted = false) {
   const { id, label, matches, mirrored = false, extraHtml = '' } = descriptor;
 
+  // Column ids are r32-l/r32-r for the two Round-of-32 halves — the ONLY
+  // round this "all teams confirmed" banner should ever apply to (see the
+  // isR32 comment in buildMatch() above for the full rationale).
+  const isR32 = id.startsWith('r32');
   const allTeamsSet = matches.length > 0 && matches.every(m => m.homeTeamId && m.awayTeamId);
-  const matchesHtml = matches.map(m => buildMatch(m, projectionMap, countryMap)).join('');
+  const matchesHtml = matches.map(m => buildMatch(m, projectionMap, countryMap, knockoutStarted)).join('');
   const dateRange = roundDateRange(matches);
-  const confirmedBanner = allTeamsSet
+  const confirmedBanner = (isR32 && !knockoutStarted && allTeamsSet)
     ? `<p class="bracket-round__confirmed">&#10003; All ${escapeHtml(label)} teams confirmed</p>`
     : '';
 
@@ -243,8 +258,9 @@ export class KnockoutBracket {
       return;
     }
 
+    const knockoutStarted = this.#knockoutStarted();
     const roundsHtml = this.#buildColumns()
-      .map(col => buildColumn(col, this.#projectionMap, this.#countryMap))
+      .map(col => buildColumn(col, this.#projectionMap, this.#countryMap, knockoutStarted))
       .join('');
     this.#container.innerHTML = `
       <div class="knockout-bracket">
@@ -257,6 +273,15 @@ export class KnockoutBracket {
           </a>
         </div>
       </div>`;
+  }
+
+  // The R32-confirmation tick/banner is a one-time, pre-kickoff indicator
+  // (see buildMatch()'s isR32 comment) — once any R32 match has actually
+  // started (live or FT), it must never show again, for any round, for
+  // the rest of the tournament.
+  #knockoutStarted() {
+    const r32 = this.#rounds.find(r => r.id === 'r32');
+    return !!r32?.matches?.some(m => m.status !== 'scheduled');
   }
 
   async update() {
@@ -273,8 +298,9 @@ export class KnockoutBracket {
     this.#rounds        = rounds;
     this.#projectionMap = buildBracketProjection(standings, annexC ?? { combinations: {} });
 
+    const knockoutStarted = this.#knockoutStarted();
     roundsEl.innerHTML = this.#buildColumns()
-      .map(col => buildColumn(col, this.#projectionMap, this.#countryMap))
+      .map(col => buildColumn(col, this.#projectionMap, this.#countryMap, knockoutStarted))
       .join('');
     if (scrollEl) scrollEl.scrollLeft = savedX;
     requestAnimationFrame(() => this.#positionBracket());
