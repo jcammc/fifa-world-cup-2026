@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2026-07-14T18:58:11.012Z",
+  "lastUpdated": "2026-07-16T13:56:11.225Z",
   "data": {
     "a-r1-mex-rsa": {
       "events": [
@@ -27192,8 +27192,111 @@
       ]
     },
     "sf-m1": {
-      "events": [],
-      "motm": null,
+      "events": [
+        {
+          "type": "yellow_card",
+          "minute": "8",
+          "teamId": "france",
+          "player": "Adrien Rabiot"
+        },
+        {
+          "type": "goal",
+          "minute": "22",
+          "teamId": "spain",
+          "scorer": "Oyarzabal",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "30",
+          "teamId": "france",
+          "offPlayer": "William Saliba",
+          "onPlayer": "Maxence Lacroix"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "31",
+          "teamId": "spain",
+          "player": "Marc Cucurella"
+        },
+        {
+          "type": "substitution",
+          "minute": "46",
+          "teamId": "france",
+          "offPlayer": "Adrien Rabiot",
+          "onPlayer": "Manu Koné"
+        },
+        {
+          "type": "substitution",
+          "minute": "57",
+          "teamId": "france",
+          "offPlayer": "Bradley Barcola",
+          "onPlayer": "Désiré Doué"
+        },
+        {
+          "type": "goal",
+          "minute": "58",
+          "teamId": "spain",
+          "scorer": "Porro",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "france",
+          "offPlayer": "Lucas Digne",
+          "onPlayer": "Rayan Cherki"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "france",
+          "offPlayer": "Michael Olise",
+          "onPlayer": "Théo Hernandez"
+        },
+        {
+          "type": "substitution",
+          "minute": "74",
+          "teamId": "spain",
+          "offPlayer": "Mikel Oyarzabal",
+          "onPlayer": "Ferran Torres"
+        },
+        {
+          "type": "substitution",
+          "minute": "77",
+          "teamId": "spain",
+          "offPlayer": "Dani Olmo",
+          "onPlayer": "Mikel Merino"
+        },
+        {
+          "type": "substitution",
+          "minute": "77",
+          "teamId": "spain",
+          "offPlayer": "Fabián Ruiz",
+          "onPlayer": "Pedri"
+        },
+        {
+          "type": "substitution",
+          "minute": "83",
+          "teamId": "spain",
+          "offPlayer": "Pedro Porro",
+          "onPlayer": "Nico Williams"
+        },
+        {
+          "type": "substitution",
+          "minute": "83",
+          "teamId": "spain",
+          "offPlayer": "Álex Baena",
+          "onPlayer": "Marcos Llorente"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "86",
+          "teamId": "france",
+          "player": "Kylian Mbappé"
+        }
+      ],
+      "motm": "Pedro Porro",
       "homeFormation": "4-3-3",
       "awayFormation": "4-3-3",
       "homeStarting": [
@@ -27310,10 +27413,382 @@
           "shirt": 15
         }
       ],
+      "homeSubs": [
+        {
+          "name": "Maxence Lacroix",
+          "pos": "DF",
+          "shirt": 26,
+          "onMinute": "30"
+        },
+        {
+          "name": "Manu Koné",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "46"
+        },
+        {
+          "name": "Désiré Doué",
+          "pos": "FW",
+          "shirt": 20,
+          "onMinute": "57"
+        },
+        {
+          "name": "Rayan Cherki",
+          "pos": "MF",
+          "shirt": 24,
+          "onMinute": "72"
+        },
+        {
+          "name": "Théo Hernandez",
+          "pos": "DF",
+          "shirt": 19,
+          "onMinute": "72"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Ferran Torres",
+          "pos": "FW",
+          "shirt": 7,
+          "onMinute": "74"
+        },
+        {
+          "name": "Mikel Merino",
+          "pos": "MF",
+          "shirt": 6,
+          "onMinute": "77"
+        },
+        {
+          "name": "Pedri",
+          "pos": "MF",
+          "shirt": 20,
+          "onMinute": "77"
+        },
+        {
+          "name": "Nico Williams",
+          "pos": "FW",
+          "shirt": 17,
+          "onMinute": "83"
+        },
+        {
+          "name": "Marcos Llorente",
+          "pos": "DF",
+          "shirt": 5,
+          "onMinute": "83"
+        }
+      ]
+    },
+    "sf-m2": {
+      "events": [
+        {
+          "type": "yellow_card",
+          "minute": "37",
+          "teamId": "england",
+          "player": "Elliot Anderson"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "42",
+          "teamId": "argentina",
+          "player": "Lisandro Martínez"
+        },
+        {
+          "type": "yellow_card",
+          "minute": "51",
+          "teamId": "argentina",
+          "player": "Cristian Romero"
+        },
+        {
+          "type": "goal",
+          "minute": "55",
+          "teamId": "england",
+          "scorer": "Gordon",
+          "assistBy": null
+        },
+        {
+          "type": "substitution",
+          "minute": "64",
+          "teamId": "argentina",
+          "offPlayer": "Leandro Paredes",
+          "onPlayer": "Nicolás González"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "england",
+          "offPlayer": "Anthony Gordon",
+          "onPlayer": "Ezri Konsa"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "argentina",
+          "offPlayer": "Nahuel Molina",
+          "onPlayer": "Nicolás Otamendi"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "argentina",
+          "offPlayer": "Lisandro Martínez",
+          "onPlayer": "Rodrigo De Paul"
+        },
+        {
+          "type": "substitution",
+          "minute": "72",
+          "teamId": "argentina",
+          "offPlayer": "Giuliano Simeone",
+          "onPlayer": "Gonzalo Montiel"
+        },
+        {
+          "type": "substitution",
+          "minute": "81",
+          "teamId": "argentina",
+          "offPlayer": "Nicolás Tagliafico",
+          "onPlayer": "Lautaro Martínez"
+        },
+        {
+          "type": "substitution",
+          "minute": "82",
+          "teamId": "england",
+          "offPlayer": "Reece James",
+          "onPlayer": "Dan Burn"
+        },
+        {
+          "type": "substitution",
+          "minute": "82",
+          "teamId": "england",
+          "offPlayer": "Declan Rice",
+          "onPlayer": "Nico O'Reilly"
+        },
+        {
+          "type": "goal",
+          "minute": "85",
+          "teamId": "argentina",
+          "scorer": "Fernández",
+          "assistBy": null
+        },
+        {
+          "type": "goal",
+          "minute": "90+2",
+          "teamId": "argentina",
+          "scorer": "La. Martínez",
+          "assistBy": null
+        },
+        {
+          "type": "yellow_card",
+          "minute": "90+4",
+          "teamId": "argentina",
+          "player": "Rodrigo De Paul"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+6",
+          "teamId": "england",
+          "offPlayer": "John Stones",
+          "onPlayer": "Ivan Toney"
+        },
+        {
+          "type": "substitution",
+          "minute": "90+6",
+          "teamId": "england",
+          "offPlayer": "Djed Spence",
+          "onPlayer": "Marcus Rashford"
+        }
+      ],
+      "motm": "Lionel Messi",
+      "homeFormation": "4-3-3",
+      "awayFormation": "4-4-2",
+      "homeStarting": [
+        {
+          "name": "Jordan Pickford",
+          "pos": "GK",
+          "shirt": 1
+        },
+        {
+          "name": "Reece James",
+          "pos": "RB",
+          "shirt": 24
+        },
+        {
+          "name": "John Stones",
+          "pos": "CB",
+          "shirt": 5
+        },
+        {
+          "name": "Marc Guéhi",
+          "pos": "CB",
+          "shirt": 6
+        },
+        {
+          "name": "Djed Spence",
+          "pos": "LB",
+          "shirt": 25
+        },
+        {
+          "name": "Declan Rice",
+          "pos": "CM",
+          "shirt": 4
+        },
+        {
+          "name": "Elliot Anderson",
+          "pos": "CM",
+          "shirt": 8
+        },
+        {
+          "name": "Morgan Rogers",
+          "pos": "RW",
+          "shirt": 17
+        },
+        {
+          "name": "Jude Bellingham",
+          "pos": "AM",
+          "shirt": 10
+        },
+        {
+          "name": "Anthony Gordon",
+          "pos": "LW",
+          "shirt": 18
+        },
+        {
+          "name": "Harry Kane",
+          "pos": "CF",
+          "shirt": 9
+        }
+      ],
+      "awayStarting": [
+        {
+          "name": "Emiliano Martínez",
+          "pos": "GK",
+          "shirt": 23
+        },
+        {
+          "name": "Nahuel Molina",
+          "pos": "RB",
+          "shirt": 26
+        },
+        {
+          "name": "Cristian Romero",
+          "pos": "CB",
+          "shirt": 13
+        },
+        {
+          "name": "Lisandro Martínez",
+          "pos": "CB",
+          "shirt": 6
+        },
+        {
+          "name": "Nicolás Tagliafico",
+          "pos": "LB",
+          "shirt": 3
+        },
+        {
+          "name": "Giuliano Simeone",
+          "pos": "RM",
+          "shirt": 17
+        },
+        {
+          "name": "Leandro Paredes",
+          "pos": "CM",
+          "shirt": 5
+        },
+        {
+          "name": "Alexis Mac Allister",
+          "pos": "CM",
+          "shirt": 20
+        },
+        {
+          "name": "Enzo Fernández",
+          "pos": "LM",
+          "shirt": 24
+        },
+        {
+          "name": "Lionel Messi",
+          "pos": "CF",
+          "shirt": 10
+        },
+        {
+          "name": "Julián Alvarez",
+          "pos": "CF",
+          "shirt": 9
+        }
+      ],
+      "homeSubs": [
+        {
+          "name": "Ezri Konsa",
+          "pos": "DF",
+          "shirt": 2,
+          "onMinute": "72"
+        },
+        {
+          "name": "Dan Burn",
+          "pos": "DF",
+          "shirt": 15,
+          "onMinute": "82"
+        },
+        {
+          "name": "Nico O'Reilly",
+          "pos": "DF",
+          "shirt": 3,
+          "onMinute": "82"
+        },
+        {
+          "name": "Ivan Toney",
+          "pos": "FW",
+          "shirt": 22,
+          "onMinute": "90+6"
+        },
+        {
+          "name": "Marcus Rashford",
+          "pos": "FW",
+          "shirt": 11,
+          "onMinute": "90+6"
+        }
+      ],
+      "awaySubs": [
+        {
+          "name": "Nicolás González",
+          "pos": "MF",
+          "shirt": 15,
+          "onMinute": "64"
+        },
+        {
+          "name": "Nicolás Otamendi",
+          "pos": "DF",
+          "shirt": 19,
+          "onMinute": "72"
+        },
+        {
+          "name": "Rodrigo De Paul",
+          "pos": "MF",
+          "shirt": 7,
+          "onMinute": "72"
+        },
+        {
+          "name": "Gonzalo Montiel",
+          "pos": "DF",
+          "shirt": 4,
+          "onMinute": "72"
+        },
+        {
+          "name": "Lautaro Martínez",
+          "pos": "FW",
+          "shirt": 22,
+          "onMinute": "81"
+        }
+      ]
+    },
+    "3rd-place": {
+      "events": [],
+      "motm": null,
+      "homeFormation": null,
+      "awayFormation": null,
+      "homeStarting": [],
+      "awayStarting": [],
       "homeSubs": [],
       "awaySubs": []
     },
-    "sf-m2": {
+    "final-m1": {
       "events": [],
       "motm": null,
       "homeFormation": null,

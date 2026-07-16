@@ -724,6 +724,25 @@ New exported `pickActiveGroupId()` (pure, unit tested) encapsulates the selectio
 
 ---
 
+## Sprint 46 — Post-Review Maintenance Pass (knockout data + doc drift)
+**Category:** Data maintenance + documentation cleanup · **Status:** COMPLETE (2026-07-16)
+
+**Trigger:** a full `project-status-review` audit (2026-07-16) found the committed tournament data ~2 days stale, three prior commits missing from this roadmap, and `docs/CONTRIBUTING.md` describing a `package.json` that no longer exists. Rankings re-scoping and EA ratings data entry were also surfaced by the same review but explicitly deferred by the user — parked, not forgotten; see "Decisions still needed" below.
+
+**Retroactive log — work shipped earlier in the same session with no prior Sprint entry:**
+- Knockout bracket "confirmed" tick/banner rescoped to R32-only, permanently retiring once the knockout stage starts — three prior fix passes (Sprint 28, 42, 44) had each treated it as a recurring per-round feature and never revisited whether it belonged outside R32 at all. Commit `361d385`.
+- H2H "History" sections redesigned from a single paragraph of Wikipedia prose to a real match-results table (date, competition badge, result with winner bolded), shared between the upcoming- and completed-match branches via one `buildMatchHistoryList()`. Commit `97a1df1`.
+- Following user feedback that a "not yet available" placeholder wasn't good enough, manually researched and cross-verified real head-to-head history for all 16 knockout-stage pairs still missing individual match rows (every claim checked against a second independent source, after catching a search tool confidently reporting a fabricated Germany–Paraguay 2010 World Cup meeting that never happened). `allTime` overrides extended to every resolved pair so the aggregate stats grid never contradicts the match-history table beneath it. Commit `45f2265`.
+
+**This sprint's own work:**
+- Re-ran the Sprint 34 cadence (`sync-data` → `gather-match-events` → `gather-head-to-head` → `gather-head-to-head-stats` → `validate`) to bring both semifinals current: `sf-m1` (France 0–2 Spain) and `sf-m2` (England 1–2 Argentina) are now FT with full lineups/events, and the Final (Spain v Argentina) / 3rd-Place (France v England) matchups have propagated correctly. `headToHeadStats` re-fetched for all 104 resolvable fixtures (0 failures) now that the Final/3rd-Place team pairs are known.
+- Fixed `docs/CONTRIBUTING.md`: removed references to `npm run generate-bios` and `npm run update-standings`, neither of which has existed since Sprint 40; corrected the mischaracterization of `npm run generate-rankings` as a "stub — no-op" (it is the real, fully-built Sprint 39 ranking engine, not a stub); corrected the documented `pre-deploy` chain to match `package.json` exactly (`validate` → `gather-guardian-bios` → `build-search-index`); corrected the squad-addition workflow's bio-fill step to reference the real pipeline.
+- Added this Sprint 46 entry.
+
+**Verification:** `npm run validate` and `npm test` (111/111) both clean after the data refresh; `data/knockout.json`'s `lastUpdated` now postdates both real kickoffs.
+
+---
+
 ## Decisions resolved (2026-07-06)
 
 1. ~~Sprint 38 scheduling~~ — **dedicated design session**, not inline.
@@ -736,4 +755,4 @@ New exported `pickActiveGroupId()` (pure, unit tested) encapsulates the selectio
 
 ## Decisions still needed from the user (not yet resolved)
 
-None currently open.
+1. **Rankings re-scope + EA data entry (surfaced 2026-07-16, deliberately deferred).** `data/ranking-scope.json` is locked to 11 teams from Sprint 39; only 4 remain alive (France, Spain, England, Argentina) as of Sprint 46. Re-locking scope will cause `scripts/generate-rankings.js` to prune the other 7 teams' ~200 players from `data/rankings.json` on its next run (confirmed by reading the script — it filters output to `inScopeIds` derived from the scope file, with no separate archive). Separately, EA ratings remain at 0/286 — not agent-fetchable (confirmed in Sprint 39's own investigation), requires user-supplied CSVs via `scripts/import-ranking-raw.mjs --field ea`. User explicitly asked to set Rankings aside for now and focus on other Sprint 46 items; revisit as its own sprint whenever ready, including whether to snapshot the 7 eliminated teams' partial data before pruning.

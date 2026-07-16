@@ -18,7 +18,15 @@ Scripts require Node.js 18+.
 # Data maintenance (use these regularly)
 npm run sync-data          # Pull live scores/standings from football-data.org into local JSON files
 npm run update-knockout    # Record a knockout result and propagate winner (see script --help)
+npm run gather-match-events    # Backfill lineups/events for newly-completed matches (Wikipedia)
+npm run gather-head-to-head    # Migrate/refresh head-to-head prose for newly-completed matches
 npm run validate           # Check all JSON files for schema errors
+
+# Rankings (Sprint 39 — real, working ranking engine, not a stub)
+npm run generate-rankings  # Recompute consensus scores for every team in data/ranking-scope.json
+
+# Player bios
+npm run gather-guardian-bios # Fetch real Guardian bios for players still missing a description
 
 # Search index (run after any squad change)
 npm run build-search-index # Rebuild data/search-index.json
@@ -26,13 +34,8 @@ npm run build-search-index # Rebuild data/search-index.json
 # Photo gathering (run when adding new players)
 npm run gather-photos      # Download player/manager photos (configure flags inside script)
 
-# Stubs (not yet implemented — safe to ignore)
-npm run generate-bios      # Fill null player bios (stub — no-op)
-npm run generate-rankings  # Compute consensus rankings (stub — no-op)
-npm run update-standings   # Update standings (superseded by sync-data)
-
 # Deploy gate
-npm run pre-deploy         # Run validate + generate-bios + generate-rankings + build-search-index
+npm run pre-deploy         # Run validate + gather-guardian-bios + build-search-index
 ```
 
 **Note:** `npm run sync-data` updates local JSON files directly. On production, scores are updated automatically by `netlify/functions/live-data.mjs` whenever the SPA polls `/api/live`. Run `sync-data` locally to pull the latest results before doing any data entry work.
@@ -44,7 +47,7 @@ npm run pre-deploy         # Run validate + generate-bios + generate-rankings + 
 3. Ensure all referenced clubs exist in `data/clubs.json`
 4. Ensure all referenced leagues exist in `data/leagues.json`
 5. Run `npm run validate` — fix any errors before committing
-6. Run `npm run generate-bios` — fills bio fields
+6. Run `npm run gather-guardian-bios` — fills real player bios where available; any player it can't reach falls back to `js/bio.js`'s generic template at render time, never a blank field
 7. Run `npm run build-search-index` — adds players to search
 8. Commit and push
 
