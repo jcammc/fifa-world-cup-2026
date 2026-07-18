@@ -21,6 +21,7 @@ const { ContinentsPage }   = await import('../js/modules/continents-page.js');
 const { StatisticsPage }   = await import('../js/modules/statistics-page.js');
 const { LeagueExplorer }   = await import('../js/modules/league-explorer.js');
 const { ClubExplorer }     = await import('../js/modules/club-explorer.js');
+const { ClubPage }         = await import('../js/modules/club-page.js');
 const { MatchCentre }      = await import('../js/modules/match-centre.js');
 const { BestThirds }       = await import('../js/modules/best-thirds.js');
 const { ManagerPage }      = await import('../js/modules/manager-page.js');
@@ -40,6 +41,7 @@ test('every named route resolves to the expected Module', () => {
     ['statistics',        StatisticsPage],
     ['league-explorer',   LeagueExplorer],
     ['club-explorer',     ClubExplorer],
+    ['club/arsenal',      ClubPage],
     ['compare',           CompareView],
     ['compare/france/brazil', CompareView],
     ['match/c-r1-bra-mor', MatchCentre],
@@ -70,6 +72,11 @@ test('compare route with no team params still resolves, with null params', () =>
 test('match route extracts the fixture id after the prefix', () => {
   const { params } = resolveRoute('match/r32-m11', countryIds);
   assert.equal(params.fixtureId, 'r32-m11');
+});
+
+test('club route extracts the club id after the prefix', () => {
+  const { params } = resolveRoute('club/arsenal', countryIds);
+  assert.equal(params.clubId, 'arsenal');
 });
 
 test('player deep-link is distinguished from a bare country route', () => {

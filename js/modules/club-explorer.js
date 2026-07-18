@@ -106,7 +106,8 @@ export class ClubExplorer {
       : '';
 
     return `
-      <div class="ce-club-row${multi}" data-count="${count}" data-searchable="${name.toLowerCase()}">
+      <div class="ce-club-row${multi}" data-club-id="${id}" data-count="${count}" data-searchable="${name.toLowerCase()}"
+           role="link" tabindex="0" aria-label="View ${name} roster">
         <span class="ce-club-row__name">${name}</span>
         <span class="ce-club-row__count">${count}</span>
         <span class="ce-club-row__consensus">${avgConsensus != null ? `${avgConsensus} avg consensus` : ''}</span>
@@ -161,6 +162,20 @@ export class ClubExplorer {
         queryEl.textContent = q;
       }
     };
+
+    // Row click/keyboard → navigate to club roster (flag links keep their own navigation)
+    listEl.addEventListener('click', e => {
+      if (e.target.closest('.ce-flag-link')) return;
+      const row = e.target.closest('.ce-club-row');
+      if (row?.dataset.clubId) window.location.hash = `club/${row.dataset.clubId}`;
+    });
+    listEl.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const row = e.target.closest('.ce-club-row');
+      if (!row?.dataset.clubId) return;
+      e.preventDefault();
+      window.location.hash = `club/${row.dataset.clubId}`;
+    });
 
     // Search
     searchEl?.addEventListener('input', e => {

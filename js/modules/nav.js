@@ -150,6 +150,7 @@ class _Nav {
     const isTc = !hash || hash === 'tournament' || hash === 'today' || hash === 'knockout' || /^group-[a-l]$/.test(hash);
     const href = isTc ? '#tournament'
       : hash.startsWith('compare/') ? '#compare'
+      : hash.startsWith('club/') ? '#club-explorer'
       : `#${hash}`;
     document.querySelector(`.nav-link[href="${href}"]`)?.classList.add('nav-link--active');
   }

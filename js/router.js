@@ -7,6 +7,7 @@ import { ContinentsPage } from './modules/continents-page.js';
 import { StatisticsPage } from './modules/statistics-page.js';
 import { LeagueExplorer } from './modules/league-explorer.js';
 import { ClubExplorer } from './modules/club-explorer.js';
+import { ClubPage } from './modules/club-page.js';
 import { MatchCentre } from './modules/match-centre.js';
 import { BestThirds } from './modules/best-thirds.js';
 import { ManagerPage } from './modules/manager-page.js';
@@ -136,6 +137,11 @@ export function resolveRoute(hash, countryIds = new Set()) {
     return { Module: ManagerPage, params: { countryId: hash.slice(8) } };
   }
 
+  // Club roster route: #club/{clubId} — must be before the club- catch-all below
+  if (hash.startsWith('club/')) {
+    return { Module: ClubPage, params: { clubId: hash.slice(5) } };
+  }
+
   // Player route: must check before country route (e.g. #france-mbappe)
   for (const id of (countryIds ?? [])) {
     if (hash.startsWith(id + '-')) {
@@ -218,6 +224,7 @@ class _Router {
     const href = isTc ? '#tournament'
       : hash.startsWith('compare/') ? '#compare'
       : hash.startsWith('manager/') ? `#${hash.slice(8)}`
+      : hash.startsWith('club/') ? '#club-explorer'
       : `#${hash}`;
     document.querySelector(`.nav-link[href="${href}"]`)?.classList.add('nav-link--active');
   }

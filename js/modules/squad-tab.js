@@ -1,12 +1,6 @@
 import { escapeHtml, getInitials } from '../utils.js';
 import { ProfilePanel } from './profile-panel.js';
-
-const POSITION_GROUPS = [
-  { key: 'GK', label: 'Goalkeepers' },
-  { key: 'DF', label: 'Defenders' },
-  { key: 'MF', label: 'Midfielders' },
-  { key: 'FW', label: 'Forwards' },
-];
+import { POSITION_GROUPS } from './position-groups.js';
 
 export class SquadTab {
   #container;

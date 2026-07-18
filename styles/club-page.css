@@ -1,0 +1,42 @@
+/* ─── Club page (#club/{clubId}) ─────────────────────────────── */
+
+/* Reuses .tp-header from team-page.css; badge replaces the flag image
+   since clubs have no logo asset. */
+.cp-header {
+  gap: var(--space-4);
+}
+
+.cp-header__badge {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .cp-header__badge {
+    width: 48px;
+    height: 48px;
+    font-size: var(--font-size-base);
+  }
+}
+
+/* ─── Nation tag on player cards (reuses .squad-card__club sizing) ── */
+.cp-card__nation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cp-card__flag {
+  display: block;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
