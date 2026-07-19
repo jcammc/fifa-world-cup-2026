@@ -162,6 +162,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
+  transition: color var(--transition-fast);
+}
+
+.ce-club-row:hover .ce-club-row__name,
+.ce-club-row:focus-visible .ce-club-row__name {
+  color: var(--color-accent);
 }
 
 .ce-club-row__count {
